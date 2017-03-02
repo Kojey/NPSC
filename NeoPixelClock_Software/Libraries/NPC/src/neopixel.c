@@ -269,3 +269,21 @@ uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
 void neopixel_setBrightness(uint8_t b){
 	brightness = b;
 }
+
+/**
+ * @brief set all the pixel on the line to a specific color
+ */
+void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
+	int i=0;
+	for(i=0;i<LED_NUMBER;i++)
+		neopixel_setPixelColorRGB(i,r,g,b);
+}
+
+/**
+ * @brief set all the pixel on the line to a specific color
+ */
+void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b,uint8_t w){
+	int i=0;
+	for(i=0;i<LED_NUMBER;i++)
+		neopixel_setPixelColorRGBW(i,r,g,b,w);
+}
