@@ -11,7 +11,7 @@
 void bluetooth_init(void){
 	// Enable RCC for USART1, GPIOB
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA|RCC_AHB1Periph_GPIOD,ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB|RCC_AHB1Periph_GPIOD,ENABLE);
 
 	// GPIO Configuration
 	{
@@ -27,18 +27,19 @@ void bluetooth_init(void){
 		GPIO_Init(GPIOD,&GPIO_InitStructure);
 
 		// Configure USART1 TX (PB6) as alternate function push-pull
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9 | GPIO_Pin_10;
+		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
 		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 		GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-		GPIO_Init(GPIOA,&GPIO_InitStructure);
+		GPIO_Init(GPIOB,&GPIO_InitStructure);
 
-		GPIO_PinAFConfig(GPIOA,GPIO_PinSource9,GPIO_AF_USART1);
-		GPIO_PinAFConfig(GPIOA,GPIO_PinSource10,GPIO_AF_USART1);
+		GPIO_PinAFConfig(GPIOB,GPIO_PinSource6,GPIO_AF_USART1);
+		GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_USART1);
 
 	}
+
 	// NVIC Configuration
 	{
 		NVIC_InitTypeDef NVIC_InitStructure;
@@ -50,6 +51,7 @@ void bluetooth_init(void){
 
 		NVIC_Init(&NVIC_InitStructure);
 	}
+
 	// USART Configuration
 	{
 		USART_InitTypeDef USART_InitStructure;
@@ -69,7 +71,6 @@ void bluetooth_init(void){
 		USART_Cmd(USART1,ENABLE);
 
 	}
-
 
 	uint8_t welcome_str[] = " Welcome to Bluetooth!\r\n";
 	bluetooth_send(welcome_str,sizeof(welcome_str));
