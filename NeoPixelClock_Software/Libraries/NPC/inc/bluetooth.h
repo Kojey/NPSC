@@ -8,7 +8,7 @@
 #ifndef NPC_INC_BLUETOOTH_H_
 #define NPC_INC_BLUETOOTH_H_
 
-#include "stm32f4xx.h"
+#include "utils.h"
 
 void USART1_IRQHandler(void);
 void bluetooth_init(void);
