@@ -39,5 +39,7 @@ void neopixel_setPixelColorW(uint8_t n,uint32_t c);
 void neopixel_setBrightness(uint8_t b);
 uint32_t neopixel_colorRGB(uint8_t r,uint8_t g,uint8_t b);
 uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
+void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b);
+void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 
 #endif /* NPC_INC_NEOPIXEL_H_ */
