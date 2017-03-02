@@ -73,7 +73,7 @@ void bluetooth_init(void){
 	}
 
 	uint8_t welcome_str[] = " Welcome to Bluetooth!\r\n";
-	bluetooth_send(welcome_str,sizeof(welcome_str));
+	bluetooth_send(welcome_str);//,sizeof(welcome_str));
 }
 
 
@@ -82,21 +82,22 @@ void USART1_IRQHandler(void){
 	uint8_t data = USART_ReceiveData(USART1);
 	if(data=='1'){
 		GPIO_WriteBit(GPIOD,GPIO_Pin_13,SET);
-		bluetooth_send((uint8_t *)"LED ON\n\r",sizeof("LED ON\n\r")-1);
+		bluetooth_send((uint8_t *)"LED ON\n\r");//,sizeof("LED ON\n\r")-1);
 	}
 	else if(data=='0'){
 		GPIO_WriteBit(GPIOD,GPIO_Pin_13,RESET);
-		bluetooth_send((uint8_t *)"LED OFF\n\r",sizeof("LED OFF\n\r")-1);
+		bluetooth_send((uint8_t *)"LED OFF\n\r");//,sizeof("LED OFF\n\r")-1);
 	}
 	else if(data=='?'){
-		bluetooth_send((uint8_t *)"SEND '1' TO TURN LED ON\n\r",sizeof("SEND '1' TO TURN LED ON\n\r")-1);
-		bluetooth_send((uint8_t *)"SEND '0' TO TURN LED OFF\n\r",sizeof("SEND '0' TO TURN LED OFF\n\r")-1);
+		bluetooth_send((uint8_t *)"SEND '1' TO TURN LED ON\n\r");//,sizeof("SEND '1' TO TURN LED ON\n\r")-1);
+		bluetooth_send((uint8_t *)"SEND '0' TO TURN LED OFF\n\r");//,sizeof("SEND '0' TO TURN LED OFF\n\r")-1);
 	}
 }
 
 
 
-void bluetooth_send(uint8_t * data, uint32_t size){
+void bluetooth_send(uint8_t * data){
+	uint32_t size = strlen((char *)data);
 	while(size--){
 		USART_SendData(USART1,(uint16_t)*data++);
 		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
