@@ -79,6 +79,19 @@ void bluetooth_init(void){
 
 void USART1_IRQHandler(void){
 	while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE)==RESET);
+	uint8_t data = USART_ReceiveData(USART1);
+	if(data=='1'){
+		GPIO_WriteBit(GPIOD,GPIO_Pin_13,SET);
+		bluetooth_send((uint8_t *)"LED ON\n\r",sizeof("LED ON\n\r")-1);
+	}
+	else if(data=='0'){
+		GPIO_WriteBit(GPIOD,GPIO_Pin_13,RESET);
+		bluetooth_send((uint8_t *)"LED OFF\n\r",sizeof("LED OFF\n\r")-1);
+	}
+	else if(data=='?'){
+		bluetooth_send((uint8_t *)"SEND '1' TO TURN LED ON\n\r",sizeof("SEND '1' TO TURN LED ON\n\r")-1);
+		bluetooth_send((uint8_t *)"SEND '0' TO TURN LED OFF\n\r",sizeof("SEND '0' TO TURN LED OFF\n\r")-1);
+	}
 }
 
 
