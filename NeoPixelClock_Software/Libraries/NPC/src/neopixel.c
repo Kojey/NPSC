@@ -7,9 +7,14 @@
 
 #include "../inc/neopixel.h"
 
-static uint32_t LEDbuffer[LED_BUFFER_SIZE] = {WS2812_1, WS2812_0};
+static uint32_t LEDbuffer[LED_BUFFER_SIZE];// = {WS2812_1, WS2812_0};
+static uint8_t brightness = 255;
 
 void neopixel_init(void){
+
+	// Init data
+	neopixel_dataInit();
+
 	// Enable RCC for timer TIM2, GPIOA and DMA1
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
@@ -52,7 +57,7 @@ void neopixel_init(void){
 		TIM_OCStruct.TIM_OCMode = TIM_OCMode_PWM1;
 		TIM_OCStruct.TIM_OCPolarity = TIM_OCPolarity_High;
 		TIM_OCStruct.TIM_OutputState = TIM_OutputState_Enable;
-		TIM_OCStruct.TIM_Pulse = WS2812_1;
+		TIM_OCStruct.TIM_Pulse = WS2812_0;
 		// Initialize TIM2 PWM1
 		TIM_OC1Init(TIM2,&TIM_OCStruct);
 		// Activate OCPreload
@@ -67,12 +72,12 @@ void neopixel_init(void){
 		NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
 		NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
 		NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
-
+		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 		NVIC_Init(&NVIC_InitStruct);
 
 	}
 
-	/*// DMA and NVIC management
+/*	// DMA and NVIC management
 	{
 		// DMA management
 		{
@@ -94,11 +99,11 @@ void neopixel_init(void){
 			DMA_InitStruct.DMA_Priority = DMA_Priority_VeryHigh;
 			// Initialize DMA
 			DMA_Init(DMA1_Stream5,&DMA_InitStruct);
-
 			// Start DMA
 			DMA_Cmd(DMA1_Stream5, ENABLE);
+
 			// Enable DMA complete interrupt
-			DMA_ITConfig(DMA1_Stream5,DMA_IT_TC,ENABLE);
+			//DMA_ITConfig(DMA1_Stream5,DMA_IT_TC,ENABLE);
 		}
 
 		// NVIC management
@@ -128,14 +133,139 @@ void TIM2_IRQHandler(void){
 	if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
-
 	    TIM2->CCR1 = LEDbuffer[index];
 
 	    index = (index + 1)% LED_BUFFER_SIZE;
 	 }
 
-	GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
+	//GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
 }
-void DMA1_Stream5_IRQHandler(void){
 
+/**
+ * @brief Stop pushing data to the neopixels
+ */
+void neopixel_clear(){
+	neopixel_dataInit();
+	// TODO add FreeRTOS delay and stop PWM
+}
+
+/**
+ * @brief  Initialize the LEDbuffer
+ */
+void neopixel_dataInit(){
+	uint32_t index, buffIndex;
+	buffIndex = 0;
+
+	for (index = 0; index < RESET_SLOTS_BEGIN; index++) {
+		LEDbuffer[buffIndex] = WS2812_RESET;
+		buffIndex++;
+	}
+	for (index = 0; index < LED_DATA_SIZE; index++) {
+		LEDbuffer[buffIndex] = WS2812_0;
+		buffIndex++;
+	}
+	LEDbuffer[buffIndex] = WS2812_0;
+	buffIndex++;
+	for (index = 0; index < RESET_SLOTS_END; index++) {
+		LEDbuffer[buffIndex] = WS2812_RESET;
+		buffIndex++;
+	}
+}
+
+/**
+ * @brief Set the color of one led
+ * @n the led index
+ * @r RED
+ * @g GREEN
+ * @b BLUE
+ */
+void neopixel_setPixelColorRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b){
+	// scale according to brightness
+	float _max = (float)max(r,g,b);
+	float b_scale = brightness/_max;
+	// scale RGB
+	r = (uint8_t) ((float)r*b_scale);
+	g = (uint8_t) ((float)g*b_scale);
+	b = (uint8_t) ((float)b*b_scale);
+
+	uint8_t tempBuffer[24];
+	uint32_t i;
+	uint32_t LEDindex;
+	LEDindex = n % LED_NUMBER;
+
+	for (i = 0; i < 8; i++) // GREEN data
+		tempBuffer[i] = ((g << i) & 0x80) ? WS2812_1 : WS2812_0;
+	for (i = 0; i < 8; i++) // RED
+		tempBuffer[8 + i] = ((r << i) & 0x80) ? WS2812_1 : WS2812_0;
+	for (i = 0; i < 8; i++) // BLUE
+		tempBuffer[16 + i] = ((b << i) & 0x80) ? WS2812_1 : WS2812_0;
+	TIM_Cmd(TIM2,DISABLE);
+	for (i = 0; i < 24; i++)
+		LEDbuffer[RESET_SLOTS_BEGIN + LEDindex * 24 + i] = tempBuffer[i];
+	TIM_Cmd(TIM2,ENABLE);
+}
+
+
+/**
+ * @brief Set the color of one led
+ * @n the led index
+ * @r RED
+ * @g GREEN
+ * @b BLUE
+ * @w WHITE
+ */
+void neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w){
+	// scale w to 255:20
+	float w_scale = MAX_8BIT/7.0;
+	w = (uint8_t) w/(MAX_8BIT/w_scale);
+	// scale
+	float rgb_scale = (MAX_8BIT-w_scale)/MAX_8BIT;
+	// scale RGB to 255:(255-20) and add white intensity
+	r = (uint8_t) (r*rgb_scale+w);
+	g = (uint8_t) (g*rgb_scale+w);
+	b = (uint8_t) (b*rgb_scale+w);
+
+	neopixel_setPixelColorRGB(n,r,g,b);
+}
+/**
+ * @brief Set the color of one led
+ * @n the led index
+ * @c the 32bit RGB color
+ */
+void neopixel_setPixelColor(uint8_t n, uint32_t c){
+	/*uint8_t r = ;
+	uint8_t g;
+	uint8_t b;*/
+	neopixel_setPixelColorRGB(n,(uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t)(c));
+}
+
+/**
+ * @brief Set the color of one led
+ * @n the led index
+ * @c the 32bit RGB color
+ */
+void neopixel_setPixelColorW(uint8_t n, uint32_t c){
+	neopixel_setPixelColorRGBW(n, (uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t) (c),(uint8_t)(c>>24));
+}
+/**
+ * @brief convert RGB 3 8bit color to a 32bit color
+ * MS1 0, MS2 r, MS3 g, MS4 b
+ */
+uint32_t neopixel_colorRGB(uint8_t r,uint8_t g,uint8_t b){
+	return (uint32_t)(r<<16 | g<<8 | b);
+}
+/**
+ * @brief convert RGB 3 8bit color to a 32bit color
+ * MS1 w, MS2 r, MS3 g, MS4 b
+ */
+uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
+	return (uint32_t)(w<<24 | r<<16 | g<<8 | b);
+}
+
+/**
+ * @brief Set the brightness of the led
+ */
+
+void neopixel_setBrightness(uint8_t b){
+	brightness = b;
 }

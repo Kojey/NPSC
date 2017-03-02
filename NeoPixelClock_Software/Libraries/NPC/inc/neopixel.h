@@ -26,7 +26,7 @@
 #define MAX_8BIT							(255)
 
 /* Methods */
-void TIMx_DMA_IRQHandler(void);
+//void TIMx_DMA_IRQHandler(void);
 void neopixel_init(void);
 void neopixel_setState(uint8_t s);
 void neopixel_show(void);
