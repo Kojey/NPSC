@@ -10,8 +10,9 @@
 
 #include "utils.h"
 
+
 void USART1_IRQHandler(void);
 void bluetooth_init(void);
-void bluetooth_send(uint8_t * data, uint32_t size);
+void bluetooth_send(uint8_t * data);
 
 #endif /* NPC_INC_BLUETOOTH_H_ */
