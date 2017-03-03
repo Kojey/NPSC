@@ -28,8 +28,8 @@ SOFTWARE.
 */
 
 /* Includes */
-//#include "../Libraries/NPC/inc/bluetooth.h"
-#include "stm32f4xx.h"
+#include "../Libraries/NPC/inc/configuration.h"
+//#include "stm32f4xx.h"
 /* Private macro */
 /* Private variables */
 /* Private function prototypes */
@@ -45,7 +45,7 @@ SOFTWARE.
 int main(void)
 {
   int i = 0;
-
+  uint32_t color;
   /**
   *  IMPORTANT NOTE!
   *  The symbol VECT_TAB_SRAM needs to be defined when building the project
@@ -60,15 +60,26 @@ int main(void)
  /* bluetooth_init();
   GPIO_WriteBit(GPIOD,GPIO_Pin_13,Bit_SET);*/
   /* Infinite loop */
+  System_Init();
+  neopixel_setBrightness(100);
   while (1)
   {
 	i++;
-	/*//bluetooth_send(16,1);
-	USART_SendData(USART1, 85);
-	while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
-	GPIO_ToggleBits(GPIOD,GPIO_Pin_13);*/
-	//int j=1500000;
-//	while(j)j--;
+	switch(pixel_color){
+	case 'R': color = neopixel_colorRGB(255,0,0); break;
+	case 'G': color = neopixel_colorRGB(0,255,0); break;
+	case 'B': color = neopixel_colorRGB(0,0,255); break;
+	case 'Y': color = neopixel_colorRGB(255,255,0); break;
+	case 'C': color = neopixel_colorRGB(0,255,255); break;
+	case 'M': color = neopixel_colorRGB(255,0,255); break;
+	case 'W': color = neopixel_colorRGB(255,255,255); break;
+	case 'D': color = neopixel_colorRGB(0,0,0); break;
+	}
+
+	int j=150000;
+	while(j)j--;
+	neopixel_setPixelColor((i-1)%4,0);
+	neopixel_setPixelColor(i%4,color);
   }
 }
 
