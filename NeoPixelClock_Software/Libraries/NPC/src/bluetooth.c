@@ -72,34 +72,68 @@ void bluetooth_init(void){
 
 	}
 
-	uint8_t welcome_str[] = " Welcome to Bluetooth!\r\n";
-	bluetooth_send(welcome_str);//,sizeof(welcome_str));
+	uint8_t welcome_str[] = " Welcome to NeoPixelClock!\r\n";
+	bluetooth_send(welcome_str);
 }
 
-
+/**
+ * @brief USART1 Interrupt Handler
+ */
 void USART1_IRQHandler(void){
+	// Wait until reception
 	while(USART_GetFlagStatus(USART1, USART_FLAG_RXNE)==RESET);
-	uint8_t data = USART_ReceiveData(USART1);
-	if(data=='1'){
-		GPIO_WriteBit(GPIOD,GPIO_Pin_13,SET);
-		bluetooth_send((uint8_t *)"LED ON\n\r");//,sizeof("LED ON\n\r")-1);
+	uint8_t data = toupper(bluetooth_receive());
+	if(data=='R'){
+		pixel_color='R';
+		bluetooth_send((uint8_t *)"Red\n\r");
 	}
-	else if(data=='0'){
-		GPIO_WriteBit(GPIOD,GPIO_Pin_13,RESET);
-		bluetooth_send((uint8_t *)"LED OFF\n\r");//,sizeof("LED OFF\n\r")-1);
+	else if(data=='G'){
+		pixel_color='G';
+		bluetooth_send((uint8_t *)"Green\n\r");
 	}
-	else if(data=='?'){
-		bluetooth_send((uint8_t *)"SEND '1' TO TURN LED ON\n\r");//,sizeof("SEND '1' TO TURN LED ON\n\r")-1);
-		bluetooth_send((uint8_t *)"SEND '0' TO TURN LED OFF\n\r");//,sizeof("SEND '0' TO TURN LED OFF\n\r")-1);
+	else if(data=='B'){
+		pixel_color='B';
+		bluetooth_send((uint8_t *)"Blue\n\r");
+	}
+	else if(data=='Y'){
+		pixel_color='Y';
+		bluetooth_send((uint8_t *)"Yellow\n\r");
+	}
+	else if(data=='M'){
+		pixel_color='M';
+		bluetooth_send((uint8_t *)"Magenta\n\r");
+	}
+	else if(data=='C'){
+		pixel_color='C';
+		bluetooth_send((uint8_t *)"Cyan\n\r");
+	}
+	else if(data=='D'){
+		pixel_color='D';
+		bluetooth_send((uint8_t *)"Dark\n\r");
+	}
+	else if(data=='W'){
+		pixel_color='W';
+		bluetooth_send((uint8_t *)"White\n\r");
 	}
 }
 
 
-
+/**
+ * @brief send string to the hc-06
+ * @data string to be sent
+ */
 void bluetooth_send(uint8_t * data){
 	uint32_t size = strlen((char *)data);
 	while(size--){
 		USART_SendData(USART1,(uint16_t)*data++);
 		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
 	}
+}
+
+/**
+ * @brief receive a byte from hc-06
+ * @return byte of data
+ */
+uint8_t bluetooth_receive(void){
+	return USART_ReceiveData(USART1);
 }

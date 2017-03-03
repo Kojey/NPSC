@@ -14,5 +14,6 @@
 void USART1_IRQHandler(void);
 void bluetooth_init(void);
 void bluetooth_send(uint8_t * data);
+uint8_t bluetooth_receive(void);
 
 #endif /* NPC_INC_BLUETOOTH_H_ */

@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <ctype.h>
 #include "stm32f4xx.h"
 
 extern uint8_t pixel_color;
