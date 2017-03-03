@@ -7,6 +7,7 @@
 
 #include "../Inc/utils.h"
 
+uint8_t pixel_color;
 /**
  * @brief find max between a and b
  */
