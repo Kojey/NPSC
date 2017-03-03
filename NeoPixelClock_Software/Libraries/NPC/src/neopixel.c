@@ -47,7 +47,7 @@ void neopixel_init(void){
 		//
 		TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);
 		// Start count of TIM2
-		TIM_Cmd(TIM2,ENABLE);
+		//TIM_Cmd(TIM2,ENABLE);
 	}
 
 	// TIM Output Compare management
@@ -134,7 +134,9 @@ void TIM2_IRQHandler(void){
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	    TIM2->CCR1 = LEDbuffer[index];
-
+	    if(index==LED_BUFFER_SIZE)
+	    	// Start count of TIM2
+			TIM_Cmd(TIM2,DISABLE);
 	    index = (index + 1)% LED_BUFFER_SIZE;
 	 }
 
@@ -170,6 +172,8 @@ void neopixel_dataInit(){
 		LEDbuffer[buffIndex] = WS2812_RESET;
 		buffIndex++;
 	}
+	// Start count of TIM2
+	TIM_Cmd(TIM2,ENABLE);
 }
 
 /**
