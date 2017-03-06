@@ -15,6 +15,8 @@ void System_Init(void){
 	bluetooth_init();
 	/* Configure neopixel */
 	neopixel_init();
+	/* Configure clock */
+	clock_init();
 }
 
 /**

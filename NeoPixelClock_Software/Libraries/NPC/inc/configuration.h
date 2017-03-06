@@ -11,6 +11,7 @@
 
 #include "neopixel.h"
 #include "bluetooth.h"
+#include "clock.h"
 
 /* Private function prototypes -----------------------------------------------*/
 void Error_Handler(void);
