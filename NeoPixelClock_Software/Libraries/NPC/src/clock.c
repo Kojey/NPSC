@@ -56,7 +56,7 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
 
 	//RTC_DateStructInit(&RTC_DateStrcut);
 
-	ErrorStatus status = RTC_SetDate(RTC_Format_BCD, &RTC_DateStrcut);
+	ErrorStatus status = RTC_SetDate(RTC_Format_BIN, &RTC_DateStrcut);
 
 	return status;
 }
@@ -73,7 +73,7 @@ ErrorStatus clock_setTime(uint8_t hours, uint8_t minutes, uint8_t second, uint8_
 
 	//RTC_TimeStructInit(&RTC_TimeStruct);
 
-	return RTC_SetTime(RTC_Format_BCD, &RTC_TimeStruct);
+	return RTC_SetTime(RTC_Format_BIN, &RTC_TimeStruct);
 }
 
 /**
