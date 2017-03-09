@@ -14,12 +14,11 @@
 #include "../inc/clock.h"
 
 /* Private variables */
+RTC_TimeTypeDef RTC_TimeStruct;
 RTC_InitTypeDef RTC_InitStruct;
 RTC_DateTypeDef RTC_DateStrcut;
-RTC_TimeTypeDef RTC_TimeStruct;
-
-
-uint8_t aShowDate[50] = {0};
+RTC_AlarmTypeDef RTC_AlarmStruct;
+EXTI_InitTypeDef EXTI_InitStruct;
 /**
  * @brief Initialize the clock, the frequency is set to 1Hz
  */
@@ -29,18 +28,42 @@ void clock_init(void){
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE); // Power controller
 	PWR_BackupAccessCmd(ENABLE); // Backup access
 
-	RCC_HSEConfig(RCC_HSE_ON);
-	while(RCC_GetFlagStatus(RCC_FLAG_HSERDY)==RESET);
+//	RCC_HSEConfig(RCC_HSE_ON);
+//	while(RCC_GetFlagStatus(RCC_FLAG_HSERDY)==RESET);
 	RCC_RTCCLKConfig(RCC_RTCCLKSource_HSE_Div8); // RTC Clock source
 
 	RCC_RTCCLKCmd(ENABLE); // Enable clock
 	RTC_WaitForSynchro();
 
-	RTC_InitStruct.RTC_AsynchPrediv = RTC_PREDIV_A;
-	RTC_InitStruct.RTC_SynchPrediv = RTC_PREDIV_S;
-	RTC_InitStruct.RTC_HourFormat = RTC_HourFormat_24;
+	// Set clock frequency
+	{
+		RTC_InitStruct.RTC_AsynchPrediv = RTC_PREDIV_A;
+		RTC_InitStruct.RTC_SynchPrediv = RTC_PREDIV_S;
+		RTC_InitStruct.RTC_HourFormat = RTC_HourFormat_12;
+		RTC_Init(&RTC_InitStruct);
+	}
 
-	RTC_Init(&RTC_InitStruct);
+	clock_setAlarm();
+	clock_setDate(RTC_Weekday_Monday,RTC_Month_March,6,17);
+	clock_setTime(10,30,0,CLOCK_AM);
+	// EXTI configuration
+	{
+		EXTI_ClearITPendingBit(EXTI_Line17);
+		EXTI_InitStruct.EXTI_Line = EXTI_Line17;
+		EXTI_InitStruct.EXTI_Mode = EXTI_Mode_Interrupt;
+		EXTI_InitStruct.EXTI_Trigger = EXTI_Trigger_Rising;
+		EXTI_InitStruct.EXTI_LineCmd = ENABLE;
+		EXTI_Init(&EXTI_InitStruct);
+	}
+	// Enable Alarm interrupt
+	{
+		NVIC_InitTypeDef NVIC_InitStruct;
+		NVIC_InitStruct.NVIC_IRQChannel = RTC_Alarm_IRQn;
+		NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+		NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+		NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+		NVIC_Init(&NVIC_InitStruct);
+	}
 	/*RTC_WriteBackupRegister(RTC_BKP_DR0, 0x32F2);*/
 }
 
@@ -100,4 +123,30 @@ uint32_t clock_getTime(void){
 	uint32_t seconds = RTC_TimeStruct.RTC_Seconds << 8;
 	uint32_t format = RTC_TimeStruct.RTC_H12;
 	return (uint32_t) (hours|minutes|seconds|format);
+}
+
+/**
+ */
+void clock_setAlarm(void){
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Hours = 10;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Minutes = 30;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Seconds = 30;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
+	RTC_AlarmStruct.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_WeekDay;
+	RTC_AlarmStruct.RTC_AlarmDateWeekDay = RTC_Weekday_Monday;
+	RTC_AlarmStruct.RTC_AlarmMask = RTC_AlarmMask_None;
+
+	RTC_SetAlarm(RTC_Format_BIN,CLOCK_A,&RTC_AlarmStruct);
+	RTC_ITConfig(RTC_IT_ALRA,ENABLE);
+	RTC_AlarmCmd(CLOCK_A,ENABLE);
+	RTC_ClearFlag(RTC_FLAG_ALRAF);
+}
+
+/**
+ */
+void RTC_Alarm_IRQHandler(void){
+	GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
+	while(RTC_GetITStatus(RTC_IT_ALRA)==RESET);
+	RTC_ClearITPendingBit(RTC_IT_ALRA);
+	EXTI_ClearITPendingBit(EXTI_Line17);
 }
