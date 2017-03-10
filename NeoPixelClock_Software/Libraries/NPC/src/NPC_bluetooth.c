@@ -1,13 +1,56 @@
-/*
- * bluetooth.c
- *
- *  Created on: 01 Mar 2017
- *      Author: Kojey
- */
+/**
+  ******************************************************************************
+  * @file    PC_bluetooth.c
+  * @author  Othniel Konan (Kojey)
+  * @version V1.1.0
+  * @date    01-March-2017
+  * @brief	 This file provides firmware functions to manage the bluetooth
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT </center></h2>
+  *
+  ******************************************************************************
+  */
 
-
+/* Includes -----------------------------------------------------------------*/
 #include "../inc/NPC_bluetooth.h"
 
+/** @addtogroup NPC
+  * @{
+  */
+
+/** @defgroup Bluetooth
+  * @brief Bluetooth driver modules
+  * @{
+  */
+
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/**	@defgroup Bluetooth initialization and transmission handler functions
+ * 	@brief	Bluetooth initialization functions
+ *
+@verbatim
+ ===============================================================================
+         ##### Bluetooth initialization functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to initialize the bluetooth.
+
+@endverbatim
+  * @{
+  */
+
+/**
+ * @brief	Initialize the bluetooth and set baudrate to 9600
+ * @param 	None
+ * @retval	None
+ */
 void bluetooth_init(void){
 	// Enable RCC for USART1, GPIOB
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
@@ -72,12 +115,14 @@ void bluetooth_init(void){
 
 	}
 
-	uint8_t welcome_str[] = " Welcome to NeoPixelClock!\r\n";
+	uint8_t welcome_str[] = "Welcome to NeoPixelClock!\r\n";
 	bluetooth_send(welcome_str);
 }
 
 /**
- * @brief USART1 Interrupt Handler
+ * @brief	USART1 Interrupt Handler
+ * @param 	None
+ * @retval	none
  */
 void USART1_IRQHandler(void){
 	// Wait until reception
@@ -117,10 +162,28 @@ void USART1_IRQHandler(void){
 	}
 }
 
+/**
+ * @}
+ */
+
+/**	@defgroup Bluetooth transmission functions
+ * 	@brief	Bluetooth transmission functions
+ *
+@verbatim
+ ===============================================================================
+         ##### Bluetooth transmission functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to transmit and receive data.
+
+@endverbatim
+  * @{
+  */
 
 /**
- * @brief send string to the hc-06
- * @data string to be sent
+ * @brief 	send string to the hc-06
+ * @param	data: string to be sent
+ * @retval	None
  */
 void bluetooth_send(uint8_t * data){
 	uint32_t size = strlen((char *)data);
@@ -131,9 +194,22 @@ void bluetooth_send(uint8_t * data){
 }
 
 /**
- * @brief receive a byte from hc-06
- * @return byte of data
+ * @brief	receive a byte from hc-06
+ * @param	None
+ * @retval	An uint8_t byte of data
  */
 uint8_t bluetooth_receive(void){
 	return USART_ReceiveData(USART1);
 }
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */

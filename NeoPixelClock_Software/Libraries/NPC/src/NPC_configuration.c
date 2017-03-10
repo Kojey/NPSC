@@ -1,16 +1,44 @@
-/*
- * Configuration.c
- *
- *  Created on: Feb 17, 2017
- *      Author: Kojey
- */
+/**
+  ******************************************************************************
+  * @file    NPC_configuration.c
+  * @author  Othniel Konan (Kojey)
+  * @version V1.1.0
+  * @date    17-February-2017
+  * @brief   This file contains all the main initialization functions used by
+  * 			the NPC
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT </center></h2>
+  *
+  ******************************************************************************
+  */
 
+/* Includes -----------------------------------------------------------------*/
 #include "../inc/NPC_configuration.h"
 
+/** @addtogroup NPC
+  * @{
+  */
 
-/** System init
+/** @defgroup Configuration
+  * @brief Configuration driver modules
+  * @{
+  */
+
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+
+/**
+ * @brief	Initialize all firmwares used by the NPC
+ * @param	None
+ * @retval	None
  */
-void System_Init(void){
+void NPC_init(void){
 	/* Configure bluetooth */
 	bluetooth_init();
 	/* Configure neopixel */
@@ -33,3 +61,11 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler */
 }
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */

@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    clock.h
+  * @file    NPC_clock.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    06-March-2017
@@ -25,7 +25,7 @@
   * @{
   */
 
-/** @addtogroup clock
+/** @addtogroup Clock
   * @{
   */
 

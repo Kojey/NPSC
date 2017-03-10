@@ -1,4 +1,3 @@
-
 /**
   ******************************************************************************
   * @file    clock.c
@@ -45,7 +44,7 @@
   * @{
   */
 
-/** @defgroup clock
+/** @defgroup Clock
   * @brief clock driver modules
   * @{
   */
@@ -78,7 +77,7 @@ EXTI_InitTypeDef EXTI_InitStruct;
 
 /**
  * @brief	Initialize the clock to 1Hz and setup peripherals for Alarm
- *
+ * @param	None
  * @retval	None
  */
 void clock_init(void){
@@ -139,7 +138,7 @@ void clock_init(void){
 
 /**
  * @brief	Set the clock's date
- *
+ * @param	None
  * @retval	An ErrorStatus representing the outcome of the operation
  *				- SUCCESS: RTC Shift registers are configured
  *          	- ERROR: RTC Shift registers are not configured
@@ -156,7 +155,7 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
 
 /**
  * @brief	Set the clock's time
- *
+ * @param	None
  * @retval	An ErrorStatus representing the outcome of the operation
  *				- SUCCESS: RTC Shift registers are configured
  *          	- ERROR: RTC Shift registers are not configured
@@ -173,7 +172,7 @@ ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t
 
 /**
  * @brief	Get the date encoded in a 32b format
- *
+ * @param	None
  * @retval	An uint32_t containing the weekDay as its MB3, date : MB2, month : MB1, year : MB0
  */
 uint32_t clock_getDate(void){
@@ -187,7 +186,7 @@ uint32_t clock_getDate(void){
 
 /**
  * @brief	Get the time encoded in a 32b format
- *
+ * @param	None
  * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
  */
 uint32_t clock_getTime(void){
@@ -218,7 +217,6 @@ uint32_t clock_getTime(void){
 
 /**
  * @brief	Create an Alarm Structure given all the parameters
- *
  * @param 	am_pm: 	AM PM format (CLOCK_AM)
  * @param	hours: 	Alarm hours
  * @param	minutes: Alarm minutes
@@ -226,7 +224,6 @@ uint32_t clock_getTime(void){
  * @param	dateWeekDaySel: Date of WeekDay selection  @ref RTC_AlarmDateWeekDay_Definitions
  * @param	dateWeekDay:	Specify Alarm Date/Weekday if Date then value range from 1-31, else @ref RTC_WeekDay_Definitions
  * @param	repeat: Specify the repetition of the Alarm
- *
  * @retval	An RTC_AlarmTypeDef containing all the parameters above
  */
 RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat){
@@ -247,9 +244,7 @@ RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes,
 
 /**
  * @brief	Set an alarm to RTC_Alarm_A, given a Alarm structure @ref RTC_AlarmTypeDef
- *
  * @param 	Alarm:	A pointer to the RTC_AlarmTypeDef
- *
  * @retval	None
  */
 void clock_setA(RTC_AlarmTypeDef * Alarm){
@@ -262,7 +257,6 @@ void clock_setA(RTC_AlarmTypeDef * Alarm){
 
 /**
  * @brief	Set an alarm to RTC_Alarm_A, given all the alarm parameters
- *
  * @param 	am_pm: 	AM PM format (CLOCK_AM)
  * @param	hours: 	Alarm hours
  * @param	minutes: Alarm minutes
@@ -270,7 +264,6 @@ void clock_setA(RTC_AlarmTypeDef * Alarm){
  * @param	dateWeekDaySel: Date of WeekDay selection  @ref RTC_AlarmDateWeekDay_Definitions
  * @param	dateWeekDay:	Specify Alarm Date/Weekday if Date then value range from 1-31, else @ref RTC_WeekDay_Definitions
  * @param	repeat: Specify the repetition of the Alarm
- *
  * @retval	None
  */
 void clock_setAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat){
@@ -295,7 +288,7 @@ void clock_setAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t second
 
 /**
  * @brief	Alarm Handler
- *
+ * @param	None
  * @retval	None
  */
 
