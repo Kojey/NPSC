@@ -6,7 +6,7 @@
  */
 
 
-#include "../inc/bluetooth.h"
+#include "../inc/NPC_bluetooth.h"
 
 void bluetooth_init(void){
 	// Enable RCC for USART1, GPIOB

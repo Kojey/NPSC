@@ -38,7 +38,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../inc/clock.h"
+#include "../inc/NPC_clock.h"
 
 
 /** @addtogroup NPC

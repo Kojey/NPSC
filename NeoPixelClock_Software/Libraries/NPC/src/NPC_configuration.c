@@ -5,7 +5,7 @@
  *      Author: Kojey
  */
 
-#include "../Inc/Configuration.h"
+#include "../inc/NPC_configuration.h"
 
 
 /** System init

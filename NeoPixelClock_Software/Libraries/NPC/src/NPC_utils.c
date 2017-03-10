@@ -5,7 +5,7 @@
  *      Author: Kojey
  */
 
-#include "../Inc/utils.h"
+#include "../inc/NPC_utils.h"
 
 uint8_t pixel_color;
 /**

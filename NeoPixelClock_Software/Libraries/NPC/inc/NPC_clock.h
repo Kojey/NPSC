@@ -15,11 +15,11 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_CLOCK_H_
-#define NPC_INC_CLOCK_H_
+#ifndef NPC_INC_NPC_CLOCK_H_
+#define NPC_INC_NPC_CLOCK_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "utils.h"
+#include "NPC_utils.h"
 
 /** @addtogroup NPC
   * @{
@@ -110,7 +110,7 @@ void clock_setA(RTC_AlarmTypeDef * Alarm);
 void clock_setAlarm(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat);
 void RTC_Alarm_IRQHandler(void);
 
-#endif /* NPC_INC_CLOCK_H_ */
+#endif /* NPC_INC_NPC_CLOCK_H_ */
 
 /**
  * @}

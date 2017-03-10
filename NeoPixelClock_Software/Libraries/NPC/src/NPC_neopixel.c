@@ -5,7 +5,7 @@
  *      Author: Kojey
  */
 
-#include "../inc/neopixel.h"
+#include "../inc/NPC_neopixel.h"
 
 static uint32_t LEDbuffer[LED_BUFFER_SIZE];// = {WS2812_1, WS2812_0};
 static uint8_t brightness = 255;

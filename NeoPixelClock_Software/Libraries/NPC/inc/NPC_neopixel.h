@@ -5,10 +5,10 @@
  *      Author: Kojey
  */
 
-#ifndef NPC_INC_NEOPIXEL_H_
-#define NPC_INC_NEOPIXEL_H_
+#ifndef NPC_INC_NPC_NEOPIXEL_H_
+#define NPC_INC_NPC_NEOPIXEL_H_
 
-#include "utils.h"
+#include "NPC_utils.h"
 
 /* WS2812 Defines constants*/
 #define WS2812_FREQ							(8E5) 			// it is fixed: WS2812 require 800kHz
@@ -42,4 +42,4 @@ uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b);
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 
-#endif /* NPC_INC_NEOPIXEL_H_ */
+#endif /* NPC_INC_NPC_NEOPIXEL_H_ */

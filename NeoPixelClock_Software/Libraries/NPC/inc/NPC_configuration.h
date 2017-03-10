@@ -9,9 +9,9 @@
 #define CONFIGURATION_H_
 
 
-#include "neopixel.h"
-#include "bluetooth.h"
-#include "clock.h"
+#include "NPC_bluetooth.h"
+#include "NPC_clock.h"
+#include "NPC_neopixel.h"
 
 /* Private function prototypes -----------------------------------------------*/
 void Error_Handler(void);

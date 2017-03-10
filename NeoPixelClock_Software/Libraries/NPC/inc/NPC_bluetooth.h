@@ -5,10 +5,10 @@
  *      Author: Kojey
  */
 
-#ifndef NPC_INC_BLUETOOTH_H_
-#define NPC_INC_BLUETOOTH_H_
+#ifndef NPC_INC_NPC_BLUETOOTH_H_
+#define NPC_INC_NPC_BLUETOOTH_H_
 
-#include "utils.h"
+#include "NPC_utils.h"
 
 
 void USART1_IRQHandler(void);
@@ -16,4 +16,4 @@ void bluetooth_init(void);
 void bluetooth_send(uint8_t * data);
 uint8_t bluetooth_receive(void);
 
-#endif /* NPC_INC_BLUETOOTH_H_ */
+#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
