@@ -1,41 +1,98 @@
-/*
- * clock.c
- *
- *  Created on: 06 Mar 2017
- *      Author: Kojey
- */
 
-	/* Make sure that VBAT is connected to an external power supply
+/**
+  ******************************************************************************
+  * @file    clock.c
+  * @author  Othniel Konan (Kojey)
+  * @version V1.1.0
+  * @date    06-March-2017
+  * @brief   This file provides firmware functions to manage the Date, Time and Alarm
+  * 			of the NPC clock
+  *
+@verbatim
+
+ ===================================================================
+                  ##### Note on VBat and VDD #####
+ ===================================================================
+ [..]
+	(+)	Make sure that VBAT is connected to an external power supply
 		otherwise RTC info will be lost on VDD power off.
-		Ideally RTC info should be saved and loaded from an eeprom to
-		avoid lost
-	*/
+		Ideally RTC info should be saved and loaded from an EEPROM or
+		SD card to avoid lost
 
+                  ##### How to use Clock Driver #####
+ ===================================================================
+ [..]
+   (+) Initialize the Clock using clock_init()
+   (+) Set the Date using clock_setDate(...)
+   (+) Set the Time using clock_setTime(...)
+   (+) Set the Alarm using clock_setAlarm(...)
+
+@endverbatim
+
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; COPYRIGHT </center></h2>
+  *
+  ******************************************************************************
+  */
+
+/* Includes -----------------------------------------------------------------*/
 #include "../inc/clock.h"
 
-/* Private variables */
+
+/** @addtogroup NPC
+  * @{
+  */
+
+/** @defgroup clock
+  * @brief clock driver modules
+  * @{
+  */
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private macro -------------------------------------------------------------*/
+/* Private variables ---------------------------------------------------------*/
 RTC_TimeTypeDef RTC_TimeStruct;
 RTC_InitTypeDef RTC_InitStruct;
 RTC_DateTypeDef RTC_DateStrcut;
 RTC_AlarmTypeDef RTC_AlarmStruct;
 EXTI_InitTypeDef EXTI_InitStruct;
+
+/* Private functions ---------------------------------------------------------*/
+
+/**	@defgroup Clock initialization functions
+ * 	@brief	Clock initialization functions
+ *
+@verbatim
+ ===============================================================================
+         ##### Clock initialization functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to initialize the clock.
+
+@endverbatim
+  * @{
+  */
+
 /**
- * @brief Initialize the clock, the frequency is set to 1Hz
+ * @brief	Initialize the clock to 1Hz and setup peripherals for Alarm
+ *
+ * @retval	None
  */
 void clock_init(void){
 
-	// RTC domain access
+	/* RTC domain access */
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_PWR, ENABLE); // Power controller
 	PWR_BackupAccessCmd(ENABLE); // Backup access
 
-//	RCC_HSEConfig(RCC_HSE_ON);
-//	while(RCC_GetFlagStatus(RCC_FLAG_HSERDY)==RESET);
 	RCC_RTCCLKConfig(RCC_RTCCLKSource_HSE_Div8); // RTC Clock source
 
 	RCC_RTCCLKCmd(ENABLE); // Enable clock
 	RTC_WaitForSynchro();
 
-	// Set clock frequency
+	/* Set clock frequency to 1Hz */
 	{
 		RTC_InitStruct.RTC_AsynchPrediv = RTC_PREDIV_A;
 		RTC_InitStruct.RTC_SynchPrediv = RTC_PREDIV_S;
@@ -43,10 +100,7 @@ void clock_init(void){
 		RTC_Init(&RTC_InitStruct);
 	}
 
-	clock_setAlarm();
-	clock_setDate(RTC_Weekday_Monday,RTC_Month_March,6,17);
-	clock_setTime(10,30,0,CLOCK_AM);
-	// EXTI configuration
+	/* EXTI configuration */
 	{
 		EXTI_ClearITPendingBit(EXTI_Line17);
 		EXTI_InitStruct.EXTI_Line = EXTI_Line17;
@@ -55,7 +109,7 @@ void clock_init(void){
 		EXTI_InitStruct.EXTI_LineCmd = ENABLE;
 		EXTI_Init(&EXTI_InitStruct);
 	}
-	// Enable Alarm interrupt
+	/* Enable Alarm interrupt */
 	{
 		NVIC_InitTypeDef NVIC_InitStruct;
 		NVIC_InitStruct.NVIC_IRQChannel = RTC_Alarm_IRQn;
@@ -64,11 +118,31 @@ void clock_init(void){
 		NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 		NVIC_Init(&NVIC_InitStruct);
 	}
-	/*RTC_WriteBackupRegister(RTC_BKP_DR0, 0x32F2);*/
 }
+/**
+ * @}
+ */
+
+/**	@defgroup Clock Time and Date Configuration functions
+ * 	@brief	Time and date configuration functions
+ *
+@verbatim
+ ===============================================================================
+         ##### Clock configuration functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to program and read the RTC Clock information.
+
+@endverbatim
+  * @{
+  * */
 
 /**
- * @brief Set the date of the clock
+ * @brief	Set the clock's date
+ *
+ * @retval	An ErrorStatus representing the outcome of the operation
+ *				- SUCCESS: RTC Shift registers are configured
+ *          	- ERROR: RTC Shift registers are not configured
  */
 ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year){
 
@@ -77,31 +151,30 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
 	RTC_DateStrcut.RTC_WeekDay = weekDay;
 	RTC_DateStrcut.RTC_Year = year;
 
-	//RTC_DateStructInit(&RTC_DateStrcut);
-
-	ErrorStatus status = RTC_SetDate(RTC_Format_BIN, &RTC_DateStrcut);
-
-	return status;
+	return RTC_SetDate(RTC_Format_BIN, &RTC_DateStrcut);
 }
 
 /**
- * @brief Set the clock's time
+ * @brief	Set the clock's time
+ *
+ * @retval	An ErrorStatus representing the outcome of the operation
+ *				- SUCCESS: RTC Shift registers are configured
+ *          	- ERROR: RTC Shift registers are not configured
  */
-ErrorStatus clock_setTime(uint8_t hours, uint8_t minutes, uint8_t second, uint8_t format){
+ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t second){
 
-	RTC_TimeStruct.RTC_H12 = format;
+	RTC_TimeStruct.RTC_H12 = am_pm;
 	RTC_TimeStruct.RTC_Hours = hours;
 	RTC_TimeStruct.RTC_Minutes = minutes;
 	RTC_TimeStruct.RTC_Seconds = second;
-
-	//RTC_TimeStructInit(&RTC_TimeStruct);
 
 	return RTC_SetTime(RTC_Format_BIN, &RTC_TimeStruct);
 }
 
 /**
- * @brief Get the date encoded in a 32b format
- * 32b = (8b)weekDay | (8b)date | (8b)month | (8b)year
+ * @brief	Get the date encoded in a 32b format
+ *
+ * @retval	An uint32_t containing the weekDay as its MB3, date : MB2, month : MB1, year : MB0
  */
 uint32_t clock_getDate(void){
 	RTC_GetDate(RTC_Format_BIN,&RTC_DateStrcut);
@@ -113,8 +186,9 @@ uint32_t clock_getDate(void){
 }
 
 /**
- * @brief Get the time encoded in a 32b format
- * 32b = (8b)hours | (8b)minutes | (8b)seconds | (8b)format
+ * @brief	Get the time encoded in a 32b format
+ *
+ * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
  */
 uint32_t clock_getTime(void){
 	RTC_GetTime(RTC_Format_BIN,&RTC_TimeStruct);
@@ -124,18 +198,95 @@ uint32_t clock_getTime(void){
 	uint32_t format = RTC_TimeStruct.RTC_H12;
 	return (uint32_t) (hours|minutes|seconds|format);
 }
+/**
+ * @}
+ */
+
+/** @defgroup Clock Alarms configuration functions
+ *  @brief   Alarm configuration functions
+ *
+@verbatim
+ ===============================================================================
+         ##### Alarm configuration functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to program and read the RTC Alarms.
+
+@endverbatim
+  * @{
+  */
 
 /**
+ * @brief	Create an Alarm Structure given all the parameters
+ *
+ * @param 	am_pm: 	AM PM format (CLOCK_AM)
+ * @param	hours: 	Alarm hours
+ * @param	minutes: Alarm minutes
+ * @param	seconds: Alarm seconds
+ * @param	dateWeekDaySel: Date of WeekDay selection  @ref RTC_AlarmDateWeekDay_Definitions
+ * @param	dateWeekDay:	Specify Alarm Date/Weekday if Date then value range from 1-31, else @ref RTC_WeekDay_Definitions
+ * @param	repeat: Specify the repetition of the Alarm
+ *
+ * @retval	An RTC_AlarmTypeDef containing all the parameters above
  */
-void clock_setAlarm(void){
-	RTC_AlarmStruct.RTC_AlarmTime.RTC_Hours = 10;
-	RTC_AlarmStruct.RTC_AlarmTime.RTC_Minutes = 30;
-	RTC_AlarmStruct.RTC_AlarmTime.RTC_Seconds = 30;
-	RTC_AlarmStruct.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
-	RTC_AlarmStruct.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_WeekDay;
-	RTC_AlarmStruct.RTC_AlarmDateWeekDay = RTC_Weekday_Monday;
-	RTC_AlarmStruct.RTC_AlarmMask = RTC_AlarmMask_None;
+RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat){
+	RTC_AlarmTypeDef Alarm_Struct;
+	/* Time definition */
+	Alarm_Struct.RTC_AlarmTime.RTC_Hours = hours;
+	Alarm_Struct.RTC_AlarmTime.RTC_Minutes = minutes;
+	Alarm_Struct.RTC_AlarmTime.RTC_Seconds= seconds;
+	Alarm_Struct.RTC_AlarmTime.RTC_H12 = am_pm;
+	/* Date definition */
+	Alarm_Struct.RTC_AlarmDateWeekDaySel = dateWeekDaySel;
+	Alarm_Struct.RTC_AlarmDateWeekDay = dateWeekDay;
+	/* Repetition */
+	Alarm_Struct.RTC_AlarmMask = repeat;
 
+	return Alarm_Struct;
+}
+
+/**
+ * @brief	Set an alarm to RTC_Alarm_A, given a Alarm structure @ref RTC_AlarmTypeDef
+ *
+ * @param 	Alarm:	A pointer to the RTC_AlarmTypeDef
+ *
+ * @retval	None
+ */
+void clock_setA(RTC_AlarmTypeDef * Alarm){
+	RTC_AlarmCmd(RTC_Alarm_A,DISABLE);
+	RTC_SetAlarm(RTC_Format_BIN,RTC_Alarm_A,Alarm);
+	RTC_ITConfig(RTC_IT_ALRA,ENABLE);
+	RTC_AlarmCmd(CLOCK_A,ENABLE);
+	RTC_ClearFlag(RTC_FLAG_ALRAF);
+}
+
+/**
+ * @brief	Set an alarm to RTC_Alarm_A, given all the alarm parameters
+ *
+ * @param 	am_pm: 	AM PM format (CLOCK_AM)
+ * @param	hours: 	Alarm hours
+ * @param	minutes: Alarm minutes
+ * @param	seconds: Alarm seconds
+ * @param	dateWeekDaySel: Date of WeekDay selection  @ref RTC_AlarmDateWeekDay_Definitions
+ * @param	dateWeekDay:	Specify Alarm Date/Weekday if Date then value range from 1-31, else @ref RTC_WeekDay_Definitions
+ * @param	repeat: Specify the repetition of the Alarm
+ *
+ * @retval	None
+ */
+void clock_setAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat){
+
+	RTC_AlarmCmd(RTC_Alarm_A,DISABLE); // Reset alarm A
+
+	/* Update Alarm Structure */
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Hours = hours;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Minutes = minutes;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_Seconds = seconds;
+	RTC_AlarmStruct.RTC_AlarmTime.RTC_H12 = am_pm;
+	RTC_AlarmStruct.RTC_AlarmDateWeekDaySel = dateWeekDaySel;
+	RTC_AlarmStruct.RTC_AlarmDateWeekDay = dateWeekDay;
+	RTC_AlarmStruct.RTC_AlarmMask = repeat;
+
+	/* Set Alarm and Interrupts */
 	RTC_SetAlarm(RTC_Format_BIN,CLOCK_A,&RTC_AlarmStruct);
 	RTC_ITConfig(RTC_IT_ALRA,ENABLE);
 	RTC_AlarmCmd(CLOCK_A,ENABLE);
@@ -143,10 +294,28 @@ void clock_setAlarm(void){
 }
 
 /**
+ * @brief	Alarm Handler
+ *
+ * @retval	None
  */
+
 void RTC_Alarm_IRQHandler(void){
-	GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
-	while(RTC_GetITStatus(RTC_IT_ALRA)==RESET);
-	RTC_ClearITPendingBit(RTC_IT_ALRA);
-	EXTI_ClearITPendingBit(EXTI_Line17);
+	/* ALARM A Detection */
+	while(RTC_GetITStatus(RTC_IT_ALRA)==RESET);	// Wait for Alarm A event
+	RTC_ClearITPendingBit(RTC_IT_ALRA);			// Clear Alarm A interrupt pending bit
+	EXTI_ClearITPendingBit(EXTI_Line17);		// Clear External Interrupt pending bit
+
+	/* TODO What need to be done when Alarm event occurs*/
+	GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
 }
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
+
+/**
+ * @}
+ */
