@@ -1,0 +1,113 @@
+\hypertarget{group___bluetooth}{}\section{Bluetooth}
+\label{group___bluetooth}\index{Bluetooth@{Bluetooth}}
+
+
+Bluetooth driver modules.  
+
+
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___initialization}{Initialization and transmission handler functions}
+\begin{DoxyCompactList}\small\item\em Bluetooth initialization functions. \end{DoxyCompactList}\item 
+\hyperlink{group___transmission}{Transmission functions}
+\begin{DoxyCompactList}\small\item\em Bluetooth transmission functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___bluetooth_gaaa60810e0857e9e1e5b2cba80b8db3ff}{bluetooth\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the bluetooth and set baudrate to 9600. \end{DoxyCompactList}\item 
+void \hyperlink{group___bluetooth_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+R\+T1 Interrupt Handler. \end{DoxyCompactList}\item 
+void \hyperlink{group___bluetooth_ga31d829d5658369ee2c90b9c3cdbedfe1}{bluetooth\+\_\+send} (uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em send string to the hc-\/06 \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___bluetooth_gab7ad1e1b94cf1cedc8a8e5151b0e25cb}{bluetooth\+\_\+receive} (void)
+\begin{DoxyCompactList}\small\item\em receive a byte from hc-\/06 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Bluetooth driver modules. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___bluetooth_gaaa60810e0857e9e1e5b2cba80b8db3ff}\label{group___bluetooth_gaaa60810e0857e9e1e5b2cba80b8db3ff}} 
+\index{Bluetooth@{Bluetooth}!bluetooth\+\_\+init@{bluetooth\+\_\+init}}
+\index{bluetooth\+\_\+init@{bluetooth\+\_\+init}!Bluetooth@{Bluetooth}}
+\subsubsection{\texorpdfstring{bluetooth\+\_\+init()}{bluetooth\_init()}}
+{\footnotesize\ttfamily void bluetooth\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the bluetooth and set baudrate to 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___bluetooth_gab7ad1e1b94cf1cedc8a8e5151b0e25cb}\label{group___bluetooth_gab7ad1e1b94cf1cedc8a8e5151b0e25cb}} 
+\index{Bluetooth@{Bluetooth}!bluetooth\+\_\+receive@{bluetooth\+\_\+receive}}
+\index{bluetooth\+\_\+receive@{bluetooth\+\_\+receive}!Bluetooth@{Bluetooth}}
+\subsubsection{\texorpdfstring{bluetooth\+\_\+receive()}{bluetooth\_receive()}}
+{\footnotesize\ttfamily uint8\+\_\+t bluetooth\+\_\+receive (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+receive a byte from hc-\/06 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & uint8\+\_\+t byte of data \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___bluetooth_ga31d829d5658369ee2c90b9c3cdbedfe1}\label{group___bluetooth_ga31d829d5658369ee2c90b9c3cdbedfe1}} 
+\index{Bluetooth@{Bluetooth}!bluetooth\+\_\+send@{bluetooth\+\_\+send}}
+\index{bluetooth\+\_\+send@{bluetooth\+\_\+send}!Bluetooth@{Bluetooth}}
+\subsubsection{\texorpdfstring{bluetooth\+\_\+send()}{bluetooth\_send()}}
+{\footnotesize\ttfamily void bluetooth\+\_\+send (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+send string to the hc-\/06 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & string to be sent \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___bluetooth_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}\label{group___bluetooth_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}} 
+\index{Bluetooth@{Bluetooth}!U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}!Bluetooth@{Bluetooth}}
+\subsubsection{\texorpdfstring{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler()}{USART1\_IRQHandler()}}
+{\footnotesize\ttfamily void U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+S\+A\+R\+T1 Interrupt Handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}

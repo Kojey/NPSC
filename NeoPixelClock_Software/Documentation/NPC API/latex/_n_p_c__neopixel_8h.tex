@@ -1,0 +1,88 @@
+\hypertarget{_n_p_c__neopixel_8h}{}\section{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+neopixel.h File Reference}
+\label{_n_p_c__neopixel_8h}\index{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+neopixel.\+h@{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+neopixel.\+h}}
+
+
+This file contains all the configuration prototypes used by the neopixel firmware.  
+
+
+{\ttfamily \#include \char`\"{}N\+P\+C\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries W\+S2812\+\_\+\+F\+R\+EQ}~(8\+E5)
+\item 
+\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ}~(84\+E6)
+\item 
+\#define {\bfseries T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}~(T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ / W\+S2812\+\_\+\+F\+R\+EQ)
+\item 
+\#define {\bfseries L\+E\+D\+\_\+\+N\+U\+M\+B\+ER}~(4)
+\item 
+\#define {\bfseries L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}~(L\+E\+D\+\_\+\+N\+U\+M\+B\+ER $\ast$ 24)
+\item 
+\#define {\bfseries R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN}~(50)
+\item 
+\#define {\bfseries R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND}~(50)
+\item 
+\#define {\bfseries W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT}~(1)
+\item 
+\#define {\bfseries L\+E\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~(R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN + L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE + W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT + R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND)
+\item 
+\#define {\bfseries W\+S2812\+\_\+0}~(T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD / 3)
+\item 
+\#define {\bfseries W\+S2812\+\_\+1}~(T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD $\ast$ 2 / 3)
+\item 
+\#define {\bfseries W\+S2812\+\_\+\+R\+E\+S\+ET}~(0)
+\item 
+\#define {\bfseries M\+A\+X\+\_\+8\+B\+IT}~(255)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___neo_pixel_gaac78468985e44a3e4d353ea9276b33bc}{neopixel\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise the neopixel. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_gae027558106eef5c81996294f4561fecb}{neopixel\+\_\+set\+Brightness} (uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Set the brightness of the led. \end{DoxyCompactList}\item 
+void {\bfseries neopixel\+\_\+set\+State} (uint8\+\_\+t s)
+\item 
+void {\bfseries neopixel\+\_\+show} (void)
+\item 
+void \hyperlink{group___neo_pixel_ga8e3cfef785ce221672f825f8785c25b8}{neopixel\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em Stop pushing data to the neopixels. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga79e34feddcfb2c45ae218166c84bdff4}{neopixel\+\_\+data\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise the L\+E\+Dbuffer. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga38ad4725462bdc5e86c4ead4f04b9fc2}{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Timer Handler for neopixel. \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries neopixel\+\_\+color\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\item 
+uint32\+\_\+t {\bfseries neopixel\+\_\+color\+R\+G\+BW} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\item 
+void \hyperlink{group___neo_pixel_gadbf8ae449ade0b6015cb75632182b04c}{neopixel\+\_\+set\+Pixel\+Color\+R\+GB} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga8eb6ad73b1bd1df8bddc2615035a3371}{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga71a91c14cda530d83c6bbb241fc9bf96}{neopixel\+\_\+set\+Pixel\+Color} (uint8\+\_\+t n, uint32\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_gaff8fc0f23014295654811a1ec909f204}{neopixel\+\_\+set\+Pixel\+ColorW} (uint8\+\_\+t n, uint32\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga7a6c2dc149e86a788aede1d6aa5262d7}{neopixel\+\_\+set\+All\+Pixel\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em set all the pixel on the line to a specific colour \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga1ba017c1f338ef2c8e4a48acae35d87e}{neopixel\+\_\+set\+All\+Pixel\+R\+G\+BW} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\begin{DoxyCompactList}\small\item\em set all the pixel on the line to a specific colour \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the configuration prototypes used by the neopixel firmware. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+01-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

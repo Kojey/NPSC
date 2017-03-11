@@ -1,0 +1,41 @@
+\hypertarget{_n_p_c__bluetooth_8h}{}\section{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+bluetooth.h File Reference}
+\label{_n_p_c__bluetooth_8h}\index{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+bluetooth.\+h@{Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+bluetooth.\+h}}
+
+
+This file contains all the configuration prototypes used by the bluetooth firmware.  
+
+
+{\ttfamily \#include \char`\"{}N\+P\+C\+\_\+utils.\+h\char`\"{}}\newline
+Include dependency graph for N\+P\+C\+\_\+bluetooth.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___bluetooth_gaaa60810e0857e9e1e5b2cba80b8db3ff}{bluetooth\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the bluetooth and set baudrate to 9600. \end{DoxyCompactList}\item 
+void \hyperlink{group___bluetooth_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+R\+T1 Interrupt Handler. \end{DoxyCompactList}\item 
+void \hyperlink{group___bluetooth_ga31d829d5658369ee2c90b9c3cdbedfe1}{bluetooth\+\_\+send} (uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em send string to the hc-\/06 \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___bluetooth_gab7ad1e1b94cf1cedc8a8e5151b0e25cb}{bluetooth\+\_\+receive} (void)
+\begin{DoxyCompactList}\small\item\em receive a byte from hc-\/06 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the configuration prototypes used by the bluetooth firmware. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+01-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

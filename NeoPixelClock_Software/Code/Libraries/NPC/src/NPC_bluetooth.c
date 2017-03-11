@@ -32,7 +32,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Bluetooth initialization and transmission handler functions
+/**	@defgroup Initialization Initialization and transmission handler functions
  * 	@brief	Bluetooth initialization functions
  *
 @verbatim
@@ -166,7 +166,7 @@ void USART1_IRQHandler(void){
  * @}
  */
 
-/**	@defgroup Bluetooth transmission functions
+/**	@defgroup Transmission Transmission functions
  * 	@brief	Bluetooth transmission functions
  *
 @verbatim

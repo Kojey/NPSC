@@ -33,7 +33,8 @@
 /* Exported constants --------------------------------------------------------*/
 
 /**
- * @defgroup WS2812 Defines constants
+ * @defgroup Constant
+ * @brief Defines constants
  * @{
  */
 #define WS2812_FREQ							(8E5) 			// it is fixed: WS2812 require 800kHz

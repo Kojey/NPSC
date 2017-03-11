@@ -1,0 +1,15 @@
+digraph "Libraries/NPC" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_6d2d5b60bd20db849a9486835a2715aa {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Libraries" fontname="Helvetica", fontsize="10", URL="dir_6d2d5b60bd20db849a9486835a2715aa.html"]
+  subgraph clusterdir_73bedcc95f9f4eb978995392265c6cee {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_73bedcc95f9f4eb978995392265c6cee.html"];
+    dir_73bedcc95f9f4eb978995392265c6cee [shape=plaintext label="NPC"];
+    dir_82675fbe88b0a846cb88364e718e7853 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_82675fbe88b0a846cb88364e718e7853.html"];
+    dir_4a9f89aa7285e10f898584d22c3a90a1 [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_4a9f89aa7285e10f898584d22c3a90a1.html"];
+  }
+  }
+  dir_4a9f89aa7285e10f898584d22c3a90a1->dir_82675fbe88b0a846cb88364e718e7853 [headlabel="5", labeldistance=1.5 headhref="dir_000003_000002.html"];
+}

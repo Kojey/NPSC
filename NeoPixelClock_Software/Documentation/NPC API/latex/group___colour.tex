@@ -1,0 +1,83 @@
+\hypertarget{group___colour}{}\section{Colour generation functions}
+\label{group___colour}\index{Colour generation functions@{Colour generation functions}}
+
+
+Neopixel colour functions.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{group___colour_ga1d500fbcbecad76feef8835437687ca0}{neopixel\+\_\+colour\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em convert R\+GB 3 8bit colour to a 32bit colour \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___colour_ga527ba03b45a249e5e1ea1da4b971b3ac}{neopixel\+\_\+colour\+R\+G\+BW} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\begin{DoxyCompactList}\small\item\em convert R\+GB 3 8bit colour to a 32bit colour \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Neopixel colour functions. 
+
+\begin{DoxyVerb} ===============================================================================
+                 ##### Neopixel colour generation functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to create and access colour.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___colour_ga1d500fbcbecad76feef8835437687ca0}\label{group___colour_ga1d500fbcbecad76feef8835437687ca0}} 
+\index{Colour generation functions@{Colour generation functions}!neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}}
+\index{neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}!Colour generation functions@{Colour generation functions}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+colour\+R\+G\+B()}{neopixel\_colourRGB()}}
+{\footnotesize\ttfamily uint32\+\_\+t neopixel\+\_\+colour\+R\+GB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+convert R\+GB 3 8bit colour to a 32bit colour 
+
+\begin{DoxyNote}{Note}
+M\+S3 0, M\+S2 r, M\+S1 g, M\+S0 b 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & R\+ED intensity \\
+\hline
+{\em g} & G\+R\+E\+EN intensity \\
+\hline
+{\em b} & B\+L\+UE intensity \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___colour_ga527ba03b45a249e5e1ea1da4b971b3ac}\label{group___colour_ga527ba03b45a249e5e1ea1da4b971b3ac}} 
+\index{Colour generation functions@{Colour generation functions}!neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}}
+\index{neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}!Colour generation functions@{Colour generation functions}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+colour\+R\+G\+B\+W()}{neopixel\_colourRGBW()}}
+{\footnotesize\ttfamily uint32\+\_\+t neopixel\+\_\+colour\+R\+G\+BW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})}
+
+
+
+convert R\+GB 3 8bit colour to a 32bit colour 
+
+\begin{DoxyNote}{Note}
+M\+S3 w, M\+S2 r, M\+S1 g, M\+S0 b 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & R\+ED intensity \\
+\hline
+{\em g} & G\+R\+E\+EN intensity \\
+\hline
+{\em b} & B\+L\+UE intensity \\
+\hline
+{\em w} & W\+H\+I\+TE intensity \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

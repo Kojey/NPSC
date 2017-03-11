@@ -1,0 +1,119 @@
+\hypertarget{group___time}{}\section{and Date Configuration functions}
+\label{group___time}\index{and Date Configuration functions@{and Date Configuration functions}}
+
+
+Clock time and date configuration functions.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___time_gaf16498fa2702bfda6b89a3335ccc7ca6}{clock\+\_\+set\+Date} (uint8\+\_\+t week\+Day, uint8\+\_\+t month, uint8\+\_\+t date, uint8\+\_\+t year)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s date. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___time_ga11404197d58ddf6b46230bcde4282ef2}{clock\+\_\+set\+Time} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t second)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s time. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___time_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Get the date encoded in a 32b format. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___time_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the time encoded in a 32b format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clock time and date configuration functions. 
+
+\begin{DoxyVerb} ===============================================================================
+         ##### Clock configuration functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to program and read the RTC Clock information.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___time_gabb4d72928cb3d131d40067fb141003aa}\label{group___time_gabb4d72928cb3d131d40067fb141003aa}} 
+\index{and Date Configuration functions@{and Date Configuration functions}!clock\+\_\+get\+Date@{clock\+\_\+get\+Date}}
+\index{clock\+\_\+get\+Date@{clock\+\_\+get\+Date}!and Date Configuration functions@{and Date Configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+get\+Date()}{clock\_getDate()}}
+{\footnotesize\ttfamily uint32\+\_\+t clock\+\_\+get\+Date (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the date encoded in a 32b format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & uint32\+\_\+t containing the week\+Day as its M\+B3, date \+: M\+B2, month \+: M\+B1, year \+: M\+B0 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___time_ga03ae6948083c259f6edc0b146f40dc62}\label{group___time_ga03ae6948083c259f6edc0b146f40dc62}} 
+\index{and Date Configuration functions@{and Date Configuration functions}!clock\+\_\+get\+Time@{clock\+\_\+get\+Time}}
+\index{clock\+\_\+get\+Time@{clock\+\_\+get\+Time}!and Date Configuration functions@{and Date Configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+get\+Time()}{clock\_getTime()}}
+{\footnotesize\ttfamily uint32\+\_\+t clock\+\_\+get\+Time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the time encoded in a 32b format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & uint32\+\_\+t containing the hour as its M\+B3, minutes \+: M\+B2, Seconds \+: M\+B1, format \+: M\+B0 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___time_gaf16498fa2702bfda6b89a3335ccc7ca6}\label{group___time_gaf16498fa2702bfda6b89a3335ccc7ca6}} 
+\index{and Date Configuration functions@{and Date Configuration functions}!clock\+\_\+set\+Date@{clock\+\_\+set\+Date}}
+\index{clock\+\_\+set\+Date@{clock\+\_\+set\+Date}!and Date Configuration functions@{and Date Configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+set\+Date()}{clock\_setDate()}}
+{\footnotesize\ttfamily Error\+Status clock\+\_\+set\+Date (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{week\+Day,  }\item[{uint8\+\_\+t}]{month,  }\item[{uint8\+\_\+t}]{date,  }\item[{uint8\+\_\+t}]{year }\end{DoxyParamCaption})}
+
+
+
+Set the clock\textquotesingle{}s date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & Error\+Status representing the outcome of the operation
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: R\+TC Shift registers are configured
+\item E\+R\+R\+OR\+: R\+TC Shift registers are not configured 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___time_ga11404197d58ddf6b46230bcde4282ef2}\label{group___time_ga11404197d58ddf6b46230bcde4282ef2}} 
+\index{and Date Configuration functions@{and Date Configuration functions}!clock\+\_\+set\+Time@{clock\+\_\+set\+Time}}
+\index{clock\+\_\+set\+Time@{clock\+\_\+set\+Time}!and Date Configuration functions@{and Date Configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+set\+Time()}{clock\_setTime()}}
+{\footnotesize\ttfamily Error\+Status clock\+\_\+set\+Time (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{am\+\_\+pm,  }\item[{uint8\+\_\+t}]{hours,  }\item[{uint8\+\_\+t}]{minutes,  }\item[{uint8\+\_\+t}]{second }\end{DoxyParamCaption})}
+
+
+
+Set the clock\textquotesingle{}s time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & Error\+Status representing the outcome of the operation
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: R\+TC Shift registers are configured
+\item E\+R\+R\+OR\+: R\+TC Shift registers are not configured 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}

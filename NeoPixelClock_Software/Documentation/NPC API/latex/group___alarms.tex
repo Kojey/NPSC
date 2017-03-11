@@ -1,0 +1,135 @@
+\hypertarget{group___alarms}{}\section{Alarms configuration functions}
+\label{group___alarms}\index{Alarms configuration functions@{Alarms configuration functions}}
+
+
+Clock alarm configuration functions.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+R\+T\+C\+\_\+\+Alarm\+Type\+Def \hyperlink{group___alarms_ga5e1614dbb1a210106dbade3f133db27e}{clock\+\_\+create\+Alarm} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t seconds, uint32\+\_\+t date\+Week\+Day\+Sel, uint8\+\_\+t date\+Week\+Day, uint32\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em Create an Alarm Structure given all the parameters. \end{DoxyCompactList}\item 
+void \hyperlink{group___alarms_gab56f512746d4f2638232db28bb7dac2b}{clock\+\_\+setA} (R\+T\+C\+\_\+\+Alarm\+Type\+Def $\ast$Alarm)
+\begin{DoxyCompactList}\small\item\em Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given a Alarm structure R\+T\+C\+\_\+\+Alarm\+Type\+Def. \end{DoxyCompactList}\item 
+void \hyperlink{group___alarms_gaea1a099c4ad6de8b99517ac6453e3569}{clock\+\_\+set\+Alarm} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t seconds, uint32\+\_\+t date\+Week\+Day\+Sel, uint8\+\_\+t date\+Week\+Day, uint32\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given all the alarm parameters. \end{DoxyCompactList}\item 
+void \hyperlink{group___alarms_ga4da4fb52ec579671d337938e78f9a207}{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Alarm Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clock alarm configuration functions. 
+
+\begin{DoxyVerb} ===============================================================================
+         ##### Alarm configuration functions #####
+ ===============================================================================
+
+ [..] This section provide functions allowing to program and read the RTC Alarms.\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___alarms_ga5e1614dbb1a210106dbade3f133db27e}\label{group___alarms_ga5e1614dbb1a210106dbade3f133db27e}} 
+\index{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+create\+Alarm@{clock\+\_\+create\+Alarm}}
+\index{clock\+\_\+create\+Alarm@{clock\+\_\+create\+Alarm}!Alarms configuration functions@{Alarms configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+create\+Alarm()}{clock\_createAlarm()}}
+{\footnotesize\ttfamily R\+T\+C\+\_\+\+Alarm\+Type\+Def clock\+\_\+create\+Alarm (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{am\+\_\+pm,  }\item[{uint8\+\_\+t}]{hours,  }\item[{uint8\+\_\+t}]{minutes,  }\item[{uint8\+\_\+t}]{seconds,  }\item[{uint32\+\_\+t}]{date\+Week\+Day\+Sel,  }\item[{uint8\+\_\+t}]{date\+Week\+Day,  }\item[{uint32\+\_\+t}]{repeat }\end{DoxyParamCaption})}
+
+
+
+Create an Alarm Structure given all the parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em am\+\_\+pm} & AM PM format (C\+L\+O\+C\+K\+\_\+\+AM) \\
+\hline
+{\em hours} & Alarm hours \\
+\hline
+{\em minutes} & Alarm minutes \\
+\hline
+{\em seconds} & Alarm seconds \\
+\hline
+{\em date\+Week\+Day\+Sel} & Date of Week\+Day selection R\+T\+C\+\_\+\+Alarm\+Date\+Week\+Day\+\_\+\+Definitions \\
+\hline
+{\em date\+Week\+Day} & Specify Alarm Date/\+Weekday if Date then value range from 1-\/31, else R\+T\+C\+\_\+\+Week\+Day\+\_\+\+Definitions \\
+\hline
+{\em repeat} & Specify the repetition of the Alarm \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & R\+T\+C\+\_\+\+Alarm\+Type\+Def containing all the parameters above \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___alarms_gab56f512746d4f2638232db28bb7dac2b}\label{group___alarms_gab56f512746d4f2638232db28bb7dac2b}} 
+\index{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+setA@{clock\+\_\+setA}}
+\index{clock\+\_\+setA@{clock\+\_\+setA}!Alarms configuration functions@{Alarms configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+set\+A()}{clock\_setA()}}
+{\footnotesize\ttfamily void clock\+\_\+setA (\begin{DoxyParamCaption}\item[{R\+T\+C\+\_\+\+Alarm\+Type\+Def $\ast$}]{Alarm }\end{DoxyParamCaption})}
+
+
+
+Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given a Alarm structure R\+T\+C\+\_\+\+Alarm\+Type\+Def. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Alarm} & A pointer to the R\+T\+C\+\_\+\+Alarm\+Type\+Def \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___alarms_gaea1a099c4ad6de8b99517ac6453e3569}\label{group___alarms_gaea1a099c4ad6de8b99517ac6453e3569}} 
+\index{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+set\+Alarm@{clock\+\_\+set\+Alarm}}
+\index{clock\+\_\+set\+Alarm@{clock\+\_\+set\+Alarm}!Alarms configuration functions@{Alarms configuration functions}}
+\subsubsection{\texorpdfstring{clock\+\_\+set\+Alarm()}{clock\_setAlarm()}}
+{\footnotesize\ttfamily void clock\+\_\+set\+Alarm (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{am\+\_\+pm,  }\item[{uint8\+\_\+t}]{hours,  }\item[{uint8\+\_\+t}]{minutes,  }\item[{uint8\+\_\+t}]{seconds,  }\item[{uint32\+\_\+t}]{date\+Week\+Day\+Sel,  }\item[{uint8\+\_\+t}]{date\+Week\+Day,  }\item[{uint32\+\_\+t}]{repeat }\end{DoxyParamCaption})}
+
+
+
+Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given all the alarm parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em am\+\_\+pm} & AM PM format (C\+L\+O\+C\+K\+\_\+\+AM) \\
+\hline
+{\em hours} & Alarm hours \\
+\hline
+{\em minutes} & Alarm minutes \\
+\hline
+{\em seconds} & Alarm seconds \\
+\hline
+{\em date\+Week\+Day\+Sel} & Date of Week\+Day selection R\+T\+C\+\_\+\+Alarm\+Date\+Week\+Day\+\_\+\+Definitions \\
+\hline
+{\em date\+Week\+Day} & Specify Alarm Date/\+Weekday if Date then value range from 1-\/31, else R\+T\+C\+\_\+\+Week\+Day\+\_\+\+Definitions \\
+\hline
+{\em repeat} & Specify the repetition of the Alarm \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___alarms_ga4da4fb52ec579671d337938e78f9a207}\label{group___alarms_ga4da4fb52ec579671d337938e78f9a207}} 
+\index{Alarms configuration functions@{Alarms configuration functions}!R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler}}
+\index{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler}!Alarms configuration functions@{Alarms configuration functions}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler()}{RTC\_Alarm\_IRQHandler()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Alarm Handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

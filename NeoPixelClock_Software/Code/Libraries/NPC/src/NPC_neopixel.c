@@ -36,22 +36,22 @@ static uint8_t brightness = 255;
 
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup neopixel initialization functions
- * 	@brief	Neopixel initialization functions
+/**	@defgroup Initialisation Initialisation functions
+ * 	@brief	Neopixel initialisation functions
  *
 @verbatim
  ===============================================================================
-         ##### Neopixel initialization functions #####
+         ##### Neopixel initialisation functions #####
  ===============================================================================
 
- [..] This section provide functions allowing to initialize the neopixel.
+ [..] This section provide functions allowing to initialise the neopixel.
 
 @endverbatim
   * @{
   */
 
 /**
- * @brief	Initialize the neopixel
+ * @brief	Initialise the neopixel
  * @param	None
  * @retval	None
  */
@@ -87,7 +87,7 @@ void neopixel_init(void){
 		TIM_BaseStruct.TIM_Period = TIMER_PERIOD - 1;
 		TIM_BaseStruct.TIM_Prescaler = 0;
 		TIM_BaseStruct.TIM_RepetitionCounter = LED_BUFFER_SIZE+1;
-		// Initialize TIM2
+		// Initialise TIM2
 		TIM_TimeBaseInit(TIM2,&TIM_BaseStruct);
 		//
 		TIM_ITConfig(TIM2,TIM_IT_Update,ENABLE);
@@ -103,7 +103,7 @@ void neopixel_init(void){
 		TIM_OCStruct.TIM_OCPolarity = TIM_OCPolarity_High;
 		TIM_OCStruct.TIM_OutputState = TIM_OutputState_Enable;
 		TIM_OCStruct.TIM_Pulse = WS2812_0;
-		// Initialize TIM2 PWM1
+		// Initialise TIM2 PWM1
 		TIM_OC1Init(TIM2,&TIM_OCStruct);
 		// Activate OCPreload
 		TIM_OC1PreloadConfig(TIM2,TIM_OCPreload_Disable);
@@ -142,7 +142,7 @@ void neopixel_init(void){
 			DMA_InitStruct.DMA_MemoryBurst = DMA_MemoryBurst_Single;
 			DMA_InitStruct.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
 			DMA_InitStruct.DMA_Priority = DMA_Priority_VeryHigh;
-			// Initialize DMA
+			// Initialise DMA
 			DMA_Init(DMA1_Stream5,&DMA_InitStruct);
 			// Start DMA
 			DMA_Cmd(DMA1_Stream5, ENABLE);
@@ -176,8 +176,8 @@ void neopixel_init(void){
  * @}
  */
 
-/**	@defgroup neopixel state alteration functions
- * 	@brief	Neopixel state alterationfunctions
+/**	@defgroup State State alteration functions
+ * 	@brief	Neopixel state alteration functions
  *
 @verbatim
  ===============================================================================
@@ -223,7 +223,7 @@ void neopixel_clear(void){
 }
 
 /**
- * @brief  	Initialize the LEDbuffer
+ * @brief  	Initialise the LEDbuffer
  * @param 	None
  * @retval	None
  */
@@ -250,7 +250,7 @@ void neopixel_dataInit(void){
 }
 
 /**
- * @brief 	Set the color of one led
+ * @brief 	Set the colour of one led
  * @param	n: Led index
  * @param	r: RED intensity
  * @param	g: GREEN intensity
@@ -298,34 +298,34 @@ void neopixel_setBrightness(uint8_t b){
  * @}
  */
 
-/**	@defgroup Neopixel color functions
- * 	@brief	Neopixel color functions
+/**	@defgroup Colour Colour generation functions
+ * 	@brief	Neopixel colour functions
  *
 @verbatim
  ===============================================================================
-         ##### Neopixel color functions #####
+         	 	 ##### Neopixel colour generation functions #####
  ===============================================================================
 
- [..] This section provide functions allowing to create and access color.
+ [..] This section provide functions allowing to create and access colour.
 
 @endverbatim
   * @{
   */
 
 /**
- * @brief 	convert RGB 3 8bit color to a 32bit color
+ * @brief 	convert RGB 3 8bit colour to a 32bit colour
  * @note	MS3 0, MS2 r, MS1 g, MS0 b
  * @param	r: RED intensity
  * @param	g: GREEN intensity
  * @param	b: BLUE intensity
  * @retval	None
  */
-uint32_t neopixel_colorRGB(uint8_t r,uint8_t g,uint8_t b){
+uint32_t neopixel_colourRGB(uint8_t r,uint8_t g,uint8_t b){
 	return (uint32_t)(r<<16 | g<<8 | b);
 }
 
 /**
- * @brief 	convert RGB 3 8bit color to a 32bit color
+ * @brief 	convert RGB 3 8bit colour to a 32bit colour
  * @note	MS3 w, MS2 r, MS1 g, MS0 b
  * @param	r: RED intensity
  * @param	g: GREEN intensity
@@ -333,7 +333,7 @@ uint32_t neopixel_colorRGB(uint8_t r,uint8_t g,uint8_t b){
  * @param	w: WHITE intensity
  * @retval	None
  */
-uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
+uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
 	return (uint32_t)(w<<24 | r<<16 | g<<8 | b);
 }
 
@@ -341,22 +341,22 @@ uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
  * @}
  */
 
-/**	@defgroup Neopixel color display functions
- * 	@brief	Neopixel color display functions
+/**	@defgroup Display colour display functions
+ * 	@brief	Neopixel colour display functions
  *
 @verbatim
  ===============================================================================
-         ##### Neopixel color display functions #####
+         ##### Neopixel colour display functions #####
  ===============================================================================
 
- [..] This section provide functions allowing to set pixel colors.
+ [..] This section provide functions allowing to set pixel colours.
 
 @endverbatim
   * @{
   */
 
 /**
- * @brief Set the color of one led
+ * @brief Set the colour of one led
  * @param	n: Led index
  * @param	r: RED intensity
  * @param	g: GREEN intensity
@@ -379,9 +379,9 @@ void neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint
 }
 
 /**
- * @brief 	Set the color of one led
+ * @brief 	Set the colour of one led
  * @param	n: Led index
- * @param	c: 32bit RGB color
+ * @param	c: 32bit RGB colour
  * @retval	None
  */
 void neopixel_setPixelColor(uint8_t n, uint32_t c){
@@ -389,9 +389,9 @@ void neopixel_setPixelColor(uint8_t n, uint32_t c){
 }
 
 /**
- * @brief 	Set the color of one led
+ * @brief 	Set the colour of one led
  * @param	n: Led index
- * @param	c: 32bit RGB color
+ * @param	c: 32bit RGB colour
  * @retval	None
  */
 void neopixel_setPixelColorW(uint8_t n, uint32_t c){
@@ -399,7 +399,7 @@ void neopixel_setPixelColorW(uint8_t n, uint32_t c){
 }
 
 /**
- * @brief set all the pixel on the line to a specific color
+ * @brief set all the pixel on the line to a specific colour
  * @param	r: RED intensity
  * @param	g: GREEN intensity
  * @param	b: BLUE intensity
@@ -412,7 +412,7 @@ void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
 }
 
 /**
- * @brief set all the pixel on the line to a specific color
+ * @brief set all the pixel on the line to a specific colour
  * @param	r: RED intensity
  * @param	g: GREEN intensity
  * @param	b: BLUE intensity

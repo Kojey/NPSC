@@ -34,7 +34,8 @@
 /* Exported constants --------------------------------------------------------*/
 
 /**
- * @defgroup RTC_PREDIV_Definitions for Asynchronous and Synchronous
+ * @defgroup RTC_PREDIV_Definitions
+ * @brief	definition of prescaler for Asynchronous and Synchronous
  * @{
  */
 #define RTC_PREDIV_A					0x7C //124
@@ -45,6 +46,7 @@
 
 /**
  * @defgroup CLOCK_Choice
+ * @brief Clock A or B
  * @{
  */
 #define CLOCK_A							RTC_Alarm_A
@@ -55,6 +57,7 @@
 
 /**
  * @defgroup CLOCK_Format
+ * @brief AM or PM
  * @{
  */
 #define CLOCK_AM						RTC_H12_AM
@@ -63,7 +66,8 @@
  * @}
  */
 
-/** @defgroup CLOCK_Value: Get time or date parameters
+/** @defgroup CLOCK_Value
+  *	@brief Access time or date parameters
   * @{
   */
 #define CLOCK_WeekDay					(uint8_t) (clock_getDate() >> 24)
@@ -79,6 +83,7 @@
  */
 
 /** @defgroup REPEAT_Definitions
+  * @brief Alarm repeat options
   * @{
   */
 #define REPEAT_DateWeekDay		(uint32_t) RTC_AlarmMask_DateWeekDay

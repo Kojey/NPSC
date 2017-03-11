@@ -1,0 +1,28 @@
+digraph "Libraries/NPC/src/NPC_configuration.c"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="Libraries/NPC/src/NPC\l_configuration.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="../inc/NPC_configuration.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_p_c__configuration_8h.html",tooltip="This file contains all the main initialization prototypes used by the NPC. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="NPC_bluetooth.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_p_c__bluetooth_8h.html",tooltip="This file contains all the configuration prototypes used by the bluetooth firmware. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="NPC_utils.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_p_c__utils_8h.html",tooltip="This file contains all the utility functions prototypes used by the NPC. "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="string.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ctype.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="stm32f4xx.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="NPC_clock.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_p_c__clock_8h.html",tooltip="This file contains all the functions prototypes for the clock firmware library used for the NPC..."];
+  Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="NPC_neopixel.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_n_p_c__neopixel_8h.html",tooltip="This file contains all the configuration prototypes used by the neopixel firmware. "];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

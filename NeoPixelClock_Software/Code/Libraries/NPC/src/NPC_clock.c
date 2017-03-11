@@ -45,7 +45,7 @@
   */
 
 /** @defgroup Clock
-  * @brief clock driver modules
+  * @brief Clock driver modules
   * @{
   */
 
@@ -61,22 +61,22 @@ EXTI_InitTypeDef EXTI_InitStruct;
 
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Clock initialization functions
- * 	@brief	Clock initialization functions
+/**	@defgroup Initialisation Initialisation functions
+ * 	@brief	Clock initialisation functions
  *
 @verbatim
  ===============================================================================
-         ##### Clock initialization functions #####
+         ##### Clock initialisation functions #####
  ===============================================================================
 
- [..] This section provide functions allowing to initialize the clock.
+ [..] This section provide functions allowing to initialise the clock.
 
 @endverbatim
   * @{
   */
 
 /**
- * @brief	Initialize the clock to 1Hz and setup peripherals for Alarm
+ * @brief	Initialise the clock to 1Hz and setup peripherals for Alarm
  * @param	None
  * @retval	None
  */
@@ -122,8 +122,8 @@ void clock_init(void){
  * @}
  */
 
-/**	@defgroup Clock Time and Date Configuration functions
- * 	@brief	Time and date configuration functions
+/**	@defgroup Time_Date Time and Date Configuration functions
+ * 	@brief	Clock time and date configuration functions
  *
 @verbatim
  ===============================================================================
@@ -139,7 +139,7 @@ void clock_init(void){
 /**
  * @brief	Set the clock's date
  * @param	None
- * @retval	An ErrorStatus representing the outcome of the operation
+ * @retval	ErrorStatus representing the outcome of the operation
  *				- SUCCESS: RTC Shift registers are configured
  *          	- ERROR: RTC Shift registers are not configured
  */
@@ -156,7 +156,7 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
 /**
  * @brief	Set the clock's time
  * @param	None
- * @retval	An ErrorStatus representing the outcome of the operation
+ * @retval	ErrorStatus representing the outcome of the operation
  *				- SUCCESS: RTC Shift registers are configured
  *          	- ERROR: RTC Shift registers are not configured
  */
@@ -201,8 +201,8 @@ uint32_t clock_getTime(void){
  * @}
  */
 
-/** @defgroup Clock Alarms configuration functions
- *  @brief   Alarm configuration functions
+/** @defgroup Alarms Alarms configuration functions
+ *  @brief   Clock alarm configuration functions
  *
 @verbatim
  ===============================================================================
