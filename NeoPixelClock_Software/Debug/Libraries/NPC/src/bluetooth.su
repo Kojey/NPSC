@@ -1,3 +1,0 @@
-bluetooth.c:11:6:bluetooth_init	72	static
-bluetooth.c:79:6:USART1_IRQHandler	8	static
-bluetooth.c:85:6:bluetooth_send	16	static
