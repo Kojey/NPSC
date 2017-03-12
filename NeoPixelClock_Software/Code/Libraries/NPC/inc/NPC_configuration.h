@@ -23,6 +23,8 @@
 #include "NPC_bluetooth.h"
 #include "NPC_clock.h"
 #include "NPC_neopixel.h"
+#include "NPC_audio.h"
+#include "NPC_eeprom.h"
 
 /** @addtogroup NPC
   * @{

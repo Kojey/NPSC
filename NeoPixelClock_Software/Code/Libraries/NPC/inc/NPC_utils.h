@@ -41,6 +41,7 @@ extern uint8_t pixel_color;
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);
+void delay(uint32_t microseconds);
 
 #endif /* UTILS_H_ */
 

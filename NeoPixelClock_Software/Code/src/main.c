@@ -78,8 +78,8 @@ int main(void)
 	}
 	int j=150000;
 	while(j)j--;
-	neopixel_setPixelColor((i-1)%4,0);
-	neopixel_setPixelColor(i%4,color);
+	neopixel_setPixelColour((i-1)%4,0);
+	neopixel_setPixelColour(i%4,color);
   }
 }
 

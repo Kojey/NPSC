@@ -39,12 +39,14 @@
  * @retval	None
  */
 void NPC_init(void){
-	/* Configure bluetooth */
+	/* Initialise bluetooth */
 	bluetooth_init();
-	/* Configure neopixel */
+	/* Initialise neopixel */
 	neopixel_init();
-	/* Configure clock */
+	/* Initialise clock */
 	clock_init();
+	/* Initialise eeprom*/
+	eeprom_init();
 }
 
 /**

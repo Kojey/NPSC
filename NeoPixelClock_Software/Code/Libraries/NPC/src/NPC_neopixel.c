@@ -257,7 +257,7 @@ void neopixel_dataInit(void){
  * @param	b: BLUE intensity
  * @retval	None
  */
-void neopixel_setPixelColorRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b){
+void neopixel_setPixelColourRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b){
 	// scale according to brightness
 	float _max = (float)max(r,g,b);
 	float b_scale = brightness/_max;
@@ -364,7 +364,7 @@ uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
  * @param	w: WHITE intensity
  * @retval	None
  */
-void neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w){
+void neopixel_setPixelColourRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w){
 	// scale w to 255:20
 	float w_scale = MAX_8BIT/7.0;
 	w = (uint8_t) w/(MAX_8BIT/w_scale);
@@ -375,7 +375,7 @@ void neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint
 	g = (uint8_t) (g*rgb_scale+w);
 	b = (uint8_t) (b*rgb_scale+w);
 
-	neopixel_setPixelColorRGB(n,r,g,b);
+	neopixel_setPixelColourRGB(n,r,g,b);
 }
 
 /**
@@ -384,8 +384,8 @@ void neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint
  * @param	c: 32bit RGB colour
  * @retval	None
  */
-void neopixel_setPixelColor(uint8_t n, uint32_t c){
-	neopixel_setPixelColorRGB(n,(uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t)(c));
+void neopixel_setPixelColour(uint8_t n, uint32_t c){
+	neopixel_setPixelColourRGB(n,(uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t)(c));
 }
 
 /**
@@ -394,8 +394,8 @@ void neopixel_setPixelColor(uint8_t n, uint32_t c){
  * @param	c: 32bit RGB colour
  * @retval	None
  */
-void neopixel_setPixelColorW(uint8_t n, uint32_t c){
-	neopixel_setPixelColorRGBW(n, (uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t) (c),(uint8_t)(c>>24));
+void neopixel_setPixelColourW(uint8_t n, uint32_t c){
+	neopixel_setPixelColourRGBW(n, (uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t) (c),(uint8_t)(c>>24));
 }
 
 /**
@@ -408,7 +408,7 @@ void neopixel_setPixelColorW(uint8_t n, uint32_t c){
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
 	int i=0;
 	for(i=0;i<LED_NUMBER;i++)
-		neopixel_setPixelColorRGB(i,r,g,b);
+		neopixel_setPixelColourRGB(i,r,g,b);
 }
 
 /**
@@ -422,7 +422,7 @@ void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b,uint8_t w){
 	int i=0;
 	for(i=0;i<LED_NUMBER;i++)
-		neopixel_setPixelColorRGBW(i,r,g,b,w);
+		neopixel_setPixelColourRGBW(i,r,g,b,w);
 }
 
 /**
