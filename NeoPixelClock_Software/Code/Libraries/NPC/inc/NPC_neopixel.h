@@ -70,15 +70,15 @@ void neopixel_clear(void);
 void neopixel_dataInit(void);
 void TIM2_IRQHandler(void);
 
-/*	Function used to create and access color *********************************/
-uint32_t neopixel_colorRGB(uint8_t r,uint8_t g,uint8_t b);
-uint32_t neopixel_colorRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
+/*	Function used to create and access colour *********************************/
+uint32_t neopixel_colourRGB(uint8_t r,uint8_t g,uint8_t b);
+uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 
-/*	Function used to set pixel colors ****************************************/
-void neopixel_setPixelColorRGB(uint8_t n,uint8_t r,uint8_t g,uint8_t b);
-void neopixel_setPixelColorRGBW(uint8_t n,uint8_t r,uint8_t g,uint8_t b, uint8_t w);
-void neopixel_setPixelColor(uint8_t n,uint32_t c);
-void neopixel_setPixelColorW(uint8_t n,uint32_t c);
+/*	Function used to set pixel colours ****************************************/
+void neopixel_setPixelColourRGB(uint8_t n,uint8_t r,uint8_t g,uint8_t b);
+void neopixel_setPixelColourRGBW(uint8_t n,uint8_t r,uint8_t g,uint8_t b, uint8_t w);
+void neopixel_setPixelColour(uint8_t n,uint32_t c);
+void neopixel_setPixelColourW(uint8_t n,uint32_t c);
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b);
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 
