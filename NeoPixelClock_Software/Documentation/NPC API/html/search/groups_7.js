@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['time_20and_20date_20configuration_20functions',['Time and Date Configuration functions',['../group___time___date.html',1,'']]],
-  ['transmission_20functions',['Transmission functions',['../group___transmission.html',1,'']]]
+  ['repeat_5fdefinitions',['REPEAT_Definitions',['../group___r_e_p_e_a_t___definitions.html',1,'']]],
+  ['rtc_5fprediv_5fdefinitions',['RTC_PREDIV_Definitions',['../group___r_t_c___p_r_e_d_i_v___definitions.html',1,'']]]
 ];

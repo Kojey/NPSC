@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart1_5firqhandler',['USART1_IRQHandler',['../group___bluetooth.html#ga7139cd4baabbbcbab0c1fe6d7d4ae1cc',1,'USART1_IRQHandler(void):&#160;NPC_bluetooth.c'],['../group___initialization.html#ga7139cd4baabbbcbab0c1fe6d7d4ae1cc',1,'USART1_IRQHandler(void):&#160;NPC_bluetooth.c']]]
+  ['rtc_5falarm_5firqhandler',['RTC_Alarm_IRQHandler',['../group___clock.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c'],['../group___clock___alarms.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c']]]
 ];

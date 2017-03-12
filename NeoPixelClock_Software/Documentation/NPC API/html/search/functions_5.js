@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rtc_5falarm_5firqhandler',['RTC_Alarm_IRQHandler',['../group___clock.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c'],['../group___alarms.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c']]]
+  ['max',['max',['../group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe',1,'NPC_utils.c']]]
 ];

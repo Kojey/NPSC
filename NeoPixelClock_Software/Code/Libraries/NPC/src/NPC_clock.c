@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    clock.c
+  * @file    NPC_clock.c
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    06-March-2017
@@ -61,19 +61,10 @@ EXTI_InitTypeDef EXTI_InitStruct;
 
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Initialisation Initialisation functions
+/**	@defgroup Clock_Init Initialisation functions
  * 	@brief	Clock initialisation functions
- *
-@verbatim
- ===============================================================================
-         ##### Clock initialisation functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to initialise the clock.
-
-@endverbatim
-  * @{
-  */
+ * @{
+ */
 
 /**
  * @brief	Initialise the clock to 1Hz and setup peripherals for Alarm
@@ -122,19 +113,10 @@ void clock_init(void){
  * @}
  */
 
-/**	@defgroup Time_Date Time and Date Configuration functions
+/**	@defgroup Clock_Time_Date Time and Date Configuration functions
  * 	@brief	Clock time and date configuration functions
- *
-@verbatim
- ===============================================================================
-         ##### Clock configuration functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to program and read the RTC Clock information.
-
-@endverbatim
-  * @{
-  * */
+ *  @{
+ */
 
 /**
  * @brief	Set the clock's date
@@ -201,19 +183,10 @@ uint32_t clock_getTime(void){
  * @}
  */
 
-/** @defgroup Alarms Alarms configuration functions
+/** @defgroup Clock_Alarms Alarms configuration functions
  *  @brief   Clock alarm configuration functions
- *
-@verbatim
- ===============================================================================
-         ##### Alarm configuration functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to program and read the RTC Alarms.
-
-@endverbatim
-  * @{
-  */
+ * @{
+ */
 
 /**
  * @brief	Create an Alarm Structure given all the parameters

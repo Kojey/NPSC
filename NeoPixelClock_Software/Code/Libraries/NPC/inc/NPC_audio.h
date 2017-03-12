@@ -49,10 +49,10 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* Configuration **************************************************************/
-void AudioDisable(void);
-void AudioInit(uint16_t *, uint16_t);
+void audio_disable(void);
+void audio_init(uint16_t *, uint16_t);
 /* Play audio ******************************************************************/
-void AudioPlay(uint16_t * , uint16_t);
+void audio_play(uint16_t * , uint16_t);
 
 #endif /* NPC_INC_NPC_AUDIO_H_ */
 

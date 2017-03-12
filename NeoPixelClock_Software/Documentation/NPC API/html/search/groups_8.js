@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['utils',['Utils',['../group___utils.html',1,'']]]
+  ['state_20alteration_20functions',['State alteration functions',['../group___neo_pixel___state.html',1,'']]]
 ];

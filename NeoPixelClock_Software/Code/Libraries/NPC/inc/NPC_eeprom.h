@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    NPC_eeprom.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    12-March-2017
@@ -49,6 +49,7 @@
 
 /**
  * @defgroup Utilities
+ * @{
  */
 #define PAGE_LENGTH 32
 /**

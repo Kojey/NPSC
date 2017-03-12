@@ -9,14 +9,14 @@ neopixel driver modules
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{group___constant}{Constant}
-\begin{DoxyCompactList}\small\item\em Defines constants. \end{DoxyCompactList}\item 
-\hyperlink{group___initialisation}{Initialisation functions}
-\begin{DoxyCompactList}\small\item\em Clock initialisation functions. \end{DoxyCompactList}\item 
-\hyperlink{group___state}{State alteration functions}
+\begin{DoxyCompactList}\small\item\em Define audio frequency and D\+MA frequency. \end{DoxyCompactList}\item 
+\hyperlink{group___neo_pixel___init}{Initialisation functions}
+\begin{DoxyCompactList}\small\item\em Neopixel initialisation functions. \end{DoxyCompactList}\item 
+\hyperlink{group___neo_pixel___state}{State alteration functions}
 \begin{DoxyCompactList}\small\item\em Neopixel state alteration functions. \end{DoxyCompactList}\item 
-\hyperlink{group___colour}{Colour generation functions}
+\hyperlink{group___neo_pixel___colour}{Colour generation functions}
 \begin{DoxyCompactList}\small\item\em Neopixel colour functions. \end{DoxyCompactList}\item 
-\hyperlink{group___display}{colour display functions}
+\hyperlink{group___neo_pixel___display}{colour display functions}
 \begin{DoxyCompactList}\small\item\em Neopixel colour display functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -37,19 +37,17 @@ void \hyperlink{group___neo_pixel_ga79e34feddcfb2c45ae218166c84bdff4}{neopixel\+
 \begin{DoxyCompactList}\small\item\em Initialise the L\+E\+Dbuffer. \end{DoxyCompactList}\item 
 void \hyperlink{group___neo_pixel_ga38ad4725462bdc5e86c4ead4f04b9fc2}{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler} (void)
 \begin{DoxyCompactList}\small\item\em Timer Handler for neopixel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{group___neo_pixel_ga40253bdc59873753452f3179a8ee1762}\label{group___neo_pixel_ga40253bdc59873753452f3179a8ee1762}} 
-uint32\+\_\+t {\bfseries neopixel\+\_\+color\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
-\item 
-\mbox{\Hypertarget{group___neo_pixel_ga70ca37e59d1bf154f1426c8eeb5c1cf2}\label{group___neo_pixel_ga70ca37e59d1bf154f1426c8eeb5c1cf2}} 
-uint32\+\_\+t {\bfseries neopixel\+\_\+color\+R\+G\+BW} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
-\item 
-void \hyperlink{group___neo_pixel_gadbf8ae449ade0b6015cb75632182b04c}{neopixel\+\_\+set\+Pixel\+Color\+R\+GB} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+uint32\+\_\+t \hyperlink{group___neo_pixel_ga1d500fbcbecad76feef8835437687ca0}{neopixel\+\_\+colour\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
+\begin{DoxyCompactList}\small\item\em convert R\+GB 3 8bit colour to a 32bit colour \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___neo_pixel_ga527ba03b45a249e5e1ea1da4b971b3ac}{neopixel\+\_\+colour\+R\+G\+BW} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+\begin{DoxyCompactList}\small\item\em convert R\+GB 3 8bit colour to a 32bit colour \end{DoxyCompactList}\item 
+void \hyperlink{group___neo_pixel_ga63c196a71ffb007411929e41ba5df41d}{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
 \begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
-void \hyperlink{group___neo_pixel_ga8eb6ad73b1bd1df8bddc2615035a3371}{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
+void \hyperlink{group___neo_pixel_ga58d5ceb79029ca8dc5dd8b27b65e4f09}{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW} (uint8\+\_\+t n, uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b, uint8\+\_\+t w)
 \begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
-void \hyperlink{group___neo_pixel_ga71a91c14cda530d83c6bbb241fc9bf96}{neopixel\+\_\+set\+Pixel\+Color} (uint8\+\_\+t n, uint32\+\_\+t c)
+void \hyperlink{group___neo_pixel_gaecbdecac1da356c5fba07058983d9066}{neopixel\+\_\+set\+Pixel\+Colour} (uint8\+\_\+t n, uint32\+\_\+t c)
 \begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
-void \hyperlink{group___neo_pixel_gaff8fc0f23014295654811a1ec909f204}{neopixel\+\_\+set\+Pixel\+ColorW} (uint8\+\_\+t n, uint32\+\_\+t c)
+void \hyperlink{group___neo_pixel_ga4daf6edfe83394f425ec51f64d92c49c}{neopixel\+\_\+set\+Pixel\+ColourW} (uint8\+\_\+t n, uint32\+\_\+t c)
 \begin{DoxyCompactList}\small\item\em Set the colour of one led. \end{DoxyCompactList}\item 
 void \hyperlink{group___neo_pixel_ga7a6c2dc149e86a788aede1d6aa5262d7}{neopixel\+\_\+set\+All\+Pixel\+R\+GB} (uint8\+\_\+t r, uint8\+\_\+t g, uint8\+\_\+t b)
 \begin{DoxyCompactList}\small\item\em set all the pixel on the line to a specific colour \end{DoxyCompactList}\item 
@@ -76,6 +74,62 @@ Stop pushing data to the neopixels.
 
 \begin{DoxyParams}{Parameters}
 {\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___neo_pixel_ga1d500fbcbecad76feef8835437687ca0}\label{group___neo_pixel_ga1d500fbcbecad76feef8835437687ca0}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}}
+\index{neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+colour\+R\+G\+B()}{neopixel\_colourRGB()}}
+{\footnotesize\ttfamily uint32\+\_\+t neopixel\+\_\+colour\+R\+GB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+
+
+
+convert R\+GB 3 8bit colour to a 32bit colour 
+
+\begin{DoxyNote}{Note}
+M\+S3 0, M\+S2 r, M\+S1 g, M\+S0 b 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & R\+ED intensity \\
+\hline
+{\em g} & G\+R\+E\+EN intensity \\
+\hline
+{\em b} & B\+L\+UE intensity \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___neo_pixel_ga527ba03b45a249e5e1ea1da4b971b3ac}\label{group___neo_pixel_ga527ba03b45a249e5e1ea1da4b971b3ac}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}}
+\index{neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+colour\+R\+G\+B\+W()}{neopixel\_colourRGBW()}}
+{\footnotesize\ttfamily uint32\+\_\+t neopixel\+\_\+colour\+R\+G\+BW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})}
+
+
+
+convert R\+GB 3 8bit colour to a 32bit colour 
+
+\begin{DoxyNote}{Note}
+M\+S3 w, M\+S2 r, M\+S1 g, M\+S0 b 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em r} & R\+ED intensity \\
+\hline
+{\em g} & G\+R\+E\+EN intensity \\
+\hline
+{\em b} & B\+L\+UE intensity \\
+\hline
+{\em w} & W\+H\+I\+TE intensity \\
 \hline
 \end{DoxyParams}
 
@@ -199,11 +253,11 @@ Set the brightness of the led.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{group___neo_pixel_ga71a91c14cda530d83c6bbb241fc9bf96}\label{group___neo_pixel_ga71a91c14cda530d83c6bbb241fc9bf96}} 
-\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Color@{neopixel\+\_\+set\+Pixel\+Color}}
-\index{neopixel\+\_\+set\+Pixel\+Color@{neopixel\+\_\+set\+Pixel\+Color}!Neo\+Pixel@{Neo\+Pixel}}
-\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Color()}{neopixel\_setPixelColor()}}
-{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Color (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint32\+\_\+t}]{c }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{group___neo_pixel_gaecbdecac1da356c5fba07058983d9066}\label{group___neo_pixel_gaecbdecac1da356c5fba07058983d9066}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Colour@{neopixel\+\_\+set\+Pixel\+Colour}}
+\index{neopixel\+\_\+set\+Pixel\+Colour@{neopixel\+\_\+set\+Pixel\+Colour}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Colour()}{neopixel\_setPixelColour()}}
+{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Colour (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint32\+\_\+t}]{c }\end{DoxyParamCaption})}
 
 
 
@@ -221,11 +275,11 @@ Set the colour of one led.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{group___neo_pixel_gadbf8ae449ade0b6015cb75632182b04c}\label{group___neo_pixel_gadbf8ae449ade0b6015cb75632182b04c}} 
-\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Color\+R\+GB@{neopixel\+\_\+set\+Pixel\+Color\+R\+GB}}
-\index{neopixel\+\_\+set\+Pixel\+Color\+R\+GB@{neopixel\+\_\+set\+Pixel\+Color\+R\+GB}!Neo\+Pixel@{Neo\+Pixel}}
-\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+B()}{neopixel\_setPixelColorRGB()}}
-{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Color\+R\+GB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{group___neo_pixel_ga63c196a71ffb007411929e41ba5df41d}\label{group___neo_pixel_ga63c196a71ffb007411929e41ba5df41d}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}}
+\index{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+B()}{neopixel\_setPixelColourRGB()}}
+{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Colour\+R\+GB (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b }\end{DoxyParamCaption})}
 
 
 
@@ -247,11 +301,11 @@ Set the colour of one led.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{group___neo_pixel_ga8eb6ad73b1bd1df8bddc2615035a3371}\label{group___neo_pixel_ga8eb6ad73b1bd1df8bddc2615035a3371}} 
-\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW}}
-\index{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW}!Neo\+Pixel@{Neo\+Pixel}}
-\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Color\+R\+G\+B\+W()}{neopixel\_setPixelColorRGBW()}}
-{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Color\+R\+G\+BW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{group___neo_pixel_ga58d5ceb79029ca8dc5dd8b27b65e4f09}\label{group___neo_pixel_ga58d5ceb79029ca8dc5dd8b27b65e4f09}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW}}
+\index{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+B\+W()}{neopixel\_setPixelColourRGBW()}}
+{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint8\+\_\+t}]{r,  }\item[{uint8\+\_\+t}]{g,  }\item[{uint8\+\_\+t}]{b,  }\item[{uint8\+\_\+t}]{w }\end{DoxyParamCaption})}
 
 
 
@@ -275,11 +329,11 @@ Set the colour of one led.
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-\mbox{\Hypertarget{group___neo_pixel_gaff8fc0f23014295654811a1ec909f204}\label{group___neo_pixel_gaff8fc0f23014295654811a1ec909f204}} 
-\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+ColorW@{neopixel\+\_\+set\+Pixel\+ColorW}}
-\index{neopixel\+\_\+set\+Pixel\+ColorW@{neopixel\+\_\+set\+Pixel\+ColorW}!Neo\+Pixel@{Neo\+Pixel}}
-\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Color\+W()}{neopixel\_setPixelColorW()}}
-{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+ColorW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint32\+\_\+t}]{c }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{group___neo_pixel_ga4daf6edfe83394f425ec51f64d92c49c}\label{group___neo_pixel_ga4daf6edfe83394f425ec51f64d92c49c}} 
+\index{Neo\+Pixel@{Neo\+Pixel}!neopixel\+\_\+set\+Pixel\+ColourW@{neopixel\+\_\+set\+Pixel\+ColourW}}
+\index{neopixel\+\_\+set\+Pixel\+ColourW@{neopixel\+\_\+set\+Pixel\+ColourW}!Neo\+Pixel@{Neo\+Pixel}}
+\subsubsection{\texorpdfstring{neopixel\+\_\+set\+Pixel\+Colour\+W()}{neopixel\_setPixelColourW()}}
+{\footnotesize\ttfamily void neopixel\+\_\+set\+Pixel\+ColourW (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{n,  }\item[{uint32\+\_\+t}]{c }\end{DoxyParamCaption})}
 
 
 

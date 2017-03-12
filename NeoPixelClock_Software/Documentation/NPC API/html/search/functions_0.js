@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['bluetooth_5finit',['bluetooth_init',['../group___bluetooth.html#gaaa60810e0857e9e1e5b2cba80b8db3ff',1,'bluetooth_init(void):&#160;NPC_bluetooth.c'],['../group___initialization.html#gaaa60810e0857e9e1e5b2cba80b8db3ff',1,'bluetooth_init(void):&#160;NPC_bluetooth.c']]],
-  ['bluetooth_5freceive',['bluetooth_receive',['../group___bluetooth.html#gab7ad1e1b94cf1cedc8a8e5151b0e25cb',1,'bluetooth_receive(void):&#160;NPC_bluetooth.c'],['../group___transmission.html#gab7ad1e1b94cf1cedc8a8e5151b0e25cb',1,'bluetooth_receive(void):&#160;NPC_bluetooth.c']]],
-  ['bluetooth_5fsend',['bluetooth_send',['../group___bluetooth.html#ga31d829d5658369ee2c90b9c3cdbedfe1',1,'bluetooth_send(uint8_t *data):&#160;NPC_bluetooth.c'],['../group___transmission.html#ga31d829d5658369ee2c90b9c3cdbedfe1',1,'bluetooth_send(uint8_t *data):&#160;NPC_bluetooth.c']]]
+  ['audio_5fdisable',['audio_disable',['../group___audio.html#gafff6cd7f4332d078ce0114143cd30998',1,'audio_disable(void):&#160;NPC_audio.c'],['../group___audio___init.html#gafff6cd7f4332d078ce0114143cd30998',1,'audio_disable(void):&#160;NPC_audio.c']]],
+  ['audio_5finit',['audio_init',['../group___audio.html#ga6a621a84280fa05373990982dacce11b',1,'audio_init(uint16_t *, uint16_t):&#160;NPC_audio.c'],['../group___audio___init.html#gabcda20e7d4baa315d151230fcc81ec1d',1,'audio_init(uint16_t *DACBuffer, uint16_t Size):&#160;NPC_audio.c']]],
+  ['audio_5fplay',['audio_play',['../group___audio.html#ga286b07d3729ae2bfdf88bcd777dd93cf',1,'audio_play(uint16_t *, uint16_t):&#160;NPC_audio.c'],['../group___audio___play.html#gaf73a37418a80bbb39f75abe8b60b0afb',1,'audio_play(uint16_t *DACBuffer, uint16_t Size):&#160;NPC_audio.c']]]
 ];

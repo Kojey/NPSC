@@ -33,30 +33,30 @@
 /* Private functions ---------------------------------------------------------*/
 
 
-/**	@defgroup Configuration Configuration functions
+/**	@defgroup Audio_Init Configuration functions
  * 	@brief	Audio configuration functions
  * @{
  */
 
-/*
+/**
  * @brief Disable the DMA
  * @param None
  * @retval None
  */
-void AudioDisable(void){
+void audio_disable(void){
 	DMA_ClearFlag(DMA1_Stream5,DMA_FLAG_TCIF5);
 	DMA_Cmd(DMA1_Stream5,DISABLE);
 }
 
 
-/*
+/**
  * @brief	Perform audio initialization
  * @param	DACBuffer:	Array to be pushed to the DMA
  * @param	Mode: 	DMA Mode (default:DMA_Mode_Normal)
  * @param	Size: 	sample size (default:SAMPLE_SIZE)
  * @retval 	None
  */
-void AudioInit(uint16_t *DACBuffer, uint16_t Size){
+void audio_init(uint16_t *DACBuffer, uint16_t Size){
 
 	// RCC configuration
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_DMA1 | RCC_AHB1Periph_GPIOA, ENABLE);
@@ -120,18 +120,18 @@ void AudioInit(uint16_t *DACBuffer, uint16_t Size){
  * @}
  */
 
-/**	@defgroup Play Play audio functions
+/**	@defgroup Audio_Play Play audio functions
  * 	@brief	Audio functions
  * @{
  */
 
-/*
+/**
  * @brief	Play a sample
  * @param	DACBuffer:	Array to be pushed to the DMA
  * @param	Size: sample size (default:SAMPLE_SIZE)
  * @return 	None
  */
-void AudioPlay(uint16_t *DACBuffer, uint16_t Size ){
+void audio_play(uint16_t *DACBuffer, uint16_t Size ){
 	AudioDisable();
 	AudioInit(DACBuffer,Size);
 }

@@ -95,6 +95,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gafa33c555a40e71b0cc32aa3731f6fabe"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe">max</a> (uint32_t a, uint32_t b, uint32_t c)</td></tr>
 <tr class="memdesc:gafa33c555a40e71b0cc32aa3731f6fabe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find max between a, b, and c.  <a href="#gafa33c555a40e71b0cc32aa3731f6fabe">More...</a><br /></td></tr>
 <tr class="separator:gafa33c555a40e71b0cc32aa3731f6fabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1a8629740f19d111a55636a19c2bf08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___utils.html#gaf1a8629740f19d111a55636a19c2bf08">delay</a> (uint32_t microseconds)</td></tr>
+<tr class="memdesc:gaf1a8629740f19d111a55636a19c2bf08"><td class="mdescLeft">&#160;</td><td class="mdescRight">delay for the number of microsecond  <a href="#gaf1a8629740f19d111a55636a19c2bf08">More...</a><br /></td></tr>
+<tr class="separator:gaf1a8629740f19d111a55636a19c2bf08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -108,6 +111,39 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pixel_color</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>utils driver modules </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gaf1a8629740f19d111a55636a19c2bf08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1a8629740f19d111a55636a19c2bf08">&#9670;&nbsp;</a></span>delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void delay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>microseconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>delay for the number of microsecond </p>
+<dl class="section note"><dt>Note</dt><dd>TODO use RTOS delay instead </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">microseconds</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="gafa33c555a40e71b0cc32aa3731f6fabe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gafa33c555a40e71b0cc32aa3731f6fabe">&#9670;&nbsp;</a></span>max()</h2>
 
@@ -145,13 +181,13 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>pixel_color</b></t
   <table class="params">
     <tr><td class="paramname">a</td><td>First value </td></tr>
     <tr><td class="paramname">b</td><td>second value </td></tr>
-    <tr><td class="paramname">c</td><td>Third value</td></tr>
+    <tr><td class="paramname">c</td><td>Third value </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">An</td><td>uint32_t of the maximum value </td></tr>
+    <tr><td class="paramname">uint32_t</td><td>of the maximum value </td></tr>
   </table>
   </dd>
 </dl>

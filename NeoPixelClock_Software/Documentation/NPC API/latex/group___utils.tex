@@ -9,7 +9,9 @@ utils driver modules
 \begin{DoxyCompactItemize}
 \item 
 uint32\+\_\+t \hyperlink{group___utils_gafa33c555a40e71b0cc32aa3731f6fabe}{max} (uint32\+\_\+t a, uint32\+\_\+t b, uint32\+\_\+t c)
-\begin{DoxyCompactList}\small\item\em Find max between a, b, and c. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find max between a, b, and c. \end{DoxyCompactList}\item 
+void \hyperlink{group___utils_gaf1a8629740f19d111a55636a19c2bf08}{delay} (uint32\+\_\+t microseconds)
+\begin{DoxyCompactList}\small\item\em delay for the number of microsecond \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +29,29 @@ utils driver modules
 
 
 \subsection{Function Documentation}
+\mbox{\Hypertarget{group___utils_gaf1a8629740f19d111a55636a19c2bf08}\label{group___utils_gaf1a8629740f19d111a55636a19c2bf08}} 
+\index{Utils@{Utils}!delay@{delay}}
+\index{delay@{delay}!Utils@{Utils}}
+\subsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{microseconds }\end{DoxyParamCaption})}
+
+
+
+delay for the number of microsecond 
+
+\begin{DoxyNote}{Note}
+T\+O\+DO use R\+T\+OS delay instead 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em microseconds} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
 \mbox{\Hypertarget{group___utils_gafa33c555a40e71b0cc32aa3731f6fabe}\label{group___utils_gafa33c555a40e71b0cc32aa3731f6fabe}} 
 \index{Utils@{Utils}!max@{max}}
 \index{max@{max}!Utils@{Utils}}
@@ -43,11 +68,11 @@ Find max between a, b, and c.
 \hline
 {\em b} & second value \\
 \hline
-{\em c} & Third value\\
+{\em c} & Third value \\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyRetVals}{Return values}
-{\em An} & uint32\+\_\+t of the maximum value \\
+{\em uint32\+\_\+t} & of the maximum value \\
 \hline
 \end{DoxyRetVals}

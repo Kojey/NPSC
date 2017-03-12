@@ -36,19 +36,10 @@ static uint8_t brightness = 255;
 
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Initialisation Initialisation functions
+/**	@defgroup NeoPixel_Init Initialisation functions
  * 	@brief	Neopixel initialisation functions
- *
-@verbatim
- ===============================================================================
-         ##### Neopixel initialisation functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to initialise the neopixel.
-
-@endverbatim
-  * @{
-  */
+ *  @{
+ */
 
 /**
  * @brief	Initialise the neopixel
@@ -176,19 +167,10 @@ void neopixel_init(void){
  * @}
  */
 
-/**	@defgroup State State alteration functions
+/**	@defgroup NeoPixel_State State alteration functions
  * 	@brief	Neopixel state alteration functions
- *
-@verbatim
- ===============================================================================
-         ##### Neopixel state alteration functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to change the state of the neopixels.
-
-@endverbatim
-  * @{
-  */
+ *  @{
+ */
 
 /**
  * @brief	Timer Handler for neopixel
@@ -298,19 +280,10 @@ void neopixel_setBrightness(uint8_t b){
  * @}
  */
 
-/**	@defgroup Colour Colour generation functions
+/**	@defgroup NeoPixel_Colour Colour generation functions
  * 	@brief	Neopixel colour functions
- *
-@verbatim
- ===============================================================================
-         	 	 ##### Neopixel colour generation functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to create and access colour.
-
-@endverbatim
-  * @{
-  */
+ *  @{
+ */
 
 /**
  * @brief 	convert RGB 3 8bit colour to a 32bit colour
@@ -341,19 +314,10 @@ uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
  * @}
  */
 
-/**	@defgroup Display colour display functions
+/**	@defgroup NeoPixel_Display colour display functions
  * 	@brief	Neopixel colour display functions
- *
-@verbatim
- ===============================================================================
-         ##### Neopixel colour display functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to set pixel colours.
-
-@endverbatim
-  * @{
-  */
+ *  @{
+ */
 
 /**
  * @brief Set the colour of one led

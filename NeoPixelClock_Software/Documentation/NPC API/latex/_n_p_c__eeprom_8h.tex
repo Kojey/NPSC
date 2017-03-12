@@ -1,0 +1,56 @@
+\hypertarget{_n_p_c__eeprom_8h}{}\section{C\+:/\+Users/\+Kojey/\+Desktop/\+N\+P\+C/\+Neo\+Pixel\+Clock\+\_\+\+Software/\+Code/\+Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+eeprom.h File Reference}
+\label{_n_p_c__eeprom_8h}\index{C\+:/\+Users/\+Kojey/\+Desktop/\+N\+P\+C/\+Neo\+Pixel\+Clock\+\_\+\+Software/\+Code/\+Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+eeprom.\+h@{C\+:/\+Users/\+Kojey/\+Desktop/\+N\+P\+C/\+Neo\+Pixel\+Clock\+\_\+\+Software/\+Code/\+Libraries/\+N\+P\+C/inc/\+N\+P\+C\+\_\+eeprom.\+h}}
+
+
+This file contains all the configuration prototypes used by the eeprom firmware.  
+
+
+{\ttfamily \#include \char`\"{}N\+P\+C\+\_\+utils.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries W\+R\+EN}~0b00000110
+\item 
+\#define {\bfseries W\+R\+DI}~0b00000100
+\item 
+\#define {\bfseries R\+D\+SR}~0b00000101
+\item 
+\#define {\bfseries W\+R\+SR}~0b00000001
+\item 
+\#define {\bfseries R\+E\+AD}~0b00000011
+\item 
+\#define {\bfseries W\+R\+I\+TE}~0b00000010
+\item 
+\#define {\bfseries P\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}~32
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___eeprom_ga4ec7f9d780da432051aa74ec5892a94c}{eeprom\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise communication to the eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom_ga11e27abf76759a5907ef18d1351aecdb}{eeprom\+\_\+write} (uint16\+\_\+t address, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write a byte to the eeprom. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___eeprom_gafaa7cca6f6ad1d9ae49522324c825c2f}{eeprom\+\_\+read} (uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Read a byte from the eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom_ga4f1a1c3f7642565b9dbff6bfd2e7ed0d}{eeprom\+\_\+write32\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Write a page to the eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom_ga7964a5a66da1c4a59a42309a93752217}{eeprom\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em Clear eeprom data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the configuration prototypes used by the eeprom firmware. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

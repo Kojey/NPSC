@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tim2_5firqhandler',['TIM2_IRQHandler',['../group___neo_pixel.html#ga38ad4725462bdc5e86c4ead4f04b9fc2',1,'TIM2_IRQHandler(void):&#160;NPC_neopixel.c'],['../group___state.html#ga38ad4725462bdc5e86c4ead4f04b9fc2',1,'TIM2_IRQHandler(void):&#160;NPC_neopixel.c']]],
-  ['time_20and_20date_20configuration_20functions',['Time and Date Configuration functions',['../group___time___date.html',1,'']]],
-  ['transmission_20functions',['Transmission functions',['../group___transmission.html',1,'']]]
+  ['repeat_5fdefinitions',['REPEAT_Definitions',['../group___r_e_p_e_a_t___definitions.html',1,'']]],
+  ['rtc_5falarm_5firqhandler',['RTC_Alarm_IRQHandler',['../group___clock.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c'],['../group___clock___alarms.html#ga4da4fb52ec579671d337938e78f9a207',1,'RTC_Alarm_IRQHandler(void):&#160;NPC_clock.c']]],
+  ['rtc_5fprediv_5fdefinitions',['RTC_PREDIV_Definitions',['../group___r_t_c___p_r_e_d_i_v___definitions.html',1,'']]]
 ];

@@ -32,19 +32,10 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Initialization Initialization and transmission handler functions
+/**	@defgroup Bluetooth_Init Initialization and transmission handler functions
  * 	@brief	Bluetooth initialization functions
- *
-@verbatim
- ===============================================================================
-         ##### Bluetooth initialization functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to initialize the bluetooth.
-
-@endverbatim
-  * @{
-  */
+ *  @{
+ */
 
 /**
  * @brief	Initialize the bluetooth and set baudrate to 9600
@@ -59,15 +50,6 @@ void bluetooth_init(void){
 	// GPIO Configuration
 	{
 		GPIO_InitTypeDef GPIO_InitStructure;
-
-		// Configure PD13 as output
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13;
-		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
-		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
-		GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-
-		GPIO_Init(GPIOD,&GPIO_InitStructure);
 
 		// Configure USART1 TX (PB6) as alternate function push-pull
 		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
@@ -115,7 +97,7 @@ void bluetooth_init(void){
 
 	}
 
-	uint8_t welcome_str[] = "Welcome to NeoPixelClock!\r\n";
+	uint8_t welcome_str[] = " Welcome to NeoPixelClock!\r\n";
 	bluetooth_send(welcome_str);
 }
 
@@ -166,19 +148,10 @@ void USART1_IRQHandler(void){
  * @}
  */
 
-/**	@defgroup Transmission Transmission functions
+/**	@defgroup Bluetooth_Trans Transmission functions
  * 	@brief	Bluetooth transmission functions
- *
-@verbatim
- ===============================================================================
-         ##### Bluetooth transmission functions #####
- ===============================================================================
-
- [..] This section provide functions allowing to transmit and receive data.
-
-@endverbatim
-  * @{
-  */
+ * @{
+ */
 
 /**
  * @brief 	send string to the hc-06

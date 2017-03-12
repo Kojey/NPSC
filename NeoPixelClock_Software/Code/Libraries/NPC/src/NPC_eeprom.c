@@ -33,8 +33,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Transmission Transmission functions
- * 	@brief	Eeprom transmission functions
+/**	@defgroup Eeprom_Init Initialisation functions
+ * 	@brief	Eeprom initialisation functions
  *
  * @{
  */
@@ -91,13 +91,13 @@ void eeprom_init(void){
  * @}
  */
 
-/**	@defgroup Transmission functions
+/**	@defgroup Eeprom_Trans Transmission functions
  * 	@brief	Eeprom data transmission functions
  *
  * @{
  */
 
-/*
+/**
  * @brief	Write a byte to the eeprom
  * @param	address:	The address of th memory
  * @param	data:	The data to be written to the memory
@@ -145,8 +145,8 @@ void eeprom_write(uint16_t address, uint8_t data){
 
 /**
  * @brief	Read a byte from the eeprom
- * @param	address	:	The address of the memory
- * @retval 	data
+ * @param	address: The address of the memory
+ * @retval 	uint8_t data from eeprom
  */
 uint8_t eeprom_read(uint16_t address){
 	uint8_t value;
@@ -180,9 +180,9 @@ uint8_t eeprom_read(uint16_t address){
 
 /**
  * @brief	Write a page to the eeprom
- *	@param	baseAddress: 	The base address of the page
- *	@param 	data: 	An array of data to be send
- *	@retval	None
+ * @param	baseAddress: The base address of the page
+ * @param 	data: An array of data to be send
+ * @retval	None
  */
 void eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
 	// write enable latch
@@ -224,12 +224,12 @@ void eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
 	delay(5000);
 }
 
-/*
+/**
  * @brief	Clear eeprom data
  * @param 	None
  * @retval	None
  */
-void clearEeprom(void){
+void eeprom_clear(void){
 	int i,j,k,l=0;
 	for (i=0; i<16;++i)
 		for (j=0;j<4;++j)

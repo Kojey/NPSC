@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['neopixel',['NeoPixel',['../group___neo_pixel.html',1,'']]],
-  ['neopixel_5fclear',['neopixel_clear',['../group___neo_pixel.html#ga8e3cfef785ce221672f825f8785c25b8',1,'neopixel_clear(void):&#160;NPC_neopixel.c'],['../group___state.html#ga8e3cfef785ce221672f825f8785c25b8',1,'neopixel_clear(void):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fcolourrgb',['neopixel_colourRGB',['../group___colour.html#ga1d500fbcbecad76feef8835437687ca0',1,'NPC_neopixel.c']]],
-  ['neopixel_5fcolourrgbw',['neopixel_colourRGBW',['../group___colour.html#ga527ba03b45a249e5e1ea1da4b971b3ac',1,'NPC_neopixel.c']]],
-  ['neopixel_5fdatainit',['neopixel_dataInit',['../group___neo_pixel.html#ga79e34feddcfb2c45ae218166c84bdff4',1,'neopixel_dataInit(void):&#160;NPC_neopixel.c'],['../group___state.html#ga79e34feddcfb2c45ae218166c84bdff4',1,'neopixel_dataInit(void):&#160;NPC_neopixel.c']]],
-  ['neopixel_5finit',['neopixel_init',['../group___neo_pixel.html#gaac78468985e44a3e4d353ea9276b33bc',1,'neopixel_init(void):&#160;NPC_neopixel.c'],['../group___initialisation.html#gaac78468985e44a3e4d353ea9276b33bc',1,'neopixel_init(void):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetallpixelrgb',['neopixel_setAllPixelRGB',['../group___neo_pixel.html#ga7a6c2dc149e86a788aede1d6aa5262d7',1,'neopixel_setAllPixelRGB(uint8_t r, uint8_t g, uint8_t b):&#160;NPC_neopixel.c'],['../group___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7',1,'neopixel_setAllPixelRGB(uint8_t r, uint8_t g, uint8_t b):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetallpixelrgbw',['neopixel_setAllPixelRGBW',['../group___neo_pixel.html#ga1ba017c1f338ef2c8e4a48acae35d87e',1,'neopixel_setAllPixelRGBW(uint8_t r, uint8_t g, uint8_t b, uint8_t w):&#160;NPC_neopixel.c'],['../group___display.html#ga1ba017c1f338ef2c8e4a48acae35d87e',1,'neopixel_setAllPixelRGBW(uint8_t r, uint8_t g, uint8_t b, uint8_t w):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetbrightness',['neopixel_setBrightness',['../group___neo_pixel.html#gae027558106eef5c81996294f4561fecb',1,'neopixel_setBrightness(uint8_t b):&#160;NPC_neopixel.c'],['../group___state.html#gae027558106eef5c81996294f4561fecb',1,'neopixel_setBrightness(uint8_t b):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetpixelcolor',['neopixel_setPixelColor',['../group___neo_pixel.html#ga71a91c14cda530d83c6bbb241fc9bf96',1,'neopixel_setPixelColor(uint8_t n, uint32_t c):&#160;NPC_neopixel.c'],['../group___display.html#ga71a91c14cda530d83c6bbb241fc9bf96',1,'neopixel_setPixelColor(uint8_t n, uint32_t c):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetpixelcolorrgb',['neopixel_setPixelColorRGB',['../group___neo_pixel.html#gadbf8ae449ade0b6015cb75632182b04c',1,'neopixel_setPixelColorRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b):&#160;NPC_neopixel.c'],['../group___state.html#gadbf8ae449ade0b6015cb75632182b04c',1,'neopixel_setPixelColorRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetpixelcolorrgbw',['neopixel_setPixelColorRGBW',['../group___neo_pixel.html#ga8eb6ad73b1bd1df8bddc2615035a3371',1,'neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w):&#160;NPC_neopixel.c'],['../group___display.html#ga8eb6ad73b1bd1df8bddc2615035a3371',1,'neopixel_setPixelColorRGBW(uint8_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t w):&#160;NPC_neopixel.c']]],
-  ['neopixel_5fsetpixelcolorw',['neopixel_setPixelColorW',['../group___neo_pixel.html#gaff8fc0f23014295654811a1ec909f204',1,'neopixel_setPixelColorW(uint8_t n, uint32_t c):&#160;NPC_neopixel.c'],['../group___display.html#gaff8fc0f23014295654811a1ec909f204',1,'neopixel_setPixelColorW(uint8_t n, uint32_t c):&#160;NPC_neopixel.c']]],
-  ['npc',['NPC',['../group___n_p_c.html',1,'']]],
-  ['npc_5fbluetooth_2eh',['NPC_bluetooth.h',['../_n_p_c__bluetooth_8h.html',1,'']]],
-  ['npc_5fclock_2eh',['NPC_clock.h',['../_n_p_c__clock_8h.html',1,'']]],
-  ['npc_5fconfiguration_2ec',['NPC_configuration.c',['../_n_p_c__configuration_8c.html',1,'']]],
-  ['npc_5fconfiguration_2eh',['NPC_configuration.h',['../_n_p_c__configuration_8h.html',1,'']]],
-  ['npc_5finit',['NPC_init',['../group___configuration.html#gabe73c51b6f7ce590321d186bef079fe4',1,'NPC_configuration.c']]],
-  ['npc_5fneopixel_2ec',['NPC_neopixel.c',['../_n_p_c__neopixel_8c.html',1,'']]],
-  ['npc_5fneopixel_2eh',['NPC_neopixel.h',['../_n_p_c__neopixel_8h.html',1,'']]],
-  ['npc_5futils_2ec',['NPC_utils.c',['../_n_p_c__utils_8c.html',1,'']]],
-  ['npc_5futils_2eh',['NPC_utils.h',['../_n_p_c__utils_8h.html',1,'']]]
+  ['max',['max',['../group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe',1,'NPC_utils.c']]]
 ];

@@ -82,7 +82,7 @@ $(document).ready(function(){initNavTree('group___transmission.html','');});
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Transmission functions<div class="ingroups"><a class="el" href="group___n_p_c.html">NPC</a> &raquo; <a class="el" href="group___bluetooth.html">Bluetooth</a></div></div>  </div>
+<div class="title">Transmission functions<div class="ingroups"><a class="el" href="group___n_p_c.html">NPC</a> &raquo; <a class="el" href="group___bluetooth.html">Bluetooth</a><a class="el" href="group___n_p_c.html">NPC</a> &raquo;  &#124; <a class="el" href="group___eeprom.html">Eeprom</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -97,9 +97,22 @@ Functions</h2></td></tr>
 <tr class="memitem:gab7ad1e1b94cf1cedc8a8e5151b0e25cb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___transmission.html#gab7ad1e1b94cf1cedc8a8e5151b0e25cb">bluetooth_receive</a> (void)</td></tr>
 <tr class="memdesc:gab7ad1e1b94cf1cedc8a8e5151b0e25cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">receive a byte from hc-06  <a href="#gab7ad1e1b94cf1cedc8a8e5151b0e25cb">More...</a><br /></td></tr>
 <tr class="separator:gab7ad1e1b94cf1cedc8a8e5151b0e25cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11e27abf76759a5907ef18d1351aecdb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___transmission.html#ga11e27abf76759a5907ef18d1351aecdb">eeprom_write</a> (uint16_t address, uint8_t data)</td></tr>
+<tr class="memdesc:ga11e27abf76759a5907ef18d1351aecdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a byte to the eeprom.  <a href="#ga11e27abf76759a5907ef18d1351aecdb">More...</a><br /></td></tr>
+<tr class="separator:ga11e27abf76759a5907ef18d1351aecdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafaa7cca6f6ad1d9ae49522324c825c2f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___transmission.html#gafaa7cca6f6ad1d9ae49522324c825c2f">eeprom_read</a> (uint16_t address)</td></tr>
+<tr class="memdesc:gafaa7cca6f6ad1d9ae49522324c825c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a byte from the eeprom.  <a href="#gafaa7cca6f6ad1d9ae49522324c825c2f">More...</a><br /></td></tr>
+<tr class="separator:gafaa7cca6f6ad1d9ae49522324c825c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f1a1c3f7642565b9dbff6bfd2e7ed0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___transmission.html#ga4f1a1c3f7642565b9dbff6bfd2e7ed0d">eeprom_write32Bytes</a> (uint16_t baseAddress, uint8_t *data)</td></tr>
+<tr class="memdesc:ga4f1a1c3f7642565b9dbff6bfd2e7ed0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a page to the eeprom.  <a href="#ga4f1a1c3f7642565b9dbff6bfd2e7ed0d">More...</a><br /></td></tr>
+<tr class="separator:ga4f1a1c3f7642565b9dbff6bfd2e7ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22e1179dc9f78a6771b2ae3f2e246595"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___transmission.html#ga22e1179dc9f78a6771b2ae3f2e246595">clearEeprom</a> (void)</td></tr>
+<tr class="memdesc:ga22e1179dc9f78a6771b2ae3f2e246595"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear eeprom data.  <a href="#ga22e1179dc9f78a6771b2ae3f2e246595">More...</a><br /></td></tr>
+<tr class="separator:ga22e1179dc9f78a6771b2ae3f2e246595"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Bluetooth transmission functions. </p>
+<p>Eeprom data transmission functions.</p>
 <pre class="fragment"> ===============================================================================
          ##### Bluetooth transmission functions #####
  ===============================================================================
@@ -157,6 +170,156 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>string to be sent </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga22e1179dc9f78a6771b2ae3f2e246595"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22e1179dc9f78a6771b2ae3f2e246595">&#9670;&nbsp;</a></span>clearEeprom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clearEeprom </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear eeprom data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafaa7cca6f6ad1d9ae49522324c825c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaa7cca6f6ad1d9ae49522324c825c2f">&#9670;&nbsp;</a></span>eeprom_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t eeprom_read </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read a byte from the eeprom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address of the memory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">uint8_t</td><td>data from eeprom </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga11e27abf76759a5907ef18d1351aecdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11e27abf76759a5907ef18d1351aecdb">&#9670;&nbsp;</a></span>eeprom_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_write </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a byte to the eeprom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">address</td><td>The address of th memory </td></tr>
+    <tr><td class="paramname">data</td><td>The data to be written to the memory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4f1a1c3f7642565b9dbff6bfd2e7ed0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4f1a1c3f7642565b9dbff6bfd2e7ed0d">&#9670;&nbsp;</a></span>eeprom_write32Bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void eeprom_write32Bytes </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>baseAddress</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a page to the eeprom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseAddress</td><td>The base address of the page </td></tr>
+    <tr><td class="paramname">data</td><td>An array of data to be send </td></tr>
   </table>
   </dd>
 </dl>
