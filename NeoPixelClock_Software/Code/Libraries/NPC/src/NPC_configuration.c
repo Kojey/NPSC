@@ -47,6 +47,8 @@ void NPC_init(void){
 	clock_init();
 	/* Initialise eeprom*/
 	eeprom_init();
+	/* Initialise temperature */
+	temperature_init();
 }
 
 /**

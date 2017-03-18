@@ -31,25 +31,14 @@
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-
-/** @defgroup Temparature_Const
- *  @{
- */
-#define ADCx					ADC3
-#define ADC_CHANNEL				ADC_Channel_7
-#define ADC_DMA_CHANNEL 		DMA_Channel_0
-#define ADC_DMA_STREAM			DMA2_Stream0
-#define ADCx_DR_ADDRESS      	((uint32_t)0x4001224C)
-/**
- * @}
- */
 /* Exported variables --------------------------------------------------------*/
-extern uint16_t adc_voltage = 0;
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
+/* Initialisation function ****************************************************/
 void temperature_init(void);
-int16_t temperature_read(void);
-
+/* Data reading function ******************************************************/
+uint16_t temperature_value(void);
+int32_t temperature_read(void);
 #endif /* NPC_INC_NPC_TEMPERATURE_H_ */
 
 /**

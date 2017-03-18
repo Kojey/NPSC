@@ -26,6 +26,8 @@ var searchData=
   ['npc_5finit',['NPC_init',['../group___configuration.html#gabe73c51b6f7ce590321d186bef079fe4',1,'NPC_configuration.c']]],
   ['npc_5fneopixel_2ec',['NPC_neopixel.c',['../_n_p_c__neopixel_8c.html',1,'']]],
   ['npc_5fneopixel_2eh',['NPC_neopixel.h',['../_n_p_c__neopixel_8h.html',1,'']]],
+  ['npc_5ftemperature_2ec',['NPC_temperature.c',['../_n_p_c__temperature_8c.html',1,'']]],
+  ['npc_5ftemperature_2eh',['NPC_temperature.h',['../_n_p_c__temperature_8h.html',1,'']]],
   ['npc_5futils_2ec',['NPC_utils.c',['../_n_p_c__utils_8c.html',1,'']]],
   ['npc_5futils_2eh',['NPC_utils.h',['../_n_p_c__utils_8h.html',1,'']]]
 ];

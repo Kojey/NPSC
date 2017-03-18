@@ -25,6 +25,7 @@
 #include "NPC_neopixel.h"
 #include "NPC_audio.h"
 #include "NPC_eeprom.h"
+#include "NPC_temperature.h"
 
 /** @addtogroup NPC
   * @{

@@ -45,6 +45,7 @@ SOFTWARE.
 int main(void)
 {
   int i = 0;
+  int32_t temp = 0;
   uint32_t color = 0;
   /**
   *  IMPORTANT NOTE!
@@ -65,7 +66,7 @@ int main(void)
   while (1)
   {
 	i++;
-
+	temp = temperature_read();
 	switch(pixel_color){
 	case 'R': color = neopixel_colourRGB(255,0,0); break;
 	case 'G': color = neopixel_colourRGB(0,255,0); break;
