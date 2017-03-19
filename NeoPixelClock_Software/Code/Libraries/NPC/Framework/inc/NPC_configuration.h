@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    NPC_configuration.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
-  * @brief   This file contains all the configuration prototypes used by the
-  * 			bluetooth firmware
+  * @date    17-February-2017
+  * @brief   This file contains all the main initialization prototypes used by
+  * 			the NPC
   ******************************************************************************
   * @attention
   *
@@ -15,38 +15,43 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_NPC_BLUETOOTH_H_
-#define NPC_INC_NPC_BLUETOOTH_H_
+#ifndef CONFIGURATION_H_
+#define CONFIGURATION_H_
+
 
 /* Includes ------------------------------------------------------------------*/
-#include "NPC_utils.h"
+#include "NPC_bluetooth.h"
+#include "NPC_clock.h"
+#include "NPC_neopixel.h"
+#include "NPC_audio.h"
+#include "NPC_eeprom.h"
+#include "NPC_temperature.h"
 
 /** @addtogroup NPC
   * @{
   */
-
-/** @addtogroup Bluetooth
+/** @addtogroup Framework
   * @{
   */
+/** @addtogroup Configuration
+  * @{
+  */
+
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/*  Function used to initialize the bluetooth device and handle transmission *****/
-void bluetooth_init(void);
-void USART1_IRQHandler(void);
-/*	Function used to manage transmission between NPC and Phone Application*/
-void bluetooth_send(uint8_t * data);
-uint8_t bluetooth_receive(void);
+void NPC_init(void);
+void Error_Handler(void);
 
-#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
-
-/**
- * 	@}
- */
+#endif /* CONFIGURATION_H_ */
 
 /**
  * @}
  */
+/**
+ * @}
+ */
+/**@} */

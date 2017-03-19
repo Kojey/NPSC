@@ -20,7 +20,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Temperature
   * @brief
   * @{
@@ -113,10 +115,13 @@ int32_t temperature_read(void){
 /**
  * @}
  */
+
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

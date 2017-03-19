@@ -21,7 +21,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup NeoPixel
   * @brief neopixel driver modules
   * @{
@@ -393,6 +395,9 @@ void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b,uint8_t w){
  * @}
  */
 
+/**
+ * @}
+ */
 /**
  * @}
  */

@@ -20,7 +20,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Eeprom
   * @brief Eeprom framework
   * @{
@@ -245,7 +247,9 @@ void eeprom_clear(void){
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

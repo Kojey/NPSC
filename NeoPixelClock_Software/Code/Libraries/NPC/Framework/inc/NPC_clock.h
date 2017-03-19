@@ -24,7 +24,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @addtogroup Clock
   * @{
   */
@@ -120,7 +122,9 @@ void RTC_Alarm_IRQHandler(void);
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

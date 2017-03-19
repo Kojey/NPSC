@@ -20,7 +20,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Configuration
   * @brief Configuration driver modules
   * @{
@@ -69,7 +71,9 @@ void Error_Handler(void)
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

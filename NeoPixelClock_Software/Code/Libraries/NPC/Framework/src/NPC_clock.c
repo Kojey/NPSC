@@ -43,7 +43,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Clock
   * @brief Clock driver modules
   * @{
@@ -281,7 +283,9 @@ void RTC_Alarm_IRQHandler(void){
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

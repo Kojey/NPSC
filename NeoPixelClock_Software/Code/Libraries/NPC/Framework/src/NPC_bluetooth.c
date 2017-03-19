@@ -19,7 +19,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Bluetooth
   * @brief Bluetooth driver modules
   * @{
@@ -182,7 +184,9 @@ uint8_t bluetooth_receive(void){
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

@@ -19,7 +19,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Audio
   * @brief Manage audio configuration and play audio
   * @{
@@ -143,7 +145,9 @@ void audio_play(uint16_t *DACBuffer, uint16_t Size ){
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */

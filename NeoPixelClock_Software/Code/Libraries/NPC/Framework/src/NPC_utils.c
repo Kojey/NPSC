@@ -20,7 +20,9 @@
 /** @addtogroup NPC
   * @{
   */
-
+/** @addtogroup Framework
+  * @{
+  */
 /** @defgroup Utils
   * @brief utils driver modules
   * @{
@@ -58,3 +60,13 @@ void delay(uint32_t microseconds) {
   microseconds *= 3;
   for(; counter<microseconds; counter++);
 }
+
+/**
+ * @}
+ */
+/**
+ * @}
+ */
+/**
+ * @}
+ */

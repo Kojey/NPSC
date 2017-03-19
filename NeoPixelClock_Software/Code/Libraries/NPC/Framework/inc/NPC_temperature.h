@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_utils.h
+  * @file    NPC_temperature.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    23-February-2017
-  * @brief   This file contains all the utility functions prototypes used by
-  * 			the NPC
+  * @date    15-March-2017
+  * @brief   This file contains all the configuration prototypes used by the
+  * 			temperature firmware
   ******************************************************************************
   * @attention
   *
@@ -15,40 +15,40 @@
   ******************************************************************************
   */
 
-#ifndef UTILS_H_
-#define UTILS_H_
+#ifndef NPC_INC_NPC_TEMPERATURE_H_
+#define NPC_INC_NPC_TEMPERATURE_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include <stdio.h>
-#include <string.h>
-#include <stdint.h>
-#include <ctype.h>
-#include "stm32f4xx.h"
+#include "NPC_utils.h"
 
 /** @addtogroup NPC
   * @{
   */
-
-/** @addtogroup Utils
+/** @addtogroup Framework
+  * @{
+  */
+/** @addtogroup Temperature
   * @{
   */
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
-extern uint8_t pixel_color;
-
 /* Exported macro ------------------------------------------------------------*/
-/* Exported functions --------------------------------------------------------*/
-uint32_t max(uint32_t a, uint32_t b, uint32_t c);
-void delay(uint32_t microseconds);
+/* Private function prototypes -----------------------------------------------*/
+/* Initialisation function ****************************************************/
+void temperature_init(void);
+/* Data reading function ******************************************************/
+uint16_t temperature_value(void);
+int32_t temperature_read(void);
+#endif /* NPC_INC_NPC_TEMPERATURE_H_ */
 
-#endif /* UTILS_H_ */
-
+/**
+ * 	@}
+ */
 /**
  * @}
  */
-
 /**
  * @}
  */

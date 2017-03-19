@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_configuration.h
+  * @file    NPC_audio.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    17-February-2017
-  * @brief   This file contains all the main initialization prototypes used by
-  * 			the NPC
+  * @date    12-March-2017
+  * @brief   This file contains all the configuration prototypes used by the
+  * 			audio firmware
   ******************************************************************************
   * @attention
   *
@@ -15,40 +15,55 @@
   ******************************************************************************
   */
 
-#ifndef CONFIGURATION_H_
-#define CONFIGURATION_H_
-
+#ifndef NPC_INC_NPC_AUDIO_H_
+#define NPC_INC_NPC_AUDIO_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "NPC_bluetooth.h"
-#include "NPC_clock.h"
-#include "NPC_neopixel.h"
-#include "NPC_audio.h"
-#include "NPC_eeprom.h"
-#include "NPC_temperature.h"
+#include "NPC_utils.h"
 
 /** @addtogroup NPC
   * @{
   */
-
-/** @addtogroup Configuration
+/** @addtogroup Framework
+  * @{
+  */
+/** @addtogroup Audio
   * @{
   */
 
 /* Exported types ------------------------------------------------------------*/
+
 /* Exported constants --------------------------------------------------------*/
-/* Exported variables --------------------------------------------------------*/
-/* Exported macro ------------------------------------------------------------*/
-/* Private function prototypes -----------------------------------------------*/
-void NPC_init(void);
-void Error_Handler(void);
 
-#endif /* CONFIGURATION_H_ */
-
+/**
+ * @defgroup Constant
+ * @brief Define audio frequency and DMA frequency
+ * @{
+ */
+#define AUDIO_FREQUENCY 11000
+#define DMA_FREQUENCY  (86000000/(2*AUDIO_FREQUENCY))
 /**
  * @}
  */
 
+/* Exported variables --------------------------------------------------------*/
+/* Exported macro ------------------------------------------------------------*/
+
+/* Private function prototypes -----------------------------------------------*/
+/* Configuration **************************************************************/
+void audio_disable(void);
+void audio_init(uint16_t *, uint16_t);
+/* Play audio ******************************************************************/
+void audio_play(uint16_t * , uint16_t);
+
+#endif /* NPC_INC_NPC_AUDIO_H_ */
+
+/**
+ * 	@}
+ */
+/**
+ * @}
+ */
 /**
  * @}
  */
