@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['play_20audio_20functions',['Play audio functions',['../group___audio___play.html',1,'']]]
+  ['neopixel',['NeoPixel',['../group___neo_pixel.html',1,'']]],
+  ['npc',['NPC',['../group___n_p_c.html',1,'']]]
 ];

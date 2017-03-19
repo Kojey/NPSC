@@ -1,0 +1,17 @@
+digraph "Eeprom"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Framework",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___framework.html"];
+  Node3 [label="Utilities",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___utilities.html"];
+  Node5 [label="Transmission functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___eeprom___trans.html",tooltip="Eeprom data transmission functions. "];
+  Node2 [label="Instructions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___instructions.html",tooltip="25LC640A instruction set "];
+  Node0 [label="Eeprom",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 [label="Initialisation functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___eeprom___init.html",tooltip="Eeprom initialisation functions. "];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
+}

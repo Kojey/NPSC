@@ -28,7 +28,7 @@ SOFTWARE.
 */
 
 /* Includes */
-#include "../Libraries/NPC/inc/NPC_configuration.h"
+#include "../Libraries/NPC/Framework/inc/NPC_configuration.h"
 //#include "stm32f4xx.h"
 /* Private macro */
 /* Private variables */

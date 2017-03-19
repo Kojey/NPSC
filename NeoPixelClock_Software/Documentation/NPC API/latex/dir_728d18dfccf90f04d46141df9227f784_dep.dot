@@ -1,0 +1,13 @@
+digraph "C:/Users/Kojey/Desktop/NPC/NeoPixelClock_Software/Code/Libraries" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_23fdee2f6995db16c755697cdf620cf4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Code" fontname="Helvetica", fontsize="10", URL="dir_23fdee2f6995db16c755697cdf620cf4.html"]
+  subgraph clusterdir_728d18dfccf90f04d46141df9227f784 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_728d18dfccf90f04d46141df9227f784.html"];
+    dir_728d18dfccf90f04d46141df9227f784 [shape=plaintext label="Libraries"];
+    dir_8d50c2d0d29fa8bf46dc1c3a3fa93df1 [shape=box label="NPC" color="red" fillcolor="white" style="filled" URL="dir_8d50c2d0d29fa8bf46dc1c3a3fa93df1.html"];
+  }
+  }
+}

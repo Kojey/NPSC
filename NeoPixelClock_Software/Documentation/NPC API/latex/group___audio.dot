@@ -1,0 +1,15 @@
+digraph "Audio"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir=LR;
+  Node1 [label="Framework",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___framework.html"];
+  Node4 [label="Play audio functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___audio___play.html",tooltip="Audio functions. "];
+  Node3 [label="Configuration functions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___audio___init.html",tooltip="Audio configuration functions. "];
+  Node2 [label="Constant",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___constant.html",tooltip="Define audio frequency and DMA frequency. "];
+  Node0 [label="Audio",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1->Node0 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node2 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
+  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
+}

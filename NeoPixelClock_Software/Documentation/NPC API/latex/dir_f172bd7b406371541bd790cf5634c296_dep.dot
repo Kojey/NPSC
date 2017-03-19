@@ -1,0 +1,16 @@
+digraph "C:/Users/Kojey/Desktop/NPC/NeoPixelClock_Software/Code/Libraries/NPC/Application" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_8d50c2d0d29fa8bf46dc1c3a3fa93df1 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="NPC" fontname="Helvetica", fontsize="10", URL="dir_8d50c2d0d29fa8bf46dc1c3a3fa93df1.html"]
+  subgraph clusterdir_f172bd7b406371541bd790cf5634c296 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_f172bd7b406371541bd790cf5634c296.html"];
+    dir_f172bd7b406371541bd790cf5634c296 [shape=plaintext label="Application"];
+    dir_07306553391a983291df5b932fefc996 [shape=box label="inc" color="black" fillcolor="white" style="filled" URL="dir_07306553391a983291df5b932fefc996.html"];
+    dir_dd3bcd8efb08a1335d20b0d4f37d56e3 [shape=box label="src" color="black" fillcolor="white" style="filled" URL="dir_dd3bcd8efb08a1335d20b0d4f37d56e3.html"];
+  }
+  }
+  dir_436b614f8cc32ab920269826989699d6 [shape=box label="Framework" fillcolor="white" style="filled" color="red" URL="dir_436b614f8cc32ab920269826989699d6.html"];
+  dir_07306553391a983291df5b932fefc996->dir_436b614f8cc32ab920269826989699d6 [headlabel="2", labeldistance=1.5 headhref="dir_000004_000006.html"];
+}

@@ -3,15 +3,9 @@ digraph "NPC"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir=LR;
-  Node2 [label="Clock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___clock.html",tooltip="Clock driver modules. "];
+  Node2 [label="Framework",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___framework.html"];
   Node0 [label="NPC",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
-  Node5 [label="Utils",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___utils.html",tooltip="utils driver modules "];
-  Node4 [label="NeoPixel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___neo_pixel.html",tooltip="neopixel driver modules "];
-  Node1 [label="Bluetooth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___bluetooth.html",tooltip="Bluetooth driver modules. "];
-  Node3 [label="Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___configuration.html",tooltip="Configuration driver modules. "];
+  Node1 [label="Application",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group___application.html"];
   Node0->Node1 [shape=plaintext, dir="back", style="solid"];
   Node0->Node2 [shape=plaintext, dir="back", style="solid"];
-  Node0->Node3 [shape=plaintext, dir="back", style="solid"];
-  Node0->Node4 [shape=plaintext, dir="back", style="solid"];
-  Node0->Node5 [shape=plaintext, dir="back", style="solid"];
 }

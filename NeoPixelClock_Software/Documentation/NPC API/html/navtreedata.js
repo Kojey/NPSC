@@ -2,6 +2,10 @@ var NAVTREE =
 [
   [ "NPC", "index.html", [
     [ "Modules", "modules.html", "modules" ],
+    [ "Data Structures", "annotated.html", [
+      [ "Data Structures", "annotated.html", "annotated_dup" ],
+      [ "Data Structure Index", "classes.html", null ]
+    ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
@@ -15,7 +19,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_n_p_c__audio_8c.html",
-"group___temperature.html#ga74915aedf88ee7840a64ab372d768ca1"
+"group___neo_pixel___colour.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
