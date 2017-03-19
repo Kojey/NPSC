@@ -134,8 +134,8 @@ void audio_init(uint16_t *DACBuffer, uint16_t Size){
  * @return 	None
  */
 void audio_play(uint16_t *DACBuffer, uint16_t Size ){
-	AudioDisable();
-	AudioInit(DACBuffer,Size);
+	audio_disable();
+	audio_init(DACBuffer,Size);
 }
 
 /**

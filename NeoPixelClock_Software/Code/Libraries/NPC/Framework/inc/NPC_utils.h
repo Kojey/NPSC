@@ -36,6 +36,8 @@
   */
 
 /* Exported types ------------------------------------------------------------*/
+typedef enum {false = 0, true = !false} bool;
+
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 extern uint8_t pixel_color;
