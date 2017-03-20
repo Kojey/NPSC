@@ -54,6 +54,7 @@
  * @{
  */
 #define PAGE_LENGTH 32
+#define EEPROM_SIZE 6400
 /**
  * @}
  */
@@ -64,13 +65,26 @@
 /* Private function prototypes -----------------------------------------------*/
 
 /* Initialisation functions ***************************************************/
+/**	@defgroup Eeprom_Init Initialisation functions
+ * @{
+ */
 void eeprom_init(void);
+/**
+ * @}
+ */
 /* Data transmission function *************************************************/
+/**	@defgroup Eeprom_Trans Transmission functions
+ * @{
+ */
 void eeprom_write(uint16_t address, uint8_t data);
 uint8_t eeprom_read(uint16_t address);
-void eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data);
+ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data);
+ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N);
+uint32_t eeprom_read32Bytes(uint16_t baseAddress);
 void eeprom_clear(void);
-
+/**
+ * @}
+ */
 #endif /* NPC_INC_NPC_EEPROM_H_ */
 
 /**

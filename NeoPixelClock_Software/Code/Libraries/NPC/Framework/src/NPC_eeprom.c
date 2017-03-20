@@ -105,44 +105,47 @@ void eeprom_init(void){
  * @param	data:	The data to be written to the memory
  * @retval 	None
  */
-void eeprom_write(uint16_t address, uint8_t data){
-	// write enable latch
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-	delay(1);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2,WREN);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);
-	delay(5000);
+ErrorStatus eeprom_write(uint16_t address, uint8_t data){
+	if(address+1 > EEPROM_SIZE) return ERROR;
+	else{
+		// write enable latch
+		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+		delay(1);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2,WREN);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		GPIO_SetBits(GPIOB, GPIO_Pin_12);
+		delay(5000);
 
-	// start transmission
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-	delay(1);
-	// send write instruction
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2,WRITE);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	// send the address of the register
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2, address>>8);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2, address);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	// send data
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2, data);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
+		// start transmission
+		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+		delay(1);
+		// send write instruction
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2,WRITE);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		// send the address of the register
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2, address>>8);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2, address);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		// send data
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2, data);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
 
-	// end transmission
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);
-	delay(5000);
-
+		// end transmission
+		GPIO_SetBits(GPIOB, GPIO_Pin_12);
+		delay(5000);
+		return SUCCESS;
+	}
 }
 
 /**
@@ -186,44 +189,49 @@ uint8_t eeprom_read(uint16_t address){
  * @param 	data: An array of data to be send
  * @retval	None
  */
-void eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
-	// write enable latch
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-	delay(1);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2,WREN);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);
-	delay(5000);
-
-	// start transmission
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-	delay(1);
-	// send write instruction
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2,WRITE);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	// send the address of the register
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2, baseAddress>>8);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-	SPI_I2S_SendData(SPI2, baseAddress);
-	while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
-	SPI_I2S_ReceiveData(SPI2); // junk
-	// send data
-	for(int i=0; i<PAGE_LENGTH; i++){
+ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
+	if(baseAddress+PAGE_LENGTH > EEPROM_SIZE)
+		return ERROR;
+	else{
+		// write enable latch
+		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+		delay(1);
 		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
-		SPI_I2S_SendData(SPI2, data[i]);
+		SPI_I2S_SendData(SPI2,WREN);
 		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
 		SPI_I2S_ReceiveData(SPI2); // junk
+		GPIO_SetBits(GPIOB, GPIO_Pin_12);
+		delay(5000);
+
+		// start transmission
+		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+		delay(1);
+		// send write instruction
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2,WRITE);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		// send the address of the register
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2, baseAddress>>8);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+		SPI_I2S_SendData(SPI2, baseAddress);
+		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+		SPI_I2S_ReceiveData(SPI2); // junk
+		// send data
+		for(int i=0; i<PAGE_LENGTH; i++){
+			while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
+			SPI_I2S_SendData(SPI2, data[i]);
+			while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
+			SPI_I2S_ReceiveData(SPI2); // junk
+		}
+		// end transmission
+		GPIO_SetBits(GPIOB, GPIO_Pin_12);
+		delay(5000);
+		return SUCCESS;
 	}
-	// end transmission
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);
-	delay(5000);
 }
 
 /**
@@ -239,6 +247,42 @@ void eeprom_clear(void){
 				eeprom_write(l,0);
 }
 
+/**
+ * @brief	Write N bytes to the eeprom
+ * @note 	N is divided into pages before been written to
+ * 				memory
+ * @param	baseAddress: address of data
+ * @param	data:	data to be written
+ * @param	N:	number of data to write
+ * @retval	ErrorStatus
+ */
+ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
+	if(baseAddress+N <= EEPROM_SIZE){
+		int i = 0;
+		int div = N/PAGE_LENGTH;	// number of pages
+		int res = N%PAGE_LENGTH;  	// number of data not represented as pages
+		for(i=0; i<div; ++i)		// write each page
+			eeprom_write32Bytes(baseAddress+PAGE_LENGTH*i,data[PAGE_LENGTH*i]);
+		for(i=0; i<res; ++i)		// write each data
+			eeprom_write(baseAddress+div*PAGE_LENGTH+i,data[div*PAGE_LENGTH+i]);
+		return SUCCESS;
+	}
+	else return ERROR;
+}
+
+/**
+ * @brief	Read a 32byte from eeprom
+ * @param	baseAddress
+ * @retval 	uint32_t
+ */
+
+uint32_t eeprom_read32Bytes(uint16_t baseAddress){
+	// TODO more error checking
+	uint32_t retval = 0;
+	for(i=0; i<4; ++i)
+		retval = eeprom_read(baseAddress+i)<<(3-i)*8; // read most significant byte fisrt
+	return retval;
+}
 /**
  * @}
  */
