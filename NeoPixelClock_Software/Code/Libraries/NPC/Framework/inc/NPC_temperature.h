@@ -36,11 +36,26 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
+
 /* Initialisation function ****************************************************/
+/** @defgroup Temperature_Init Initialise the temperature reader
+ * @{
+ */
 void temperature_init(void);
+/**
+ * @}
+ */
+
 /* Data reading function ******************************************************/
+/** @defgroup Temperature_Data
+ *  @{
+ */
 uint16_t temperature_value(void);
 int32_t temperature_read(void);
+/**
+ * @}
+ */
+
 #endif /* NPC_INC_NPC_TEMPERATURE_H_ */
 
 /**

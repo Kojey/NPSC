@@ -62,27 +62,51 @@
 /* Private function prototypes -----------------------------------------------*/
 
 /*  Function used to initialize the bluetooth device and handle transmission **/
+/**	@defgroup NeoPixel_Init
+ * 	@{
+ */
 void neopixel_init(void);
+/**
+ * @}
+ */
 
 /*	Function used to change the state of the neopixels ************************/
+/**	@defgroup NeoPixel_State
+ * 	@{
+ */
 void neopixel_setBrightness(uint8_t b);
 void neopixel_setState(uint8_t s);
 void neopixel_show(void);
 void neopixel_clear(void);
 void neopixel_dataInit(void);
 void TIM2_IRQHandler(void);
+/**
+ * @}
+ */
 
 /*	Function used to create and access colour *********************************/
+/**	@defgroup NeoPixel_Colour
+ *  @{
+ */
 uint32_t neopixel_colourRGB(uint8_t r,uint8_t g,uint8_t b);
 uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
+/**
+ * @}
+ */
 
 /*	Function used to set pixel colours ****************************************/
+/**	@defgroup NeoPixel_Display
+ * 	@{
+ */
 void neopixel_setPixelColourRGB(uint8_t n,uint8_t r,uint8_t g,uint8_t b);
 void neopixel_setPixelColourRGBW(uint8_t n,uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 void neopixel_setPixelColour(uint8_t n,uint32_t c);
 void neopixel_setPixelColourW(uint8_t n,uint32_t c);
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b);
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
+/**
+ * @}
+ */
 
 #endif /* NPC_INC_NPC_NEOPIXEL_H_ */
 

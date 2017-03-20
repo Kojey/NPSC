@@ -103,19 +103,37 @@
 /* Exported functions --------------------------------------------------------*/
 
 /*  Function used to set the RTC configuration to the default reset state *****/
+/**	@defgroup Clock_Init
+ * 	@{
+ */
 void clock_init(void);
+/**
+ * @}
+ */
 
 /* Time and Date configuration functions **************************************/
+  /**@defgroup Clock_Time_Date
+   * @{
+   */
 ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year);
 ErrorStatus clock_setTime( uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t second);
 uint32_t clock_getDate(void);
 uint32_t clock_getTime(void);
+/**
+ * @}
+ */
 
 /* Alarms (Alarm A and Alarm B) configuration functions  **********************/
+/** @defgroup Clock_Alarms
+ *  @{
+ */
 RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat);
 void clock_setA(RTC_AlarmTypeDef * Alarm);
 void clock_setAlarm(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat);
 void RTC_Alarm_IRQHandler(void);
+/**
+ * @}
+ */
 
 #endif /* NPC_INC_NPC_CLOCK_H_ */
 

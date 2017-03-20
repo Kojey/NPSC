@@ -51,11 +51,22 @@
 
 /* Private function prototypes -----------------------------------------------*/
 /* Configuration **************************************************************/
+/**	@defgroup Audio_Init Configuration functions
+ * 	@{
+ */
 void audio_disable(void);
 void audio_init(uint16_t *, uint16_t);
+/**
+ * @}
+ */
 /* Play audio ******************************************************************/
+/**	@defgroup Audio_Play Play audio functions
+ *  @{
+ */
 void audio_play(uint16_t * , uint16_t);
-
+/**
+ * @}
+ */
 #endif /* NPC_INC_NPC_AUDIO_H_ */
 
 /**

@@ -37,11 +37,24 @@
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /*  Function used to initialize the bluetooth device and handle transmission *****/
+/**	@defgroup Bluetooth_Init
+ * 	@{
+ */
 void bluetooth_init(void);
 void USART1_IRQHandler(void);
+/**
+ * @}
+ */
+
 /*	Function used to manage transmission between NPC and Phone Application*/
+/**	@defgroup Bluetooth_Trans
+ *  @{
+ */
 void bluetooth_send(uint8_t * data);
 uint8_t bluetooth_receive(void);
+/**
+ * @}
+ */
 
 #endif /* NPC_INC_NPC_BLUETOOTH_H_ */
 
