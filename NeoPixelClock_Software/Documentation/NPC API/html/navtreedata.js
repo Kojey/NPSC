@@ -19,7 +19,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_n_p_c__audio_8c.html",
-"group___neo_pixel___colour.html"
+"group___neo_pixel.html#ga4daf6edfe83394f425ec51f64d92c49c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

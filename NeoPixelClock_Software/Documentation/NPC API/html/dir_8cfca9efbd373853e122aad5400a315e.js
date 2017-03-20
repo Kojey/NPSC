@@ -1,6 +1,7 @@
 var dir_8cfca9efbd373853e122aad5400a315e =
 [
     [ "NPC_audio.c", "_n_p_c__audio_8c.html", "_n_p_c__audio_8c" ],
+    [ "NPC_bluetooth.c", "_n_p_c__bluetooth_8c_source.html", null ],
     [ "NPC_clock.c", "_n_p_c__clock_8c.html", "_n_p_c__clock_8c" ],
     [ "NPC_configuration.c", "_n_p_c__configuration_8c.html", "_n_p_c__configuration_8c" ],
     [ "NPC_eeprom.c", "_n_p_c__eeprom_8c.html", "_n_p_c__eeprom_8c" ],

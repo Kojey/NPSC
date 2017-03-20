@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    clock_mamagement.h
+  * @file    clock_management.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    19-March-2017
@@ -39,7 +39,7 @@
  * @{
  */
 typedef struct {
-	char alarmName[20];
+	char alarmName[31];
 	RTC_AlarmTypeDef alarmParameters;
 }Alarm_Definition;
 /**
@@ -51,14 +51,15 @@ typedef struct {
  * @{
  */
 #define TIME_ADDRESS		0x00
-#define DATE_ADDRESS		0x00
-#define ALARM_ADDRESS		0x00
+#define DATE_ADDRESS		0x04
+#define ALARM_ADDRESS		0x08
 /**
  * @}
  */
 /* Exported variables --------------------------------------------------------*/
 /**
  * @defgroup clock_management variables
+ * @{
  */
 extern uint16_t eeprom_index;
 extern uint16_t next_alarm;	// index of the next non out-dated alarm (@ref Alarm_Definition)
@@ -71,22 +72,37 @@ extern uint16_t next_alarm;	// index of the next non out-dated alarm (@ref Alarm
 /* Private function prototypes -----------------------------------------------*/
 
 /* Eeprom access  *************************************************************/
+/**	@defgroup Clock_Management_Eeprom
+ * 	@{
+ */
 void ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def);
 void ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def);
 void ClockManagement_saveDate(RTC_DateTypeDef * Date_Def);
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index);
 RTC_TimeTypeDef ClockManagement_loadTime(uint16_t index);
 RTC_DateTypeDef ClockManagement_loadDate(uint16_t index);
-
+/**
+ * @}
+ */
 /* Alarm comparison ***********************************************************/
+/**	@defgroup Clock_Management_AlarmComp
+ * 	@{
+ */
 uint32_t  ClockManagement_alarm2int(Alarm_Definition * alarm);
 uint32_t  ClockManagement_time2int(Alarm_Definition * time);
 uint32_t  ClockManagement_date2int(Alarm_Definition * date);
 bool ClockManagement_isAlarmSoonerThan(Alarm_Definition alarm1, Alarm_Definition alarm2);
-
+/**
+ * @}
+ */
 /* Alarm update ***************************************************************/
+/**	@defgroup Clock_Management_AlarmUpdate
+ *  @{
+ */
 void CLockManagement_updateAlarm(void);
-
+/**
+ * @}
+ */
 #endif /* NPC_APPLICATION_INC_CLOCK_MANAGEMENT_H_ */
 
 /**

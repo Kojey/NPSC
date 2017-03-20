@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    clock_mamagement.c
+  * @file    clock_management.c
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    19-March-2017
@@ -58,20 +58,30 @@ void ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def){
 
 /**
  * @brief	Save the time settings to eeprom
+ * @note	Save H12, Hours, Minutes, and Seconds in
+ * 				that order
  * @param 	Time_Def: the time setitngs
  * @retval	None
  */
 void ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
-
+	eeprom_write(TIME_ADDRESS, Time_Def->RTC_H12);
+	eeprom_write(TIME_ADDRESS+1, Time_Def->RTC_Hours);
+	eeprom_write(TIME_ADDRESS+2, Time_Def->RTC_Minutes);
+	eeprom_write(TIME_ADDRESS+3, Time_Def->RTC_Seconds);
 }
 
 /**
  * @brief	Save the date settings to eeprom
+ * @note	Save Date, Month, WeekDay, and Year in
+ * 				that order
  * @param 	Date_Def: the date setitngs
  * @retval	None
  */
 void ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
-
+	eeprom_write(DATE_ADDRESS, Date_Def->RTC_Date);
+	eeprom_write(DATE_ADDRESS+1, Date_Def->RTC_Month);
+	eeprom_write(DATE_ADDRESS+2, Date_Def->RTC_WeekDay);
+	eeprom_write(DATE_ADDRESS+3, Date_Def->RTC_Year);
 }
 
 /**
@@ -86,21 +96,33 @@ Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
 
 /**
  * @brief	Load the time settings from eeprom
+ * @note	Load H12, Hours, Minutes, and Seconds in
+ * 				that order
  * @param 	index: the index in memory of the time
  * @retval	RTC_TimeTypeDef
  */
 RTC_TimeTypeDef ClockManagement_loadTime(uint16_t index){
 	RTC_TimeTypeDef time;
+	time.RTC_H12 = eeprom_read(TIME_ADDRESS);
+	time.RTC_Hours = eeprom_read(TIME_ADDRESS+1);
+	time.RTC_Minutes = eeprom_read(TIME_ADDRESS+2);
+	time.RTC_Seconds = eeprom_read(TIME_ADDRESS+3);
 	return time;
 }
 
 /**
  * @brief	Load the date settings from eeprom
+ * @note	Load Date, Month, WeekDay, and Year in
+ * 				that order
  * @param 	index: the index in memory of the date
  * @retval	RTC_DateTypeDef
  */
 RTC_DateTypeDef ClockManagement_loadDate(uint16_t index){
 	RTC_DateTypeDef date;
+	date.RTC_Date = eeprom_read(DATE_ADDRESS);
+	date.RTC_Month = eeprom_read(DATE_ADDRESS+1);
+	date.RTC_WeekDay = eeprom_read(DATE_ADDRESS+2);
+	date.RTC_Year = eeprom_read(DATE_ADDRESS+3);
 	return date;
 }
 
