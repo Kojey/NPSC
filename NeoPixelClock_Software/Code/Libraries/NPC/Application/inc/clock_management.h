@@ -107,17 +107,18 @@ RTC_DateTypeDef ClockManagement_loadDate(uint16_t index);
 /**
  * @}
  */
+
 /* Alarm comparison ***********************************************************/
 /**	@defgroup Clock_Management_AlarmComp
  * 	@{
  */
-uint32_t  ClockManagement_alarm2int(Alarm_Definition * alarm);
-uint32_t  ClockManagement_time2int(Alarm_Definition * time);
-uint32_t  ClockManagement_date2int(Alarm_Definition * date);
-bool ClockManagement_isAlarmSoonerThan(Alarm_Definition alarm1, Alarm_Definition alarm2);
+bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2);
+bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2);
+bool ClockManagement_isAlarmBefore(Alarm_Definition alarm1, Alarm_Definition alarm2);
 /**
  * @}
  */
+
 /* Alarm update ***************************************************************/
 /**	@defgroup Clock_Management_AlarmUpdate
  *  @{

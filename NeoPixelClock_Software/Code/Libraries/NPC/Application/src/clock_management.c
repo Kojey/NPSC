@@ -49,6 +49,8 @@
 
 /**
  * @brief	Save an alarm settings to eeprom
+ * @note	Save in this order: Name, DateWeekDat, DateWeekDaySel, Mask
+ * 				H12, Hours, Minutes, Seconds
  * @param 	Alarm_Def: the alarm setitngs
  * @retval	ErrorStatus
  */
@@ -93,12 +95,21 @@ ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
 
 /**
  * @brief	load an alarm settings from eeprom
+ * @note	Load in this order: Name, DateWeekDay, DateWeekDaySel, Mask
+ * 				H12, Hours, Minutes, Seconds
  * @param 	index: the index in memory of the alarm
  * @retval	Alarm_Definition
  */
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
 	Alarm_Definition alarm;
-
+	alarm.alarmName = eeprom_readNBytes(index+OFFSET_NAME,NAME_SIZE);
+	alarm.alarmParameters.RTC_AlarmDateWeekDay = eeprom_read(index+OFFSET_DATEWEEKDAY);
+	alarm.alarmParameters.RTC_AlarmDateWeekDaySel = eeprom_readNBytes(index+OFFSET_DATEWEEKDAY_SEL,4);
+	alarm.alarmParameters.RTC_AlarmMask = eeprom_readNBytes(index+OFFSET_MASK,4);
+	alarm.alarmParameters.RTC_AlarmTime.RTC_H12 = eeprom_read(index+OFFSET_H12);
+	alarm.alarmParameters.RTC_AlarmTime.RTC_Hours = eeprom_read(index+OFFSET_HOURS);
+	alarm.alarmParameters.RTC_AlarmTime.RTC_Minutes = eeprom_read(index+OFFSET_MINUTES);
+	alarm.alarmParameters.RTC_AlarmTime.RTC_Seconds = eeprom_read(index+OFFSET_SECONDS);
 	return alarm;
 }
 
@@ -152,41 +163,54 @@ RTC_DateTypeDef ClockManagement_loadDate(uint16_t index){
  */
 
 /**
- * @brief	Convert an alarm to an integer
- * @param	alarm
- * @retval	uint32_t representing the alarm
+ * @brief	Compare two time
+ * @param	is time1 before time2?
+ * @retval	bool
  */
-uint32_t  ClockManagement_alarm2int(Alarm_Definition * alarm){
-	return 0;
-}
-
-/**
- * @brief	Convert a time to an integer
- * @param	time
- * @retval	uint32_t representing the time
- */
-uint32_t  ClockManagement_time2int(Alarm_Definition * time){
-	return 0;
+bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2){
+	// convert to 24h format
+	if(time1.RTC_H12 == RTC_H12_PM)time1.RTC_Hours+=12;
+	if(time2.RTC_H12 == RTC_H12_PM)time2.RTC_Hours+=12;
+	// compare time
+	if(time1.RTC_Hours <= time2.RTC_Hours)
+		if(time1.RTC_Minutes <= time2.RTC_Minutes)
+			if(time1.RTC_Seconds <= time2.RTC_Seconds)
+				return true;
+			else return false;
+		else return false;
+	else return false;
 }
 
 
 /**
  * @brief	Convert an date to an integer
- * @param	date
- * @retval	uint32_t representing the date
+ * @param	is date1 before date2?
+ * @retval	bool
  */
-uint32_t  ClockManagement_date2int(Alarm_Definition * date){
-	return 0;
+bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2){
+	// compare time
+	if(date1.RTC_Year <= date2.RTC_Year)
+		if(date1.RTC_Month <= date2.RTC_Month)
+			if(date1.RTC_Date <= date2.RTC_Date)
+				return true;
+			else return false;
+		else return false;
+	else return false;
 }
 
 /**
  * @brief	Compare two alarm
- * @param	alarm1: the reference alarm
- * @param	alarm2
+ * @note	Only support same dateWeekDaySel comparison
+ * 			TODO include mask comparison
+ * @param	is alarm1 before alarm2?
  * @retval	uint32_t representing the time
  */
-bool ClockManagement_isAlarmSoonerThan(Alarm_Definition alarm1, Alarm_Definition alarm2){
-	return true;
+bool ClockManagement_isAlarmBefore(Alarm_Definition alarm1, Alarm_Definition alarm2){
+	if(alarm1.alarmParameters.RTC_AlarmDateWeekDay <= alarm2.alarmParameters.RTC_AlarmDateWeekDay)
+		if(ClockManagement_isTimeBefore(alarm1.alarmParameters.RTC_AlarmTime, alarm1.alarmParameters.RTC_AlarmTime))
+				return true;
+		else return false;
+	else return false;
 }
 
 /**
