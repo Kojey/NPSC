@@ -76,7 +76,7 @@ void eeprom_init(void);
 /**	@defgroup Eeprom_Trans Transmission functions
  * @{
  */
-void eeprom_write(uint16_t address, uint8_t data);
+ErrorStatus eeprom_write(uint16_t address, uint8_t data);
 uint8_t eeprom_read(uint16_t address);
 ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data);
 ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N);

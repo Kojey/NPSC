@@ -50,10 +50,17 @@
 /**
  * @brief	Save an alarm settings to eeprom
  * @param 	Alarm_Def: the alarm setitngs
- * @retval	None
+ * @retval	ErrorStatus
  */
-void ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def){
-
+ErrorStatus ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def, uint16_t address){
+	return (ErrorStatus) (eeprom_writeNBytes(address+OFFSET_NAME,(uint8_t *)(Alarm_Def->alarmName),NAME_SIZE) \
+			|| eeprom_write(address+OFFSET_DATEWEEKDAY,Alarm_Def->alarmParameters.RTC_AlarmDateWeekDay)\
+			|| eeprom_writeNBytes(address+OFFSET_DATEWEEKDAY_SEL,(uint8_t *)(Alarm_Def->alarmParameters.RTC_AlarmDateWeekDaySel),4)\
+			|| eeprom_writeNBytes(address+OFFSET_MASK,(uint8_t *)(Alarm_Def->alarmParameters.RTC_AlarmMask),4)\
+			|| eeprom_write(address+OFFSET_H12,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_H12)\
+			|| eeprom_write(address+OFFSET_HOURS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Hours)\
+			|| eeprom_write(address+OFFSET_MINUTES,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Minutes)\
+			|| eeprom_write(address+OFFSET_SECONDS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Seconds));
 }
 
 /**
@@ -61,13 +68,13 @@ void ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def){
  * @note	Save H12, Hours, Minutes, and Seconds in
  * 				that order
  * @param 	Time_Def: the time setitngs
- * @retval	None
+ * @retval	ErrorStatus
  */
-void ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
-	eeprom_write(TIME_ADDRESS, Time_Def->RTC_H12);
-	eeprom_write(TIME_ADDRESS+1, Time_Def->RTC_Hours);
-	eeprom_write(TIME_ADDRESS+2, Time_Def->RTC_Minutes);
-	eeprom_write(TIME_ADDRESS+3, Time_Def->RTC_Seconds);
+ErrorStatus ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
+	return (ErrorStatus)(eeprom_write(TIME_ADDRESS, Time_Def->RTC_H12)\
+			|| eeprom_write(TIME_ADDRESS+1, Time_Def->RTC_Hours)\
+			|| eeprom_write(TIME_ADDRESS+2, Time_Def->RTC_Minutes)\
+			|| eeprom_write(TIME_ADDRESS+3, Time_Def->RTC_Seconds));
 }
 
 /**
@@ -75,13 +82,13 @@ void ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
  * @note	Save Date, Month, WeekDay, and Year in
  * 				that order
  * @param 	Date_Def: the date setitngs
- * @retval	None
+ * @retval	ErrorStatus
  */
-void ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
-	eeprom_write(DATE_ADDRESS, Date_Def->RTC_Date);
-	eeprom_write(DATE_ADDRESS+1, Date_Def->RTC_Month);
-	eeprom_write(DATE_ADDRESS+2, Date_Def->RTC_WeekDay);
-	eeprom_write(DATE_ADDRESS+3, Date_Def->RTC_Year);
+ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
+	return (ErrorStatus) (eeprom_write(DATE_ADDRESS, Date_Def->RTC_Date)\
+			|| eeprom_write(DATE_ADDRESS+1, Date_Def->RTC_Month)\
+			|| eeprom_write(DATE_ADDRESS+2, Date_Def->RTC_WeekDay)\
+			|| eeprom_write(DATE_ADDRESS+3, Date_Def->RTC_Year));
 }
 
 /**
@@ -91,6 +98,7 @@ void ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
  */
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
 	Alarm_Definition alarm;
+
 	return alarm;
 }
 

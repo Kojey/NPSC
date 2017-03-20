@@ -279,6 +279,7 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 uint32_t eeprom_read32Bytes(uint16_t baseAddress){
 	// TODO more error checking
 	uint32_t retval = 0;
+	int i;
 	for(i=0; i<4; ++i)
 		retval = eeprom_read(baseAddress+i)<<(3-i)*8; // read most significant byte fisrt
 	return retval;
