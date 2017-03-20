@@ -262,7 +262,7 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 		int div = N/PAGE_LENGTH;	// number of pages
 		int res = N%PAGE_LENGTH;  	// number of data not represented as pages
 		for(i=0; i<div; ++i)		// write each page
-			eeprom_write32Bytes(baseAddress+PAGE_LENGTH*i,data[PAGE_LENGTH*i]);
+			eeprom_write32Bytes(baseAddress+PAGE_LENGTH*i, &data[PAGE_LENGTH*i]);
 		for(i=0; i<res; ++i)		// write each data
 			eeprom_write(baseAddress+div*PAGE_LENGTH+i,data[div*PAGE_LENGTH+i]);
 		return SUCCESS;
@@ -279,8 +279,21 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 uint32_t eeprom_read32Bytes(uint16_t baseAddress){
 	// TODO more error checking
 	uint32_t retval = 0;
+	int i;
 	for(i=0; i<4; ++i)
 		retval = eeprom_read(baseAddress+i)<<(3-i)*8; // read most significant byte fisrt
+	return retval;
+}
+
+/**
+ *
+ */
+
+uint8_t * eeprom_readNBytes(uint16_t baseAddress, uint16_t N){
+	uint8_t * retval = malloc(N);
+	int i;
+	for(i=0; i<N; ++i)
+		retval[i]=eeprom_read(baseAddress+i);
 	return retval;
 }
 /**
