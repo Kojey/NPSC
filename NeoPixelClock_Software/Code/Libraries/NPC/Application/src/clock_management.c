@@ -102,10 +102,10 @@ ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
  */
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
 	Alarm_Definition alarm;
-	alarm.alarmName = eeprom_readNBytes(index+OFFSET_NAME,NAME_SIZE);
+	eeprom_readNBytes(index+OFFSET_NAME,(uint8_t *)alarm.alarmName,NAME_SIZE);
 	alarm.alarmParameters.RTC_AlarmDateWeekDay = eeprom_read(index+OFFSET_DATEWEEKDAY);
-	alarm.alarmParameters.RTC_AlarmDateWeekDaySel = eeprom_readNBytes(index+OFFSET_DATEWEEKDAY_SEL,4);
-	alarm.alarmParameters.RTC_AlarmMask = eeprom_readNBytes(index+OFFSET_MASK,4);
+	alarm.alarmParameters.RTC_AlarmDateWeekDaySel = eeprom_read4Bytes(index+OFFSET_DATEWEEKDAY_SEL);
+	alarm.alarmParameters.RTC_AlarmMask = eeprom_read4Bytes(index+OFFSET_MASK);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_H12 = eeprom_read(index+OFFSET_H12);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_Hours = eeprom_read(index+OFFSET_HOURS);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_Minutes = eeprom_read(index+OFFSET_MINUTES);
@@ -172,8 +172,10 @@ bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2){
 	if(time1.RTC_H12 == RTC_H12_PM)time1.RTC_Hours+=12;
 	if(time2.RTC_H12 == RTC_H12_PM)time2.RTC_Hours+=12;
 	// compare time
-	if(time1.RTC_Hours <= time2.RTC_Hours)
-		if(time1.RTC_Minutes <= time2.RTC_Minutes)
+	if(time1.RTC_Hours < time2.RTC_Hours)return true;
+	else if(time1.RTC_Hours == time2.RTC_Hours)
+		if(time1.RTC_Minutes < time2.RTC_Minutes)return true;
+		else if(time1.RTC_Minutes == time2.RTC_Minutes)
 			if(time1.RTC_Seconds <= time2.RTC_Seconds)
 				return true;
 			else return false;
@@ -189,8 +191,10 @@ bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2){
  */
 bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2){
 	// compare time
-	if(date1.RTC_Year <= date2.RTC_Year)
-		if(date1.RTC_Month <= date2.RTC_Month)
+	if(date1.RTC_Year < date2.RTC_Year)return true;
+	else if(date1.RTC_Year == date2.RTC_Year)
+		if(date1.RTC_Month < date2.RTC_Month)return true;
+		else if(date1.RTC_Month == date2.RTC_Month)
 			if(date1.RTC_Date <= date2.RTC_Date)
 				return true;
 			else return false;
@@ -206,7 +210,8 @@ bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2){
  * @retval	uint32_t representing the time
  */
 bool ClockManagement_isAlarmBefore(Alarm_Definition alarm1, Alarm_Definition alarm2){
-	if(alarm1.alarmParameters.RTC_AlarmDateWeekDay <= alarm2.alarmParameters.RTC_AlarmDateWeekDay)
+	if(alarm1.alarmParameters.RTC_AlarmDateWeekDay < alarm2.alarmParameters.RTC_AlarmDateWeekDay)return true;
+	else if(alarm1.alarmParameters.RTC_AlarmDateWeekDay == alarm2.alarmParameters.RTC_AlarmDateWeekDay)
 		if(ClockManagement_isTimeBefore(alarm1.alarmParameters.RTC_AlarmTime, alarm1.alarmParameters.RTC_AlarmTime))
 				return true;
 		else return false;
