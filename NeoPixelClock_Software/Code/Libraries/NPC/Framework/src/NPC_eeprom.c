@@ -288,13 +288,10 @@ uint32_t eeprom_read32Bytes(uint16_t baseAddress){
 /**
  *
  */
-
-uint8_t * eeprom_readNBytes(uint16_t baseAddress, uint16_t N){
-	uint8_t * retval = malloc(N);
+void eeprom_readNBytes(uint16_t baseAddress,uint8_t *data, uint16_t N){
 	int i;
 	for(i=0; i<N; ++i)
-		retval[i]=eeprom_read(baseAddress+i);
-	return retval;
+		data[i] =eeprom_read(baseAddress+i);
 }
 /**
  * @}

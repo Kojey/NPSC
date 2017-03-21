@@ -81,7 +81,7 @@ uint8_t eeprom_read(uint16_t address);
 ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data);
 uint32_t eeprom_read32Bytes(uint16_t baseAddress);
 ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N);
-uint8_t * eeprom_readNBytes(uint16_t baseAddress, uint16_t N);
+void eeprom_readNBytes(uint16_t baseAddress,uint8_t *data, uint16_t N);
 void eeprom_clear(void);
 /**
  * @}
