@@ -102,10 +102,10 @@ ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
  */
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
 	Alarm_Definition alarm;
-	alarm.alarmName = eeprom_readNBytes(index+OFFSET_NAME,NAME_SIZE);
+	eeprom_readNBytes(index+OFFSET_NAME,(uint8_t *)alarm.alarmName,NAME_SIZE);
 	alarm.alarmParameters.RTC_AlarmDateWeekDay = eeprom_read(index+OFFSET_DATEWEEKDAY);
-	alarm.alarmParameters.RTC_AlarmDateWeekDaySel = eeprom_readNBytes(index+OFFSET_DATEWEEKDAY_SEL,4);
-	alarm.alarmParameters.RTC_AlarmMask = eeprom_readNBytes(index+OFFSET_MASK,4);
+	alarm.alarmParameters.RTC_AlarmDateWeekDaySel = eeprom_read4Bytes(index+OFFSET_DATEWEEKDAY_SEL);
+	alarm.alarmParameters.RTC_AlarmMask = eeprom_read4Bytes(index+OFFSET_MASK);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_H12 = eeprom_read(index+OFFSET_H12);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_Hours = eeprom_read(index+OFFSET_HOURS);
 	alarm.alarmParameters.RTC_AlarmTime.RTC_Minutes = eeprom_read(index+OFFSET_MINUTES);

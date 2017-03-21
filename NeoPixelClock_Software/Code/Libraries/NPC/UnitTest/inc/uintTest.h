@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    unitTest.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
+  * @date    21-March-2017
   * @brief   This file contains all the configuration prototypes used by the
-  * 			bluetooth firmware
+  * 			unit testing
   ******************************************************************************
   * @attention
   *
@@ -15,18 +15,19 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_NPC_BLUETOOTH_H_
-#define NPC_INC_NPC_BLUETOOTH_H_
+#ifndef NPC_UNITTEST_INC_UINTTEST_H_
+#define NPC_UNITTEST_INC_UINTTEST_H_
 
 /* Includes ------------------------------------------------------------------*/
+#include "../../Framework/inc/NPC_utils.h"
 
 /** @addtogroup NPC
   * @{
   */
-/** @addtogroup Module
+/** @addtogroup UnitTest
  *  @
  */
-/** @addtogroup Sub-Module
+/** @addtogroup unitTest
   * @{
   */
 
@@ -35,15 +36,22 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/*  Module 1 ******************************************************************/
-/**	@defgroup Transmission Transmission functions
+/* Assert ******************************************************************/
+/**	@defgroup unitTest_Assert
  * 	@{
  */
+bool assertTrue(bool condition);
+bool assertFalse(bool condition);
+bool assertEqual(int a, int b);
+bool assertGreater(int a, int b);
+bool assertLess(int a, int b);
+bool assertGreaterOrEqual(int a, int b);
+bool assertLessOrEqual(int a, int b);
 /**
  * @}
  */
 
-#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
+#endif /* NPC_UNITTEST_INC_UINTTEST_H_ */
 
 /**
  * 	@}

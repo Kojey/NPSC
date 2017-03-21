@@ -18,8 +18,10 @@
 /** @addtogroup NPC
   * @{
   */
-
-/** @defgroup module
+/** @addtogroup Module
+ *  @{
+ */
+/** @defgroup Sub-Module
   * @brief 
   * @{
   */
@@ -52,7 +54,9 @@
 /**
  * @}
  */
-
+/**
+ * @}
+ */
 /**
  * @}
  */
