@@ -73,12 +73,12 @@
   * @{
   */
 #define CLOCK_WeekDay					(uint8_t) (clock_getDate() >> 24)
-#define CLOCK_Month						(uint8_t) (clock_getDate() >> 16)
-#define CLOCK_date						(uint8_t) (clock_getDate() >> 8)
+#define CLOCK_Date						(uint8_t) (clock_getDate() >> 16)
+#define CLOCK_Month						(uint8_t) (clock_getDate() >> 8)
 #define CLOCK_Year						(uint8_t) clock_getDate()
 #define CLOCK_Hours						(uint8_t) (clock_getTime() >> 24)
 #define CLOCK_Minutes					(uint8_t) (clock_getTime() >> 16)
-#define CLOCK_seconds					(uint8_t) (clock_getTime() >> 8)
+#define CLOCK_Seconds					(uint8_t) (clock_getTime() >> 8)
 #define CLOCK_Format					(uint8_t) clock_getTime()
 /**
  * @}

@@ -55,9 +55,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-RTC_TimeTypeDef RTC_TimeStruct;
 RTC_InitTypeDef RTC_InitStruct;
-RTC_DateTypeDef RTC_DateStrcut;
 RTC_AlarmTypeDef RTC_AlarmStruct;
 EXTI_InitTypeDef EXTI_InitStruct;
 
@@ -128,7 +126,7 @@ void clock_init(void){
  *          	- ERROR: RTC Shift registers are not configured
  */
 ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year){
-
+	RTC_DateTypeDef RTC_DateStrcut;
 	RTC_DateStrcut.RTC_Date = date;
 	RTC_DateStrcut.RTC_Month = month;
 	RTC_DateStrcut.RTC_WeekDay = weekDay;
@@ -145,7 +143,7 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
  *          	- ERROR: RTC Shift registers are not configured
  */
 ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t second){
-
+	RTC_TimeTypeDef RTC_TimeStruct;
 	RTC_TimeStruct.RTC_H12 = am_pm;
 	RTC_TimeStruct.RTC_Hours = hours;
 	RTC_TimeStruct.RTC_Minutes = minutes;
@@ -160,6 +158,7 @@ ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t
  * @retval	An uint32_t containing the weekDay as its MB3, date : MB2, month : MB1, year : MB0
  */
 uint32_t clock_getDate(void){
+	RTC_DateTypeDef RTC_DateStrcut;
 	RTC_GetDate(RTC_Format_BIN,&RTC_DateStrcut);
 	uint32_t weekDay = RTC_DateStrcut.RTC_WeekDay << 24;
 	uint32_t date = RTC_DateStrcut.RTC_Date<< 16;
@@ -174,6 +173,7 @@ uint32_t clock_getDate(void){
  * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
  */
 uint32_t clock_getTime(void){
+	RTC_TimeTypeDef RTC_TimeStruct;
 	RTC_GetTime(RTC_Format_BIN,&RTC_TimeStruct);
 	uint32_t hours = RTC_TimeStruct.RTC_Hours << 24;
 	uint32_t minutes = RTC_TimeStruct.RTC_Minutes << 16;
@@ -245,6 +245,7 @@ void clock_setAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t second
 
 	RTC_AlarmCmd(RTC_Alarm_A,DISABLE); // Reset alarm A
 
+	RTC_AlarmTypeDef RTC_AlarmStruct;
 	/* Update Alarm Structure */
 	RTC_AlarmStruct.RTC_AlarmTime.RTC_Hours = hours;
 	RTC_AlarmStruct.RTC_AlarmTime.RTC_Minutes = minutes;
