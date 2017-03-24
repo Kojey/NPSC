@@ -56,13 +56,13 @@
  */
 ErrorStatus ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def, uint16_t address){
 	return (ErrorStatus) (eeprom_writeNBytes(address+OFFSET_NAME,(uint8_t *)(Alarm_Def->alarmName),NAME_SIZE) \
-			|| eeprom_write(address+OFFSET_DATEWEEKDAY,Alarm_Def->alarmParameters.RTC_AlarmDateWeekDay)\
-			|| eeprom_writeNBytes(address+OFFSET_DATEWEEKDAY_SEL,(uint8_t *)(Alarm_Def->alarmParameters.RTC_AlarmDateWeekDaySel),4)\
-			|| eeprom_writeNBytes(address+OFFSET_MASK,(uint8_t *)(Alarm_Def->alarmParameters.RTC_AlarmMask),4)\
-			|| eeprom_write(address+OFFSET_H12,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_H12)\
-			|| eeprom_write(address+OFFSET_HOURS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Hours)\
-			|| eeprom_write(address+OFFSET_MINUTES,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Minutes)\
-			|| eeprom_write(address+OFFSET_SECONDS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Seconds));
+			&& eeprom_write(address+OFFSET_DATEWEEKDAY,Alarm_Def->alarmParameters.RTC_AlarmDateWeekDay)\
+			&& eeprom_write4Bytes(address+OFFSET_DATEWEEKDAY_SEL,(uint8_t *)(& Alarm_Def->alarmParameters.RTC_AlarmDateWeekDaySel))\
+			&& eeprom_write4Bytes(address+OFFSET_MASK,(uint8_t *)(& Alarm_Def->alarmParameters.RTC_AlarmMask))\
+			&& eeprom_write(address+OFFSET_H12,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_H12)\
+			&& eeprom_write(address+OFFSET_HOURS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Hours)\
+			&& eeprom_write(address+OFFSET_MINUTES,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Minutes)\
+			&& eeprom_write(address+OFFSET_SECONDS,Alarm_Def->alarmParameters.RTC_AlarmTime.RTC_Seconds));
 }
 
 /**
@@ -73,10 +73,10 @@ ErrorStatus ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def, uint16_t add
  * @retval	ErrorStatus
  */
 ErrorStatus ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
-	return (ErrorStatus)(eeprom_write(TIME_ADDRESS, Time_Def->RTC_H12)\
-			|| eeprom_write(TIME_ADDRESS+1, Time_Def->RTC_Hours)\
-			|| eeprom_write(TIME_ADDRESS+2, Time_Def->RTC_Minutes)\
-			|| eeprom_write(TIME_ADDRESS+3, Time_Def->RTC_Seconds));
+	return (ErrorStatus)(eeprom_write(TIME_BASE_ADDRESS, Time_Def->RTC_H12)\
+			&& eeprom_write(TIME_BASE_ADDRESS+0x01, Time_Def->RTC_Hours)\
+			&& eeprom_write(TIME_BASE_ADDRESS+0x02, Time_Def->RTC_Minutes)\
+			&& eeprom_write(TIME_BASE_ADDRESS+0x03, Time_Def->RTC_Seconds));
 }
 
 /**
@@ -87,10 +87,10 @@ ErrorStatus ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def){
  * @retval	ErrorStatus
  */
 ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def){
-	return (ErrorStatus) (eeprom_write(DATE_ADDRESS, Date_Def->RTC_Date)\
-			|| eeprom_write(DATE_ADDRESS+1, Date_Def->RTC_Month)\
-			|| eeprom_write(DATE_ADDRESS+2, Date_Def->RTC_WeekDay)\
-			|| eeprom_write(DATE_ADDRESS+3, Date_Def->RTC_Year));
+	return (ErrorStatus) (eeprom_write(DATE_BASE_ADDRESS, Date_Def->RTC_Date)\
+			&& eeprom_write(DATE_BASE_ADDRESS+1, Date_Def->RTC_Month)\
+			&& eeprom_write(DATE_BASE_ADDRESS+2, Date_Def->RTC_WeekDay)\
+			&& eeprom_write(DATE_BASE_ADDRESS+3, Date_Def->RTC_Year));
 }
 
 /**
@@ -117,15 +117,15 @@ Alarm_Definition ClockManagement_loadAlarm(uint16_t index){
  * @brief	Load the time settings from eeprom
  * @note	Load H12, Hours, Minutes, and Seconds in
  * 				that order
- * @param 	index: the index in memory of the time
+ * @param 	None
  * @retval	RTC_TimeTypeDef
  */
-RTC_TimeTypeDef ClockManagement_loadTime(uint16_t index){
+RTC_TimeTypeDef ClockManagement_loadTime(void){
 	RTC_TimeTypeDef time;
-	time.RTC_H12 = eeprom_read(TIME_ADDRESS);
-	time.RTC_Hours = eeprom_read(TIME_ADDRESS+1);
-	time.RTC_Minutes = eeprom_read(TIME_ADDRESS+2);
-	time.RTC_Seconds = eeprom_read(TIME_ADDRESS+3);
+	time.RTC_H12 = eeprom_read(TIME_BASE_ADDRESS);
+	time.RTC_Hours = eeprom_read(TIME_BASE_ADDRESS+0x01);
+	time.RTC_Minutes = eeprom_read(TIME_BASE_ADDRESS+0x02);
+	time.RTC_Seconds = eeprom_read(TIME_BASE_ADDRESS+0x03);
 	return time;
 }
 
@@ -133,15 +133,15 @@ RTC_TimeTypeDef ClockManagement_loadTime(uint16_t index){
  * @brief	Load the date settings from eeprom
  * @note	Load Date, Month, WeekDay, and Year in
  * 				that order
- * @param 	index: the index in memory of the date
+ * @param 	None
  * @retval	RTC_DateTypeDef
  */
-RTC_DateTypeDef ClockManagement_loadDate(uint16_t index){
+RTC_DateTypeDef ClockManagement_loadDate(void){
 	RTC_DateTypeDef date;
-	date.RTC_Date = eeprom_read(DATE_ADDRESS);
-	date.RTC_Month = eeprom_read(DATE_ADDRESS+1);
-	date.RTC_WeekDay = eeprom_read(DATE_ADDRESS+2);
-	date.RTC_Year = eeprom_read(DATE_ADDRESS+3);
+	date.RTC_Date = eeprom_read(DATE_BASE_ADDRESS);
+	date.RTC_Month = eeprom_read(DATE_BASE_ADDRESS+1);
+	date.RTC_WeekDay = eeprom_read(DATE_BASE_ADDRESS+2);
+	date.RTC_Year = eeprom_read(DATE_BASE_ADDRESS+3);
 	return date;
 }
 
@@ -167,16 +167,16 @@ RTC_DateTypeDef ClockManagement_loadDate(uint16_t index){
  * @param	is time1 before time2?
  * @retval	bool
  */
-bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2){
+bool ClockManagement_isTimeBefore(RTC_TimeTypeDef * time1, RTC_TimeTypeDef * time2){
 	// convert to 24h format
-	if(time1.RTC_H12 == RTC_H12_PM)time1.RTC_Hours+=12;
-	if(time2.RTC_H12 == RTC_H12_PM)time2.RTC_Hours+=12;
+	if(time1->RTC_H12 == RTC_H12_PM)time1->RTC_Hours+=12;
+	if(time2->RTC_H12 == RTC_H12_PM)time2->RTC_Hours+=12;
 	// compare time
-	if(time1.RTC_Hours < time2.RTC_Hours)return true;
-	else if(time1.RTC_Hours == time2.RTC_Hours)
-		if(time1.RTC_Minutes < time2.RTC_Minutes)return true;
-		else if(time1.RTC_Minutes == time2.RTC_Minutes)
-			if(time1.RTC_Seconds <= time2.RTC_Seconds)
+	if(time1->RTC_Hours < time2->RTC_Hours)return true;
+	else if(time1->RTC_Hours == time2->RTC_Hours)
+		if(time1->RTC_Minutes < time2->RTC_Minutes)return true;
+		else if(time1->RTC_Minutes == time2->RTC_Minutes)
+			if(time1->RTC_Seconds <= time2->RTC_Seconds)
 				return true;
 			else return false;
 		else return false;
@@ -189,13 +189,13 @@ bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2){
  * @param	is date1 before date2?
  * @retval	bool
  */
-bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2){
+bool ClockManagement_isDateBefore(RTC_DateTypeDef * date1, RTC_DateTypeDef * date2){
 	// compare time
-	if(date1.RTC_Year < date2.RTC_Year)return true;
-	else if(date1.RTC_Year == date2.RTC_Year)
-		if(date1.RTC_Month < date2.RTC_Month)return true;
-		else if(date1.RTC_Month == date2.RTC_Month)
-			if(date1.RTC_Date <= date2.RTC_Date)
+	if(date1->RTC_Year < date2->RTC_Year)return true;
+	else if(date1->RTC_Year == date2->RTC_Year)
+		if(date1->RTC_Month < date2->RTC_Month)return true;
+		else if(date1->RTC_Month == date2->RTC_Month)
+			if(date1->RTC_Date <= date2->RTC_Date)
 				return true;
 			else return false;
 		else return false;
@@ -209,10 +209,10 @@ bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2){
  * @param	is alarm1 before alarm2?
  * @retval	uint32_t representing the time
  */
-bool ClockManagement_isAlarmBefore(Alarm_Definition alarm1, Alarm_Definition alarm2){
-	if(alarm1.alarmParameters.RTC_AlarmDateWeekDay < alarm2.alarmParameters.RTC_AlarmDateWeekDay)return true;
-	else if(alarm1.alarmParameters.RTC_AlarmDateWeekDay == alarm2.alarmParameters.RTC_AlarmDateWeekDay)
-		if(ClockManagement_isTimeBefore(alarm1.alarmParameters.RTC_AlarmTime, alarm1.alarmParameters.RTC_AlarmTime))
+bool ClockManagement_isAlarmBefore(Alarm_Definition * alarm1, Alarm_Definition * alarm2){
+	if(alarm1->alarmParameters.RTC_AlarmDateWeekDay < alarm2->alarmParameters.RTC_AlarmDateWeekDay)return true;
+	else if(alarm1->alarmParameters.RTC_AlarmDateWeekDay == alarm2->alarmParameters.RTC_AlarmDateWeekDay)
+		if(ClockManagement_isTimeBefore(&alarm1->alarmParameters.RTC_AlarmTime, &alarm1->alarmParameters.RTC_AlarmTime))
 				return true;
 		else return false;
 	else return false;

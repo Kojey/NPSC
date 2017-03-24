@@ -38,9 +38,9 @@
  * @defgroup Clock_management_address
  * @{
  */
-#define TIME_ADDRESS		0x00
-#define DATE_ADDRESS		0x04
-#define ALARM_ADDRESS		0x08
+#define TIME_BASE_ADDRESS		0x00
+#define DATE_BASE_ADDRESS		0x04
+#define ALARM_BASE_ADDRESS		0x08
 /**
  * @}
  */
@@ -102,8 +102,8 @@ ErrorStatus ClockManagement_saveAlarm(Alarm_Definition * Alarm_Def, uint16_t add
 ErrorStatus ClockManagement_saveTime(RTC_TimeTypeDef * Time_Def);
 ErrorStatus ClockManagement_saveDate(RTC_DateTypeDef * Date_Def);
 Alarm_Definition ClockManagement_loadAlarm(uint16_t index);
-RTC_TimeTypeDef ClockManagement_loadTime(uint16_t index);
-RTC_DateTypeDef ClockManagement_loadDate(uint16_t index);
+RTC_TimeTypeDef ClockManagement_loadTime(void);
+RTC_DateTypeDef ClockManagement_loadDate(void);
 /**
  * @}
  */
@@ -112,9 +112,9 @@ RTC_DateTypeDef ClockManagement_loadDate(uint16_t index);
 /**	@defgroup Clock_Management_AlarmComp
  * 	@{
  */
-bool ClockManagement_isTimeBefore(RTC_TimeTypeDef time1, RTC_TimeTypeDef time2);
-bool ClockManagement_isDateBefore(RTC_DateTypeDef date1, RTC_DateTypeDef date2);
-bool ClockManagement_isAlarmBefore(Alarm_Definition alarm1, Alarm_Definition alarm2);
+bool ClockManagement_isTimeBefore(RTC_TimeTypeDef * time1, RTC_TimeTypeDef * time2);
+bool ClockManagement_isDateBefore(RTC_DateTypeDef * date1, RTC_DateTypeDef * date2);
+bool ClockManagement_isAlarmBefore(Alarm_Definition * alarm1, Alarm_Definition * alarm2);
 /**
  * @}
  */

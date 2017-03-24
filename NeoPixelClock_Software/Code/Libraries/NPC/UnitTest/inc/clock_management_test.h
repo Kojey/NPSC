@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    unitTest.h
+  * @file    NPC_bluetooth.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    21-March-2017
+  * @date    01-March-2017
   * @brief   This file contains all the configuration prototypes used by the
-  * 			unit testing
+  * 			bluetooth firmware
   ******************************************************************************
   * @attention
   *
@@ -15,11 +15,12 @@
   ******************************************************************************
   */
 
-#ifndef NPC_UNITTEST_INC_UINTTEST_H_
-#define NPC_UNITTEST_INC_UINTTEST_H_
+#ifndef NPC_UNITTEST_INC_CLOCK_MANAGEMENT_TEST_H_
+#define NPC_UNITTEST_INC_CLOCK_MANAGEMENT_TEST_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "../../Framework/inc/NPC_utils.h"
+#include "unitTest.h"
+#include "../../Application/inc/clock_management.h"
 
 /** @addtogroup NPC
   * @{
@@ -27,7 +28,7 @@
 /** @addtogroup UnitTest
  *  @
  */
-/** @addtogroup unitTest
+/** @defgroup clock_management_test
   * @{
   */
 
@@ -36,22 +37,37 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/* Assert ******************************************************************/
-/**	@defgroup unitTest_Assert
- * 	@{
- */
-bool assertTrue(bool condition);
-bool assertFalse(bool condition);
-bool assertEqual(int a, int b);
-bool assertGreater(int a, int b);
-bool assertLess(int a, int b);
-bool assertGreaterOrEqual(int a, int b);
-bool assertLessOrEqual(int a, int b);
+/* Save and Load unit test ****************************************************/
+/**	@defgroup clock_management_test_save_lod
+ * 	@brief	Save and Load unit test
+ *  @{
+  */
+
+bool test_ClockMangement_save_and_load_time(void);
+bool test_ClockMangement_save_and_load_date(void);
+bool test_ClockMangement_save_and_load_alarm(void);
+
 /**
  * @}
  */
 
-#endif /* NPC_UNITTEST_INC_UINTTEST_H_ */
+
+/* Comparison unit test ****************************************************/
+/**	@defgroup clock_management_test_comparison
+ * 	@brief	comparison unit test
+ *  @{
+  */
+
+bool test_ClockMangement_time_comparison(void);
+bool test_ClockMangement_date_comparison(void);
+bool test_ClockMangement_alarm_comparison(void);
+
+
+/**
+ * @}
+ */
+
+#endif /* NPC_UNITTEST_INC_CLOCK_MANAGEMENT_TEST_H_ */
 
 /**
  * 	@}

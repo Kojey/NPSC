@@ -279,6 +279,8 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 ErrorStatus eeprom_write4Bytes(uint16_t baseAddress, uint8_t *data){
 	if(baseAddress+4 <= EEPROM_SIZE){
 		int i;
+		int data0,data1,data2,data3;
+		data0=data[0];data1=data[1];data2=data[2];data3=data[3];
 		for(i=0; i<4; ++i)		// write each data
 			eeprom_write(baseAddress+i,data[i]);
 		return SUCCESS;
@@ -298,7 +300,7 @@ uint32_t eeprom_read4Bytes(uint16_t baseAddress){
 	int i;
 	for(i=0; i<4; ++i){
 		uint8_t data = eeprom_read(baseAddress+i);
-		retval |= data <<(3-i)*8; // read most significant byte fisrt
+		retval |= data <<i*8; // little endian
 	}
 	return retval;
 }
@@ -306,10 +308,10 @@ uint32_t eeprom_read4Bytes(uint16_t baseAddress){
 /**
  *
  */
-void eeprom_readNBytes(uint16_t baseAddress,uint8_t *data, uint16_t N){
+void eeprom_readNBytes(uint16_t baseAddress,uint8_t * data, uint16_t N){
 	int i;
 	for(i=0; i<N; ++i)
-		data[i] =eeprom_read(baseAddress+i);
+		*(data+i) =eeprom_read(baseAddress+i);
 }
 /**
  * @}

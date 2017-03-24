@@ -18,8 +18,8 @@
 #define NPC_UNITTEST_INC_EEPROM_TEST_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "uintTest.h"
 #include "../../Framework/inc/NPC_eeprom.h"
+#include "unitTest.h"
 
 /** @addtogroup NPC
   * @{

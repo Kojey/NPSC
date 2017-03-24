@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../inc/uintTest.h"
+#include "../inc/unitTest.h"
 
 /** @addtogroup NPC
   * @{

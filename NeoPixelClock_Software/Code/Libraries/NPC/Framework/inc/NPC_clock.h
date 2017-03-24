@@ -62,8 +62,8 @@
  * @brief AM or PM
  * @{
  */
-#define CLOCK_AM						RTC_H12_AM
-#define CLOCK_PM						RTC_H12_PM
+#define AM						RTC_H12_AM
+#define PM						RTC_H12_PM
 /**
  * @}
  */

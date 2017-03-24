@@ -1,10 +1,11 @@
 /**
   ******************************************************************************
-  * @file    rtc_test.h
+  * @file    unitTest.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    24-March-2017
-  * @brief   This file contains template of unit tests for the rtc
+  * @date    21-March-2017
+  * @brief   This file contains all the configuration prototypes used by the
+  * 			unit testing
   ******************************************************************************
   * @attention
   *
@@ -14,13 +15,11 @@
   ******************************************************************************
   */
 
-#ifndef NPC_UNITTEST_INC_TEST_RTC_H_
-#define NPC_UNITTEST_INC_TEST_RTC_H_
+#ifndef NPC_UNITTEST_INC_UNITTEST_H_
+#define NPC_UNITTEST_INC_UNITTEST_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "../../Framework/inc/NPC_clock.h"
-#include "unitTest.h"
-
+#include "../../Framework/inc/NPC_utils.h"
 
 /** @addtogroup NPC
   * @{
@@ -28,7 +27,7 @@
 /** @addtogroup UnitTest
  *  @
  */
-/** @defgroup rtc_test
+/** @addtogroup unitTest
   * @{
   */
 
@@ -37,11 +36,22 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-bool test_clock_date(void);
-bool test_clock_time(void);
-bool test_clock_alarm(void);
+/* Assert ******************************************************************/
+/**	@defgroup unitTest_Assert
+ * 	@{
+ */
+bool assertTrue(bool condition);
+bool assertFalse(bool condition);
+bool assertEqual(int a, int b);
+bool assertGreater(int a, int b);
+bool assertLess(int a, int b);
+bool assertGreaterOrEqual(int a, int b);
+bool assertLessOrEqual(int a, int b);
+/**
+ * @}
+ */
 
-#endif /* NPC_UNITTEST_INC_TEST_RTC_H_ */
+#endif /* NPC_UNITTEST_INC_UNITTEST_H_ */
 
 /**
  * 	@}
