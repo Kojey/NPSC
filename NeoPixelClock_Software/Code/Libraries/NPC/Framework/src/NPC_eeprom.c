@@ -271,6 +271,22 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 }
 
 /**
+ * @brief	Write 4 bytes to the eeprom
+ * @param	baseAddress: address of data
+ * @param	data:	data to be written
+ * @retval	ErrorStatus
+ */
+ErrorStatus eeprom_write4Bytes(uint16_t baseAddress, uint8_t *data){
+	if(baseAddress+4 <= EEPROM_SIZE){
+		int i;
+		for(i=0; i<4; ++i)		// write each data
+			eeprom_write(baseAddress+i,data[i]);
+		return SUCCESS;
+	}
+	else return ERROR;
+}
+
+/**
  * @brief	Read a 32byte from eeprom
  * @param	baseAddress
  * @retval 	uint32_t
@@ -280,8 +296,10 @@ uint32_t eeprom_read4Bytes(uint16_t baseAddress){
 	// TODO more error checking
 	uint32_t retval = 0;
 	int i;
-	for(i=0; i<4; ++i)
-		retval = eeprom_read(baseAddress+i)<<(3-i)*8; // read most significant byte fisrt
+	for(i=0; i<4; ++i){
+		uint8_t data = eeprom_read(baseAddress+i);
+		retval |= data <<(3-i)*8; // read most significant byte fisrt
+	}
 	return retval;
 }
 
