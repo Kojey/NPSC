@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    rtc_test.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
-  * @brief   This file contains all the configuration prototypes used by the
-  * 			bluetooth firmware
+  * @date    24-March-2017
+  * @brief   This file contains template of unit tests for the rtc
   ******************************************************************************
   * @attention
   *
@@ -15,18 +14,21 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_NPC_BLUETOOTH_H_
-#define NPC_INC_NPC_BLUETOOTH_H_
+#ifndef NPC_UNITTEST_INC_TEST_RTC_H_
+#define NPC_UNITTEST_INC_TEST_RTC_H_
 
 /* Includes ------------------------------------------------------------------*/
+#include "uintTest.h"
+#include "../../Framework/inc/NPC_clock.h"
+
 
 /** @addtogroup NPC
   * @{
   */
-/** @addtogroup Module
+/** @addtogroup UnitTest
  *  @
  */
-/** @defgroup Sub-Module
+/** @defgroup rtc_test
   * @{
   */
 
@@ -35,15 +37,11 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/*  Module 1 ******************************************************************/
-/**	@defgroup Transmission Transmission functions
- * 	@{
- */
-/**
- * @}
- */
+bool test_clock_date(void);
+bool test_clock_time(void);
+bool test_clock_alarm(void);
 
-#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
+#endif /* NPC_UNITTEST_INC_TEST_RTC_H_ */
 
 /**
  * 	@}

@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    Test_eeprom.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
-  * @brief   This file contains all the configuration prototypes used by the
-  * 			bluetooth firmware
+  * @date    23-March-2017
+  * @brief   This file contains template of unit tests for the eeprom
   ******************************************************************************
   * @attention
   *
@@ -15,18 +14,20 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_NPC_BLUETOOTH_H_
-#define NPC_INC_NPC_BLUETOOTH_H_
+#ifndef NPC_UNITTEST_INC_TEST_EEPROM_H_
+#define NPC_UNITTEST_INC_TEST_EEPROM_H_
 
 /* Includes ------------------------------------------------------------------*/
+#include "uintTest.h"
+#include "../../Framework/inc/NPC_eeprom.h"
 
 /** @addtogroup NPC
   * @{
   */
-/** @addtogroup Module
+/** @addtogroup UnitTest
  *  @
  */
-/** @defgroup Sub-Module
+/** @addtogroup eeprom_test
   * @{
   */
 
@@ -35,15 +36,10 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/*  Module 1 ******************************************************************/
-/**	@defgroup Transmission Transmission functions
- * 	@{
- */
-/**
- * @}
- */
-
-#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
+bool test_eeprom_write_read(void);
+bool test_eeprom_write4B_read4B(void);
+bool test_eeprom_writeNB_readNB(void);
+#endif /* NPC_UNITTEST_INC_TEST_EEPROM_H_ */
 
 /**
  * 	@}

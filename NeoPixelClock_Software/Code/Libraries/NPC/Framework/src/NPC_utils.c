@@ -57,7 +57,7 @@ uint32_t max(uint32_t a, uint32_t b, uint32_t c){
 void delay(uint32_t microseconds) {
   /* Hangs for specified number of microseconds. */
   volatile uint32_t counter = 0;
-  microseconds *= 3;
+  microseconds *= 4;
   for(; counter<microseconds; counter++);
 }
 
