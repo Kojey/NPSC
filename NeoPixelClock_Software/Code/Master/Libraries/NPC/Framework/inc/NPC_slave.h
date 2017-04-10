@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_UART_communication.h
+  * @file    NPC_slave.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    10-April-2017
-  * @brief   This file contains all the configuration prototypes to setup
-  * 			a UART communication
+  * @brief   This file contains all the configuration prototypes used by the
+  * 			slave microcontroller
   ******************************************************************************
   * @attention
   *
@@ -27,31 +27,50 @@
 /** @addtogroup Framework
   * @{
   */
-/** @addtogroup UART
+/** @addtogroup Slave
   * @{
   */
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
+/**
+ * @defgroup Slave_Constants
+ * @brief	define slave constant
+ * @{
+ */
+#define SLAVE_PERIPH_USARTX			RCC_APB1Periph_USART2
+#define SLAVE_PERIPH_GPIOX			RCC_AHB1Periph_GPIOA
+#define BLUETTOTH_GPIOX				GPIOA
+#define SLAVE_TX_PIN				GPIO_Pin_2
+#define SLAVE_RX_PIN				GPIO_Pin_3
+#define SLAVE_TX_PINSOURCE			GPIO_PinSource2
+#define SLAVE_RX_PINSOURCE			GPIO_PinSource3
+#define SLAVE_AF_USART				GPIO_AF_USART2
+#define SLAVE_USARTX				USART2
+#define SLAVE_USARTX_IRQ			USART2_IRQn
+#define SLAVE_BAUDRATE				9600
+/**
+ * @}
+ */
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/*  Function used to initialize the bluetooth device and handle transmission *****/
-/**	@defgroup UART_init
+/*  Function used to initialize the SLAVE device and handle transmission *****/
+/**	@defgroup SLAVE_Init
  * 	@{
  */
-void uart_init(void);
-void USART1_IRQHandler(void);
+void slave_init(void);
+void USART2_IRQHandler(void);
 /**
  * @}
  */
 
 /*	Function used to manage transmission between NPC and Phone Application*/
-/**	@defgroup Bluetooth_Trans
+/**	@defgroup SLAVE_Trans
  *  @{
  */
-void uart_send(uint8_t * data);
-uint8_t bluetooth_receive(void);
+void slave_send(uint8_t * data);
+uint8_t slave_receive(void);
 /**
  * @}
  */
