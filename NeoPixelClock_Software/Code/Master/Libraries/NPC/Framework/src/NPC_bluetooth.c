@@ -46,24 +46,24 @@
  */
 void bluetooth_init(void){
 	// Enable RCC for USART1, GPIOB
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1,ENABLE);
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB|RCC_AHB1Periph_GPIOD,ENABLE);
+	RCC_APB2PeriphClockCmd(BLUETOOTH_PERIPH_USARTX,ENABLE);
+	RCC_AHB1PeriphClockCmd(BLUETOOTH_PERIPH_GPIOX,ENABLE);
 
 	// GPIO Configuration
 	{
 		GPIO_InitTypeDef GPIO_InitStructure;
 
 		// Configure USART1 TX (PB6) as alternate function push-pull
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7;
+		GPIO_InitStructure.GPIO_Pin = BLUETOOTH_TX_PIN | BLUETOOTH_RX_PIN;
 		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
 		GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-		GPIO_Init(GPIOB,&GPIO_InitStructure);
+		GPIO_Init(BLUETTOTH_GPIOX, &GPIO_InitStructure);
 
-		GPIO_PinAFConfig(GPIOB,GPIO_PinSource6,GPIO_AF_USART1);
-		GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_USART1);
+		GPIO_PinAFConfig(BLUETTOTH_GPIOX, BLUETOOTH_TX_PINSOURCE, BLUETOOTH_AF_USART);
+		GPIO_PinAFConfig(BLUETTOTH_GPIOX, BLUETOOTH_RX_PINSOURCE, BLUETOOTH_AF_USART);
 
 	}
 
@@ -71,7 +71,7 @@ void bluetooth_init(void){
 	{
 		NVIC_InitTypeDef NVIC_InitStructure;
 
-		NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
+		NVIC_InitStructure.NVIC_IRQChannel = BLUETTOTH_USARTX_IRQ;
 		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
@@ -83,19 +83,19 @@ void bluetooth_init(void){
 	{
 		USART_InitTypeDef USART_InitStructure;
 
-		USART_InitStructure.USART_BaudRate = 9600;//38400;
+		USART_InitStructure.USART_BaudRate = BLUETOOTH_BAUDRATE;
 		USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 		USART_InitStructure.USART_StopBits = USART_StopBits_1;
 		USART_InitStructure.USART_Parity = USART_Parity_No;
 		USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 		USART_InitStructure.USART_Mode = USART_Mode_Tx|USART_Mode_Rx;
 
-		USART_Init(USART1,&USART_InitStructure);
+		USART_Init(BLUETOOTH_USARTX,&USART_InitStructure);
 
 		// Enable USART1 receive and transmission complete interrupts
-		USART_ITConfig(USART1,USART_IT_RXNE,ENABLE);
+		USART_ITConfig(BLUETOOTH_USARTX,USART_IT_RXNE,ENABLE);
 
-		USART_Cmd(USART1,ENABLE);
+		USART_Cmd(BLUETOOTH_USARTX,ENABLE);
 
 	}
 
@@ -163,8 +163,8 @@ void USART1_IRQHandler(void){
 void bluetooth_send(uint8_t * data){
 	uint32_t size = strlen((char *)data);
 	while(size--){
-		USART_SendData(USART1,(uint16_t)*data++);
-		while(USART_GetFlagStatus(USART1,USART_FLAG_TC)==RESET);
+		USART_SendData(BLUETOOTH_USARTX,(uint16_t)*data++);
+		while(USART_GetFlagStatus(BLUETOOTH_USARTX,USART_FLAG_TC)==RESET);
 	}
 }
 
@@ -174,7 +174,7 @@ void bluetooth_send(uint8_t * data){
  * @retval	An uint8_t byte of data
  */
 uint8_t bluetooth_receive(void){
-	return USART_ReceiveData(USART1);
+	return USART_ReceiveData(BLUETOOTH_USARTX);
 }
 
 /**

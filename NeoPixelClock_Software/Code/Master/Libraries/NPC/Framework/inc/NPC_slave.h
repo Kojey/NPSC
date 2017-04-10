@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    NPC_bluetooth.h
+  * @file    NPC_UART_communication.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
-  * @brief   This file contains all the configuration prototypes used by the
-  * 			bluetooth firmware
+  * @date    10-April-2017
+  * @brief   This file contains all the configuration prototypes to setup
+  * 			a UART communication
   ******************************************************************************
   * @attention
   *
@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPC_INC_NPC_BLUETOOTH_H_
-#define NPC_INC_NPC_BLUETOOTH_H_
+#ifndef NPC_INC_NPC_SLAVE_H_
+#define NPC_INC_NPC_SLAVE_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPC_utils.h"
@@ -27,39 +27,20 @@
 /** @addtogroup Framework
   * @{
   */
-/** @addtogroup Bluetooth
+/** @addtogroup UART
   * @{
   */
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
-/**
- * @defgroup BLUETOOTH_Constants
- * @brief	define bluetooth constant
- * @{
- */
-#define BLUETOOTH_PERIPH_USARTX			RCC_APB2Periph_USART1
-#define BLUETOOTH_PERIPH_GPIOX			RCC_AHB1Periph_GPIOB
-#define BLUETTOTH_GPIOX					GPIOB
-#define BLUETOOTH_TX_PIN				GPIO_Pin_6
-#define BLUETOOTH_RX_PIN				GPIO_Pin_7
-#define BLUETOOTH_TX_PINSOURCE			GPIO_PinSource6
-#define BLUETOOTH_RX_PINSOURCE			GPIO_PinSource7
-#define BLUETOOTH_AF_USART				GPIO_AF_USART1
-#define BLUETOOTH_USARTX				USART1
-#define BLUETTOTH_USARTX_IRQ			USART1_IRQn
-#define BLUETOOTH_BAUDRATE				9600
-/**
- * @}
- */
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /*  Function used to initialize the bluetooth device and handle transmission *****/
-/**	@defgroup Bluetooth_Init
+/**	@defgroup UART_init
  * 	@{
  */
-void bluetooth_init(void);
+void uart_init(void);
 void USART1_IRQHandler(void);
 /**
  * @}
@@ -69,13 +50,13 @@ void USART1_IRQHandler(void);
 /**	@defgroup Bluetooth_Trans
  *  @{
  */
-void bluetooth_send(uint8_t * data);
+void uart_send(uint8_t * data);
 uint8_t bluetooth_receive(void);
 /**
  * @}
  */
 
-#endif /* NPC_INC_NPC_BLUETOOTH_H_ */
+#endif /* NPC_INC_NPC_SLAVE_H_ */
 
 /**
  * 	@}

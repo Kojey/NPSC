@@ -279,8 +279,6 @@ ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 ErrorStatus eeprom_write4Bytes(uint16_t baseAddress, uint8_t *data){
 	if(baseAddress+4 <= EEPROM_SIZE){
 		int i;
-		int data0,data1,data2,data3;
-		data0=data[0];data1=data[1];data2=data[2];data3=data[3];
 		for(i=0; i<4; ++i)		// write each data
 			eeprom_write(baseAddress+i,data[i]);
 		return SUCCESS;
