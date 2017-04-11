@@ -60,10 +60,10 @@ void bluetooth_init(void){
 		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
 		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 
-		GPIO_Init(BLUETTOTH_GPIOX, &GPIO_InitStructure);
+		GPIO_Init(BLUETOOTH_GPIOX, &GPIO_InitStructure);
 
-		GPIO_PinAFConfig(BLUETTOTH_GPIOX, BLUETOOTH_TX_PINSOURCE, BLUETOOTH_AF_USART);
-		GPIO_PinAFConfig(BLUETTOTH_GPIOX, BLUETOOTH_RX_PINSOURCE, BLUETOOTH_AF_USART);
+		GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_TX_PINSOURCE, BLUETOOTH_AF_USART);
+		GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_RX_PINSOURCE, BLUETOOTH_AF_USART);
 
 	}
 
@@ -71,7 +71,7 @@ void bluetooth_init(void){
 	{
 		NVIC_InitTypeDef NVIC_InitStructure;
 
-		NVIC_InitStructure.NVIC_IRQChannel = BLUETTOTH_USARTX_IRQ;
+		NVIC_InitStructure.NVIC_IRQChannel = BLUETOOTH_USARTX_IRQ;
 		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
 		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
