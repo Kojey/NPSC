@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=VCC Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Member From Class: ClassName=ring Member=P1

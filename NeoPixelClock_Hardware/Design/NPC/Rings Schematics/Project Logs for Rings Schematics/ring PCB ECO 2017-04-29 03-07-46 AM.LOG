@@ -1,0 +1,14 @@
+Added Component: Designator=P1(MHDR1X4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=Din Pin=P1-3
+Added Pin To Net: NetName=Din Pin=U1-4
+Added Net: Name=Din
+Added Pin To Net: NetName=Dout Pin=P1-4
+Added Pin To Net: NetName=Dout Pin=U180-2
+Added Net: Name=Dout
+Added Member To Class: ClassName=ring Member=Component P1 MHDR1X4
