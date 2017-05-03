@@ -1,0 +1,7 @@
+<map id="UnitTest" name="UnitTest">
+<area shape="rect" id="node1" href="$group__eeprom__test.html" title="Eeprom_test" alt="" coords="257,5,353,32"/>
+<area shape="rect" id="node2" href="$group___n_p_c.html" title="NPC" alt="" coords="5,81,55,108"/>
+<area shape="rect" id="node4" href="$group__clock__management__test.html" title="Clock_management_test" alt="" coords="221,56,388,83"/>
+<area shape="rect" id="node5" href="$group__rtc__test.html" title="Rtc_test" alt="" coords="269,107,340,133"/>
+<area shape="rect" id="node6" href="$group__unit_test.html" title="UnitTest" alt="" coords="269,157,340,184"/>
+</map>

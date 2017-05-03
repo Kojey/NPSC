@@ -1,0 +1,4 @@
+<map id="eeprom_writeNBytes" name="eeprom_writeNBytes">
+<area shape="rect" id="node2" href="$group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="196,5,393,32"/>
+<area shape="rect" id="node3" href="$group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="221,57,368,98"/>
+</map>

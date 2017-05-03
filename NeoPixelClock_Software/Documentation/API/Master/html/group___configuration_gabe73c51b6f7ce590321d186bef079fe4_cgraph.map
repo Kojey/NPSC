@@ -1,0 +1,8 @@
+<map id="NPC_init" name="NPC_init">
+<area shape="rect" id="node2" href="$group___bluetooth___init.html#gaaa60810e0857e9e1e5b2cba80b8db3ff" title="Initialize the bluetooth and set baudrate to 9600. " alt="" coords="135,5,233,32"/>
+<area shape="rect" id="node3" href="$group___neo_pixel___init.html#gaac78468985e44a3e4d353ea9276b33bc" title="Initialise the neopixel. " alt="" coords="137,56,231,83"/>
+<area shape="rect" id="node5" href="$group___clock___init.html#ga78ab77b57cf2e00089f0a3a22508524c" title="Initialise the clock to 1Hz and setup peripherals for Alarm. " alt="" coords="145,107,223,133"/>
+<area shape="rect" id="node6" href="$group___eeprom___init.html#ga4ec7f9d780da432051aa74ec5892a94c" title="Initialise communication to the eeprom. " alt="" coords="139,157,229,184"/>
+<area shape="rect" id="node7" href="$group___temperature___init.html#ga7da890f6748bbeb05511fd20100cb6ef" title="Initialise the ADC. " alt="" coords="127,208,241,235"/>
+<area shape="rect" id="node4" href="$group___neo_pixel___state.html#ga79e34feddcfb2c45ae218166c84bdff4" title="Initialise the LEDbuffer. " alt="" coords="289,56,408,83"/>
+</map>

@@ -1,0 +1,16 @@
+K 10
+svn:author
+V 4
+user
+K 8
+svn:date
+V 27
+2017-04-28T18:25:43.903320Z
+K 7
+svn:log
+V 72
+Update PCB 
+
+Move Cap to bottom layer
+Add Jumpers for every 15 neopixels
+END

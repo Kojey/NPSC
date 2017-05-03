@@ -1,0 +1,9 @@
+<map id="delay" name="delay">
+<area shape="rect" id="node2" href="$group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="131,81,229,108"/>
+<area shape="rect" id="node7" href="$group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="543,131,687,173"/>
+<area shape="rect" id="node8" href="$group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="107,209,253,250"/>
+<area shape="rect" id="node3" href="$group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62" title="Load the time settings from eeprom. " alt="" coords="301,5,491,32"/>
+<area shape="rect" id="node4" href="$group___clock___management___eeprom.html#ga3980560a99803ef94287127ff3157f91" title="Load the date settings from eeprom. " alt="" coords="302,56,490,83"/>
+<area shape="rect" id="node6" href="$group___eeprom___trans.html#ga9a323370ddd02d91c6118f104c015b43" title="Read a 32byte from eeprom. " alt="" coords="327,107,465,133"/>
+<area shape="rect" id="node5" href="$group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="539,49,691,90"/>
+</map>

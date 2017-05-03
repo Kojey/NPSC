@@ -1,0 +1,6 @@
+<map id="assertEqual" name="assertEqual">
+<area shape="rect" id="node2" href="$group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="144,5,296,47"/>
+<area shape="rect" id="node3" href="$group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="148,71,292,112"/>
+<area shape="rect" id="node4" href="$group__rtc__test.html#gab7d696e67a3639eb9024bf75d16eb0af" title="Unit test for date save and load. " alt="" coords="163,137,277,163"/>
+<area shape="rect" id="node5" href="$group__rtc__test.html#gaad71d331736202cb1f4e4611adc4017e" title="Unit test for time save and load. " alt="" coords="163,187,277,214"/>
+</map>
