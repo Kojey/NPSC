@@ -1,2 +1,6 @@
-.altium/
-Design/NPC/
+# *.js
+# *.md5
+# *.png
+# *.html
+# *.Debug/
+# *.map
