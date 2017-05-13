@@ -70,9 +70,9 @@ int main(void)
   bool date_comp = test_ClockMangement_date_comparison();
   bool alarm_comp = test_ClockMangement_alarm_comparison();
  */
-  bool time_save_load = test_ClockMangement_save_and_load_time();
-  bool date_save_load = test_ClockMangement_save_and_load_date();
-  bool alarm_save_load = test_ClockMangement_save_and_load_alarm();
+  //bool time_save_load = test_ClockMangement_save_and_load_time();
+  //bool date_save_load = test_ClockMangement_save_and_load_date();
+  //bool alarm_save_load = test_ClockMangement_save_and_load_alarm();
   neopixel_setBrightness(100);
   while (1)
   {
