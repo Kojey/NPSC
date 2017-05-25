@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VCC Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=Din Pin=P1-3
+Change Component DesignItemId : Designator=P1 Old DesignItemId=MHDR1X3 New DesignItemId=pico-clasp-3
+Change Component Comment : Designator=P1 Old Comment= New Comment=pico-clasp-3pins
+Change Component Description : Designator=P1 Old Description=Header, 3-Pin New Description=3 pins pico clasp
+Change Component Library : Designator=P1 Old Library=Miscellaneous Connectors.IntLib New Library=pico-clasp-3.SchLib
+Change component parameters: Designator = "P1"; Footprint = "3 pins pico-clasp"; UniqueID = "\NMUSBPXK"
+Change component parameters. Clean all parameters for all variants
