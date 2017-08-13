@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=VCC Pin=P1-1
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=Din Pin=P1-3
+Change Component Footprint: Designator=P1 Old Footprint=MHDR1X3 New Footprint=3 pins pico-clasp
+Change Component Comment : Designator=P1 Old Comment= New Comment=pico-clasp-3pins
+Added Pin To Net: NetName=Din Pin=P1-
+Added Pin To Net: NetName=Din Pin=P1-
+Added Pin To Net: NetName=Din Pin=P1-
+Added Pin To Net: NetName=GND Pin=P1-
+Added Pin To Net: NetName=GND Pin=P1-
+Added Pin To Net: NetName=GND Pin=P1-
+Added Pin To Net: NetName=VCC Pin=P1-
+Added Pin To Net: NetName=VCC Pin=P1-
+Added Pin To Net: NetName=VCC Pin=P1-
