@@ -1,7 +1,0 @@
-<map id="NPC" name="NPC">
-<area shape="rect" id="node1" href="$group___framework.html" title="Framework" alt="" coords="143,5,229,32"/>
-<area shape="rect" id="node3" href="$group___unit_test.html" title="UnitTest" alt="" coords="151,56,221,83"/>
-<area shape="rect" id="node4" href="$group__clock__management__test.html" title="Clock_management_test" alt="" coords="103,107,269,133"/>
-<area shape="rect" id="node5" href="$group___application.html" title="Application" alt="" coords="143,157,229,184"/>
-<area shape="rect" id="node6" href="$group__rtc__test.html" title="Rtc_test" alt="" coords="151,208,221,235"/>
-</map>

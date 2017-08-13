@@ -1,8 +1,0 @@
-<map id="test_ClockMangement_save_and_load_date" name="test_ClockMangement_save_and_load_date">
-<area shape="rect" id="node2" href="$group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="205,5,396,32"/>
-<area shape="rect" id="node4" href="$group___clock___management___eeprom.html#ga3980560a99803ef94287127ff3157f91" title="Load the date settings from eeprom. " alt="" coords="207,56,395,83"/>
-<area shape="rect" id="node7" href="$group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="255,107,346,133"/>
-<area shape="rect" id="node3" href="$group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="444,5,543,32"/>
-<area shape="rect" id="node5" href="$group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="445,56,542,83"/>
-<area shape="rect" id="node6" href="$group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="591,56,644,83"/>
-</map>

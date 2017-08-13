@@ -1,6 +1,0 @@
-<map id="eeprom_write" name="eeprom_write">
-<area shape="rect" id="node2" href="$group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="152,5,343,32"/>
-<area shape="rect" id="node3" href="$group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="152,56,343,83"/>
-<area shape="rect" id="node5" href="$group___eeprom___trans.html#ga7964a5a66da1c4a59a42309a93752217" title="Clear eeprom data. " alt="" coords="197,107,297,133"/>
-<area shape="rect" id="node4" href="$group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="391,49,543,90"/>
-</map>

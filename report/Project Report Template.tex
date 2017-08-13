@@ -1,0 +1,76 @@
+% M. S. Tsoeu (2011), University of Cape Town <mohohlo.tsoeu@uct.ac.za>
+
+% This is a project report templace document created for EEE4022FS students at the University of Cape Town.
+%
+% This file should be is processed with ``pdflatex`` and might need a few modifications if a different processor is chosen.
+
+% Modified by Othniel Konan (2017), University of Cape Town <knnoth001@myuct.ac.za>
+
+
+\documentclass[a4paper,12pt]{report}
+
+\include{preamble/preamble}
+
+\begin{document}
+
+\input{preamble/title}
+
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+\onehalfspacing
+\nohyphens{
+\thispagestyle{empty}
+\vskip 40mm
+
+
+% Please leave the declaration as it is (Standard UCT declaration).
+\input{preamble/plagiarism}
+
+
+\fancyfoot[C]{\thepage}
+\pagestyle{plain}
+\newpage
+\pagenumbering{roman}
+
+\input{preamble/acknowledgments}
+
+\newpage
+
+\input{preamble/abstract}
+
+\newpage
+\tableofcontents
+
+\newpage
+\listoffigures
+
+\newpage
+\listoftables
+
+% Page formatting, to place section titles as headers of odd pages and Chapter titles as headers of even pages.
+\newpage
+\fancyhead[RE,LO]{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\pagestyle{fancy}
+
+\pagenumbering{arabic}
+
+% THe files included below are .tex files containing the respective chapters these are already created in this package and you can add to or modify them.
+\include{body/Introduction}
+\include{body/Literature}
+\include{body/Methodology}
+\include{body/Results}
+\include{body/Discussion}
+\include{body/Conclusions}
+\include{body/Recommendations}
+\include{bibliography/References}
+\appendix
+\include{appendices/appendixa}
+\include{appendices/appendixb}
+}
+\end{document}
