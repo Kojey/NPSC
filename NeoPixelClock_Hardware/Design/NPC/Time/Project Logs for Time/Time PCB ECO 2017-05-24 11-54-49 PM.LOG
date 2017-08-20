@@ -1,3 +1,0 @@
-Change component parameters: Designator = "P1"; Footprint = "7 pins pico-clasp"; UniqueID = "\CKYYCXYQ"
-Change component parameters. Clean all parameters for all variants
-Change component parameters (AddParameter): Name = "Designator"; Value = "P*"; VariantName = "[No Variations]"

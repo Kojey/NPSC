@@ -1,9 +1,0 @@
-Change Component Footprint: Designator=P2 Old Footprint=HDR1X3 New Footprint=3 pins pico-clasp
-Change Component Footprint: Designator=P1 Old Footprint=HDR1X7 New Footprint=7 pins pico-clasp
-Change Component Comment : Designator=P2 Old Comment=Header 3 New Comment=pico-clasp-3pins
-Change Component Comment : Designator=P1 Old Comment=Header 7 New Comment=pico-clasp-7pins
-Change component parameters: Designator = "P2"; Footprint = "3 pins pico-clasp"; UniqueID = "\LVASSXGI"
-Change component parameters. Clean all parameters for all variants
-Change component parameters: Designator = "P1"; Footprint = "7 pins pico-clasp"; UniqueID = "\AXTHAGBH"
-Change component parameters. Clean all parameters for all variants
-Change component parameters (AddParameter): Name = "Designator"; Value = "P*"; VariantName = "[No Variations]"
