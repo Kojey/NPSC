@@ -1,0 +1,70 @@
+Change Component DesignItemId : Designator=C6 Old DesignItemId=Cap Semi New DesignItemId=CMP-1036-00005-1
+Change Component DesignItemId : Designator=C2 Old DesignItemId=Cap Semi New DesignItemId=CMP-1036-04393-1
+Change Component DesignItemId : Designator=C3 Old DesignItemId=Cap Semi New DesignItemId=CMP-1036-04393-1
+Change Component DesignItemId : Designator=C4 Old DesignItemId=Cap Semi New DesignItemId=CMP-1036-04396-1
+Change Component DesignItemId : Designator=C5 Old DesignItemId=Cap Semi New DesignItemId=CMP-1036-04396-1
+Change Component Footprint: Designator=C6 Old Footprint=1608[0603] New Footprint=CAPC0805(2012)100_L
+Change Component Footprint: Designator=C2 Old Footprint=1608[0603] New Footprint=CAPC0805(2012)100_M
+Change Component Footprint: Designator=C3 Old Footprint=1608[0603] New Footprint=CAPC0805(2012)100_M
+Change Component Footprint: Designator=C4 Old Footprint=1608[0603] New Footprint=CAPC0805(2012)100_N
+Change Component Footprint: Designator=C5 Old Footprint=1608[0603] New Footprint=CAPC0805(2012)100_N
+Change Component Comment : Designator=C6 Old Comment= New Comment=CAP 0.5pF 10V 0805(2012)
+Change Component Comment : Designator=C2 Old Comment= New Comment=CAP 100nF 10V 0805(2012)
+Change Component Comment : Designator=C3 Old Comment= New Comment=CAP 100nF 10V 0805(2012)
+Change Component Comment : Designator=C4 Old Comment= New Comment=CAP 100nF 10V 0805(2012)
+Change Component Comment : Designator=C5 Old Comment= New Comment=CAP 100nF 10V 0805(2012)
+Change Component Description : Designator=C6 Old Description=Capacitor (Semiconductor SIM Model) New Description=CAP 0.5pF 10V ±0.5pF 0805 (2012 Metric) Thickness 1mm SMD
+Change Component Description : Designator=C2 Old Description=Capacitor (Semiconductor SIM Model) New Description=CAP 100nF 10V ±5% 0805 (2012 Metric) Thickness 1mm SMD
+Change Component Description : Designator=C3 Old Description=Capacitor (Semiconductor SIM Model) New Description=CAP 100nF 10V ±5% 0805 (2012 Metric) Thickness 1mm SMD
+Change Component Description : Designator=C4 Old Description=Capacitor (Semiconductor SIM Model) New Description=CAP 100nF 10V ±20% 0805 (2012 Metric) Thickness 1mm SMD
+Change Component Description : Designator=C5 Old Description=Capacitor (Semiconductor SIM Model) New Description=CAP 100nF 10V ±20% 0805 (2012 Metric) Thickness 1mm SMD
+Change Component Library : Designator=C2 Old Library=Miscellaneous Devices.IntLib New Library=Altium Content Vault
+Change Component Library : Designator=C3 Old Library=Miscellaneous Devices.IntLib New Library=Altium Content Vault
+Change Component Library : Designator=C4 Old Library=Miscellaneous Devices.IntLib New Library=Altium Content Vault
+Change Component Library : Designator=C5 Old Library=Miscellaneous Devices.IntLib New Library=Altium Content Vault
+Change Component Library : Designator=C6 Old Library=Miscellaneous Devices.IntLib New Library=Altium Content Vault
+Change component parameters: Designator = "C2"; Footprint = "CAPC0805(2012)100_M"; UniqueID = "\SOELDNDB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Thickness"; Value = "1 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage"; Value = "10 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "Â±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C3"; Footprint = "CAPC0805(2012)100_M"; UniqueID = "\BQUYATDT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Thickness"; Value = "1 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage"; Value = "10 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "Â±5%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C4"; Footprint = "CAPC0805(2012)100_N"; UniqueID = "\AOIQWEPM"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Thickness"; Value = "1 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage"; Value = "10 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "Â±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C5"; Footprint = "CAPC0805(2012)100_N"; UniqueID = "\MOBBDIJY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Thickness"; Value = "1 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage"; Value = "10 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "Â±20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C6"; Footprint = "CAPC0805(2012)100_L"; UniqueID = "\KQJGDBYK"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Thickness"; Value = "1 mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Rated Voltage"; Value = "10 V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "Â±0.5pF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "0.5pF"; VariantName = "[No Variations]"
