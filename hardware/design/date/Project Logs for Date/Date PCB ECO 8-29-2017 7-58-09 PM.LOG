@@ -1,0 +1,92 @@
+Added Component: Designator=D1(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D3(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(5 pins pico-clasp)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P2(5 pins pico-clasp)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U(SOIC127P1030X235-24N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=E Pin=D1-1
+Added Pin To Net: NetName=D Pin=D1-2
+Added Pin To Net: NetName=DP Pin=D1-3
+Added Pin To Net: NetName=R1 Pin=D1-4
+Added Pin To Net: NetName=F Pin=D1-5
+Added Pin To Net: NetName=G Pin=D1-6
+Added Pin To Net: NetName=G1 Pin=D1-7
+Added Pin To Net: NetName=B1 Pin=D1-8
+Added Pin To Net: NetName=C Pin=D1-9
+Added Pin To Net: NetName=B0 Pin=D1-10
+Added Pin To Net: NetName=G0 Pin=D1-11
+Added Pin To Net: NetName=B Pin=D1-12
+Added Pin To Net: NetName=A Pin=D1-13
+Added Pin To Net: NetName=R0 Pin=D1-14
+Added Pin To Net: NetName=E Pin=D2-1
+Added Pin To Net: NetName=D Pin=D2-2
+Added Pin To Net: NetName=DP Pin=D2-3
+Added Pin To Net: NetName=R3 Pin=D2-4
+Added Pin To Net: NetName=F Pin=D2-5
+Added Pin To Net: NetName=G Pin=D2-6
+Added Pin To Net: NetName=G3 Pin=D2-7
+Added Pin To Net: NetName=B3 Pin=D2-8
+Added Pin To Net: NetName=C Pin=D2-9
+Added Pin To Net: NetName=B2 Pin=D2-10
+Added Pin To Net: NetName=G2 Pin=D2-11
+Added Pin To Net: NetName=B Pin=D2-12
+Added Pin To Net: NetName=A Pin=D2-13
+Added Pin To Net: NetName=R2 Pin=D2-14
+Added Pin To Net: NetName=E Pin=D3-1
+Added Pin To Net: NetName=D Pin=D3-2
+Added Pin To Net: NetName=DP Pin=D3-3
+Added Pin To Net: NetName=R5 Pin=D3-4
+Added Pin To Net: NetName=F Pin=D3-5
+Added Pin To Net: NetName=G Pin=D3-6
+Added Pin To Net: NetName=G5 Pin=D3-7
+Added Pin To Net: NetName=B5 Pin=D3-8
+Added Pin To Net: NetName=C Pin=D3-9
+Added Pin To Net: NetName=B4 Pin=D3-10
+Added Pin To Net: NetName=G4 Pin=D3-11
+Added Pin To Net: NetName=B Pin=D3-12
+Added Pin To Net: NetName=A Pin=D3-13
+Added Pin To Net: NetName=R4 Pin=D3-14
+Added Pin To Net: NetName=5V Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=DIN Pin=P1-3
+Added Pin To Net: NetName=\C\S\ Pin=P1-4
+Added Pin To Net: NetName=CLK Pin=P1-5
+Added Pin To Net: NetName=3.3V Pin=P2-1
+Added Pin To Net: NetName=GND Pin=P2-1
+Added Pin To Net: NetName=\R\ Pin=P2-3
+Added Pin To Net: NetName=\G\ Pin=P2-4
+Added Pin To Net: NetName=\B\ Pin=P2-5
+Added Pin To Net: NetName=DIN Pin=U-1
+Added Pin To Net: NetName=D0 Pin=U-2
+Added Pin To Net: NetName=D4 Pin=U-3
+Added Pin To Net: NetName=GND Pin=U-4
+Added Pin To Net: NetName=D2 Pin=U-6
+Added Pin To Net: NetName=D3 Pin=U-7
+Added Pin To Net: NetName=GND Pin=U-9
+Added Pin To Net: NetName=D5 Pin=U-10
+Added Pin To Net: NetName=D1 Pin=U-11
+Added Pin To Net: NetName=\C\S\ Pin=U-12
+Added Pin To Net: NetName=CLK Pin=U-13
+Added Pin To Net: NetName=A Pin=U-14
+Added Pin To Net: NetName=F Pin=U-15
+Added Pin To Net: NetName=B Pin=U-16
+Added Pin To Net: NetName=G Pin=U-17
+Added Pin To Net: NetName=ISET Pin=U-18
+Added Pin To Net: NetName=5V Pin=U-19
+Added Pin To Net: NetName=C Pin=U-20
+Added Pin To Net: NetName=E Pin=U-21
+Added Pin To Net: NetName=DP Pin=U-22
+Added Pin To Net: NetName=D Pin=U-23
+Added Member To Class: ClassName=Date Member=Component D1 2 digits 7 segment RGB display
+Added Member To Class: ClassName=Date Member=Component D2 2 digits 7 segment RGB display
+Added Member To Class: ClassName=Date Member=Component D3 2 digits 7 segment RGB display
+Added Member To Class: ClassName=Date Member=Component P1 Pico-clasp-5
+Added Member To Class: ClassName=Date Member=Component P2 Pico-clasp-5
+Added Member To Class: ClassName=Date Member=Component U MAX7219
+Added Room: Name=Date

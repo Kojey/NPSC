@@ -1,0 +1,298 @@
+Added Component: Designator=D1(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D3(ACD8143)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(5 pins pico-clasp)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P2(5 pins pico-clasp)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R1(RESC0805(2012)_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "8450000.00 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=U1(NS0014A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Bits(#)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SCHS021D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "F @ Nom Voltage(Max)(Mhz)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Generic Part Number"; Value = "CD4011B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ICC @ Nom Voltage(Max)(mA)"; Value = "0.015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range(C)"; Value = "-55 to 125"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Drive (IOL/IOH)(Max)(mA)"; Value = "1.5/-1.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "NS0014A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Schmitt Trigger"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology Family"; Value = "CD4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Max)(V)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Min)(V)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage(Nom)(V)"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=U2(NS0014A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Bits(#)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SCHS021D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "F @ Nom Voltage(Max)(Mhz)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Generic Part Number"; Value = "CD4011B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ICC @ Nom Voltage(Max)(mA)"; Value = "0.015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range(C)"; Value = "-55 to 125"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Drive (IOL/IOH)(Max)(mA)"; Value = "1.5/-1.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "NS0014A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Schmitt Trigger"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology Family"; Value = "CD4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Max)(V)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Min)(V)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage(Nom)(V)"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=U3(NS0014A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Bits(#)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SCHS021D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "F @ Nom Voltage(Max)(Mhz)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Generic Part Number"; Value = "CD4011B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ICC @ Nom Voltage(Max)(mA)"; Value = "0.015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range(C)"; Value = "-55 to 125"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Drive (IOL/IOH)(Max)(mA)"; Value = "1.5/-1.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "NS0014A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Schmitt Trigger"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology Family"; Value = "CD4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Max)(V)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Min)(V)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage(Nom)(V)"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=U4(NS0014A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Bits(#)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SCHS021D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "F @ Nom Voltage(Max)(Mhz)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Generic Part Number"; Value = "CD4011B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ICC @ Nom Voltage(Max)(mA)"; Value = "0.015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range(C)"; Value = "-55 to 125"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Drive (IOL/IOH)(Max)(mA)"; Value = "1.5/-1.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "NS0014A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Schmitt Trigger"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology Family"; Value = "CD4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Max)(V)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Min)(V)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage(Nom)(V)"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=U5(NS0014A_N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Bits(#)"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "SCHS021D"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "F @ Nom Voltage(Max)(Mhz)"; Value = "8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Generic Part Number"; Value = "CD4011B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ICC @ Nom Voltage(Max)(mA)"; Value = "0.015"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature Range(C)"; Value = "-55 to 125"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Drive (IOL/IOH)(Max)(mA)"; Value = "1.5/-1.5"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Output Type"; Value = "CMOS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "NS0014A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rating"; Value = "Military"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Schmitt Trigger"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology Family"; Value = "CD4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Max)(V)"; Value = "18"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VCC(Min)(V)"; Value = "3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage(Nom)(V)"; Value = "10"; VariantName = "[No Variations]"
+Added Component: Designator=U(SOIC127P1030X235-24N)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V Pin=P2-1
+Added Pin To Net: NetName=3.3V Pin=U1-14
+Added Pin To Net: NetName=3.3V Pin=U2-14
+Added Pin To Net: NetName=3.3V Pin=U3-14
+Added Pin To Net: NetName=3.3V Pin=U4-14
+Added Pin To Net: NetName=3.3V Pin=U5-14
+Added Net: Name=3.3V
+Added Pin To Net: NetName=5V Pin=P1-1
+Added Pin To Net: NetName=5V Pin=R1-1
+Added Pin To Net: NetName=5V Pin=U-19
+Added Net: Name=5V
+Added Pin To Net: NetName=\B\ Pin=P2-5
+Added Pin To Net: NetName=\B\ Pin=U1-8
+Added Pin To Net: NetName=\B\ Pin=U2-5
+Added Pin To Net: NetName=\B\ Pin=U3-1
+Added Pin To Net: NetName=\B\ Pin=U3-12
+Added Pin To Net: NetName=\B\ Pin=U4-8
+Added Pin To Net: NetName=\B\ Pin=U5-5
+Added Net: Name=\B\
+Added Pin To Net: NetName=\C\S\ Pin=P1-4
+Added Pin To Net: NetName=\C\S\ Pin=U-12
+Added Net: Name=\C\S\
+Added Pin To Net: NetName=\G\ Pin=P2-4
+Added Pin To Net: NetName=\G\ Pin=U1-5
+Added Pin To Net: NetName=\G\ Pin=U2-1
+Added Pin To Net: NetName=\G\ Pin=U2-12
+Added Pin To Net: NetName=\G\ Pin=U3-8
+Added Pin To Net: NetName=\G\ Pin=U4-5
+Added Pin To Net: NetName=\G\ Pin=U5-1
+Added Net: Name=\G\
+Added Pin To Net: NetName=\R\ Pin=P2-3
+Added Pin To Net: NetName=\R\ Pin=U1-1
+Added Pin To Net: NetName=\R\ Pin=U1-12
+Added Pin To Net: NetName=\R\ Pin=U2-8
+Added Pin To Net: NetName=\R\ Pin=U3-5
+Added Pin To Net: NetName=\R\ Pin=U4-1
+Added Pin To Net: NetName=\R\ Pin=U4-12
+Added Net: Name=\R\
+Added Pin To Net: NetName=A Pin=D1-13
+Added Pin To Net: NetName=A Pin=D2-13
+Added Pin To Net: NetName=A Pin=D3-13
+Added Pin To Net: NetName=A Pin=U-14
+Added Net: Name=A
+Added Pin To Net: NetName=B0 Pin=D1-10
+Added Pin To Net: NetName=B0 Pin=U1-10
+Added Net: Name=B0
+Added Pin To Net: NetName=B1 Pin=D1-8
+Added Pin To Net: NetName=B1 Pin=U2-4
+Added Net: Name=B1
+Added Pin To Net: NetName=B2 Pin=D2-10
+Added Pin To Net: NetName=B2 Pin=U3-3
+Added Net: Name=B2
+Added Pin To Net: NetName=B3 Pin=D2-8
+Added Pin To Net: NetName=B3 Pin=U3-11
+Added Net: Name=B3
+Added Pin To Net: NetName=B4 Pin=D3-10
+Added Pin To Net: NetName=B4 Pin=U4-10
+Added Net: Name=B4
+Added Pin To Net: NetName=B5 Pin=D3-8
+Added Pin To Net: NetName=B5 Pin=U5-4
+Added Net: Name=B5
+Added Pin To Net: NetName=B Pin=D1-12
+Added Pin To Net: NetName=B Pin=D2-12
+Added Pin To Net: NetName=B Pin=D3-12
+Added Pin To Net: NetName=B Pin=U-16
+Added Net: Name=B
+Added Pin To Net: NetName=CLK Pin=P1-5
+Added Pin To Net: NetName=CLK Pin=U-13
+Added Net: Name=CLK
+Added Pin To Net: NetName=C Pin=D1-9
+Added Pin To Net: NetName=C Pin=D2-9
+Added Pin To Net: NetName=C Pin=D3-9
+Added Pin To Net: NetName=C Pin=U-20
+Added Net: Name=C
+Added Pin To Net: NetName=D0 Pin=U1-2
+Added Pin To Net: NetName=D0 Pin=U1-6
+Added Pin To Net: NetName=D0 Pin=U1-9
+Added Pin To Net: NetName=D0 Pin=U-2
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=U1-13
+Added Pin To Net: NetName=D1 Pin=U2-2
+Added Pin To Net: NetName=D1 Pin=U2-6
+Added Pin To Net: NetName=D1 Pin=U-11
+Added Net: Name=D1
+Added Pin To Net: NetName=D2 Pin=U2-9
+Added Pin To Net: NetName=D2 Pin=U2-13
+Added Pin To Net: NetName=D2 Pin=U3-2
+Added Pin To Net: NetName=D2 Pin=U-6
+Added Net: Name=D2
+Added Pin To Net: NetName=D3 Pin=U3-6
+Added Pin To Net: NetName=D3 Pin=U3-9
+Added Pin To Net: NetName=D3 Pin=U3-13
+Added Pin To Net: NetName=D3 Pin=U-7
+Added Net: Name=D3
+Added Pin To Net: NetName=D4 Pin=U4-2
+Added Pin To Net: NetName=D4 Pin=U4-6
+Added Pin To Net: NetName=D4 Pin=U4-9
+Added Pin To Net: NetName=D4 Pin=U-3
+Added Net: Name=D4
+Added Pin To Net: NetName=D5 Pin=U4-13
+Added Pin To Net: NetName=D5 Pin=U5-2
+Added Pin To Net: NetName=D5 Pin=U5-6
+Added Pin To Net: NetName=D5 Pin=U-10
+Added Net: Name=D5
+Added Pin To Net: NetName=DIN Pin=P1-3
+Added Pin To Net: NetName=DIN Pin=U-1
+Added Net: Name=DIN
+Added Pin To Net: NetName=DP Pin=D1-3
+Added Pin To Net: NetName=DP Pin=D2-3
+Added Pin To Net: NetName=DP Pin=D3-3
+Added Pin To Net: NetName=DP Pin=U-22
+Added Net: Name=DP
+Added Pin To Net: NetName=D Pin=D1-2
+Added Pin To Net: NetName=D Pin=D2-2
+Added Pin To Net: NetName=D Pin=D3-2
+Added Pin To Net: NetName=D Pin=U-23
+Added Net: Name=D
+Added Pin To Net: NetName=E Pin=D1-1
+Added Pin To Net: NetName=E Pin=D2-1
+Added Pin To Net: NetName=E Pin=D3-1
+Added Pin To Net: NetName=E Pin=U-21
+Added Net: Name=E
+Added Pin To Net: NetName=F Pin=D1-5
+Added Pin To Net: NetName=F Pin=D2-5
+Added Pin To Net: NetName=F Pin=D3-5
+Added Pin To Net: NetName=F Pin=U-15
+Added Net: Name=F
+Added Pin To Net: NetName=G0 Pin=D1-11
+Added Pin To Net: NetName=G0 Pin=U1-4
+Added Net: Name=G0
+Added Pin To Net: NetName=G1 Pin=D1-7
+Added Pin To Net: NetName=G1 Pin=U2-3
+Added Net: Name=G1
+Added Pin To Net: NetName=G2 Pin=D2-11
+Added Pin To Net: NetName=G2 Pin=U2-11
+Added Net: Name=G2
+Added Pin To Net: NetName=G3 Pin=D2-7
+Added Pin To Net: NetName=G3 Pin=U3-10
+Added Net: Name=G3
+Added Pin To Net: NetName=G4 Pin=D3-11
+Added Pin To Net: NetName=G4 Pin=U4-4
+Added Net: Name=G4
+Added Pin To Net: NetName=G5 Pin=D3-7
+Added Pin To Net: NetName=G5 Pin=U5-3
+Added Net: Name=G5
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P2-1
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U2-7
+Added Pin To Net: NetName=GND Pin=U3-7
+Added Pin To Net: NetName=GND Pin=U4-7
+Added Pin To Net: NetName=GND Pin=U5-7
+Added Pin To Net: NetName=GND Pin=U-4
+Added Pin To Net: NetName=GND Pin=U-9
+Added Net: Name=GND
+Added Pin To Net: NetName=G Pin=D1-6
+Added Pin To Net: NetName=G Pin=D2-6
+Added Pin To Net: NetName=G Pin=D3-6
+Added Pin To Net: NetName=G Pin=U-17
+Added Net: Name=G
+Added Pin To Net: NetName=ISET Pin=R1-2
+Added Pin To Net: NetName=ISET Pin=U-18
+Added Net: Name=ISET
+Added Pin To Net: NetName=R0 Pin=D1-14
+Added Pin To Net: NetName=R0 Pin=U1-3
+Added Net: Name=R0
+Added Pin To Net: NetName=R1 Pin=D1-4
+Added Pin To Net: NetName=R1 Pin=U1-11
+Added Net: Name=R1
+Added Pin To Net: NetName=R2 Pin=D2-14
+Added Pin To Net: NetName=R2 Pin=U2-10
+Added Net: Name=R2
+Added Pin To Net: NetName=R3 Pin=D2-4
+Added Pin To Net: NetName=R3 Pin=U3-4
+Added Net: Name=R3
+Added Pin To Net: NetName=R4 Pin=D3-14
+Added Pin To Net: NetName=R4 Pin=U4-3
+Added Net: Name=R4
+Added Pin To Net: NetName=R5 Pin=D3-4
+Added Pin To Net: NetName=R5 Pin=U4-11
+Added Net: Name=R5
+Added Class: Name=Date
+Added Room: Name=Date
