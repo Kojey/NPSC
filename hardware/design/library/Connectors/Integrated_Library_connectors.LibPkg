@@ -56,6 +56,23 @@ GenerateClassCluster=0
 DocumentUniqueId=KBXDFPUB
 
 [Document2]
+DocumentPath=pico-clasp-2.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DXSLNMNQ
+
+[Document3]
 DocumentPath=pico-clasp-3.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -72,7 +89,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GRQKAICS
 
-[Document3]
+[Document4]
 DocumentPath=pico-clasp-3.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -89,7 +106,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CVMTVHMR
 
-[Document4]
+[Document5]
 DocumentPath=pico-clasp-4.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -106,7 +123,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MVDELKSA
 
-[Document5]
+[Document6]
 DocumentPath=pico-clasp-4.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -123,7 +140,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SNBNFWAW
 
-[Document6]
+[Document7]
 DocumentPath=pico-clasp-5.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,7 +157,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CRYTVGHL
 
-[Document7]
+[Document8]
 DocumentPath=pico-clasp-5.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -157,7 +174,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UNIJXPLA
 
-[Document8]
+[Document9]
 DocumentPath=pico-clasp-6.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MGMOLNYB
 
-[Document9]
+[Document10]
 DocumentPath=pico-clasp-6.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,7 +208,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=URQRRMAX
 
-[Document10]
+[Document11]
 DocumentPath=pico-clasp-7.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +225,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=ARUXTGGL
 
-[Document11]
+[Document12]
 DocumentPath=pico-clasp-7.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -224,23 +241,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TYRVVJYK
-
-[Document12]
-DocumentPath=pico-clasp-2.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=DXSLNMNQ
 
 [OutputGroup1]
 Name=Netlist Outputs
