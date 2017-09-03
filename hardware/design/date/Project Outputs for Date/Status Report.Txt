@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [Date.PrjPcb]
+   Generated File[Pick Place for Date.txt]
+   Generated File[Pick Place for Date.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 5:23:24 PM On 8/30/2017

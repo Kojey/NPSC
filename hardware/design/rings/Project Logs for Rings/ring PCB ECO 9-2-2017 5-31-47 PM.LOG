@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=Dout Pin=P1-3
+Removed Pin From Net: NetName=GND Pin=P1-4
+Change Component Footprint: Designator=P1 Old Footprint=4 pins pico-clasp New Footprint=3 pins pico-clasp
+Change Component Comment : Designator=P1 Old Comment=Pico-clasp-4 New Comment=pico-clasp-3pins
+Added Component: Designator=P2(3 pins pico-clasp)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=P1-3
+Added Pin To Net: NetName=5V Pin=P2-1
+Added Pin To Net: NetName=Dout Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P2-3
+Added Member To Class: ClassName=ring Member=Component P2 pico-clasp-3pins

@@ -1,0 +1,25 @@
+Altium Designer Pick and Place Locations
+E:\undergrad\eee4022S-2017\NPSC\hardware\design\date\Project Outputs for Date\Pick Place for Date.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       30/08/17
+Time:       17:23
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator Comment                          Layer       Footprint            Center-X(mm) Center-Y(mm) Rotation Description                                       
+D1         "2 digits 7 segment RGB display" TopLayer    ACD8143              14,8410      12,6030      0        ""                                                
+D2         "2 digits 7 segment RGB display" TopLayer    ACD8143              40,8410      12,6030      0        ""                                                
+D3         "2 digits 7 segment RGB display" TopLayer    ACD8143              74,8410      12,6030      0        ""                                                
+P2         Pico-clasp-5                     BottomLayer 5_pins_pico-clasp    52,2500      28,0000      360      "5 pins"                                          
+P1         Pico-clasp-5                     BottomLayer 5_pins_pico-clasp    41,7500      28,0000      360      "5 pins"                                          
+R1         "8M45 1% 0805(2012)"             BottomLayer RESC0805(2012)_M     89,8000      14,0500      270      "8M45 0.125W 1% 0805 (2012 Metric)  SMD"          
+U1         CD4011BNSR                       BottomLayer NS0014A_N            11,0000      14,0000      270      "CMOS Quad 2-Input NAND Gate, NS0014A, LARGE T&R" 
+U2         CD4011BNSR                       BottomLayer NS0014A_N            23,0000      14,0000      270      "CMOS Quad 2-Input NAND Gate, NS0014A, LARGE T&R" 
+U3         CD4011BNSR                       BottomLayer NS0014A_N            37,0000      14,0000      270      "CMOS Quad 2-Input NAND Gate, NS0014A, LARGE T&R" 
+U4         CD4011BNSR                       BottomLayer NS0014A_N            49,0000      14,0000      270      "CMOS Quad 2-Input NAND Gate, NS0014A, LARGE T&R" 
+U5         CD4011BNSR                       BottomLayer NS0014A_N            63,0000      14,0000      270      "CMOS Quad 2-Input NAND Gate, NS0014A, LARGE T&R" 
+U          MAX7219                          BottomLayer SOIC127P1030X235-24N 79,0000      14,0000      270      "Serial Interface, 8-Digit LED Display Drivers"   

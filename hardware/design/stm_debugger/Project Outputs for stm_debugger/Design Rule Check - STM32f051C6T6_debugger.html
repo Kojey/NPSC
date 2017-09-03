@@ -1,0 +1,566 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8/31/2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3:19:35 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc" class="file"><acronym title="E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc">E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">74</td></tr>
+</table>
+</td>
+</table><a name="IDQSMVK4Y43J0SP3PLDHEF4R0L0K4NTMHLSZRIBOB4FNUAKOTAVPVH"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTRHPA3UARKOYCHMPZYKFQTBNWGKT4JTYXYEOFAL3L42AA4C55WCH">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYHKH1FXO1MUOXJSPLLDQ1LBNG3C5KK4YG1OMRAHYMNE3OZI5C">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL0I4OVCVVQPGMCBEA01SFBB31F4WQV133RSV3WIPGOHKGFHHAX2J">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">64</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSEFOKM4VL43JI55KZSZGYQOZKF350JTRCQIIEOIZ0XJQ45CHTIY">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU5IGNXYGVT0TPBGYEYOBNBMWEEPYZH4KQM3V1FKRLQNTXAEVYDVO">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVGMX5KEIE2NQFQO1BTHL4BPNGHNFRU3H3QBUJAB5KCK2BJ201RUB">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID43IGOAS4QVYQIIEWJM3P1DEFKMGN3MEZHPPW10K1UMEBMW5MUCEI">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYXSVC1CDI45RP5EWEWLD5DE2GJTIDWUJPEFLB0EQTVV1UNO3DZAH">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQHZSWY3RJNFUCLRJHPE4BJLEWBALYPQBQ1ABMBES353HYLORNHKL">Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDK5QC45H3SLFMR4YVU2UFV5YZFZFD3BLVNLHR3OXRUS3LK0WDEJK">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDTSK4Z4VDHQCVNSCOGAROFI3MQIK2FZU3OULKMTGBBZSJ2HOH5KKC">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOOIWHHGAKFAAMHHPH1PYNDAM2CO0MCD0FRJ0ASFYZ2SONQBXDXNE">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQWSADZNTST0UDODWXST0SV4BCJLZVHZROSIILWKUGFUSSXDNL1CE">Room STM32f051C6T6_debugger (Bounding Region = (27.006mm, 74.553mm, 169.043mm, 104.474mm) (InComponentClass('STM32f051C6T6_debugger'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRWP14MQRGXZWHITPJX25PPKAZNDWUNSZMBNYHOD02XHUQSTE34RF">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">74</td>
+</tr>
+</table><br><a name="IDL0I4OVCVVQPGMCBEA01SFBB31F4WQV133RSV3WIPGOHKGFHHAX2J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=4930.299mil|Location1.Y=3248.307mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=4930.299mil|Location1.Y=3248.307mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net USB_DP Between Pad U4-33(76.261mm,82.759mm) on Top Layer And Pad R4-2(124.603mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=5120.299mil|Location1.Y=3228.622mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=5120.299mil|Location1.Y=3228.622mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net USB_DM Between Pad U4-32(76.261mm,82.259mm) on Top Layer And Pad R3-2(129.429mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3646.787mil|Location1.Y=3090.827mil|Location2.Y=3461.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3646.787mil|Location1.Y=3090.827mil|Location2.Y=3461.72mil|Absolute=True">Un-Routed Net Constraint: Net T_SWDIO_IN Between Pad U4-25(76.261mm,78.759mm) on Top Layer And Pad R8-1(91.827mm,87.126mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3316.984mil|Location1.Y=3323.291mil|Location2.Y=3433.772mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3316.984mil|Location1.Y=3323.291mil|Location2.Y=3433.772mil|Absolute=True">Un-Routed Net Constraint: Net SWD_IO Between Pad P1-6(83.4mm,86.816mm) on Top Layer And Pad P1-4(83.4mm,84.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3047.756mil|Location1.Y=3130.197mil|Location2.Y=3287.803mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3047.756mil|Location1.Y=3130.197mil|Location2.Y=3287.803mil|Absolute=True">Un-Routed Net Constraint: Net SWD_IO Between Pad U4-27(76.261mm,79.759mm) on Top Layer And Pad U4-34(76.261mm,83.259mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3646.787mil|Location1.Y=3402.15mil|Location2.Y=3761.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3646.787mil|Location1.Y=3402.15mil|Location2.Y=3761.72mil|Absolute=True">Un-Routed Net Constraint: Net SWD_IO Between Pad P1-6(83.4mm,86.816mm) on Top Layer And Pad R8-2(91.827mm,94.746mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3316.984mil|Location1.Y=3267.992mil|Location2.Y=3354.913mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2957.079mil|Location2.X=3316.984mil|Location1.Y=3267.992mil|Location2.Y=3354.913mil|Absolute=True">Un-Routed Net Constraint: Net SWD_IO Between Pad U4-34(76.261mm,83.259mm) on Top Layer And Pad P1-4(83.4mm,84.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3316.984mil|Location1.Y=3362.78mil|Location2.Y=3473.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=3316.984mil|Location1.Y=3362.78mil|Location2.Y=3473.142mil|Absolute=True">Un-Routed Net Constraint: Net SWD_CLK Between Pad P1-5(83.4mm,85.816mm) on Top Layer And Pad P1-7(83.4mm,87.816mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3047.756mil|Location1.Y=3110.512mil|Location2.Y=3415.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3047.756mil|Location1.Y=3110.512mil|Location2.Y=3415.756mil|Absolute=True">Un-Routed Net Constraint: Net SWD_CLK Between Pad U4-37(74.911mm,85.609mm) on Top Layer And Pad U4-26(76.261mm,79.259mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3316.984mil|Location1.Y=3325.079mil|Location2.Y=3415.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3316.984mil|Location1.Y=3325.079mil|Location2.Y=3415.756mil|Absolute=True">Un-Routed Net Constraint: Net SWD_CLK Between Pad U4-37(74.911mm,85.609mm) on Top Layer And Pad P1-5(83.4mm,85.816mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3251.819mil|Location1.Y=3267.992mil|Location2.Y=3759.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3251.819mil|Location1.Y=3267.992mil|Location2.Y=3759.358mil|Absolute=True">Un-Routed Net Constraint: Net PC14 Between Pad U4-3(68.061mm,83.259mm) on Top Layer And Pad R10-2(81.845mm,94.961mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3522.425mil|Location1.Y=3287.677mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3522.425mil|Location1.Y=3287.677mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net PC13 Between Pad U4-2(68.061mm,83.759mm) on Top Layer And Pad R9-2(88.943mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3834.961mil|Location2.X=4665.496mil|Location1.Y=3691.602mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3834.961mil|Location2.X=4665.496mil|Location1.Y=3691.602mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net PA0 Between Pad R7-2(98.035mm,94.568mm) on Top Layer And Pad R5-1(117.877mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3884.299mil|Location1.Y=3130.197mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=3884.299mil|Location1.Y=3130.197mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net PA0 Between Pad U4-10(68.061mm,79.759mm) on Top Layer And Pad R7-2(98.035mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2449.024mil|Location2.X=2905.819mil|Location1.Y=3580.547mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2449.024mil|Location2.X=2905.819mil|Location1.Y=3580.547mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net OSC_OUT Between Pad C12-2(62.882mm,94.518mm) on Top Layer And Pad Y2-2(73.056mm,91.698mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2905.819mil|Location1.Y=3208.937mil|Location2.Y=3639.728mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2905.819mil|Location1.Y=3208.937mil|Location2.Y=3639.728mil|Absolute=True">Un-Routed Net Constraint: Net OSC_OUT Between Pad U4-6(68.061mm,81.759mm) on Top Layer And Pad Y2-2(73.056mm,91.698mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2249.024mil|Location2.X=2905.819mil|Location1.Y=3688.618mil|Location2.Y=3761.775mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2249.024mil|Location2.X=2905.819mil|Location1.Y=3688.618mil|Location2.Y=3761.775mil|Absolute=True">Un-Routed Net Constraint: Net OSC_IN Between Pad C11-2(57.802mm,94.518mm) on Top Layer And Pad Y2-1(73.056mm,94.797mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2905.819mil|Location1.Y=3228.622mil|Location2.Y=3761.775mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2905.819mil|Location1.Y=3228.622mil|Location2.Y=3761.775mil|Absolute=True">Un-Routed Net Constraint: Net OSC_IN Between Pad U4-5(68.061mm,82.259mm) on Top Layer And Pad Y2-1(73.056mm,94.797mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.669mil|Location2.X=2724.921mil|Location1.Y=3189.252mil|Location2.Y=3461.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.669mil|Location2.X=2724.921mil|Location1.Y=3189.252mil|Location2.Y=3461.72mil|Absolute=True">Un-Routed Net Constraint: Net NRST Between Pad R12-1(66.681mm,87.126mm) on Multi-Layer And Pad U4-7(68.061mm,81.259mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2029.024mil|Location2.X=2656.787mil|Location1.Y=3398.602mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2029.024mil|Location2.X=2656.787mil|Location1.Y=3398.602mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net NRST Between Pad C13-2(52.214mm,94.518mm) on Top Layer And Pad R12-1(66.681mm,87.126mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2801.567mil|Location2.X=3056.787mil|Location1.Y=3325.079mil|Location2.Y=3461.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2801.567mil|Location2.X=3056.787mil|Location1.Y=3325.079mil|Location2.Y=3461.72mil|Absolute=True">Un-Routed Net Constraint: Net NetR11_1 Between Pad U4-44(71.411mm,85.609mm) on Top Layer And Pad R11-1(76.841mm,87.126mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=4052.425mil|Location1.Y=3445.697mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=4052.425mil|Location1.Y=3445.697mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_4 Between Pad J1-4(42.75mm,87.822mm) on Top Layer And Pad R6-2(102.405mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.158mil|Location2.X=5548.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4806.158mil|Location2.X=5548.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_3 Between Pad R4-1(122.703mm,94.568mm) on Top Layer And Pad R2-1(140.405mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=4855.496mil|Location1.Y=3471.287mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=4855.496mil|Location1.Y=3471.287mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_3 Between Pad J1-3(42.75mm,88.472mm) on Top Layer And Pad R4-1(122.703mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=5045.496mil|Location1.Y=3496.878mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=5045.496mil|Location1.Y=3496.878mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net NetJ1_2 Between Pad J1-2(42.75mm,89.122mm) on Top Layer And Pad R3-1(127.529mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1724.457mil|Location1.Y=3363.02mil|Location2.Y=3443.854mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1724.457mil|Location1.Y=3363.02mil|Location2.Y=3443.854mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-5(42.75mm,87.172mm) on Top Layer And Pad J1-7(43.075mm,86.047mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.158mil|Location2.X=1621.11mil|Location1.Y=3590.874mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1517.158mil|Location2.X=1621.11mil|Location1.Y=3590.874mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C16-1(39.212mm,94.518mm) on Top Layer And Pad J1-8(40.075mm,91.985mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1724.457mil|Location1.Y=3420.106mil|Location2.Y=3603.303mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1724.457mil|Location1.Y=3420.106mil|Location2.Y=3603.303mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-5(42.75mm,87.172mm) on Top Layer And Pad J1-6(43.075mm,90.897mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.37mil|Location2.X=1724.457mil|Location1.Y=3314.299mil|Location2.Y=3412.358mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.37mil|Location2.X=1724.457mil|Location1.Y=3314.299mil|Location2.Y=3412.358mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-9(40.075mm,84.96mm) on Multi-Layer And Pad J1-7(43.075mm,86.047mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3760.157mil|Location2.X=3985.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3760.157mil|Location2.X=3985.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R7-1(96.135mm,94.568mm) on Top Layer And Pad R6-1(100.705mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5682.158mil|Location2.X=5925.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5682.158mil|Location2.X=5925.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C9-1(145.003mm,94.518mm) on Top Layer And Pad C10-1(149.829mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1667.244mil|Location2.X=1913.756mil|Location1.Y=3553.965mil|Location2.Y=3610.866mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1667.244mil|Location2.X=1913.756mil|Location1.Y=3553.965mil|Location2.Y=3610.866mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-6(43.075mm,90.897mm) on Multi-Layer And Pad U3-1(47.708mm,91.314mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2178.157mil|Location2.X=2431.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2178.157mil|Location2.X=2431.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C11-1(56.002mm,94.518mm) on Top Layer And Pad C12-1(61.082mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1667.244mil|Location2.X=1790.433mil|Location1.Y=3553.965mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1667.244mil|Location2.X=1790.433mil|Location1.Y=3553.965mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-6(43.075mm,90.897mm) on Multi-Layer And Pad C17-1(44.8mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1297.158mil|Location2.X=1570.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1297.158mil|Location2.X=1570.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C15-1(33.624mm,94.518mm) on Top Layer And Pad C16-1(39.212mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1958.158mil|Location2.X=2231.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1958.158mil|Location2.X=2231.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C13-1(50.414mm,94.518mm) on Top Layer And Pad C11-1(56.002mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1076.158mil|Location2.X=1350.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1076.158mil|Location2.X=1350.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C14-1(28.011mm,94.518mm) on Top Layer And Pad C15-1(33.624mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2993.669mil|Location2.X=3251.819mil|Location1.Y=3650.965mil|Location2.Y=3761.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2993.669mil|Location2.X=3251.819mil|Location1.Y=3650.965mil|Location2.Y=3761.72mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R11-2(76.841mm,94.746mm) on Multi-Layer And Pad R10-1(81.845mm,93.261mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2762.323mil|Location1.Y=3169.567mil|Location2.Y=3415.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2762.323mil|Location1.Y=3169.567mil|Location2.Y=3415.756mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U4-8(68.061mm,80.759mm) on Top Layer And Pad U4-47(69.911mm,85.609mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3192.638mil|Location2.X=3455.496mil|Location1.Y=3650.965mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3192.638mil|Location2.X=3455.496mil|Location1.Y=3650.965mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R10-1(81.845mm,93.261mm) on Top Layer And Pad R9-1(87.243mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2939.488mil|Location1.Y=3002.244mil|Location2.Y=3189.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2939.488mil|Location1.Y=3002.244mil|Location2.Y=3189.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U4-8(68.061mm,80.759mm) on Top Layer And Pad U4-23(74.411mm,77.409mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3192.638mil|Location2.X=3316.984mil|Location1.Y=3283.921mil|Location2.Y=3692.429mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3192.638mil|Location2.X=3316.984mil|Location1.Y=3283.921mil|Location2.Y=3692.429mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R10-1(81.845mm,93.261mm) on Top Layer And Pad P1-3(83.4mm,83.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.37mil|Location2.X=1724.457mil|Location1.Y=3553.965mil|Location2.Y=3652.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1534.37mil|Location2.X=1724.457mil|Location1.Y=3553.965mil|Location2.Y=3652.024mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J1-8(40.075mm,91.985mm) on Multi-Layer And Pad J1-6(43.075mm,90.897mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1737.158mil|Location2.X=2011.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1737.158mil|Location2.X=2011.433mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C17-1(44.8mm,94.518mm) on Top Layer And Pad C13-1(50.414mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.032mil|Location2.X=3809.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.032mil|Location2.X=3809.496mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R9-1(87.243mm,94.771mm) on Top Layer And Pad R7-1(96.135mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2742.512mil|Location2.X=3316.984mil|Location1.Y=3283.921mil|Location2.Y=3415.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2742.512mil|Location2.X=3316.984mil|Location1.Y=3283.921mil|Location2.Y=3415.756mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U4-47(69.911mm,85.609mm) on Top Layer And Pad P1-3(83.4mm,83.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3944.032mil|Location2.X=5735.433mil|Location1.Y=3688.618mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3944.032mil|Location2.X=5735.433mil|Location1.Y=3688.618mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R6-1(100.705mm,94.771mm) on Top Layer And Pad C9-1(145.003mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2378.157mil|Location2.X=3056.787mil|Location1.Y=3688.618mil|Location2.Y=3761.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2378.157mil|Location2.X=3056.787mil|Location1.Y=3688.618mil|Location2.Y=3761.72mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C12-1(61.082mm,94.518mm) on Top Layer And Pad R11-2(76.841mm,94.746mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1929.504mil|Location1.Y=3518.22mil|Location2.Y=3553.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1652.48mil|Location2.X=1929.504mil|Location1.Y=3518.22mil|Location2.Y=3553.78mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad J1-1(42.75mm,89.772mm) on Top Layer And Pad U3-2(47.908mm,89.814mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.504mil|Location2.X=3316.984mil|Location1.Y=3205.181mil|Location2.Y=3579.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1921.504mil|Location2.X=3316.984mil|Location1.Y=3205.181mil|Location2.Y=3579.37mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad U3-2(50.608mm,89.814mm) on Top Layer And Pad P1-1(83.4mm,81.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=5806.299mil|Location1.Y=3205.181mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=5806.299mil|Location1.Y=3205.181mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net 5V Between Pad P1-1(83.4mm,81.813mm) on Top Layer And Pad C9-2(146.803mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2742.638mil|Location1.Y=3307.362mil|Location2.Y=3415.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2742.638mil|Location1.Y=3307.362mil|Location2.Y=3415.756mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U4-1(68.061mm,84.259mm) on Top Layer And Pad U4-48(69.411mm,85.609mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2724.921mil|Location1.Y=3149.882mil|Location2.Y=3327.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2724.921mil|Location1.Y=3149.882mil|Location2.Y=3327.173mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U4-9(68.061mm,80.259mm) on Top Layer And Pad U4-1(68.061mm,84.259mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.024mil|Location2.X=1861.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1588.024mil|Location2.X=1861.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C16-2(41.012mm,94.518mm) on Top Layer And Pad C17-2(46.6mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1368.024mil|Location2.X=1641.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1368.024mil|Location2.X=1641.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C15-2(35.424mm,94.518mm) on Top Layer And Pad C16-2(41.012mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.024mil|Location2.X=1421.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1147.024mil|Location2.X=1421.299mil|Location1.Y=3688.618mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C14-2(29.811mm,94.518mm) on Top Layer And Pad C15-2(35.424mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.024mil|Location2.X=1913.756mil|Location1.Y=3461.134mil|Location2.Y=3753.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.024mil|Location2.X=1913.756mil|Location1.Y=3461.134mil|Location2.Y=3753.705mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C17-2(46.6mm,94.518mm) on Top Layer And Pad U3-3(47.708mm,88.314mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2959.173mil|Location1.Y=3002.244mil|Location2.Y=3169.693mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2634.244mil|Location2.X=2959.173mil|Location1.Y=3002.244mil|Location2.Y=3169.693mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U4-9(68.061mm,80.259mm) on Top Layer And Pad U4-24(74.911mm,77.409mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5573.961mil|Location2.X=5996.299mil|Location1.Y=3688.618mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5573.961mil|Location2.X=5996.299mil|Location1.Y=3688.618mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad R2-2(142.105mm,94.771mm) on Top Layer And Pad C10-2(151.629mm,94.518mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.669mil|Location2.X=2724.921mil|Location1.Y=3307.362mil|Location2.Y=3761.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.669mil|Location2.X=2724.921mil|Location1.Y=3307.362mil|Location2.Y=3761.72mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad R12-2(66.681mm,94.746mm) on Multi-Layer And Pad U4-1(68.061mm,84.259mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3316.984mil|Location1.Y=3002.244mil|Location2.Y=3276.173mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.362mil|Location2.X=3316.984mil|Location1.Y=3002.244mil|Location2.Y=3276.173mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad U4-24(74.911mm,77.409mm) on Top Layer And Pad P1-2(83.4mm,82.813mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4690.961mil|Location2.X=5615.425mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4690.961mil|Location2.X=5615.425mil|Location1.Y=3691.602mil|Location2.Y=3760.752mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad R5-2(119.777mm,94.568mm) on Top Layer And Pad R2-2(142.105mm,94.771mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.024mil|Location2.X=2656.787mil|Location1.Y=3688.618mil|Location2.Y=3761.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1808.024mil|Location2.X=2656.787mil|Location1.Y=3688.618mil|Location2.Y=3761.72mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad C17-2(46.6mm,94.518mm) on Top Layer And Pad R12-2(66.681mm,94.746mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=4740.299mil|Location1.Y=3244.551mil|Location2.Y=3754.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3249.929mil|Location2.X=4740.299mil|Location1.Y=3244.551mil|Location2.Y=3754.72mil|Absolute=True">Un-Routed Net Constraint: Net 3V3 Between Pad P1-2(83.4mm,82.813mm) on Top Layer And Pad R5-2(119.777mm,94.568mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDQHZSWY3RJNFUCLRJHPE4BJLEWBALYPQBQ1ABMBES353HYLORNHKL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3443.166mil|Location2.Y=3446.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3443.166mil|Location2.Y=3446.385mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.05mm) Between Pad J1-4(42.75mm,87.822mm) on Top Layer And Pad J1-5(42.75mm,87.172mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3468.757mil|Location2.Y=3471.975mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3468.757mil|Location2.Y=3471.975mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.05mm) Between Pad J1-3(42.75mm,88.472mm) on Top Layer And Pad J1-4(42.75mm,87.822mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3494.347mil|Location2.Y=3497.566mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3494.347mil|Location2.Y=3497.566mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.05mm) Between Pad J1-2(42.75mm,89.122mm) on Top Layer And Pad J1-3(42.75mm,88.472mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3519.938mil|Location2.Y=3523.157mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1650.871mil|Location2.X=1654.09mil|Location1.Y=3519.938mil|Location2.Y=3523.157mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.047mm &lt; 0.05mm) Between Pad J1-1(42.75mm,89.772mm) on Top Layer And Pad J1-2(42.75mm,89.122mm) on Top Layer [Top Solder] Mask Sliver [0.047mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDK5QC45H3SLFMR4YVU2UFV5YZFZFD3BLVNLHR3OXRUS3LK0WDEJK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1834.688mil|Location2.X=1838.312mil|Location1.Y=3735.668mil|Location2.Y=3739.293mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1834.688mil|Location2.X=1838.312mil|Location1.Y=3735.668mil|Location2.Y=3739.293mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Text "U3" (46.647mm,93.409mm) on Top Overlay And Pad C17-2(46.6mm,94.518mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1532.964mil|Location2.X=1536.588mil|Location1.Y=3700.349mil|Location2.Y=3703.974mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1532.964mil|Location2.X=1536.588mil|Location1.Y=3700.349mil|Location2.Y=3703.974mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.1mm) Between Text "J1" (37.46mm,94.035mm) on Top Overlay And Pad C16-1(39.212mm,94.518mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.77mil|Location2.X=2640.69mil|Location1.Y=3452.788mil|Location2.Y=3459.477mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2632.77mil|Location2.X=2640.69mil|Location1.Y=3452.788mil|Location2.Y=3459.477mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.051mm &lt; 0.1mm) Between Text "U4" (66.739mm,87.948mm) on Top Overlay And Pad R12-1(66.681mm,87.126mm) on Multi-Layer [Top Overlay] to [Top Solder] clearance [0.051mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDTSK4Z4VDHQCVNSCOGAROFI3MQIK2FZU3OULKMTGBBZSJ2HOH5KKC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2623.667mil|Location2.X=2631.333mil|Location1.Y=3476.328mil|Location2.Y=3483.995mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2623.667mil|Location2.X=2631.333mil|Location1.Y=3476.328mil|Location2.Y=3483.995mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "U4" (66.739mm,87.948mm) on Top Overlay And Track (65.919mm,88.396mm)(67.443mm,88.396mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2655.201mil|Location2.X=2666.451mil|Location1.Y=3474.536mil|Location2.Y=3485.786mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2655.201mil|Location2.X=2666.451mil|Location1.Y=3474.536mil|Location2.Y=3485.786mil|Absolute=True">Silk To Silk Clearance Constraint: (0.084mm &lt; 0.254mm) Between Text "U4" (66.739mm,87.948mm) on Top Overlay And Track (67.443mm,88.396mm)(67.443mm,93.476mm) on Top Overlay Silk Text to Silk Clearance [0.084mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2623.062mil|Location2.X=2630.729mil|Location1.Y=3468.664mil|Location2.Y=3476.33mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\undergrad\eee4022S-2017\NPSC\hardware\design\stm_debugger\STM32f051C6T6_debugger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2623.062mil|Location2.X=2630.729mil|Location1.Y=3468.664mil|Location2.Y=3476.33mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "U4" (66.739mm,87.948mm) on Top Overlay And Track (66.681mm,88.167mm)(66.681mm,88.396mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

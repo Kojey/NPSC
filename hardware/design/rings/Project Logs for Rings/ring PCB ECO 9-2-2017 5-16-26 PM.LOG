@@ -1,0 +1,192 @@
+Removed Pin From Net: NetName=Din Pin=P1-4
+Removed Pin From Net: NetName=Dout Pin=P1-5
+Removed Pin From Net: NetName=GND Pin=P1-6
+Removed Pin From Net: NetName=VCC_1 Pin=R12-2
+Removed Member From Class: ClassName=ring Member=R12
+Removed Member From Class: ClassName=ring Member=R13
+Change Component Footprint: Designator=P1 Old Footprint=7 pins pico-clasp New Footprint=4 pins pico-clasp
+Change Component Comment : Designator=C1 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C2 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C3 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C4 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C5 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C6 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C7 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C8 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C9 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C10 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C11 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C12 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C13 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C14 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C15 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C16 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C17 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C18 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C19 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C20 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C21 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C22 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C23 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C24 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C25 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C26 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C27 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C28 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C29 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C30 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C31 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C32 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C33 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C34 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C35 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=C36 Old Comment=100nF  New Comment=100nF
+Change Component Comment : Designator=P1 Old Comment=pico-clasp-7pins New Comment=Pico-clasp-4
+Added Pin To Net: NetName=VCC_1 Pin=C2-2
+Added Pin To Net: NetName=VCC_1 Pin=C3-2
+Added Pin To Net: NetName=VCC_1 Pin=C5-2
+Added Pin To Net: NetName=VCC_1 Pin=C6-2
+Added Pin To Net: NetName=VCC_1 Pin=C8-2
+Added Pin To Net: NetName=VCC_1 Pin=C9-2
+Added Pin To Net: NetName=VCC_1 Pin=C11-2
+Added Pin To Net: NetName=VCC_1 Pin=C12-2
+Added Pin To Net: NetName=VCC_1 Pin=C14-2
+Added Pin To Net: NetName=VCC_1 Pin=C15-2
+Added Pin To Net: NetName=VCC_1 Pin=C17-2
+Added Pin To Net: NetName=VCC_1 Pin=C18-2
+Added Pin To Net: NetName=VCC_1 Pin=C20-2
+Added Pin To Net: NetName=VCC_1 Pin=C21-2
+Added Pin To Net: NetName=VCC_1 Pin=C23-2
+Added Pin To Net: NetName=VCC_1 Pin=C24-2
+Added Pin To Net: NetName=VCC_1 Pin=C26-2
+Added Pin To Net: NetName=VCC_1 Pin=C27-2
+Added Pin To Net: NetName=VCC_1 Pin=C29-2
+Added Pin To Net: NetName=VCC_1 Pin=C30-2
+Added Pin To Net: NetName=VCC_1 Pin=C32-2
+Added Pin To Net: NetName=VCC_1 Pin=C33-2
+Added Pin To Net: NetName=VCC_1 Pin=C35-2
+Added Pin To Net: NetName=VCC_1 Pin=C36-2
+Added Pin To Net: NetName=Din Pin=P1-1
+Added Pin To Net: NetName=Dout Pin=P1-3
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=VCC_1 Pin=U61-1
+Added Pin To Net: NetName=VCC_1 Pin=U62-1
+Added Pin To Net: NetName=VCC_1 Pin=U63-1
+Added Pin To Net: NetName=VCC_1 Pin=U64-1
+Added Pin To Net: NetName=VCC_1 Pin=U65-1
+Added Pin To Net: NetName=VCC_1 Pin=U66-1
+Added Pin To Net: NetName=VCC_1 Pin=U67-1
+Added Pin To Net: NetName=VCC_1 Pin=U68-1
+Added Pin To Net: NetName=VCC_1 Pin=U69-1
+Added Pin To Net: NetName=VCC_1 Pin=U70-1
+Added Pin To Net: NetName=VCC_1 Pin=U71-1
+Added Pin To Net: NetName=VCC_1 Pin=U72-1
+Added Pin To Net: NetName=VCC_1 Pin=U73-1
+Added Pin To Net: NetName=VCC_1 Pin=U74-1
+Added Pin To Net: NetName=VCC_1 Pin=U75-1
+Added Pin To Net: NetName=VCC_1 Pin=U76-1
+Added Pin To Net: NetName=VCC_1 Pin=U77-1
+Added Pin To Net: NetName=VCC_1 Pin=U78-1
+Added Pin To Net: NetName=VCC_1 Pin=U79-1
+Added Pin To Net: NetName=VCC_1 Pin=U80-1
+Added Pin To Net: NetName=VCC_1 Pin=U81-1
+Added Pin To Net: NetName=VCC_1 Pin=U82-1
+Added Pin To Net: NetName=VCC_1 Pin=U83-1
+Added Pin To Net: NetName=VCC_1 Pin=U84-1
+Added Pin To Net: NetName=VCC_1 Pin=U85-1
+Added Pin To Net: NetName=VCC_1 Pin=U86-1
+Added Pin To Net: NetName=VCC_1 Pin=U87-1
+Added Pin To Net: NetName=VCC_1 Pin=U88-1
+Added Pin To Net: NetName=VCC_1 Pin=U89-1
+Added Pin To Net: NetName=VCC_1 Pin=U90-1
+Added Pin To Net: NetName=VCC_1 Pin=U91-1
+Added Pin To Net: NetName=VCC_1 Pin=U92-1
+Added Pin To Net: NetName=VCC_1 Pin=U93-1
+Added Pin To Net: NetName=VCC_1 Pin=U94-1
+Added Pin To Net: NetName=VCC_1 Pin=U95-1
+Added Pin To Net: NetName=VCC_1 Pin=U96-1
+Added Pin To Net: NetName=VCC_1 Pin=U97-1
+Added Pin To Net: NetName=VCC_1 Pin=U98-1
+Added Pin To Net: NetName=VCC_1 Pin=U99-1
+Added Pin To Net: NetName=VCC_1 Pin=U100-1
+Added Pin To Net: NetName=VCC_1 Pin=U101-1
+Added Pin To Net: NetName=VCC_1 Pin=U102-1
+Added Pin To Net: NetName=VCC_1 Pin=U103-1
+Added Pin To Net: NetName=VCC_1 Pin=U104-1
+Added Pin To Net: NetName=VCC_1 Pin=U105-1
+Added Pin To Net: NetName=VCC_1 Pin=U106-1
+Added Pin To Net: NetName=VCC_1 Pin=U107-1
+Added Pin To Net: NetName=VCC_1 Pin=U108-1
+Added Pin To Net: NetName=VCC_1 Pin=U109-1
+Added Pin To Net: NetName=VCC_1 Pin=U110-1
+Added Pin To Net: NetName=VCC_1 Pin=U111-1
+Added Pin To Net: NetName=VCC_1 Pin=U112-1
+Added Pin To Net: NetName=VCC_1 Pin=U113-1
+Added Pin To Net: NetName=VCC_1 Pin=U114-1
+Added Pin To Net: NetName=VCC_1 Pin=U115-1
+Added Pin To Net: NetName=VCC_1 Pin=U116-1
+Added Pin To Net: NetName=VCC_1 Pin=U117-1
+Added Pin To Net: NetName=VCC_1 Pin=U118-1
+Added Pin To Net: NetName=VCC_1 Pin=U119-1
+Added Pin To Net: NetName=VCC_1 Pin=U120-1
+Added Pin To Net: NetName=VCC_1 Pin=U121-1
+Added Pin To Net: NetName=VCC_1 Pin=U122-1
+Added Pin To Net: NetName=VCC_1 Pin=U123-1
+Added Pin To Net: NetName=VCC_1 Pin=U124-1
+Added Pin To Net: NetName=VCC_1 Pin=U125-1
+Added Pin To Net: NetName=VCC_1 Pin=U126-1
+Added Pin To Net: NetName=VCC_1 Pin=U127-1
+Added Pin To Net: NetName=VCC_1 Pin=U128-1
+Added Pin To Net: NetName=VCC_1 Pin=U129-1
+Added Pin To Net: NetName=VCC_1 Pin=U130-1
+Added Pin To Net: NetName=VCC_1 Pin=U131-1
+Added Pin To Net: NetName=VCC_1 Pin=U132-1
+Added Pin To Net: NetName=VCC_1 Pin=U133-1
+Added Pin To Net: NetName=VCC_1 Pin=U134-1
+Added Pin To Net: NetName=VCC_1 Pin=U135-1
+Added Pin To Net: NetName=VCC_1 Pin=U136-1
+Added Pin To Net: NetName=VCC_1 Pin=U137-1
+Added Pin To Net: NetName=VCC_1 Pin=U138-1
+Added Pin To Net: NetName=VCC_1 Pin=U139-1
+Added Pin To Net: NetName=VCC_1 Pin=U140-1
+Added Pin To Net: NetName=VCC_1 Pin=U141-1
+Added Pin To Net: NetName=VCC_1 Pin=U142-1
+Added Pin To Net: NetName=VCC_1 Pin=U143-1
+Added Pin To Net: NetName=VCC_1 Pin=U144-1
+Added Pin To Net: NetName=VCC_1 Pin=U145-1
+Added Pin To Net: NetName=VCC_1 Pin=U146-1
+Added Pin To Net: NetName=VCC_1 Pin=U147-1
+Added Pin To Net: NetName=VCC_1 Pin=U148-1
+Added Pin To Net: NetName=VCC_1 Pin=U149-1
+Added Pin To Net: NetName=VCC_1 Pin=U150-1
+Added Pin To Net: NetName=VCC_1 Pin=U151-1
+Added Pin To Net: NetName=VCC_1 Pin=U152-1
+Added Pin To Net: NetName=VCC_1 Pin=U153-1
+Added Pin To Net: NetName=VCC_1 Pin=U154-1
+Added Pin To Net: NetName=VCC_1 Pin=U155-1
+Added Pin To Net: NetName=VCC_1 Pin=U156-1
+Added Pin To Net: NetName=VCC_1 Pin=U157-1
+Added Pin To Net: NetName=VCC_1 Pin=U158-1
+Added Pin To Net: NetName=VCC_1 Pin=U159-1
+Added Pin To Net: NetName=VCC_1 Pin=U160-1
+Added Pin To Net: NetName=VCC_1 Pin=U161-1
+Added Pin To Net: NetName=VCC_1 Pin=U162-1
+Added Pin To Net: NetName=VCC_1 Pin=U163-1
+Added Pin To Net: NetName=VCC_1 Pin=U164-1
+Added Pin To Net: NetName=VCC_1 Pin=U165-1
+Added Pin To Net: NetName=VCC_1 Pin=U166-1
+Added Pin To Net: NetName=VCC_1 Pin=U167-1
+Added Pin To Net: NetName=VCC_1 Pin=U168-1
+Added Pin To Net: NetName=VCC_1 Pin=U169-1
+Added Pin To Net: NetName=VCC_1 Pin=U170-1
+Added Pin To Net: NetName=VCC_1 Pin=U171-1
+Added Pin To Net: NetName=VCC_1 Pin=U172-1
+Added Pin To Net: NetName=VCC_1 Pin=U173-1
+Added Pin To Net: NetName=VCC_1 Pin=U174-1
+Added Pin To Net: NetName=VCC_1 Pin=U175-1
+Added Pin To Net: NetName=VCC_1 Pin=U176-1
+Added Pin To Net: NetName=VCC_1 Pin=U177-1
+Added Pin To Net: NetName=VCC_1 Pin=U178-1
+Added Pin To Net: NetName=VCC_1 Pin=U179-1
+Added Pin To Net: NetName=VCC_1 Pin=U180-1
+Change Net Name : Old Net Name=VCC_1 New Net Name=5V

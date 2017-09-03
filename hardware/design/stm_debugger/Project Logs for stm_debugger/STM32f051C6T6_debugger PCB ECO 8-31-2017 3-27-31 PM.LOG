@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=T_SWDIO_IN Pin=R8-1
+Removed Pin From Net: NetName=SWD_IO Pin=R8-2
+Removed Pin From Net: NetName=GND Pin=R11-2
+Removed Pin From Net: NetName=NRST Pin=R12-1
+Removed Pin From Net: NetName=3V3 Pin=R12-2
+Removed Member From Class: ClassName=STM32f051C6T6_debugger Member=R12
+Change Component Footprint: Designator=R8 Old Footprint=AXIAL-0.3 New Footprint=RESC0805(2012)_L
+Change Component Footprint: Designator=R11 Old Footprint=AXIAL-0.3 New Footprint=RESC0805(2012)_L
+Change Component Comment : Designator=R8 Old Comment=Res1 New Comment=1K 5% 0805(2012)
+Change Component Comment : Designator=R11 Old Comment=Res1 New Comment=1K 5% 0805(2012)
+Change component parameters: Designator = "R8"; Footprint = "RESC0805(2012)_L"; UniqueID = "\CRFTOLBS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10000.00 Ohm"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R11"; Footprint = "RESC0805(2012)_L"; UniqueID = "\BNGXTLNF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10000.00 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC0805(2012)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "2012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.125 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10000.00 Ohm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SWD_IO Pin=R1-1
+Added Pin To Net: NetName=T_SWDIO_IN Pin=R1-2
+Added Pin To Net: NetName=GND Pin=R8-2
+Added Pin To Net: NetName=NRST Pin=R11-1
+Added Pin To Net: NetName=3V3 Pin=R11-2
+Added Pin To Net: NetName=NetR8_1 Pin=R8-1
+Added Pin To Net: NetName=NetR8_1 Pin=U4-44
+Added Net: Name=NetR8_1
+Added Member To Class: ClassName=STM32f051C6T6_debugger Member=Component R1 1K 5% 0805(2012)

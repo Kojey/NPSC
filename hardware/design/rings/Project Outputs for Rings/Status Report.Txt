@@ -1,9 +1,11 @@
-Output: Component Cross Reference Report
-Type  : ReportComponents
-From  : Variant [[No Variations]] of Project [Rings Schematics.PrjPcb]
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [Rings.PrjPcb]
+   Generated File[Pick Place for ring.txt]
+   Generated File[Pick Place for ring.csv]
 
 
-Files Generated   : 0
+Files Generated   : 2
 Documents Printed : 0
 
-Finished Output Generation At 04:39:22 AM On 2017/04/19
+Finished Output Generation At 5:26:40 PM On 8/30/2017
