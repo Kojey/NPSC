@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=TEMP Pin=P1-2
+Removed Pin From Net: NetName=LDR Pin=P1-3
+Removed Pin From Net: NetName=GND Pin=P1-4
+Removed Member From Class: ClassName=sensors Member=P1
+Added Pin To Net: NetName=3V3 Pin=R1-1
+Added Pin To Net: NetName=3V3 Pin=T1-1
+Added Net: Name=3V3
