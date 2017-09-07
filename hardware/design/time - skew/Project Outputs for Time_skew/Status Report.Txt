@@ -1,11 +1,9 @@
-Output: Generates pick and place files
-Type  : Pick Place
+Output: Bill of Materials
+Type  : BOM
 From  : Variant [[No Variations]] of Project [Time_skew.PrjPcb]
-   Generated File[Pick Place for Time_skew.txt]
-   Generated File[Pick Place for Time_skew.csv]
 
 
-Files Generated   : 2
+Files Generated   : 0
 Documents Printed : 0
 
-Finished Output Generation At 5:27:41 PM On 8/30/2017
+Finished Output Generation At 10:46:10 AM On 9/7/2017

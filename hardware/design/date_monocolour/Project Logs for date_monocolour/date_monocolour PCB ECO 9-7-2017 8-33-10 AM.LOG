@@ -1,0 +1,114 @@
+Added Component: Designator=P1(5 pins pico-clasp)
+Added Component: Designator=R1(RESC0805(2012)_M)
+Added Component: Designator=R2(RESC0805(2012)_M)
+Added Component: Designator=U1(HDSP-52)
+Added Component: Designator=U2(HDSP-52)
+Added Component: Designator=U3(HDSP-52)
+Added Component: Designator=U(DIP24)
+Added Pin To Net: NetName=5V Pin=P1-1
+Added Pin To Net: NetName=5V Pin=U-19
+Added Net: Name=5V
+Added Pin To Net: NetName=\C\S\ Pin=P1-3
+Added Pin To Net: NetName=\C\S\ Pin=U-12
+Added Net: Name=\C\S\
+Added Pin To Net: NetName=A Pin=U1-11
+Added Pin To Net: NetName=A Pin=U1-16
+Added Pin To Net: NetName=A Pin=U2-11
+Added Pin To Net: NetName=A Pin=U2-16
+Added Pin To Net: NetName=A Pin=U3-11
+Added Pin To Net: NetName=A Pin=U3-16
+Added Pin To Net: NetName=A Pin=U-14
+Added Net: Name=A
+Added Pin To Net: NetName=B Pin=U1-10
+Added Pin To Net: NetName=B Pin=U1-15
+Added Pin To Net: NetName=B Pin=U2-10
+Added Pin To Net: NetName=B Pin=U2-15
+Added Pin To Net: NetName=B Pin=U3-10
+Added Pin To Net: NetName=B Pin=U3-15
+Added Pin To Net: NetName=B Pin=U-16
+Added Net: Name=B
+Added Pin To Net: NetName=CLK Pin=P1-4
+Added Pin To Net: NetName=CLK Pin=U-13
+Added Net: Name=CLK
+Added Pin To Net: NetName=C Pin=U1-3
+Added Pin To Net: NetName=C Pin=U1-8
+Added Pin To Net: NetName=C Pin=U2-3
+Added Pin To Net: NetName=C Pin=U2-8
+Added Pin To Net: NetName=C Pin=U3-3
+Added Pin To Net: NetName=C Pin=U3-8
+Added Pin To Net: NetName=C Pin=U-20
+Added Net: Name=C
+Added Pin To Net: NetName=DIG0 Pin=U1-14
+Added Pin To Net: NetName=DIG0 Pin=U-2
+Added Net: Name=DIG0
+Added Pin To Net: NetName=DIG1 Pin=U1-13
+Added Pin To Net: NetName=DIG1 Pin=U-11
+Added Net: Name=DIG1
+Added Pin To Net: NetName=DIG2 Pin=U2-14
+Added Pin To Net: NetName=DIG2 Pin=U-6
+Added Net: Name=DIG2
+Added Pin To Net: NetName=DIG3 Pin=U2-13
+Added Pin To Net: NetName=DIG3 Pin=U-7
+Added Net: Name=DIG3
+Added Pin To Net: NetName=DIG4 Pin=U3-14
+Added Pin To Net: NetName=DIG4 Pin=U-3
+Added Net: Name=DIG4
+Added Pin To Net: NetName=DIG5 Pin=U3-13
+Added Pin To Net: NetName=DIG5 Pin=U-10
+Added Net: Name=DIG5
+Added Pin To Net: NetName=DIN Pin=P1-1
+Added Pin To Net: NetName=DIN Pin=U-1
+Added Net: Name=DIN
+Added Pin To Net: NetName=DP Pin=U1-4
+Added Pin To Net: NetName=DP Pin=U1-9
+Added Pin To Net: NetName=DP Pin=U2-4
+Added Pin To Net: NetName=DP Pin=U2-9
+Added Pin To Net: NetName=DP Pin=U3-4
+Added Pin To Net: NetName=DP Pin=U3-9
+Added Pin To Net: NetName=DP Pin=U-22
+Added Net: Name=DP
+Added Pin To Net: NetName=D Pin=U1-2
+Added Pin To Net: NetName=D Pin=U1-6
+Added Pin To Net: NetName=D Pin=U2-2
+Added Pin To Net: NetName=D Pin=U2-6
+Added Pin To Net: NetName=D Pin=U3-2
+Added Pin To Net: NetName=D Pin=U3-6
+Added Pin To Net: NetName=D Pin=U-23
+Added Net: Name=D
+Added Pin To Net: NetName=E Pin=U1-1
+Added Pin To Net: NetName=E Pin=U1-5
+Added Pin To Net: NetName=E Pin=U2-1
+Added Pin To Net: NetName=E Pin=U2-5
+Added Pin To Net: NetName=E Pin=U3-1
+Added Pin To Net: NetName=E Pin=U3-5
+Added Pin To Net: NetName=E Pin=U-21
+Added Net: Name=E
+Added Pin To Net: NetName=F Pin=U1-12
+Added Pin To Net: NetName=F Pin=U1-18
+Added Pin To Net: NetName=F Pin=U2-12
+Added Pin To Net: NetName=F Pin=U2-18
+Added Pin To Net: NetName=F Pin=U3-12
+Added Pin To Net: NetName=F Pin=U3-18
+Added Pin To Net: NetName=F Pin=U-15
+Added Net: Name=F
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=R2-1
+Added Pin To Net: NetName=GND Pin=U-4
+Added Pin To Net: NetName=GND Pin=U-9
+Added Net: Name=GND
+Added Pin To Net: NetName=G Pin=U1-7
+Added Pin To Net: NetName=G Pin=U1-17
+Added Pin To Net: NetName=G Pin=U2-7
+Added Pin To Net: NetName=G Pin=U2-17
+Added Pin To Net: NetName=G Pin=U3-7
+Added Pin To Net: NetName=G Pin=U3-17
+Added Pin To Net: NetName=G Pin=U-17
+Added Net: Name=G
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=U-18
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=R2-2
+Added Net: Name=NetR1_2
+Added Class: Name=date_monocolour
+Added Room: Name=date_monocolour
