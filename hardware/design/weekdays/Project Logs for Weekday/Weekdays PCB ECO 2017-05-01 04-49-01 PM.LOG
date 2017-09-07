@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=Dout Pin=P1-4
-Change Component DesignItemId : Designator=P1 Old DesignItemId=MHDR1X4 New DesignItemId=MHDR1X3
-Change Component Footprint: Designator=P1 Old Footprint=MHDR1X4 New Footprint=MHDR1X3
-Change Component Comment : Designator=P1 Old Comment=MHDR1X4 New Comment=
-Change Component Description : Designator=P1 Old Description=Header, 4-Pin New Description=Header, 3-Pin

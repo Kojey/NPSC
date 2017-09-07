@@ -1,4 +1,0 @@
-Change Component Footprint: Designator=P1 Old Footprint=HDR1X3 New Footprint=3 pins pico-clasp
-Change Component Comment : Designator=P1 Old Comment=Header 3 New Comment=pico-clasp-3pins
-Change component parameters: Designator = "P1"; Footprint = "3 pins pico-clasp"; UniqueID = "\PXIQXOVU"
-Change component parameters. Clean all parameters for all variants

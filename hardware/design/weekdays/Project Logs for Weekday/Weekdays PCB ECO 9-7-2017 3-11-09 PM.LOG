@@ -1,5 +1,0 @@
-Removed Pin From Net: NetName=VCC Pin=P1-1
-Removed Pin From Net: NetName=GND Pin=P1-2
-Removed Pin From Net: NetName=Din Pin=P1-3
-Removed Member From Class: ClassName=Weekday Member=P1
-Change Net Name : Old Net Name=VCC New Net Name=5V
