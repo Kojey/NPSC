@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=5V Pin=R1-1
+Change Component Comment : Designator=R1 Old Comment=8M45 1% 0805(2012) New Comment=8K2
+Change Component Designator: OldDesignator=R1 NewDesignator=R2
+Change Component Description : Designator=R2 Old Description=8M45 0.125W 1% 0805 (2012 Metric)  SMD New Description=8K2 0.125W 1% 0805 (2012 Metric)  SMD
+Added Component: Designator=R1(RESC0805(2012)_M)
+Added Pin To Net: NetName=5V Pin=R1-1
+Change Net Name : Old Net Name=3.3V New Net Name=3V3
+Added Pin To Net: NetName=NetR1_2 Pin=R1-2
+Added Pin To Net: NetName=NetR1_2 Pin=R2-1
+Added Net: Name=NetR1_2
+Added Member To Class: ClassName=Date Member=Component R2 8K2

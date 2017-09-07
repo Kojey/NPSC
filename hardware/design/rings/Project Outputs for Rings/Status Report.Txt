@@ -1,9 +1,23 @@
-Output: Bill of Materials
-Type  : BOM
+Output: Gerber Files
+Type  : Gerber
 From  : Variant [[No Variations]] of Project [Rings.PrjPcb]
+   Generated File[ring.GTL]
+   Generated File[ring.GBL]
+   Generated File[ring.GTO]
+   Generated File[ring.GTP]
+   Generated File[ring.GTS]
+   Generated File[ring.GBS]
+   Generated File[ring.GBP]
+   Generated File[ring.GBO]
+   Generated File[ring.GM1]
+   Generated File[ring.GD1]
+   Generated File[ring.GG1]
+   Generated File[ring.RUL]
+   Generated File[ring.EXTREP]
+   Generated File[ring.REP]
 
 
-Files Generated   : 0
+Files Generated   : 14
 Documents Printed : 0
 
-Finished Output Generation At 10:41:01 AM On 9/7/2017
+Finished Output Generation At 6:53:33 PM On 9/7/2017

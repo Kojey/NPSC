@@ -7,10 +7,6 @@ Generating : Top Layer
 
     Adding Layer      : Top Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
     Adding Layer      : Multi-Layer
 
 
@@ -121,6 +117,10 @@ Used DCodes :
     D113
     D114
     D115
+    D116
+    D117
+    D118
+    D119
 *************************************************************
 
 *************************************************************
@@ -129,22 +129,11 @@ Generating : Bottom Layer
 
     Adding Layer      : Bottom Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D110
-    D111
-    D112
-    D113
-    D114
-    D115
     D116
-    D117
     D118
     D119
     D120
@@ -179,6 +168,10 @@ Used DCodes :
     D149
     D150
     D151
+    D152
+    D153
+    D154
+    D155
 *************************************************************
 
 *************************************************************
@@ -187,17 +180,12 @@ Generating : Top Overlay
 
     Adding Layer      : Top Overlay
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
 
 Used DCodes :
-    D112
-    D113
-    D152
-    D153
-    D154
+    D156
+    D157
+    D158
+    D159
 *************************************************************
 
 *************************************************************
@@ -205,10 +193,6 @@ Generating : Top Paste
       File : ring.GTP
 
     Adding Layer      : Top Paste
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
 
     Adding Layer      : Top Layer
 
@@ -316,8 +300,12 @@ Used DCodes :
     D107
     D108
     D109
+    D110
+    D111
     D112
     D113
+    D114
+    D115
 *************************************************************
 
 *************************************************************
@@ -326,23 +314,12 @@ Generating : Top Solder
 
     Adding Layer      : Top Solder
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
     Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D112
-    D113
-    D155
-    D156
-    D157
-    D158
-    D159
     D160
     D161
     D162
@@ -439,27 +416,6 @@ Used DCodes :
     D253
     D254
     D255
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : ring.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D112
-    D113
-    D255
     D256
     D257
     D258
@@ -470,6 +426,21 @@ Used DCodes :
     D263
     D264
     D265
+    D266
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : ring.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
     D266
     D267
     D268
@@ -496,6 +467,17 @@ Used DCodes :
     D289
     D290
     D291
+    D292
+    D293
+    D294
+    D295
+    D296
+    D297
+    D298
+    D299
+    D300
+    D301
+    D302
 *************************************************************
 
 *************************************************************
@@ -504,22 +486,12 @@ Generating : Bottom Paste
 
     Adding Layer      : Bottom Paste
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
     Adding Layer      : Bottom Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D112
-    D113
-    D116
-    D117
-    D118
-    D119
     D120
     D121
     D122
@@ -552,6 +524,9 @@ Used DCodes :
     D149
     D150
     D151
+    D152
+    D153
+    D154
 *************************************************************
 
 *************************************************************
@@ -560,16 +535,11 @@ Generating : Bottom Overlay
 
     Adding Layer      : Bottom Overlay
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
 
 Used DCodes :
-    D112
-    D113
-    D154
-    D292
+    D158
+    D159
+    D303
 *************************************************************
 
 *************************************************************
@@ -578,39 +548,14 @@ Generating : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
 
 Used DCodes :
-    D112
-    D113
-*************************************************************
-
-*************************************************************
-Generating : Mechanical 13
-      File : ring.GM13
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
-
-
-Used DCodes :
-    D112
-    D113
+    D304
 *************************************************************
 
 *************************************************************
 Generating : Drill Drawing
       File : ring.GD1
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
 
     Adding Drill Pair : Top Layer-Bottom Layer
 
@@ -618,19 +563,13 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D112
-    D113
-    D293
-    D294
+    D305
+    D306
 *************************************************************
 
 *************************************************************
 Generating : Drill Guide
       File : ring.GG1
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 13
 
     Adding Drill Pair : Top Layer-Bottom Layer
 
@@ -638,8 +577,6 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D112
-    D113
-    D293
+    D305
 *************************************************************
 

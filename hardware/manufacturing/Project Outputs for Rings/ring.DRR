@@ -1,0 +1,15 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: ring.PcbDoc   9/7/2017  6:42:32 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : ring.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.71mm (27.953mil)       Round          241              2818.66 mm (110.97 Inch)
+T2        2mm (78.74mil)           Round          8                787.43 mm (31.00 Inch)
+---------------------------------------------------------------------------
+Totals                                            249              3606.09 mm (141.97 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:01

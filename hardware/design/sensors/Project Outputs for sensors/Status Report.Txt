@@ -1,9 +1,12 @@
-Output: Bill of Materials
-Type  : BOM
-From  : Variant [[No Variations]] of Project [sensors.PrjPcb]
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [sensors.PrjPcb]
+   Generated File[sensors.TXT]
+   Generated File[sensors.LDP]
+   Generated File[sensors.DRR]
 
 
-Files Generated   : 0
+Files Generated   : 3
 Documents Printed : 0
 
-Finished Output Generation At 10:47:02 AM On 9/7/2017
+Finished Output Generation At 6:52:40 PM On 9/7/2017

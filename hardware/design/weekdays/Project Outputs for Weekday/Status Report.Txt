@@ -1,11 +1,24 @@
-Output: Generates pick and place files
-Type  : Pick Place
+Output: Gerber Files
+Type  : Gerber
 From  : Variant [[No Variations]] of Project [Weekday.PrjPcb]
-   Generated File[Pick Place for Weekdays.txt]
-   Generated File[Pick Place for Weekdays.csv]
+   Generated File[Weekdays.GTL]
+   Generated File[Weekdays.GBL]
+   Generated File[Weekdays.GTO]
+   Generated File[Weekdays.GTP]
+   Generated File[Weekdays.GTS]
+   Generated File[Weekdays.GBS]
+   Generated File[Weekdays.GBP]
+   Generated File[Weekdays.GBO]
+   Generated File[Weekdays.GM1]
+   Generated File[Weekdays.GM13]
+   Generated File[Weekdays.GD1]
+   Generated File[Weekdays.GG1]
+   Generated File[Weekdays.RUL]
+   Generated File[Weekdays.EXTREP]
+   Generated File[Weekdays.REP]
 
 
-Files Generated   : 2
+Files Generated   : 15
 Documents Printed : 0
 
-Finished Output Generation At 5:28:29 PM On 8/30/2017
+Finished Output Generation At 6:47:44 PM On 9/7/2017

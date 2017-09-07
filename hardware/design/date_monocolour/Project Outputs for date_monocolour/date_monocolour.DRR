@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: date_monocolour.PcbDoc   9/7/2017  6:48:44 PM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : date_monocolour.TXT
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.56mm (22.047mil)       Round          24               68.58 mm (2.70 Inch)
+T2        0.6mm (23.622mil)        Round          54               200.50 mm (7.89 Inch)
+T3        0.71mm (27.953mil)       Round          27               204.60 mm (8.05 Inch)
+T4        2mm (78.74mil)           Round          4                141.98 mm (5.59 Inch)
+---------------------------------------------------------------------------
+Totals                                            109              615.66 mm (24.24 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

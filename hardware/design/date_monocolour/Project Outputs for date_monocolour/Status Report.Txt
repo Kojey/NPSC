@@ -1,0 +1,23 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [date_monocolour.PrjPcb]
+   Generated File[date_monocolour.GTL]
+   Generated File[date_monocolour.GBL]
+   Generated File[date_monocolour.GTO]
+   Generated File[date_monocolour.GTP]
+   Generated File[date_monocolour.GTS]
+   Generated File[date_monocolour.GBS]
+   Generated File[date_monocolour.GBP]
+   Generated File[date_monocolour.GBO]
+   Generated File[date_monocolour.GM1]
+   Generated File[date_monocolour.GD1]
+   Generated File[date_monocolour.GG1]
+   Generated File[date_monocolour.RUL]
+   Generated File[date_monocolour.EXTREP]
+   Generated File[date_monocolour.REP]
+
+
+Files Generated   : 14
+Documents Printed : 0
+
+Finished Output Generation At 6:51:01 PM On 9/7/2017
