@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=5V Pin=P1-1
+Removed Pin From Net: NetName=Din Pin=P1-2
+Removed Pin From Net: NetName=GND Pin=P1-3
+Removed Pin From Net: NetName=5V Pin=P2-1
+Removed Pin From Net: NetName=Dout Pin=P2-2
+Removed Pin From Net: NetName=GND Pin=P2-3
+Removed Member From Class: ClassName=ring Member=P1
+Removed Member From Class: ClassName=ring Member=P2
+Change Component Designator: OldDesignator=J1 NewDesignator=R1
+Change Component Designator: OldDesignator=J2 NewDesignator=R2
+Change Component Designator: OldDesignator=J3 NewDesignator=R3
+Change Component Designator: OldDesignator=J4 NewDesignator=R4
+Change Component Designator: OldDesignator=J5 NewDesignator=R5
+Change Component Designator: OldDesignator=J6 NewDesignator=R6
+Change Component Designator: OldDesignator=J7 NewDesignator=R7
+Change Component Designator: OldDesignator=J8 NewDesignator=R8
+Change Component Designator: OldDesignator=J9 NewDesignator=R9
+Change Component Designator: OldDesignator=J10 NewDesignator=R10
+Change Component Designator: OldDesignator=J11 NewDesignator=R11
