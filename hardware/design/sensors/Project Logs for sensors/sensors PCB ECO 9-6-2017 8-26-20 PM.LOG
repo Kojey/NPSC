@@ -1,0 +1,26 @@
+Added Component: Designator=L1(TO-18)
+Added Component: Designator=P1(4 pins pico-clasp)
+Added Component: Designator=R1(RESC0805(2012)_M)
+Added Component: Designator=R2(RESC0805(2012)_M)
+Added Component: Designator=T1(TO-92)
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=R2-2
+Added Pin To Net: NetName=GND Pin=T1-3
+Added Net: Name=GND
+Added Pin To Net: NetName=LDR Pin=L1-1
+Added Pin To Net: NetName=LDR Pin=L1-1
+Added Pin To Net: NetName=LDR Pin=P1-3
+Added Pin To Net: NetName=LDR Pin=R1-2
+Added Net: Name=LDR
+Added Pin To Net: NetName=NetL1_2 Pin=L1-2
+Added Pin To Net: NetName=NetL1_2 Pin=R2-1
+Added Net: Name=NetL1_2
+Added Pin To Net: NetName=TEMP Pin=P1-1
+Added Pin To Net: NetName=TEMP Pin=T1-2
+Added Net: Name=TEMP
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=T1-1
+Added Net: Name=VCC
+Added Class: Name=sensors
+Added Room: Name=sensors
