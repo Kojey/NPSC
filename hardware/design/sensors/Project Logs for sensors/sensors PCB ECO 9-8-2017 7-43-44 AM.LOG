@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=GND Pin=R2-2
+Removed Member From Class: ClassName=sensors Member=R2
+Change Component Comment : Designator=R1 Old Comment=8M45 1% 0805(2012) New Comment=47K 5% 0805(2012)
+Change Component Comment : Designator=T1 Old Comment=Temperature `sensor New Comment=Temperature sensor
+Added Pin To Net: NetName=GND Pin=L1-2
