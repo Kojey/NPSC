@@ -50,20 +50,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Paste
-      File : sensors.GTP
-
-    Adding Layer      : Top Paste
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-*************************************************************
-
-*************************************************************
 Generating : Top Solder
       File : sensors.GTS
 
@@ -100,22 +86,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Paste
-      File : sensors.GBP
-
-    Adding Layer      : Bottom Paste
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D15
-*************************************************************
-
-*************************************************************
 Generating : Bottom Overlay
       File : sensors.GBO
 
@@ -137,32 +107,5 @@ Generating : Mechanical 1
 
 Used DCodes :
     D18
-*************************************************************
-
-*************************************************************
-Generating : Drill Drawing
-      File : sensors.GD1
-
-    Adding Drill Pair : Top Layer-Bottom Layer
-
-    Adding Layer      : Drill Drawing
-
-
-Used DCodes :
-    D27
-    D28
-*************************************************************
-
-*************************************************************
-Generating : Drill Guide
-      File : sensors.GG1
-
-    Adding Drill Pair : Top Layer-Bottom Layer
-
-    Adding Layer      : Drill Guide
-
-
-Used DCodes :
-    D27
 *************************************************************
 
