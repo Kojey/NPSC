@@ -1,12 +1,19 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : Project [Date.PrjPcb]
-   Generated File[Date.TXT]
-   Generated File[Date.LDP]
-   Generated File[Date.DRR]
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [Date.PrjPcb]
+   Generated File[Date.GTL]
+   Generated File[Date.GBL]
+   Generated File[Date.GTO]
+   Generated File[Date.GTS]
+   Generated File[Date.GBS]
+   Generated File[Date.GBO]
+   Generated File[Date.GM1]
+   Generated File[Date.RUL]
+   Generated File[Date.EXTREP]
+   Generated File[Date.REP]
 
 
-Files Generated   : 3
+Files Generated   : 10
 Documents Printed : 0
 
-Finished Output Generation At 8:26:35 PM On 9/7/2017
+Finished Output Generation At 6:22:02 PM On 9/11/2017

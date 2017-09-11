@@ -1,5 +1,9 @@
 ---------------------------------------------------------------------------
+<<<<<<< HEAD
 NCDrill File Report For: sensors.PcbDoc   9/7/2017  6:52:40 PM
+=======
+NCDrill File Report For: sensors.PcbDoc   9/11/2017  6:20:13 PM
+>>>>>>> hardware
 ---------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -9,10 +13,17 @@ Tool         Hole Size           Hole Type     Hole Count Plated       Tool Trav
 ---------------------------------------------------------------------------
 T1        0.45mm (17.716mil)       Round          2                2.50 mm (0.10 Inch)
 T2        0.6mm (23.622mil)        Round          3                2.54 mm (0.10 Inch)
+<<<<<<< HEAD
 T3        0.71mm (27.953mil)       Round          2                8.25 mm (0.32 Inch)
 T4        2mm (78.74mil)           Round          1                0.00 mm (0.00 Inch)
 ---------------------------------------------------------------------------
 Totals                                            8                13.29 mm (0.52 Inch)
+=======
+T3        0.71mm (27.953mil)       Round          2                11.57 mm (0.46 Inch)
+T4        2mm (78.74mil)           Round          1                0.00 mm (0.00 Inch)
+---------------------------------------------------------------------------
+Totals                                            8                16.61 mm (0.65 Inch)
+>>>>>>> hardware
 
 Two holes at same point : 1
 -----------------------

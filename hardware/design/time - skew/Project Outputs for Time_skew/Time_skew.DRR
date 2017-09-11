@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------
-NCDrill File Report For: Time_skew.PcbDoc   9/7/2017  6:45:24 PM
+NCDrill File Report For: Time_skew.PcbDoc   9/11/2017  5:27:05 PM
 ---------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,9 +7,9 @@ ASCII RoundHoles File : Time_skew.TXT
 
 Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
 ---------------------------------------------------------------------------
-T1        0.71mm (27.953mil)       Round          107              601.21 mm (23.67 Inch)
+T1        0.71mm (27.953mil)       Round          107              603.49 mm (23.76 Inch)
 T2        2mm (78.74mil)           Round          4                265.00 mm (10.43 Inch)
 ---------------------------------------------------------------------------
-Totals                                            111              866.21 mm (34.10 Inch)
+Totals                                            111              868.49 mm (34.19 Inch)
 
-Total Processing Time (hh:mm:ss) : 00:00:01
+Total Processing Time (hh:mm:ss) : 00:00:00

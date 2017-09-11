@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: Weekdays.GBR   9/7/2017  6:47:43 PM
+Gerber File Extension Report For: Weekdays.GBR   9/11/2017  6:08:30 PM
 ------------------------------------------------------------------------------------------
 
 
@@ -9,13 +9,8 @@ Layer Extension     Layer Description
 .GTL                Top Layer                               
 .GBL                Bottom Layer                            
 .GTO                Top Overlay                             
-.GTP                Top Paste                               
 .GTS                Top Solder                              
 .GBS                Bottom Solder                           
-.GBP                Bottom Paste                            
 .GBO                Bottom Overlay                          
 .GM1                Mechanical 1                            
-.GM13               Mechanical 13                           
-.GD1                Drill Drawing                           
-.GG1                Drill Guide                             
 ------------------------------------------------------------------------------------------

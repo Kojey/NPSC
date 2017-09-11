@@ -1,5 +1,9 @@
 ------------------------------------------------------------------------------------------
+<<<<<<< HEAD
 Gerber File Extension Report For: sensors.GBR   9/7/2017  6:52:08 PM
+=======
+Gerber File Extension Report For: sensors.GBR   9/11/2017  6:19:41 PM
+>>>>>>> hardware
 ------------------------------------------------------------------------------------------
 
 
@@ -9,6 +13,7 @@ Layer Extension     Layer Description
 .GTL                Top Layer                               
 .GBL                Bottom Layer                            
 .GTO                Top Overlay                             
+<<<<<<< HEAD
 .GTP                Top Paste                               
 .GTS                Top Solder                              
 .GBS                Bottom Solder                           
@@ -17,4 +22,10 @@ Layer Extension     Layer Description
 .GM1                Mechanical 1                            
 .GD1                Drill Drawing                           
 .GG1                Drill Guide                             
+=======
+.GTS                Top Solder                              
+.GBS                Bottom Solder                           
+.GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
+>>>>>>> hardware
 ------------------------------------------------------------------------------------------
