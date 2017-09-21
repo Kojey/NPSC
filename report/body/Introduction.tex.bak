@@ -1,35 +1,29 @@
 \chapter{Introduction}
 
 \section{Background to the study}
-The human behavioural and anatomical activities are influenced by several internal cycles. One of these cycles, the \textbf{circadian rhythm} has been studies for more than \textbf{xx} years and its impacts on the human activity has lead to new interests in regulating these activities. Formally defined as a \textit{"cyclical changes in hormones, body temperature, and other biological processes obver the course of a 24 hour period"} [cite GE, definition], the \textbf{Natural Institute of Health} defines it as \textit{"a physical, mental and behavioural changes that follow a roughly 24-hour cycle, reponding primarily to light and darkness in an organism's environment"}
+The human behavioural and anatomical activities are influenced by several internal cycles. One of these cycles, the \textbf{circadian rhythm} has been studies for more than \textbf{xx} years and its impacts on the human activity has lead to new interests in regulating these activities. Formally defined as a \textit{"cyclical changes in hormones, body temperature, and other biological processes over the course of a 24 hour period"} [1], the \textbf{Natural Institute of Health (NIH)} defines it as \textit{"a physical, mental and behavioural changes that follow a roughly 24-hour cycle, reponding primarily to light and darkness in an organism's environment"}[cite GE, definition]. The circadian rhythm plays an important role as its also affect the human sleeping and rising pattern. The circadian rhythm is influenced by the production of \textit{melatonin} produced by the \textit{pineal gland} whose activitties are dependent on the presence of light on the \textit{retinal-hypothalamic tract}[3].These studies have shown that the presence of light with specifics wavelength at certain period of time during a day can affect the normal sleeping cycle.\\   
+According to the NIH, there is a correlation between long-term health problems and and sleep disorders[1.4]. While stress levels and lifestyles affect the sleeping pattern, there is a strong evidence that light have a greater effect. With the invention of the electric light and the recent human exposure to LED screen, human have more exposure to light. Recent researches have shown that the usage of LED technologies at night is linked to sleep deficiency. Blueish light is said to have an huge impact on one of the human internal clock. Sleep deficiency due to inapropriate light exposure can be cured using an optimal light exposure. Researchers were able to quantify, qualify and time the light that is suitable to maintain the natural sleep-awake cycles.
 
  The impact of light is mostly observed in our daily activities which required identification of object throught vision. This has led to human being more activity during the day (presence of natural light) and not active (sleeping) during the night (absence of light). This behavioural relation between the human activities and light is due to the our anatomical structure. Researchs have shown that the human phisiological activities are regulated by internal clocks with one of them named the \textit{circadian rhythm} being affected by the presence of light.\\
     
-With the recent advance in LED technologies, researches have shown that there is a corolation between the usage of LED technologies at night and sleep deficiency. Blueish light is said to have an huge impact on one of the human internal clock. Sleep deficiency due to inapropriate light exposure and patients with this problem have been cured using an optimal light exposure.\\
+\\
 This study has shown that there is a way to improve the human sleep via light exposure. 
 \section{Objectives of this study}
 \subsection{Problems to be investigated}
-Description of the main questions to be investigated in this study.
+This project investigates the feasability of making user friendly embedded system, relatively cheap that could be used as a personal medical device in solving human sleep disorder.
 \subsection{Purpose of the study}
-Give the significance of investigating these problems. It must be obvious why you are doing this study
-and why it is relevant.
+The purpose of this study is to create a device that can be used to improve the user's sleeping pattern and to create a user friendly and personalisable digital alarm clock. The product would need to be relatively cheap and have more features than its competitor. Ideally, the NPSC would use medical lighting requirements and patterns for its users in order to be used an a prsonal medical device in the cure of sleeping disorder.  
 
 \section{Scope and Limitations}
-The scope of this project involve the design of an functional embedded system named \textbf{NeoPixels Sunrise Clock} aslo known as \textbf{NPSC}, capable of producing light of \textbf{\( 460nm\) with an intensity of 30 lux} as mentioned by the paper \textit{\textbf{"Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor"}}. The code and design artefact repository and a full documentation including a user manual, for anybody who wants to make use of the code design resources, also need to the delivered. Moreover, a descripion of future use of the device in the study of the effect of light on the circadian rhythm will be required.\\
-This project does not study the effect of light on the users. For ethical reasons, the \textbf{NPSC} will not be tested  on human subjects in real situations of either waking humans or including lighting to facilitate sleep at night. Instead the system will be tested based on the recommendation from the research  literature.\\
-The design and creation of the \textbf{NPSC} is subject to several constraints listed below:
+The scope of this project involve the design of an functional embedded system named \textbf{NeoPixels Sunrise Clock} aslo known as \textbf{NPSC}, capable of producing light of $460nm$ with an intensity of $30 lux$ as mentioned by the paper \textit{\textbf{"Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor"}}. The code and design artefact repository and a full documentation including a user manual, for anybody who wants to make use of the code design resources, also need to the delivered. Moreover, a descripion of future use of the device in the study of the effect of light on the circadian rhythm will be required.\\
+This project does not study the effect of light on the users. For ethical reasons, the NPSC will not be tested  on human subjects in real situations of either waking humans or including lighting to facilitate sleep at night. Instead the system will be tested based on the recommendation from the research  literature.\\
+The design and creation of the NPSC is subject to several constraints listed below:
 \begin{itemize}
 \item \textbf{Time:} The project has a duration of 12 weeks within which the research, design, development, implementation, verification, and report writing need to be done.
-\item \textbf{Money:}  The project is allocated a budget of \textbf{R1000}
-\
-\item[Light:]
-\item[Size:]
-\item[Research:]
+\item \textbf{Money:} The project budget allocation is \textbf{R1000}
+\item \textbf{Light:} The NPSC must be able able to produce blue light with wavelength of $460nm$ while providing enought light to meet the requirement of the research paper and provide a various range of colour for sunrise simulation. These requirements narrow the options for choosing the right light emmiters.
+\item \textbf{Size:} The NPSC is meant to be a bedside lamp, this implies that it should have a relatively small size to be able to fit on a $50cm*50cm$ bedside table.
 \end{itemize}
-Scope indicates to the reader what has and has not been included in the study. Limitations tell the
-reader what factors influenced the study such as sample size, time etc. It is not a section for excuses as
-to why your project may or may not have worked.
-
 \section{Plan of development}
 Here you tell the reader how your report has been organised and what is included in each
 chapter.
