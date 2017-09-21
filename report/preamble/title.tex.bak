@@ -2,27 +2,31 @@
 \thispagestyle{empty}
 {\Huge \begin{center}
 % Modify the line below to insert your title.
-NeoPixel Sunrise Clock
-\hrule 
+\textcolor{MidnightBlue}{\textbf{NeoPixel Sunrise Clock}}
+\vskip 1mm
+\color{MidnightBlue} \hrule
 % Modify the line below to insert your subtitle.
-{\Large Insert a subtitle here (if applicable)}
+{\Large An intelligent bed lamp}
 \end{center}}
 
 \vskip 5mm
 \begin{center}
-\- \- \- \- \- \- \- \- \- \-\includegraphics[scale = 0.3]{uctLogo.png}
+\includegraphics[scale = 0.3]{uctLogo.png}
 \end{center}
 
 \vskip 5mm
 \begin{center}
 Presented by:\\
-Othniel Konan		% Insert your name here
+\textbf{Othniel Konan}\\		% Insert your name here
+KNNOTH001\\
+Dept. of Electrical and Electronics Engineering\\University of Cape Town
+
 \end{center}
 
 \vskip 10mm
 \begin{center}
 Prepared for:\\
-S. Winberg and J. Pead\\ 		% Insert your supervisor's name here.
+\textbf{Simon Winberg \& Justin Pead}\\ 		% Insert your supervisor's name here.
 Dept. of Electrical and Electronics Engineering\\University of Cape Town
 \end{center}
 
@@ -37,4 +41,9 @@ fulfilment of the academic requirements for a Bachelor of Science degree in Elec
 
 \vskip 5mm
 \begin{center}{\bf \today}
+\end{center}
+
+\vskip 5mm
+\begin{center}
+\textbf{Key Words:} Neopixels, Circadian rhythm, STM, Blue light
 \end{center}

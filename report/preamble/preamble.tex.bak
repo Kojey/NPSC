@@ -10,6 +10,10 @@
 \usepackage{hyphenat}
 \usepackage{setspace}
 \usepackage{hyperref}
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+%\usepackage{mathptmx}
+
 
 % Include page formatting here. 
 \parskip = 6mm
