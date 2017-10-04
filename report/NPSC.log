@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  21 SEP 2017 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  4 OCT 2017 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -350,7 +350,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
-))) (./NPSC.aux
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)) (./NPSC.aux
 (./body/Introduction.aux) (./body/Literature.aux) (./body/Methodology.aux)
 (./body/Results.aux) (./body/Discussion.aux) (./body/Conclusions.aux)
 (./body/Recommendations.aux) (./bibliography/References.aux)
@@ -457,17 +461,18 @@ LaTeX Info: Redefining \nameref on input line 14.
 \openout3 = `NPSC.out'.
 
  (./preamble/title.tex
-<uctLogo.png, id=76, 418.56375pt x 425.59pt>
-File: uctLogo.png Graphic file (type png)
- <use uctLogo.png>
-Package pdftex.def Info: uctLogo.png used on input line 14.
+<./figures/uctLogo.png, id=80, 418.56375pt x 425.59pt>
+File: ./figures/uctLogo.png Graphic file (type png)
+
+<use ./figures/uctLogo.png>
+Package pdftex.def Info: ./figures/uctLogo.png used on input line 14.
 (pdftex.def)             Requested size: 125.57008pt x 127.67798pt.
 ) [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./uctLogo.png>] [2]
-(./preamble/plagiarism.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/uctLogo.png>] [2
+] (./preamble/plagiarism.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
@@ -498,13 +503,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `NPSC.toc'.
 
  [4] (./NPSC.lof
-Overfull \hbox (31.93706pt too wide) in paragraph at lines 3--3
+Overfull \hbox (31.93706pt too wide) in paragraph at lines 5--5
  [][] [][]\OT1/cmr/m/n/12 A block diagram illustrating the connections to the I
 RQ pin on the MCS08GT16A 
  []
 
 
-Overfull \hbox (3.08855pt too wide) in paragraph at lines 3--3
+Overfull \hbox (3.08855pt too wide) in paragraph at lines 5--5
  \OT1/cmr/m/n/12 microcontroller (Please note that your headings should be shor
 t descriptions 
  []
@@ -538,28 +543,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.6 
+l.8 
      [1
 
 
 ]
-Overfull \hbox (6.97455pt too wide) in paragraph at lines 9--10
+Overfull \hbox (6.97455pt too wide) in paragraph at lines 13--14
 \OT1/cmr/m/n/12 This project investigates the feasability of making user friend
 ly embedded system, relatively
  []
 
 
-Overfull \hbox (5.39557pt too wide) in paragraph at lines 14--17
+Overfull \hbox (5.39557pt too wide) in paragraph at lines 21--24
 \OT1/cmr/m/n/12 with an intensity of $30\OML/cmm/m/it/12 lux$ \OT1/cmr/m/n/12 a
 s mentioned by the paper \OT1/cmr/bx/it/12 "Action Spectrum for Melatonin
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 18.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -571,22 +576,64 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.19 \item \textbf
+l.26 \item \textbf
                   {Money:} The project budget allocation is \textbf{R1000}
-[2])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) 
-has been already used, duplicate ignored
+[2] <./figures/gantt_chart.png, id=180, 1329.96875pt x 442.65375pt>
+File: ./figures/gantt_chart.png Graphic file (type png)
+
+<use ./figures/gantt_chart.png>
+Package pdftex.def Info: ./figures/gantt_chart.png used on input line 38.
+(pdftex.def)             Requested size: 465.49603pt x 154.93112pt.
+
+Overfull \hbox (12.52814pt too wide) in paragraph at lines 38--39
+ [][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 }
-       [3]
+l.43 \begin{landscape}
+                       [3 <./figures/gantt_chart.png>]
+<./figures/wbs.jpg, id=186, 2171.11125pt x 827.09pt>
+File: ./figures/wbs.jpg Graphic file (type jpg)
+ <use ./figures/wbs.jpg>
+Package pdftex.def Info: ./figures/wbs.jpg used on input line 46.
+(pdftex.def)             Requested size: 759.90033pt x 289.48582pt.
+
+Overfull \hbox (59.39346pt too wide) in paragraph at lines 46--47
+ [][] 
+ []
+
+[4
+
+ <./figures/wbs.jpg>]
+Overfull \hbox (2.83232pt too wide) in paragraph at lines 57--58
+[]\OT1/cmr/bx/n/12 Introduction: \OT1/cmr/m/n/12 The feasability of the project
+ as well as its scope and limitations
+ []
+
+
+Overfull \hbox (0.77231pt too wide) in paragraph at lines 63--64
+[]\OT1/cmr/bx/n/12 Results: \OT1/cmr/m/n/12 This section displays the results o
+f the hardware and software testing. 
+ []
+
+) [5
+
+]
 \openout2 = `body/Literature.aux'.
 
  (./body/Literature.tex
 Chapter 2.
-<model.png, id=169, 650.43pt x 396.48125pt>
-File: model.png Graphic file (type png)
- <use model.png>
-Package pdftex.def Info: model.png used on input line 26.
+
+LaTeX Warning: Citation `jct2010' on page 6 undefined on input line 3.
+
+<./figures/model.png, id=198, 650.43pt x 396.48125pt>
+File: ./figures/model.png Graphic file (type png)
+
+<use ./figures/model.png>
+Package pdftex.def Info: ./figures/model.png used on input line 26.
 (pdftex.def)             Requested size: 317.07614pt x 193.28534pt.
 
 Underfull \hbox (badness 1642) in paragraph at lines 28--28
@@ -594,16 +641,16 @@ Underfull \hbox (badness 1642) in paragraph at lines 28--28
 ld be short
  []
 
-) [4
+) [6
 
 
 
-] [5 <./model.png>]
+] [7 <./figures/model.png>]
 \openout2 = `body/Methodology.aux'.
 
  (./body/Methodology.tex
 Chapter 3.
-) [6
+) [8
 
 
 
@@ -618,7 +665,7 @@ Overfull \hbox (12.93237pt too wide) in paragraph at lines 4--6
 aphs where necessary. Remember
  []
 
-) [7
+) [9
 
 
 
@@ -627,7 +674,7 @@ aphs where necessary. Remember
 
  (./body/Discussion.tex
 Chapter 5.
-) [8
+) [10
 
 
 
@@ -636,7 +683,7 @@ Chapter 5.
 
  (./body/Conclusions.tex
 Chapter 6.
-) [9
+) [11
 
 
 
@@ -645,24 +692,31 @@ Chapter 6.
 
  (./body/Recommendations.tex
 Chapter 7.
-) [10
+) [12
 
 
 
 ]
 \openout2 = `bibliography/References.aux'.
 
- (./bibliography/References.tex [11
+ (./bibliography/References.tex [13
 
 
-]) [12
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+) [14
 
 ]
 \openout2 = `appendices/appendixa.aux'.
 
  (./appendices/appendixa.tex
 Appendix A.
-) [13
+) [15
 
 
 
@@ -671,7 +725,7 @@ Appendix A.
 
  (./appendices/appendixb.tex
 Appendix B.
-) [14
+) [16
 
 
 
@@ -686,25 +740,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
 (./appendices/appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package rerunfilecheck Info: File `NPSC.out' has not changed.
+(rerunfilecheck)             Checksum: F95BD5999AC155263376B39DD4D766CF;1153.
 
 
-Package rerunfilecheck Warning: File `NPSC.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `NPSC.out':
-(rerunfilecheck)             Before: C1303DEEFCBF36F94D473DDF92619504;1060
-(rerunfilecheck)             After:  02A4CF8E406FAE25D4F3C93E868A3BA1;1362.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
  ) 
 Here is how much of TeX's memory you used:
- 7556 strings out of 493029
- 107462 string characters out of 6136234
- 211774 words of memory out of 5000000
- 10835 multiletter control sequences out of 15000+600000
+ 7595 strings out of 493029
+ 108175 string characters out of 6136234
+ 212446 words of memory out of 5000000
+ 10862 multiletter control sequences out of 15000+600000
  11115 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 33i,11n,45p,1189b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,11n,45p,1188b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -712,10 +763,10 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on NPSC.pdf (23 pages, 275855 bytes).
+Output written on NPSC.pdf (25 pages, 554095 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 220 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

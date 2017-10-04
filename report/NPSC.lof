@@ -1,6 +1,8 @@
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt chart showing the timeline of every task in the project as well as its critical path.}}{3}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Report breakdown detailing the different sections needed to be included in the report.}}{4}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please note that your headings should be short descriptions of what is in the diagram not simply the figure title)}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please note that your headings should be short descriptions of what is in the diagram not simply the figure title)}}{7}{figure.2.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

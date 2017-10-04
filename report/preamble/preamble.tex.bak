@@ -12,8 +12,9 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage[dvipsnames]{xcolor}
-%\usepackage{mathptmx}
+\usepackage{pdflscape}
 
+\graphicspath{{./figures/}}
 
 % Include page formatting here. 
 \parskip = 6mm
