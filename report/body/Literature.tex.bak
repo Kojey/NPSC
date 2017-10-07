@@ -64,15 +64,17 @@ The same concept has been used to create a home bed lamp or alarm clock facilita
 \subsubsection{Philips Sunrise Alarm Clock}
 Philips has created a broad range of sunrise alarm clocks. The recent versions are able to simulate sunrise and sunset which last from 20 to 40 mn, are able to be controlled by a smartphone application, and have many other functions. More importantly, they are the only wake-up lamp clinically proven to work \cite{philips}. 
 
-\begin{figure}[ht]
+\begin{figure}[htbp]
 \centering
-\begin{minipage}[b]{0.45\textwidth}
-\includegraphics[scale=0.4]{philips1.png}
-\subcaption[first caption.]{HF3531/60, coloured sunrise\\ simulation, 7 natural sounds, Tap\\ snooze and reading lamp, midnight\\ light function}
+\begin{minipage}[b]{0.4\textwidth}
+\centering
+\includegraphics[scale=0.3]{philips1.png}
+\subcaption[first caption.]{HF3531/60, coloured sunrise simulation, 7 natural sounds, Tap snooze and reading lamp, midnight light function}
 \label{fig:philips1}
 \end{minipage}
-\begin{minipage}[b]{0.45\textwidth}
-\includegraphics[scale=0.35]{philips2.jpeg}
+\begin{minipage}[b]{0.4\textwidth}
+\centering
+\includegraphics[scale=0.3]{philips2.jpeg}
 \subcaption[second caption.]{HF3551/60, coloured sunrise simulation, 7 natural sounds, Tap snooze and reading lamp, midnight light function, Operated by iPhone App}
 \label{fig:philips2}
 \end{minipage}

@@ -3,10 +3,36 @@ Please remember that the majority of your referenced work should be from journal
 reports and books not online sources such as Wikipedia.
 
 \begin{thebibliography}{5}
+% GE Lighting, lighting and sleep
 \bibitem{ge2014} General Electric Company, ``GE Lighting, lighting and sleep'', December 2014.
+% Circadian and Light Effects on Human Sleepiness-Alertness
 \bibitem{cir2014} C. Cajochen, S. L. Chellappa and C. Schmidt, ``Circadian and Light Effects on Human Sleepiness-Alertness'', \emph{Sleepiness and Human Impact Assessment}, pp. 9-22, 2014.
+% Light, Melatonin and Sleep-Wake Cycle
 \bibitem{lig1994} Gregory M. Brown, ``Light, Melatonin and Sleep-Wake Cycle'', \emph{Journal Psychriatry Neurosci}, {\bf vol. 19(5)}, pp. 345-353, Nov 1994.
+% Blue light from light-emitting diodes elicits a dose-dependent suppression of melatonin in humans
 \bibitem{bl2010} K. E. West, M. R. Jablonski, B. Warfield, K. S. Cecil, M. James, M. A. Ayers, J. Maida, C. Bowen, D. H. Sliney, M. D. Rollag, J. P. Hanifn and G. C. Brainard, ``Blue light from light-emitting diodes elicits a dose-dependent suppression of melatonin in humans'', \emph{Journal Appl Physiol}, {\bf vol. 110}, pp. 619-626, 16 Dec 2010.
+% Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor
 \bibitem{ac2001} George C. Brainard, John P. Hanifin, Jeffrey M. Greeson, Brenda Byrne, Gena Glickman, Edward Gerner and Mark D. Rollag, ``Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor'', \emph{Journal of Neuroscience}, {\bf vol. 21(16)}, pp. 6405-6412, 15 Au 2001.
-\bibitem{ph2002} Berson, D. M., F. A. Dunn, and M. Takao. “Phototransduction by Retinal Ganglion Cells That Set the Circadian Clock.” \emph{Science}, {\bf vol. 295}, pp. 1070-073, 2002.
+% Phototransduction by Retinal Ganglion Cells That Set the Circadian Clock.
+\bibitem{ph2002} Berson, D. M., F. A. Dunn, and M. Takao. ``Phototransduction by Retinal Ganglion Cells That Set the Circadian Clock.'' \emph{Science}, {\bf vol. 295}, pp. 1070-073, 2002.
+% An action spectrum for melatonin suppression: evidence for a novel non-rod, non-cone photoreceptor system in humans
+\bibitem{an2001} Kavita Thapan, Josephine Arendt and Debra J. Skene, ``An action spectrum for melatonin suppression: evidence for a novel non-rod, non-cone photoreceptor system in humans'', \emph{Journal of Physiology}, {\bf vol. 535.1}, pp.261-267, July 2001.
+% Dose-response  relationship  for  light  intensity  and  ocular  and electroencephalographic  correlates  of  human  alertness
+\bibitem{do2000} Christian  Cajochen*,  Jamie  M.  Zeitzer,  Charles  A.  Czeisler,  Derk-Jan  Dijk, ``Dose-response  relationship  for  light  intensity  and  ocular  and electroencephalographic  correlates  of  human  alertness'', \emph{Behavioural Brain Research }, {\bf vol. 115}, pp.75-83, May 2000.
+% Early versus late bedtimes phase shift the human dim light melatonin rhythm despite a fixed morning lights on time
+\bibitem{ea2004} Helen J. Burgess and Charmane I. Eastman, ``Early versus late bedtimes phase shift the human dim light melatonin rhythm despite a fixed morning lights on time'', \emph{Neurosci Lett.}, {\bf vol. 356(2)}, pp. 115–118, Feb 2004.
+% Home Lighting Before Usual Bedtime Impacts Circadian Timing: A Field Study
+\bibitem{ho2014} Helen J. Burgess and Thomas A. Molina, ``Home Lighting Before Usual Bedtime Impacts Circadian Timing: A Field Study'', \emph{Photochem Photobiol.}, {\bf vol. 90(3)}, pp. 723–726, 2014.
+% Lighting for Health: LEDs in the New Age of Illumination
+\bibitem{ho2014} US Department of Energy, ``Lighting for Health: LEDs in the New Age of Illumination'', \emph{Solid-State Lighting Technology Fact Sheet }, 2014.
+% A Working Threshold for Acute Nocturnal Melatonin Suppression from “White”Light Sources used in Architectural Applications
+\bibitem{aw2013} Mark S. Rea and Mariana G. Figueiro, ``A Working Threshold for Acute Nocturnal Melatonin Suppression from “White”Light Sources used in Architectural Applications'', \emph{Lighting Research Center, Rensselaer Polytechnic Institute, Troy, New York, USA}, 2013.
+% Internal rhythms in humans
+\bibitem{in1996} Derk-Jan Dijk, ``Internal rhythms in humans'', \emph{CELL \& DEVELOPMENTAL BIOLOGY}, {\bf vol. 7}, pp. 831-836, 1996.
+% Scientific Background Discoveries of Molecular Mechanisms Controlling the Circadian Rhythm
+\bibitem{sc2017} ``Scientific Background Discoveries of Molecular Mechanisms Controlling the Circadian Rhythm'', \emph{The Nobel Assembly at Karolinska Institutet}, 2017.
+% Is sleep fundamentally different between mammalian species?
+\bibitem{is1995} Tobler I., ``Is sleep fundamentally different between mammalian species?'', \emph{Behav Brain Res.}, {\bf vol. 69(1-2)}, pp. 35-41, Jul-Aug 1995.
+% GE Sol
+\bibitem{gesol} GE sol, [Online], available at: https://www.cbyge.com/products/sol
 \end{thebibliography}
