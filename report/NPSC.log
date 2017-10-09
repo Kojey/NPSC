@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  8 OCT 2017 00:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  9 OCT 2017 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,10 +356,59 @@ File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2230.
+LaTeX Info: Redefining \cref on input line 2230.
+LaTeX Info: Redefining \Cref on input line 2230.
+LaTeX Info: Redefining \crefrange on input line 2230.
+LaTeX Info: Redefining \Crefrange on input line 2230.
+LaTeX Info: Redefining \cpageref on input line 2230.
+LaTeX Info: Redefining \Cpageref on input line 2230.
+LaTeX Info: Redefining \cpagerefrange on input line 2230.
+LaTeX Info: Redefining \Cpagerefrange on input line 2230.
+LaTeX Info: Redefining \labelcref on input line 2230.
+LaTeX Info: Redefining \labelcpageref on input line 2230.
+Package cleveref Info: `amsthm' support loaded on input line 2858.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen133
 )) (./NPSC.aux
-(./body/Introduction.aux) (./body/Literature.aux) (./body/Methodology.aux)
-(./body/Results.aux) (./body/Discussion.aux) (./body/Conclusions.aux)
-(./body/Recommendations.aux) (./bibliography/References.aux
+(./body/Introduction.aux) (./body/Literature.aux
+
+LaTeX Warning: Label `fig:philips1' multiply defined.
+
+
+LaTeX Warning: Label `fig:philips1@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:philips1' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:philips1@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:philips2' multiply defined.
+
+
+LaTeX Warning: Label `fig:philips2@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:philips2' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:philips2@cref' multiply defined.
+
+
+LaTeX Warning: Label `philips' multiply defined.
+
+
+LaTeX Warning: Label `philips@cref' multiply defined.
+
+) (./body/Design.aux) (./body/Implementation.aux) (./body/Results.aux)
+(./body/Discussion.aux) (./body/Conclusions.aux) (./body/Recommendations.aux)
+(./bibliography/References.aux
 
 LaTeX Warning: Label `ho2014' multiply defined.
 
@@ -418,13 +467,13 @@ LaTeX Font Info:    ... okay on input line 14.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
-\scratchdimen=\dimen133
+\scratchdimen=\dimen134
 \scratchbox=\box28
 \nofMPsegments=\count118
 \nofMParguments=\count119
 \everyMPshowfont=\toks27
 \MPscratchCnt=\count120
-\MPscratchDim=\dimen134
+\MPscratchDim=\dimen135
 \MPnumerator=\count121
 \makeMPintoPDFobject=\count122
 \everyMPtoPDFconversion=\toks28
@@ -469,7 +518,7 @@ LaTeX Info: Redefining \nameref on input line 14.
 \openout3 = `NPSC.out'.
 
  (./preamble/title.tex
-<./figures/uctLogo.png, id=285, 418.56375pt x 425.59pt>
+<./figures/uctLogo.png, id=353, 418.56375pt x 425.59pt>
 File: ./figures/uctLogo.png Graphic file (type png)
 
 <use ./figures/uctLogo.png>
@@ -506,31 +555,31 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
-] [4] [5])
+] [4] [5] [6])
 \tf@toc=\write4
 \openout4 = `NPSC.toc'.
 
 
-[6] (./NPSC.lof)
+[7] (./NPSC.lof)
 \tf@lof=\write5
 \openout5 = `NPSC.lof'.
 
- [7
+ [8
 
 ] (./NPSC.lot)
 \tf@lot=\write6
 \openout6 = `NPSC.lot'.
 
- [8
+ [9
 
 ]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 76.
+less on input line 77.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 76.
+less on input line 77.
 
 \openout2 = `body/Introduction.aux'.
 
@@ -575,7 +624,7 @@ been already used, duplicate ignored
                    \relax 
 l.35 \item \textbf
                   {Money:} The project budget allocation is \textbf{R1000}
-[2] <./figures/gantt_chart.png, id=446, 1329.96875pt x 442.65375pt>
+[2] <./figures/gantt_chart.png, id=552, 1329.96875pt x 442.65375pt>
 File: ./figures/gantt_chart.png Graphic file (type png)
 
 <use ./figures/gantt_chart.png>
@@ -592,7 +641,7 @@ been already used, duplicate ignored
                    \relax 
 l.55 \begin{landscape}
                        [3 <./figures/gantt_chart.png>]
-<./figures/wbs.jpg, id=452, 2171.11125pt x 827.09pt>
+<./figures/wbs.jpg, id=558, 2171.11125pt x 827.09pt>
 File: ./figures/wbs.jpg Graphic file (type jpg)
  <use ./figures/wbs.jpg>
 Package pdftex.def Info: ./figures/wbs.jpg used on input line 58.
@@ -633,11 +682,7 @@ xternal stimuli (entertainable),
 
 
 
-]
-
-LaTeX Warning: Citation `lo1994' on page 7 undefined on input line 26.
-
-[7]
+] [7]
 Overfull \hbox (7.93176pt too wide) in paragraph at lines 32--33
 []\OT1/cmr/bx/n/12 Blue LED light has an increased melatonin supression followi
 ng an increase
@@ -656,62 +701,127 @@ Overfull \hbox (1.13747pt too wide) in paragraph at lines 38--39
  in \OT1/cmr/bx/it/12 Plasma
  []
 
-[8] <./figures/sol1.jpg, id=493, 1204.5pt x 1204.5pt>
+[8] <./figures/sol1.jpg, id=601, 1204.5pt x 1204.5pt>
 File: ./figures/sol1.jpg Graphic file (type jpg)
  <use ./figures/sol1.jpg>
 Package pdftex.def Info: ./figures/sol1.jpg used on input line 60.
 (pdftex.def)             Requested size: 240.89574pt x 240.89574pt.
 
-[9] <./figures/philips1.png, id=500, 495.8525pt x 436.63126pt>
+[9] <./figures/philips1.png, id=611, 495.8525pt x 436.63126pt>
 File: ./figures/philips1.png Graphic file (type png)
 
 <use ./figures/philips1.png>
-Package pdftex.def Info: ./figures/philips1.png used on input line 70.
+Package pdftex.def Info: ./figures/philips1.png used on input line 71.
 (pdftex.def)             Requested size: 198.33748pt x 174.6494pt.
 
-<./figures/philips2.jpeg, id=501, 590.205pt x 501.875pt>
+<./figures/philips2.jpeg, id=612, 590.205pt x 501.875pt>
 File: ./figures/philips2.jpeg Graphic file (type jpg)
 
 <use ./figures/philips2.jpeg>
-Package pdftex.def Info: ./figures/philips2.jpeg used on input line 75.
+Package pdftex.def Info: ./figures/philips2.jpeg used on input line 76.
 (pdftex.def)             Requested size: 206.57484pt x 175.65887pt.
 
-Overfull \hbox (2.74068pt too wide) in paragraph at lines 75--76
+Overfull \hbox (2.74068pt too wide) in paragraph at lines 76--77
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--76
+Underfull \hbox (badness 10000) in paragraph at lines 77--77
 []\OT1/cmr/m/n/10.95 (b) |HF3551/60, coloured sunrise
  []
 
-
-Overfull \hbox (2.14378pt too wide) in paragraph at lines 86--86
-[]\OT1/cmr/bx/n/17.28 Hardware modules and PCB design requirements 
+[10 <./figures/sol1.jpg>]
+Overfull \hbox (14.37547pt too wide) in paragraph at lines 101--102
+[]\OT1/cmr/bx/n/12 Number of pins: \OT1/cmr/m/n/12 How familliar are we with th
+e microcontroller (time is a constraint)? 
  []
 
-[10 <./figures/sol1.jpg>] [11 <./figures/philips1.png> <./figures/philips2.jpeg
->] [12]) [13]
-\openout2 = `body/Methodology.aux'.
+[11 <./figures/philips1.png> <./figures/philips2.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--112
+[]\OT1/cmr/bx/n/12 Arduino
+ []
 
- (./body/Methodology.tex
+
+Overfull \hbox (2.8951pt too wide) in paragraph at lines 112--112
+[]\OT1/cmr/bx/n/12 Raspberry
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]\OT1/cmr/m/n/12 dual-core, dual-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]\OT1/cmr/m/n/12 1GHz
+ []
+
+
+Overfull \hbox (3.74303pt too wide) in paragraph at lines 116--116
+[]\OT1/cmr/m/n/12 MicroSDHC| 
+ []
+
+
+Overfull \hbox (3.53464pt too wide) in paragraph at lines 108--122
+ [][] 
+ []
+
+[12] <./figures/resistiveTouch.jpg, id=646, 301.125pt x 234.8775pt>
+File: ./figures/resistiveTouch.jpg Graphic file (type jpg)
+
+<use ./figures/resistiveTouch.jpg>
+Package pdftex.def Info: ./figures/resistiveTouch.jpg used on input line 179.
+(pdftex.def)             Requested size: 120.44786pt x 93.94933pt.
+
+<./figures/capacitiveTouch.jpg, id=649, 371.3875pt x 290.08376pt>
+File: ./figures/capacitiveTouch.jpg Graphic file (type jpg)
+
+<use ./figures/capacitiveTouch.jpg>
+Package pdftex.def Info: ./figures/capacitiveTouch.jpg used on input line 184.
+(pdftex.def)             Requested size: 129.98756pt x 101.53082pt.
+
+Overfull \hbox (16.81427pt too wide) in paragraph at lines 173--191
+\OT1/cmr/m/n/12 Resistive touch-screen are less complex than capacitive touch-s
+creen, thus cheaper. Moreover,
+ []
+
+[13] [14 <./figures/resistiveTouch.jpg> <./figures/capacitiveTouch.jpg>]
+<./figures/nrz.png, id=671, 555.07375pt x 325.215pt>
+File: ./figures/nrz.png Graphic file (type png)
+ <use ./figures/nrz.png>
+Package pdftex.def Info: ./figures/nrz.png used on input line 209.
+(pdftex.def)             Requested size: 222.02556pt x 130.0837pt.
+
+[15 <./figures/nrz.png>]) [16]
+\openout2 = `body/Design.aux'.
+
+ (./body/Design.tex
 Chapter 3.
-[14
+[17
 
 
 
-] [15] [16]) [17]
+] [18] [19]) [20]
+\openout2 = `body/Implementation.aux'.
+
+ (./body/Implementation.tex
+Chapter 4.
+[21
+
+
+
+]) [22]
 \openout2 = `body/Results.aux'.
 
  (./body/Results.tex
-Chapter 4.
+Chapter 5.
 
 Overfull \hbox (12.93237pt too wide) in paragraph at lines 4--6
 []\OT1/cmr/m/n/12 Present your results in a suitable format using tables and gr
 aphs where necessary. Remember
  []
 
-) [18
+) [23
 
 
 
@@ -719,8 +829,8 @@ aphs where necessary. Remember
 \openout2 = `body/Discussion.aux'.
 
  (./body/Discussion.tex
-Chapter 5.
-) [19
+Chapter 6.
+) [24
 
 
 
@@ -728,8 +838,8 @@ Chapter 5.
 \openout2 = `body/Conclusions.aux'.
 
  (./body/Conclusions.tex
-Chapter 6.
-) [20
+Chapter 7.
+) [25
 
 
 
@@ -737,15 +847,15 @@ Chapter 6.
 \openout2 = `body/Recommendations.aux'.
 
  (./body/Recommendations.tex
-Chapter 7.
-) [21
+Chapter 8.
+) [26
 
 
 
 ]
 \openout2 = `bibliography/References.aux'.
 
- (./bibliography/References.tex [22
+ (./bibliography/References.tex [27
 
 
 ]
@@ -755,7 +865,7 @@ Missing character: There is no ì in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ì in font cmr12!
- [23
+ [28
 
 ]
 Missing character: There is no ‚ in font cmr12!
@@ -765,29 +875,101 @@ Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ù in font cmr12!
 
-Underfull \hbox (badness 1748) in paragraph at lines 33--35
+Underfull \hbox (badness 1748) in paragraph at lines 37--39
 []\OT1/cmr/m/n/12 ``Scientific Background Discoveries of Molecular Mechanisms C
 ontrolling the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 43--45
 []\OT1/cmr/m/n/12 Philips, [Online], available at: https://www.usa.philips.com/
 c-p/HF3550[]-
  []
 
-) [24pdfTeX warning (ext4): destination with the same identifier (name{cite.ho2
-014}) has been already used, duplicate ignored
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+[]\OT1/cmr/m/n/12 ``Arduino Due Specifications'', \OT1/cmr/m/it/12 Arduino\OT1/
+cmr/m/n/12 , [Online], available at:
+ []
+
+
+Underfull \hbox (badness 5431) in paragraph at lines 55--57
+[]\OT1/cmr/m/n/12 ``Intel Edison Specifications'', \OT1/cmr/m/it/12 Intel\OT1/c
+mr/m/n/12 , [Online], available at: https://cdn-
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 57--59
+[]\OT1/cmr/m/n/12 ``Raspberry Pi Zero Specifications'', \OT1/cmr/m/it/12 Raspbe
+rry Pi\OT1/cmr/m/n/12 , [Online], available at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+[]\OT1/cmr/m/n/12 ``STM32F407VGT6 Specifications'', \OT1/cmr/m/it/12 STM microe
+lectronics\OT1/cmr/m/n/12 , [Online],
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+\OT1/cmr/m/n/12 available at: http://www.st.com/en/microcontrollers/stm32f407-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+[]\OT1/cmr/m/n/12 Tom Tyson, ``Serial EEPROM Solutions vs. Parallel Solutions''
+,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
+\OT1/cmr/m/it/12 Memory Products Division, Microchip\OT1/cmr/m/n/12 , [Online],
+ available at:
+ []
+
+[29pdfTeX warning (ext4): destination with the same identifier (name{cite.ho201
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.76 }
-      ]
+l.67 \bibitem{serialoperation}
+                               Steve Drehobl, ``Basic Serial EEPROM Operatio...
+]
+Underfull \hbox (badness 2088) in paragraph at lines 69--70
+[]\OT1/cmr/m/n/12 Jean-Michel DagaCaroline, PapaixMarylene CombeEmmanuel, Racap
+eVincent
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--83
+[]\OT1/cmr/m/n/12 ``Resistive Touch Screen'', \OT1/cmr/m/it/12 Baanto\OT1/cmr/m
+/n/12 ,[Online], available at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+[]\OT1/cmr/m/n/12 ``Capacitive Touch Screen'', \OT1/cmr/m/it/12 Baanto\OT1/cmr/
+m/n/12 ,[Online], available at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+[]\OT1/cmr/m/n/12 ``Serial Peripheral Interface (SPI) '', \OT1/cmr/m/it/12 Spar
+kfun\OT1/cmr/m/n/12 ,[Online], available at:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+[]\OT1/cmr/m/n/12 `` Serial Communication '', \OT1/cmr/m/it/12 Sparkfun\OT1/cmr
+/m/n/12 ,[Online], available at:
+ []
+
+) [30]
 \openout2 = `appendices/appendixa.aux'.
 
  (./appendices/appendixa.tex
 Appendix A.
-) [25
+) [31
 
 
 
@@ -796,40 +978,37 @@ Appendix A.
 
  (./appendices/appendixb.tex
 Appendix B.
-) [26
+) [32
 
 
 
 ] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 (./NPSC.aux (./body/Introduction.aux) (./body/Literature.aux)
-(./body/Methodology.aux) (./body/Results.aux) (./body/Discussion.aux)
-(./body/Conclusions.aux) (./body/Recommendations.aux)
+(./body/Design.aux) (./body/Implementation.aux) (./body/Results.aux)
+(./body/Discussion.aux) (./body/Conclusions.aux) (./body/Recommendations.aux)
 (./bibliography/References.aux) (./appendices/appendixa.aux)
 (./appendices/appendixb.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 77.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `NPSC.out' has not changed.
-(rerunfilecheck)             Checksum: 31D086369CAD049B082F38F21375D7EB;4710.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 3BC34EACE1348D8D1EA99FC6BAAA641E;5933.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 8679 strings out of 493029
- 127981 string characters out of 6136234
- 232813 words of memory out of 5000000
- 11857 multiletter control sequences out of 15000+600000
- 11415 words of font info for 42 fonts, out of 8000000 for 9000
+ 10254 strings out of 493029
+ 162340 string characters out of 6136234
+ 281257 words of memory out of 5000000
+ 13367 multiletter control sequences out of 15000+600000
+ 13114 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,45p,1191b,572s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,46p,1191b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
@@ -837,13 +1016,14 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti12.pfb>
-Output written on NPSC.pdf (37 pages, 939985 bytes).
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb>
+Output written on NPSC.pdf (44 pages, 1018810 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 596 compressed objects within 6 object streams
- 143 named destinations out of 1000 (max. 500000)
- 591 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 848 PDF objects out of 1000 (max. 8388607)
+ 765 compressed objects within 8 object streams
+ 188 named destinations out of 1000 (max. 500000)
+ 742 words of extra memory for PDF output out of 10000 (max. 10000000)
 

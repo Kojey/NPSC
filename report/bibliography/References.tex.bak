@@ -3,6 +3,10 @@ Please remember that the majority of your referenced work should be from journal
 reports and books not online sources such as Wikipedia.
 
 \begin{thebibliography}{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Circadian Rhythm 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % GE Lighting, lighting and sleep
 \bibitem{ge2014} General Electric Company, ``GE Lighting, lighting and sleep'', December 2014.
 % Circadian and Light Effects on Human Sleepiness-Alertness
@@ -35,4 +39,60 @@ reports and books not online sources such as Wikipedia.
 \bibitem{is1995} Tobler I., ``Is sleep fundamentally different between mammalian species?'', \emph{Behav Brain Res.}, {\bf vol. 69(1-2)}, pp. 35-41, Jul-Aug 1995.
 % GE Sol
 \bibitem{gesol} GE sol, [Online], available at: https://www.cbyge.com/products/sol
+% Philips
+\bibitem{philips} Philips, [Online], available at: https://www.usa.philips.com/c-p/HF3550\_60/discontinued-wake-up-light/overview
+% Therapeutics for Circadian Rhythm Sleep Disorders
+\bibitem{th2010} Ehren R. Dodson and Phyllis C Zee, ``Therapeutics for Circadian Rhythm Sleep Disorders'', \emph{Sleep Med Clin}, \textbf{vol. 5(4)}, pp. 701-715, Dec 2010.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Microcontrollers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How Microcontrollers Work
+\bibitem{ho2000} Marshall Brain,``How Microcontrollers Work'',\emph{HowStuffWorks.com}[Online] ,available at: http://electronics.howstuffworks.com/microcontroller1.htm, 1 Apr 2000.
+% Arduino Due Specifications
+\bibitem{arduino} ``Arduino Due Specifications'', \emph{Arduino}, [Online], available at: https://store.arduino.cc/arduino-due
+% Intel Edison Specifications
+\bibitem{intel} ``Intel Edison Specifications'', \emph{Intel}, [Online], available at: https://cdn-shop.adafruit.com/datasheets/EdisonDatasheet.pdf
+% Arduino Due Specifications
+\bibitem{raspberry} ``Raspberry Pi Zero Specifications'', \emph{Raspberry Pi}, [Online], available at: https://www.raspberrypi.org/products/raspberry-pi-zero-w/
+% Arduino Due Specifications
+\bibitem{stm} ``STM32F407VGT6 Specifications'', \emph{STM microelectronics}, [Online], available at: http://www.st.com/en/microcontrollers/stm32f407-417.html?querycriteria=productId=LN11
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Storage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Serial EEPROM Solutions vs. Parallel Solutions
+\bibitem{serialvsparallel} Tom Tyson, ``Serial EEPROM Solutions vs. Parallel Solutions'', \emph{Memory Products Division, Microchip}, [Online], available at: http://ecee.colorado.edu/~mcclurel/microchipan551.pdf
+% Basic Serial EEPROM Operation
+\bibitem{serialoperation} Steve Drehobl, ``Basic Serial EEPROM Operation'', \emph{Memory Products Division, Microchip}, [Online], available at: http://ecee.colorado.edu/~mcclurel/man536.pdf
+% Embedded EEPROM Speed Optimization Using System Power Supply Resources
+\bibitem{embeddedeeprom} Jean-Michel DagaCaroline, PapaixMarylene CombeEmmanuel, RacapeVincent Sialelli, ``Embedded EEPROM Speed Optimization Using System Power Supply Resources'', \emph{Lecture Notes in Computer Science}, \textbf{vol. 3254}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Wireless communication
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bluetooth in wireless communication
+\bibitem{bluetooth} K. V. S. S. S. S. Sairam and N. Gunasekaran and S. R. Redd, ``Bluetooth in wireless communication'', \emph{IEEE Communications Magazine}, \textbf{vol. 40(6)}, pp. 90-96, Jun 2002. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bluetooth
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Resistive Touch Screen
+\bibitem{resistivetouch} ``Resistive Touch Screen'', \emph{Baanto},[Online], available at: http://baanto.com/resistive-touch-screen-technology
+% Capacitive Touch Screen
+\bibitem{capacitivetouch} ``Capacitive Touch Screen'', \emph{Baanto},[Online], available at: http://baanto.com/capacitive-touch-screen
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Communications
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SPI
+\bibitem{spi} ``Serial Peripheral Interface (SPI) '', \emph{Sparkfun},[Online], available at: https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi
+% UART
+\bibitem{uart} `` Serial Communication '', \emph{Sparkfun},[Online], available at: https://learn.sparkfun.com/tutorials/serial-communication 
+% I2C
+\bibitem{i2c} ``I2C'', \emph{Sparkfun},[Online], available at: https://learn.sparkfun.com/tutorials/i2c
+
+
+% paper
+\bibitem{ref} authors, ``Paper'', \emph{Journal}, \textbf{vol.}, pp. 
 \end{thebibliography}

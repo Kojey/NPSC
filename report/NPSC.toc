@@ -12,69 +12,87 @@
 \contentsline {subsection}{\numberline {2.1.2}Internal circadian rhythms influenced by light}{7}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Quantitative and qualitative characteristics of light on melatonin production}{8}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Impact of light on human behaviour and sleep-wake cycle}{9}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}LEDs technologies}{9}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}LEDs and natural light}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Sleep-wake cycle electronic devices}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.2}Lighting technologies}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Artificial and natural light}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Light treatment of sleep disorder}{9}{subsection.2.2.2}
 \contentsline {subsubsection}{C by GE Sol}{10}{section*.6}
-\contentsline {subsubsection}{Philips Sunrise Alarm Clock}{10}{section*.8}
-\contentsline {section}{\numberline {2.3}Hardware modules and PCB design requirements}{10}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Processor}{11}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Neopixels}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}EEPROM}{11}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Bluetooth}{11}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Nextion}{11}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}PCB requirements}{11}{subsection.2.3.6}
-\contentsline {section}{\numberline {2.4}Communication protocols}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}SPI}{12}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}UART}{12}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}I2C}{12}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}PCB Board Design}{12}{section.2.5}
-\contentsline {section}{\numberline {2.6}Programming Languages}{12}{section.2.6}
-\contentsline {section}{\numberline {2.7}Software Tools and Libraries}{12}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Toolchain}{12}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Nextion}{12}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}Android Application}{12}{subsection.2.7.3}
-\contentsline {chapter}{\numberline {3}Methodology}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Scope and Scpecifications}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Scope}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Specification}{14}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Acceptance test}{14}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Preliminary design}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Modules interaction}{15}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Design considerations}{15}{subsection.3.2.2}
-\contentsline {subsubsection}{Electrical}{15}{section*.10}
-\contentsline {subsubsection}{Communication}{15}{section*.11}
-\contentsline {subsubsection}{Mechanical}{15}{section*.12}
-\contentsline {subsubsection}{Software}{15}{section*.13}
-\contentsline {subsection}{\numberline {3.2.3}Components selection}{15}{subsection.3.2.3}
-\contentsline {subsubsection}{Microcontroller}{15}{section*.14}
-\contentsline {subsubsection}{Bluetooth}{15}{section*.15}
-\contentsline {subsubsection}{External memory}{15}{section*.16}
-\contentsline {subsubsection}{Sensors}{15}{section*.17}
-\contentsline {section}{\numberline {3.3}Emboddiment Design}{15}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}OPM Diagrams}{16}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Hardware Design and Testing}{16}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Sensors}{16}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Neopixel Ring}{16}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Neopixel Time and Weekday}{16}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Date}{16}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}EEPROM}{16}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Software Design and Testing}{16}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Neopixles}{17}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Bluetooth}{17}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Sensors}{17}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}RTC}{17}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}EEPROM}{17}{subsection.3.5.5}
-\contentsline {section}{\numberline {3.6}Setup of Development Environement}{17}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Github}{17}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Nextion}{17}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Makefile}{17}{subsection.3.6.3}
-\contentsline {chapter}{\numberline {4}Results}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}Simulation Results}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Experimental Results}{18}{section.4.2}
-\contentsline {chapter}{\numberline {5}Discussion}{19}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{20}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{21}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{25}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{26}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{26}{section.B.1}
+\contentsline {subsubsection}{Philips wake-up lamps}{10}{section*.8}
+\contentsline {section}{\numberline {2.3}Hardware modules}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Processors and microcontrollers}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}LEDs}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Storage}{12}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Wireless technology}{13}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Touch screen}{13}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Communication protocols}{13}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Serial Peripheral Interface (SPI) Bus}{14}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Universal asynchronous receiver-transmitter (UART)}{14}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{14}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Neopixels}{15}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}PCB Board Design}{15}{section.2.5}
+\contentsline {section}{\numberline {2.6}Programming Languages}{16}{section.2.6}
+\contentsline {section}{\numberline {2.7}Software Tools and Libraries}{16}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Toolchain}{16}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Nextion}{16}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Android Application}{16}{subsection.2.7.3}
+\contentsline {chapter}{\numberline {3}Design}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Design scope and scpecifications}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Scope}{17}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Specification}{17}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Acceptance test}{17}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Preliminary design}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Modules interaction}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Design considerations}{18}{subsection.3.2.2}
+\contentsline {subsubsection}{Electrical}{18}{section*.13}
+\contentsline {subsubsection}{Communication}{18}{section*.14}
+\contentsline {subsubsection}{Mechanical}{18}{section*.15}
+\contentsline {subsubsection}{Software}{18}{section*.16}
+\contentsline {subsection}{\numberline {3.2.3}Components selection}{18}{subsection.3.2.3}
+\contentsline {subsubsection}{Microcontroller}{18}{section*.17}
+\contentsline {subsubsection}{Bluetooth}{18}{section*.18}
+\contentsline {subsubsection}{External memory}{18}{section*.19}
+\contentsline {subsubsection}{Sensors}{18}{section*.20}
+\contentsline {subsubsection}{Neopixels}{18}{section*.21}
+\contentsline {section}{\numberline {3.3}Emboddiment design}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}OPM Diagrams}{19}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Hardware Design and Testing}{19}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Sensors}{19}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Neopixel Ring}{19}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Neopixel Time and Weekday}{19}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Date}{19}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}EEPROM}{19}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Software Design and Testing}{19}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Neopixles}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Bluetooth}{20}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Sensors}{20}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}RTC}{20}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}EEPROM}{20}{subsection.3.5.5}
+\contentsline {section}{\numberline {3.6}Setup of Development Environement}{20}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Github}{20}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Nextion}{20}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Makefile}{20}{subsection.3.6.3}
+\contentsline {chapter}{\numberline {4}Implementation and Testing}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Hardware design and testing}{21}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Sensors}{21}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Neopixel Ring}{21}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Neopixel Time and Weekday}{21}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Date}{21}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}EEPROM}{21}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Software design and testing}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Neopixles}{22}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Bluetooth}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Sensors}{22}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}RTC}{22}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}EEPROM}{22}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Setup of development environement}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Github}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Nextion}{22}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Makefile}{22}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Results}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Simulation Results}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experimental Results}{23}{section.5.2}
+\contentsline {chapter}{\numberline {6}Discussion}{24}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{25}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations}{26}{chapter.8}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{31}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{32}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{32}{section.B.1}
