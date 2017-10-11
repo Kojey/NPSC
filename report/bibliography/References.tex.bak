@@ -93,6 +93,42 @@ reports and books not online sources such as Wikipedia.
 \bibitem{i2c} ``I2C'', \emph{Sparkfun},[Online], available at: https://learn.sparkfun.com/tutorials/i2c
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PCB Design
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Generic Standard on Printed Board Design
+\bibitem{pcb_design} ``Generic Standard on Printed Board Design'', \emph{ASSOCIATION CONNECTING
+ELECTRONICS INDUSTRIES},[Online], available at: http://www.sphere.bc.ca/class/downloads/ipc\_2221a-pcb\%20standards.pdf
+% Trace Width Website Calculator
+\bibitem{pcb_track_width} Advanced Circuits, ``Trace Width Website Calculator'', [Online] available at: http://www.4pcb.com/trace-width-calculator.html
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming in C : A complete intorduction to the C programming language
+\bibitem{c_programming} Stephen G. Kochan, ``Programming in C : A complete intorduction to the C programming language, Third Edition''.
+% Java: The complete reference, Seventh Edition
+\bibitem{java_programming} Herbert Schildt, ``Java: The complete reference, Seventh Edition''.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Light
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Programming in C : A complete intorduction to the C programming language
+\bibitem{lighting} Energy Saver, ``Type of lighting'', \emph{U.S Department of Energy}, [Onile] available at: https://energy.gov/energysaver/types-lighting.
+% Modern Optical Engineering
+\bibitem{optical} Warren J. Smith, ``Modern Optical Engineering: The Design of Optical Systems''
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Software tool
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Features
+\bibitem{atollic} Atollic TrueSTUDIO, ``Features'', \emph{Atollic TrueSTUDIO}, [Onile] available at: https://atollic.com/truestudio/features/
+% Features
+\bibitem{nextion} Nextion, ``Features'', \emph{Nextion}, [Onile] available at: https://nextion.itead.cc/
+% Features
+\bibitem{android} Android, ``Everything you need to build on Android'', \emph{Android}, [Onile] available at: https://developer.android.com/studio/features.html
 % paper
 \bibitem{ref} authors, ``Paper'', \emph{Journal}, \textbf{vol.}, pp. 
 \end{thebibliography}

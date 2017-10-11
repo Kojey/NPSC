@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  9 OCT 2017 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  11 OCT 2017 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -406,6 +406,18 @@ LaTeX Warning: Label `philips' multiply defined.
 
 LaTeX Warning: Label `philips@cref' multiply defined.
 
+
+LaTeX Warning: Label `fig:neopixel_cascade' multiply defined.
+
+
+LaTeX Warning: Label `fig:neopixel_cascade@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:neopixel_cascade' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:neopixel_cascade@cref' multiply defined.
+
 ) (./body/Design.aux) (./body/Implementation.aux) (./body/Results.aux)
 (./body/Discussion.aux) (./body/Conclusions.aux) (./body/Recommendations.aux)
 (./bibliography/References.aux
@@ -518,7 +530,7 @@ LaTeX Info: Redefining \nameref on input line 14.
 \openout3 = `NPSC.out'.
 
  (./preamble/title.tex
-<./figures/uctLogo.png, id=353, 418.56375pt x 425.59pt>
+<./figures/uctLogo.png, id=365, 418.56375pt x 425.59pt>
 File: ./figures/uctLogo.png Graphic file (type png)
 
 <use ./figures/uctLogo.png>
@@ -624,7 +636,7 @@ been already used, duplicate ignored
                    \relax 
 l.35 \item \textbf
                   {Money:} The project budget allocation is \textbf{R1000}
-[2] <./figures/gantt_chart.png, id=552, 1329.96875pt x 442.65375pt>
+[2] <./figures/gantt_chart.png, id=575, 1329.96875pt x 442.65375pt>
 File: ./figures/gantt_chart.png Graphic file (type png)
 
 <use ./figures/gantt_chart.png>
@@ -641,7 +653,7 @@ been already used, duplicate ignored
                    \relax 
 l.55 \begin{landscape}
                        [3 <./figures/gantt_chart.png>]
-<./figures/wbs.jpg, id=558, 2171.11125pt x 827.09pt>
+<./figures/wbs.jpg, id=581, 2171.11125pt x 827.09pt>
 File: ./figures/wbs.jpg Graphic file (type jpg)
  <use ./figures/wbs.jpg>
 Package pdftex.def Info: ./figures/wbs.jpg used on input line 58.
@@ -673,7 +685,7 @@ f the hardware and software testing.
  (./body/Literature.tex
 Chapter 2.
 
-Overfull \hbox (13.9592pt too wide) in paragraph at lines 19--23
+Overfull \hbox (13.9592pt too wide) in paragraph at lines 21--25
 \OT1/cmr/m/n/12 external cues (endegenous), are influenced by the presence of e
 xternal stimuli (entertainable),
  []
@@ -683,134 +695,228 @@ xternal stimuli (entertainable),
 
 
 ] [7]
-Overfull \hbox (7.93176pt too wide) in paragraph at lines 32--33
-[]\OT1/cmr/bx/n/12 Blue LED light has an increased melatonin supression followi
-ng an increase
+Overfull \hbox (17.33069pt too wide) in paragraph at lines 39--40
+[]\OT1/cmr/m/it/12 Light irradiance greater or equal to $\OT1/cmr/m/n/12 3\OML/
+cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ^^VW=cm[]$ \OT1/cmr/m/it/12 evok
+e a significant melatonin supression 
  []
 
-
-Overfull \hbox (10.0549pt too wide) in paragraph at lines 37--38
-[]\OT1/cmr/bx/n/12 Light irradiance greater or equal to $\OT1/cmr/m/n/12 3\OML/
-cmm/m/it/12 :\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ^^VW=cm[]$ \OT1/cmr/bx/n/12 evok
-e a significant melatonin
- []
-
-
-Overfull \hbox (1.13747pt too wide) in paragraph at lines 38--39
-[]\OT1/cmr/bx/n/12 Smaller wavelenght monochromatic light have a greater change
- in \OT1/cmr/bx/it/12 Plasma
- []
-
-[8] <./figures/sol1.jpg, id=601, 1204.5pt x 1204.5pt>
+[8] [9] [10] <./figures/sol1.jpg, id=638, 1204.5pt x 1204.5pt>
 File: ./figures/sol1.jpg Graphic file (type jpg)
- <use ./figures/sol1.jpg>
-Package pdftex.def Info: ./figures/sol1.jpg used on input line 60.
+
+<use ./figures/sol1.jpg>
+Package pdftex.def Info: ./figures/sol1.jpg used on input line 76.
 (pdftex.def)             Requested size: 240.89574pt x 240.89574pt.
 
-[9] <./figures/philips1.png, id=611, 495.8525pt x 436.63126pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/philips1.png, id=642, 495.8525pt x 436.63126pt>
 File: ./figures/philips1.png Graphic file (type png)
 
 <use ./figures/philips1.png>
-Package pdftex.def Info: ./figures/philips1.png used on input line 71.
+Package pdftex.def Info: ./figures/philips1.png used on input line 87.
 (pdftex.def)             Requested size: 198.33748pt x 174.6494pt.
 
-<./figures/philips2.jpeg, id=612, 590.205pt x 501.875pt>
+<./figures/philips2.jpeg, id=643, 590.205pt x 501.875pt>
 File: ./figures/philips2.jpeg Graphic file (type jpg)
 
 <use ./figures/philips2.jpeg>
-Package pdftex.def Info: ./figures/philips2.jpeg used on input line 76.
+Package pdftex.def Info: ./figures/philips2.jpeg used on input line 92.
 (pdftex.def)             Requested size: 206.57484pt x 175.65887pt.
 
-Overfull \hbox (2.74068pt too wide) in paragraph at lines 76--77
+Overfull \hbox (2.74068pt too wide) in paragraph at lines 92--93
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
+Underfull \hbox (badness 10000) in paragraph at lines 93--93
 []\OT1/cmr/m/n/10.95 (b) |HF3551/60, coloured sunrise
  []
 
-[10 <./figures/sol1.jpg>]
-Overfull \hbox (14.37547pt too wide) in paragraph at lines 101--102
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11]
+Overfull \hbox (20.86145pt too wide) in paragraph at lines 109--112
+\OT1/cmr/m/n/12 various range of microcontroller suitable for different applica
+tion. The NPSC's microcontroller
+ []
+
+
+Overfull \hbox (25.72667pt too wide) in paragraph at lines 109--112
+\OT1/cmr/m/n/12 module and other external modules. While controlling the extern
+al module, the microcontroller
+ []
+
+[12 <./figures/sol1.jpg> <./figures/philips1.png> <./figures/philips2.jpeg>]
+Overfull \hbox (14.37547pt too wide) in paragraph at lines 119--120
 []\OT1/cmr/bx/n/12 Number of pins: \OT1/cmr/m/n/12 How familliar are we with th
 e microcontroller (time is a constraint)? 
  []
 
-[11 <./figures/philips1.png> <./figures/philips2.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 112--112
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--130
 []\OT1/cmr/bx/n/12 Arduino
  []
 
 
-Overfull \hbox (2.8951pt too wide) in paragraph at lines 112--112
+Overfull \hbox (2.8951pt too wide) in paragraph at lines 130--130
 []\OT1/cmr/bx/n/12 Raspberry
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 []\OT1/cmr/m/n/12 dual-core, dual-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
+Underfull \hbox (badness 10000) in paragraph at lines 132--132
 []\OT1/cmr/m/n/12 1GHz
  []
 
 
-Overfull \hbox (3.74303pt too wide) in paragraph at lines 116--116
+Overfull \hbox (3.74303pt too wide) in paragraph at lines 134--134
 []\OT1/cmr/m/n/12 MicroSDHC| 
  []
 
 
-Overfull \hbox (3.53464pt too wide) in paragraph at lines 108--122
+Overfull \hbox (3.53464pt too wide) in paragraph at lines 126--140
  [][] 
  []
 
-[12] <./figures/resistiveTouch.jpg, id=646, 301.125pt x 234.8775pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13] [14] <./figures/resistiveTouch.jpg, id=686, 301.125pt x 234.8775pt>
 File: ./figures/resistiveTouch.jpg Graphic file (type jpg)
 
 <use ./figures/resistiveTouch.jpg>
-Package pdftex.def Info: ./figures/resistiveTouch.jpg used on input line 179.
+Package pdftex.def Info: ./figures/resistiveTouch.jpg used on input line 161.
 (pdftex.def)             Requested size: 120.44786pt x 93.94933pt.
 
-<./figures/capacitiveTouch.jpg, id=649, 371.3875pt x 290.08376pt>
+<./figures/capacitiveTouch.jpg, id=689, 371.3875pt x 290.08376pt>
 File: ./figures/capacitiveTouch.jpg Graphic file (type jpg)
 
 <use ./figures/capacitiveTouch.jpg>
-Package pdftex.def Info: ./figures/capacitiveTouch.jpg used on input line 184.
+Package pdftex.def Info: ./figures/capacitiveTouch.jpg used on input line 166.
 (pdftex.def)             Requested size: 129.98756pt x 101.53082pt.
 
-Overfull \hbox (16.81427pt too wide) in paragraph at lines 173--191
+Overfull \hbox (32.15439pt too wide) in paragraph at lines 154--173
 \OT1/cmr/m/n/12 Resistive touch-screen are less complex than capacitive touch-s
-creen, thus cheaper. Moreover,
+creen, thus cheaper. Additionally,
  []
 
-[13] [14 <./figures/resistiveTouch.jpg> <./figures/capacitiveTouch.jpg>]
-<./figures/nrz.png, id=671, 555.07375pt x 325.215pt>
-File: ./figures/nrz.png Graphic file (type png)
- <use ./figures/nrz.png>
-Package pdftex.def Info: ./figures/nrz.png used on input line 209.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+[]\OT1/cmr/bx/n/12 Wavelength
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+[]\OT1/cmr/bx/n/12 Luminous
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--182
+\OT1/cmr/bx/n/12 intensity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+[]\OT1/cmr/bx/n/12 Colour
+ []
+
+
+Overfull \hbox (2.69518pt too wide) in paragraph at lines 182--183
+\OT1/cmr/bx/n/12 temperature
+ []
+
+[15]
+Missing character: There is no Î in font cmti12!
+Missing character: There is no ¸ in font cmti12!
+ <./figures/ring.png, id=701, 626.34pt x 363.3575pt>
+File: ./figures/ring.png Graphic file (type png)
+
+<use ./figures/ring.png>
+Package pdftex.def Info: ./figures/ring.png used on input line 206.
+(pdftex.def)             Requested size: 375.80688pt x 218.01617pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Reference `neopixel_illuminance' on page 1 undefined on input li
+ne 214.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[16 <./figures/resistiveTouch.jpg> <./figures/capacitiveTouch.jpg>] [17 <./figu
+res/ring.png>] [18]
+<./figures/neopixel_nrz.png, id=734, 555.07375pt x 325.215pt>
+File: ./figures/neopixel_nrz.png Graphic file (type png)
+
+<use ./figures/neopixel_nrz.png>
+Package pdftex.def Info: ./figures/neopixel_nrz.png used on input line 259.
 (pdftex.def)             Requested size: 222.02556pt x 130.0837pt.
 
-[15 <./figures/nrz.png>]) [16]
+Overfull \hbox (18.19139pt too wide) in paragraph at lines 259--260
+[][] 
+ []
+
+<./figures/neopixel_cascade.png, id=735, 539.01375pt x 184.69pt>
+File: ./figures/neopixel_cascade.png Graphic file (type png)
+
+<use ./figures/neopixel_cascade.png>
+Package pdftex.def Info: ./figures/neopixel_cascade.png used on input line 264.
+
+(pdftex.def)             Requested size: 215.60167pt x 73.87468pt.
+
+Overfull \hbox (11.7675pt too wide) in paragraph at lines 264--265
+[][] 
+ []
+
+<./figures/neopixel_serial.png, id=736, 1062.97125pt x 600.2425pt>
+File: ./figures/neopixel_serial.png Graphic file (type png)
+
+<use ./figures/neopixel_serial.png>
+Package pdftex.def Info: ./figures/neopixel_serial.png used on input line 269.
+(pdftex.def)             Requested size: 478.33266pt x 270.10663pt.
+
+Overfull \hbox (25.36476pt too wide) in paragraph at lines 269--270
+[][] 
+ []
+
+<./figures/pcb_design_flow.png, id=741, 553.06625pt x 435.6275pt>
+File: ./figures/pcb_design_flow.png Graphic file (type png)
+
+<use ./figures/pcb_design_flow.png>
+Package pdftex.def Info: ./figures/pcb_design_flow.png used on input line 285.
+(pdftex.def)             Requested size: 276.53244pt x 217.81322pt.
+ [19 <./figures/neopixel_nrz.png> <./figures/neopixel_cascade.png> <./figures/n
+eopixel_serial.png>] [20 <./figures/pcb_design_flow.png>] [21]) [22]
 \openout2 = `body/Design.aux'.
 
  (./body/Design.tex
 Chapter 3.
-[17
+[23
 
 
 
-] [18] [19]) [20]
+] [24] [25]) [26]
 \openout2 = `body/Implementation.aux'.
 
  (./body/Implementation.tex
 Chapter 4.
-[21
+[27
 
 
 
-]) [22]
+]) [28]
 \openout2 = `body/Results.aux'.
 
  (./body/Results.tex
@@ -821,7 +927,7 @@ Overfull \hbox (12.93237pt too wide) in paragraph at lines 4--6
 aphs where necessary. Remember
  []
 
-) [23
+) [29
 
 
 
@@ -830,7 +936,7 @@ aphs where necessary. Remember
 
  (./body/Discussion.tex
 Chapter 6.
-) [24
+) [30
 
 
 
@@ -839,7 +945,7 @@ Chapter 6.
 
  (./body/Conclusions.tex
 Chapter 7.
-) [25
+) [31
 
 
 
@@ -848,14 +954,14 @@ Chapter 7.
 
  (./body/Recommendations.tex
 Chapter 8.
-) [26
+) [32
 
 
 
 ]
 \openout2 = `bibliography/References.aux'.
 
- (./bibliography/References.tex [27
+ (./bibliography/References.tex [33
 
 
 ]
@@ -865,7 +971,7 @@ Missing character: There is no “ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
- [28
+ [34
 
 ]
 Missing character: There is no â in font cmr12!
@@ -927,7 +1033,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
  available at:
  []
 
-[29pdfTeX warning (ext4): destination with the same identifier (name{cite.ho201
+[35pdfTeX warning (ext4): destination with the same identifier (name{cite.ho201
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -964,12 +1070,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--93
 /m/n/12 ,[Online], available at:
  []
 
-) [30]
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+[]\OT1/cmr/m/n/12 ``Generic Standard on Printed Board Design'', \OT1/cmr/m/it/1
+2 ASSOCIATION
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+\OT1/cmr/m/it/12 CONNECTING ELECTRONICS INDUSTRIES\OT1/cmr/m/n/12 ,[Online], av
+ailable at:
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 127--129
+[]\OT1/cmr/m/n/12 Atollic TrueSTUDIO, ``Features'', \OT1/cmr/m/it/12 Atollic Tr
+ueSTUDIO\OT1/cmr/m/n/12 , [Onile] available at:
+ []
+
+[36]) [37]
 \openout2 = `appendices/appendixa.aux'.
 
  (./appendices/appendixa.tex
 Appendix A.
-) [31
+) [38
 
 
 
@@ -978,7 +1102,7 @@ Appendix A.
 
  (./appendices/appendixb.tex
 Appendix B.
-) [32
+) [39
 
 
 
@@ -994,7 +1118,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `NPSC.out' has not changed.
-(rerunfilecheck)             Checksum: 3BC34EACE1348D8D1EA99FC6BAAA641E;5933.
+(rerunfilecheck)             Checksum: 2CFF3F917DEB1B8B08D40E40914BE4E4;6140.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1002,28 +1129,29 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 10254 strings out of 493029
- 162340 string characters out of 6136234
- 281257 words of memory out of 5000000
- 13367 multiletter control sequences out of 15000+600000
+ 10342 strings out of 493029
+ 164116 string characters out of 6136234
+ 283257 words of memory out of 5000000
+ 13418 multiletter control sequences out of 15000+600000
  13114 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,46p,1191b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,12n,46p,1265b,626s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti12.pfb>
-Output written on NPSC.pdf (44 pages, 1018810 bytes).
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on NPSC.pdf (51 pages, 1143303 bytes).
 PDF statistics:
- 848 PDF objects out of 1000 (max. 8388607)
- 765 compressed objects within 8 object streams
- 188 named destinations out of 1000 (max. 500000)
- 742 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 960 PDF objects out of 1000 (max. 8388607)
+ 862 compressed objects within 9 object streams
+ 221 named destinations out of 1000 (max. 500000)
+ 786 words of extra memory for PDF output out of 10000 (max. 10000000)
 
