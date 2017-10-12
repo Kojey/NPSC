@@ -74,11 +74,16 @@ int main(void)
   //bool date_save_load = test_ClockMangement_save_and_load_date();
   //bool alarm_save_load = test_ClockMangement_save_and_load_alarm();
   neopixel_setBrightness(100);
+  //color = neopixel_colourRGB(0,255,0);
+  //neopixel_setPixelColour(2,color);
   while (1)
   {
+	  bluetooth_buffer_update();
+	nextion_buffer_update();
 	i++;
 	temp = temperature_read();
-	switch(pixel_color){
+
+	/*switch(pixel_color){
 	case 'R': color = neopixel_colourRGB(255,0,0); break;
 	case 'G': color = neopixel_colourRGB(0,255,0); break;
 	case 'B': color = neopixel_colourRGB(0,0,255); break;
@@ -87,11 +92,14 @@ int main(void)
 	case 'M': color = neopixel_colourRGB(255,0,255); break;
 	case 'W': color = neopixel_colourRGB(255,255,255); break;
 	case 'D': color = neopixel_colourRGB(0,0,0); break;
-	}
-	int j=150000;
+	}*/
+
+	color = neopixel_colourRGB(UART_Buffer[2],UART_Buffer[1],UART_Buffer[0]);
+	int j=15000;
 	while(j)j--;
-	neopixel_setPixelColour((i-1)%4,0);
 	neopixel_setPixelColour(i%4,color);
+	//neopixel_setPixelColour((i-1)%4,0);
+	//neopixel_setPixelColour(i%4,color);
   }
 }
 

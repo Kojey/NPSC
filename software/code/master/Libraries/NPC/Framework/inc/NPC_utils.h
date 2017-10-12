@@ -40,9 +40,14 @@
 typedef enum {false = 0, true = !false} bool;
 
 /* Exported constants --------------------------------------------------------*/
+#define UART_BUFFER_SIZE            	4
+#define DMA_RX_BUFFER_SIZE          	4
+
 /* Exported variables --------------------------------------------------------*/
 extern uint8_t pixel_color;
 
+extern uint8_t DMA_RX_Buffer[DMA_RX_BUFFER_SIZE];
+extern uint8_t UART_Buffer[UART_BUFFER_SIZE];
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);

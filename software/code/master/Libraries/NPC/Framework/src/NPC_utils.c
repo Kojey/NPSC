@@ -35,6 +35,8 @@
 /* Private variables ---------------------------------------------------------*/
 uint8_t pixel_color;
 
+uint8_t DMA_RX_Buffer[DMA_RX_BUFFER_SIZE];
+uint8_t UART_Buffer[UART_BUFFER_SIZE] = {0};
 /* Private functions ---------------------------------------------------------*/
 
 /**

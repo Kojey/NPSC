@@ -41,8 +41,11 @@
  * @retval	None
  */
 void NPC_init(void){
+	SystemInit();
 	/* Initialise bluetooth */
 	bluetooth_init();
+	/* Initialise nextion */
+	nextion_init();
 	/* Initialise neopixel */
 	neopixel_init();
 	/* Initialise clock */

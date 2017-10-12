@@ -1,9 +1,9 @@
 /**
   ******************************************************************************
-  * @file    PC_bluetooth.c
+  * @file    NPSC_bluetooth.c
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    01-March-2017
+  * @date    12-October-2017
   * @brief	 This file provides firmware functions to manage the bluetooth
   ******************************************************************************
   * @attention
@@ -22,8 +22,8 @@
 /** @addtogroup Framework
   * @{
   */
-/** @defgroup Bluetooth
-  * @brief Bluetooth driver modules
+/** @defgroup bluetooth
+  * @brief bluetooth driver modules
   * @{
   */
 
@@ -34,8 +34,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Bluetooth_Init Initialization and transmission handler functions
- * 	@brief	Bluetooth initialization functions
+/**	@defgroup bluetooth_Init Initialization and transmission handler functions
+ * 	@brief	bluetooth initialization functions
  *  @{
  */
 
@@ -44,114 +44,168 @@
  * @param 	None
  * @retval	None
  */
-void bluetooth_init(void){
-	// Enable RCC for USART1, GPIOB
+void bluetooth_init(void) {
+
+    /* Init GPIO pins for UART */
 	RCC_APB2PeriphClockCmd(BLUETOOTH_PERIPH_USARTX,ENABLE);
-	RCC_AHB1PeriphClockCmd(BLUETOOTH_PERIPH_GPIOX,ENABLE);
+	RCC_AHB1PeriphClockCmd(BLUETOOTH_PERIPH_GPIOX | RCC_AHB1ENR_DMA2EN ,ENABLE);
 
-	// GPIO Configuration
-	{
-		GPIO_InitTypeDef GPIO_InitStructure;
 
-		// Configure USART1 TX (PB6) as alternate function push-pull
-		GPIO_InitStructure.GPIO_Pin = BLUETOOTH_TX_PIN | BLUETOOTH_RX_PIN;
-		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-		GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-		GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-		GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    /* Init GPIO pins */
+	GPIO_InitTypeDef GPIO_InitStruct;
+	GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_TX_PINSOURCE, BLUETOOTH_AF_USART);
+	GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_RX_PINSOURCE, BLUETOOTH_AF_USART);
+	GPIO_InitStruct.GPIO_Pin = BLUETOOTH_TX_PIN | BLUETOOTH_RX_PIN;
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	GPIO_Init(BLUETOOTH_GPIOX, &GPIO_InitStruct);
 
-		GPIO_Init(BLUETOOTH_GPIOX, &GPIO_InitStructure);
+    /* Configure UART setup */
+	USART_InitTypeDef USART_InitStruct;
+	USART_InitStruct.USART_BaudRate = BLUETOOTH_BAUDRATE;
+	USART_InitStruct.USART_WordLength = USART_WordLength_8b;
+	USART_InitStruct.USART_StopBits = USART_StopBits_1;
+	USART_InitStruct.USART_Parity = USART_Parity_No;
+	USART_InitStruct.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+	USART_InitStruct.USART_Mode = USART_Mode_Tx|USART_Mode_Rx;
+	USART_Init(BLUETOOTH_USARTX,&USART_InitStruct);
 
-		GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_TX_PINSOURCE, BLUETOOTH_AF_USART);
-		GPIO_PinAFConfig(BLUETOOTH_GPIOX, BLUETOOTH_RX_PINSOURCE, BLUETOOTH_AF_USART);
+    /* Enable global interrupts for USART */
+	NVIC_InitTypeDef NVIC_InitStruct;
+	NVIC_InitStruct.NVIC_IRQChannel = BLUETOOTH_USARTX_IRQ;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+	NVIC_Init(&NVIC_InitStruct);
 
-	}
+    /* Enable USART */
+    USART_Cmd(BLUETOOTH_USARTX, ENABLE);
+    USART_DMACmd(BLUETOOTH_USARTX, USART_DMAReq_Rx, ENABLE);
+    /* Enable IDLE line detection for DMA processing */
+    USART_ITConfig(BLUETOOTH_USARTX, USART_IT_IDLE, ENABLE);
 
-	// NVIC Configuration
-	{
-		NVIC_InitTypeDef NVIC_InitStructure;
+    /* Configure DMA for USART RX, DMA2, Stream5, Channel4 */
 
-		NVIC_InitStructure.NVIC_IRQChannel = BLUETOOTH_USARTX_IRQ;
-		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    DMA_InitTypeDef DMA_InitStruct;
+    DMA_StructInit(&DMA_InitStruct);
+    DMA_InitStruct.DMA_Channel = DMA_Channel_4;
+    DMA_InitStruct.DMA_Memory0BaseAddr = (uint32_t)DMA_RX_Buffer;
+    DMA_InitStruct.DMA_BufferSize = DMA_RX_BUFFER_SIZE;
+    DMA_InitStruct.DMA_PeripheralBaseAddr = (uint32_t)&USART1->DR;
+    DMA_InitStruct.DMA_DIR = DMA_DIR_PeripheralToMemory;
+    DMA_InitStruct.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+    DMA_InitStruct.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+    DMA_InitStruct.DMA_MemoryInc = DMA_MemoryInc_Enable;
+    DMA_InitStruct.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+    DMA_Init(DMA2_Stream5, &DMA_InitStruct);
 
-		NVIC_Init(&NVIC_InitStructure);
-	}
+    /* Enable global interrupts for DMA stream */
+    NVIC_InitStruct.NVIC_IRQChannel = DMA2_Stream5_IRQn;
+    NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+    NVIC_Init(&NVIC_InitStruct);
 
-	// USART Configuration
-	{
-		USART_InitTypeDef USART_InitStructure;
+    /* Enable transfer complete interrupt */
+    DMA_ITConfig(DMA2_Stream5, DMA_IT_TC, ENABLE);
+    DMA_Cmd(DMA2_Stream5, ENABLE);
 
-		USART_InitStructure.USART_BaudRate = BLUETOOTH_BAUDRATE;
-		USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-		USART_InitStructure.USART_StopBits = USART_StopBits_1;
-		USART_InitStructure.USART_Parity = USART_Parity_No;
-		USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-		USART_InitStructure.USART_Mode = USART_Mode_Tx|USART_Mode_Rx;
-
-		USART_Init(BLUETOOTH_USARTX,&USART_InitStructure);
-
-		// Enable USART1 receive and transmission complete interrupts
-		USART_ITConfig(BLUETOOTH_USARTX,USART_IT_RXNE,ENABLE);
-
-		USART_Cmd(BLUETOOTH_USARTX,ENABLE);
-
-	}
-
-	uint8_t welcome_str[] = " Welcome to NeoPixelClock!\r\n";
-	bluetooth_send(welcome_str);
 }
 
 /**
- * @brief	USART1 Interrupt Handler
- * @param 	None
- * @retval	none
+ * MUST BE A TASK
  */
-void USART1_IRQHandler(void){
-	// Wait until reception
-	while(USART_GetFlagStatus(BLUETOOTH_USARTX, USART_FLAG_RXNE)==RESET);
-	uint8_t data = toupper(bluetooth_receive());
-	if(data=='R'){
-		pixel_color='R';
-		bluetooth_send((uint8_t *)"Red\n\r");
-	}
-	else if(data=='G'){
-		pixel_color='G';
-		bluetooth_send((uint8_t *)"Green\n\r");
-	}
-	else if(data=='B'){
-		pixel_color='B';
-		bluetooth_send((uint8_t *)"Blue\n\r");
-	}
-	else if(data=='Y'){
-		pixel_color='Y';
-		bluetooth_send((uint8_t *)"Yellow\n\r");
-	}
-	else if(data=='M'){
-		pixel_color='M';
-		bluetooth_send((uint8_t *)"Magenta\n\r");
-	}
-	else if(data=='C'){
-		pixel_color='C';
-		bluetooth_send((uint8_t *)"Cyan\n\r");
-	}
-	else if(data=='D'){
-		pixel_color='D';
-		bluetooth_send((uint8_t *)"Dark\n\r");
-	}
-	else if(data=='W'){
-		pixel_color='W';
-		bluetooth_send((uint8_t *)"White\n\r");
-	}
+void bluetooth_buffer_update(void){
+    /**
+     * Loop data back to UART data register
+     */
+    while (bluetooth_read != bluetooth_write) {                 /* Do it until buffer is empty */
+        USART1->DR = UART_Buffer[bluetooth_read++];   /* Start byte transfer */
+        while (!(USART1->SR & USART_SR_TXE));   /* Wait till finished */
+        if (bluetooth_read == UART_BUFFER_SIZE) {     /* Check buffer overflow */
+            bluetooth_read = 0;
+            bluetooth_write = 0;
+        }
+    }
+
 }
+
+/**
+ * \brief       Global interrupt handler for USART1
+ */
+void USART1_IRQHandler(void) {
+    /* Check for IDLE flag */
+    if (USART1->SR & USART_FLAG_IDLE) {         /* We want IDLE flag only */
+        /* This part is important */
+        /* Clear IDLE flag by reading status register first */
+        /* And follow by reading data register */
+        volatile uint32_t tmp;                  /* Must be volatile to prevent optimizations */
+        tmp = USART1->SR;                       /* bluetooth_read status register */
+        tmp = USART1->DR;                       /* bluetooth_read data register */
+        (void)tmp;                              /* Prevent compiler warnings */
+        DMA2_Stream5->CR &= ~DMA_SxCR_EN;       /* Disabling DMA will force transfer complete interrupt if enabled */
+    }
+}
+
+/**
+ * \brief       Global interrupt handler for DMA2 stream5
+ * \note        Except memcpy, there is no functions used to
+ */
+void DMA2_Stream5_IRQHandler(void) {
+    size_t len, tocopy;
+    uint8_t* ptr;
+
+    /* Check transfer complete flag */
+    if (DMA2->HISR & DMA_FLAG_TCIF5) {
+        DMA2->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
+
+        /* Calculate number of bytes actually transfered by DMA so far */
+        /**
+         * Transfer could be completed by 2 events:
+         *  - All data actually transfered (NDTR = 0)
+         *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
+         */
+        len = DMA_RX_BUFFER_SIZE - DMA2_Stream5->NDTR;
+        tocopy = UART_BUFFER_SIZE - bluetooth_write;      /* Get number of bytes we can copy to the end of buffer */
+
+        /* Check how many bytes to copy */
+        if (tocopy > len) {
+            tocopy = len;
+        }
+
+        /* bluetooth_write received data for UART main buffer for manipulation later */
+        ptr = DMA_RX_Buffer;
+        memcpy(&UART_Buffer[bluetooth_write], ptr, tocopy);   /* Copy first part */
+
+        /* Correct values for remaining data */
+        bluetooth_write += tocopy;
+        len -= tocopy;
+        ptr += tocopy;
+
+        /* If still data to write for beginning of buffer */
+        if (len) {
+            memcpy(&UART_Buffer[0], ptr, len);      /* Don't care if we override bluetooth_read pointer now */
+            bluetooth_write = len;
+        }
+
+        /* Prepare DMA for next transfer */
+        /* Important! DMA stream won't start if all flags are not cleared first */
+        DMA2->HIFCR = DMA_FLAG_DMEIF5 | DMA_FLAG_FEIF5 | DMA_FLAG_HTIF5 | DMA_FLAG_TCIF5 | DMA_FLAG_TEIF5;
+        DMA2_Stream5->M0AR = (uint32_t)DMA_RX_Buffer;   /* Set memory address for DMA again */
+        DMA2_Stream5->NDTR = DMA_RX_BUFFER_SIZE;    /* Set number of bytes to receive */
+        DMA2_Stream5->CR |= DMA_SxCR_EN;            /* Start DMA transfer */
+    }
+}
+
 
 /**
  * @}
  */
 
-/**	@defgroup Bluetooth_Trans Transmission functions
- * 	@brief	Bluetooth transmission functions
+/**	@defgroup bluetooth_Trans Transmission functions
+ * 	@brief	bluetooth transmission functions
  * @{
  */
 
@@ -168,14 +222,6 @@ void bluetooth_send(uint8_t * data){
 	}
 }
 
-/**
- * @brief	receive a byte from hc-06
- * @param	None
- * @retval	An uint8_t byte of data
- */
-uint8_t bluetooth_receive(void){
-	return USART_ReceiveData(BLUETOOTH_USARTX);
-}
 
 /**
  * @}
