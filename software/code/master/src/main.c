@@ -73,7 +73,7 @@ int main(void)
   //bool time_save_load = test_ClockMangement_save_and_load_time();
   //bool date_save_load = test_ClockMangement_save_and_load_date();
   //bool alarm_save_load = test_ClockMangement_save_and_load_alarm();
-  neopixel_setBrightness(100);
+
   //color = neopixel_colourRGB(0,255,0);
   //neopixel_setPixelColour(2,color);
   while (1)
@@ -94,7 +94,8 @@ int main(void)
 	case 'D': color = neopixel_colourRGB(0,0,0); break;
 	}*/
 
-	color = neopixel_colourRGB(UART_Buffer[2],UART_Buffer[1],UART_Buffer[0]);
+	color = neopixel_colourRGB(UART_Buffer[0],UART_Buffer[1],UART_Buffer[2]);
+	neopixel_setBrightness(UART_Buffer[3]);
 	int j=15000;
 	while(j)j--;
 	neopixel_setPixelColour(i%4,color);
