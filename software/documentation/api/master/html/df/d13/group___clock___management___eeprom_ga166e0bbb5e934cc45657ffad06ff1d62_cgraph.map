@@ -1,0 +1,4 @@
+<map id="ClockManagement_loadTime" name="ClockManagement_loadTime">
+<area shape="rect" id="node2" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="244,5,341,32"/>
+<area shape="rect" id="node3" href="$d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="389,5,443,32"/>
+</map>

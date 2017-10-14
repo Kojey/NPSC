@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['rdsr',['RDSR',['../df/d4d/group___instructions.html#ga899f71cf1ab9be6e8c8482e443558450',1,'NPC_eeprom.h']]],
+  ['read',['READ',['../df/d4d/group___instructions.html#gada74e7db007a68e763f20c17f2985356',1,'NPC_eeprom.h']]],
+  ['repeat_5fdateweekday',['REPEAT_DateWeekDay',['../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga9f2fcc8488db26c77b5ffd8f6c10c5d0',1,'NPC_clock.h']]],
+  ['repeat_5fdefinitions',['REPEAT_Definitions',['../d8/d3b/group___r_e_p_e_a_t___definitions.html',1,'']]],
+  ['repeat_5fhours',['REPEAT_Hours',['../d8/d3b/group___r_e_p_e_a_t___definitions.html#gaa31a39c1b2a1d619db0901cc7c8d4592',1,'NPC_clock.h']]],
+  ['repeat_5fminutes',['REPEAT_Minutes',['../d8/d3b/group___r_e_p_e_a_t___definitions.html#gac80fc7d65b83128ca58e210922020d37',1,'NPC_clock.h']]],
+  ['repeat_5fnone',['REPEAT_None',['../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga473d162f72a4680e7e14043dfaf092c0',1,'NPC_clock.h']]],
+  ['repeat_5fseconds',['REPEAT_Seconds',['../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga12d07c13f393b5b12efad9cd892de472',1,'NPC_clock.h']]],
+  ['reset_5fslots_5fbegin',['RESET_SLOTS_BEGIN',['../df/dbc/group___constant.html#ga38b56d14857b32e86b876a32957a2b63',1,'NPC_neopixel.h']]],
+  ['reset_5fslots_5fend',['RESET_SLOTS_END',['../df/dbc/group___constant.html#ga91e46b7f75ff75a4719a9d7f589df5a3',1,'NPC_neopixel.h']]],
+  ['rtc_5falarm_5firqhandler',['RTC_Alarm_IRQHandler',['../d9/dcf/group___clock___alarms.html#ga4da4fb52ec579671d337938e78f9a207',1,'NPC_clock.c']]],
+  ['rtc_5falarmstruct',['RTC_AlarmStruct',['../d1/df2/group___clock.html#ga64d4fe2aa4668079f349f9eb97a48e35',1,'NPC_clock.c']]],
+  ['rtc_5finitstruct',['RTC_InitStruct',['../d1/df2/group___clock.html#gabd73cfb4bb5c20ec4524dd5fe244842b',1,'NPC_clock.c']]],
+  ['rtc_5fprediv_5fa',['RTC_PREDIV_A',['../d0/dbf/group___r_t_c___p_r_e_d_i_v___definitions.html#ga7d28a18fc36cff684ad43ffd31ca45fc',1,'NPC_clock.h']]],
+  ['rtc_5fprediv_5fdefinitions',['RTC_PREDIV_Definitions',['../d0/dbf/group___r_t_c___p_r_e_d_i_v___definitions.html',1,'']]],
+  ['rtc_5fprediv_5fs',['RTC_PREDIV_S',['../d0/dbf/group___r_t_c___p_r_e_d_i_v___definitions.html#ga3578b56bdfe76014a3af7e276fe6a6e4',1,'NPC_clock.h']]],
+  ['rtc_5ftest',['Rtc_test',['../dc/d04/group__rtc__test.html',1,'']]],
+  ['rtc_5ftest_2ec',['rtc_test.c',['../de/d1a/rtc__test_8c.html',1,'']]],
+  ['rtc_5ftest_2eh',['rtc_test.h',['../de/df2/rtc__test_8h.html',1,'']]]
+];

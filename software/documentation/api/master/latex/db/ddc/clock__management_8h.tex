@@ -1,0 +1,105 @@
+\hypertarget{clock__management_8h}{}\section{clock\+\_\+management.\+h File Reference}
+\label{clock__management_8h}\index{clock\+\_\+management.\+h@{clock\+\_\+management.\+h}}
+
+
+This file contains all the application level functions usable by the user.  
+
+
+{\ttfamily \#include \char`\"{}../../\+Framework/inc/\+N\+P\+C\+\_\+eeprom.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../\+Framework/inc/\+N\+P\+C\+\_\+clock.\+h\char`\"{}}\\*
+Include dependency graph for clock\+\_\+management.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d49/clock__management_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{d3/ddc/clock__management_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___clock__management__address_ga8ee07883213a94b7c2de6f560a3b7073}{T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x00
+\item 
+\#define \hyperlink{group___clock__management__address_ga31d7b2bb8de218af4333c18718955628}{D\+A\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x04
+\item 
+\#define \hyperlink{group___clock__management__address_gab2393255a8e2127df1aca26ece13641f}{A\+L\+A\+R\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}~0x08
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga9986a274242ed1976ceb6af6a314e424}{O\+F\+F\+S\+E\+T\+\_\+\+N\+A\+ME}~0x00
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga4c2226ae357827da27e35a5b27472c80}{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY}~\hyperlink{group___clock__management__constants_ga834e9a379307f869a10f4da078be5786}{N\+A\+M\+E\+\_\+\+S\+I\+ZE}
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga9eddc8221941f855965c838c15760731}{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL}~\hyperlink{group___clock__management__alarm__offset_ga4c2226ae357827da27e35a5b27472c80}{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY} + 1
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga9d6fc23740ab9f37272a3299949d3c11}{O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK}~\hyperlink{group___clock__management__alarm__offset_ga9eddc8221941f855965c838c15760731}{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL} + 4
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga1153cc94aac429322a110eb8ea996733}{O\+F\+F\+S\+E\+T\+\_\+\+H12}~\hyperlink{group___clock__management__alarm__offset_ga9d6fc23740ab9f37272a3299949d3c11}{O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK} + 4
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga0447fe94b3055242905c1ef82da6ce75}{O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS}~\hyperlink{group___clock__management__alarm__offset_ga1153cc94aac429322a110eb8ea996733}{O\+F\+F\+S\+E\+T\+\_\+\+H12} + 1
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_gafffbfcb2669e65a487510c041aee5f06}{O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES}~\hyperlink{group___clock__management__alarm__offset_ga0447fe94b3055242905c1ef82da6ce75}{O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS} + 1
+\item 
+\#define \hyperlink{group___clock__management__alarm__offset_ga9d48129268662bd4afbc63795d117ba8}{O\+F\+F\+S\+E\+T\+\_\+\+S\+E\+C\+O\+N\+DS}~\hyperlink{group___clock__management__alarm__offset_gafffbfcb2669e65a487510c041aee5f06}{O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES} + 1
+\item 
+\#define \hyperlink{group___clock__management__constants_ga834e9a379307f869a10f4da078be5786}{N\+A\+M\+E\+\_\+\+S\+I\+ZE}~31
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a}{Clock\+Management\+\_\+save\+Alarm} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$Alarm\+\_\+\+Def, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Save an alarm settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7}{Clock\+Management\+\_\+save\+Time} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$Time\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the time settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335}{Clock\+Management\+\_\+save\+Date} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$Date\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the date settings to eeprom. \end{DoxyCompactList}\item 
+\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} \hyperlink{group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376}{Clock\+Management\+\_\+load\+Alarm} (uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em load an alarm settings from eeprom \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Time\+Type\+Def \hyperlink{group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62}{Clock\+Management\+\_\+load\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Load the time settings from eeprom. \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Date\+Type\+Def \hyperlink{group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91}{Clock\+Management\+\_\+load\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Load the date settings from eeprom. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560}{Clock\+Management\+\_\+is\+Time\+Before} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time1, R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time2)
+\begin{DoxyCompactList}\small\item\em Compare two time. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7}{Clock\+Management\+\_\+is\+Date\+Before} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date1, R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date2)
+\begin{DoxyCompactList}\small\item\em Convert an date to an integer. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9}{Clock\+Management\+\_\+is\+Alarm\+Before} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm1, \hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm2)
+\begin{DoxyCompactList}\small\item\em Compare two alarm. \end{DoxyCompactList}\item 
+void \hyperlink{group___clock___management___alarm_update_gab3193e7c0f26b76a48829295caf4888f}{C\+Lock\+Management\+\_\+update\+Alarm} (void)
+\begin{DoxyCompactList}\small\item\em Update the alarm with the closest alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{group__clock__management_gadafaa69421576ac611d507121be2e8f2}{eeprom\+\_\+index}
+\item 
+uint16\+\_\+t \hyperlink{group__clock__management_gaae2a6d57125e1b394a897958b141986b}{next\+\_\+alarm}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the application level functions usable by the user. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

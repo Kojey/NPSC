@@ -1,0 +1,5 @@
+<map id="neopixel_setPixelColourW" name="neopixel_setPixelColourW">
+<area shape="rect" id="node2" href="$d5/d15/group___neo_pixel___display.html#ga58d5ceb79029ca8dc5dd8b27b65e4f09" title="Set the colour of one led. " alt="" coords="228,5,432,32"/>
+<area shape="rect" id="node3" href="$da/d69/group___neo_pixel___state.html#ga63c196a71ffb007411929e41ba5df41d" title="Set the colour of one led. " alt="" coords="480,5,671,32"/>
+<area shape="rect" id="node4" href="$d6/dae/group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe" title="Find max between a, b, and c. " alt="" coords="719,5,765,32"/>
+</map>

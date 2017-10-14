@@ -1,0 +1,58 @@
+\hypertarget{_n_p_c__audio_8h}{}\section{N\+P\+C\+\_\+audio.\+h File Reference}
+\label{_n_p_c__audio_8h}\index{N\+P\+C\+\_\+audio.\+h@{N\+P\+C\+\_\+audio.\+h}}
+
+
+This file contains all the configuration prototypes used by the audio firmware.  
+
+
+{\ttfamily \#include \char`\"{}N\+P\+C\+\_\+utils.\+h\char`\"{}}\\*
+Include dependency graph for N\+P\+C\+\_\+audio.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d30/_n_p_c__audio_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{dc/daf/_n_p_c__audio_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___constant_gaae969438a57a86fddf0cf53106c9b6b4}{A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~11000
+\item 
+\#define \hyperlink{group___constant_ga644d7863b10926e5fb77205f294e1964}{D\+M\+A\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}~(86000000/(2$\ast$\hyperlink{group___constant_gaae969438a57a86fddf0cf53106c9b6b4}{A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}))
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___audio___init_gafff6cd7f4332d078ce0114143cd30998}{audio\+\_\+disable} (void)
+\begin{DoxyCompactList}\small\item\em Disable the D\+MA. \end{DoxyCompactList}\item 
+void \hyperlink{group___audio___init_gabcda20e7d4baa315d151230fcc81ec1d}{audio\+\_\+init} (uint16\+\_\+t $\ast$D\+A\+C\+Buffer, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Perform audio initialization. \end{DoxyCompactList}\item 
+void \hyperlink{group___audio___play_gaf73a37418a80bbb39f75abe8b60b0afb}{audio\+\_\+play} (uint16\+\_\+t $\ast$D\+A\+C\+Buffer, uint16\+\_\+t Size)
+\begin{DoxyCompactList}\small\item\em Play a sample. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the configuration prototypes used by the audio firmware. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

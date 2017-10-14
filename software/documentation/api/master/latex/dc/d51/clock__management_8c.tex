@@ -1,0 +1,57 @@
+\hypertarget{clock__management_8c}{}\section{clock\+\_\+management.\+c File Reference}
+\label{clock__management_8c}\index{clock\+\_\+management.\+c@{clock\+\_\+management.\+c}}
+
+
+comment  
+
+
+{\ttfamily \#include \char`\"{}../inc/clock\+\_\+management.\+h\char`\"{}}\\*
+Include dependency graph for clock\+\_\+management.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d71/clock__management_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a}{Clock\+Management\+\_\+save\+Alarm} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$Alarm\+\_\+\+Def, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Save an alarm settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7}{Clock\+Management\+\_\+save\+Time} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$Time\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the time settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335}{Clock\+Management\+\_\+save\+Date} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$Date\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the date settings to eeprom. \end{DoxyCompactList}\item 
+\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} \hyperlink{group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376}{Clock\+Management\+\_\+load\+Alarm} (uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em load an alarm settings from eeprom \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Time\+Type\+Def \hyperlink{group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62}{Clock\+Management\+\_\+load\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Load the time settings from eeprom. \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Date\+Type\+Def \hyperlink{group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91}{Clock\+Management\+\_\+load\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Load the date settings from eeprom. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560}{Clock\+Management\+\_\+is\+Time\+Before} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time1, R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time2)
+\begin{DoxyCompactList}\small\item\em Compare two time. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7}{Clock\+Management\+\_\+is\+Date\+Before} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date1, R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date2)
+\begin{DoxyCompactList}\small\item\em Convert an date to an integer. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9}{Clock\+Management\+\_\+is\+Alarm\+Before} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm1, \hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm2)
+\begin{DoxyCompactList}\small\item\em Compare two alarm. \end{DoxyCompactList}\item 
+void \hyperlink{group___clock___management___alarm_update_gab3193e7c0f26b76a48829295caf4888f}{C\+Lock\+Management\+\_\+update\+Alarm} (void)
+\begin{DoxyCompactList}\small\item\em Update the alarm with the closest alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+comment 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+19-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

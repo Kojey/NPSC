@@ -1,0 +1,97 @@
+\hypertarget{group___c_l_o_c_k___value}{}\section{C\+L\+O\+C\+K\+\_\+\+Value}
+\label{group___c_l_o_c_k___value}\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+
+
+Access time or date parameters.  
+
+
+Collaboration diagram for C\+L\+O\+C\+K\+\_\+\+Value\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{d4/dc0/group___c_l_o_c_k___value}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga41cab09c59fe3cc9a25719ec3be3fd4d}{C\+L\+O\+C\+K\+\_\+\+Week\+Day}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date}() $>$$>$ 24)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga483cf87b93faab3c148b7933391acba0}{C\+L\+O\+C\+K\+\_\+\+Date}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date}() $>$$>$ 16)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_gabd717170aa836b16355413e2c5ca0ad8}{C\+L\+O\+C\+K\+\_\+\+Month}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date}() $>$$>$ 8)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga35866274a21e8d3c0223c465209f3d74}{C\+L\+O\+C\+K\+\_\+\+Year}~(uint8\+\_\+t) \hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date}()
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga49ea807900604714bab70a531081ac6a}{C\+L\+O\+C\+K\+\_\+\+Hours}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time}() $>$$>$ 24)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga302d9ee9e79c96969e558b9ffdba3212}{C\+L\+O\+C\+K\+\_\+\+Minutes}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time}() $>$$>$ 16)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_ga4c539bc50b05addb6629dfea687d65b7}{C\+L\+O\+C\+K\+\_\+\+Seconds}~(uint8\+\_\+t) (\hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time}() $>$$>$ 8)
+\item 
+\#define \hyperlink{group___c_l_o_c_k___value_gafec8368ed05e06cadccc3becf2cd0ead}{C\+L\+O\+C\+K\+\_\+\+Format}~(uint8\+\_\+t) \hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Access time or date parameters. 
+
+
+
+\subsection{Macro Definition Documentation}
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Date@{C\+L\+O\+C\+K\+\_\+\+Date}}
+\index{C\+L\+O\+C\+K\+\_\+\+Date@{C\+L\+O\+C\+K\+\_\+\+Date}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Date}{CLOCK_Date}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Date~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Date}() $>$$>$ 16)}\hypertarget{group___c_l_o_c_k___value_ga483cf87b93faab3c148b7933391acba0}{}\label{group___c_l_o_c_k___value_ga483cf87b93faab3c148b7933391acba0}
+
+
+Definition at line 76 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}}
+\index{C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Format}{CLOCK_Format}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Format~(uint8\+\_\+t) {\bf clock\+\_\+get\+Time}()}\hypertarget{group___c_l_o_c_k___value_gafec8368ed05e06cadccc3becf2cd0ead}{}\label{group___c_l_o_c_k___value_gafec8368ed05e06cadccc3becf2cd0ead}
+
+
+Definition at line 82 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Hours@{C\+L\+O\+C\+K\+\_\+\+Hours}}
+\index{C\+L\+O\+C\+K\+\_\+\+Hours@{C\+L\+O\+C\+K\+\_\+\+Hours}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Hours}{CLOCK_Hours}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Hours~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Time}() $>$$>$ 24)}\hypertarget{group___c_l_o_c_k___value_ga49ea807900604714bab70a531081ac6a}{}\label{group___c_l_o_c_k___value_ga49ea807900604714bab70a531081ac6a}
+
+
+Definition at line 79 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Minutes@{C\+L\+O\+C\+K\+\_\+\+Minutes}}
+\index{C\+L\+O\+C\+K\+\_\+\+Minutes@{C\+L\+O\+C\+K\+\_\+\+Minutes}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Minutes}{CLOCK_Minutes}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Minutes~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Time}() $>$$>$ 16)}\hypertarget{group___c_l_o_c_k___value_ga302d9ee9e79c96969e558b9ffdba3212}{}\label{group___c_l_o_c_k___value_ga302d9ee9e79c96969e558b9ffdba3212}
+
+
+Definition at line 80 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Month@{C\+L\+O\+C\+K\+\_\+\+Month}}
+\index{C\+L\+O\+C\+K\+\_\+\+Month@{C\+L\+O\+C\+K\+\_\+\+Month}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Month}{CLOCK_Month}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Month~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Date}() $>$$>$ 8)}\hypertarget{group___c_l_o_c_k___value_gabd717170aa836b16355413e2c5ca0ad8}{}\label{group___c_l_o_c_k___value_gabd717170aa836b16355413e2c5ca0ad8}
+
+
+Definition at line 77 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Seconds@{C\+L\+O\+C\+K\+\_\+\+Seconds}}
+\index{C\+L\+O\+C\+K\+\_\+\+Seconds@{C\+L\+O\+C\+K\+\_\+\+Seconds}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Seconds}{CLOCK_Seconds}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Seconds~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Time}() $>$$>$ 8)}\hypertarget{group___c_l_o_c_k___value_ga4c539bc50b05addb6629dfea687d65b7}{}\label{group___c_l_o_c_k___value_ga4c539bc50b05addb6629dfea687d65b7}
+
+
+Definition at line 81 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Week\+Day@{C\+L\+O\+C\+K\+\_\+\+Week\+Day}}
+\index{C\+L\+O\+C\+K\+\_\+\+Week\+Day@{C\+L\+O\+C\+K\+\_\+\+Week\+Day}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Week\+Day}{CLOCK_WeekDay}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Week\+Day~(uint8\+\_\+t) ({\bf clock\+\_\+get\+Date}() $>$$>$ 24)}\hypertarget{group___c_l_o_c_k___value_ga41cab09c59fe3cc9a25719ec3be3fd4d}{}\label{group___c_l_o_c_k___value_ga41cab09c59fe3cc9a25719ec3be3fd4d}
+
+
+Definition at line 75 of file N\+P\+C\+\_\+clock.\+h.
+
+\index{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Year@{C\+L\+O\+C\+K\+\_\+\+Year}}
+\index{C\+L\+O\+C\+K\+\_\+\+Year@{C\+L\+O\+C\+K\+\_\+\+Year}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}}
+\subsubsection[{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+Year}{CLOCK_Year}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+L\+O\+C\+K\+\_\+\+Year~(uint8\+\_\+t) {\bf clock\+\_\+get\+Date}()}\hypertarget{group___c_l_o_c_k___value_ga35866274a21e8d3c0223c465209f3d74}{}\label{group___c_l_o_c_k___value_ga35866274a21e8d3c0223c465209f3d74}
+
+
+Definition at line 78 of file N\+P\+C\+\_\+clock.\+h.
+

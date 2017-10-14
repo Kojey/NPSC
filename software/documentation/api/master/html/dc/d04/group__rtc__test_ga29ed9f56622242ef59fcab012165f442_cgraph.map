@@ -1,0 +1,4 @@
+<map id="test_clock_alarm" name="test_clock_alarm">
+<area shape="rect" id="node2" href="$d9/dcf/group___clock___alarms.html#gab56f512746d4f2638232db28bb7dac2b" title="Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. " alt="" coords="177,5,263,32"/>
+<area shape="rect" id="node3" href="$d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="175,56,265,83"/>
+</map>

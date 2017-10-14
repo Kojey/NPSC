@@ -1,0 +1,55 @@
+\hypertarget{_n_p_c__eeprom_8c}{}\section{N\+P\+C\+\_\+eeprom.\+c File Reference}
+\label{_n_p_c__eeprom_8c}\index{N\+P\+C\+\_\+eeprom.\+c@{N\+P\+C\+\_\+eeprom.\+c}}
+
+
+This file provides firmware functions to manage data transmission to the eeprom.  
+
+
+{\ttfamily \#include \char`\"{}../inc/\+N\+P\+C\+\_\+eeprom.\+h\char`\"{}}\\*
+Include dependency graph for N\+P\+C\+\_\+eeprom.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d38/_n_p_c__eeprom_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___eeprom___init_ga4ec7f9d780da432051aa74ec5892a94c}{eeprom\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise communication to the eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b}{eeprom\+\_\+write} (uint16\+\_\+t address, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write a byte to the eeprom. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f}{eeprom\+\_\+read} (uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Read a byte from the eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058}{eeprom\+\_\+write32\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Write a page to the eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom___trans_ga7964a5a66da1c4a59a42309a93752217}{eeprom\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em Clear eeprom data. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d}{eeprom\+\_\+write\+N\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)
+\begin{DoxyCompactList}\small\item\em Write N bytes to the eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569}{eeprom\+\_\+write4\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Write 4 bytes to the eeprom. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43}{eeprom\+\_\+read4\+Bytes} (uint16\+\_\+t base\+Address)
+\begin{DoxyCompactList}\small\item\em Read a 32byte from eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c}{eeprom\+\_\+read\+N\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides firmware functions to manage data transmission to the eeprom. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/\+March-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

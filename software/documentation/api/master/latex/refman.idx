@@ -1,0 +1,443 @@
+\indexentry{Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}|hyperpage}{5}
+\indexentry{Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}!A\+L\+A\+R\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{A\+L\+A\+R\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}|hyperpage}{5}
+\indexentry{A\+L\+A\+R\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{A\+L\+A\+R\+M\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}|hyperpage}{5}
+\indexentry{Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}!D\+A\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{D\+A\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}|hyperpage}{5}
+\indexentry{D\+A\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{D\+A\+T\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}|hyperpage}{5}
+\indexentry{Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}!T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}|hyperpage}{5}
+\indexentry{T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS@{T\+I\+M\+E\+\_\+\+B\+A\+S\+E\+\_\+\+A\+D\+D\+R\+E\+SS}!Clock\+\_\+management\+\_\+address@{Clock\+\_\+management\+\_\+address}|hyperpage}{5}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY@{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY}|hyperpage}{6}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY@{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+AY}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL@{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL}|hyperpage}{6}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL@{O\+F\+F\+S\+E\+T\+\_\+\+D\+A\+T\+E\+W\+E\+E\+K\+D\+A\+Y\+\_\+\+S\+EL}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+H12@{O\+F\+F\+S\+E\+T\+\_\+\+H12}|hyperpage}{6}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+H12@{O\+F\+F\+S\+E\+T\+\_\+\+H12}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS@{O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS}|hyperpage}{6}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS@{O\+F\+F\+S\+E\+T\+\_\+\+H\+O\+U\+RS}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK@{O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK}|hyperpage}{6}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK@{O\+F\+F\+S\+E\+T\+\_\+\+M\+A\+SK}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{6}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES@{O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES}|hyperpage}{7}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES@{O\+F\+F\+S\+E\+T\+\_\+\+M\+I\+N\+U\+T\+ES}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{7}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+N\+A\+ME@{O\+F\+F\+S\+E\+T\+\_\+\+N\+A\+ME}|hyperpage}{7}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+N\+A\+ME@{O\+F\+F\+S\+E\+T\+\_\+\+N\+A\+ME}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{7}
+\indexentry{Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}!O\+F\+F\+S\+E\+T\+\_\+\+S\+E\+C\+O\+N\+DS@{O\+F\+F\+S\+E\+T\+\_\+\+S\+E\+C\+O\+N\+DS}|hyperpage}{7}
+\indexentry{O\+F\+F\+S\+E\+T\+\_\+\+S\+E\+C\+O\+N\+DS@{O\+F\+F\+S\+E\+T\+\_\+\+S\+E\+C\+O\+N\+DS}!Clock\+\_\+management\+\_\+alarm\+\_\+offset@{Clock\+\_\+management\+\_\+alarm\+\_\+offset}|hyperpage}{7}
+\indexentry{Clock\+\_\+management\+\_\+constants@{Clock\+\_\+management\+\_\+constants}|hyperpage}{8}
+\indexentry{Clock\+\_\+management\+\_\+constants@{Clock\+\_\+management\+\_\+constants}!N\+A\+M\+E\+\_\+\+S\+I\+ZE@{N\+A\+M\+E\+\_\+\+S\+I\+ZE}|hyperpage}{8}
+\indexentry{N\+A\+M\+E\+\_\+\+S\+I\+ZE@{N\+A\+M\+E\+\_\+\+S\+I\+ZE}!Clock\+\_\+management\+\_\+constants@{Clock\+\_\+management\+\_\+constants}|hyperpage}{8}
+\indexentry{variables@{variables}|hyperpage}{9}
+\indexentry{variables@{variables}!eeprom\+\_\+index@{eeprom\+\_\+index}|hyperpage}{9}
+\indexentry{eeprom\+\_\+index@{eeprom\+\_\+index}!variables@{variables}|hyperpage}{9}
+\indexentry{variables@{variables}!next\+\_\+alarm@{next\+\_\+alarm}|hyperpage}{9}
+\indexentry{next\+\_\+alarm@{next\+\_\+alarm}!variables@{variables}|hyperpage}{9}
+\indexentry{Type@{Type}|hyperpage}{10}
+\indexentry{Alarm\+\_\+\+Definition@{Alarm\+\_\+\+Definition}|hyperpage}{10}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{11}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Alarm@{Clock\+Management\+\_\+load\+Alarm}|hyperpage}{11}
+\indexentry{Clock\+Management\+\_\+load\+Alarm@{Clock\+Management\+\_\+load\+Alarm}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{11}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Date@{Clock\+Management\+\_\+load\+Date}|hyperpage}{12}
+\indexentry{Clock\+Management\+\_\+load\+Date@{Clock\+Management\+\_\+load\+Date}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{12}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Time@{Clock\+Management\+\_\+load\+Time}|hyperpage}{13}
+\indexentry{Clock\+Management\+\_\+load\+Time@{Clock\+Management\+\_\+load\+Time}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{13}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Alarm@{Clock\+Management\+\_\+save\+Alarm}|hyperpage}{14}
+\indexentry{Clock\+Management\+\_\+save\+Alarm@{Clock\+Management\+\_\+save\+Alarm}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{14}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Date@{Clock\+Management\+\_\+save\+Date}|hyperpage}{15}
+\indexentry{Clock\+Management\+\_\+save\+Date@{Clock\+Management\+\_\+save\+Date}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{15}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Time@{Clock\+Management\+\_\+save\+Time}|hyperpage}{16}
+\indexentry{Clock\+Management\+\_\+save\+Time@{Clock\+Management\+\_\+save\+Time}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}|hyperpage}{16}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}|hyperpage}{18}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Alarm\+Before@{Clock\+Management\+\_\+is\+Alarm\+Before}|hyperpage}{18}
+\indexentry{Clock\+Management\+\_\+is\+Alarm\+Before@{Clock\+Management\+\_\+is\+Alarm\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}|hyperpage}{18}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Date\+Before@{Clock\+Management\+\_\+is\+Date\+Before}|hyperpage}{19}
+\indexentry{Clock\+Management\+\_\+is\+Date\+Before@{Clock\+Management\+\_\+is\+Date\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}|hyperpage}{19}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Time\+Before@{Clock\+Management\+\_\+is\+Time\+Before}|hyperpage}{20}
+\indexentry{Clock\+Management\+\_\+is\+Time\+Before@{Clock\+Management\+\_\+is\+Time\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}|hyperpage}{20}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Update@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Update}|hyperpage}{21}
+\indexentry{Clock\+\_\+\+Management\+\_\+\+Alarm\+Update@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Update}!C\+Lock\+Management\+\_\+update\+Alarm@{C\+Lock\+Management\+\_\+update\+Alarm}|hyperpage}{21}
+\indexentry{C\+Lock\+Management\+\_\+update\+Alarm@{C\+Lock\+Management\+\_\+update\+Alarm}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Update@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Update}|hyperpage}{21}
+\indexentry{Clock\+\_\+\+Management@{Clock\+\_\+\+Management}|hyperpage}{22}
+\indexentry{Constant@{Constant}|hyperpage}{23}
+\indexentry{Constant@{Constant}!A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}|hyperpage}{23}
+\indexentry{A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{A\+U\+D\+I\+O\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!Constant@{Constant}|hyperpage}{23}
+\indexentry{Constant@{Constant}!D\+M\+A\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{D\+M\+A\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}|hyperpage}{23}
+\indexentry{D\+M\+A\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY@{D\+M\+A\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}!Constant@{Constant}|hyperpage}{23}
+\indexentry{Constant@{Constant}!L\+E\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{L\+E\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}|hyperpage}{24}
+\indexentry{L\+E\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{L\+E\+D\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE@{L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}|hyperpage}{24}
+\indexentry{L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE@{L\+E\+D\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!L\+E\+D\+\_\+\+N\+U\+M\+B\+ER@{L\+E\+D\+\_\+\+N\+U\+M\+B\+ER}|hyperpage}{24}
+\indexentry{L\+E\+D\+\_\+\+N\+U\+M\+B\+ER@{L\+E\+D\+\_\+\+N\+U\+M\+B\+ER}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!M\+A\+X\+\_\+8\+B\+IT@{M\+A\+X\+\_\+8\+B\+IT}|hyperpage}{24}
+\indexentry{M\+A\+X\+\_\+8\+B\+IT@{M\+A\+X\+\_\+8\+B\+IT}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN@{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN}|hyperpage}{24}
+\indexentry{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN@{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+B\+E\+G\+IN}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND@{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND}|hyperpage}{24}
+\indexentry{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND@{R\+E\+S\+E\+T\+\_\+\+S\+L\+O\+T\+S\+\_\+\+E\+ND}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ@{T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ}|hyperpage}{24}
+\indexentry{T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ@{T\+I\+M\+E\+R\+\_\+\+C\+L\+O\+C\+K\+\_\+\+F\+R\+EQ}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}|hyperpage}{24}
+\indexentry{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD@{T\+I\+M\+E\+R\+\_\+\+P\+E\+R\+I\+OD}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!W\+S2812\+\_\+0@{W\+S2812\+\_\+0}|hyperpage}{24}
+\indexentry{W\+S2812\+\_\+0@{W\+S2812\+\_\+0}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!W\+S2812\+\_\+1@{W\+S2812\+\_\+1}|hyperpage}{24}
+\indexentry{W\+S2812\+\_\+1@{W\+S2812\+\_\+1}!Constant@{Constant}|hyperpage}{24}
+\indexentry{Constant@{Constant}!W\+S2812\+\_\+\+F\+R\+EQ@{W\+S2812\+\_\+\+F\+R\+EQ}|hyperpage}{25}
+\indexentry{W\+S2812\+\_\+\+F\+R\+EQ@{W\+S2812\+\_\+\+F\+R\+EQ}!Constant@{Constant}|hyperpage}{25}
+\indexentry{Constant@{Constant}!W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT@{W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT}|hyperpage}{25}
+\indexentry{W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT@{W\+S2812\+\_\+\+L\+A\+S\+T\+\_\+\+S\+L\+OT}!Constant@{Constant}|hyperpage}{25}
+\indexentry{Constant@{Constant}!W\+S2812\+\_\+\+R\+E\+S\+ET@{W\+S2812\+\_\+\+R\+E\+S\+ET}|hyperpage}{25}
+\indexentry{W\+S2812\+\_\+\+R\+E\+S\+ET@{W\+S2812\+\_\+\+R\+E\+S\+ET}!Constant@{Constant}|hyperpage}{25}
+\indexentry{Configuration functions@{Configuration functions}|hyperpage}{26}
+\indexentry{Configuration functions@{Configuration functions}!audio\+\_\+disable@{audio\+\_\+disable}|hyperpage}{26}
+\indexentry{audio\+\_\+disable@{audio\+\_\+disable}!Configuration functions@{Configuration functions}|hyperpage}{26}
+\indexentry{Configuration functions@{Configuration functions}!audio\+\_\+init@{audio\+\_\+init}|hyperpage}{27}
+\indexentry{audio\+\_\+init@{audio\+\_\+init}!Configuration functions@{Configuration functions}|hyperpage}{27}
+\indexentry{Play audio functions@{Play audio functions}|hyperpage}{28}
+\indexentry{Play audio functions@{Play audio functions}!audio\+\_\+play@{audio\+\_\+play}|hyperpage}{28}
+\indexentry{audio\+\_\+play@{audio\+\_\+play}!Play audio functions@{Play audio functions}|hyperpage}{28}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{30}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT}|hyperpage}{30}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{30}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+B\+A\+U\+D\+R\+A\+TE}|hyperpage}{30}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+B\+A\+U\+D\+R\+A\+TE}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{30}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+G\+P\+I\+OX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+G\+P\+I\+OX}|hyperpage}{30}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+G\+P\+I\+OX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+G\+P\+I\+OX}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{30}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX}|hyperpage}{30}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{30}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+IN@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+IN}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+IN@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+IN}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+IN@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+IN}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+IN@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+IN}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+TX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+TX}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+TX@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+TX}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}!B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ}|hyperpage}{31}
+\indexentry{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ@{B\+L\+U\+E\+T\+O\+O\+T\+H\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ}!Bluetooth\+\_\+\+Constants@{Bluetooth\+\_\+\+Constants}|hyperpage}{31}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{32}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!bluetooth\+\_\+buffer\+\_\+update@{bluetooth\+\_\+buffer\+\_\+update}|hyperpage}{32}
+\indexentry{bluetooth\+\_\+buffer\+\_\+update@{bluetooth\+\_\+buffer\+\_\+update}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{32}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!bluetooth\+\_\+init@{bluetooth\+\_\+init}|hyperpage}{32}
+\indexentry{bluetooth\+\_\+init@{bluetooth\+\_\+init}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{32}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{33}
+\indexentry{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{33}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{33}
+\indexentry{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{33}
+\indexentry{Transmission functions@{Transmission functions}|hyperpage}{34}
+\indexentry{Transmission functions@{Transmission functions}!bluetooth\+\_\+send@{bluetooth\+\_\+send}|hyperpage}{34}
+\indexentry{bluetooth\+\_\+send@{bluetooth\+\_\+send}!Transmission functions@{Transmission functions}|hyperpage}{34}
+\indexentry{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions}|hyperpage}{35}
+\indexentry{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions}!R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+A@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+A}|hyperpage}{35}
+\indexentry{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+A@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+A}!R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions}|hyperpage}{35}
+\indexentry{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions}!R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+S@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+S}|hyperpage}{35}
+\indexentry{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+S@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+S}!R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions@{R\+T\+C\+\_\+\+P\+R\+E\+D\+I\+V\+\_\+\+Definitions}|hyperpage}{35}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Choice@{C\+L\+O\+C\+K\+\_\+\+Choice}|hyperpage}{36}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Choice@{C\+L\+O\+C\+K\+\_\+\+Choice}!C\+L\+O\+C\+K\+\_\+A@{C\+L\+O\+C\+K\+\_\+A}|hyperpage}{36}
+\indexentry{C\+L\+O\+C\+K\+\_\+A@{C\+L\+O\+C\+K\+\_\+A}!C\+L\+O\+C\+K\+\_\+\+Choice@{C\+L\+O\+C\+K\+\_\+\+Choice}|hyperpage}{36}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Choice@{C\+L\+O\+C\+K\+\_\+\+Choice}!C\+L\+O\+C\+K\+\_\+B@{C\+L\+O\+C\+K\+\_\+B}|hyperpage}{36}
+\indexentry{C\+L\+O\+C\+K\+\_\+B@{C\+L\+O\+C\+K\+\_\+B}!C\+L\+O\+C\+K\+\_\+\+Choice@{C\+L\+O\+C\+K\+\_\+\+Choice}|hyperpage}{36}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}|hyperpage}{37}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}!AM@{AM}|hyperpage}{37}
+\indexentry{AM@{AM}!C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}|hyperpage}{37}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}!PM@{PM}|hyperpage}{37}
+\indexentry{PM@{PM}!C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}|hyperpage}{37}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Date@{C\+L\+O\+C\+K\+\_\+\+Date}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Date@{C\+L\+O\+C\+K\+\_\+\+Date}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Format@{C\+L\+O\+C\+K\+\_\+\+Format}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Hours@{C\+L\+O\+C\+K\+\_\+\+Hours}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Hours@{C\+L\+O\+C\+K\+\_\+\+Hours}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Minutes@{C\+L\+O\+C\+K\+\_\+\+Minutes}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Minutes@{C\+L\+O\+C\+K\+\_\+\+Minutes}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{38}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Month@{C\+L\+O\+C\+K\+\_\+\+Month}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Month@{C\+L\+O\+C\+K\+\_\+\+Month}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Seconds@{C\+L\+O\+C\+K\+\_\+\+Seconds}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Seconds@{C\+L\+O\+C\+K\+\_\+\+Seconds}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Week\+Day@{C\+L\+O\+C\+K\+\_\+\+Week\+Day}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Week\+Day@{C\+L\+O\+C\+K\+\_\+\+Week\+Day}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}!C\+L\+O\+C\+K\+\_\+\+Year@{C\+L\+O\+C\+K\+\_\+\+Year}|hyperpage}{39}
+\indexentry{C\+L\+O\+C\+K\+\_\+\+Year@{C\+L\+O\+C\+K\+\_\+\+Year}!C\+L\+O\+C\+K\+\_\+\+Value@{C\+L\+O\+C\+K\+\_\+\+Value}|hyperpage}{39}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}!R\+E\+P\+E\+A\+T\+\_\+\+Date\+Week\+Day@{R\+E\+P\+E\+A\+T\+\_\+\+Date\+Week\+Day}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Date\+Week\+Day@{R\+E\+P\+E\+A\+T\+\_\+\+Date\+Week\+Day}!R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}!R\+E\+P\+E\+A\+T\+\_\+\+Hours@{R\+E\+P\+E\+A\+T\+\_\+\+Hours}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Hours@{R\+E\+P\+E\+A\+T\+\_\+\+Hours}!R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}!R\+E\+P\+E\+A\+T\+\_\+\+Minutes@{R\+E\+P\+E\+A\+T\+\_\+\+Minutes}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Minutes@{R\+E\+P\+E\+A\+T\+\_\+\+Minutes}!R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}!R\+E\+P\+E\+A\+T\+\_\+\+None@{R\+E\+P\+E\+A\+T\+\_\+\+None}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+None@{R\+E\+P\+E\+A\+T\+\_\+\+None}!R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}!R\+E\+P\+E\+A\+T\+\_\+\+Seconds@{R\+E\+P\+E\+A\+T\+\_\+\+Seconds}|hyperpage}{40}
+\indexentry{R\+E\+P\+E\+A\+T\+\_\+\+Seconds@{R\+E\+P\+E\+A\+T\+\_\+\+Seconds}!R\+E\+P\+E\+A\+T\+\_\+\+Definitions@{R\+E\+P\+E\+A\+T\+\_\+\+Definitions}|hyperpage}{40}
+\indexentry{Initialisation functions@{Initialisation functions}|hyperpage}{41}
+\indexentry{Initialisation functions@{Initialisation functions}!clock\+\_\+init@{clock\+\_\+init}|hyperpage}{41}
+\indexentry{clock\+\_\+init@{clock\+\_\+init}!Initialisation functions@{Initialisation functions}|hyperpage}{41}
+\indexentry{Time and Date Configuration functions@{Time and Date Configuration functions}|hyperpage}{43}
+\indexentry{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+get\+Date@{clock\+\_\+get\+Date}|hyperpage}{43}
+\indexentry{clock\+\_\+get\+Date@{clock\+\_\+get\+Date}!Time and Date Configuration functions@{Time and Date Configuration functions}|hyperpage}{43}
+\indexentry{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+get\+Time@{clock\+\_\+get\+Time}|hyperpage}{43}
+\indexentry{clock\+\_\+get\+Time@{clock\+\_\+get\+Time}!Time and Date Configuration functions@{Time and Date Configuration functions}|hyperpage}{43}
+\indexentry{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+set\+Date@{clock\+\_\+set\+Date}|hyperpage}{44}
+\indexentry{clock\+\_\+set\+Date@{clock\+\_\+set\+Date}!Time and Date Configuration functions@{Time and Date Configuration functions}|hyperpage}{44}
+\indexentry{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+set\+Time@{clock\+\_\+set\+Time}|hyperpage}{44}
+\indexentry{clock\+\_\+set\+Time@{clock\+\_\+set\+Time}!Time and Date Configuration functions@{Time and Date Configuration functions}|hyperpage}{44}
+\indexentry{Alarms configuration functions@{Alarms configuration functions}|hyperpage}{46}
+\indexentry{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+create\+Alarm@{clock\+\_\+create\+Alarm}|hyperpage}{46}
+\indexentry{clock\+\_\+create\+Alarm@{clock\+\_\+create\+Alarm}!Alarms configuration functions@{Alarms configuration functions}|hyperpage}{46}
+\indexentry{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+setA@{clock\+\_\+setA}|hyperpage}{47}
+\indexentry{clock\+\_\+setA@{clock\+\_\+setA}!Alarms configuration functions@{Alarms configuration functions}|hyperpage}{47}
+\indexentry{Alarms configuration functions@{Alarms configuration functions}!clock\+\_\+set\+Alarm@{clock\+\_\+set\+Alarm}|hyperpage}{47}
+\indexentry{clock\+\_\+set\+Alarm@{clock\+\_\+set\+Alarm}!Alarms configuration functions@{Alarms configuration functions}|hyperpage}{47}
+\indexentry{Alarms configuration functions@{Alarms configuration functions}!R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{48}
+\indexentry{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler@{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler}!Alarms configuration functions@{Alarms configuration functions}|hyperpage}{48}
+\indexentry{Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!R\+D\+SR@{R\+D\+SR}|hyperpage}{49}
+\indexentry{R\+D\+SR@{R\+D\+SR}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!R\+E\+AD@{R\+E\+AD}|hyperpage}{49}
+\indexentry{R\+E\+AD@{R\+E\+AD}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!W\+R\+DI@{W\+R\+DI}|hyperpage}{49}
+\indexentry{W\+R\+DI@{W\+R\+DI}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!W\+R\+EN@{W\+R\+EN}|hyperpage}{49}
+\indexentry{W\+R\+EN@{W\+R\+EN}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!W\+R\+I\+TE@{W\+R\+I\+TE}|hyperpage}{49}
+\indexentry{W\+R\+I\+TE@{W\+R\+I\+TE}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Instructions@{Instructions}!W\+R\+SR@{W\+R\+SR}|hyperpage}{49}
+\indexentry{W\+R\+SR@{W\+R\+SR}!Instructions@{Instructions}|hyperpage}{49}
+\indexentry{Utilities@{Utilities}|hyperpage}{50}
+\indexentry{Utilities@{Utilities}!E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+ZE@{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+ZE}|hyperpage}{50}
+\indexentry{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+ZE@{E\+E\+P\+R\+O\+M\+\_\+\+S\+I\+ZE}!Utilities@{Utilities}|hyperpage}{50}
+\indexentry{Utilities@{Utilities}!P\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{P\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}|hyperpage}{50}
+\indexentry{P\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH@{P\+A\+G\+E\+\_\+\+L\+E\+N\+G\+TH}!Utilities@{Utilities}|hyperpage}{50}
+\indexentry{Initialisation functions@{Initialisation functions}|hyperpage}{51}
+\indexentry{Initialisation functions@{Initialisation functions}!eeprom\+\_\+init@{eeprom\+\_\+init}|hyperpage}{51}
+\indexentry{eeprom\+\_\+init@{eeprom\+\_\+init}!Initialisation functions@{Initialisation functions}|hyperpage}{51}
+\indexentry{Transmission functions@{Transmission functions}|hyperpage}{53}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+clear@{eeprom\+\_\+clear}|hyperpage}{53}
+\indexentry{eeprom\+\_\+clear@{eeprom\+\_\+clear}!Transmission functions@{Transmission functions}|hyperpage}{53}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+read@{eeprom\+\_\+read}|hyperpage}{54}
+\indexentry{eeprom\+\_\+read@{eeprom\+\_\+read}!Transmission functions@{Transmission functions}|hyperpage}{54}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+read4\+Bytes@{eeprom\+\_\+read4\+Bytes}|hyperpage}{55}
+\indexentry{eeprom\+\_\+read4\+Bytes@{eeprom\+\_\+read4\+Bytes}!Transmission functions@{Transmission functions}|hyperpage}{55}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+read\+N\+Bytes@{eeprom\+\_\+read\+N\+Bytes}|hyperpage}{56}
+\indexentry{eeprom\+\_\+read\+N\+Bytes@{eeprom\+\_\+read\+N\+Bytes}!Transmission functions@{Transmission functions}|hyperpage}{56}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+write@{eeprom\+\_\+write}|hyperpage}{56}
+\indexentry{eeprom\+\_\+write@{eeprom\+\_\+write}!Transmission functions@{Transmission functions}|hyperpage}{56}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+write32\+Bytes@{eeprom\+\_\+write32\+Bytes}|hyperpage}{57}
+\indexentry{eeprom\+\_\+write32\+Bytes@{eeprom\+\_\+write32\+Bytes}!Transmission functions@{Transmission functions}|hyperpage}{57}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+write4\+Bytes@{eeprom\+\_\+write4\+Bytes}|hyperpage}{58}
+\indexentry{eeprom\+\_\+write4\+Bytes@{eeprom\+\_\+write4\+Bytes}!Transmission functions@{Transmission functions}|hyperpage}{58}
+\indexentry{Transmission functions@{Transmission functions}!eeprom\+\_\+write\+N\+Bytes@{eeprom\+\_\+write\+N\+Bytes}|hyperpage}{59}
+\indexentry{eeprom\+\_\+write\+N\+Bytes@{eeprom\+\_\+write\+N\+Bytes}!Transmission functions@{Transmission functions}|hyperpage}{59}
+\indexentry{Initialisation functions@{Initialisation functions}|hyperpage}{61}
+\indexentry{Initialisation functions@{Initialisation functions}!neopixel\+\_\+init@{neopixel\+\_\+init}|hyperpage}{61}
+\indexentry{neopixel\+\_\+init@{neopixel\+\_\+init}!Initialisation functions@{Initialisation functions}|hyperpage}{61}
+\indexentry{State alteration functions@{State alteration functions}|hyperpage}{63}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+clear@{neopixel\+\_\+clear}|hyperpage}{63}
+\indexentry{neopixel\+\_\+clear@{neopixel\+\_\+clear}!State alteration functions@{State alteration functions}|hyperpage}{63}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+data\+Init@{neopixel\+\_\+data\+Init}|hyperpage}{64}
+\indexentry{neopixel\+\_\+data\+Init@{neopixel\+\_\+data\+Init}!State alteration functions@{State alteration functions}|hyperpage}{64}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+set\+Brightness@{neopixel\+\_\+set\+Brightness}|hyperpage}{64}
+\indexentry{neopixel\+\_\+set\+Brightness@{neopixel\+\_\+set\+Brightness}!State alteration functions@{State alteration functions}|hyperpage}{64}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}|hyperpage}{65}
+\indexentry{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}!State alteration functions@{State alteration functions}|hyperpage}{65}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+set\+State@{neopixel\+\_\+set\+State}|hyperpage}{65}
+\indexentry{neopixel\+\_\+set\+State@{neopixel\+\_\+set\+State}!State alteration functions@{State alteration functions}|hyperpage}{65}
+\indexentry{State alteration functions@{State alteration functions}!neopixel\+\_\+show@{neopixel\+\_\+show}|hyperpage}{66}
+\indexentry{neopixel\+\_\+show@{neopixel\+\_\+show}!State alteration functions@{State alteration functions}|hyperpage}{66}
+\indexentry{State alteration functions@{State alteration functions}!T\+I\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{66}
+\indexentry{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler@{T\+I\+M2\+\_\+\+I\+R\+Q\+Handler}!State alteration functions@{State alteration functions}|hyperpage}{66}
+\indexentry{Colour generation functions@{Colour generation functions}|hyperpage}{67}
+\indexentry{Colour generation functions@{Colour generation functions}!neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}|hyperpage}{67}
+\indexentry{neopixel\+\_\+colour\+R\+GB@{neopixel\+\_\+colour\+R\+GB}!Colour generation functions@{Colour generation functions}|hyperpage}{67}
+\indexentry{Colour generation functions@{Colour generation functions}!neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}|hyperpage}{68}
+\indexentry{neopixel\+\_\+colour\+R\+G\+BW@{neopixel\+\_\+colour\+R\+G\+BW}!Colour generation functions@{Colour generation functions}|hyperpage}{68}
+\indexentry{colour display functions@{colour display functions}|hyperpage}{69}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+All\+Pixel\+R\+GB@{neopixel\+\_\+set\+All\+Pixel\+R\+GB}|hyperpage}{69}
+\indexentry{neopixel\+\_\+set\+All\+Pixel\+R\+GB@{neopixel\+\_\+set\+All\+Pixel\+R\+GB}!colour display functions@{colour display functions}|hyperpage}{69}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+All\+Pixel\+R\+G\+BW@{neopixel\+\_\+set\+All\+Pixel\+R\+G\+BW}|hyperpage}{70}
+\indexentry{neopixel\+\_\+set\+All\+Pixel\+R\+G\+BW@{neopixel\+\_\+set\+All\+Pixel\+R\+G\+BW}!colour display functions@{colour display functions}|hyperpage}{70}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+Pixel\+Colour@{neopixel\+\_\+set\+Pixel\+Colour}|hyperpage}{70}
+\indexentry{neopixel\+\_\+set\+Pixel\+Colour@{neopixel\+\_\+set\+Pixel\+Colour}!colour display functions@{colour display functions}|hyperpage}{70}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}|hyperpage}{71}
+\indexentry{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB@{neopixel\+\_\+set\+Pixel\+Colour\+R\+GB}!colour display functions@{colour display functions}|hyperpage}{71}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW}|hyperpage}{72}
+\indexentry{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW@{neopixel\+\_\+set\+Pixel\+Colour\+R\+G\+BW}!colour display functions@{colour display functions}|hyperpage}{72}
+\indexentry{colour display functions@{colour display functions}!neopixel\+\_\+set\+Pixel\+ColourW@{neopixel\+\_\+set\+Pixel\+ColourW}|hyperpage}{73}
+\indexentry{neopixel\+\_\+set\+Pixel\+ColourW@{neopixel\+\_\+set\+Pixel\+ColourW}!colour display functions@{colour display functions}|hyperpage}{73}
+\indexentry{Initialise the temperature reader@{Initialise the temperature reader}|hyperpage}{74}
+\indexentry{Initialise the temperature reader@{Initialise the temperature reader}!temperature\+\_\+init@{temperature\+\_\+init}|hyperpage}{74}
+\indexentry{temperature\+\_\+init@{temperature\+\_\+init}!Initialise the temperature reader@{Initialise the temperature reader}|hyperpage}{74}
+\indexentry{Temperature information@{Temperature information}|hyperpage}{76}
+\indexentry{Temperature information@{Temperature information}!temperature\+\_\+read@{temperature\+\_\+read}|hyperpage}{76}
+\indexentry{temperature\+\_\+read@{temperature\+\_\+read}!Temperature information@{Temperature information}|hyperpage}{76}
+\indexentry{Temperature information@{Temperature information}!temperature\+\_\+value@{temperature\+\_\+value}|hyperpage}{77}
+\indexentry{temperature\+\_\+value@{temperature\+\_\+value}!Temperature information@{Temperature information}|hyperpage}{77}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{78}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT@{N\+E\+X\+T\+I\+O\+N\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT}|hyperpage}{78}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT@{N\+E\+X\+T\+I\+O\+N\+\_\+\+A\+F\+\_\+\+U\+S\+A\+RT}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{78}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+B\+A\+U\+D\+R\+A\+TE}|hyperpage}{78}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+B\+A\+U\+D\+R\+A\+TE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+B\+A\+U\+D\+R\+A\+TE}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{78}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+G\+P\+I\+OX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+G\+P\+I\+OX}|hyperpage}{78}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+G\+P\+I\+OX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+G\+P\+I\+OX}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{78}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX}|hyperpage}{78}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+G\+P\+I\+OX}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{78}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+P\+E\+R\+I\+P\+H\+\_\+\+U\+S\+A\+R\+TX}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+IN@{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+IN}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+IN@{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+IN}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+R\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+IN@{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+IN}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+IN@{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+IN}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE@{N\+E\+X\+T\+I\+O\+N\+\_\+\+T\+X\+\_\+\+P\+I\+N\+S\+O\+U\+R\+CE}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+TX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+TX}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+TX@{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+TX}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}!N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ@{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ}|hyperpage}{79}
+\indexentry{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ@{N\+E\+X\+T\+I\+O\+N\+\_\+\+U\+S\+A\+R\+T\+X\+\_\+\+I\+RQ}!Nextion\+\_\+\+Constants@{Nextion\+\_\+\+Constants}|hyperpage}{79}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{80}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{80}
+\indexentry{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{80}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!nextion\+\_\+buffer\+\_\+update@{nextion\+\_\+buffer\+\_\+update}|hyperpage}{80}
+\indexentry{nextion\+\_\+buffer\+\_\+update@{nextion\+\_\+buffer\+\_\+update}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{80}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!nextion\+\_\+init@{nextion\+\_\+init}|hyperpage}{81}
+\indexentry{nextion\+\_\+init@{nextion\+\_\+init}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{81}
+\indexentry{Initialization and transmission handler functions@{Initialization and transmission handler functions}!U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}|hyperpage}{82}
+\indexentry{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}|hyperpage}{82}
+\indexentry{Transmission functions@{Transmission functions}|hyperpage}{83}
+\indexentry{Transmission functions@{Transmission functions}!nextion\+\_\+send@{nextion\+\_\+send}|hyperpage}{83}
+\indexentry{nextion\+\_\+send@{nextion\+\_\+send}!Transmission functions@{Transmission functions}|hyperpage}{83}
+\indexentry{Audio@{Audio}|hyperpage}{84}
+\indexentry{Bluetooth@{Bluetooth}|hyperpage}{85}
+\indexentry{Bluetooth@{Bluetooth}!bluetooth\+\_\+read@{bluetooth\+\_\+read}|hyperpage}{85}
+\indexentry{bluetooth\+\_\+read@{bluetooth\+\_\+read}!Bluetooth@{Bluetooth}|hyperpage}{85}
+\indexentry{Bluetooth@{Bluetooth}!bluetooth\+\_\+write@{bluetooth\+\_\+write}|hyperpage}{85}
+\indexentry{bluetooth\+\_\+write@{bluetooth\+\_\+write}!Bluetooth@{Bluetooth}|hyperpage}{85}
+\indexentry{Clock@{Clock}|hyperpage}{86}
+\indexentry{Clock@{Clock}!E\+X\+T\+I\+\_\+\+Init\+Struct@{E\+X\+T\+I\+\_\+\+Init\+Struct}|hyperpage}{87}
+\indexentry{E\+X\+T\+I\+\_\+\+Init\+Struct@{E\+X\+T\+I\+\_\+\+Init\+Struct}!Clock@{Clock}|hyperpage}{87}
+\indexentry{Clock@{Clock}!R\+T\+C\+\_\+\+Alarm\+Struct@{R\+T\+C\+\_\+\+Alarm\+Struct}|hyperpage}{87}
+\indexentry{R\+T\+C\+\_\+\+Alarm\+Struct@{R\+T\+C\+\_\+\+Alarm\+Struct}!Clock@{Clock}|hyperpage}{87}
+\indexentry{Clock@{Clock}!R\+T\+C\+\_\+\+Init\+Struct@{R\+T\+C\+\_\+\+Init\+Struct}|hyperpage}{87}
+\indexentry{R\+T\+C\+\_\+\+Init\+Struct@{R\+T\+C\+\_\+\+Init\+Struct}!Clock@{Clock}|hyperpage}{87}
+\indexentry{Configuration@{Configuration}|hyperpage}{88}
+\indexentry{Configuration@{Configuration}!Error\+\_\+\+Handler@{Error\+\_\+\+Handler}|hyperpage}{88}
+\indexentry{Error\+\_\+\+Handler@{Error\+\_\+\+Handler}!Configuration@{Configuration}|hyperpage}{88}
+\indexentry{Configuration@{Configuration}!N\+P\+C\+\_\+init@{N\+P\+C\+\_\+init}|hyperpage}{88}
+\indexentry{N\+P\+C\+\_\+init@{N\+P\+C\+\_\+init}!Configuration@{Configuration}|hyperpage}{88}
+\indexentry{Eeprom@{Eeprom}|hyperpage}{90}
+\indexentry{Neo\+Pixel@{Neo\+Pixel}|hyperpage}{91}
+\indexentry{Temperature@{Temperature}|hyperpage}{92}
+\indexentry{Utils@{Utils}|hyperpage}{93}
+\indexentry{Utils@{Utils}!D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}|hyperpage}{94}
+\indexentry{D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!Utils@{Utils}|hyperpage}{94}
+\indexentry{Utils@{Utils}!U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}|hyperpage}{94}
+\indexentry{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!Utils@{Utils}|hyperpage}{94}
+\indexentry{Utils@{Utils}!bool@{bool}|hyperpage}{94}
+\indexentry{bool@{bool}!Utils@{Utils}|hyperpage}{94}
+\indexentry{false@{false}!Utils@{Utils}|hyperpage}{94}
+\indexentry{Utils@{Utils}!false@{false}|hyperpage}{94}
+\indexentry{true@{true}!Utils@{Utils}|hyperpage}{94}
+\indexentry{Utils@{Utils}!true@{true}|hyperpage}{94}
+\indexentry{Utils@{Utils}!delay@{delay}|hyperpage}{94}
+\indexentry{delay@{delay}!Utils@{Utils}|hyperpage}{94}
+\indexentry{Utils@{Utils}!max@{max}|hyperpage}{95}
+\indexentry{max@{max}!Utils@{Utils}|hyperpage}{95}
+\indexentry{Utils@{Utils}!D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer@{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer}|hyperpage}{96}
+\indexentry{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer@{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Utils@{Utils}!D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer@{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer}|hyperpage}{96}
+\indexentry{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer@{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Utils@{Utils}!pixel\+\_\+color@{pixel\+\_\+color}|hyperpage}{96}
+\indexentry{pixel\+\_\+color@{pixel\+\_\+color}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Utils@{Utils}!pixel\+\_\+color@{pixel\+\_\+color}|hyperpage}{96}
+\indexentry{pixel\+\_\+color@{pixel\+\_\+color}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Utils@{Utils}!U\+A\+R\+T\+\_\+\+Buffer@{U\+A\+R\+T\+\_\+\+Buffer}|hyperpage}{96}
+\indexentry{U\+A\+R\+T\+\_\+\+Buffer@{U\+A\+R\+T\+\_\+\+Buffer}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Utils@{Utils}!U\+A\+R\+T\+\_\+\+Buffer@{U\+A\+R\+T\+\_\+\+Buffer}|hyperpage}{96}
+\indexentry{U\+A\+R\+T\+\_\+\+Buffer@{U\+A\+R\+T\+\_\+\+Buffer}!Utils@{Utils}|hyperpage}{96}
+\indexentry{Nextion@{Nextion}|hyperpage}{97}
+\indexentry{Nextion@{Nextion}!nextion\+\_\+read@{nextion\+\_\+read}|hyperpage}{97}
+\indexentry{nextion\+\_\+read@{nextion\+\_\+read}!Nextion@{Nextion}|hyperpage}{97}
+\indexentry{Nextion@{Nextion}!nextion\+\_\+write@{nextion\+\_\+write}|hyperpage}{97}
+\indexentry{nextion\+\_\+write@{nextion\+\_\+write}!Nextion@{Nextion}|hyperpage}{97}
+\indexentry{Clock\+\_\+management\+\_\+test@{Clock\+\_\+management\+\_\+test}|hyperpage}{98}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}|hyperpage}{99}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}!test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+alarm@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+alarm}|hyperpage}{99}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+alarm@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+alarm}!Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}|hyperpage}{99}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}!test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+date@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+date}|hyperpage}{100}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+date@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+date}!Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}|hyperpage}{100}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}!test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+time@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+time}|hyperpage}{100}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+time@{test\+\_\+\+Clock\+Mangement\+\_\+save\+\_\+and\+\_\+load\+\_\+time}!Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod@{Clock\+\_\+management\+\_\+test\+\_\+save\+\_\+lod}|hyperpage}{100}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}|hyperpage}{102}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}!test\+\_\+\+Clock\+Mangement\+\_\+alarm\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+alarm\+\_\+comparison}|hyperpage}{102}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+alarm\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+alarm\+\_\+comparison}!Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}|hyperpage}{102}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}!test\+\_\+\+Clock\+Mangement\+\_\+date\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+date\+\_\+comparison}|hyperpage}{103}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+date\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+date\+\_\+comparison}!Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}|hyperpage}{103}
+\indexentry{Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}!test\+\_\+\+Clock\+Mangement\+\_\+time\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+time\+\_\+comparison}|hyperpage}{103}
+\indexentry{test\+\_\+\+Clock\+Mangement\+\_\+time\+\_\+comparison@{test\+\_\+\+Clock\+Mangement\+\_\+time\+\_\+comparison}!Clock\+\_\+management\+\_\+test\+\_\+comparison@{Clock\+\_\+management\+\_\+test\+\_\+comparison}|hyperpage}{103}
+\indexentry{Rtc\+\_\+test@{Rtc\+\_\+test}|hyperpage}{105}
+\indexentry{Rtc\+\_\+test@{Rtc\+\_\+test}!test\+\_\+clock\+\_\+alarm@{test\+\_\+clock\+\_\+alarm}|hyperpage}{105}
+\indexentry{test\+\_\+clock\+\_\+alarm@{test\+\_\+clock\+\_\+alarm}!Rtc\+\_\+test@{Rtc\+\_\+test}|hyperpage}{105}
+\indexentry{Rtc\+\_\+test@{Rtc\+\_\+test}!test\+\_\+clock\+\_\+date@{test\+\_\+clock\+\_\+date}|hyperpage}{106}
+\indexentry{test\+\_\+clock\+\_\+date@{test\+\_\+clock\+\_\+date}!Rtc\+\_\+test@{Rtc\+\_\+test}|hyperpage}{106}
+\indexentry{Rtc\+\_\+test@{Rtc\+\_\+test}!test\+\_\+clock\+\_\+time@{test\+\_\+clock\+\_\+time}|hyperpage}{106}
+\indexentry{test\+\_\+clock\+\_\+time@{test\+\_\+clock\+\_\+time}!Rtc\+\_\+test@{Rtc\+\_\+test}|hyperpage}{106}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{108}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+Equal@{assert\+Equal}|hyperpage}{108}
+\indexentry{assert\+Equal@{assert\+Equal}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{108}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+False@{assert\+False}|hyperpage}{109}
+\indexentry{assert\+False@{assert\+False}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{109}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+Greater@{assert\+Greater}|hyperpage}{110}
+\indexentry{assert\+Greater@{assert\+Greater}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{110}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+Greater\+Or\+Equal@{assert\+Greater\+Or\+Equal}|hyperpage}{110}
+\indexentry{assert\+Greater\+Or\+Equal@{assert\+Greater\+Or\+Equal}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{110}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+Less@{assert\+Less}|hyperpage}{110}
+\indexentry{assert\+Less@{assert\+Less}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{110}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+Less\+Or\+Equal@{assert\+Less\+Or\+Equal}|hyperpage}{111}
+\indexentry{assert\+Less\+Or\+Equal@{assert\+Less\+Or\+Equal}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{111}
+\indexentry{Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}!assert\+True@{assert\+True}|hyperpage}{111}
+\indexentry{assert\+True@{assert\+True}!Unit\+Test\+\_\+\+Assert@{Unit\+Test\+\_\+\+Assert}|hyperpage}{111}
+\indexentry{Eeprom\+\_\+test@{Eeprom\+\_\+test}|hyperpage}{113}
+\indexentry{Eeprom\+\_\+test@{Eeprom\+\_\+test}!test\+\_\+eeprom\+\_\+write4\+B\+\_\+read4B@{test\+\_\+eeprom\+\_\+write4\+B\+\_\+read4B}|hyperpage}{113}
+\indexentry{test\+\_\+eeprom\+\_\+write4\+B\+\_\+read4B@{test\+\_\+eeprom\+\_\+write4\+B\+\_\+read4B}!Eeprom\+\_\+test@{Eeprom\+\_\+test}|hyperpage}{113}
+\indexentry{Eeprom\+\_\+test@{Eeprom\+\_\+test}!test\+\_\+eeprom\+\_\+write\+\_\+read@{test\+\_\+eeprom\+\_\+write\+\_\+read}|hyperpage}{114}
+\indexentry{test\+\_\+eeprom\+\_\+write\+\_\+read@{test\+\_\+eeprom\+\_\+write\+\_\+read}!Eeprom\+\_\+test@{Eeprom\+\_\+test}|hyperpage}{114}
+\indexentry{Eeprom\+\_\+test@{Eeprom\+\_\+test}!test\+\_\+eeprom\+\_\+write\+N\+B\+\_\+read\+NB@{test\+\_\+eeprom\+\_\+write\+N\+B\+\_\+read\+NB}|hyperpage}{114}
+\indexentry{test\+\_\+eeprom\+\_\+write\+N\+B\+\_\+read\+NB@{test\+\_\+eeprom\+\_\+write\+N\+B\+\_\+read\+NB}!Eeprom\+\_\+test@{Eeprom\+\_\+test}|hyperpage}{114}
+\indexentry{Unit\+Test@{Unit\+Test}|hyperpage}{117}
+\indexentry{N\+PC@{N\+PC}|hyperpage}{118}
+\indexentry{Application@{Application}|hyperpage}{119}
+\indexentry{Framework@{Framework}|hyperpage}{120}
+\indexentry{Unit\+Test@{Unit\+Test}|hyperpage}{122}
+\indexentry{clock\+\_\+management.\+c@{clock\+\_\+management.\+c}|hyperpage}{123}
+\indexentry{clock\+\_\+management.\+h@{clock\+\_\+management.\+h}|hyperpage}{124}
+\indexentry{clock\+\_\+management\+\_\+test.\+c@{clock\+\_\+management\+\_\+test.\+c}|hyperpage}{127}
+\indexentry{clock\+\_\+management\+\_\+test.\+h@{clock\+\_\+management\+\_\+test.\+h}|hyperpage}{128}
+\indexentry{eeprom\+\_\+test.\+c@{eeprom\+\_\+test.\+c}|hyperpage}{129}
+\indexentry{eeprom\+\_\+test.\+h@{eeprom\+\_\+test.\+h}|hyperpage}{131}
+\indexentry{N\+P\+C\+\_\+audio.\+c@{N\+P\+C\+\_\+audio.\+c}|hyperpage}{132}
+\indexentry{N\+P\+C\+\_\+audio.\+h@{N\+P\+C\+\_\+audio.\+h}|hyperpage}{133}
+\indexentry{N\+P\+C\+\_\+bluetooth.\+c@{N\+P\+C\+\_\+bluetooth.\+c}|hyperpage}{135}
+\indexentry{N\+P\+C\+\_\+bluetooth.\+h@{N\+P\+C\+\_\+bluetooth.\+h}|hyperpage}{135}
+\indexentry{N\+P\+C\+\_\+clock.\+c@{N\+P\+C\+\_\+clock.\+c}|hyperpage}{138}
+\indexentry{N\+P\+C\+\_\+clock.\+h@{N\+P\+C\+\_\+clock.\+h}|hyperpage}{139}
+\indexentry{N\+P\+C\+\_\+configuration.\+c@{N\+P\+C\+\_\+configuration.\+c}|hyperpage}{141}
+\indexentry{N\+P\+C\+\_\+configuration.\+h@{N\+P\+C\+\_\+configuration.\+h}|hyperpage}{142}
+\indexentry{N\+P\+C\+\_\+eeprom.\+c@{N\+P\+C\+\_\+eeprom.\+c}|hyperpage}{144}
+\indexentry{N\+P\+C\+\_\+eeprom.\+h@{N\+P\+C\+\_\+eeprom.\+h}|hyperpage}{145}
+\indexentry{N\+P\+C\+\_\+neopixel.\+c@{N\+P\+C\+\_\+neopixel.\+c}|hyperpage}{147}
+\indexentry{N\+P\+C\+\_\+neopixel.\+h@{N\+P\+C\+\_\+neopixel.\+h}|hyperpage}{148}
+\indexentry{N\+P\+C\+\_\+temperature.\+c@{N\+P\+C\+\_\+temperature.\+c}|hyperpage}{150}
+\indexentry{N\+P\+C\+\_\+temperature.\+h@{N\+P\+C\+\_\+temperature.\+h}|hyperpage}{152}
+\indexentry{N\+P\+C\+\_\+utils.\+c@{N\+P\+C\+\_\+utils.\+c}|hyperpage}{153}
+\indexentry{N\+P\+C\+\_\+utils.\+h@{N\+P\+C\+\_\+utils.\+h}|hyperpage}{154}
+\indexentry{N\+P\+S\+C\+\_\+nextion.\+c@{N\+P\+S\+C\+\_\+nextion.\+c}|hyperpage}{156}
+\indexentry{N\+P\+S\+C\+\_\+nextion.\+h@{N\+P\+S\+C\+\_\+nextion.\+h}|hyperpage}{157}
+\indexentry{rtc\+\_\+test.\+c@{rtc\+\_\+test.\+c}|hyperpage}{158}
+\indexentry{rtc\+\_\+test.\+h@{rtc\+\_\+test.\+h}|hyperpage}{160}
+\indexentry{unit\+Test.\+c@{unit\+Test.\+c}|hyperpage}{161}
+\indexentry{unit\+Test.\+h@{unit\+Test.\+h}|hyperpage}{163}

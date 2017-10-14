@@ -1,0 +1,8 @@
+<map id="clock_management_test.c" name="clock_management_test.c">
+<area shape="rect" id="node2" href="$d3/df4/clock__management__test_8h.html" title="../inc/clock_management\l_test.h" alt="" coords="139,80,307,121"/>
+<area shape="rect" id="node3" href="$d0/da7/unit_test_8h.html" title="This file contains all the configuration prototypes used by the unit testing. " alt="" coords="113,177,193,203"/>
+<area shape="rect" id="node11" href="$db/ddc/clock__management_8h.html" title="This file contains all the application level functions usable by the user. " alt="" coords="218,169,369,211"/>
+<area shape="rect" id="node4" href="$d7/da2/_n_p_c__utils_8h.html" title="This file contains all the utility functions prototypes used by the NPC. " alt="" coords="191,348,323,389"/>
+<area shape="rect" id="node12" href="$de/deb/_n_p_c__eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="191,259,323,300"/>
+<area shape="rect" id="node13" href="$de/d02/_n_p_c__clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPC..." alt="" coords="347,259,479,300"/>
+</map>

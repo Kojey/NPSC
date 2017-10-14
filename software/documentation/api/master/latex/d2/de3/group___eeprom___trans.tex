@@ -1,0 +1,416 @@
+\hypertarget{group___eeprom___trans}{}\section{Transmission functions}
+\label{group___eeprom___trans}\index{Transmission functions@{Transmission functions}}
+
+
+Eeprom data transmission functions.  
+
+
+Collaboration diagram for Transmission functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d2/de3/group___eeprom___trans}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b}{eeprom\+\_\+write} (uint16\+\_\+t address, uint8\+\_\+t data)
+\begin{DoxyCompactList}\small\item\em Write a byte to the eeprom. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f}{eeprom\+\_\+read} (uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Read a byte from the eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058}{eeprom\+\_\+write32\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Write a page to the eeprom. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43}{eeprom\+\_\+read4\+Bytes} (uint16\+\_\+t base\+Address)
+\begin{DoxyCompactList}\small\item\em Read a 32byte from eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d}{eeprom\+\_\+write\+N\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)
+\begin{DoxyCompactList}\small\item\em Write N bytes to the eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569}{eeprom\+\_\+write4\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)
+\begin{DoxyCompactList}\small\item\em Write 4 bytes to the eeprom. \end{DoxyCompactList}\item 
+void \hyperlink{group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c}{eeprom\+\_\+read\+N\+Bytes} (uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)
+\item 
+void \hyperlink{group___eeprom___trans_ga7964a5a66da1c4a59a42309a93752217}{eeprom\+\_\+clear} (void)
+\begin{DoxyCompactList}\small\item\em Clear eeprom data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Eeprom data transmission functions. 
+
+
+
+\subsection{Function Documentation}
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+clear@{eeprom\+\_\+clear}}
+\index{eeprom\+\_\+clear@{eeprom\+\_\+clear}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+clear(void)}{eeprom_clear(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void eeprom\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga7964a5a66da1c4a59a42309a93752217}{}\label{group___eeprom___trans_ga7964a5a66da1c4a59a42309a93752217}
+
+
+Clear eeprom data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 242 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{d2/de3/group___eeprom___trans_ga7964a5a66da1c4a59a42309a93752217_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+read@{eeprom\+\_\+read}}
+\index{eeprom\+\_\+read@{eeprom\+\_\+read}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+read(uint16\+\_\+t address)}{eeprom_read(uint16_t address)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t eeprom\+\_\+read (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f}{}\label{group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f}
+
+
+Read a byte from the eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address of the memory \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em uint8\+\_\+t} & data from eeprom \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 156 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{d2/de3/group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_gafaa7cca6f6ad1d9ae49522324c825c2f_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+read4\+Bytes@{eeprom\+\_\+read4\+Bytes}}
+\index{eeprom\+\_\+read4\+Bytes@{eeprom\+\_\+read4\+Bytes}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+read4\+Bytes(uint16\+\_\+t base\+Address)}{eeprom_read4Bytes(uint16_t baseAddress)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t eeprom\+\_\+read4\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{base\+Address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43}{}\label{group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43}
+
+
+Read a 32byte from eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em uint32\+\_\+t} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 295 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga9a323370ddd02d91c6118f104c015b43_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+read\+N\+Bytes@{eeprom\+\_\+read\+N\+Bytes}}
+\index{eeprom\+\_\+read\+N\+Bytes@{eeprom\+\_\+read\+N\+Bytes}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+read\+N\+Bytes(uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)}{eeprom_readNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N)}}]{\setlength{\rightskip}{0pt plus 5cm}void eeprom\+\_\+read\+N\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{base\+Address, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c}{}\label{group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c}
+
+
+Definition at line 309 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_gab7c6abb0e0c39a8c152307fb822ffa0c_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+write@{eeprom\+\_\+write}}
+\index{eeprom\+\_\+write@{eeprom\+\_\+write}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+write(uint16\+\_\+t address, uint8\+\_\+t data)}{eeprom_write(uint16_t address, uint8_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status eeprom\+\_\+write (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{address, }
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b}{}\label{group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b}
+
+
+Write a byte to the eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The address of th memory \\
+\hline
+{\em data} & The data to be written to the memory \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 108 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{d2/de3/group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga46c7b6081a89f96d53b6ebc0d0b6f60b_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+write32\+Bytes@{eeprom\+\_\+write32\+Bytes}}
+\index{eeprom\+\_\+write32\+Bytes@{eeprom\+\_\+write32\+Bytes}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+write32\+Bytes(uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)}{eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status eeprom\+\_\+write32\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{base\+Address, }
+\item[{uint8\+\_\+t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058}{}\label{group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058}
+
+
+Write a page to the eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & The base address of the page \\
+\hline
+{\em data} & An array of data to be send \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 192 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{d2/de3/group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga8c4d6169df1fdb9baeca667b5e9b0058_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+write4\+Bytes@{eeprom\+\_\+write4\+Bytes}}
+\index{eeprom\+\_\+write4\+Bytes@{eeprom\+\_\+write4\+Bytes}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+write4\+Bytes(uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data)}{eeprom_write4Bytes(uint16_t baseAddress, uint8_t *data)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status eeprom\+\_\+write4\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{base\+Address, }
+\item[{uint8\+\_\+t $\ast$}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569}{}\label{group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569}
+
+
+Write 4 bytes to the eeprom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & address of data \\
+\hline
+{\em data} & data to be written \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 279 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga7d9db4a4822fa0c3e5b811615aaed569_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Transmission functions@{Transmission functions}!eeprom\+\_\+write\+N\+Bytes@{eeprom\+\_\+write\+N\+Bytes}}
+\index{eeprom\+\_\+write\+N\+Bytes@{eeprom\+\_\+write\+N\+Bytes}!Transmission functions@{Transmission functions}}
+\subsubsection[{\texorpdfstring{eeprom\+\_\+write\+N\+Bytes(uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$data, uint16\+\_\+t N)}{eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status eeprom\+\_\+write\+N\+Bytes (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{base\+Address, }
+\item[{uint8\+\_\+t $\ast$}]{data, }
+\item[{uint16\+\_\+t}]{N}
+\end{DoxyParamCaption}
+)}\hypertarget{group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d}{}\label{group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d}
+
+
+Write N bytes to the eeprom. 
+
+\begin{DoxyNote}{Note}
+N is divided into pages before been written to memory 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & address of data \\
+\hline
+{\em data} & data to be written \\
+\hline
+{\em N} & number of data to write \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 259 of file N\+P\+C\+\_\+eeprom.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/de3/group___eeprom___trans_ga9dea9d824339ffc184a047749533b96d_icgraph}
+\end{center}
+\end{figure}
+
+

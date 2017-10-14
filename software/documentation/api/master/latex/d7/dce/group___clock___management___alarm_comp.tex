@@ -1,0 +1,160 @@
+\hypertarget{group___clock___management___alarm_comp}{}\section{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}
+\label{group___clock___management___alarm_comp}\index{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}}
+
+
+Comparison between dates, times and alarms.  
+
+
+Collaboration diagram for Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dce/group___clock___management___alarm_comp}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560}{Clock\+Management\+\_\+is\+Time\+Before} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time1, R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time2)
+\begin{DoxyCompactList}\small\item\em Compare two time. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7}{Clock\+Management\+\_\+is\+Date\+Before} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date1, R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date2)
+\begin{DoxyCompactList}\small\item\em Convert an date to an integer. \end{DoxyCompactList}\item 
+\hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \hyperlink{group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9}{Clock\+Management\+\_\+is\+Alarm\+Before} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm1, \hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$alarm2)
+\begin{DoxyCompactList}\small\item\em Compare two alarm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Comparison between dates, times and alarms. 
+
+\begin{DoxyVerb}===============================================================================
+       ##### Clock Management: Time, Date, and Alarm comparison #####
+===============================================================================
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Alarm\+Before@{Clock\+Management\+\_\+is\+Alarm\+Before}}
+\index{Clock\+Management\+\_\+is\+Alarm\+Before@{Clock\+Management\+\_\+is\+Alarm\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+is\+Alarm\+Before(\+Alarm\+\_\+\+Definition $\ast$alarm1, Alarm\+\_\+\+Definition $\ast$alarm2)}{ClockManagement_isAlarmBefore(Alarm_Definition *alarm1, Alarm_Definition *alarm2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Clock\+Management\+\_\+is\+Alarm\+Before (
+\begin{DoxyParamCaption}
+\item[{{\bf Alarm\+\_\+\+Definition} $\ast$}]{alarm1, }
+\item[{{\bf Alarm\+\_\+\+Definition} $\ast$}]{alarm2}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9}{}\label{group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9}
+
+
+Compare two alarm. 
+
+\begin{DoxyNote}{Note}
+Only support same date\+Week\+Day\+Sel comparison T\+O\+DO include mask comparison 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em is} & alarm1 before alarm2? \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em uint32\+\_\+t} & representing the time \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 212 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dce/group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dce/group___clock___management___alarm_comp_gaba2475baa28dfdc82e7a51a19fa8a7b9_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Date\+Before@{Clock\+Management\+\_\+is\+Date\+Before}}
+\index{Clock\+Management\+\_\+is\+Date\+Before@{Clock\+Management\+\_\+is\+Date\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+is\+Date\+Before(\+R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date1, R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$date2)}{ClockManagement_isDateBefore(RTC_DateTypeDef *date1, RTC_DateTypeDef *date2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Clock\+Management\+\_\+is\+Date\+Before (
+\begin{DoxyParamCaption}
+\item[{R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$}]{date1, }
+\item[{R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$}]{date2}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7}{}\label{group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7}
+
+
+Convert an date to an integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & date1 before date2? \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 192 of file clock\+\_\+management.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dce/group___clock___management___alarm_comp_ga8e277f1ee687458304a10016dec2dbf7_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}!Clock\+Management\+\_\+is\+Time\+Before@{Clock\+Management\+\_\+is\+Time\+Before}}
+\index{Clock\+Management\+\_\+is\+Time\+Before@{Clock\+Management\+\_\+is\+Time\+Before}!Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp@{Clock\+\_\+\+Management\+\_\+\+Alarm\+Comp}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+is\+Time\+Before(\+R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time1, R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$time2)}{ClockManagement_isTimeBefore(RTC_TimeTypeDef *time1, RTC_TimeTypeDef *time2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf bool} Clock\+Management\+\_\+is\+Time\+Before (
+\begin{DoxyParamCaption}
+\item[{R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$}]{time1, }
+\item[{R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$}]{time2}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560}{}\label{group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560}
+
+
+Compare two time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & time1 before time2? \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em bool} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 170 of file clock\+\_\+management.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/dce/group___clock___management___alarm_comp_gaad24166797ca90cee706c0d8f4983560_icgraph}
+\end{center}
+\end{figure}
+
+

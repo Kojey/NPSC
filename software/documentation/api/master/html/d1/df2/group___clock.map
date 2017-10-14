@@ -1,0 +1,11 @@
+<map id="Clock" name="Clock">
+<area shape="rect" id="node3" href="$dd/d06/group___clock___init.html" title="Clock initialisation functions. " alt="" coords="265,5,413,32"/>
+<area shape="rect" id="node4" href="$de/dbe/group___clock___time___date.html" title="Clock time and date configuration functions. " alt="" coords="244,57,433,98"/>
+<area shape="rect" id="node5" href="$d0/d53/group___c_l_o_c_k___format.html" title="AM or PM. " alt="" coords="281,123,397,149"/>
+<area shape="rect" id="node6" href="$d0/dbf/group___r_t_c___p_r_e_d_i_v___definitions.html" title="definition of prescaler for Asynchronous and Synchronous " alt="" coords="250,173,427,200"/>
+<area shape="rect" id="node7" href="$d9/dcf/group___clock___alarms.html" title="Clock alarm configuration functions. " alt="" coords="268,225,409,266"/>
+<area shape="rect" id="node8" href="$d0/d72/group___c_l_o_c_k___choice.html" title="Clock A or B. " alt="" coords="281,291,397,317"/>
+<area shape="rect" id="node9" href="$d4/dc0/group___c_l_o_c_k___value.html" title="Access time or date parameters. " alt="" coords="285,341,393,368"/>
+<area shape="rect" id="node10" href="$d8/d3b/group___r_e_p_e_a_t___definitions.html" title="Alarm repeat options. " alt="" coords="266,392,411,419"/>
+<area shape="rect" id="node2" href="$d3/d56/group___framework.html" title="Framework" alt="" coords="5,203,92,229"/>
+</map>

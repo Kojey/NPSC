@@ -28,8 +28,8 @@ SOFTWARE.
 */
 
 /* Includes */
-#include "../Libraries/NPC/Framework/inc/NPC_configuration.h"
-#include "../Libraries/NPC/UnitTest/inc/clock_management_test.h"
+#include "NPSC_configuration.h"
+#include "clock_management_test.h"
 
 //#include "stm32f4xx.h"
 /* Private macro */
@@ -63,7 +63,7 @@ int main(void)
  /* bluetooth_init();
   GPIO_WriteBit(GPIOD,GPIO_Pin_13,Bit_SET);*/
   /* Infinite loop */
-  NPC_init();
+  NPSC_init();
 
 /*
   bool time_comp = test_ClockMangement_time_comparison();

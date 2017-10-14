@@ -1,0 +1,79 @@
+\hypertarget{_n_p_c__clock_8c}{}\section{N\+P\+C\+\_\+clock.\+c File Reference}
+\label{_n_p_c__clock_8c}\index{N\+P\+C\+\_\+clock.\+c@{N\+P\+C\+\_\+clock.\+c}}
+
+
+This file provides firmware functions to manage the Date, Time and Alarm of the N\+PC clock.  
+
+
+{\ttfamily \#include \char`\"{}../inc/\+N\+P\+C\+\_\+clock.\+h\char`\"{}}\\*
+Include dependency graph for N\+P\+C\+\_\+clock.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d99/_n_p_c__clock_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___clock___init_ga78ab77b57cf2e00089f0a3a22508524c}{clock\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialise the clock to 1\+Hz and setup peripherals for Alarm. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___time___date_gaf16498fa2702bfda6b89a3335ccc7ca6}{clock\+\_\+set\+Date} (uint8\+\_\+t week\+Day, uint8\+\_\+t month, uint8\+\_\+t date, uint8\+\_\+t year)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s date. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___time___date_ga11404197d58ddf6b46230bcde4282ef2}{clock\+\_\+set\+Time} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t second)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s time. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Get the date encoded in a 32b format. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the time encoded in a 32b format. \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Alarm\+Type\+Def \hyperlink{group___clock___alarms_ga5e1614dbb1a210106dbade3f133db27e}{clock\+\_\+create\+Alarm} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t seconds, uint32\+\_\+t date\+Week\+Day\+Sel, uint8\+\_\+t date\+Week\+Day, uint32\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em Create an Alarm Structure given all the parameters. \end{DoxyCompactList}\item 
+void \hyperlink{group___clock___alarms_gab56f512746d4f2638232db28bb7dac2b}{clock\+\_\+setA} (R\+T\+C\+\_\+\+Alarm\+Type\+Def $\ast$Alarm)
+\begin{DoxyCompactList}\small\item\em Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given a Alarm structure R\+T\+C\+\_\+\+Alarm\+Type\+Def. \end{DoxyCompactList}\item 
+void \hyperlink{group___clock___alarms_gaea1a099c4ad6de8b99517ac6453e3569}{clock\+\_\+set\+Alarm} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t seconds, uint32\+\_\+t date\+Week\+Day\+Sel, uint8\+\_\+t date\+Week\+Day, uint32\+\_\+t repeat)
+\begin{DoxyCompactList}\small\item\em Set an alarm to R\+T\+C\+\_\+\+Alarm\+\_\+A, given all the alarm parameters. \end{DoxyCompactList}\item 
+void \hyperlink{group___clock___alarms_ga4da4fb52ec579671d337938e78f9a207}{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Alarm Handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+R\+T\+C\+\_\+\+Init\+Type\+Def \hyperlink{group___clock_gabd73cfb4bb5c20ec4524dd5fe244842b}{R\+T\+C\+\_\+\+Init\+Struct}
+\item 
+R\+T\+C\+\_\+\+Alarm\+Type\+Def \hyperlink{group___clock_ga64d4fe2aa4668079f349f9eb97a48e35}{R\+T\+C\+\_\+\+Alarm\+Struct}
+\item 
+E\+X\+T\+I\+\_\+\+Init\+Type\+Def \hyperlink{group___clock_gaf0f09eb6c46f0a7cc5f7736c709a8c77}{E\+X\+T\+I\+\_\+\+Init\+Struct}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file provides firmware functions to manage the Date, Time and Alarm of the N\+PC clock. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+06-\/\+March-\/2017 \begin{DoxyVerb} ===================================================================
+                  ##### Note on VBat and VDD #####
+ ===================================================================
+ [..]
+    (+) Make sure that VBAT is connected to an external power supply
+        otherwise RTC info will be lost on VDD power off.
+        Ideally RTC info should be saved and loaded from an EEPROM or
+        SD card to avoid lost
+
+                  ##### How to use Clock Driver #####
+ ===================================================================
+ [..]
+   (+) Initialize the Clock using clock_init()
+   (+) Set the Date using clock_setDate(...)
+   (+) Set the Time using clock_setTime(...)
+   (+) Set the Alarm using clock_setAlarm(...)\end{DoxyVerb}
+
+\end{DoxyDate}
+\begin{DoxyVerb}@attention
+
+<h2><center>&copy; COPYRIGHT </center></h2>\end{DoxyVerb}

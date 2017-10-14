@@ -1,0 +1,7 @@
+<map id="neopixel_setPixelColourRGB" name="neopixel_setPixelColourRGB">
+<area shape="rect" id="node2" href="$d5/d15/group___neo_pixel___display.html#ga58d5ceb79029ca8dc5dd8b27b65e4f09" title="Set the colour of one led. " alt="" coords="244,31,448,57"/>
+<area shape="rect" id="node5" href="$d5/d15/group___neo_pixel___display.html#gaecbdecac1da356c5fba07058983d9066" title="Set the colour of one led. " alt="" coords="265,81,427,108"/>
+<area shape="rect" id="node6" href="$d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7" title="set all the pixel on the line to a specific colour " alt="" coords="262,132,430,159"/>
+<area shape="rect" id="node3" href="$d5/d15/group___neo_pixel___display.html#ga4daf6edfe83394f425ec51f64d92c49c" title="Set the colour of one led. " alt="" coords="499,5,674,32"/>
+<area shape="rect" id="node4" href="$d5/d15/group___neo_pixel___display.html#ga1ba017c1f338ef2c8e4a48acae35d87e" title="set all the pixel on the line to a specific colour " alt="" coords="496,56,677,83"/>
+</map>

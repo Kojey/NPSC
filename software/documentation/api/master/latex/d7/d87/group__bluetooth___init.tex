@@ -1,0 +1,117 @@
+\hypertarget{group__bluetooth___init}{}\section{Initialization and transmission handler functions}
+\label{group__bluetooth___init}\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+
+
+bluetooth initialization functions  
+
+
+Collaboration diagram for Initialization and transmission handler functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{d7/d87/group__bluetooth___init}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__bluetooth___init_gaaa60810e0857e9e1e5b2cba80b8db3ff}{bluetooth\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the bluetooth and set baudrate to 9600. \end{DoxyCompactList}\item 
+void \hyperlink{group__bluetooth___init_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Global interrupt handler for U\+S\+A\+R\+T1. \end{DoxyCompactList}\item 
+void \hyperlink{group__bluetooth___init_gaef190d87febc0414eb7a39bd4c2d2169}{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Global interrupt handler for D\+M\+A2 stream5. \end{DoxyCompactList}\item 
+void \hyperlink{group__bluetooth___init_ga351b2e7a8b3f7e5f29d3d1d22e293323}{bluetooth\+\_\+buffer\+\_\+update} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+bluetooth initialization functions 
+
+
+
+\subsection{Function Documentation}
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!bluetooth\+\_\+buffer\+\_\+update@{bluetooth\+\_\+buffer\+\_\+update}}
+\index{bluetooth\+\_\+buffer\+\_\+update@{bluetooth\+\_\+buffer\+\_\+update}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{bluetooth\+\_\+buffer\+\_\+update(void)}{bluetooth_buffer_update(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void bluetooth\+\_\+buffer\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__bluetooth___init_ga351b2e7a8b3f7e5f29d3d1d22e293323}{}\label{group__bluetooth___init_ga351b2e7a8b3f7e5f29d3d1d22e293323}
+M\+U\+ST BE A T\+A\+SK Loop data back to U\+A\+RT data register
+
+Definition at line 120 of file N\+P\+C\+\_\+bluetooth.\+c.
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!bluetooth\+\_\+init@{bluetooth\+\_\+init}}
+\index{bluetooth\+\_\+init@{bluetooth\+\_\+init}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{bluetooth\+\_\+init(void)}{bluetooth_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void bluetooth\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__bluetooth___init_gaaa60810e0857e9e1e5b2cba80b8db3ff}{}\label{group__bluetooth___init_gaaa60810e0857e9e1e5b2cba80b8db3ff}
+
+
+Initialize the bluetooth and set baudrate to 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 47 of file N\+P\+C\+\_\+bluetooth.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{d7/d87/group__bluetooth___init_gaaa60810e0857e9e1e5b2cba80b8db3ff_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler(void)}{DMA2_Stream5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+M\+A2\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__bluetooth___init_gaef190d87febc0414eb7a39bd4c2d2169}{}\label{group__bluetooth___init_gaef190d87febc0414eb7a39bd4c2d2169}
+
+
+Global interrupt handler for D\+M\+A2 stream5. 
+
+\begin{DoxyNote}{Note}
+Except memcpy, there is no functions used to 
+\end{DoxyNote}
+Transfer could be completed by 2 events\+:
+\begin{DoxyItemize}
+\item All data actually transfered (N\+D\+TR = 0)
+\item Stream disabled inside U\+S\+A\+RT I\+D\+LE line detected interrupt (N\+D\+TR != 0)
+\end{DoxyItemize}
+
+Definition at line 156 of file N\+P\+C\+\_\+bluetooth.\+c.
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler(void)}{USART1_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T1\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__bluetooth___init_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}{}\label{group__bluetooth___init_ga7139cd4baabbbcbab0c1fe6d7d4ae1cc}
+
+
+Global interrupt handler for U\+S\+A\+R\+T1. 
+
+
+
+Definition at line 138 of file N\+P\+C\+\_\+bluetooth.\+c.
+

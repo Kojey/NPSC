@@ -1,0 +1,169 @@
+\hypertarget{group___clock___time___date}{}\section{Time and Date Configuration functions}
+\label{group___clock___time___date}\index{Time and Date Configuration functions@{Time and Date Configuration functions}}
+
+
+Clock time and date configuration functions.  
+
+
+Collaboration diagram for Time and Date Configuration functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{de/dbe/group___clock___time___date}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___clock___time___date_gaf16498fa2702bfda6b89a3335ccc7ca6}{clock\+\_\+set\+Date} (uint8\+\_\+t week\+Day, uint8\+\_\+t month, uint8\+\_\+t date, uint8\+\_\+t year)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s date. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___time___date_ga11404197d58ddf6b46230bcde4282ef2}{clock\+\_\+set\+Time} (uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t second)
+\begin{DoxyCompactList}\small\item\em Set the clock\textquotesingle{}s time. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{clock\+\_\+get\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Get the date encoded in a 32b format. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{clock\+\_\+get\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Get the time encoded in a 32b format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Clock time and date configuration functions. 
+
+
+
+\subsection{Function Documentation}
+\index{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+get\+Date@{clock\+\_\+get\+Date}}
+\index{clock\+\_\+get\+Date@{clock\+\_\+get\+Date}!Time and Date Configuration functions@{Time and Date Configuration functions}}
+\subsubsection[{\texorpdfstring{clock\+\_\+get\+Date(void)}{clock_getDate(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t clock\+\_\+get\+Date (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}{}\label{group___clock___time___date_gabb4d72928cb3d131d40067fb141003aa}
+
+
+Get the date encoded in a 32b format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & uint32\+\_\+t containing the week\+Day as its M\+B3, date \+: M\+B2, month \+: M\+B1, year \+: M\+B0 \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 160 of file N\+P\+C\+\_\+clock.\+c.
+
+\index{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+get\+Time@{clock\+\_\+get\+Time}}
+\index{clock\+\_\+get\+Time@{clock\+\_\+get\+Time}!Time and Date Configuration functions@{Time and Date Configuration functions}}
+\subsubsection[{\texorpdfstring{clock\+\_\+get\+Time(void)}{clock_getTime(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t clock\+\_\+get\+Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}{}\label{group___clock___time___date_ga03ae6948083c259f6edc0b146f40dc62}
+
+
+Get the time encoded in a 32b format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em An} & uint32\+\_\+t containing the hour as its M\+B3, minutes \+: M\+B2, Seconds \+: M\+B1, format \+: M\+B0 \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 175 of file N\+P\+C\+\_\+clock.\+c.
+
+\index{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+set\+Date@{clock\+\_\+set\+Date}}
+\index{clock\+\_\+set\+Date@{clock\+\_\+set\+Date}!Time and Date Configuration functions@{Time and Date Configuration functions}}
+\subsubsection[{\texorpdfstring{clock\+\_\+set\+Date(uint8\+\_\+t week\+Day, uint8\+\_\+t month, uint8\+\_\+t date, uint8\+\_\+t year)}{clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t year)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status clock\+\_\+set\+Date (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{week\+Day, }
+\item[{uint8\+\_\+t}]{month, }
+\item[{uint8\+\_\+t}]{date, }
+\item[{uint8\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___time___date_gaf16498fa2702bfda6b89a3335ccc7ca6}{}\label{group___clock___time___date_gaf16498fa2702bfda6b89a3335ccc7ca6}
+
+
+Set the clock\textquotesingle{}s date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & representing the outcome of the operation
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: R\+TC Shift registers are configured
+\item E\+R\+R\+OR\+: R\+TC Shift registers are not configured 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 128 of file N\+P\+C\+\_\+clock.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{de/dbe/group___clock___time___date_gaf16498fa2702bfda6b89a3335ccc7ca6_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Time and Date Configuration functions@{Time and Date Configuration functions}!clock\+\_\+set\+Time@{clock\+\_\+set\+Time}}
+\index{clock\+\_\+set\+Time@{clock\+\_\+set\+Time}!Time and Date Configuration functions@{Time and Date Configuration functions}}
+\subsubsection[{\texorpdfstring{clock\+\_\+set\+Time(uint8\+\_\+t am\+\_\+pm, uint8\+\_\+t hours, uint8\+\_\+t minutes, uint8\+\_\+t second)}{clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t second)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status clock\+\_\+set\+Time (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{am\+\_\+pm, }
+\item[{uint8\+\_\+t}]{hours, }
+\item[{uint8\+\_\+t}]{minutes, }
+\item[{uint8\+\_\+t}]{second}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___time___date_ga11404197d58ddf6b46230bcde4282ef2}{}\label{group___clock___time___date_ga11404197d58ddf6b46230bcde4282ef2}
+
+
+Set the clock\textquotesingle{}s time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & representing the outcome of the operation
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: R\+TC Shift registers are configured
+\item E\+R\+R\+OR\+: R\+TC Shift registers are not configured 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 145 of file N\+P\+C\+\_\+clock.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{de/dbe/group___clock___time___date_ga11404197d58ddf6b46230bcde4282ef2_icgraph}
+\end{center}
+\end{figure}
+
+

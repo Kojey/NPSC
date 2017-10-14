@@ -1,0 +1,7 @@
+<map id="NPC" name="NPC">
+<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework" alt="" coords="144,5,231,32"/>
+<area shape="rect" id="node3" href="$d5/d56/group___unit_test.html" title="UnitTest" alt="" coords="151,56,223,83"/>
+<area shape="rect" id="node4" href="$dc/d21/group__clock__management__test.html" title="Clock_management_test" alt="" coords="104,107,271,133"/>
+<area shape="rect" id="node5" href="$df/d29/group___application.html" title="Application" alt="" coords="144,157,231,184"/>
+<area shape="rect" id="node6" href="$dc/d04/group__rtc__test.html" title="Rtc_test" alt="" coords="151,208,223,235"/>
+</map>

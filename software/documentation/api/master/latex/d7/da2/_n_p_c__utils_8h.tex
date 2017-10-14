@@ -1,0 +1,77 @@
+\hypertarget{_n_p_c__utils_8h}{}\section{N\+P\+C\+\_\+utils.\+h File Reference}
+\label{_n_p_c__utils_8h}\index{N\+P\+C\+\_\+utils.\+h@{N\+P\+C\+\_\+utils.\+h}}
+
+
+This file contains all the utility functions prototypes used by the N\+PC.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}stm32f4xx.\+h\char`\"{}}\\*
+Include dependency graph for N\+P\+C\+\_\+utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d85/_n_p_c__utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/dc7/_n_p_c__utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___utils_ga0d57378e32bf8278011460740bc29f7f}{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~4
+\item 
+\#define \hyperlink{group___utils_ga2345ec0af8fc8a1782768a22a15a4ad3}{D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~4
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___utils_gaf6a258d8f3ee5206d682d799316314b1}{bool} \{ \hyperlink{group___utils_ggaf6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c}{false} = 0, 
+\hyperlink{group___utils_ggaf6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b}{true} = !false
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{group___utils_gafa33c555a40e71b0cc32aa3731f6fabe}{max} (uint32\+\_\+t a, uint32\+\_\+t b, uint32\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Find max between a, b, and c. \end{DoxyCompactList}\item 
+void \hyperlink{group___utils_gaf1a8629740f19d111a55636a19c2bf08}{delay} (uint32\+\_\+t microseconds)
+\begin{DoxyCompactList}\small\item\em delay for the number of microsecond \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{group___utils_ga91a0f4b54880f52e0b02f7aeb96ca304}{pixel\+\_\+color}
+\item 
+uint8\+\_\+t \hyperlink{group___utils_gaead30033cf45bc8bbfab301a6c770afb}{D\+M\+A\+\_\+\+R\+X\+\_\+\+Buffer} \mbox{[}\hyperlink{group___utils_ga2345ec0af8fc8a1782768a22a15a4ad3}{D\+M\+A\+\_\+\+R\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+uint8\+\_\+t \hyperlink{group___utils_gab42d904ed5954df151e40839a2351427}{U\+A\+R\+T\+\_\+\+Buffer} \mbox{[}\hyperlink{group___utils_ga0d57378e32bf8278011460740bc29f7f}{U\+A\+R\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This file contains all the utility functions prototypes used by the N\+PC. 
+
+\begin{DoxyAuthor}{Author}
+Othniel Konan (Kojey) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+V1.\+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+23-\/\+February-\/2017 
+\end{DoxyDate}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\subsubsection*{\begin{center}\copyright{} C\+O\+P\+Y\+R\+I\+G\+HT \end{center} }

@@ -1,0 +1,117 @@
+\hypertarget{group__nextion___init}{}\section{Initialization and transmission handler functions}
+\label{group__nextion___init}\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+
+
+nextion initialization functions  
+
+
+Collaboration diagram for Initialization and transmission handler functions\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{da/dcd/group__nextion___init}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__nextion___init_ga954125e92a78b714cd63c21a481762a1}{nextion\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the nextion and set baudrate to 9600. \end{DoxyCompactList}\item 
+void \hyperlink{group__nextion___init_ga0ca6fd0e6f77921dd1123539857ba0a8}{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Global interrupt handler for U\+S\+A\+R\+T2. \end{DoxyCompactList}\item 
+void \hyperlink{group__nextion___init_gac201b60d58b0eba2ce0b55710eb3c4d0}{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler} (void)
+\begin{DoxyCompactList}\small\item\em Global interrupt handler for D\+M\+A1 stream5. \end{DoxyCompactList}\item 
+void \hyperlink{group__nextion___init_gae39a2c7ff1a319a65e808d8524ffcf18}{nextion\+\_\+buffer\+\_\+update} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+nextion initialization functions 
+
+
+
+\subsection{Function Documentation}
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}}
+\index{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler@{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler(void)}{DMA1_Stream5_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void D\+M\+A1\+\_\+\+Stream5\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__nextion___init_gac201b60d58b0eba2ce0b55710eb3c4d0}{}\label{group__nextion___init_gac201b60d58b0eba2ce0b55710eb3c4d0}
+
+
+Global interrupt handler for D\+M\+A1 stream5. 
+
+\begin{DoxyNote}{Note}
+Except memcpy, there is no functions used to 
+\end{DoxyNote}
+Transfer could be completed by 2 events\+:
+\begin{DoxyItemize}
+\item All data actually transfered (N\+D\+TR = 0)
+\item Stream disabled inside U\+S\+A\+RT I\+D\+LE line detected interrupt (N\+D\+TR != 0)
+\end{DoxyItemize}
+
+Definition at line 156 of file N\+P\+S\+C\+\_\+nextion.\+c.
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!nextion\+\_\+buffer\+\_\+update@{nextion\+\_\+buffer\+\_\+update}}
+\index{nextion\+\_\+buffer\+\_\+update@{nextion\+\_\+buffer\+\_\+update}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{nextion\+\_\+buffer\+\_\+update(void)}{nextion_buffer_update(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void nextion\+\_\+buffer\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__nextion___init_gae39a2c7ff1a319a65e808d8524ffcf18}{}\label{group__nextion___init_gae39a2c7ff1a319a65e808d8524ffcf18}
+M\+U\+ST BE A T\+A\+SK Loop data back to U\+A\+RT data register
+
+Definition at line 120 of file N\+P\+S\+C\+\_\+nextion.\+c.
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!nextion\+\_\+init@{nextion\+\_\+init}}
+\index{nextion\+\_\+init@{nextion\+\_\+init}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{nextion\+\_\+init(void)}{nextion_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void nextion\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__nextion___init_ga954125e92a78b714cd63c21a481762a1}{}\label{group__nextion___init_ga954125e92a78b714cd63c21a481762a1}
+
+
+Initialize the nextion and set baudrate to 9600. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 47 of file N\+P\+S\+C\+\_\+nextion.\+c.
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{da/dcd/group__nextion___init_ga954125e92a78b714cd63c21a481762a1_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Initialization and transmission handler functions@{Initialization and transmission handler functions}!U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}}
+\index{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler@{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler}!Initialization and transmission handler functions@{Initialization and transmission handler functions}}
+\subsubsection[{\texorpdfstring{U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler(void)}{USART2_IRQHandler(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void U\+S\+A\+R\+T2\+\_\+\+I\+R\+Q\+Handler (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group__nextion___init_ga0ca6fd0e6f77921dd1123539857ba0a8}{}\label{group__nextion___init_ga0ca6fd0e6f77921dd1123539857ba0a8}
+
+
+Global interrupt handler for U\+S\+A\+R\+T2. 
+
+
+
+Definition at line 138 of file N\+P\+S\+C\+\_\+nextion.\+c.
+

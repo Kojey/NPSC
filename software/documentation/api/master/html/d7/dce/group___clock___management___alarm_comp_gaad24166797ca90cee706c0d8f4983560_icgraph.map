@@ -1,0 +1,5 @@
+<map id="ClockManagement_isTimeBefore" name="ClockManagement_isTimeBefore">
+<area shape="rect" id="node2" href="$d7/dce/group___clock___management___alarm_comp.html#gaba2475baa28dfdc82e7a51a19fa8a7b9" title="Compare two alarm. " alt="" coords="268,13,488,39"/>
+<area shape="rect" id="node4" href="$d1/da8/group__clock__management__test__comparison.html#gaee6cb57486595cb01fabd83a761cc5bd" title="Unit testing for time comparison. " alt="" coords="301,64,455,105"/>
+<area shape="rect" id="node3" href="$d1/da8/group__clock__management__test__comparison.html#gac319e1ba8c6efa413c8e8c05113094a0" title="Unit testing for alarm comparison. " alt="" coords="536,5,689,47"/>
+</map>

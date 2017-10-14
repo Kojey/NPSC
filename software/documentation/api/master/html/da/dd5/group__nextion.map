@@ -1,0 +1,6 @@
+<map id="Nextion" name="Nextion">
+<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework" alt="" coords="5,56,92,83"/>
+<area shape="rect" id="node2" href="$d8/d87/group__nextion___constants.html" title="define nextion constant " alt="" coords="266,5,401,32"/>
+<area shape="rect" id="node3" href="$d5/d2e/group__nextion___trans.html" title="nextion transmission functions " alt="" coords="255,56,412,83"/>
+<area shape="rect" id="node4" href="$da/dcd/group__nextion___init.html" title="nextion initialization functions " alt="" coords="260,107,407,163"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Clock_Management" name="Clock_Management">
+<area shape="rect" id="node1" href="$d5/db3/group___clock__management__constants.html" title="Clock_management_constants" alt="" coords="336,5,539,32"/>
+<area shape="rect" id="node2" href="$d4/d4a/group___clock__management__address.html" title="Clock_management_address" alt="" coords="342,56,533,83"/>
+<area shape="rect" id="node3" href="$de/dc7/group___clock__management__alarm__offset.html" title="Clock_management_alarm\l_offset" alt="" coords="349,107,526,149"/>
+<area shape="rect" id="node5" href="$df/d13/group___clock___management___eeprom.html" title="Saving and Loading of clock information. " alt="" coords="342,173,533,200"/>
+<area shape="rect" id="node6" href="$dd/d8f/group__type.html" title="Alarm type. " alt="" coords="412,224,463,251"/>
+<area shape="rect" id="node7" href="$dc/d65/group___clock___management___alarm_update.html" title="Manages updates of alarms and alarm parameters. " alt="" coords="327,275,548,301"/>
+<area shape="rect" id="node9" href="$d9/dfc/group__clock__management.html" title="variables" alt="" coords="400,325,475,352"/>
+<area shape="rect" id="node10" href="$d7/dce/group___clock___management___alarm_comp.html" title="Comparison between dates, times and alarms. " alt="" coords="330,376,545,403"/>
+<area shape="rect" id="node8" href="$df/d29/group___application.html" title="Application" alt="" coords="5,199,92,225"/>
+</map>

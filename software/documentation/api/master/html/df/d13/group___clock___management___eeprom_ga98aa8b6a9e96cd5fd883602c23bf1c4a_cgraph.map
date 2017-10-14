@@ -1,0 +1,7 @@
+<map id="ClockManagement_saveAlarm" name="ClockManagement_saveAlarm">
+<area shape="rect" id="node2" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="253,5,397,32"/>
+<area shape="rect" id="node5" href="$d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="469,56,569,83"/>
+<area shape="rect" id="node6" href="$d2/de3/group___eeprom___trans.html#ga7d9db4a4822fa0c3e5b811615aaed569" title="Write 4 bytes to the eeprom. " alt="" coords="255,107,396,133"/>
+<area shape="rect" id="node3" href="$d2/de3/group___eeprom___trans.html#ga8c4d6169df1fdb9baeca667b5e9b0058" title="Write a page to the eeprom. " alt="" coords="445,5,593,32"/>
+<area shape="rect" id="node4" href="$d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="641,31,695,57"/>
+</map>

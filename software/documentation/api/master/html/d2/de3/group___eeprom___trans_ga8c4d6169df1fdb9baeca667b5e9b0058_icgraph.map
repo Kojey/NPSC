@@ -1,0 +1,6 @@
+<map id="eeprom_write32Bytes" name="eeprom_write32Bytes">
+<area shape="rect" id="node2" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="201,42,345,69"/>
+<area shape="rect" id="node3" href="$df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="393,13,593,39"/>
+<area shape="rect" id="node5" href="$d6/d06/group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="419,64,567,105"/>
+<area shape="rect" id="node4" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="641,5,796,47"/>
+</map>

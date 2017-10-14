@@ -1,0 +1,14 @@
+<map id="eeprom_write" name="eeprom_write">
+<area shape="rect" id="node2" href="$df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="396,277,596,303"/>
+<area shape="rect" id="node4" href="$df/d13/group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="153,21,348,47"/>
+<area shape="rect" id="node6" href="$df/d13/group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="153,78,348,105"/>
+<area shape="rect" id="node8" href="$d6/d06/group__eeprom__test.html#ga7ca2c7ea92965216763b50e39a023637" title="Unit test for writing and reading to/from the eeprom. " alt="" coords="170,179,331,206"/>
+<area shape="rect" id="node9" href="$d2/de3/group___eeprom___trans.html#ga7964a5a66da1c4a59a42309a93752217" title="Clear eeprom data. " alt="" coords="201,230,301,257"/>
+<area shape="rect" id="node10" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="179,129,323,155"/>
+<area shape="rect" id="node12" href="$d2/de3/group___eeprom___trans.html#ga7d9db4a4822fa0c3e5b811615aaed569" title="Write 4 bytes to the eeprom. " alt="" coords="180,331,321,358"/>
+<area shape="rect" id="node3" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="644,269,799,311"/>
+<area shape="rect" id="node5" href="$dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="419,5,573,47"/>
+<area shape="rect" id="node7" href="$dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="419,71,573,112"/>
+<area shape="rect" id="node11" href="$d6/d06/group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="422,136,570,177"/>
+<area shape="rect" id="node13" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="423,328,569,369"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="NPC_configuration.h" name="NPC_configuration.h">
+<area shape="rect" id="node2" href="$db/dfc/_n_p_c__bluetooth_8h.html" title="This file contains all the configuration prototypes used by the bluetooth firmware. " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node10" href="$de/d02/_n_p_c__clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPC..." alt="" coords="153,80,253,107"/>
+<area shape="rect" id="node11" href="$d4/dba/_n_p_c__neopixel_8h.html" title="This file contains all the configuration prototypes used by the neopixel firmware. " alt="" coords="276,80,393,107"/>
+<area shape="rect" id="node12" href="$d5/d19/_n_p_c__audio_8h.html" title="This file contains all the configuration prototypes used by the audio firmware. " alt="" coords="417,80,517,107"/>
+<area shape="rect" id="node13" href="$de/deb/_n_p_c__eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="540,80,652,107"/>
+<area shape="rect" id="node14" href="$d8/d20/_n_p_c__temperature_8h.html" title="This file contains all the configuration prototypes used by the temperature firmware. " alt="" coords="676,80,815,107"/>
+<area shape="rect" id="node3" href="$d7/da2/_n_p_c__utils_8h.html" title="This file contains all the utility functions prototypes used by the NPC. " alt="" coords="353,155,447,181"/>
+</map>

@@ -1,0 +1,343 @@
+\hypertarget{group___clock___management___eeprom}{}\section{Clock\+\_\+\+Management\+\_\+\+Eeprom}
+\label{group___clock___management___eeprom}\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+
+
+Saving and Loading of clock information.  
+
+
+Collaboration diagram for Clock\+\_\+\+Management\+\_\+\+Eeprom\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a}{Clock\+Management\+\_\+save\+Alarm} (\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} $\ast$Alarm\+\_\+\+Def, uint16\+\_\+t address)
+\begin{DoxyCompactList}\small\item\em Save an alarm settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7}{Clock\+Management\+\_\+save\+Time} (R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$Time\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the time settings to eeprom. \end{DoxyCompactList}\item 
+Error\+Status \hyperlink{group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335}{Clock\+Management\+\_\+save\+Date} (R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$Date\+\_\+\+Def)
+\begin{DoxyCompactList}\small\item\em Save the date settings to eeprom. \end{DoxyCompactList}\item 
+\hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition} \hyperlink{group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376}{Clock\+Management\+\_\+load\+Alarm} (uint16\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em load an alarm settings from eeprom \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Time\+Type\+Def \hyperlink{group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62}{Clock\+Management\+\_\+load\+Time} (void)
+\begin{DoxyCompactList}\small\item\em Load the time settings from eeprom. \end{DoxyCompactList}\item 
+R\+T\+C\+\_\+\+Date\+Type\+Def \hyperlink{group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91}{Clock\+Management\+\_\+load\+Date} (void)
+\begin{DoxyCompactList}\small\item\em Load the date settings from eeprom. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Saving and Loading of clock information. 
+
+\begin{DoxyVerb}===============================================================================
+       ##### Clock Management: Eeprom date, time, and alarm access #####
+===============================================================================
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Alarm@{Clock\+Management\+\_\+load\+Alarm}}
+\index{Clock\+Management\+\_\+load\+Alarm@{Clock\+Management\+\_\+load\+Alarm}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+load\+Alarm(uint16\+\_\+t index)}{ClockManagement_loadAlarm(uint16_t index)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Alarm\+\_\+\+Definition} Clock\+Management\+\_\+load\+Alarm (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376}{}\label{group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376}
+
+
+load an alarm settings from eeprom 
+
+\begin{DoxyNote}{Note}
+Load in this order\+: Name, Date\+Week\+Day, Date\+Week\+Day\+Sel, Mask H12, Hours, Minutes, Seconds 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em index} & the index in memory of the alarm \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__type_d4/d90/struct_alarm___definition}{Alarm\+\_\+\+Definition}} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 103 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_gab8401f24d519d3a2e54c3ba5dab80376_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Date@{Clock\+Management\+\_\+load\+Date}}
+\index{Clock\+Management\+\_\+load\+Date@{Clock\+Management\+\_\+load\+Date}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+load\+Date(void)}{ClockManagement_loadDate(void)}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+C\+\_\+\+Date\+Type\+Def Clock\+Management\+\_\+load\+Date (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91}{}\label{group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91}
+
+
+Load the date settings from eeprom. 
+
+\begin{DoxyNote}{Note}
+Load Date, Month, Week\+Day, and Year in that order 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+T\+C\+\_\+\+Date\+Type\+Def} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 139 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga3980560a99803ef94287127ff3157f91_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+load\+Time@{Clock\+Management\+\_\+load\+Time}}
+\index{Clock\+Management\+\_\+load\+Time@{Clock\+Management\+\_\+load\+Time}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+load\+Time(void)}{ClockManagement_loadTime(void)}}]{\setlength{\rightskip}{0pt plus 5cm}R\+T\+C\+\_\+\+Time\+Type\+Def Clock\+Management\+\_\+load\+Time (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62}{}\label{group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62}
+
+
+Load the time settings from eeprom. 
+
+\begin{DoxyNote}{Note}
+Load H12, Hours, Minutes, and Seconds in that order 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em R\+T\+C\+\_\+\+Time\+Type\+Def} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 123 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga166e0bbb5e934cc45657ffad06ff1d62_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Alarm@{Clock\+Management\+\_\+save\+Alarm}}
+\index{Clock\+Management\+\_\+save\+Alarm@{Clock\+Management\+\_\+save\+Alarm}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+save\+Alarm(\+Alarm\+\_\+\+Definition $\ast$\+Alarm\+\_\+\+Def, uint16\+\_\+t address)}{ClockManagement_saveAlarm(Alarm_Definition *Alarm_Def, uint16_t address)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status Clock\+Management\+\_\+save\+Alarm (
+\begin{DoxyParamCaption}
+\item[{{\bf Alarm\+\_\+\+Definition} $\ast$}]{Alarm\+\_\+\+Def, }
+\item[{uint16\+\_\+t}]{address}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a}{}\label{group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a}
+
+
+Save an alarm settings to eeprom. 
+
+\begin{DoxyNote}{Note}
+Save in this order\+: Name, Date\+Week\+Dat, Date\+Week\+Day\+Sel, Mask H12, Hours, Minutes, Seconds 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Alarm\+\_\+\+Def} & the alarm setitngs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 57 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga98aa8b6a9e96cd5fd883602c23bf1c4a_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Date@{Clock\+Management\+\_\+save\+Date}}
+\index{Clock\+Management\+\_\+save\+Date@{Clock\+Management\+\_\+save\+Date}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+save\+Date(\+R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$\+Date\+\_\+\+Def)}{ClockManagement_saveDate(RTC_DateTypeDef *Date_Def)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status Clock\+Management\+\_\+save\+Date (
+\begin{DoxyParamCaption}
+\item[{R\+T\+C\+\_\+\+Date\+Type\+Def $\ast$}]{Date\+\_\+\+Def}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335}{}\label{group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335}
+
+
+Save the date settings to eeprom. 
+
+\begin{DoxyNote}{Note}
+Save Date, Month, Week\+Day, and Year in that order 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Date\+\_\+\+Def} & the date setitngs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 89 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga32f8e9df4e2b14dfa0db0300437fe335_icgraph}
+\end{center}
+\end{figure}
+
+
+\index{Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}!Clock\+Management\+\_\+save\+Time@{Clock\+Management\+\_\+save\+Time}}
+\index{Clock\+Management\+\_\+save\+Time@{Clock\+Management\+\_\+save\+Time}!Clock\+\_\+\+Management\+\_\+\+Eeprom@{Clock\+\_\+\+Management\+\_\+\+Eeprom}}
+\subsubsection[{\texorpdfstring{Clock\+Management\+\_\+save\+Time(\+R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$\+Time\+\_\+\+Def)}{ClockManagement_saveTime(RTC_TimeTypeDef *Time_Def)}}]{\setlength{\rightskip}{0pt plus 5cm}Error\+Status Clock\+Management\+\_\+save\+Time (
+\begin{DoxyParamCaption}
+\item[{R\+T\+C\+\_\+\+Time\+Type\+Def $\ast$}]{Time\+\_\+\+Def}
+\end{DoxyParamCaption}
+)}\hypertarget{group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7}{}\label{group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7}
+
+
+Save the time settings to eeprom. 
+
+\begin{DoxyNote}{Note}
+Save H12, Hours, Minutes, and Seconds in that order 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Time\+\_\+\+Def} & the time setitngs \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Error\+Status} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line 75 of file clock\+\_\+management.\+c.
+
+
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{df/d13/group___clock___management___eeprom_ga4d1c66f7ce4d69b6903471823ab105f7_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,8 @@
+<map id="NeoPixel" name="NeoPixel">
+<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework" alt="" coords="5,107,92,133"/>
+<area shape="rect" id="node2" href="$da/d69/group___neo_pixel___state.html" title="Neopixel state alteration functions. " alt="" coords="270,5,437,32"/>
+<area shape="rect" id="node3" href="$d5/d15/group___neo_pixel___display.html" title="Neopixel colour display functions. " alt="" coords="274,56,433,83"/>
+<area shape="rect" id="node5" href="$db/d03/group___neo_pixel___colour.html" title="Neopixel colour functions. " alt="" coords="263,107,444,133"/>
+<area shape="rect" id="node6" href="$d2/de6/group___neo_pixel___init.html" title="Neopixel initialisation functions. " alt="" coords="279,157,427,184"/>
+<area shape="rect" id="node7" href="$df/dbc/group___constant.html" title="Define audio frequency and DMA frequency. " alt="" coords="316,208,391,235"/>
+</map>
