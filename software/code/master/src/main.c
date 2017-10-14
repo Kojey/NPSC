@@ -47,60 +47,25 @@ SOFTWARE.
 int main(void)
 {
   int i = 0;
-  int32_t temp = 0;
-  uint32_t color = 0;
-  /**
-  *  IMPORTANT NOTE!
-  *  The symbol VECT_TAB_SRAM needs to be defined when building the project
-  *  if code has been located to RAM and interrupts are used. 
-  *  Otherwise the interrupt table located in flash will be used.
-  *  See also the <system_*.c> file and how the SystemInit() function updates 
-  *  SCB->VTOR register.  
-  *  E.g.  SCB->VTOR = 0x20000000;  
-  */
+  uint32_t colour = 0;
 
-  /* TODO - Add your application code here */
- /* bluetooth_init();
-  GPIO_WriteBit(GPIOD,GPIO_Pin_13,Bit_SET);*/
-  /* Infinite loop */
   NPSC_init();
-
-/*
-  bool time_comp = test_ClockMangement_time_comparison();
-  bool date_comp = test_ClockMangement_date_comparison();
-  bool alarm_comp = test_ClockMangement_alarm_comparison();
- */
-  //bool time_save_load = test_ClockMangement_save_and_load_time();
-  //bool date_save_load = test_ClockMangement_save_and_load_date();
-  //bool alarm_save_load = test_ClockMangement_save_and_load_alarm();
-
-  //color = neopixel_colourRGB(0,255,0);
-  //neopixel_setPixelColour(2,color);
+  int buffer[4]={0};
+  //neopixel_setAllPixelRGB(255,0,0);
   while (1)
   {
 	  bluetooth_buffer_update();
-	nextion_buffer_update();
-	i++;
-	temp = temperature_read();
+	  nextion_buffer_update();
+	  i++;
 
-	/*switch(pixel_color){
-	case 'R': color = neopixel_colourRGB(255,0,0); break;
-	case 'G': color = neopixel_colourRGB(0,255,0); break;
-	case 'B': color = neopixel_colourRGB(0,0,255); break;
-	case 'Y': color = neopixel_colourRGB(255,255,0); break;
-	case 'C': color = neopixel_colourRGB(0,255,255); break;
-	case 'M': color = neopixel_colourRGB(255,0,255); break;
-	case 'W': color = neopixel_colourRGB(255,255,255); break;
-	case 'D': color = neopixel_colourRGB(0,0,0); break;
-	}*/
+	  colour = neopixel_colourRGB(UART_Buffer[0],UART_Buffer[1],UART_Buffer[2]);
+	  neopixel_setBrightness(UART_Buffer[3]);
+	  for(i=0; i<4; i++)
+		  if(buffer[i]!=UART_Buffer[i]){
+			  neopixel_setAllPixelColour(colour);
+			  buffer[i]=UART_Buffer[i];
+		  }
 
-	color = neopixel_colourRGB(UART_Buffer[0],UART_Buffer[1],UART_Buffer[2]);
-	neopixel_setBrightness(UART_Buffer[3]);
-	int j=15000;
-	while(j)j--;
-	neopixel_setPixelColour(i%4,color);
-	//neopixel_setPixelColour((i-1)%4,0);
-	//neopixel_setPixelColour(i%4,color);
   }
 }
 

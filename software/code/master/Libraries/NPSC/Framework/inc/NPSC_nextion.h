@@ -72,7 +72,7 @@ void DMA1_Stream5_IRQHandler(void);
  *  @{
  */
 void nextion_send(uint8_t * data);
-
+void nextion_buffer_update(void);
 /**
  * @}
  */

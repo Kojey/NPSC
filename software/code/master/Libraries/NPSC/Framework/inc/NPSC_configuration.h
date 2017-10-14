@@ -25,6 +25,7 @@
 #include "NPSC_clock.h"
 #include "NPSC_eeprom.h"
 #include "NPSC_neopixel.h"
+#include "NPSC_nextion.h"
 #include "NPSC_temperature.h"
 
 /** @addtogroup NPC
@@ -43,7 +44,7 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-void NPC_init(void);
+void NPSC_init(void);
 void Error_Handler(void);
 
 #endif /* CONFIGURATION_H_ */

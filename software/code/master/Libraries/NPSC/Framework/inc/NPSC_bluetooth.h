@@ -72,7 +72,7 @@ void DMA2_Stream5_IRQHandler(void);
  *  @{
  */
 void bluetooth_send(uint8_t * data);
-
+void bluetooth_buffer_update(void);
 /**
  * @}
  */

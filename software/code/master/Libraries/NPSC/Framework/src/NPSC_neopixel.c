@@ -35,7 +35,7 @@
 /* Private variables ---------------------------------------------------------*/
 static uint32_t LEDbuffer[LED_BUFFER_SIZE];
 static uint8_t brightness = 255;
-
+bool neopixel_buffer_free = false;
 /* Private functions ---------------------------------------------------------*/
 
 /**	@defgroup NeoPixel_Init Initialisation functions
@@ -187,19 +187,20 @@ void TIM2_IRQHandler(void){
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	    TIM2->CCR1 = LEDbuffer[index];
-	    if(index==LED_BUFFER_SIZE)
-	    	// Start count of TIM2
+	    if(index==LED_BUFFER_SIZE){
+	    	// stop transmission a end of buffer
 			TIM_Cmd(TIM2,DISABLE);
-	    index = (index + 1)% LED_BUFFER_SIZE;
+			index = 0;
+	    }
+	    index++;// = (index + 1)% LED_BUFFER_SIZE;
 	 }
 
-	//GPIO_ToggleBits(GPIOD,GPIO_Pin_13);
 }
 
 /**
  * @brief 	Stop pushing data to the neopixels
- * @param	None
- * @retval	None
+ * @param	voif
+ * @retval	voif
  */
 void neopixel_clear(void){
 	neopixel_dataInit();
@@ -207,9 +208,9 @@ void neopixel_clear(void){
 }
 
 /**
- * @brief  	Initialise the LEDbuffer
- * @param 	None
- * @retval	None
+ * @brief  	Initialise the LEDbuffer with zeros
+ * @param 	void
+ * @retval	void
  */
 void neopixel_dataInit(void){
 	uint32_t index, buffIndex;
@@ -229,12 +230,11 @@ void neopixel_dataInit(void){
 		LEDbuffer[buffIndex] = WS2812_RESET;
 		buffIndex++;
 	}
-	// Start count of TIM2
 	TIM_Cmd(TIM2,ENABLE);
 }
 
 /**
- * @brief 	Set the colour of one led
+ * @brief 	Set the RGB colour of one led
  * @param	n: Led index
  * @param	r: RED intensity
  * @param	g: GREEN intensity
@@ -261,6 +261,7 @@ void neopixel_setPixelColourRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b){
 		tempBuffer[8 + i] = ((r << i) & 0x80) ? WS2812_1 : WS2812_0;
 	for (i = 0; i < 8; i++) // BLUE
 		tempBuffer[16 + i] = ((b << i) & 0x80) ? WS2812_1 : WS2812_0;
+	// stop timer before updating the buffer
 	TIM_Cmd(TIM2,DISABLE);
 	for (i = 0; i < 24; i++)
 		LEDbuffer[RESET_SLOTS_BEGIN + LEDindex * 24 + i] = tempBuffer[i];
@@ -288,25 +289,25 @@ void neopixel_setBrightness(uint8_t b){
  */
 
 /**
- * @brief 	convert RGB 3 8bit colour to a 32bit colour
+ * @brief 	Convert RGB 3 8bit colour to a 32bit colour
  * @note	MS3 0, MS2 r, MS1 g, MS0 b
  * @param	r: RED intensity
  * @param	g: GREEN intensity
  * @param	b: BLUE intensity
- * @retval	None
+ * @retval	uint32_t RGB colour
  */
 uint32_t neopixel_colourRGB(uint8_t r,uint8_t g,uint8_t b){
 	return (uint32_t)(r<<16 | g<<8 | b);
 }
 
 /**
- * @brief 	convert RGB 3 8bit colour to a 32bit colour
+ * @brief 	Convert RGB 3 8bit colour to a 32bit colour
  * @note	MS3 w, MS2 r, MS1 g, MS0 b
  * @param	r: RED intensity
  * @param	g: GREEN intensity
  * @param	b: BLUE intensity
  * @param	w: WHITE intensity
- * @retval	None
+ * @retval	uint32_t RGB colour
  */
 uint32_t neopixel_colourRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w){
 	return (uint32_t)(w<<24 | r<<16 | g<<8 | b);
@@ -364,6 +365,10 @@ void neopixel_setPixelColourW(uint8_t n, uint32_t c){
 	neopixel_setPixelColourRGBW(n, (uint8_t)(c>>16), (uint8_t)(c>>8), (uint8_t) (c),(uint8_t)(c>>24));
 }
 
+/* TODO modify all the setAllPixels functions such that they
+ 	 directly modify the buffer instead of chaning the colour
+ 	 of each pixel
+ */
 /**
  * @brief set all the pixel on the line to a specific colour
  * @param	r: RED intensity
@@ -372,9 +377,42 @@ void neopixel_setPixelColourW(uint8_t n, uint32_t c){
  * @retval	None
  */
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
-	int i=0;
-	for(i=0;i<LED_NUMBER;i++)
-		neopixel_setPixelColourRGB(i,r,g,b);
+	// scale according to brightness
+	float _max = (float)max(r,g,b);
+	float b_scale = brightness/_max;
+	// scale RGB
+	r = (uint8_t) ((float)r*b_scale);
+	g = (uint8_t) ((float)g*b_scale);
+	b = (uint8_t) ((float)b*b_scale);
+
+	uint8_t tempBuffer[24];
+	int i,j;
+
+	for (i = 0; i < 8; i++) // GREEN data
+		tempBuffer[i] = ((g << i) & 0x80) ? WS2812_1 : WS2812_0;
+	for (i = 0; i < 8; i++) // RED
+		tempBuffer[8 + i] = ((r << i) & 0x80) ? WS2812_1 : WS2812_0;
+	for (i = 0; i < 8; i++) // BLUE
+		tempBuffer[16 + i] = ((b << i) & 0x80) ? WS2812_1 : WS2812_0;
+	// stop timer before updating the buffer
+	TIM_Cmd(TIM2,DISABLE);
+	for(j=0;j<LED_NUMBER;j++){
+		for (i = 0; i < 24; i++)
+			LEDbuffer[RESET_SLOTS_BEGIN + j * 24 + i] = tempBuffer[i];
+	}
+	TIM_Cmd(TIM2,ENABLE);
+}
+
+/**
+ * @brief set all the pixel on the line to a specific colour
+ * @param	colour: an RGB colour
+ * @retval	None
+ */
+void neopixel_setAllPixelColour(uint32_t colour){
+	uint8_t r = colour>>16;
+	uint8_t g = colour>>8;
+	uint8_t b = colour;
+	neopixel_setAllPixelRGB(r,g,b);
 }
 
 /**
@@ -386,9 +424,17 @@ void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b){
  * @retval	None
  */
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b,uint8_t w){
-	int i=0;
-	for(i=0;i<LED_NUMBER;i++)
-		neopixel_setPixelColourRGBW(i,r,g,b,w);
+	// scale w to 255:20
+	float w_scale = MAX_8BIT/7.0;
+	w = (uint8_t) w/(MAX_8BIT/w_scale);
+	// scale
+	float rgb_scale = (MAX_8BIT-w_scale)/MAX_8BIT;
+	// scale RGB to 255:(255-20) and add white intensity
+	r = (uint8_t) (r*rgb_scale+w);
+	g = (uint8_t) (g*rgb_scale+w);
+	b = (uint8_t) (b*rgb_scale+w);
+	neopixel_setAllPixelRGB(r,g,b);
+
 }
 
 /**

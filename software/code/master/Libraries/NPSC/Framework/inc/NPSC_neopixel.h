@@ -57,6 +57,7 @@
  */
 
 /* Exported variables --------------------------------------------------------*/
+extern bool neopixel_buffer_free;
 /* Exported macro ------------------------------------------------------------*/
 
 /* Private function prototypes -----------------------------------------------*/
@@ -103,6 +104,7 @@ void neopixel_setPixelColourRGBW(uint8_t n,uint8_t r,uint8_t g,uint8_t b, uint8_
 void neopixel_setPixelColour(uint8_t n,uint32_t c);
 void neopixel_setPixelColourW(uint8_t n,uint32_t c);
 void neopixel_setAllPixelRGB(uint8_t r,uint8_t g,uint8_t b);
+void neopixel_setAllPixelColour(uint32_t colour);
 void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
 /**
  * @}
