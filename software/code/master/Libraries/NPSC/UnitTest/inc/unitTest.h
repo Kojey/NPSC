@@ -47,6 +47,7 @@ bool assertGreater(int a, int b);
 bool assertLess(int a, int b);
 bool assertGreaterOrEqual(int a, int b);
 bool assertLessOrEqual(int a, int b);
+bool assertInRange(int number, int min, int max);
 /**
  * @}
  */

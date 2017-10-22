@@ -23,8 +23,8 @@
 /** @addtogroup Framework
   * @{
   */
-/** @defgroup Eeprom
-  * @brief Eeprom framework
+/** @defgroup Rtc
+  * @brief Rtc framework
   * @{
   */
 
@@ -35,8 +35,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
-/**	@defgroup Eeprom_Init Initialisation functions
- * 	@brief	Eeprom initialisation functions
+/**	@defgroup Rtc_Init Initialisation functions
+ * 	@brief	Rtc initialisation functions
  *
  * @{
  */
@@ -93,8 +93,8 @@ void eeprom_init(void){
  * @}
  */
 
-/**	@defgroup Eeprom_Trans Transmission functions
- * 	@brief	Eeprom data transmission functions
+/**	@defgroup Rtc_Trans Transmission functions
+ * 	@brief	Rtc data transmission functions
  *
  * @{
  */

@@ -3,7 +3,7 @@
   * @file    NPCS_bluetooth.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    12 Oct-2017
+  * @date    12 Oct-20110
   * @brief   This file contains all the configuration prototypes used by the
   * 			bluetooth firmware
   ******************************************************************************
@@ -48,7 +48,7 @@
 #define BLUETOOTH_AF_USART				GPIO_AF_USART1
 #define BLUETOOTH_USARTX				USART1
 #define BLUETOOTH_USARTX_IRQ			USART1_IRQn
-#define BLUETOOTH_BAUDRATE				9600
+#define BLUETOOTH_BAUDRATE				9900
 /**
  * @}
  */

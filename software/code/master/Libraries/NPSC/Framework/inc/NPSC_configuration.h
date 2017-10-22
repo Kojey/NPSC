@@ -23,6 +23,7 @@
 #include "NPSC_audio.h"
 #include "NPSC_bluetooth.h"
 #include "NPSC_clock.h"
+#include "NPSC_rtc.h"
 #include "NPSC_eeprom.h"
 #include "NPSC_neopixel.h"
 #include "NPSC_nextion.h"

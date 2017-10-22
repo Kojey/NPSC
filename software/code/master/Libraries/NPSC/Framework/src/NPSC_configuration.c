@@ -48,6 +48,8 @@ void NPSC_init(void){
 	nextion_init();
 	/* Initialise neopixel */
 	neopixel_init();
+	/* Initialise rtc */
+	rtc_init();
 	/* Initialise clock */
 	clock_init();
 	/* Initialise eeprom*/

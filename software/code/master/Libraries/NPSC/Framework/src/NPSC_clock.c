@@ -134,7 +134,36 @@ ErrorStatus clock_setDate(uint8_t weekDay, uint8_t month, uint8_t date, uint8_t 
 
 	return RTC_SetDate(RTC_Format_BIN, &RTC_DateStrcut);
 }
-
+/**
+ * @brief	Set the clock's date
+ * @param	date struct
+ * @retval	ErrorStatus representing the outcome of the operation
+ *				- SUCCESS: RTC Shift registers are configured
+ *          	- ERROR: RTC Shift registers are not configured
+ */
+ErrorStatus clock_setDateStruct(RTC_DateTypeDef * date){
+	return RTC_SetDate(RTC_Format_BIN, date);
+}
+/**
+ * @brief	Set the clock's date
+ * @param	time strcut
+ * @retval	ErrorStatus representing the outcome of the operation
+ *				- SUCCESS: RTC Shift registers are configured
+ *          	- ERROR: RTC Shift registers are not configured
+ */
+ErrorStatus clock_setTimeStruct(RTC_TimeTypeDef * time){
+	return RTC_SetTime(RTC_Format_BIN, time);
+}
+/**
+ * @brief	Set the clock
+ * @param	clock strcut
+ * @retval	ErrorStatus representing the outcome of the operation
+ *				- SUCCESS: RTC Shift registers are configured
+ *          	- ERROR: RTC Shift registers are not configured
+ */
+ErrorStatus clock_setClockStruct(RTC_ClockTypeDef * clock){
+	return RTC_SetDate(RTC_Format_BIN, clock->date) && RTC_SetTime(RTC_Format_BIN,clock->time);
+}
 /**
  * @brief	Set the clock's time
  * @param	None
@@ -150,6 +179,28 @@ ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t
 	RTC_TimeStruct.RTC_Seconds = second;
 
 	return RTC_SetTime(RTC_Format_BIN, &RTC_TimeStruct);
+}
+
+/**
+ * @brief	Get the time structure
+ * @param	None
+ * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
+ */
+RTC_TimeTypeDef clock_getTimeStruct(void){
+	RTC_TimeTypeDef RTC_TimeStruct;
+	RTC_GetTime(RTC_Format_BIN,&RTC_TimeStruct);
+	return RTC_TimeStruct;
+}
+
+/**
+ * @brief	Get the time structure
+ * @param	None
+ * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
+ */
+RTC_DateTypeDef clock_getDateStruct(void){
+	RTC_DateTypeDef RTC_DateStruct;
+	RTC_GetDate(RTC_Format_BIN,&RTC_DateStruct);
+	return RTC_DateStruct;
 }
 
 /**
@@ -228,6 +279,19 @@ void clock_setA(RTC_AlarmTypeDef * Alarm){
 	RTC_ITConfig(RTC_IT_ALRA,ENABLE);
 	RTC_AlarmCmd(CLOCK_A,ENABLE);
 	RTC_ClearFlag(RTC_FLAG_ALRAF);
+}
+
+/**
+ * @brief	Set an alarm to RTC_Alarm_B, given a Alarm structure @ref RTC_AlarmTypeDef
+ * @param 	Alarm:	A pointer to the RTC_AlarmTypeDef
+ * @retval	None
+ */
+void clock_setB(RTC_AlarmTypeDef * Alarm){
+	RTC_AlarmCmd(RTC_Alarm_B,DISABLE);
+	RTC_SetAlarm(RTC_Format_BIN,RTC_Alarm_B,Alarm);
+	RTC_ITConfig(RTC_IT_ALRB,ENABLE);
+	RTC_AlarmCmd(CLOCK_B,ENABLE);
+	RTC_ClearFlag(RTC_FLAG_ALRBF);
 }
 
 /**

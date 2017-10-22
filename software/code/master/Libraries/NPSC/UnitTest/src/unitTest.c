@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../../../NPSC/UnitTest/inc/unitTest.h"
+#include "unitTest.h"
 
 /** @addtogroup NPSC
   * @{
@@ -41,7 +41,7 @@
  */
 
 /**
- * @brief	Assert than condition is true
+ * @brief	Assert that condition is true
  * @param	condition
  * @return bool: result of assertion
  */
@@ -50,7 +50,7 @@ bool assertTrue(bool condition){
 }
 
 /**
- * @brief	Assert than condition is false
+ * @brief	Assert that condition is false
  * @param	condition
  * @return 	bool: result of assertion
  */
@@ -59,7 +59,7 @@ bool assertFalse(bool condition){
 }
 
 /**
- * @brief	Assert than a equals b
+ * @brief	Assert that a equals b
  * @param	a
  * @param 	b
  * @return 	bool: result of assertion
@@ -69,7 +69,7 @@ bool assertEqual(int a, int b){
 }
 
 /**
- * @brief	Assert than a is greater than b
+ * @brief	Assert that a is greater than b
  * @param	a
  * @param 	b
  * @return 	bool: result of assertion
@@ -79,7 +79,7 @@ bool assertGreater(int a, int b){
 }
 
 /**
- * @brief	Assert than a less than than b
+ * @brief	Assert that a less than than b
  * @param	a
  * @param 	b
  * @return bool: result of assertion
@@ -89,7 +89,7 @@ bool assertLess(int a, int b){
 }
 
 /**
- * @brief	Assert than a is greater or equals to b
+ * @brief	Assert that a is greater or equals to b
  * @param	a
  * @param 	b
  * @return bool: result of assertion
@@ -99,7 +99,7 @@ bool assertGreaterOrEqual(int a, int b){
 }
 
 /**
- * @brief	Assert than a is less or equals to b
+ * @brief	Assert that a is less or equals to b
  * @param	a
  * @param 	b
  * @return bool: result of assertion
@@ -107,7 +107,16 @@ bool assertGreaterOrEqual(int a, int b){
 bool assertLessOrEqual(int a, int b){
 	return a<=b?true:false;
 }
-
+/**
+ * @brief	Assert that min<=number<=max
+ * @param	number
+ * @param 	min
+ * @param	max
+ * @return bool: result of assertion
+ */
+bool assertInRange(int number, int min, int max){
+	return (assertLessOrEqual(number,max)&&assertGreaterOrEqual(number,min))?true:false;
+}
 /**
  * @}
  */

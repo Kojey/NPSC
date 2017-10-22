@@ -15,6 +15,10 @@
   ******************************************************************************
   */
 
+/* TODO restrict the alarm application to 2 alarms
+	further development will involve having a queue
+	of alarms
+*/
 #ifndef NPSC_APPLICATION_INC_CLOCK_MANAGEMENT_H_
 #define NPSC_APPLICATION_INC_CLOCK_MANAGEMENT_H_
 

@@ -39,6 +39,12 @@
 /* Exported types ------------------------------------------------------------*/
 typedef enum {false = 0, true = !false} bool;
 
+typedef struct
+{
+	RTC_TimeTypeDef time;
+	RTC_DateTypeDef date;
+}RTC_ClockTypeDef;
+
 /* Exported constants --------------------------------------------------------*/
 #define UART_BUFFER_SIZE            	4
 #define DMA_RX_BUFFER_SIZE          	4

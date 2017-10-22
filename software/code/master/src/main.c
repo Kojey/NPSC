@@ -29,7 +29,6 @@ SOFTWARE.
 
 /* Includes */
 #include "NPSC_configuration.h"
-#include "clock_management_test.h"
 
 //#include "stm32f4xx.h"
 /* Private macro */
@@ -46,26 +45,10 @@ SOFTWARE.
 */
 int main(void)
 {
-  int i = 0;
-  uint32_t colour = 0;
 
   NPSC_init();
-  int buffer[4]={0};
-  //neopixel_setAllPixelRGB(255,0,0);
   while (1)
   {
-	  bluetooth_buffer_update();
-	  nextion_buffer_update();
-	  i++;
-
-	  colour = neopixel_colourRGB(UART_Buffer[0],UART_Buffer[1],UART_Buffer[2]);
-	  neopixel_setBrightness(UART_Buffer[3]);
-	  for(i=0; i<4; i++)
-		  if(buffer[i]!=UART_Buffer[i]){
-			  neopixel_setAllPixelColour(colour);
-			  buffer[i]=UART_Buffer[i];
-		  }
-
   }
 }
 
