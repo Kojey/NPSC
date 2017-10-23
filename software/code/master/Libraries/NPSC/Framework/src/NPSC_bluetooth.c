@@ -122,14 +122,28 @@ void bluetooth_buffer_update(void){
      * Loop data back to UART data register
      */
     while (bluetooth_read != bluetooth_write) {                 /* Do it until buffer is empty */
-        USART1->DR = UART_Buffer[bluetooth_read++];   /* Start byte transfer */
-        while (!(USART1->SR & USART_SR_TXE));   /* Wait till finished */
-        if (bluetooth_read == UART_BUFFER_SIZE) {     /* Check buffer overflow */
-            bluetooth_read = 0;
-            bluetooth_write = 0;
-        }
-    }
+    	// lock this step
+    	if(instruction_lock_owner==instruction_no_lock || instruction_lock_owner==instruction_bluetooth_lock){
+    		USART1->DR = INSTRUCTION_BUFFER[bluetooth_read++];   /* Start byte transfer */
+    		if(instruction_lock_owner==instruction_no_lock)instruction_lock_owner=instruction_bluetooth_lock;
 
+			while (!(USART1->SR & USART_SR_TXE));   /* Wait till finished */
+			if (bluetooth_read == INSTRUCTION_SIZE) {     /* Check buffer overflow */
+				bluetooth_read = 0;
+				bluetooth_write = 0;
+				// create new instruction
+				InstructionTypeDef newInstruction;
+				int i;
+				for(i=0; i<INSTRUCTION_SIZE; i++)
+					newInstruction.instrution[i]=INSTRUCTION_BUFFER[i];
+				newInstruction.excecuted=false;
+				// add it to the queue
+				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+				// release the lock
+				instruction_lock_owner = instruction_no_lock;
+			}
+    	}
+    }
 }
 
 /**
@@ -168,7 +182,7 @@ void DMA2_Stream5_IRQHandler(void) {
          *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
          */
         len = DMA_RX_BUFFER_SIZE - DMA2_Stream5->NDTR;
-        tocopy = UART_BUFFER_SIZE - bluetooth_write;      /* Get number of bytes we can copy to the end of buffer */
+        tocopy = INSTRUCTION_SIZE - bluetooth_write;      /* Get number of bytes we can copy to the end of buffer */
 
         /* Check how many bytes to copy */
         if (tocopy > len) {
@@ -177,7 +191,7 @@ void DMA2_Stream5_IRQHandler(void) {
 
         /* bluetooth_write received data for UART main buffer for manipulation later */
         ptr = DMA_RX_Buffer;
-        memcpy(&UART_Buffer[bluetooth_write], ptr, tocopy);   /* Copy first part */
+        memcpy(&INSTRUCTION_BUFFER[bluetooth_write], ptr, tocopy);   /* Copy first part */
 
         /* Correct values for remaining data */
         bluetooth_write += tocopy;
@@ -186,7 +200,7 @@ void DMA2_Stream5_IRQHandler(void) {
 
         /* If still data to write for beginning of buffer */
         if (len) {
-            memcpy(&UART_Buffer[0], ptr, len);      /* Don't care if we override bluetooth_read pointer now */
+            memcpy(&INSTRUCTION_BUFFER[0], ptr, len);      /* Don't care if we override bluetooth_read pointer now */
             bluetooth_write = len;
         }
 

@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    unitTest.h
+  * @file    queue_test.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    21-March-2017
-  * @brief   This file contains all the configuration prototypes used by the
-  * 			unit testing
+  * @date    23-Oct-2017
+  * @brief   This file contains template of unit tests for the queue
   ******************************************************************************
   * @attention
   *
@@ -15,11 +14,13 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_UNITTEST_INC_UNITTEST_H_
-#define NPSC_UNITTEST_INC_UNITTEST_H_
+#ifndef NPSC_UNITTEST_INC_TEST_QUEUE_H_
+#define NPSC_UNITTEST_INC_TEST_QUEUE_H_
 
 /* Includes ------------------------------------------------------------------*/
+#include "unitTest.h"
 #include "NPSC_utils.h"
+
 
 /** @addtogroup NPSC
   * @{
@@ -27,7 +28,7 @@
 /** @addtogroup UnitTest
  *  @
  */
-/** @addtogroup unitTest
+/** @defgroup queue_test
   * @{
   */
 
@@ -36,24 +37,12 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-/* Assert ******************************************************************/
-/**	@defgroup unitTest_Assert
- * 	@{
- */
-bool assertTrue(bool condition);
-bool assertFalse(bool condition);
-bool assertEqual(int a, int b);
-bool assertNotEqual(int a, int b);
-bool assertGreater(int a, int b);
-bool assertLess(int a, int b);
-bool assertGreaterOrEqual(int a, int b);
-bool assertLessOrEqual(int a, int b);
-bool assertInRange(int number, int min, int max);
-/**
- * @}
- */
 
-#endif /* NPSC_UNITTEST_INC_UNITTEST_H_ */
+bool queue_create(void);
+bool queue_enque(void);
+bool queue_dequeue(void);
+
+#endif /* NPSC_UNITTEST_INC_TEST_QUEUE_H_ */
 
 /**
  * 	@}

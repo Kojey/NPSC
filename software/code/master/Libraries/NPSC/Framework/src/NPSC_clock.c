@@ -162,7 +162,7 @@ ErrorStatus clock_setTimeStruct(RTC_TimeTypeDef * time){
  *          	- ERROR: RTC Shift registers are not configured
  */
 ErrorStatus clock_setClockStruct(RTC_ClockTypeDef * clock){
-	return RTC_SetDate(RTC_Format_BIN, clock->date) && RTC_SetTime(RTC_Format_BIN,clock->time);
+	return RTC_SetDate(RTC_Format_BIN, &clock->date) && RTC_SetTime(RTC_Format_BIN,&clock->time);
 }
 /**
  * @brief	Set the clock's time

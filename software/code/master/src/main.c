@@ -49,6 +49,10 @@ int main(void)
   NPSC_init();
   while (1)
   {
+	  bluetooth_buffer_update();
+	  nextion_buffer_update();
+	  InstructionTypeDef instr = InstructionQueue_dequeue(instruction_queue);
+	  int a = 0;
   }
 }
 
@@ -64,7 +68,7 @@ void EVAL_AUDIO_TransferComplete_CallBack(uint32_t pBuffer, uint32_t Size){
 /*
  * Callback used by stm324xg_eval_audio_codec.c.
  * Refer to stm324xg_eval_audio_codec.h for more info.
- */
+2 */
 uint16_t EVAL_AUDIO_GetSampleCallBack(void){
   /* TODO, implement your code here */
   return -1;

@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../../../NPSC/UnitTest/inc/rtc_test.h"
+#include <clock_test.h>
 
 /** @addtogroup NPSC
   * @{

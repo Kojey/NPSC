@@ -117,19 +117,33 @@ void nextion_init(void) {
 /**
  * MUST BE A TASK
  */
+// TODO Test the lock on nextion and bluetooth simultaneously.
 void nextion_buffer_update(void){
     /**
      * Loop data back to UART data register
      */
     while (nextion_read != nextion_write) {                 /* Do it until buffer is empty */
-        USART2->DR = UART_Buffer[nextion_read++];   /* Start byte transfer */
-        while (!(USART2->SR & USART_SR_TXE));   /* Wait till finished */
-        if (nextion_read == UART_BUFFER_SIZE) {     /* Check buffer overflow */
-            nextion_read = 0;
-            nextion_write = 0;
-        }
+    	// lock this step
+    	if(instruction_lock_owner==instruction_no_lock || instruction_lock_owner==instruction_nextion_lock){
+			USART2->DR = INSTRUCTION_BUFFER[nextion_read++];   /* Start byte transfer */
+			if(instruction_lock_owner==instruction_no_lock)instruction_lock_owner=instruction_nextion_lock;
+			while (!(USART2->SR & USART_SR_TXE));   /* Wait till finished */
+			if (nextion_read == INSTRUCTION_SIZE) {     /* Check buffer overflow */
+				nextion_read = 0;
+				nextion_write = 0;
+				// create new instruction
+				InstructionTypeDef newInstruction;
+				int i;
+				for(i=0; i<INSTRUCTION_SIZE; i++)
+					newInstruction.instrution[i]=INSTRUCTION_BUFFER[i];
+				newInstruction.excecuted=false;
+				// add it to the queue
+				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+				// release the lock
+				instruction_lock_owner = instruction_no_lock;
+			}
+    	}
     }
-
 }
 
 /**
@@ -168,7 +182,7 @@ void DMA1_Stream5_IRQHandler(void) {
          *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
          */
         len = DMA_RX_BUFFER_SIZE - DMA1_Stream5->NDTR;
-        tocopy = UART_BUFFER_SIZE - nextion_write;      /* Get number of bytes we can copy to the end of buffer */
+        tocopy = INSTRUCTION_SIZE - nextion_write;      /* Get number of bytes we can copy to the end of buffer */
 
         /* Check how many bytes to copy */
         if (tocopy > len) {
@@ -177,7 +191,7 @@ void DMA1_Stream5_IRQHandler(void) {
 
         /* nextion_write received data for UART main buffer for manipulation later */
         ptr = DMA_RX_Buffer;
-        memcpy(&UART_Buffer[nextion_write], ptr, tocopy);   /* Copy first part */
+        memcpy(&INSTRUCTION_BUFFER[nextion_write], ptr, tocopy);   /* Copy first part */
 
         /* Correct values for remaining data */
         nextion_write += tocopy;
@@ -186,7 +200,7 @@ void DMA1_Stream5_IRQHandler(void) {
 
         /* If still data to write for beginning of buffer */
         if (len) {
-            memcpy(&UART_Buffer[0], ptr, len);      /* Don't care if we override nextion_read pointer now */
+            memcpy(&INSTRUCTION_BUFFER[0], ptr, len);      /* Don't care if we override nextion_read pointer now */
             nextion_write = len;
         }
 

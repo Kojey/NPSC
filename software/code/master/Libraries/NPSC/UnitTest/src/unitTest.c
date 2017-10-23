@@ -67,6 +67,15 @@ bool assertFalse(bool condition){
 bool assertEqual(int a, int b){
 	return a==b?true:false;
 }
+/**
+ * @brief	Assert that a is not equal to b
+ * @param	a
+ * @param 	b
+ * @return 	bool: result of assertion
+ */
+bool assertNotEqual(int a, int b){
+	return a!=b?true:false;
+}
 
 /**
  * @brief	Assert that a is greater than b
