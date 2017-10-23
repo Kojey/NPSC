@@ -3,16 +3,88 @@
 \BOOKMARK [1][-]{section.1.2}{Objectives of this study}{chapter.1}% 3
 \BOOKMARK [2][-]{subsection.1.2.1}{Problems to be investigated}{section.1.2}% 4
 \BOOKMARK [2][-]{subsection.1.2.2}{Purpose of the study}{section.1.2}% 5
-\BOOKMARK [1][-]{section.1.3}{Scope and Limitations}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.3}{Scope and limitations}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.4}{Plan of development}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 8
-\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 9
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 10
-\BOOKMARK [1][-]{section.4.1}{Simulation Results}{chapter.4}% 11
-\BOOKMARK [1][-]{section.4.2}{Experimental Results}{chapter.4}% 12
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 13
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 14
-\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 15
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 16
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 17
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 18
+\BOOKMARK [2][-]{subsection.1.4.1}{Chronological progression of the report}{section.1.4}% 8
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 9
+\BOOKMARK [1][-]{section.2.1}{The human sleep-wake cycle}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.1.1}{The circadian rhythm}{section.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.1.2}{Internal circadian rhythms influenced by light}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.3}{Quantitative and qualitative characteristics of light on melatonin production}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.4}{Impact of light on human behaviour and sleep-wake cycle}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Lighting technologies}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{Light}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Type of light technologies}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{Light treatment of sleep disorder}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Hardware modules}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.3.1}{Processors and microcontrollers}{section.2.3}% 20
+\BOOKMARK [2][-]{subsection.2.3.2}{Storage}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.3}{Wireless technology}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.4}{Touch screen}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.5}{Neopixels}{section.2.3}% 24
+\BOOKMARK [1][-]{section.2.4}{Communication protocols}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.4.1}{Serial Peripheral Interface \(SPI\) Bus}{section.2.4}% 26
+\BOOKMARK [2][-]{subsection.2.4.2}{Universal asynchronous receiver-transmitter \(UART\)}{section.2.4}% 27
+\BOOKMARK [2][-]{subsection.2.4.3}{Inter-Integrated Circuit \(I2C\)}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.4}{Neopixels serial protocol}{section.2.4}% 29
+\BOOKMARK [1][-]{section.2.5}{PCB Board Design}{chapter.2}% 30
+\BOOKMARK [1][-]{section.2.6}{Programming Languages}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.6.1}{C}{section.2.6}% 32
+\BOOKMARK [2][-]{subsection.2.6.2}{Java}{section.2.6}% 33
+\BOOKMARK [1][-]{section.2.7}{Software Tools and Libraries}{chapter.2}% 34
+\BOOKMARK [2][-]{subsection.2.7.1}{Atollic TrueSTUDIO for ARM}{section.2.7}% 35
+\BOOKMARK [2][-]{subsection.2.7.2}{Nextion IDE}{section.2.7}% 36
+\BOOKMARK [2][-]{subsection.2.7.3}{Android Studio}{section.2.7}% 37
+\BOOKMARK [0][-]{chapter.3}{Design}{}% 38
+\BOOKMARK [1][-]{section.3.1}{Design scope and scpecifications}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.1.1}{Scope}{section.3.1}% 40
+\BOOKMARK [2][-]{subsection.3.1.2}{Specification}{section.3.1}% 41
+\BOOKMARK [2][-]{subsection.3.1.3}{Acceptance test}{section.3.1}% 42
+\BOOKMARK [1][-]{section.3.2}{Preliminary design}{chapter.3}% 43
+\BOOKMARK [2][-]{subsection.3.2.1}{Modules interaction}{section.3.2}% 44
+\BOOKMARK [2][-]{subsection.3.2.2}{Design considerations}{section.3.2}% 45
+\BOOKMARK [2][-]{subsection.3.2.3}{Components selection}{section.3.2}% 46
+\BOOKMARK [1][-]{section.3.3}{Emboddiment design}{chapter.3}% 47
+\BOOKMARK [2][-]{subsection.3.3.1}{OPM Diagrams}{section.3.3}% 48
+\BOOKMARK [1][-]{section.3.4}{Hardware Design and Testing}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.4.1}{Sensors}{section.3.4}% 50
+\BOOKMARK [2][-]{subsection.3.4.2}{Neopixel Ring}{section.3.4}% 51
+\BOOKMARK [2][-]{subsection.3.4.3}{Neopixel Time and Weekday}{section.3.4}% 52
+\BOOKMARK [2][-]{subsection.3.4.4}{Date}{section.3.4}% 53
+\BOOKMARK [2][-]{subsection.3.4.5}{EEPROM}{section.3.4}% 54
+\BOOKMARK [1][-]{section.3.5}{Software Design and Testing}{chapter.3}% 55
+\BOOKMARK [2][-]{subsection.3.5.1}{Neopixles}{section.3.5}% 56
+\BOOKMARK [2][-]{subsection.3.5.2}{Bluetooth}{section.3.5}% 57
+\BOOKMARK [2][-]{subsection.3.5.3}{Sensors}{section.3.5}% 58
+\BOOKMARK [2][-]{subsection.3.5.4}{RTC}{section.3.5}% 59
+\BOOKMARK [2][-]{subsection.3.5.5}{EEPROM}{section.3.5}% 60
+\BOOKMARK [1][-]{section.3.6}{Setup of Development Environement}{chapter.3}% 61
+\BOOKMARK [2][-]{subsection.3.6.1}{Github}{section.3.6}% 62
+\BOOKMARK [2][-]{subsection.3.6.2}{Nextion}{section.3.6}% 63
+\BOOKMARK [2][-]{subsection.3.6.3}{Makefile}{section.3.6}% 64
+\BOOKMARK [0][-]{chapter.4}{Implementation and Testing}{}% 65
+\BOOKMARK [1][-]{section.4.1}{Hardware design and testing}{chapter.4}% 66
+\BOOKMARK [2][-]{subsection.4.1.1}{Sensors}{section.4.1}% 67
+\BOOKMARK [2][-]{subsection.4.1.2}{Neopixel Ring}{section.4.1}% 68
+\BOOKMARK [2][-]{subsection.4.1.3}{Neopixel Time and Weekday}{section.4.1}% 69
+\BOOKMARK [2][-]{subsection.4.1.4}{Date}{section.4.1}% 70
+\BOOKMARK [2][-]{subsection.4.1.5}{EEPROM}{section.4.1}% 71
+\BOOKMARK [1][-]{section.4.2}{Software design and testing}{chapter.4}% 72
+\BOOKMARK [2][-]{subsection.4.2.1}{Neopixles}{section.4.2}% 73
+\BOOKMARK [2][-]{subsection.4.2.2}{Bluetooth}{section.4.2}% 74
+\BOOKMARK [2][-]{subsection.4.2.3}{Sensors}{section.4.2}% 75
+\BOOKMARK [2][-]{subsection.4.2.4}{RTC}{section.4.2}% 76
+\BOOKMARK [2][-]{subsection.4.2.5}{EEPROM}{section.4.2}% 77
+\BOOKMARK [1][-]{section.4.3}{Setup of development environement}{chapter.4}% 78
+\BOOKMARK [2][-]{subsection.4.3.1}{Github}{section.4.3}% 79
+\BOOKMARK [2][-]{subsection.4.3.2}{Nextion}{section.4.3}% 80
+\BOOKMARK [2][-]{subsection.4.3.3}{Makefile}{section.4.3}% 81
+\BOOKMARK [0][-]{chapter.5}{Results}{}% 82
+\BOOKMARK [1][-]{section.5.1}{Simulation Results}{chapter.5}% 83
+\BOOKMARK [1][-]{section.5.2}{Experimental Results}{chapter.5}% 84
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 85
+\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 86
+\BOOKMARK [0][-]{chapter.8}{Recommendations}{}% 87
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 88
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 89
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 90

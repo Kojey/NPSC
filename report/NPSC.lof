@@ -1,6 +1,14 @@
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt chart showing the timeline of every task in the project as well as its critical path.\relax }}{3}{figure.caption.4}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Report breakdown detailing the different sections needed to be included in the report.\relax }}{4}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please note that your headings should be short descriptions of what is in the diagram not simply the figure title)}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces C by GE Sol, an intelligent lamp bed using Amazon Alextra.\relax }}{12}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Wake-up light by Philips\relax }}{12}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Touch-screen technologies\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Relative position of the neopixel rings\relax }}{17}{figure.caption.18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Illustration of the neopixels serial interface\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }}{20}{figure.caption.21}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

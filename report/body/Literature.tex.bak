@@ -1,0 +1,315 @@
+\chapter{Literature Review}
+
+This chapter reviews the reseach papers, articles, books and other relevant form of researches used in the design of the NPSC. It has been divided into the sectioned below:
+\begin{itemize}
+\item The human sleep-wake cycle
+\item Previous attempts
+\item Hardware modules and PCB design requirements
+\item Communication protocols
+\item Programming Languages
+\item Software Tools and Libraries
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: The human sleep-wake cycle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The human sleep-wake cycle}
+
+The human has many internal clock among them is the master clock located in the suprachiasmatic nuclei. This clock which regulate the secretion of melatonin is affected by light. The creation of artifical expecially LEDs have caused a disruption in the sleep-wake cycle. This section give an overview of the human internal clocks and how they are affected by light.
+
+\subsection{The circadian rhythm}
+Many of our seasonal behaviour are synchronised to the environment by \textbf{biological clocks} responsible for the creation of circadian rhythms. Biological clocks which are composed of protein that act reciprocally on the body's cells are the natural timing device found in many organs. The discovery of the genes from these biological clocks responsible for the control of the circadian rhythms was made by three scientists Jeffrey  C.  Hall,  Michael  Rosbash  and Michael W. Young winners of the Nobel Prize in Physiology or Medicine \cite{sc2017}. Their discovery made in the 1980s led to advanced research on the role of the circadian rhythms.\\
+Circadian rhythms are biological rhythms which follow the same pattern in absence of external cues (endegenous), are influenced by the presence of external stimuli (entertainable), oxillating every 24h over a range of phisiological temperatures. In the presence of external stimuli -also known as \textit{zeitgebers}-, circadian rhythms synchronise their periodicity with these external stimuli. The zeitgebers of the circadian are the daily variation of the temperature and the dark/light cycle of the day.\\
+Circadian rhythms have an endegenous and an exogenous components. Human placed in isolation without knowledge of the time continued exhibiting a circadian rhythm with their pacemakers notably the melatonin secretion, sleep-wake cycle, body temperature \cite{in1996}. These results proove the endegenous component of the circadian rhythms. A similar study shows that when people are exposed to light at night time, a shift in their pacemakers \cite{ea2004} which is an evidence of the exogenous component of circadian rhythms.\\
+The exogenous components of the circadian rhythms have the ability affect positively and begatively our natural endogenous cycle. With light being what we are mostly daily exposed to, what is the influence of light on the circadian thythms? 
+
+\subsection{Internal circadian rhythms influenced by light}
+Melatonin is the hormone produced by the pineal gland in the suprachiasmatic nuclei (SCN) which has a soporific effect and the ability to entertain the sleep-wake cycle. While melatonin itself is not the cause of a person sleeping, it however creates changes in a person's body that affect their sleepiness. \\
+The pineal gland responsible for the secretion of the melatonin hormone is under the influence of one of the biological clocks, the master clock located in the SCN. The SCN receives visual information from the retinal-hypothalamic tract which entrains the SCN according to the photoperiod \cite{lig1994}. The SCN in turn activate a gene in the pineal cell (CREM) which produce a protein (ICER) needed for the production of melatonin. As a result, the secretion of pineal hormone melatonin follow the light/dark cycle with its  secretion being high during the day and low during the night.  
+
+\subsection{Quantitative and qualitative characteristics of light on melatonin production}
+Many researches have been done to understand the impact of light on the circadian rhythms expecially the sleep-wake cycle. \\
+Kathleen \textit{et al.} in their paper \textit{Blue light from light-emitting diodes elicits a dose-dependent suppression of melatonin in humans}\cite{bl2010}, provide details information on their finding of  the effect of light on humans subject. Subjects used for the expirements were 5 males and 3 females with an mean of $23.9\pm0.5$ years, with each subject demonstrating normal color vision. The lighting requirment was blue light of $\lambda_{max} = 469nm \pm 1nm $ with $\frac{1}{2}$ peak bandwidth$ = 26nm$ and a typical viewing distance of $35cm$. The subjects were blindfolded from midnight to 2AM. From thereon, they were exposed to 90 min of blue light exposure  followed by another dark exposure. Blood sample from the subject were taken from 2AM at 30 min interval.From their experiment, they concluded that:
+\begin{itemize}
+\item \textit{Blue LED light has an increased melatonin supression following an increase in exposure irradiance}
+\item \textit{Blue LED light may have stronger suppressing effect than 4000K white fluorescent light.}
+\end{itemize}
+A similar study was previously made by George C. Brainard \textit{et al.} \cite{ac2001} used 72 healthy human subjects, with normal color vision. The subjects composed of 37 females, 35 males, aged between 18 and 30 years (mean age of $24.5 \pm 0.3$ years), came from different ethnic (african, african americans, caucasians, asian, hispanic). The melatonin suppression action spectrum was formed using eight different wavelengths between $440nm$ and $600nm$ \textit{(440, 460, 480, 505, 530, 555, 575, 600)}. Using the same procedure as mentioned in the previous experiment, blood samples were taken at 30 min interval after 2AM. The results of their research published in their paper \textit{Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor} the following conclusion:
+\begin{itemize}
+\item \textit{Light irradiance greater or equal to $3.1 \mu W/cm^{2}$ evoke a significant melatonin supression}
+\item \textit{Smaller wavelenght monochromatic light have a greater change in \textit{Plasma Melatonin as Percent Change Control-Adjusted} for a fixed value of \textit{Photon density}} (\cite{ac2001} pp. 4-5).
+\end{itemize}   
+
+\subsection{Impact of light on human behaviour and sleep-wake cycle}
+Among the Zeitgebers of the circadian rhythms, light being the major Zeitgebers has important effect on the human sleep-wake cycle. Christian \textit{et al.}\cite{cir2014} shown that subjective sleepiness and core body temperature opposes each other (\cite{cir2014}, pp. 12, fig. 2.1) when there is no phase lag or lead between the endogenous circadian rhythm and the sleep-wake cycle. The human normal sleep-wake cycle is comprised of 8h of sleep and 16h of wakefulness \cite{is1995}. This cycle is naturally affected by the human activities but is highly inflenced by light exposure. The study shows that office workers with bright blue office light have a better sleep-wake cycle than those with dim and warm office light. Furthermore, it shows that light exposure of sufficient intensity at night can reduce the secretion of melatonin with alerting response starting within the first 20mn. With the recent advance in LED technologies, human are no longer following the natural light/dark cycle causing numerous sleep disorders. 
+
+  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: LEDs technologies
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Lighting technologies}
+
+Light is capable of affecting the human sleep-wake cycle. However this impact can be used to reverse the negative impact of light on the sleep-wake cycle. This section introduce the different light technologies available and their use in regualting the human sleep-wake cycle. 
+
+\subsection{Light}
+The sun's electromagnetic rediation has a broad light spectrum ranging from  $100nm$ to $1mm$. After being filtered through the earth atmosphere, only certain portions of the spectrum are kept with the visible light spectrum having the maximum irradiance. Light technologies are able to produce more or less the same wavelenght as the sunlight but with much less irradiance.
+
+\subsection{Type of light technologies}
+Various light techonologies have been developed over the years, their use and their usefulness in this project are detailed below. 
+\subsubsection{Incandescent light}
+These are the most common and least efficient light technology. It produces light by passing a high current through a wire filament producing warm light as it glows. These type of lights produce only a specific spectrum of light (warm light) besides they are not designed to be programmed. 
+\subsubsection{Fluorescent light}
+Light is produced by passing electricity through mercury vapour, the invisible light produced as a result of that interaction, connect with the coating of the glass emitting light. It produces all type of white light (warm, cool, daylight) with a good colour rendering. As the previous one, it only produce on type of colour and it is not designed to be programmed.
+\subsubsection{Halogen light}
+It shares similarities with the incadescent light except that halogen gas is added to the glass. It produces a crisp white colour. As the previous technologies, it also produce one type of colour and it not designed to  be programmed.
+\subsubsection{Xeon light}
+This type is another version of incadescent light with xeon gas added to the glass instead, it produces a less yellow light. As the previous technologies, it also produce one type of colour and it not designed to  be programmed.
+\subsubsection{LED light}
+This techonology uses the passage of current through a diode to produce light. These light are very efficient and provide all sort of colour as well as cool and warm light. Moreover, they are designed to be programmed and be easily implemented in a embedded design. 
+\subsection{Light treatment of sleep disorder}
+With the discovery of the effect of light on the sleep-wake cycle, electronic devices producing specific light requirment have been used in treating patient with sleep discorder. Advanced sleep phase disorder (ASPD) have been treated using a therapeutic approach involving chronotherapy and timed light exposure \cite{th2010}. The same concept has been used to create a home bed lamp or alarm clock facilitating the regualtion of the slepp-wake cycle. \textbf{GE Sol} and \textbf{Philips}\textit{(which is actively involved in sleep-wake cycle treatement)} have created devices able to ``influence'' the human sleep-wakr cycle.
+
+\subsubsection{C by GE Sol}
+\textit{C} shown in \cref{fig:c} is a ``all-in-one smart light'' \cite{gesol} which has Amazon intelligent personal assistant Alexa built in. C has a various range of colours which are manually selected based on the user preference. It is capable of communicating wiht GE sol devices and smartphones inserting it among the user's network of devices. Despite its high technology features and its elegant design, C remains just a bed lamp as it is not clinically proven to be helpful in regulating the user's sleep-wake cycle.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{sol1.jpg}
+\caption{C by GE Sol, an intelligent lamp bed using Amazon Alextra.}
+\label{fig:c}
+\end{figure}
+
+\subsubsection{Philips wake-up lamps}
+Philips has created a broad range of wake-up lamps designed to impact the sleep-wake cycle of the users. \Cref{fig:philips1,fig:philips2} are examples of the recent versions of Philips' clocks able to simulate sunrise and sunset which last from 20 to 40 mn. These simulations vary the colour of the light following the sun's natural sunrise colour and end with a selected channel or prefered user's music. These Sleep and Wake-up lights are the only wake-up lamp clinically proven to work as claimed by Philips\cite{philips}. 
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.4]{philips1.png}
+\subcaption[first caption.]{HF3531/60, coloured sunrise\\ simulation, 7 natural sounds, Tap\\ snooze and reading lamp, midnight\\ light function}
+\label{fig:philips1}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.35]{philips2.jpeg}
+\subcaption[second caption.]{HF3551/60, coloured sunrise simulation, 7 natural sounds, Tap snooze and reading lamp, midnight light function, Operated by iPhone App}
+\label{fig:philips2}
+\end{minipage}
+\caption{Wake-up light by Philips}
+\label{philips}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Hardware modules 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hardware modules}
+This section provides the research on the hardware texhnologies as well as the reasons behind the choice of some of these technologies. 
+
+\subsection{Processors and microcontrollers}
+A microcontroller is a computer, it contains a central processing unit (CPU), it has some random access menory (RAM), it has input and output peripherals. However, a microcontroller is way smaller, cheaper, use less electrical power, and has less processing capabilities than a computer making it the preference for tasks specific electronic design \cite{ho2000}.\\
+Numerous microcontrollers were analysed for this project. Each manufacturer provide various range of microcontroller suitable for different application.
+The NPSC's microcontroller needs to communicate to a smartphone application wirelessly, it need to control a GPS module and other external modules. While controlling the external module, the microcontroller need to perform processing of the sunrise and sunset patterns by continously organising and sending data to the neopixels. In order to reduce the complexity of finding the \textit{perfect} microcontroller for the NPSC, the selection was based on the following characteristics:
+\begin{itemize}
+\item \textbf{Size of the FLASH:} How many lines of code can be loaded to the microcontroller?
+\item \textbf{Cost}
+\item \textbf{Clock speed}
+\item \textbf{Community:} Does the manufacturer have a large community of developers?
+\item \textbf{Bit precision:} Are we aiming at 8, 16, or 32 bits precision? 
+\item \textbf{Familiarity:} How familliar are we with the microcontroller (time is a constraint)?
+\item \textbf{Number of pins:} How familliar are we with the microcontroller (time is a constraint)?\
+\item \textbf{Extra features:} What are then built-in functionalities (wifi module, bluetooth)?
+\end{itemize}
+
+\Cref{table:micro} provides the difference between the microcontrollers selected, this table was use to make the final decision on the microcontroller selection.
+\begin{table}[h!]
+\centering
+\begin{tabular}{cp{5em}p{8em}p{5em}c}
+\hline
+\hline
+\multirow{2}{*}{Characteristics}  & \multicolumn{4}{c}{Microcontrollers} \\  
+ & \textbf{Arduino Due} & \textbf{Intel Edison} & \textbf{Raspberry Pi Zero} & \textbf{STM32F407VGT6} \\
+\hline
+\textbf{Clock speed} & 84MHz &  dual-core, dual-threaded 500 MHz CPU & 1GHz single core & 168 MHz\\
+\textbf{Bit precision} & 32 & 32 & 32 & 32 \\
+\textbf{FLASH} & 512KB & 4GB & MicroSDHC & 1MB \\
+\textbf{Pins} & 54 & 40 & 40 & 82\\
+\textbf{Cost} & R549.25 & R687.87 & R79.8 & R175.45\\
+\hline
+\hline
+\end{tabular}
+\caption{Comparison between specifications of the Arduino Due \cite{arduino}, the Intel Edison \cite{intel}, the Raspverry Pi Zero \cite{raspberry}, and the STM32F407VGT6\cite{stm}}
+\label{table:micro}
+\end{table}
+
+\subsection{Storage}
+Storages are important in the development of embedded solutions. The \textbf{Electrical Erasable Programmable Read-Only Memory} (EEPROM) is a non-volatile memory capable of keeping its data after being powered off. Its design was based on the \textbf{Erasable Programmable Read-Only Memory} (EPROM) which required exposure to UV light for erasing its memory. There are two types of EEPROMs, serial and parallel EEPROMs. In a study made by Microship on the difference between serial and parallel EEPROM of 16KB, Tom Tyson from the Memory Product Divisions concluded that the serial EEPROM is \textit{the best option for embedded solutions requiring a small EEPROM footprint, low current and low operating voltage, the ability and ease to programme a byte at a time, and the best price performance non-volatile memory solution available}\cite{serialvsparallel} (pp. 4).
+The NPSC needs to store the user's data and the NPSC default's settings. Having an non-volatile external memory easy to program is of benifit to the NPSC.
+
+\subsection{Wireless technology}
+Different types of wireless technologies allow devices to commnunicate to each other wirelessly. The Institute of Electrical and Electronics Engineers (IEEE) has grouped them in the 802.15 technologies. Among these are the well known Wifi, the cellular machine to machine (M2M), the mesh network using \textbf{ZigBee}, \textbf{Z-wave} \ldots and bluetooth. \\
+The NPSC needs to make of an wireless connection to communicate with a smartphone application. The  appropriateness of the technologies listed bellow for the NPSC must be analysed. 
+Wifi is power efficient, inexpensive; however, the samrtphone communicating with the NPSC will require to be connected to the same wifi. Moreover, a web application might need to be designed as a platform for the NPSC, this will raise security unecessary issues that we would not be able to explore to the time constraint of the project. Cellular machine to machine has one main drawback, its reccuring cost. As its name indicate, this technology is to send informations from a machine to another machine and is not optimal for a graphic design platform\footnote{having a phone or web application that make use of this would be horrible}.  Mesh networks are optimal for interaction of device/machine of the same kind (not a requirement), the NPSC does not fall into that category. Bluettoth is designed for short range communication (the typical distance is arround $10m$\footnote{can be increased by increasing the transmission power})being in almost all smartphones it has been extensively used by embedded systems device such as handset, bluetooth speakers. It has a full duplex communication with synchronous and asynchronous channel. Using bluetooth, the NPSC will not require any network or incur any recurring cost to the user. 
+
+\subsection{Touch screen}
+A touch-screen device can locate the position of a point of contact on its screen. The idea of a using  contact presure of a object in application was initially from Hugh Le Caine with his Electronic Slackbut capable of change the volume of musical notes based on the amount of pressure applied to the keys. Later in 1969, E. A. Johnson created two major touch-screen technologies using a resistive and a capacitive approach. \\
+A resistive touch-screen is made out of many layers among which two are composed of indium-tin oxide (ITO) which is highly resistive and transparent. By applying pressure on one of the layer, the layers come in contact creating a signal that is used to find the location of the point of contact. A capacitive touch-screen make use of the conductivity of the object in contact with the screen to affect the electrostatic field between the ITO layers. \\
+Resistive touch-screen are less complex than capacitive touch-screen, thus cheaper. Additionally, because it relies on pressure, any object whether conductive or not can be used on the screen which is made to be robust. One the other side, resistive touch-screen do not support multi-touch and have poor contrast becaused of the extra layer used to protect the ITO layers.\\
+The NPSC need to have an on-board controller. This controller must be user friendly, with the different features of the NPSC, a touch-screen is desirable over a controller with physical button. A resistive touch screen would add to the robustness of the NPSC as a whole.   
+\begin{figure}[h!]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.4]{resistiveTouch.jpg}
+\subcaption[first caption.]{Resistive touch-screen technology\cite{resistivetouch}.}
+\label{fig:philips1}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.35]{capacitiveTouch.jpg}
+\subcaption[second caption.]{Resistive touch-screen technology \cite{capacitivetouch}.}
+\label{fig:philips2}
+\end{minipage}
+\caption{Touch-screen technologies}
+\label{philips}
+\end{figure}    
+
+\subsection{Neopixels}
+The neopixel is an intelligent programmable light source using a MCU to control a RGB or RGBW. Each colour is capable of producing 255 brightness levels resulting in 16777216 different RGB colours. 
+The light characteristics of the neopixel of choice are presented in \cref{table:neopixel_specs}. The light requirement of the NPSC is the emmission of light of $460nm$ (blue light) at an illuminance of $30lux$ minimum.
+\begin{table}[h!]
+\centering
+\begin{tabular}{cp{6em}p{6em}p{6em}}
+\hline
+\hline
+\textbf{Emitting colour} & \textbf{Wavelength (nm)} & \textbf{Luminous intensity (mcd)} & \textbf{Colour temperature (K)} \\ 
+\hline
+\textbf{Red} & 620-630 & 390-420 & N/A\\
+\textbf{Green} & 515-525 & 660-720 & N/A  \\
+\textbf{Blue} & 460-470 & 180-200 & N/A\\
+\textbf{Natural White} & N/A & N/A & 4000-4500\\
+\hline
+\hline
+\end{tabular}
+\caption{Light specification of the SK6812RGBW neopixels}
+\label{table:neopixel_specs}
+\end{table}
+The illuminance of a light source at a point is given by: 
+\begin{equation}\label{eq:illuminance}
+E_{v(lx)}=\frac{I_{v(cd)}}{d_m^2}
+\end{equation}
+\cref{eq:illuminance} is the illuminance directly in front of the light source. \textbf{Lambert's Cosine Law} says that the illuminance \textit{is directly proportional to the cosine of the angle made by the normal to the illuminated surface with the direction of the incident flux.} \cite{optical}, mathematically it means:
+\begin{equation}\label{eq:lambert}
+E_{v_1}=E_v*\cos(\theta)
+\end{equation}
+\textit{with $\theta$, the angle θ between the direction of the incident light and the surface normal}.\\
+The dimension to be considered for the calculatio of the illuminance of the neopixel ring are shown in \cref{fig:neopixel_ring_dimension}.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.6]{ring.png}
+\caption{Relative position of the neopixel rings}
+\label{fig:neopixel_ring_dimension}
+\end{figure}
+Using the dimension from \cref{fig:neopixel_ring_dimension} and the intensity from \cref{table:neopixel_specs} for the blue light, the total illuminace of the rings at a specific distance can be calculated using the following equation:
+\begin{equation}\label{eq:total_illuminance}
+E_{v_{total}} = N*Ev*(\cos(\theta_1)+\cos(\theta_2)+\cos(\theta_3))
+\end{equation}
+The result of the calculation are tabulated in the \cref{neopixel_illuminance}. The NPSC will not meet the light requirement if the it is placed more than one meter away from the subject.
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccc}
+\hline
+\hline
+\multirow{2}{*}{Distance}  & \multicolumn{2}{c}{Illuminance (lux)} \\  
+ & no angle consideration & with angle \\
+\hline
+30 & 360 & 345.62\\
+40 & 202.5 & 197.82\\
+50 & 129.6 & 127.66\\
+60 & 90 & 89.06\\
+70 & 66.12 & 65.61\\
+80 & 50.63 & 50.32\\
+90 & 40 & 39.81\\
+100 & 32.4 & 32.28\\
+110 & 26.78 & 26.69\\
+\hline
+\hline
+\end{tabular}
+\caption{Illuminance of the neopixel ring for distance ranging from 30cm to 1m}
+\label{table:neopixel_illuminance}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Communication protocols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Communication protocols}
+The NPSC requires different integrated circuits using various communication protocols, below is the a breif on the use of the protocol required.
+
+\subsection{Serial Peripheral Interface (SPI) Bus}
+SPI is a synchronous full duplex serial communication protocol used for short distance communication of electronic devices. With the protocol, one master can communicate to many slaves using a chip select pin (use to select the slave) but a slave can only talk to the master device. SPI uses 4 signals namely, the Master Out Slave In (MOSI), the Master In Slave Out (MISO), the clock (SCK), and the slave select or chip select (SS). Since SPI uses a clock, it does not require the configuration of a baud rate before communication. The main inconvenience with SPI is the number of pin require for a one to one communication, for every additional slave, the master must provide a SS pins which make SPI not the ideal protocol for communicating to multiple slaves devices \cite{spi}. 
+
+\subsection{Universal asynchronous receiver-transmitter (UART)}
+UART is a asynchronous full duplex communication protocol making use of two signals a transmit signal (TX) and a receive signal (RX). With UART, both devices need to agree on a baud-rate for communication, this rate define the number of bytes to be sent and received. The problem with UART is the complexity of the protocol required to ensure synchronous communication and correct transfer of information between device. Although theoretically UART baud-rate is infinite, it is practically limited to 230400 bits per seconds \cite{uart}.   
+
+\subsection{Inter-Integrated Circuit (I2C)}
+I2C is a serial protocol that allows communications fom multiple slaves to multiple masters. It takes a bit of both SPI and UART by being designed for short distance communication and requiring only two pins, namely the data line (SDA) and clock line (SCL). Its clock ranges from $100kHz$ to $400kHz$ and a bytes is sent at a time. Furthermore with the I2C protocol, each slave must have a unique address used by the master for communication \cite{i2c}.  
+
+\subsection{Neopixels serial protocol}
+Each neopixel has a built-in IC controlling the LEDs' intensity based on the data received. The neopixels use a single wire communication protocol. The neopixels can be connected to form a daisy chain (cascade)\cref{fig:neopixel_cascade} allowing the programmation of a serie of neopixels using one signal. Each neopixel requires 24 Bytes (32 Bytes for RGBW LEDs), each bytes is an encoded bit using a Non-Return-to-Zero encoding \cref{fig:neopixel_nrz}. On receiving a sequence of data, the first neopixel in the chain takes the first 24 bytes and passes the rest of the data to the next neopixel in the daisy chain and so for. This operation continues until a \textit{rest signal} is received by the first neopixel \cref{fig:neopixel_cascade}. This is possible because each neopixel is capable of reshaping the incoming signal preserving the integrity its integrity of continous transmission.
+
+\begin{figure}[h!]
+\centering
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.4]{neopixel_nrz.png}
+\subcaption[first caption.]{Non-return-to-zero encoding of a single bit in the neopixels programming protocol}
+\label{fig:neopixel_nrz}
+\end{minipage}
+\begin{minipage}[b]{0.45\textwidth}
+\includegraphics[scale=0.4]{neopixel_cascade.png}
+\subcaption[second caption.]{Neopixels connected in daisy chain (cascade).}
+\label{fig:neopixel_cascade}
+\end{minipage}
+\begin{minipage}[b]{\textwidth}
+\includegraphics[scale=0.45]{neopixel_serial.png}
+\subcaption[third caption.]{As the first neopixel receives a stream of multiple 8 Bytes chunck of data, it takes the first 8 Bytes from the stream and transmit the rest to the next neopixel in the cascade. A rest signal indicates where the stream of data ends.}
+\label{fig:neopixel_cascade}
+\end{minipage}
+\caption{Illustration of the neopixels serial interface}
+\label{fig:neopixel_protocol}
+\end{figure}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: PCB Board Design
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{PCB Board Design}
+PCBs are almost present in every electronic circuit as they hold all the components together and implement the electricla connections in a elegant fashion. Designing a PCB is a process easily prone to errors, therefore a good PCB design requires the implementation of the design steps. \Cref{fig:pcb_design_flow} illustrates an examples of the ideal pcb design steps. In making the NPSC PCBs these steps give an engineering approach that can be elaborated further based on the PCBs requirement. For example, the designer might question what is the best placement for certain component and thus be referred to some PCBs design standards such as the IPC2221.\\
+One important design requirement (need) for the NPSC light requirement is its theoretical current ($10A$) drawn at full pixel brightness. The board-level diagram of the NPSC ring (\textit{qoute pcb ring from design section}) of the neopixel board should therefore be designed so that the track are wide enought to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{pcb_design_flow.png}
+\caption{Ideal PCB design flow, starting from the need, followed by the design, implementation and testing}
+\label{fig:pcb_design_flow}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Software
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Programming Languages}
+Choosing the right programming language for software development is a crutial step, expecially in embedded system design as carefull manipulation of memory is required. The languages below are the ones chosen for the development of NPSC. 
+\subsection{C}
+\textit{C} is a mid-level programming language \footnote{has the advantages of both ligh and low level language} providing the ability to get close to the hardware while keeping some abstract layers for programming \cite{c_programming}.It has an easy and straight forward syntax compared to languages such as Java, C has accumulated a lot of support and has lots of functions and documentation. Although C does not support Object Orientated Programming, it is a Procedure Orientated Language (POL) which means it is designed to create programs that follow an algorithm. This latter feature of C make it the favourite programming language for Embedded System. 
+\subsection{Java}
+Java is one of the most popular programming languages. It is an Object-Orientated programming language unlike C, enabling program to be more abstract and modular \cite{java_programming}. Java is multithreaded, this feature is essential in the development of smartphone applications as they are inherently multithreaded. In Andrioid application development, Java is still the most common and has a great communities and great tutorial decreasing development time. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Software Tools and Libraries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Software Tools and Libraries}
+Developing an embedded system software can be quite frustrating, for this reason tools with decent debugging features and programming interface should be chosen to reduce development to its minimal. 
+
+\subsection{Atollic TrueSTUDIO for ARM}
+Atollic TrueSTUDIO is an IDE based on Eclipse. It comes with the GCC toolchain for ARM and with debugging features beuilt on top of GDB. It has more advanced features compared to Eclipse in the development embedded system application. Its debugging features include the use of any debug probe compatible with the GDB-server, P\&E Micro, SEGGER J-Link / J-Trace, ST-Link, OpenOCD are all supported by Atollic TrueSTUDIO. It supports debugging of single and multi core devices and allows real time view of memory mapping, peripheral registers, advanced visualisation of variable and complex break point, CPU fault analysis and many more. Another important debugging feature of Atollic TrueSTUDIO is the instruction tracing and system analysis real time event analysis of Real Time Operating System \cite{atollic}.
+
+\subsection{Nextion IDE}
+Nextion IDE is the official IDE designed for programming any Nextion HMI touch-screen. The IDE allows the designed and programmation of a GUI interface and the definition of serial commands to be sent to a MCU. Nextion IDE is designed to reduce significantly development time of touch-screen interface in an embedded system project \cite{nextion}.
+
+\subsection{Android Studio}
+Android Sudio is the official IDE designed for reducing development time of android applications and improve their quality. It uses advanced code completion, refactoring, and code analysis method. With its variety of device simulations, Android Studio allows the developer to test the applicatio on various devices and android version \cite{android}.
+
