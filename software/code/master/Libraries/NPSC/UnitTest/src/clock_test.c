@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    rtc_test.c
+  * @file    clock_test.c
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    24-March-2017
   * @brief	 This file contains the unit test implementation for the
-  * 			rtc
+  * 			internal clock
   ******************************************************************************
   * @attention
   *
@@ -23,7 +23,7 @@
 /** @addtogroup UnitTest
  *  @{
  */
-/** @defgroup rtc_test
+/** @defgroup clock_test
   * @brief
   * @{
   */

@@ -43,7 +43,7 @@
 #define RTC_AF					GPIO_AF_I2C1
 #define RTC_I2CX				I2C1
 
-
+#define RTC_ADDRESS				0x68
 #define RTC_ADDRESS_SECONDS		0x00
 #define RTC_ADDRESS_MINUTES 	0x01
 #define RTC_ADDRESS_HOURS		0x02
@@ -85,7 +85,7 @@ void rtc_init(void);
 /**	@defgroup Rtc_Trans RTC transmission functions
  * @{
  */
-void rtc_transmission_start(uint8_t address, uint8_t direction);
+void rtc_transmission_start(uint8_t direction);
 void rtc_transmission_write(uint8_t data);
 uint8_t rtc_transmission_read_ack(void);
 uint8_t rtc_transmission_read_nack(void);
@@ -107,7 +107,7 @@ uint8_t rtc_read(uint8_t address);
  * @note	Refer to DS1307 datasheet table 2
  * @{
  */
-
+void rtc_get(uint8_t);
 uint8_t rtc_get_seconds(void);
 uint8_t rtc_get_minutes(void);
 uint8_t rtc_get_hours(void);

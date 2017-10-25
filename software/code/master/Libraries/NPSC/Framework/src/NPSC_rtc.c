@@ -61,8 +61,8 @@ void rtc_init(void){
 	GPIO_InitTypeDef GPIO_InitStruct;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStruct.GPIO_OType = GPIO_OType_OD;
-	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_2MHz;
+	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_100MHz;
 	GPIO_InitStruct.GPIO_Pin = RTC_PIN_SCL | RTC_PIN_SDA;
 	GPIO_Init(RTC_GPIOX, &GPIO_InitStruct);
 
@@ -71,11 +71,11 @@ void rtc_init(void){
 
 	/* I2C Configuration */
 	I2C_InitTypeDef I2C_InitStruct;
-	I2C_InitStruct.I2C_ClockSpeed = 100000; // 100kHz
+	I2C_InitStruct.I2C_ClockSpeed = 50000; // 50kHz
 	I2C_InitStruct.I2C_Mode = I2C_Mode_I2C;
 	I2C_InitStruct.I2C_DutyCycle = I2C_DutyCycle_2;
 	I2C_InitStruct.I2C_OwnAddress1 = 0x00;
-	I2C_InitStruct.I2C_Ack = I2C_Ack_Enable;
+	I2C_InitStruct.I2C_Ack = I2C_Ack_Disable;
 	I2C_InitStruct.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit;
 	I2C_DeInit(RTC_I2CX);
 	I2C_Init(RTC_I2CX, &I2C_InitStruct);
@@ -96,7 +96,7 @@ void rtc_init(void){
 /**
  * @brief	Start the I2C communication
  */
-void rtc_transmission_start(uint8_t address, uint8_t direction){
+void rtc_transmission_start(uint8_t direction){
 	// wait until I2C1 is not busy anymore
 	while(I2C_GetFlagStatus(RTC_I2CX, I2C_FLAG_BUSY));
 	// Send I2C1 START condition
@@ -104,7 +104,7 @@ void rtc_transmission_start(uint8_t address, uint8_t direction){
 	// wait for I2C1 EV5 --> Slave has acknowledged start condition
 	while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_MODE_SELECT));
 	// Send slave Address for write
-	I2C_Send7bitAddress(RTC_I2CX, address, direction);
+	I2C_Send7bitAddress(RTC_I2CX, RTC_ADDRESS<<1, direction);//address, direction);
 	/* wait for I2C1 EV6, check if
 	 * either Slave has acknowledged Master transmitter or
 	 * Master receiver mode, depending on the transmission
@@ -116,6 +116,8 @@ void rtc_transmission_start(uint8_t address, uint8_t direction){
 	else if(direction == I2C_Direction_Receiver){
 		while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
 	}
+	/*I2C_SendData(RTC_I2CX,address);
+	while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_BYTE_TRANSMITTED));*/
 }
 
 /**
@@ -186,7 +188,9 @@ void rtc_transmission_stop(){
  * @param 	data
  */
 void rtc_write(uint8_t address, uint8_t data){
-	rtc_transmission_start(address<<1,I2C_Direction_Transmitter);
+	rtc_transmission_start(I2C_Direction_Transmitter);
+	I2C_SendData(RTC_I2CX,address);
+	while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_BYTE_TRANSMITTED));
 	rtc_transmission_write(data);
 	rtc_transmission_stop();
 }
@@ -196,8 +200,16 @@ void rtc_write(uint8_t address, uint8_t data){
  * @retval	data: byte of data from slave at the given address
  */
 uint8_t rtc_read(uint8_t address){
-	rtc_transmission_start(address<<1,I2C_Direction_Receiver);
+	rtc_transmission_start(I2C_Direction_Receiver);
 	return rtc_transmission_read_nack();
+}
+
+void rtc_get(uint8_t number){
+	rtc_transmission_start(I2C_Direction_Receiver);
+	int i;
+	for(i=0; i<number-1; i++)
+		rtc_transmission_read_ack();
+	rtc_transmission_read_nack();
 }
 /**
  * @}
@@ -218,7 +230,7 @@ uint8_t rtc_read(uint8_t address){
 uint8_t rtc_get_seconds(){
 	uint8_t data = rtc_read(RTC_ADDRESS_SECONDS);
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (RTC_MASK_HIGH & data);
+	uint8_t tens = (RTC_MASK_HIGH & data)>>4;
 	uint8_t seconds = tens*10+units;
 	return seconds;
 }
@@ -229,7 +241,7 @@ uint8_t rtc_get_seconds(){
 uint8_t rtc_get_minutes(){
 	uint8_t data = rtc_read(RTC_ADDRESS_MINUTES);
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (RTC_MASK_HIGH & data);
+	uint8_t tens = (RTC_MASK_HIGH & data)>>4;
 	uint8_t minutes= tens*10+units;
 	return minutes;
 }
@@ -241,7 +253,7 @@ uint8_t rtc_get_hours(){
 	uint8_t data = rtc_read(RTC_ADDRESS_HOURS);
 	// TODO extract the hours from data
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (0b00110000 & data);
+	uint8_t tens = (0b00110000 & data)>>4;
 	rtc_am_pm = (0b0100000 & data);
 	uint8_t hours = tens*10+units;
 	return hours;
@@ -262,7 +274,7 @@ uint8_t rtc_get_day(){
 uint8_t rtc_get_date(){
 	uint8_t data = rtc_read(RTC_ADDRESS_DATE);
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (RTC_MASK_HIGH & data);
+	uint8_t tens = (RTC_MASK_HIGH & data)>>4;
 	uint8_t date = tens*10+units;
 	return date;
 }
@@ -273,7 +285,7 @@ uint8_t rtc_get_date(){
 uint8_t rtc_get_month(){
 	uint8_t data = rtc_read(RTC_ADDRESS_MONTH);
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (RTC_MASK_HIGH & data);
+	uint8_t tens = (RTC_MASK_HIGH & data)>>4;
 	uint8_t month = tens*10+units;
 	return month;
 }
@@ -284,7 +296,7 @@ uint8_t rtc_get_month(){
 uint8_t rtc_get_year(){
 	uint8_t data = rtc_read(RTC_ADDRESS_YEAR);
 	uint8_t units = (RTC_MASK_LOW & data);
-	uint8_t tens = (RTC_MASK_HIGH & data);
+	uint8_t tens = (RTC_MASK_HIGH & data)>>4;
 	uint8_t year = tens*10+units;
 	return year;
 }
@@ -318,6 +330,8 @@ RTC_TimeTypeDef rtc_get_theTime(){
  * @return	RTC_Clock_TypeDef
  */
 RTC_ClockTypeDef rtc_get_clock(){
+	// set pointer to the end of the RAM
+	rtc_write(RTC_ADDRESS_RAM_END,0x00);
 	RTC_ClockTypeDef RTC_ClockStruct;
 	RTC_ClockStruct.time.RTC_Seconds = rtc_get_seconds();
 	RTC_ClockStruct.time.RTC_Minutes = rtc_get_minutes();

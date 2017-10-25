@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    clock_test.h
+  * @file    rtc_test.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    24-March-2017
-  * @brief   This file contains template of unit tests for the
-  * 			stm32f4 internal clock
+  * @date    25-Oct-2017
+  * @brief   This file contains template of unit tests for the external rtc
   ******************************************************************************
   * @attention
   *
@@ -15,12 +14,12 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_UNITTEST_INC_TEST_CLOCK_H_
-#define NPSC_UNITTEST_INC_TEST_CLOCK_H_
+#ifndef NPSC_UNITTEST_INC_TEST_RTC_H_
+#define NPSC_UNITTEST_INC_TEST_RTC_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "unitTest.h"
-#include "NPSC_clock.h"
+#include "NPSC_rtc.h"
 
 
 /** @addtogroup NPSC
@@ -29,7 +28,7 @@
 /** @addtogroup UnitTest
  *  @
  */
-/** @defgroup clock_test
+/** @defgroup rtc_test
   * @{
   */
 
@@ -38,11 +37,9 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-bool test_clock_date(void);
-bool test_clock_time(void);
-bool test_clock_alarm(void);
+bool test_rtc_clock(void);
 
-#endif /* NPSC_UNITTEST_INC_TEST_CLOCK_H_ */
+#endif /* NPSC_UNITTEST_INC_TEST_RTC_H_ */
 
 /**
  * 	@}

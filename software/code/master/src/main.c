@@ -29,7 +29,7 @@ SOFTWARE.
 
 /* Includes */
 #include "NPSC_configuration.h"
-
+#include "rtc_test.h"
 //#include "stm32f4xx.h"
 /* Private macro */
 /* Private variables */
@@ -45,9 +45,9 @@ SOFTWARE.
 */
 int main(void)
 {
-
   NPSC_init();
-  while (1)
+  int a = test_rtc_clock();
+   while (1)
   {
 	  bluetooth_buffer_update();
 	  nextion_buffer_update();
