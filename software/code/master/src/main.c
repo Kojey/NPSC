@@ -51,8 +51,6 @@ int main(void)
   {
 	  bluetooth_buffer_update();
 	  nextion_buffer_update();
-	  InstructionTypeDef instr = InstructionQueue_dequeue(instruction_queue);
-	  int a = 0;
   }
 }
 

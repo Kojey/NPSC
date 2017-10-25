@@ -43,6 +43,7 @@
 
 #define INSTRUCTION_QUEUE_SIZE			4
 
+#define LABEL_SIZE						20
 /* Exported types ------------------------------------------------------------*/
 // boolean true false definition
 typedef enum {false = 0, true = !false} bool;
@@ -54,12 +55,44 @@ typedef enum {
 	instruction_nextion_lock = 2
 } Instruction_lock;
 
+// Ring tone
+typedef enum {
+	none = 0,
+	ring1 = 1,
+	ring2 = 2
+} Ringtone;
+
+// Ring tone
+typedef enum {
+	never = 0,
+	daily = 1,
+	weekly = 2
+} Alarm_repeat;
+
+// Pattern
+typedef enum {
+	Sunrise = 0,
+	Simple = 1,
+	Hour_Minute_Second = 2,
+	Disco = 3,
+	Crazy = 4
+} Pattern;
+
+
 // Clock type definition
-typedef struct
-{
+typedef struct {
 	RTC_TimeTypeDef time;
 	RTC_DateTypeDef date;
-}RTC_ClockTypeDef;
+} RTC_ClockTypeDef;
+
+// Alarm type definition
+typedef struct {
+	char label[LABEL_SIZE];
+	Alarm_repeat repeat;
+	Ringtone ringtone;
+	Pattern patern;
+	RTC_AlarmTypeDef alarm;
+} AlarmTypeDef;
 
 // Instruction type definition
 typedef struct {
