@@ -38,6 +38,13 @@ uint8_t DMA_RX_Buffer[DMA_RX_BUFFER_SIZE];
 uint8_t INSTRUCTION_BUFFER[INSTRUCTION_SIZE] = {0};
 
 Instruction_lock instruction_lock_owner = instruction_no_lock;
+
+bool nextion_ack = false;
+
+char* nextion_instr_int;
+char* nextion_instr_string;
+/* all instruction end with nextion_instr_end*/
+char nextion_instr_end[3]="ÿÿÿ"; // 0xFF 0xFF 0xFF
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -46,6 +53,9 @@ Instruction_lock instruction_lock_owner = instruction_no_lock;
 void parameters_init(void){
 	// Initialise the instruction queue
 	instruction_queue = InstructionQueue_createQueue((unsigned)INSTRUCTION_QUEUE_SIZE);
+
+	nextion_instr_int = malloc(NEXTION_INT);
+	nextion_instr_string = malloc(NEXTION_STRING);
 }
 /**
  * @brief	Find max between a, b, and c
@@ -113,8 +123,6 @@ void InstructionQueue_enqueue(struct InstructionQueue* queue, InstructionTypeDef
  * @brief	Remove an element to the queue
  */
 InstructionTypeDef InstructionQueue_dequeue(struct InstructionQueue* queue){
-    if (InstructionQueue_isEmpty(queue))
-        return;
     InstructionTypeDef item = queue->array[queue->front];
     queue->front = (queue->front + 1)%queue->capacity;
     queue->size = queue->size - 1;

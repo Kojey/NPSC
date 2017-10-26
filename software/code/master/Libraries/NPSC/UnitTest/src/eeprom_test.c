@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../../../NPSC/UnitTest/inc/eeprom_test.h"
+#include "eeprom_test.h"
 
 /** @addtogroup NPSC
   * @{

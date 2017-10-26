@@ -38,12 +38,15 @@
   */
 
 /* Exported constants --------------------------------------------------------*/
-#define INSTRUCTION_SIZE            	2
-#define DMA_RX_BUFFER_SIZE          	4
+#define INSTRUCTION_SIZE            	8
+#define DMA_RX_BUFFER_SIZE          	8
 
 #define INSTRUCTION_QUEUE_SIZE			4
 
 #define LABEL_SIZE						20
+
+#define NEXTION_INT						4
+#define NEXTION_STRING					30
 /* Exported types ------------------------------------------------------------*/
 // boolean true false definition
 typedef enum {false = 0, true = !false} bool;
@@ -116,6 +119,11 @@ extern Instruction_lock instruction_lock_owner;
 
 struct InstructionQueue* instruction_queue;
 
+extern bool nextion_ack;
+
+extern char* nextion_instr_int;
+extern char* nextion_instr_string;
+extern char nextion_instr_end[3];
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 void parameters_init(void);

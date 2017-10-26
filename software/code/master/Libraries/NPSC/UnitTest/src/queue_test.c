@@ -35,14 +35,14 @@
 int capacity = 3;
 struct InstructionQueue* my_queue;
 /* Private functions ---------------------------------------------------------*/
-bool queue_create(void){
+bool test_queue_create(void){
 	my_queue = InstructionQueue_createQueue(capacity);
 	return assertEqual(my_queue->capacity,capacity)
 			&& assertEqual(my_queue->size, 0)
 			&& assertEqual(my_queue->front, 0)
 			&& assertEqual(my_queue->rear, capacity-1);
 }
-bool queue_enque(void){
+bool test_queue_enque(void){
 	InstructionTypeDef my_instruction;
 	my_instruction.excecuted = false;
 	int i;
@@ -57,7 +57,7 @@ bool queue_enque(void){
 			&& same_instruction
 			&& assertEqual(my_queue->size,1);
 }
-bool queue_dequeue(void){
+bool test_queue_dequeue(void){
 	InstructionQueue_dequeue(my_queue);
 	return assertNotEqual(my_queue->size, 1);
 }

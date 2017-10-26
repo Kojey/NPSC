@@ -128,19 +128,22 @@ void nextion_buffer_update(void){
 			USART2->DR = INSTRUCTION_BUFFER[nextion_read++];   /* Start byte transfer */
 			if(instruction_lock_owner==instruction_no_lock)instruction_lock_owner=instruction_nextion_lock;
 			while (!(USART2->SR & USART_SR_TXE));   /* Wait till finished */
-			if (nextion_read == INSTRUCTION_SIZE) {     /* Check buffer overflow */
+			if (nextion_read == INSTRUCTION_SIZE || nextion_ack) {     /* Check buffer overflow */
 				nextion_read = 0;
 				nextion_write = 0;
-				// create new instruction
-				InstructionTypeDef newInstruction;
-				int i;
-				for(i=0; i<INSTRUCTION_SIZE; i++)
-					newInstruction.instrution[i]=INSTRUCTION_BUFFER[i];
-				newInstruction.excecuted=false;
-				// add it to the queue
-				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+				if(!nextion_ack){
+					// create new instruction
+					InstructionTypeDef newInstruction;
+					int i;
+					for(i=0; i<INSTRUCTION_SIZE; i++)
+						newInstruction.instrution[i]=INSTRUCTION_BUFFER[i];
+					newInstruction.excecuted=false;
+					// add it to the queue
+					InstructionQueue_enqueue(instruction_queue,&newInstruction);
+				}
 				// release the lock
 				instruction_lock_owner = instruction_no_lock;
+				nextion_ack = false;
 			}
     	}
     }

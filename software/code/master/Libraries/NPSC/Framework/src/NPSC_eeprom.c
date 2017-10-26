@@ -93,8 +93,8 @@ void eeprom_init(void){
  * @}
  */
 
-/**	@defgroup Rtc_Trans Transmission functions
- * 	@brief	Rtc data transmission functions
+/**	@defgroup Eeprom_Trans Transmission functions
+ * 	@brief	Eeprom data transmission functions
  *
  * @{
  */
