@@ -454,7 +454,7 @@ ErrorStatus rtc_set_clock(RTC_ClockTypeDef * clock){
 			!assertInRange(clock->time.RTC_Hours,0,23) ||
 			!assertInRange(clock->date.RTC_WeekDay,1,7) ||
 			!assertInRange(clock->date.RTC_Date,1,31) ||
-			!assertInRange(clock->date.RTC_Month,1,12) ||
+			!assertInRange(clock->date.RTC_Month,1,0x12) ||
 			!assertInRange(clock->date.RTC_Year,0,99))
 		return ERROR;
 	rtc_set_seconds(clock->time.RTC_Seconds);
@@ -471,6 +471,46 @@ ErrorStatus rtc_set_clock(RTC_ClockTypeDef * clock){
  * @}
  */
 
+
+/**	@defgroup Rtc_String
+ * 	@brief	Get string from int month or weekday
+ * @{
+ */
+char * rtc_get_day_string(uint8_t day){
+	switch (day) {
+		case 0x01:	return "Monday"; break;
+		case 0x02:	return "Tuesday"; break;
+		case 0x03:	return "Wednesday";	break;
+		case 0x04:	return "Thursday"; break;
+		case 0x05: return "Friday"; break;
+		case 0x06: return "Saturday"; break;
+		case 0x07: return "Sunday"; break;
+		default: return "Error"; break;
+	}
+}
+/**
+ * @brief	Return the string equivalent of the month
+ */
+char * rtc_get_month_string(uint8_t month){
+	switch (month) {
+		case 1:	return "January"; break;
+		case 2:	return "February"; break;
+		case 3:	return "March";	break;
+		case 4:	return "April"; break;
+		case 5: return "May"; break;
+		case 6: return "June"; break;
+		case 7: return "July"; break;
+		case 8:	return "August"; break;
+		case 9:	return "September"; break;
+		case 10:return "October";	break;
+		case 11:return "November"; break;
+		case 12:return "December"; break;
+		default:return "Error"; break;
+	}
+}
+/**
+ * @}
+ */
 
 
 

@@ -132,7 +132,8 @@ ErrorStatus rtc_set_clock(RTC_ClockTypeDef *);
  * @}
  */
 
-
+char * rtc_get_day_string(uint8_t);
+char * rtc_get_month_string(uint8_t);
 
 #endif /* NPSC_INC_NPSC_RTC_H_ */
 

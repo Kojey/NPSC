@@ -42,7 +42,6 @@
  */
 void instruction_execute(void){
 	RTC_ClockTypeDef clock;
-	char b[2]="as";
 	while(instruction_queue->size){
 		// fecth instruction
 		InstructionTypeDef instruction = InstructionQueue_dequeue(instruction_queue);
@@ -63,9 +62,14 @@ void instruction_execute(void){
 			break;
 		case 0x01:
 			// get clock
-			// clock = rtc_get_clock()
-			instruction_nextion_start();
-			instruction_nextion_send_str("b0.txt=","Nice");
+			clock = rtc_get_clock();
+ 			instruction_nextion_start();
+			instruction_nextion_send_int("home.n0.val=",clock.time.RTC_Hours);
+			instruction_nextion_send_int("home.n1.val=",clock.time.RTC_Minutes);
+			instruction_nextion_send_str("home.t1.txt=", rtc_get_day_string(clock.date.RTC_WeekDay) );
+			instruction_nextion_send_int("home.n3.val=",clock.date.RTC_Date);
+			instruction_nextion_send_str("home.t2.txt=", rtc_get_month_string(clock.date.RTC_Month) );
+			instruction_nextion_send_int("home.n4.val=",2000+clock.date.RTC_Year);
 			instruction_nextion_stop();
   			break;
 		case 0x02:
@@ -112,7 +116,7 @@ void instruction_nextion_stop(void){
  * @param	instruction
  * @param	value
  */
-void instruction_nextion_send_int(char* instruction ,uint8_t value){
+void instruction_nextion_send_int(char* instruction ,int value){
 	// clear nextion_instr_string
 	memset(nextion_instr_string,0,strlen(nextion_instr_string));
 	// append instruction

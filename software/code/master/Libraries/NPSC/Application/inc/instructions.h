@@ -43,7 +43,7 @@
 void instruction_execute(void);
 void instruction_nextion_start(void);
 void instruction_nextion_stop(void);
-void instruction_nextion_send_int(char *,uint8_t);
+void instruction_nextion_send_int(char *,int);
 void instruction_nextion_send_str(char *,char *);
 #endif /* NPSC_APPLICATION_INC_INSTRUCTIONS_H_ */
 

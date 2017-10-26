@@ -19,6 +19,8 @@
 int main(void)
 {
 	NPSC_init();
+	//bool test = test_rtc_clock();
+
 	while(1)
 	{
 		nextion_buffer_update();
