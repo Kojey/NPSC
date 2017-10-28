@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "NPSC_configuration.h"
+#include <framework.h>
 
 /** @addtogroup NPSC
   * @{

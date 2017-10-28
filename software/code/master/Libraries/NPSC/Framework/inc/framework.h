@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPSC_configuration.h
+  * @file    framework.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    17-February-2017
@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_FRAMEWORK_CONFIGURATION_H_
-#define NPSC_FRAMEWORK_CONFIGURATION_H_
+#ifndef NPSC_FRAMEWORK_FRAMEWORK_H_
+#define NPSC_FRAMEWORK_FRAMEWORK_H_
 
 
 /* Includes ------------------------------------------------------------------*/
@@ -48,7 +48,7 @@
 void NPSC_init(void);
 void Error_Handler(void);
 
-#endif /* NPSC_FRAMEWORK_CONFIGURATION_H_ */
+#endif /* NPSC_FRAMEWORK_FRAMEWORK_H_ */
 
 /**
  * @}
