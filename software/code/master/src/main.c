@@ -1,8 +1,8 @@
 
 /* Includes */
-#include "NPSC_configuration.h"
-#include "instructions.h"
-#include "test_suite.h"
+#include <framework.h>
+#include <application.h>
+#include <test.h>
 
 /* Private macro */
 /* Private variables */
@@ -19,11 +19,12 @@
 int main(void)
 {
 	NPSC_init();
-	//bool test = test_rtc_clock();
+	//test_result(test_queue_create());
+
 
 	while(1)
 	{
-		nextion_buffer_update();
+		nextion_bufferUpdate();
 		instruction_execute();
 	}
 }

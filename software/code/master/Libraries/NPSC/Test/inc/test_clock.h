@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    framework.h
+  * @file    clock_test.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    17-February-2017
-  * @brief   This file contains all the main initialization prototypes used by
-  * 			the NPC
+  * @date    24-March-2017
+  * @brief   This file contains template of unit tests for the
+  * 			stm32f4 internal clock
   ******************************************************************************
   * @attention
   *
@@ -15,45 +15,41 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_FRAMEWORK_FRAMEWORK_H_
-#define NPSC_FRAMEWORK_FRAMEWORK_H_
-
+#ifndef NPSC_TEST_INC_TEST_CLOCK_H_
+#define NPSC_TEST_INC_TEST_CLOCK_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "audio.h"
-#include "bluetooth.h"
+#include "assertion.h"
 #include "clock.h"
-#include "eeprom.h"
-#include "neopixel.h"
-#include "nextion.h"
-#include "rtc.h"
-#include "temperature.h"
+
 
 /** @addtogroup NPSC
   * @{
   */
-/** @addtogroup Framework
+/** @addtogroup UnitTest
+ *  @
+ */
+/** @defgroup clock_test
   * @{
   */
-/** @addtogroup Configuration
-  * @{
-  */
-
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-void NPSC_init(void);
-void Error_Handler(void);
+bool test_clock_date(void);
+bool test_clock_time(void);
+bool test_clock_alarm(void);
 
-#endif /* NPSC_FRAMEWORK_FRAMEWORK_H_ */
+#endif /* NPSC_TEST_INC_TEST_CLOCK_H_ */
 
 /**
- * @}
+ * 	@}
  */
 /**
  * @}
  */
-/**@} */
+/**
+ * @}
+ */

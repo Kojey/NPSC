@@ -1,11 +1,10 @@
 /**
   ******************************************************************************
-  * @file    framework.h
+  * @file    test_queue.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    17-February-2017
-  * @brief   This file contains all the main initialization prototypes used by
-  * 			the NPC
+  * @date    23-Oct-2017
+  * @brief   This file contains template of unit tests for the queue
   ******************************************************************************
   * @attention
   *
@@ -15,45 +14,42 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_FRAMEWORK_FRAMEWORK_H_
-#define NPSC_FRAMEWORK_FRAMEWORK_H_
-
+#ifndef NPSC_TEST_INC_TEST_QUEUE_H_
+#define NPSC_TEST_INC_TEST_QUEUE_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "audio.h"
-#include "bluetooth.h"
-#include "clock.h"
-#include "eeprom.h"
-#include "neopixel.h"
-#include "nextion.h"
-#include "rtc.h"
-#include "temperature.h"
+#include "assertion.h"
+#include "utils.h"
+
 
 /** @addtogroup NPSC
   * @{
   */
-/** @addtogroup Framework
+/** @addtogroup UnitTest
+ *  @
+ */
+/** @defgroup queue_test
   * @{
   */
-/** @addtogroup Configuration
-  * @{
-  */
-
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-void NPSC_init(void);
-void Error_Handler(void);
 
-#endif /* NPSC_FRAMEWORK_FRAMEWORK_H_ */
+bool test_queue_create(void);
+bool test_queue_enque(void);
+bool test_queue_dequeue(void);
+
+#endif /* NPSC_TEST_INC_TEST_QUEUE_H_ */
 
 /**
- * @}
+ * 	@}
  */
 /**
  * @}
  */
-/**@} */
+/**
+ * @}
+ */

@@ -23,8 +23,8 @@
 #define NPSC_APPLICATION_CLOCK_MANAGEMENT_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "NPSC_clock.h"
-#include "NPSC_eeprom.h"
+#include "clock.h"
+#include "eeprom.h"
 
 /** @addtogroup NPSC
   * @{

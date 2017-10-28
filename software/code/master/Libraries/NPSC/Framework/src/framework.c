@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPSC_configuration.c
+  * @file    framework.c
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    17-February-2017
@@ -23,8 +23,8 @@
 /** @addtogroup Framework
   * @{
   */
-/** @defgroup Configuration
-  * @brief Configuration driver modules
+/** @defgroup Framework
+  * @brief Framework driver modules
   * @{
   */
 

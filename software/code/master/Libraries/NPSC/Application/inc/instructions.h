@@ -20,9 +20,9 @@
 #define NPSC_APPLICATION_INSTRUCTIONS_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "NPSC_nextion.h"
-#include "NPSC_bluetooth.h"
-#include "NPSC_rtc.h"
+#include "bluetooth.h"
+#include "nextion.h"
+#include "rtc.h"
 
 /** @addtogroup NPSC
   * @{

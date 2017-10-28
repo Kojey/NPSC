@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    framework.h
+  * @file    assertion.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    17-February-2017
-  * @brief   This file contains all the main initialization prototypes used by
-  * 			the NPC
+  * @date    21-March-2017
+  * @brief   This file contains all the configuration prototypes used by the
+  * 			unit testing
   ******************************************************************************
   * @attention
   *
@@ -15,45 +15,52 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_FRAMEWORK_FRAMEWORK_H_
-#define NPSC_FRAMEWORK_FRAMEWORK_H_
-
+#ifndef NPSC_TEST_INC_ASSERTION_H_
+#define NPSC_TEST_INC_ASSERTION_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "audio.h"
-#include "bluetooth.h"
-#include "clock.h"
-#include "eeprom.h"
-#include "neopixel.h"
-#include "nextion.h"
-#include "rtc.h"
-#include "temperature.h"
+#include "utils.h"
 
 /** @addtogroup NPSC
   * @{
   */
-/** @addtogroup Framework
+/** @addtogroup UnitTest
+ *  @
+ */
+/** @addtogroup unitTest
   * @{
   */
-/** @addtogroup Configuration
-  * @{
-  */
-
 
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-void NPSC_init(void);
-void Error_Handler(void);
-
-#endif /* NPSC_FRAMEWORK_FRAMEWORK_H_ */
-
+/* Assert ******************************************************************/
+/**	@defgroup unitTest_Assert
+ * 	@{
+ */
+bool assertTrue(bool condition);
+bool assertFalse(bool condition);
+bool assertEqual(int a, int b);
+bool assertNotEqual(int a, int b);
+bool assertGreater(int a, int b);
+bool assertLess(int a, int b);
+bool assertGreaterOrEqual(int a, int b);
+bool assertLessOrEqual(int a, int b);
+bool assertInRange(int number, int min, int max);
 /**
  * @}
+ */
+
+#endif /* NPSC_TEST_INC_ASSERTION_H_ */
+
+/**
+ * 	@}
  */
 /**
  * @}
  */
-/**@} */
+/**
+ * @}
+ */
