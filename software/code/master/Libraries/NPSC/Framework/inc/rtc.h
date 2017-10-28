@@ -133,7 +133,7 @@ ErrorStatus rtc_setClockStruct(RTC_ClockTypeDef *);
  */
 
 char * rtc_dayToString(uint8_t);
-char * rtc_MonthToString(uint8_t);
+char * rtc_monthToString(uint8_t);
 uint32_t rtc_weekdaySelTo32Bits(uint8_t);
 uint32_t rtc_alarmMaskTo32Bits(uint8_t);
 #endif /* NPSC_FRAMEWORK_RTC_H_ */

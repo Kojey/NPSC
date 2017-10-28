@@ -36,7 +36,7 @@
 
 /* Exported constants --------------------------------------------------------*/
 
-#define ALARM_LABEL_SIZE			EEPROM_PAGE_LENGTH
+#define ALARM_LABEL_SIZE			10
 #define ALARM_SIZE					60	// size of AlarmTypeDef
 
 /* Exported variables --------------------------------------------------------*/
@@ -70,6 +70,10 @@ uint16_t alarm_patternAddress(uint8_t);
 uint16_t alarm_alarmAddress(uint8_t);
 uint16_t alarm_labelAddress(uint8_t);
 
+
+char * alarm_repeatToString(Alarm_repeat);
+char * alarm_ringToneToString(Ringtone);
+char * alarm_patternToString(Pattern);
 #endif /* NPSC_APPLICATION_ALARM_H_ */
 
 /**

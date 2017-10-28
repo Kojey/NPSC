@@ -492,7 +492,7 @@ char * rtc_dayToString(uint8_t day){
 /**
  * @brief	Return the string equivalent of the month
  */
-char * rtc_MonthToString(uint8_t month){
+char * rtc_monthToString(uint8_t month){
 	switch (month) {
 		case 1:	return "January"; break;
 		case 2:	return "February"; break;

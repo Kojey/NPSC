@@ -107,6 +107,39 @@ uint16_t alarm_labelAddress(uint8_t id){
 
 
 /**
+ * @brief
+ */
+char * alarm_repeatToString(Alarm_repeat repeat){
+	switch (repeat) {
+		case Never:return "Never";break;
+		case Daily:return "Daily";break;
+		case Weekly:return "Weekly";break;
+		default:return "Error";break;
+	}
+}
+
+char * alarm_ringToneToString(Ringtone ringtone){
+	switch (ringtone) {
+		case tone1:return "tone1";break;
+		case tone2:return "tone2";break;
+		case tone3:return "tone3";break;
+		default:return "Error";	break;
+	}
+}
+
+char * alarm_patternToString(Pattern pattern){
+	switch (pattern) {
+		case pattern1:return "pattern1";break;
+		case pattern2:return "pattern2";break;
+		case pattern3:return "pattern3";break;
+		case pattern4:return "pattern4";break;
+		case pattern5:return "pattern5";break;
+		case pattern6:return "pattern6";break;
+		default:return "Error";break;
+	}
+}
+
+/**
  * @}
  */
 /**

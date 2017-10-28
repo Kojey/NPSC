@@ -70,7 +70,7 @@ void instruction_execute(void){
 			instruction_nextionSendInt("home.n1.val=",clock.time.RTC_Minutes);
 			instruction_nextionSendStr("home.t1.txt=", rtc_dayToString(clock.date.RTC_WeekDay) );
 			instruction_nextionSendInt("home.n3.val=",clock.date.RTC_Date);
-			instruction_nextionSendStr("home.t2.txt=", rtc_MonthToString(clock.date.RTC_Month) );
+			instruction_nextionSendStr("home.t2.txt=", rtc_monthToString(clock.date.RTC_Month) );
 			instruction_nextionSendInt("home.n4.val=",2000+clock.date.RTC_Year);
 			instruction_nextionStop();
   			break;
@@ -106,13 +106,32 @@ void instruction_execute(void){
 			}
 			break;
 		case 0x13:
-			// get alarm time params
+			// get alarm min params
+			instruction_nextionStart();
+			// update first alarm
+			alarm = alarm_load(_instruction.instrution[1]);
+			instruction_nextionSendInt("n0.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
+			instruction_nextionSendInt("n1.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendInt("bt0.val=",alarm.enable);
+			// update second alarm
+			alarm = alarm_load(_instruction.instrution[2]);
+			instruction_nextionSendInt("n2.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
+			instruction_nextionSendInt("n3.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendInt("bt1.val=",alarm.enable);
+			instruction_nextionStop();
 			break;
 		case 0x14:
-			// set alarm extra params
-			break;
-		case 0x15:
-			// set alarm label
+			// get alarm  params
+			instruction_nextionStart();
+			alarm = alarm_load(_instruction.instrution[1]);
+			instruction_nextionSendStr("t6.txt=",alarm_repeatToString(alarm.repeat));
+			instruction_nextionSendStr("t7.txt=",alarm_ringToneToString(alarm.ringtone));
+			instruction_nextionSendStr("t8.txt=",alarm_patternToString(alarm.pattern));
+			instruction_nextionSendStr("t9.txt=",alarm.label);
+			instruction_nextionSendInt("n0.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
+			instruction_nextionSendInt("n1.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendStr("t11.txt=",rtc_dayToString(alarm.alarm.RTC_AlarmDateWeekDay));
+			instruction_nextionStop();
 			break;
 		default:
 			break;
