@@ -43,7 +43,7 @@
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 
-void test_result(bool);
+void test_result(bool (*f)(void));
 bool test_all(void);
 
 #endif /* NPSC_TEST_INC_TEST_H_ */

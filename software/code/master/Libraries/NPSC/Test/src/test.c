@@ -38,14 +38,22 @@
 
 /**
  * @brief	Turn on LEDs based on test results
- * @param	result: the result of the test
+ * @param	*function: pointer to a function with no parameters
  */
-void test_result(bool test){
+void test_result(bool (*function)(void)){
+	// initialise test display
 	STM_EVAL_LEDInit(LED6); // blue led
 	STM_EVAL_LEDInit(LED5); // red led
-	test?STM_EVAL_LEDOn(LED6):STM_EVAL_LEDOn(LED5);
+	STM_EVAL_LEDInit(LED3); // orange led
 	neopixel_setBrightness(100);
-	test?neopixel_setAllPixelRGB(0,255,0):neopixel_setAllPixelRGB(255,0,0);
+	STM_EVAL_LEDOn(LED3);
+	neopixel_setAllPixelRGB(255,80,0);
+	delay(1);
+
+	// Blue: SUCCESS
+	// Red: ERROR
+	(*function)?STM_EVAL_LEDOn(LED6):STM_EVAL_LEDOn(LED5);
+	(*function)?neopixel_setAllPixelRGB(0,0,255):neopixel_setAllPixelRGB(255,0,0);
 }
 /**
  *

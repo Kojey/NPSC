@@ -65,11 +65,11 @@ bool test_alarmSaveLoad(){
 	AlarmTypeDef alarm,_alarm;
 
 	alarm.id=0;
-	alarm.repeat=weekly;
+	alarm.repeat=Weekly;
 	alarm.enable=false;
 	alarm.fetched=true;
-	alarm.ringtone=ring2;
-	alarm.pattern=Sunrise;
+	alarm.ringtone=tone1;
+	alarm.pattern=pattern1;
 	alarm.alarm.RTC_AlarmTime.RTC_H12=RTC_H12_AM;
 	alarm.alarm.RTC_AlarmTime.RTC_Hours=10;
 	alarm.alarm.RTC_AlarmDateWeekDay=7;

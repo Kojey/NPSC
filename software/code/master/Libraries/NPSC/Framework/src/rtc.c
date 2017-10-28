@@ -15,8 +15,9 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include <rtc.h>
-#include "../../Test/inc/assertion.h"
+#include "rtc.h"
+#include "clock.h"
+#include "assertion.h"
 
 /** @addtogroup NPSC
   * @{
@@ -508,6 +509,17 @@ char * rtc_MonthToString(uint8_t month){
 		default:return "Error"; break;
 	}
 }
+
+
+uint32_t rtc_weekdaySelTo32Bits(uint8_t weekDaySel){
+	return weekDaySel==0?RTC_AlarmDateWeekDaySel_Date:RTC_AlarmDateWeekDaySel_WeekDay;
+}
+uint32_t rtc_alarmMaskTo32Bits(uint8_t mask){
+	return mask==Daily?REPEAT_DAILY:REPEAT_NEVER;
+}
+
+
+
 /**
  * @}
  */

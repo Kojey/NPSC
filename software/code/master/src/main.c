@@ -19,20 +19,9 @@
 int main(void)
 {
 	NPSC_init();
-	test_result(false);
-	int index = 0;
-	int i;
-	neopixel_setAllPixelRGB(255,80,0);
-	delay(1);
-//	for(i=0; i<EEPROM_SIZE; i++){
-//
-//		if(!test_eeprom_write_read(i,(EEPROM_SIZE-i)%0xFF)){
-//			test_result(false);
-//			index = i;
-//		}
-//	}
-//	test_result(true);
+
 	test_result(test_alarmSaveLoad());
+
 	while(1)
 	{
 		nextion_bufferUpdate();

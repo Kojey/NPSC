@@ -18,6 +18,7 @@
 
 /* Includes -----------------------------------------------------------------*/
 #include "instructions.h"
+#include "alarm.h"
 
 /** @addtogroup NPSC
   * @{
@@ -42,21 +43,22 @@
  */
 void instruction_execute(void){
 	RTC_ClockTypeDef clock;
+	AlarmTypeDef alarm;
 	while(instruction_queue->size){
 		// fecth instruction
-		InstructionTypeDef instruction = InstructionQueue_dequeue(instruction_queue);
+		InstructionTypeDef _instruction = InstructionQueue_dequeue(instruction_queue);
 		// decode and execute instruction
-		switch(instruction.instrution[0]){
-		/* External RTC instructions*/
+		switch(_instruction.instrution[0]){
+		/* External RTC instructions */
 		case 0x00:
 			// set clock
-			clock.date.RTC_Year=instruction.instrution[1];
-			clock.date.RTC_Month=instruction.instrution[2];
-			clock.date.RTC_Date=instruction.instrution[3];
-			clock.date.RTC_WeekDay=instruction.instrution[4];
-			clock.time.RTC_Hours=instruction.instrution[5];
-			clock.time.RTC_Minutes=instruction.instrution[6];
-			clock.time.RTC_Seconds=instruction.instrution[7];
+			clock.date.RTC_Year=_instruction.instrution[1];
+			clock.date.RTC_Month=_instruction.instrution[2];
+			clock.date.RTC_Date=_instruction.instrution[3];
+			clock.date.RTC_WeekDay=_instruction.instrution[4];
+			clock.time.RTC_Hours=_instruction.instrution[5];
+			clock.time.RTC_Minutes=_instruction.instrution[6];
+			clock.time.RTC_Seconds=_instruction.instrution[7];
 			clock.time.RTC_H12=RTC_H12_AM;
 			rtc_setClockStruct(&clock);
 			break;
@@ -72,15 +74,52 @@ void instruction_execute(void){
 			instruction_nextionSendInt("home.n4.val=",2000+clock.date.RTC_Year);
 			instruction_nextionStop();
   			break;
-		case 0x02:
-			instruction_nextionStart();
-			instruction_nextionSendInt("n0.val=",12);
-			instruction_nextionStop();
+  		/* Alarm instructions */
+		case 0x10:
+			// set alarm time params
+			alarm.id=_instruction.instrution[1];
+			alarm.alarm.RTC_AlarmTime.RTC_Hours=_instruction.instrution[2];
+			alarm.alarm.RTC_AlarmTime.RTC_Minutes=_instruction.instrution[3];
+			alarm.alarm.RTC_AlarmDateWeekDaySel=rtc_weekdaySelTo32Bits(_instruction.instrution[4]);
+			alarm.alarm.RTC_AlarmDateWeekDay=_instruction.instrution[5];
+			alarm.alarm.RTC_AlarmMask=rtc_alarmMaskTo32Bits(_instruction.instrution[6]);
+			break;
+		case 0x11:
+			// set alarm extra params
+			alarm.ringtone=_instruction.instrution[2];
+			alarm.pattern=_instruction.instrution[3];
+			alarm.enable=_instruction.instrution[4];
+			alarm.fetched=_instruction.instrution[5];
+			break;
+		case 0x12:
+			// set alarm label
+			// get string from instruction
+			get_stringFromInstruction(label_instruction,_instruction.instrution[3],2);
+			if (_instruction.instrution[2]==0)
+				strcpy(label,label_instruction);
+			else {
+				strcat(label,label_instruction);
+				// last instruction
+				 if(_instruction.instrution[2]==7)
+					 // save alarm
+					 alarm_save(&alarm);
+			}
+			break;
+		case 0x13:
+			// get alarm time params
+			break;
+		case 0x14:
+			// set alarm extra params
+			break;
+		case 0x15:
+			// set alarm label
 			break;
 		default:
 			break;
 		}
 	}
+	free(label);
+	free(label_instruction);
 }
 
 /**

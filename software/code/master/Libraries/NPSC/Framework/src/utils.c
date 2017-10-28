@@ -45,6 +45,9 @@ char* nextion_instr_int;
 char* nextion_instr_string;
 /* all instruction end with nextion_instr_end*/
 char nextion_instr_end[3]={0xFF,0XFF,0XFF}; // 0xFF 0xFF 0xFF
+
+char * label;
+char * label_instruction;
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -71,6 +74,13 @@ void delay(uint32_t microseconds) {
   for(; counter<microseconds; counter++);
 }
 
+/**
+ * @brief	Append byte of instruction to the string
+ */
+void get_stringFromInstruction(char* string,char* instruction, int size){
+	memset(string,0,strlen(string));
+	strncat(string,instruction,size);
+}
 
 /** @defgroup queue
   * @brief methods to insert, delete and manage a queue

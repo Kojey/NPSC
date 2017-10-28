@@ -88,11 +88,11 @@
   * @brief Alarm repeat options
   * @{
   */
-#define REPEAT_DateWeekDay		(uint32_t) RTC_AlarmMask_DateWeekDay
-#define REPEAT_Hours			(uint32_t) RTC_AlarmMask_Hours
-#define REPEAT_Minutes			(uint32_t) RTC_AlarmMask_Minutes
-#define REPEAT_Seconds			(uint32_t) RTC_AlarmMask_Seconds
-#define REPEAT_None				(uint32_t) RTC_AlarmMask_None
+
+#define REPEAT_NEVER			(uint32_t) RTC_AlarmMask_None
+#define REPEAT_DAILY			(uint32_t) RTC_AlarmMask_DateWeekDay
+#define REPEAT_WEEKLY			(uint32_t) RTC_AlarmMask_None
+
 /**
   * @}
   */

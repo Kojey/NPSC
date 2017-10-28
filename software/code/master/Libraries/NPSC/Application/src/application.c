@@ -46,6 +46,9 @@ void parameters_init(void){
 
 	nextion_instr_int = malloc(NEXTION_INT);
 	nextion_instr_string = malloc(NEXTION_STRING);
+
+	label = malloc(ALARM_LABEL_SIZE);
+	label_instruction = malloc(5);
 }
 /**
  * @}

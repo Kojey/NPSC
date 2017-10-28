@@ -103,7 +103,7 @@ bool test_ClockMangement_save_and_load_alarm(void){
 	strcpy(alarm1.alarmName,"Wake up!!!000000000000000000000");
 	alarm1.alarmParameters.RTC_AlarmDateWeekDay = 31;
 	alarm1.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
-	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_DateWeekDay;
+	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_DAILY;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Hours = 05;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Minutes = 00;
@@ -230,7 +230,7 @@ bool test_ClockMangement_alarm_comparison(void){
 	strcpy(alarm1.alarmName,"Name of alarm 1");
 	alarm1.alarmParameters.RTC_AlarmDateWeekDay = 24;
 	alarm1.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
-	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_Minutes;
+	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_NEVER;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Hours = 7;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Minutes = 40;
@@ -238,7 +238,7 @@ bool test_ClockMangement_alarm_comparison(void){
 	strcpy(alarm2.alarmName,"Name of alarm 1");
 	alarm2.alarmParameters.RTC_AlarmDateWeekDay = 24;
 	alarm2.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
-	alarm2.alarmParameters.RTC_AlarmMask = REPEAT_Minutes;
+	alarm2.alarmParameters.RTC_AlarmMask = REPEAT_NEVER;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_Hours = 7;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_Minutes = 40;

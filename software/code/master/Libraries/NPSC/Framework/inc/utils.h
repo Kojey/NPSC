@@ -50,32 +50,33 @@ typedef enum {false = 0, true = !false} bool;
 
 // intruction_lock definition
 typedef enum {
-	instruction_no_lock = 0 ,
-	instruction_bluetooth_lock = 1,
-	instruction_nextion_lock = 2
+	instruction_no_lock = 1 ,
+	instruction_bluetooth_lock = 2,
+	instruction_nextion_lock = 3
 } Instruction_lock;
 
 // Ring tone
 typedef enum {
-	none = 0,
-	ring1 = 1,
-	ring2 = 2
+	tone1 = 1,
+	tone2 = 2,
+	tone3 = 3
 } Ringtone;
 
 // Ring tone
 typedef enum {
-	never = 0,
-	daily = 1,
-	weekly = 2
+	Never = 1,
+	Daily = 2,
+	Weekly = 3
 } Alarm_repeat;
 
 // Pattern
 typedef enum {
-	Sunrise = 0,
-	Simple = 1,
-	Hour_Minute_Second = 2,
-	Disco = 3,
-	Crazy = 4
+	pattern1 = 1,
+	pattern2 = 2,
+	pattern3 = 3,
+	pattern4 = 4,
+	pattern5 = 5,
+	pattern6 = 6
 } Pattern;
 
 
@@ -112,11 +113,15 @@ extern bool nextion_ack;
 extern char* nextion_instr_int;
 extern char* nextion_instr_string;
 extern char nextion_instr_end[3];
+
+
+char * label;
+char * label_instruction;
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);
 void delay(uint32_t microseconds);
-
+void get_stringFromInstruction(char*,char*,int);
 
 /** @defgroup queue
   * @brief methods to insert, delete and manage a queue
