@@ -118,7 +118,7 @@ void nextion_init(void) {
  * MUST BE A TASK
  */
 // TODO Test the lock on nextion and bluetooth simultaneously.
-void nextion_buffer_update(void){
+void nextion_bufferUpdate(void){
     /**
      * Loop data back to UART data register
      */

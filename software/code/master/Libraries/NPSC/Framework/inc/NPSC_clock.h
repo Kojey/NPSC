@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_CLOCK_H_
-#define NPSC_INC_NPSC_CLOCK_H_
+#ifndef NPSC_FRAMEWORK_CLOCK_H_
+#define NPSC_FRAMEWORK_CLOCK_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -62,8 +62,8 @@
  * @brief AM or PM
  * @{
  */
-#define AM						RTC_H12_AM
-#define PM						RTC_H12_PM
+#define CLOCK_AM						RTC_H12_AM
+#define CLOCK_PM						RTC_H12_PM
 /**
  * @}
  */
@@ -134,15 +134,15 @@ RTC_ClockTypeDef clock_getClockStruct(void);
  *  @{
  */
 RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat);
-void clock_setA(RTC_AlarmTypeDef * Alarm);
-void clock_setB(RTC_AlarmTypeDef * Alarm);
+void clock_setAlarmA(RTC_AlarmTypeDef * Alarm);
+void clock_setAlarmB(RTC_AlarmTypeDef * Alarm);
 void clock_setAlarm(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat);
 void RTC_Alarm_IRQHandler(void);
 /**
  * @}
  */
 
-#endif /* NPSC_INC_NPSC_CLOCK_H_ */
+#endif /* NPSC_FRAMEWORK_CLOCK_H_ */
 
 /**
  * @}

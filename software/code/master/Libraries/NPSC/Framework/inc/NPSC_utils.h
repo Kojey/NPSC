@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef UTILS_H_
-#define UTILS_H_
+#ifndef NPSC_FRAMEWORK_UTILS_H_
+#define NPSC_FRAMEWORK_UTILS_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include <stdio.h>
@@ -148,7 +148,7 @@ InstructionTypeDef InstructionQueue_rear(struct InstructionQueue* queue);
 /**
  * @}
  */
-#endif /* UTILS_H_ */
+#endif /* NPSC_FRAMEWORK_UTILS_H_ */
 
 /**
  * @}

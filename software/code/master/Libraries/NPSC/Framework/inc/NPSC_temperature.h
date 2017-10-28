@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_TEMPERATURE_H_
-#define NPSC_INC_NPSC_TEMPERATURE_H_
+#ifndef NPSC_FRAMEWORK_TEMPERATURE_H_
+#define NPSC_FRAMEWORK_TEMPERATURE_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -56,7 +56,7 @@ int32_t temperature_read(void);
  * @}
  */
 
-#endif /* NPSC_INC_NPSC_TEMPERATURE_H_ */
+#endif /* NPSC_FRAMEWORK_TEMPERATURE_H_ */
 
 /**
  * 	@}

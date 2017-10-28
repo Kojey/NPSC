@@ -117,7 +117,7 @@ void bluetooth_init(void) {
 /**
  * MUST BE A TASK
  */
-void bluetooth_buffer_update(void){
+void bluetooth_bufferUpdate(void){
     /**
      * Loop data back to UART data register
      */

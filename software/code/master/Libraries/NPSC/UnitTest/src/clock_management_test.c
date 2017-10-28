@@ -51,7 +51,7 @@ bool test_ClockMangement_save_and_load_time(void){
 	/*
 	 * time:	01:27:20 PM
 	 */
-	time1.RTC_H12 = PM;
+	time1.RTC_H12 = CLOCK_PM;
 	time1.RTC_Hours = 01;
 	time1.RTC_Minutes = 27;
 	time1.RTC_Seconds = 20;
@@ -104,7 +104,7 @@ bool test_ClockMangement_save_and_load_alarm(void){
 	alarm1.alarmParameters.RTC_AlarmDateWeekDay = 31;
 	alarm1.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
 	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_DateWeekDay;
-	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = AM;
+	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Hours = 05;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Minutes = 00;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Seconds = 00;
@@ -146,11 +146,11 @@ bool test_ClockMangement_time_comparison(void){
 	 * time1: 04:51:30 PM
 	 * time2: 03:51:30 PM
 	 */
-	time1.RTC_H12 = PM;
+	time1.RTC_H12 = CLOCK_PM;
 	time1.RTC_Hours = 04;
 	time1.RTC_Minutes = 51;
 	time1.RTC_Seconds = 30;
-	time2.RTC_H12 = PM;
+	time2.RTC_H12 = CLOCK_PM;
 	time2.RTC_Hours = 03;
 	time2.RTC_Minutes = 51;
 	time2.RTC_Seconds = 30;
@@ -160,11 +160,11 @@ bool test_ClockMangement_time_comparison(void){
 	 * time1: 02:51:30 PM
 	 * time2: 02:55:30 PM
 	 */
-	time1.RTC_H12 = PM;
+	time1.RTC_H12 = CLOCK_PM;
 	time1.RTC_Hours = 02;
 	time1.RTC_Minutes = 51;
 	time1.RTC_Seconds = 30;
-	time2.RTC_H12 = PM;
+	time2.RTC_H12 = CLOCK_PM;
 	time2.RTC_Hours = 02;
 	time2.RTC_Minutes = 55;
 	time2.RTC_Seconds = 30;
@@ -231,7 +231,7 @@ bool test_ClockMangement_alarm_comparison(void){
 	alarm1.alarmParameters.RTC_AlarmDateWeekDay = 24;
 	alarm1.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
 	alarm1.alarmParameters.RTC_AlarmMask = REPEAT_Minutes;
-	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = AM;
+	alarm1.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Hours = 7;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Minutes = 40;
 	alarm1.alarmParameters.RTC_AlarmTime.RTC_Seconds = 10;
@@ -239,7 +239,7 @@ bool test_ClockMangement_alarm_comparison(void){
 	alarm2.alarmParameters.RTC_AlarmDateWeekDay = 24;
 	alarm2.alarmParameters.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
 	alarm2.alarmParameters.RTC_AlarmMask = REPEAT_Minutes;
-	alarm2.alarmParameters.RTC_AlarmTime.RTC_H12 = AM;
+	alarm2.alarmParameters.RTC_AlarmTime.RTC_H12 = CLOCK_AM;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_Hours = 7;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_Minutes = 40;
 	alarm2.alarmParameters.RTC_AlarmTime.RTC_Seconds = 00;

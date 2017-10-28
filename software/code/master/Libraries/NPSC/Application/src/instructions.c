@@ -58,24 +58,24 @@ void instruction_execute(void){
 			clock.time.RTC_Minutes=instruction.instrution[6];
 			clock.time.RTC_Seconds=instruction.instrution[7];
 			clock.time.RTC_H12=RTC_H12_AM;
-			rtc_set_clock(&clock);
+			rtc_setClockStruct(&clock);
 			break;
 		case 0x01:
 			// get clock
-			clock = rtc_get_clock();
- 			instruction_nextion_start();
-			instruction_nextion_send_int("home.n0.val=",clock.time.RTC_Hours);
-			instruction_nextion_send_int("home.n1.val=",clock.time.RTC_Minutes);
-			instruction_nextion_send_str("home.t1.txt=", rtc_get_day_string(clock.date.RTC_WeekDay) );
-			instruction_nextion_send_int("home.n3.val=",clock.date.RTC_Date);
-			instruction_nextion_send_str("home.t2.txt=", rtc_get_month_string(clock.date.RTC_Month) );
-			instruction_nextion_send_int("home.n4.val=",2000+clock.date.RTC_Year);
-			instruction_nextion_stop();
+			clock = rtc_getClockStruct();
+ 			instruction_nextionStart();
+			instruction_nextionSendInt("home.n0.val=",clock.time.RTC_Hours);
+			instruction_nextionSendInt("home.n1.val=",clock.time.RTC_Minutes);
+			instruction_nextionSendStr("home.t1.txt=", rtc_dayToString(clock.date.RTC_WeekDay) );
+			instruction_nextionSendInt("home.n3.val=",clock.date.RTC_Date);
+			instruction_nextionSendStr("home.t2.txt=", rtc_MonthToString(clock.date.RTC_Month) );
+			instruction_nextionSendInt("home.n4.val=",2000+clock.date.RTC_Year);
+			instruction_nextionStop();
   			break;
 		case 0x02:
-			instruction_nextion_start();
-			instruction_nextion_send_int("n0.val=",12);
-			instruction_nextion_stop();
+			instruction_nextionStart();
+			instruction_nextionSendInt("n0.val=",12);
+			instruction_nextionStop();
 			break;
 		default:
 			break;
@@ -86,7 +86,7 @@ void instruction_execute(void){
 /**
  * @brief	Send junk data to start communication with screen
  */
-void instruction_nextion_start(void){
+void instruction_nextionStart(void){
 	// empty string
 	memset(nextion_instr_string,0,strlen(nextion_instr_string));
 	// write junk instruction
@@ -99,7 +99,7 @@ void instruction_nextion_start(void){
 /**
  * @brief	Send end of transmission signal
  */
-void instruction_nextion_stop(void){
+void instruction_nextionStop(void){
 	// empty string
 	memset(nextion_instr_string,0,strlen(nextion_instr_string));
 	// write stop instruction
@@ -116,7 +116,7 @@ void instruction_nextion_stop(void){
  * @param	instruction
  * @param	value
  */
-void instruction_nextion_send_int(char* instruction ,int value){
+void instruction_nextionSendInt(char* instruction ,int value){
 	// clear nextion_instr_string
 	memset(nextion_instr_string,0,strlen(nextion_instr_string));
 	// append instruction
@@ -135,7 +135,7 @@ void instruction_nextion_send_int(char* instruction ,int value){
  * @param	instruction
  * @param	value
  */
-void instruction_nextion_send_str(char* instruction,char * value){
+void instruction_nextionSendStr(char* instruction,char * value){
 	// clear nextion_instr_string
 	memset(nextion_instr_string,0,strlen(nextion_instr_string));
 	// append instruction

@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_NEOPIXEL_H_
-#define NPSC_INC_NPSC_NEOPIXEL_H_
+#ifndef NPSC_FRAMEWORK_NEOPIXEL_H_
+#define NPSC_FRAMEWORK_NEOPIXEL_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -111,7 +111,7 @@ void neopixel_setAllPixelRGBW(uint8_t r,uint8_t g,uint8_t b, uint8_t w);
  * @}
  */
 
-#endif /* NPSC_INC_NPSC_NEOPIXEL_H_ */
+#endif /* NPSC_FRAMEWORK_NEOPIXEL_H_ */
 
 /**
  * @}

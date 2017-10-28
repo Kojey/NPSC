@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPCS_bluetooth.h
+  * @file    NPSC_bluetooth.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    12 Oct-20110
@@ -15,13 +15,13 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_bluetooth_H_
-#define NPSC_INC_NPSC_bluetooth_H_
+#ifndef NPSC_FRAMEWORK_BLUETOOTH_H_
+#define NPSC_FRAMEWORK_BLUETOOTH_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
 
-/** @addtogroup NPC
+/** @addtogroup NPSC
   * @{
   */
 /** @addtogroup Framework
@@ -72,12 +72,12 @@ void DMA2_Stream5_IRQHandler(void);
  *  @{
  */
 void bluetooth_send(uint8_t * data);
-void bluetooth_buffer_update(void);
+void bluetooth_bufferUpdate(void);
 /**
  * @}
  */
 
-#endif /* NPC_INC_NPC_bluetooth_H_ */
+#endif /* NPSC_FRAMEWORK_BLUETOOTH_H_ */
 
 /**
  * 	@}

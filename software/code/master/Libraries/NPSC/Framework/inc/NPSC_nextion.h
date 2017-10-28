@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPSCS_nextion.h
+  * @file    NPSC_nextion.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    12 Oct-2017
@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_nextion_H_
-#define NPSC_INC_NPSC_nextion_H_
+#ifndef NPSC_FRAMEWORK_NEXTION_H_
+#define NPSC_FRAMEWORK_NEXTION_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -27,7 +27,7 @@
 /** @addtogroup Framework
   * @{
   */
-/** @addtogroup nextion
+/** @addtogroup Nextion
   * @{
   */
 
@@ -72,12 +72,12 @@ void DMA1_Stream5_IRQHandler(void);
  *  @{
  */
 void nextion_send(uint8_t * data);
-void nextion_buffer_update(void);
+void nextion_bufferUpdate(void);
 /**
  * @}
  */
 
-#endif /* NPSC_INC_NPSC_nextion_H_ */
+#endif /* NPSC_FRAMEWORK_NEXTION_H_ */
 
 /**
  * 	@}

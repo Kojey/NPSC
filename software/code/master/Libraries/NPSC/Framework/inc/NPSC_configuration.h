@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPC_configuration.h
+  * @file    NPSC_configuration.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    17-February-2017
@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef CONFIGURATION_H_
-#define CONFIGURATION_H_
+#ifndef NPSC_FRAMEWORK_CONFIGURATION_H_
+#define NPSC_FRAMEWORK_CONFIGURATION_H_
 
 
 /* Includes ------------------------------------------------------------------*/
@@ -29,7 +29,7 @@
 #include "NPSC_nextion.h"
 #include "NPSC_temperature.h"
 
-/** @addtogroup NPC
+/** @addtogroup NPSC
   * @{
   */
 /** @addtogroup Framework
@@ -48,7 +48,7 @@
 void NPSC_init(void);
 void Error_Handler(void);
 
-#endif /* CONFIGURATION_H_ */
+#endif /* NPSC_FRAMEWORK_CONFIGURATION_H_ */
 
 /**
  * @}

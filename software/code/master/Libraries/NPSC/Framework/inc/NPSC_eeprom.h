@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_EEPROM_H_
-#define NPSC_INC_NPSC_EEPROM_H_
+#ifndef NPSC_FRAMEWORK_EEPROM_H_
+#define NPSC_FRAMEWORK_EEPROM_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -87,7 +87,7 @@ void eeprom_clear(void);
 /**
  * @}
  */
-#endif /* NPSC_INC_NPSC_EEPROM_H_ */
+#endif /* NPSC_FRAMEWORK_EEPROM_H_ */
 
 /**
  * 	@}

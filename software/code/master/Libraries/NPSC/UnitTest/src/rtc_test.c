@@ -55,11 +55,11 @@ bool test_rtc_clock(){
 	clock.date.RTC_Date=25;
 	clock.date.RTC_Month=10;
 	clock.date.RTC_Year=17;
-	rtc_set_clock(&clock);
+	rtc_setClockStruct(&clock);
 	// get clock from external RTC
 	delay(10000);
 	RTC_ClockTypeDef _clock;
-	_clock = rtc_get_clock();
+	_clock = rtc_getClockStruct();
 	bool result1 =  assertEqual(clock.time.RTC_Minutes,_clock.time.RTC_Minutes)
 						&& assertEqual(clock.time.RTC_Hours,_clock.time.RTC_Hours)
 						&& assertEqual(clock.date.RTC_WeekDay,_clock.date.RTC_WeekDay)
@@ -76,10 +76,10 @@ bool test_rtc_clock(){
 	clock.date.RTC_Date=8;
 	clock.date.RTC_Month=16;
 	clock.date.RTC_Year=17;
-	rtc_set_clock(&clock);
+	rtc_setClockStruct(&clock);
 	// get clock from external RTC
 	delay(10000);
-	_clock = rtc_get_clock();
+	_clock = rtc_getClockStruct();
 	bool result2 = assertEqual(clock.time.RTC_Minutes,_clock.time.RTC_Minutes)
 						&& assertEqual(clock.time.RTC_Hours,_clock.time.RTC_Hours)
 						&& assertEqual(clock.date.RTC_WeekDay,_clock.date.RTC_WeekDay)

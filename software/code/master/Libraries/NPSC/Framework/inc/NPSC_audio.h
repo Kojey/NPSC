@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPC_audio.h
+  * @file    NPSC_audio.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    12-March-2017
@@ -15,13 +15,13 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_AUDIO_H_
-#define NPSC_INC_NPSC_AUDIO_H_
+#ifndef NPSC_FRAMEWORK_AUDIO_H_
+#define NPSC_FRAMEWORK_AUDIO_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
 
-/** @addtogroup NPC
+/** @addtogroup NPSC
   * @{
   */
 /** @addtogroup Framework
@@ -67,7 +67,7 @@ void audio_play(uint16_t * , uint16_t);
 /**
  * @}
  */
-#endif /* NPSC_INC_NPSC_AUDIO_H_ */
+#endif /* NPSC_FRAMEWORK_AUDIO_H_ */
 
 /**
  * 	@}

@@ -19,8 +19,8 @@
 	further development will involve having a queue
 	of alarms
 */
-#ifndef NPSC_APPLICATION_INC_CLOCK_MANAGEMENT_H_
-#define NPSC_APPLICATION_INC_CLOCK_MANAGEMENT_H_
+#ifndef NPSC_APPLICATION_CLOCK_MANAGEMENT_H_
+#define NPSC_APPLICATION_CLOCK_MANAGEMENT_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_clock.h"
@@ -131,7 +131,7 @@ void CLockManagement_updateAlarm(void);
 /**
  * @}
  */
-#endif /* NPSC_APPLICATION_INC_CLOCK_MANAGEMENT_H_ */
+#endif /* NPSC_APPLICATION_CLOCK_MANAGEMENT_H_ */
 
 /**
  * @}

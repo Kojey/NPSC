@@ -15,8 +15,8 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_INC_NPSC_RTC_H_
-#define NPSC_INC_NPSC_RTC_H_
+#ifndef NPSC_FRAMEWORK_RTC_H_
+#define NPSC_FRAMEWORK_RTC_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "NPSC_utils.h"
@@ -85,11 +85,11 @@ void rtc_init(void);
 /**	@defgroup Rtc_Trans RTC transmission functions
  * @{
  */
-void rtc_transmission_start(uint8_t direction);
-void rtc_transmission_write(uint8_t data);
-uint8_t rtc_transmission_read_ack(void);
-uint8_t rtc_transmission_read_nack(void);
-void rtc_transmission_stop(void);
+void rtc_transmissionStart(uint8_t direction);
+void rtc_transmissionWrite(uint8_t data);
+uint8_t rtc_transmissionReadAck(void);
+uint8_t rtc_transmissionReadNack(void);
+void rtc_transmissionStop(void);
 /**
  * @}
  */
@@ -108,34 +108,34 @@ uint8_t rtc_read(uint8_t address);
  * @{
  */
 void rtc_get(uint8_t);
-uint8_t rtc_get_seconds(void);
-uint8_t rtc_get_minutes(void);
-uint8_t rtc_get_hours(void);
-uint8_t rtc_get_day(void);
-uint8_t rtc_get_date(void);
-uint8_t rtc_get_month(void);
-uint8_t rtc_get_year(void);
-RTC_TimeTypeDef rtc_get_theTime(void);
-RTC_DateTypeDef rtc_get_theDate(void);
-RTC_ClockTypeDef rtc_get_clock(void);
-ErrorStatus rtc_set_seconds(uint8_t);
-ErrorStatus rtc_set_minutes(uint8_t);
-ErrorStatus rtc_set_hours(uint8_t);
-ErrorStatus rtc_set_day(uint8_t);
-ErrorStatus rtc_set_date(uint8_t);
-ErrorStatus rtc_set_month(uint8_t);
-ErrorStatus rtc_set_year(uint8_t);
-ErrorStatus rtc_set_theTime(RTC_TimeTypeDef *);
-ErrorStatus rtc_set_theDate(RTC_DateTypeDef *);
-ErrorStatus rtc_set_clock(RTC_ClockTypeDef *);
+uint8_t rtc_getSeconds(void);
+uint8_t rtc_getMinutes(void);
+uint8_t rtc_getHours(void);
+uint8_t rtc_getDay(void);
+uint8_t rtc_getDate(void);
+uint8_t rtc_getMonth(void);
+uint8_t rtc_getYear(void);
+RTC_TimeTypeDef rtc_getTimeStruct(void);
+RTC_DateTypeDef rtc_getDateStruct(void);
+RTC_ClockTypeDef rtc_getClockStruct(void);
+ErrorStatus rtc_setSeconds(uint8_t);
+ErrorStatus rtc_setMinutes(uint8_t);
+ErrorStatus rtc_setHours(uint8_t);
+ErrorStatus rtc_setDay(uint8_t);
+ErrorStatus rtc_setDate(uint8_t);
+ErrorStatus rtc_setMonth(uint8_t);
+ErrorStatus rtc_setYear(uint8_t);
+ErrorStatus rtc_setTimeStruct(RTC_TimeTypeDef *);
+ErrorStatus rtc_setDateStruct(RTC_DateTypeDef *);
+ErrorStatus rtc_setClockStruct(RTC_ClockTypeDef *);
 /**
  * @}
  */
 
-char * rtc_get_day_string(uint8_t);
-char * rtc_get_month_string(uint8_t);
+char * rtc_dayToString(uint8_t);
+char * rtc_MonthToString(uint8_t);
 
-#endif /* NPSC_INC_NPSC_RTC_H_ */
+#endif /* NPSC_FRAMEWORK_RTC_H_ */
 
 /**
  * 	@}

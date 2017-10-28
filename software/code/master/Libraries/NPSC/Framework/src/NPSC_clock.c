@@ -273,7 +273,7 @@ RTC_AlarmTypeDef clock_createAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes,
  * @param 	Alarm:	A pointer to the RTC_AlarmTypeDef
  * @retval	None
  */
-void clock_setA(RTC_AlarmTypeDef * Alarm){
+void clock_setAlarmA(RTC_AlarmTypeDef * Alarm){
 	RTC_AlarmCmd(RTC_Alarm_A,DISABLE);
 	RTC_SetAlarm(RTC_Format_BIN,RTC_Alarm_A,Alarm);
 	RTC_ITConfig(RTC_IT_ALRA,ENABLE);
@@ -286,7 +286,7 @@ void clock_setA(RTC_AlarmTypeDef * Alarm){
  * @param 	Alarm:	A pointer to the RTC_AlarmTypeDef
  * @retval	None
  */
-void clock_setB(RTC_AlarmTypeDef * Alarm){
+void clock_setAlarmB(RTC_AlarmTypeDef * Alarm){
 	RTC_AlarmCmd(RTC_Alarm_B,DISABLE);
 	RTC_SetAlarm(RTC_Format_BIN,RTC_Alarm_B,Alarm);
 	RTC_ITConfig(RTC_IT_ALRB,ENABLE);

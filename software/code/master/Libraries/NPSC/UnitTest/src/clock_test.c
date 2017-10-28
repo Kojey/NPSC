@@ -92,7 +92,7 @@ bool test_clock_alarm(void){
 	alarm1.RTC_AlarmTime.RTC_Minutes = 11;
 	alarm1.RTC_AlarmTime.RTC_Seconds = 50;
 
-	clock_setA(&alarm1);
+	clock_setAlarmA(&alarm1);
 
 	RTC_GetAlarm(RTC_Format_BIN,RTC_Alarm_A,&alarm2);
 
