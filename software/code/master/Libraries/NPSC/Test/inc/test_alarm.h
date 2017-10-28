@@ -1,10 +1,10 @@
 /**
   ******************************************************************************
-  * @file    test_eeprom.h
+  * @file    test_rtc.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
-  * @date    23-March-2017
-  * @brief   This file contains template of unit tests for the eeprom
+  * @date    25-Oct-2017
+  * @brief   This file contains template of unit tests for the external rtc
   ******************************************************************************
   * @attention
   *
@@ -14,12 +14,13 @@
   ******************************************************************************
   */
 
-#ifndef NPSC_TEST_INC_TEST_EEPROM_H_
-#define NPSC_TEST_INC_TEST_EEPROM_H_
+#ifndef NPSC_TEST_INC_TEST_RTC_H_
+#define NPSC_TEST_INC_TEST_RTC_H_
 
 /* Includes ------------------------------------------------------------------*/
 #include "assertion.h"
-#include "eeprom.h"
+#include "alarm.h"
+
 
 /** @addtogroup NPSC
   * @{
@@ -27,7 +28,7 @@
 /** @addtogroup UnitTest
  *  @
  */
-/** @addtogroup eeprom_test
+/** @defgroup rtc_test
   * @{
   */
 
@@ -36,10 +37,9 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-bool test_eeprom_write_read(uint16_t,uint8_t);
-bool test_eeprom_write4B_read4B(void);
-bool test_eeprom_writeNB_readNB(uint16_t,uint16_t);
-#endif /* NPSC_TEST_INC_TEST_EEPROM_H_ */
+bool test_alarmAddress(void);
+bool test_alarmSaveLoad(void);
+#endif /* NPSC_TEST_INC_TEST_RTC_H_ */
 
 /**
  * 	@}

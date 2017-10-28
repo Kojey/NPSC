@@ -17,6 +17,9 @@
 /* Includes -----------------------------------------------------------------*/
 #include "assertion.h"
 
+/*
+ * TODO	test all functions in this file
+ */
 /** @addtogroup NPSC
   * @{
   */
@@ -67,6 +70,24 @@ bool assertFalse(bool condition){
 bool assertEqual(int a, int b){
 	return a==b?true:false;
 }
+
+/**
+ * @brief	Assert that a[i]==b[i] for
+ * 				i in N
+ * @param	*a
+ * @param 	*b
+ * @param	N
+ * @return 	bool: result of assertion
+ */
+bool assertEqualArray(uint8_t* a, uint8_t* b, int N){
+	bool result = true;
+	int i=0;
+	for(i=0;i<N;i++)
+		result&=assertEqual(a[i],b[i]);
+	return result;
+}
+
+
 /**
  * @brief	Assert that a is not equal to b
  * @param	a
@@ -98,6 +119,16 @@ bool assertLess(int a, int b){
 }
 
 /**
+ * @brief	Assert that a<=x<b
+ * @param	x
+ * @param	a
+ * @param 	b
+ * @return bool: result of assertion
+ */
+bool assertInRange(int x, int a, int b){
+	return assertGreaterOrEqual(x,a)&&assertLess(x,b);
+}
+/**
  * @brief	Assert that a is greater or equals to b
  * @param	a
  * @param 	b
@@ -116,16 +147,7 @@ bool assertGreaterOrEqual(int a, int b){
 bool assertLessOrEqual(int a, int b){
 	return a<=b?true:false;
 }
-/**
- * @brief	Assert that min<=number<=max
- * @param	number
- * @param 	min
- * @param	max
- * @return bool: result of assertion
- */
-bool assertInRange(int number, int min, int max){
-	return (assertLessOrEqual(number,max)&&assertGreaterOrEqual(number,min))?true:false;
-}
+
 /**
  * @}
  */

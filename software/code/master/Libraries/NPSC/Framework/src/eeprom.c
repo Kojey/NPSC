@@ -143,7 +143,7 @@ ErrorStatus eeprom_write(uint16_t address, uint8_t data){
 
 		// end transmission
 		GPIO_SetBits(GPIOB, GPIO_Pin_12);
-		delay(5000);
+		delay(10000);
 		return SUCCESS;
 	}
 }
@@ -190,7 +190,7 @@ uint8_t eeprom_read(uint16_t address){
  * @retval	None
  */
 ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
-	if(baseAddress+PAGE_LENGTH > EEPROM_SIZE)
+	if(baseAddress+EEPROM_PAGE_LENGTH > EEPROM_SIZE)
 		return ERROR;
 	else{
 		// write enable latch
@@ -221,7 +221,7 @@ ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
 		while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
 		SPI_I2S_ReceiveData(SPI2); // junk
 		// send data
-		for(int i=0; i<PAGE_LENGTH; i++){
+		for(int i=0; i<EEPROM_PAGE_LENGTH; i++){
 			while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_TXE)==RESET);
 			SPI_I2S_SendData(SPI2, data[i]);
 			while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_RXNE)==RESET);
@@ -229,7 +229,7 @@ ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data){
 		}
 		// end transmission
 		GPIO_SetBits(GPIOB, GPIO_Pin_12);
-		delay(5000);
+		delay(10000);
 		return SUCCESS;
 	}
 }
@@ -258,18 +258,26 @@ void eeprom_clear(void){
  */
 ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N){
 	if(baseAddress+N <= EEPROM_SIZE){
-		int i = 0;
-		int div = N/PAGE_LENGTH;	// number of pages
-		int res = N%PAGE_LENGTH;  	// number of data not represented as pages
-		for(i=0; i<div; ++i)		// write each page
-			eeprom_write32Bytes(baseAddress+PAGE_LENGTH*i, &data[PAGE_LENGTH*i]);
-		for(i=0; i<res; ++i)		// write each data
-			eeprom_write(baseAddress+div*PAGE_LENGTH+i,data[div*PAGE_LENGTH+i]);
+		int i;
+		for(i=0; i<N; i++)
+			eeprom_write(baseAddress+i,data[i]);
 		return SUCCESS;
 	}
 	else return ERROR;
 }
 
+/**
+ *
+ */
+ErrorStatus eeprom_readNBytes(uint16_t baseAddress,uint8_t * data, uint16_t N){
+	if(baseAddress+N <= EEPROM_SIZE){
+		int i;
+		for(i=0; i<N; ++i)
+			data[i] = eeprom_read(baseAddress+i);
+		return SUCCESS;
+	}
+	return ERROR;
+}
 /**
  * @brief	Write 4 bytes to the eeprom
  * @param	baseAddress: address of data
@@ -303,14 +311,7 @@ uint32_t eeprom_read4Bytes(uint16_t baseAddress){
 	return retval;
 }
 
-/**
- *
- */
-void eeprom_readNBytes(uint16_t baseAddress,uint8_t * data, uint16_t N){
-	int i;
-	for(i=0; i<N; ++i)
-		*(data+i) =eeprom_read(baseAddress+i);
-}
+
 /**
  * @}
  */

@@ -24,6 +24,7 @@
 #include "test_eeprom.h"
 #include "test_queue.h"
 #include "test_rtc.h"
+#include "test_alarm.h"
 
 
 /** @addtogroup NPSC

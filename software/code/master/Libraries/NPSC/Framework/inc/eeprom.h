@@ -53,7 +53,7 @@
  * @defgroup Utilities
  * @{
  */
-#define PAGE_LENGTH	32
+#define EEPROM_PAGE_LENGTH	32
 #define EEPROM_SIZE 0xFA00 // 64KB = 64 000
 /**
  * @}
@@ -82,7 +82,7 @@ ErrorStatus eeprom_write32Bytes(uint16_t baseAddress, uint8_t *data);
 uint32_t eeprom_read4Bytes(uint16_t baseAddress);
 ErrorStatus eeprom_writeNBytes(uint16_t baseAddress, uint8_t *data, uint16_t N);
 ErrorStatus eeprom_write4Bytes(uint16_t baseAddress, uint8_t *data);
-void eeprom_readNBytes(uint16_t baseAddress,uint8_t *data, uint16_t N);
+ErrorStatus eeprom_readNBytes(uint16_t baseAddress,uint8_t *data, uint16_t N);
 void eeprom_clear(void);
 /**
  * @}

@@ -37,7 +37,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include <clock.h>
+#include "clock.h"
 
 
 /** @addtogroup NPSC

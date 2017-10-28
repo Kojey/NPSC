@@ -112,6 +112,7 @@ void nextion_init(void) {
     DMA_ITConfig(DMA1_Stream5, DMA_IT_TC, ENABLE);
     DMA_Cmd(DMA1_Stream5, ENABLE);
 
+    neopixel_clear();
 }
 
 /**

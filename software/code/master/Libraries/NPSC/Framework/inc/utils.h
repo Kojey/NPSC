@@ -1,6 +1,6 @@
 /**
   ******************************************************************************
-  * @file    NPSC_utils.h
+  * @file    utils.h
   * @author  Othniel Konan (Kojey)
   * @version V1.1.0
   * @date    23-Oct-2017
@@ -44,10 +44,6 @@
 
 #define INSTRUCTION_QUEUE_SIZE			4
 
-#define LABEL_SIZE						20
-
-#define NEXTION_INT						4
-#define NEXTION_STRING					30
 /* Exported types ------------------------------------------------------------*/
 // boolean true false definition
 typedef enum {false = 0, true = !false} bool;
@@ -89,15 +85,6 @@ typedef struct {
 	RTC_DateTypeDef date;
 } RTC_ClockTypeDef;
 
-// Alarm type definition
-typedef struct {
-	char label[LABEL_SIZE];
-	Alarm_repeat repeat;
-	Ringtone ringtone;
-	Pattern patern;
-	RTC_AlarmTypeDef alarm;
-} AlarmTypeDef;
-
 // Instruction type definition
 typedef struct {
 	uint8_t instrution[INSTRUCTION_SIZE]; // instruction
@@ -127,7 +114,6 @@ extern char* nextion_instr_string;
 extern char nextion_instr_end[3];
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
-void parameters_init(void);
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);
 void delay(uint32_t microseconds);
 

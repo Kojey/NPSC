@@ -41,16 +41,10 @@
  * @param	None
  * @retval	bool
  */
-bool test_eeprom_write_read(void){
-	bool result = true;
-	uint8_t data = 0xAA;
-	int i;
-	for(i=0; i<EEPROM_SIZE; ++i)
-		eeprom_write(i,data);
+bool test_eeprom_write_read(uint16_t address, uint8_t data){
+	eeprom_write(address,data);
 	delay(10000);	// Give time to the eeprom to write the data
-	for(i=0; i<EEPROM_SIZE; ++i)
-		result &= assertEqual(data,eeprom_read(i));
-	return result;
+	return assertEqual(data,eeprom_read(address));
 }
 
 /**
@@ -73,19 +67,21 @@ bool test_eeprom_write4B_read4B(void){
  * @param	None
  * @retval	bool
  */
-bool test_eeprom_writeNB_readNB(void){
-	uint32_t N = 15;
-	uint8_t data[N], data_out[N];
+bool test_eeprom_writeNB_readNB(uint16_t start ,uint16_t size){
+	start = assertInRange(start,0,EEPROM_SIZE)?start:0;
+	size = assertLess(start+size,EEPROM_SIZE)?size:EEPROM_SIZE;
+	uint8_t data[size], _data[size];
+	// Filling the array
 	int i;
-	for(i=0; i<N; ++i)	// Filling the array
-		data[i] = 4*i;
-	eeprom_writeNBytes(0x00,data,N);
-	delay(1000); // Give time to the eeprom to write the data
-	eeprom_readNBytes(0x00,data_out,N);
-	bool result = true;
+	for(i=0; i<size; ++i)
+		data[i] = (i+5)%0xFF;
+	// write data
+	eeprom_writeNBytes(start,data,size);
+	eeprom_readNBytes(start,_data,size);
+/*	bool result = true;
 	for(i=0; i<N; ++i)
-		result &= assertEqual(data[i],data_out[i]);
-	return result;
+		result &= assertEqual(data[i],data_out[i]);*/
+	return assertEqualArray(data,_data,size);
 }
 
 /**

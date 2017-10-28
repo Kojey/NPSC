@@ -43,12 +43,13 @@
 bool assertTrue(bool condition);
 bool assertFalse(bool condition);
 bool assertEqual(int a, int b);
+bool assertEqualArray(uint8_t* a, uint8_t* b, int N);
 bool assertNotEqual(int a, int b);
 bool assertGreater(int a, int b);
 bool assertLess(int a, int b);
+bool assertInRange(int x, int a, int b);
 bool assertGreaterOrEqual(int a, int b);
 bool assertLessOrEqual(int a, int b);
-bool assertInRange(int number, int min, int max);
 /**
  * @}
  */

@@ -52,6 +52,11 @@
 /**
  * @}
  */
+
+
+#define NEXTION_INT						4
+#define NEXTION_STRING					30
+
 /* Exported variables --------------------------------------------------------*/
 size_t nextion_write, nextion_read;
 /* Exported macro ------------------------------------------------------------*/

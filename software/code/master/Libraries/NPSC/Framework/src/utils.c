@@ -48,16 +48,6 @@ char nextion_instr_end[3]={0xFF,0XFF,0XFF}; // 0xFF 0xFF 0xFF
 /* Private functions ---------------------------------------------------------*/
 
 /**
- * @brief	Initialise all shared variables
- */
-void parameters_init(void){
-	// Initialise the instruction queue
-	instruction_queue = InstructionQueue_createQueue((unsigned)INSTRUCTION_QUEUE_SIZE);
-
-	nextion_instr_int = malloc(NEXTION_INT);
-	nextion_instr_string = malloc(NEXTION_STRING);
-}
-/**
  * @brief	Find max between a, b, and c
  * @param	a: First value
  * @param	b: second value
