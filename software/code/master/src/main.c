@@ -20,7 +20,7 @@ int main(void)
 {
 	NPSC_init();
 
-	test_result(test_alarmSaveLoad());
+//	test_result(test_alarmSaveLoad());
 
 	while(1)
 	{

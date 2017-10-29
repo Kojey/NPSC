@@ -50,7 +50,7 @@ void instruction_execute(void){
 		// decode and execute instruction
 		switch(_instruction.instrution[0]){
 		/* External RTC instructions */
-		case 0x00:
+		case 0x01:
 			// set clock
 			clock.date.RTC_Year=_instruction.instrution[1];
 			clock.date.RTC_Month=_instruction.instrution[2];
@@ -62,7 +62,7 @@ void instruction_execute(void){
 			clock.time.RTC_H12=RTC_H12_AM;
 			rtc_setClockStruct(&clock);
 			break;
-		case 0x01:
+		case 0x02:
 			// get clock
 			clock = rtc_getClockStruct();
  			instruction_nextionStart();
@@ -106,6 +106,8 @@ void instruction_execute(void){
 			}
 			break;
 		case 0x13:
+			break;
+		case 0x14:
 			// get alarm min params
 			instruction_nextionStart();
 			// update first alarm
@@ -120,7 +122,7 @@ void instruction_execute(void){
 			instruction_nextionSendInt("bt1.val=",alarm.enable);
 			instruction_nextionStop();
 			break;
-		case 0x14:
+		case 0x15:
 			// get alarm  params
 			instruction_nextionStart();
 			alarm = alarm_load(_instruction.instrution[1]);
@@ -137,8 +139,6 @@ void instruction_execute(void){
 			break;
 		}
 	}
-	free(label);
-	free(label_instruction);
 }
 
 /**
