@@ -450,13 +450,13 @@ ErrorStatus rtc_setDateStruct(RTC_DateTypeDef * date){
  * @brief	Set the clock
  */
 ErrorStatus rtc_setClockStruct(RTC_ClockTypeDef * clock){
-	if( !assertInRange(clock->time.RTC_Seconds,0,59) ||
-			!assertInRange(clock->time.RTC_Minutes,0,59) ||
-			!assertInRange(clock->time.RTC_Hours,0,23) ||
-			!assertInRange(clock->date.RTC_WeekDay,1,7) ||
-			!assertInRange(clock->date.RTC_Date,1,31) ||
-			!assertInRange(clock->date.RTC_Month,1,0x12) ||
-			!assertInRange(clock->date.RTC_Year,0,99))
+	if( !assertInRange(clock->time.RTC_Seconds,0,60) ||
+			!assertInRange(clock->time.RTC_Minutes,0,60) ||
+			!assertInRange(clock->time.RTC_Hours,0,24) ||
+			!assertInRange(clock->date.RTC_WeekDay,1,8) ||
+			!assertInRange(clock->date.RTC_Date,1,32) ||
+			!assertInRange(clock->date.RTC_Month,1,0x13) ||
+			!assertInRange(clock->date.RTC_Year,0,100))
 		return ERROR;
 	rtc_set_seconds(clock->time.RTC_Seconds);
 	rtc_setMinutes(clock->time.RTC_Minutes);

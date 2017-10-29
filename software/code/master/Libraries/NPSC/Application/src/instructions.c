@@ -106,6 +106,8 @@ void instruction_execute(void){
 			}
 			break;
 		case 0x13:
+			break;
+		case 0x14:
 			// get alarm min params
 			instruction_nextionStart();
 			// update first alarm
@@ -120,7 +122,7 @@ void instruction_execute(void){
 			instruction_nextionSendInt("bt1.val=",alarm.enable);
 			instruction_nextionStop();
 			break;
-		case 0x14:
+		case 0x15:
 			// get alarm  params
 			instruction_nextionStart();
 			alarm = alarm_load(_instruction.instrution[1]);
@@ -137,8 +139,6 @@ void instruction_execute(void){
 			break;
 		}
 	}
-	free(label);
-	free(label_instruction);
 }
 
 /**

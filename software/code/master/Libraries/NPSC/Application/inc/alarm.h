@@ -36,7 +36,7 @@
 
 /* Exported constants --------------------------------------------------------*/
 
-#define ALARM_LABEL_SIZE			10
+#define ALARM_LABEL_SIZE			12
 #define ALARM_SIZE					60	// size of AlarmTypeDef
 
 /* Exported variables --------------------------------------------------------*/

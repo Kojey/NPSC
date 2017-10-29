@@ -40,9 +40,9 @@
 
 /* Exported constants --------------------------------------------------------*/
 #define INSTRUCTION_SIZE            	8
-#define DMA_RX_BUFFER_SIZE          	8
+#define DMA_RX_BUFFER_SIZE          	INSTRUCTION_SIZE
 
-#define INSTRUCTION_QUEUE_SIZE			4
+#define INSTRUCTION_QUEUE_SIZE			6
 
 /* Exported types ------------------------------------------------------------*/
 // boolean true false definition
