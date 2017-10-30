@@ -41,14 +41,14 @@
  * @brief	Initialise all shared variables
  */
 void parameters_init(void){
-	// Initialise the instruction queue
+	/* Initialise the instruction queue */
 	instruction_queue = InstructionQueue_createQueue((unsigned)INSTRUCTION_QUEUE_SIZE);
-
+	/* Memory allocation */
 	nextion_instr_int = malloc(NEXTION_INT);
 	nextion_instr_string = malloc(NEXTION_STRING);
 
 	label = malloc(ALARM_LABEL_SIZE);
-	label_instruction = malloc(4);
+	label_instruction = malloc(LABEL_INSTR_SIZE);
 }
 /**
  * @}

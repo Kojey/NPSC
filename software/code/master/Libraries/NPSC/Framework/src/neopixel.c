@@ -163,6 +163,7 @@ void neopixel_init(void){
 		//
 		//TIM_CtrlPWMOutputs(TIM2,DISABLE);
 	}*/
+	neopixel_clear();
 }
 
 /**

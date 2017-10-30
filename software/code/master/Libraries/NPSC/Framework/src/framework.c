@@ -59,6 +59,7 @@ void NPSC_init(void){
 	eeprom_init();
 	/* Initialise temperature */
 	temperature_init();
+
 }
 
 /**

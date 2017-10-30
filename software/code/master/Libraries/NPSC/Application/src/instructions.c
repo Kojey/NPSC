@@ -41,9 +41,11 @@
 /**
  * @brief	Execute instructions from instruction queue
  */
+static bool b = true;
 void instruction_execute(void){
 	RTC_ClockTypeDef clock;
 	AlarmTypeDef alarm;
+
 	while(instruction_queue->size){
 		// fecth instruction
 		InstructionTypeDef _instruction = InstructionQueue_dequeue(instruction_queue);
@@ -65,6 +67,10 @@ void instruction_execute(void){
 		case 0x02:
 			// get clock
 			clock = rtc_getClockStruct();
+				if(b){
+					alarm_synchronize();
+					b=false;
+				}
  			instruction_nextionStart();
 			instruction_nextionSendInt("home.n0.val=",clock.time.RTC_Hours);
 			instruction_nextionSendInt("home.n1.val=",clock.time.RTC_Minutes);
@@ -98,15 +104,18 @@ void instruction_execute(void){
 		case 0x12:
 			// set alarm label
 			// get string from instruction
-			get_stringFromInstruction((char *)label_instruction, (char *)&_instruction.instrution[3],2);
+			get_stringFromInstruction((char *)label_instruction, (char *)&_instruction.instrution[4],LABEL_INSTR_SIZE);
 			if (_instruction.instrution[2]==0)
 				strcpy(label,label_instruction);
 			else {
 				strcat(label,label_instruction);
+				strcpy(alarm.label,label);
 				// last instruction
-				 if(_instruction.instrution[2]==2)
+				 if(_instruction.instrution[2]==2){
 					 // save alarm
 					 alarm_save(&alarm);
+					 alarm_update(true);
+				 }
 			}
 			break;
 		case 0x13:

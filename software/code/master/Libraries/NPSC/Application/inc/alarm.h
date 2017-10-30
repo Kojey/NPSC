@@ -38,7 +38,7 @@
 
 #define ALARM_LABEL_SIZE			12
 #define ALARM_SIZE					60	// size of AlarmTypeDef
-
+#define LABEL_INSTR_SIZE			4
 /* Exported variables --------------------------------------------------------*/
 /* Exported types ------------------------------------------------------------*/
 
@@ -58,8 +58,10 @@ typedef struct {
 /* Private function prototypes -----------------------------------------------*/
 
 
+void alarm_synchronize(void);
 void alarm_save(AlarmTypeDef *);
 AlarmTypeDef alarm_load(uint8_t);
+void alarm_update(bool);
 
 uint16_t alarm_idAddress(uint8_t);
 uint16_t alarm_repeatAddress(uint8_t);

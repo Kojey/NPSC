@@ -184,7 +184,6 @@ ErrorStatus clock_setTime(uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t
 /**
  * @brief	Get the time structure
  * @param	None
- * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
  */
 RTC_TimeTypeDef clock_getTimeStruct(void){
 	RTC_TimeTypeDef RTC_TimeStruct;
@@ -195,7 +194,6 @@ RTC_TimeTypeDef clock_getTimeStruct(void){
 /**
  * @brief	Get the time structure
  * @param	None
- * @retval	An uint32_t containing the hour as its MB3, minutes : MB2, Seconds : MB1, format : MB0
  */
 RTC_DateTypeDef clock_getDateStruct(void){
 	RTC_DateTypeDef RTC_DateStruct;
@@ -203,6 +201,16 @@ RTC_DateTypeDef clock_getDateStruct(void){
 	return RTC_DateStruct;
 }
 
+/**
+ * @brief	Get the clock structure
+ * @param	None
+ */
+RTC_ClockTypeDef clock_getClockStruct(void){
+	RTC_ClockTypeDef RTC_ClockStruct;
+	RTC_ClockStruct.date = clock_getDateStruct();
+	RTC_ClockStruct.time = clock_getTimeStruct();
+	return RTC_ClockStruct;
+}
 /**
  * @brief	Get the date encoded in a 32b format
  * @param	None
@@ -232,6 +240,8 @@ uint32_t clock_getTime(void){
 	uint32_t format = RTC_TimeStruct.RTC_H12;
 	return (uint32_t) (hours|minutes|seconds|format);
 }
+
+
 /**
  * @}
  */
@@ -334,12 +344,15 @@ void clock_setAlarm(uint8_t am_pm,uint8_t hours, uint8_t minutes, uint8_t second
 
 void RTC_Alarm_IRQHandler(void){
 	/* ALARM A Detection */
-	while(RTC_GetITStatus(RTC_IT_ALRA)==RESET);	// Wait for Alarm A event
-	RTC_ClearITPendingBit(RTC_IT_ALRA);			// Clear Alarm A interrupt pending bit
+	while(RTC_GetITStatus(RTC_IT_ALRA)==RESET && RTC_GetITStatus(RTC_IT_ALRB)==RESET);	// Wait for Alarm A event
+	if(RTC_GetITStatus(RTC_IT_ALRA)==RESET)
+		RTC_ClearITPendingBit(RTC_IT_ALRA);			// Clear Alarm A interrupt pending bit
+	if(RTC_GetITStatus(RTC_IT_ALRB)==RESET)
+		RTC_ClearITPendingBit(RTC_IT_ALRB);			// Clear Alarm A interrupt pending bit
 	EXTI_ClearITPendingBit(EXTI_Line17);		// Clear External Interrupt pending bit
 
 	/* TODO What need to be done when Alarm event occurs*/
-	GPIO_ToggleBits(GPIOD, GPIO_Pin_13);
+	neopixel_setAllPixelRGB(255,255,255);
 }
 /**
  * @}
