@@ -50,7 +50,7 @@ void instruction_execute(void){
 		// decode and execute instruction
 		switch(_instruction.instrution[0]){
 		/* External RTC instructions */
-		case 0x00:
+		case 0x01:
 			// set clock
 			clock.date.RTC_Year=_instruction.instrution[1];
 			clock.date.RTC_Month=_instruction.instrution[2];
@@ -62,7 +62,7 @@ void instruction_execute(void){
 			clock.time.RTC_H12=RTC_H12_AM;
 			rtc_setClockStruct(&clock);
 			break;
-		case 0x01:
+		case 0x02:
 			// get clock
 			clock = rtc_getClockStruct();
  			instruction_nextionStart();

@@ -347,7 +347,7 @@ RTC_ClockTypeDef rtc_getClockStruct(){
  * @brief	Set the seconds
  */
 ErrorStatus rtc_set_seconds(uint8_t seconds){
-	if(!assertInRange(seconds,0,59)) return ERROR;
+	if(!assertInRange(seconds,0,60)) return ERROR;
 	uint8_t units = seconds%10;
 	uint8_t tens = (seconds-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -358,7 +358,7 @@ ErrorStatus rtc_set_seconds(uint8_t seconds){
  * @brief	Set the minutes
  */
 ErrorStatus rtc_setMinutes(uint8_t minutes){
-	if(!assertInRange(minutes,0,59)) return ERROR;
+	if(!assertInRange(minutes,0,60)) return ERROR;
 	uint8_t units = minutes%10;
 	uint8_t tens = (minutes-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -369,7 +369,7 @@ ErrorStatus rtc_setMinutes(uint8_t minutes){
  * @brief	Set the hours
  */
 ErrorStatus rtc_setHours(uint8_t hours){
-	if(!assertInRange(hours,0,23)) return ERROR;
+	if(!assertInRange(hours,0,24)) return ERROR;
 	uint8_t units = hours%10;
 	uint8_t tens = (hours-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -380,7 +380,7 @@ ErrorStatus rtc_setHours(uint8_t hours){
  * @brief	Set the day
  */
 ErrorStatus rtc_setDay(uint8_t day){
-	if(!assertInRange(day,1,7)) return ERROR;
+	if(!assertInRange(day,1,8)) return ERROR;
 	rtc_write(RTC_ADDRESS_DAY, day);
 	return SUCCESS;
 }
@@ -388,7 +388,7 @@ ErrorStatus rtc_setDay(uint8_t day){
  * @brief	Set the date
  */
 ErrorStatus rtc_setDate(uint8_t date){
-	if(!assertInRange(date,1,31)) return ERROR;
+	if(!assertInRange(date,1,32)) return ERROR;
 	uint8_t units = date%10;
 	uint8_t tens = (date-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -399,7 +399,7 @@ ErrorStatus rtc_setDate(uint8_t date){
  * @brief	Set the month
  */
 ErrorStatus rtc_setMonth(uint8_t month){
-	if(!assertInRange(month,1,12)) return ERROR;
+	if(!assertInRange(month,1,13)) return ERROR;
 	uint8_t units = month%10;
 	uint8_t tens = (month-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -410,7 +410,7 @@ ErrorStatus rtc_setMonth(uint8_t month){
  * @brief	Set the year
  */
 ErrorStatus rtc_setYear(uint8_t year){
-	if(!assertInRange(year,0,99)) return ERROR;
+	if(!assertInRange(year,0,100)) return ERROR;
 	uint8_t units = year%10;
 	uint8_t tens = (year-units)/10;
 	uint8_t data = (tens << 4) | units;
@@ -422,50 +422,30 @@ ErrorStatus rtc_setYear(uint8_t year){
  * @brief	Set the time
  */
 ErrorStatus rtc_setTimeStruct(RTC_TimeTypeDef * time){
-	if( !assertInRange(time->RTC_Seconds,0,59) ||
-			!assertInRange(time->RTC_Minutes,0,59) ||
-			!assertInRange(time->RTC_Hours,0,23))
-		return ERROR;
-	rtc_set_seconds(time->RTC_Seconds);
-	rtc_setMinutes(time->RTC_Minutes);
-	rtc_setHours(time->RTC_Hours);
-	return SUCCESS;
+	return rtc_set_seconds(time->RTC_Seconds)
+			&& rtc_setMinutes(time->RTC_Minutes)
+			&& rtc_setHours(time->RTC_Hours);
 }
 /**
  * @brief	Set the date
  */
 ErrorStatus rtc_setDateStruct(RTC_DateTypeDef * date){
-	if( !assertInRange(date->RTC_WeekDay,1,7) ||
-			!assertInRange(date->RTC_Date,1,31) ||
-			!assertInRange(date->RTC_Month,1,12) ||
-			!assertInRange(date->RTC_Year,0,99))
-		return ERROR;
-	rtc_setDay(date->RTC_WeekDay);
-	rtc_setDate(date->RTC_Date);
-	rtc_setMonth(date->RTC_Month);
-	rtc_setYear(date->RTC_Year);
-	return SUCCESS;
+	return rtc_setDay(date->RTC_WeekDay)
+			&& rtc_setDate(date->RTC_Date)
+			&& rtc_setMonth(date->RTC_Month)
+			&& rtc_setYear(date->RTC_Year);
 }
 /**
  * @brief	Set the clock
  */
 ErrorStatus rtc_setClockStruct(RTC_ClockTypeDef * clock){
-	if( !assertInRange(clock->time.RTC_Seconds,0,60) ||
-			!assertInRange(clock->time.RTC_Minutes,0,60) ||
-			!assertInRange(clock->time.RTC_Hours,0,24) ||
-			!assertInRange(clock->date.RTC_WeekDay,1,8) ||
-			!assertInRange(clock->date.RTC_Date,1,32) ||
-			!assertInRange(clock->date.RTC_Month,1,0x13) ||
-			!assertInRange(clock->date.RTC_Year,0,100))
-		return ERROR;
-	rtc_set_seconds(clock->time.RTC_Seconds);
-	rtc_setMinutes(clock->time.RTC_Minutes);
-	rtc_setHours(clock->time.RTC_Hours);
-	rtc_setDay(clock->date.RTC_WeekDay);
-	rtc_setDate(clock->date.RTC_Date);
-	rtc_setMonth(clock->date.RTC_Month);
-	rtc_setYear(clock->date.RTC_Year);
-	return SUCCESS;
+	return rtc_set_seconds(clock->time.RTC_Seconds)
+			&& rtc_setMinutes(clock->time.RTC_Minutes)
+			&& rtc_setHours(clock->time.RTC_Hours)
+			&& rtc_setDay(clock->date.RTC_WeekDay)
+			&& rtc_setDate(clock->date.RTC_Date)
+			&& rtc_setMonth(clock->date.RTC_Month)
+			&& rtc_setYear(clock->date.RTC_Year);
 }
 
 /**
