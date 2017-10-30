@@ -82,6 +82,17 @@ void get_stringFromInstruction(char* string,char* instruction, int size){
 	strncat(string,instruction,size);
 }
 
+
+bool instruction_valid(uint8_t code){
+	return code==0x00?false:true;
+}
+bool instruction_ack(uint8_t * cmd){
+	bool result = cmd[1]==0xFF;
+	result &= cmd[2]==0xFF;
+	result &= cmd[3]==0xFF;
+	return result;
+}
+
 /** @defgroup queue
   * @brief methods to insert, delete and manage a queue
   * @{

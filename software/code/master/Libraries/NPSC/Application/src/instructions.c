@@ -94,7 +94,7 @@ void instruction_execute(void){
 		case 0x12:
 			// set alarm label
 			// get string from instruction
-			get_stringFromInstruction(label_instruction,_instruction.instrution[3],2);
+			get_stringFromInstruction(label_instruction,&_instruction.instrution[3],2);
 			if (_instruction.instrution[2]==0)
 				strcpy(label,label_instruction);
 			else {

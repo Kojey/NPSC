@@ -40,7 +40,8 @@
 
 /* Exported constants --------------------------------------------------------*/
 #define INSTRUCTION_SIZE            	8
-#define DMA_RX_BUFFER_SIZE          	INSTRUCTION_SIZE
+#define DMA_MAX_INSTRUCTION				7
+#define DMA_RX_BUFFER_SIZE          	INSTRUCTION_SIZE*DMA_MAX_INSTRUCTION
 
 #define INSTRUCTION_QUEUE_SIZE			6
 
@@ -122,7 +123,8 @@ char * label_instruction;
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);
 void delay(uint32_t microseconds);
 void get_stringFromInstruction(char*,char*,int);
-
+bool instruction_valid(uint8_t);
+bool instruction_ack(uint8_t *);
 /** @defgroup queue
   * @brief methods to insert, delete and manage a queue
   * @note Inspired from http://www.geeksforgeeks.org/queue-set-1introduction-and-array-implementation/
