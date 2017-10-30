@@ -24,7 +24,6 @@ int main(void)
 
 	while(1)
 	{
-		nextion_bufferUpdate();
 		instruction_execute();
 	}
 }

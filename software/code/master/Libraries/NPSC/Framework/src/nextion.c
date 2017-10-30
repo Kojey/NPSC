@@ -112,46 +112,10 @@ void nextion_init(void) {
     DMA_ITConfig(DMA1_Stream5, DMA_IT_TC, ENABLE);
     DMA_Cmd(DMA1_Stream5, ENABLE);
 
-    neopixel_clear();
 }
 
 /**
- * MUST BE A TASK
- */
-// TODO Test the lock on nextion and bluetooth simultaneously.
-void nextion_bufferUpdate(void){
-    /**
-     * Loop data back to UART data register
-     */
-    while (nextion_read != nextion_write) {                 /* Do it until buffer is empty */
-    	// lock this step
-    	if(instruction_lock_owner==instruction_no_lock || instruction_lock_owner==instruction_nextion_lock){
-			USART2->DR = INSTRUCTION_BUFFER[nextion_read++];   /* Start byte transfer */
-			if(instruction_lock_owner==instruction_no_lock)instruction_lock_owner=instruction_nextion_lock;
-			while (!(USART2->SR & USART_SR_TXE));   /* Wait till finished */
-			if (nextion_read == INSTRUCTION_SIZE || nextion_ack) {     /* Check buffer overflow */
-				nextion_read = 0;
-				nextion_write = 0;
-				if(!nextion_ack){
-					// create new instruction
-					InstructionTypeDef newInstruction;
-					int i;
-					for(i=0; i<INSTRUCTION_SIZE; i++)
-						newInstruction.instrution[i]=INSTRUCTION_BUFFER[i];
-					newInstruction.excecuted=false;
-					// add it to the queue
-					InstructionQueue_enqueue(instruction_queue,&newInstruction);
-				}
-				// release the lock
-				instruction_lock_owner = instruction_no_lock;
-				nextion_ack = false;
-			}
-    	}
-    }
-}
-
-/**
- * \brief       Global interrupt handler for USART2
+ * @brief       Global interrupt handler for USART2
  */
 void USART2_IRQHandler(void) {
     /* Check for IDLE flag */
@@ -168,48 +132,31 @@ void USART2_IRQHandler(void) {
 }
 
 /**
- * \brief       Global interrupt handler for DMA1 stream5
- * \note        Except memcpy, there is no functions used to
+ * @brief       Global interrupt handler for DMA1 stream5
  */
 void DMA1_Stream5_IRQHandler(void) {
-    size_t len, tocopy;
-    uint8_t* ptr;
+	if (DMA1->HISR & DMA_FLAG_TCIF5) {
+        DMA1->HIFCR = DMA_FLAG_TCIF5; 		/*  Clear transfer complete flag  */
 
-    /* Check transfer complete flag */
-    if (DMA1->HISR & DMA_FLAG_TCIF5) {
-        DMA1->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
-
-        /* Calculate number of bytes actually transfered by DMA so far */
-        /**
-         * Transfer could be completed by 2 events:
-         *  - All data actually transfered (NDTR = 0)
-         *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
-         */
-        len = DMA_RX_BUFFER_SIZE - DMA1_Stream5->NDTR;
-        tocopy = INSTRUCTION_SIZE - nextion_write;      /* Get number of bytes we can copy to the end of buffer */
-
-        /* Check how many bytes to copy */
-        if (tocopy > len) {
-            tocopy = len;
+        /* Extract all instruction from DMA */
+        for(uint8_t index=0; index<DMA_MAX_INSTRUCTION; ++index){
+        	/* Check for validity of instruction  */
+        	if(instruction_valid(DMA_RX_Buffer[index*INSTRUCTION_SIZE])
+        			&& !instruction_ack(&DMA_RX_Buffer[index*INSTRUCTION_SIZE])){
+				InstructionTypeDef newInstruction;
+				for(int i=0; i<INSTRUCTION_SIZE; i++){
+					newInstruction.instrution[i]=DMA_RX_Buffer[index*INSTRUCTION_SIZE+i];
+					// clear DMA_RX_Buffer
+					DMA_RX_Buffer[index*INSTRUCTION_SIZE+i]=0;
+				}
+				newInstruction.excecuted=false;
+				// add it to the queue
+				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+        	}
         }
 
-        /* nextion_write received data for UART main buffer for manipulation later */
-        ptr = DMA_RX_Buffer;
-        memcpy(&INSTRUCTION_BUFFER[nextion_write], ptr, tocopy);   /* Copy first part */
-
-        /* Correct values for remaining data */
-        nextion_write += tocopy;
-        len -= tocopy;
-        ptr += tocopy;
-
-        /* If still data to write for beginning of buffer */
-        if (len) {
-            memcpy(&INSTRUCTION_BUFFER[0], ptr, len);      /* Don't care if we override nextion_read pointer now */
-            nextion_write = len;
-        }
-
-        /* Prepare DMA for next transfer */
-        /* Important! DMA stream won't start if all flags are not cleared first */
+        /*Prepare DMA for next transfer
+		Important! DMA stream won't start if all flags are not cleared first */
         DMA1->HIFCR = DMA_FLAG_DMEIF5 | DMA_FLAG_FEIF5 | DMA_FLAG_HTIF5 | DMA_FLAG_TCIF5 | DMA_FLAG_TEIF5;
         DMA1_Stream5->M0AR = (uint32_t)DMA_RX_Buffer;   /* Set memory address for DMA again */
         DMA1_Stream5->NDTR = DMA_RX_BUFFER_SIZE;    /* Set number of bytes to receive */
