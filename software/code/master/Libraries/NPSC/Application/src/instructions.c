@@ -76,13 +76,17 @@ void instruction_execute(void){
   			break;
   		/* Alarm instructions */
 		case 0x10:
+			alarm = alarm_load(_instruction.instrution[1]);
 			// set alarm time params
-			alarm.id=_instruction.instrution[1];
+			//alarm.id=_instruction.instrution[1];
 			alarm.alarm.RTC_AlarmTime.RTC_Hours=_instruction.instrution[2];
 			alarm.alarm.RTC_AlarmTime.RTC_Minutes=_instruction.instrution[3];
 			alarm.alarm.RTC_AlarmDateWeekDaySel=rtc_weekdaySelTo32Bits(_instruction.instrution[4]);
 			alarm.alarm.RTC_AlarmDateWeekDay=_instruction.instrution[5];
+			alarm.repeat=_instruction.instrution[6];
 			alarm.alarm.RTC_AlarmMask=rtc_alarmMaskTo32Bits(_instruction.instrution[6]);
+			alarm.alarm.RTC_AlarmTime.RTC_H12=RTC_H12_AM;
+			alarm.alarm.RTC_AlarmTime.RTC_Seconds=0;
 			break;
 		case 0x11:
 			// set alarm extra params
@@ -94,18 +98,22 @@ void instruction_execute(void){
 		case 0x12:
 			// set alarm label
 			// get string from instruction
-			get_stringFromInstruction(label_instruction,&_instruction.instrution[3],2);
+			get_stringFromInstruction((char *)label_instruction, (char *)&_instruction.instrution[3],2);
 			if (_instruction.instrution[2]==0)
 				strcpy(label,label_instruction);
 			else {
 				strcat(label,label_instruction);
 				// last instruction
-				 if(_instruction.instrution[2]==7)
+				 if(_instruction.instrution[2]==2)
 					 // save alarm
 					 alarm_save(&alarm);
 			}
 			break;
 		case 0x13:
+			// set alarm enable
+			alarm = alarm_load(_instruction.instrution[1]);
+			alarm.enable = _instruction.instrution[2];
+			alarm_save(&alarm);
 			break;
 		case 0x14:
 			// get alarm min params
@@ -114,11 +122,13 @@ void instruction_execute(void){
 			alarm = alarm_load(_instruction.instrution[1]);
 			instruction_nextionSendInt("n0.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
 			instruction_nextionSendInt("n1.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendStr("t1.txt=",alarm.label);
 			instruction_nextionSendInt("bt0.val=",alarm.enable);
 			// update second alarm
 			alarm = alarm_load(_instruction.instrution[2]);
 			instruction_nextionSendInt("n2.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
 			instruction_nextionSendInt("n3.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendStr("t2.txt=",alarm.label);
 			instruction_nextionSendInt("bt1.val=",alarm.enable);
 			instruction_nextionStop();
 			break;
@@ -132,6 +142,7 @@ void instruction_execute(void){
 			instruction_nextionSendStr("t9.txt=",alarm.label);
 			instruction_nextionSendInt("n0.val=",alarm.alarm.RTC_AlarmTime.RTC_Hours);
 			instruction_nextionSendInt("n1.val=",alarm.alarm.RTC_AlarmTime.RTC_Minutes);
+			instruction_nextionSendInt("bt0.val=",alarm.enable);
 			instruction_nextionSendStr("t11.txt=",rtc_dayToString(alarm.alarm.RTC_AlarmDateWeekDay));
 			instruction_nextionStop();
 			break;
