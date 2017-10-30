@@ -1,4 +1,5 @@
 <map id="Application" name="Application">
-<area shape="rect" id="node1" href="$dc/da7/group___n_p_c.html" title="NPC" alt="" coords="5,5,56,32"/>
-<area shape="rect" id="node2" href="$d5/d84/group___clock___management.html" title="Clock_Management" alt="" coords="239,5,377,32"/>
+<area shape="rect" id="node1" href="$d3/db7/group___n_p_s_c.html" title="NPSC" alt="" coords="5,31,65,57"/>
+<area shape="rect" id="node2" href="$d5/d84/group___clock___management.html" title="Clock_Management" alt="" coords="248,5,387,32"/>
+<area shape="rect" id="node4" href="$df/d4d/group___instructions.html" title="25LC640A instruction set " alt="" coords="272,56,363,83"/>
 </map>

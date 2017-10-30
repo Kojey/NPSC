@@ -117,8 +117,6 @@ void rtc_transmissionStart(uint8_t direction){
 	else if(direction == I2C_Direction_Receiver){
 		while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_RECEIVER_MODE_SELECTED));
 	}
-	/*I2C_SendData(RTC_I2CX,address);
-	while(!I2C_CheckEvent(RTC_I2CX, I2C_EVENT_MASTER_BYTE_TRANSMITTED));*/
 }
 
 /**
@@ -341,6 +339,7 @@ RTC_ClockTypeDef rtc_getClockStruct(){
 	RTC_ClockStruct.date.RTC_Date = rtc_getDate();
 	RTC_ClockStruct.date.RTC_Month = rtc_getMonth();
 	RTC_ClockStruct.date.RTC_Year = rtc_getYear();
+	RTC_ClockStruct.time.RTC_H12 = RTC_H12_AM;
 	return RTC_ClockStruct;
 }
 /**

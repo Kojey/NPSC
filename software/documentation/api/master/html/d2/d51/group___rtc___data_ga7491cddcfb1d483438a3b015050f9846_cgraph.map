@@ -1,0 +1,5 @@
+<map id="rtc_write" name="rtc_write">
+<area shape="rect" id="node2" href="$d4/d36/group___rtc___trans.html#ga34a8f14524ec55afdfc9d13279fd3531" title="Start the I2C communication. " alt="" coords="127,5,273,32"/>
+<area shape="rect" id="node3" href="$d4/d36/group___rtc___trans.html#gacee7d346f76993060665a41efeb80880" title="Write one byte to the slave. " alt="" coords="125,56,275,83"/>
+<area shape="rect" id="node4" href="$d4/d36/group___rtc___trans.html#ga8451d6bada17f6ef70480f86d890a360" title="Stop the transmission. " alt="" coords="127,107,273,133"/>
+</map>

@@ -34,7 +34,7 @@
    <div id="projectname">NPSC
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">NeoPixel Sunrise Clock</div>
+   <div id="projectbrief">Clock</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('dc/d04/group__rtc__test.html','../../'
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Rtc_test<div class="ingroups"><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a> &raquo;  &#124; <a class="el" href="../../d5/d56/group___unit_test.html">UnitTest</a></div></div>  </div>
+<div class="title">Rtc_test<div class="ingroups"><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a> &raquo;  &#124; <a class="el" href="../../d5/d56/group___unit_test.html">UnitTest</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
@@ -110,7 +110,7 @@ Collaboration diagram for Rtc_test:</div>
 <div class="dyncontent">
 <center><table><tr><td><img src="../../dc/d04/group__rtc__test.png" border="0" alt="" usemap="#dc_2d04_2group____rtc____test"/>
 <map name="dc_2d04_2group____rtc____test" id="dc_2d04_2group____rtc____test">
-<area shape="rect" id="node1" href="../../dc/da7/group___n_p_c.html" title="NPC" alt="" coords="16,5,67,32"/>
+<area shape="rect" id="node1" href="../../d3/db7/group___n_p_s_c.html" title="NPSC" alt="" coords="11,5,71,32"/>
 <area shape="rect" id="node2" href="../../d5/d56/group___unit_test.html" title="UnitTest" alt="" coords="5,56,77,83"/>
 </map>
 </td></tr></table></center>
@@ -118,24 +118,31 @@ Collaboration diagram for Rtc_test:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gab7d696e67a3639eb9024bf75d16eb0af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#gab7d696e67a3639eb9024bf75d16eb0af">test_clock_date</a> (void)</td></tr>
-<tr class="memdesc:gab7d696e67a3639eb9024bf75d16eb0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test for date save and load.  <a href="#gab7d696e67a3639eb9024bf75d16eb0af">More...</a><br /></td></tr>
-<tr class="separator:gab7d696e67a3639eb9024bf75d16eb0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad71d331736202cb1f4e4611adc4017e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#gaad71d331736202cb1f4e4611adc4017e">test_clock_time</a> (void)</td></tr>
-<tr class="memdesc:gaad71d331736202cb1f4e4611adc4017e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test for time save and load.  <a href="#gaad71d331736202cb1f4e4611adc4017e">More...</a><br /></td></tr>
-<tr class="separator:gaad71d331736202cb1f4e4611adc4017e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga29ed9f56622242ef59fcab012165f442"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#ga29ed9f56622242ef59fcab012165f442">test_clock_alarm</a> (void)</td></tr>
-<tr class="memdesc:ga29ed9f56622242ef59fcab012165f442"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test for alarm save and load.  <a href="#ga29ed9f56622242ef59fcab012165f442">More...</a><br /></td></tr>
-<tr class="separator:ga29ed9f56622242ef59fcab012165f442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8126f31f44d8046461c99d5c91a1ba93"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#ga8126f31f44d8046461c99d5c91a1ba93">test_alarmAddress</a> (void)</td></tr>
+<tr class="memdesc:ga8126f31f44d8046461c99d5c91a1ba93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test: Different <a class="el" href="../../dd/dc9/struct_r_t_c___clock_type_def.html">RTC_ClockTypeDef</a> are written and read from the external RTC to check that the time was stored accordingly Note that read and write occurs within less than a second.  <a href="#ga8126f31f44d8046461c99d5c91a1ba93">More...</a><br /></td></tr>
+<tr class="separator:ga8126f31f44d8046461c99d5c91a1ba93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac9798f343b6e803d5b97280b649919b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gaac9798f343b6e803d5b97280b649919b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#gaac9798f343b6e803d5b97280b649919b">test_alarmSaveLoad</a> (void)</td></tr>
+<tr class="memdesc:gaac9798f343b6e803d5b97280b649919b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saved alarm and loaded alarm should be the same. <br /></td></tr>
+<tr class="separator:gaac9798f343b6e803d5b97280b649919b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa82ec9774d6d5c9e81b9f983e44ffff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5">test_rtc_clock</a> ()</td></tr>
+<tr class="memdesc:gaa82ec9774d6d5c9e81b9f983e44ffff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit test: Different <a class="el" href="../../dd/dc9/struct_r_t_c___clock_type_def.html">RTC_ClockTypeDef</a> are written and read from the external RTC to check that the time was stored accordingly Note that read and write occurs within less than a second.  <a href="#gaa82ec9774d6d5c9e81b9f983e44ffff5">More...</a><br /></td></tr>
+<tr class="separator:gaa82ec9774d6d5c9e81b9f983e44ffff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae848fc3c61c565ec73927e0f9ddeceb9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9">test_result</a> (bool(*function)(void))</td></tr>
+<tr class="memdesc:gae848fc3c61c565ec73927e0f9ddeceb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on LEDs based on test results.  <a href="#gae848fc3c61c565ec73927e0f9ddeceb9">More...</a><br /></td></tr>
+<tr class="separator:gae848fc3c61c565ec73927e0f9ddeceb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1006200308c80395dd9c380a3cb36292"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga1006200308c80395dd9c380a3cb36292"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>test_all</b> (void)</td></tr>
+<tr class="separator:ga1006200308c80395dd9c380a3cb36292"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="ga29ed9f56622242ef59fcab012165f442"></a>
+<a class="anchor" id="ga8126f31f44d8046461c99d5c91a1ba93"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a> test_clock_alarm </td>
+          <td class="memname">bool test_alarmAddress </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -144,7 +151,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unit test for alarm save and load. </p>
+<p>Unit test: Different <a class="el" href="../../dd/dc9/struct_r_t_c___clock_type_def.html">RTC_ClockTypeDef</a> are written and read from the external RTC to check that the time was stored accordingly Note that read and write occurs within less than a second. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -153,84 +160,123 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">bool</td><td></td></tr>
+    <tr><td class="paramname">bool</td><td>All address offset should depend on the alarm id </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../de/d1a/rtc__test_8c_source.html#l00084">84</a> of file <a class="el" href="../../de/d1a/rtc__test_8c_source.html">rtc_test.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d15/test__alarm_8c_source.html#l00048">48</a> of file <a class="el" href="../../d1/d15/test__alarm_8c_source.html">test_alarm.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d04/group__rtc__test_ga29ed9f56622242ef59fcab012165f442_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_ga29ed9f56622242ef59fcab012165f442_cgraph" alt=""/></div>
-<map name="dc/d04/group__rtc__test_ga29ed9f56622242ef59fcab012165f442_cgraph" id="dc/d04/group__rtc__test_ga29ed9f56622242ef59fcab012165f442_cgraph">
-<area shape="rect" id="node2" href="../../d9/dcf/group___clock___alarms.html#gab56f512746d4f2638232db28bb7dac2b" title="Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. " alt="" coords="177,5,263,32"/>
-<area shape="rect" id="node3" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="175,56,265,83"/>
+<div class="center"><img src="../../dc/d04/group__rtc__test_ga8126f31f44d8046461c99d5c91a1ba93_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_ga8126f31f44d8046461c99d5c91a1ba93_cgraph" alt=""/></div>
+<map name="dc/d04/group__rtc__test_ga8126f31f44d8046461c99d5c91a1ba93_cgraph" id="dc/d04/group__rtc__test_ga8126f31f44d8046461c99d5c91a1ba93_cgraph">
+<area shape="rect" id="node2" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert that a equals b. " alt="" coords="184,5,275,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="gab7d696e67a3639eb9024bf75d16eb0af"></a>
+<a class="anchor" id="gae848fc3c61c565ec73927e0f9ddeceb9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a> test_clock_date </td>
+          <td class="memname">void test_result </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool(*)(void)&#160;</td>
+          <td class="paramname"><em>function</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unit test for date save and load. </p>
+<p>Turn on LEDs based on test results. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">None</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">bool</td><td></td></tr>
+    <tr><td class="paramname">*function</td><td>pointer to a function with no parameters </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../de/d1a/rtc__test_8c_source.html#l00042">42</a> of file <a class="el" href="../../de/d1a/rtc__test_8c_source.html">rtc_test.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d8/db9/test_8c_source.html#l00043">43</a> of file <a class="el" href="../../d8/db9/test_8c_source.html">test.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d04/group__rtc__test_gab7d696e67a3639eb9024bf75d16eb0af_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_gab7d696e67a3639eb9024bf75d16eb0af_cgraph" alt=""/></div>
-<map name="dc/d04/group__rtc__test_gab7d696e67a3639eb9024bf75d16eb0af_cgraph" id="dc/d04/group__rtc__test_gab7d696e67a3639eb9024bf75d16eb0af_cgraph">
-<area shape="rect" id="node2" href="../../de/dbe/group___clock___time___date.html#gaf16498fa2702bfda6b89a3335ccc7ca6" title="Set the clock&#39;s date. " alt="" coords="168,5,275,32"/>
-<area shape="rect" id="node3" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="176,56,267,83"/>
+<div class="center"><img src="../../dc/d04/group__rtc__test_gae848fc3c61c565ec73927e0f9ddeceb9_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_gae848fc3c61c565ec73927e0f9ddeceb9_cgraph" alt=""/></div>
+<map name="dc/d04/group__rtc__test_gae848fc3c61c565ec73927e0f9ddeceb9_cgraph" id="dc/d04/group__rtc__test_gae848fc3c61c565ec73927e0f9ddeceb9_cgraph">
+<area shape="rect" id="node2" href="../../da/d69/group___neo_pixel___state.html#gae027558106eef5c81996294f4561fecb" title="Set the brightness of the led. " alt="" coords="141,5,299,32"/>
+<area shape="rect" id="node3" href="../../d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7" title="set all the pixel on the line to a specific colour " alt="" coords="136,56,304,83"/>
+<area shape="rect" id="node5" href="../../d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="1031,993,1084,1020"/>
+<area shape="rect" id="node6" href="../../dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="168,715,272,741"/>
+<area shape="rect" id="node25" href="../../de/deb/group__clock__test.html#gaad71d331736202cb1f4e4611adc4017e" title="Unit test for time save and load. " alt="" coords="163,812,277,839"/>
+<area shape="rect" id="node27" href="../../de/deb/group__clock__test.html#gab7d696e67a3639eb9024bf75d16eb0af" title="Unit test for date save and load. " alt="" coords="163,863,277,889"/>
+<area shape="rect" id="node29" href="../../de/deb/group__clock__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="159,913,281,940"/>
+<area shape="rect" id="node31" href="../../dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="143,965,297,1006"/>
+<area shape="rect" id="node36" href="../../dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="143,1043,297,1085"/>
+<area shape="rect" id="node39" href="../../dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="143,1163,297,1205"/>
+<area shape="rect" id="node44" href="../../d1/da8/group__clock__management__test__comparison.html#gaee6cb57486595cb01fabd83a761cc5bd" title="Unit testing for time comparison. " alt="" coords="143,1265,297,1306"/>
+<area shape="rect" id="node47" href="../../d1/da8/group__clock__management__test__comparison.html#ga654df72e52579be8b193aeaf4f029ff3" title="Unit testing for date comparison. " alt="" coords="143,1330,297,1371"/>
+<area shape="rect" id="node49" href="../../d1/da8/group__clock__management__test__comparison.html#gac319e1ba8c6efa413c8e8c05113094a0" title="Unit testing for alarm comparison. " alt="" coords="143,1395,297,1437"/>
+<area shape="rect" id="node4" href="../../d6/dae/group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe" title="Find max between a, b, and c. " alt="" coords="439,56,485,83"/>
+<area shape="rect" id="node7" href="../../dd/d50/group___rtc___set___get.html#ga0cacbbf5ede5a655c0d0e77341df4e94" title="Set the clock. " alt="" coords="397,335,527,361"/>
+<area shape="rect" id="node16" href="../../dd/d50/group___rtc___set___get.html#gaf76885b9cc86f40e4042655417662a79" title="Read clock information. " alt="" coords="397,664,527,691"/>
+<area shape="rect" id="node24" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert that a equals b. " alt="" coords="417,867,507,893"/>
+<area shape="rect" id="node8" href="../../dc/d0a/group___rtc___clock.html#gada71605e2109044f64e07a3a3541065b" title="Set the seconds. " alt="" coords="668,360,787,387"/>
+<area shape="rect" id="node10" href="../../dc/d0a/group___rtc___clock.html#gaef1ba54cfc5aae8434b4749d0691f4c2" title="Set the minutes. " alt="" coords="673,411,781,437"/>
+<area shape="rect" id="node11" href="../../dc/d0a/group___rtc___clock.html#gaa5db7f40fcc5f2a1c859f823e3f61d28" title="Set the hours. " alt="" coords="679,461,776,488"/>
+<area shape="rect" id="node12" href="../../dc/d0a/group___rtc___clock.html#ga573eeb9c5984abde30dc6dde7c119d6a" title="Set the day. " alt="" coords="684,157,771,184"/>
+<area shape="rect" id="node13" href="../../dc/d0a/group___rtc___clock.html#gad6121ff0b6714b623622aefdc3dc2af7" title="Set the date. " alt="" coords="682,208,773,235"/>
+<area shape="rect" id="node14" href="../../dc/d0a/group___rtc___clock.html#ga90f5b697b56ac5bc171bf10e80d066a8" title="Set the month. " alt="" coords="678,259,777,285"/>
+<area shape="rect" id="node15" href="../../dc/d0a/group___rtc___clock.html#gabebfeb7959aac32390f5d216b0d2faed" title="Set the year. " alt="" coords="683,309,772,336"/>
+<area shape="rect" id="node9" href="../../d2/d51/group___rtc___data.html#ga7491cddcfb1d483438a3b015050f9846" title="Write a byte to a slave. " alt="" coords="897,335,969,361"/>
+<area shape="rect" id="node17" href="../../dc/d0a/group___rtc___clock.html#ga16ece523f37328e5cac20c11c5972ba9" title="Read the seconds. " alt="" coords="671,613,784,640"/>
+<area shape="rect" id="node18" href="../../dc/d0a/group___rtc___clock.html#gab953fe33300935aba6b2859c414e6de4" title="Read the minutes. " alt="" coords="673,664,781,691"/>
+<area shape="rect" id="node19" href="../../dc/d0a/group___rtc___clock.html#gaca41fe81d05a91911ed1ca03773b42e3" title="Read the hours. " alt="" coords="679,715,776,741"/>
+<area shape="rect" id="node20" href="../../dc/d0a/group___rtc___clock.html#gaccb4c02b04b5d1594eaa897570d8d962" title="Read the day. " alt="" coords="684,765,771,792"/>
+<area shape="rect" id="node21" href="../../dc/d0a/group___rtc___clock.html#ga79543b56f505903a34acb34304de4d10" title="Read the date. " alt="" coords="682,816,773,843"/>
+<area shape="rect" id="node22" href="../../dc/d0a/group___rtc___clock.html#ga9921a454002cdde7a3bf6f18a66c5256" title="Read the month. " alt="" coords="678,867,777,893"/>
+<area shape="rect" id="node23" href="../../dc/d0a/group___rtc___clock.html#ga386d0c523103c2add04e1cc091c7b877" title="Read the year. " alt="" coords="683,512,772,539"/>
+<area shape="rect" id="node26" href="../../de/dbe/group___clock___time___date.html#ga11404197d58ddf6b46230bcde4282ef2" title="Set the clock&#39;s time. " alt="" coords="409,765,515,792"/>
+<area shape="rect" id="node28" href="../../de/dbe/group___clock___time___date.html#gaf16498fa2702bfda6b89a3335ccc7ca6" title="Set the clock&#39;s date. " alt="" coords="409,816,515,843"/>
+<area shape="rect" id="node30" href="../../d9/dcf/group___clock___alarms.html#gaaf5968b35dfb9a0c2b77dcad147f4435" title="Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. " alt="" coords="401,917,523,944"/>
+<area shape="rect" id="node32" href="../../df/d13/group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="630,968,825,995"/>
+<area shape="rect" id="node34" href="../../df/d13/group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62" title="Load the time settings from eeprom. " alt="" coords="367,1019,557,1045"/>
+<area shape="rect" id="node33" href="../../d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="883,1069,983,1096"/>
+<area shape="rect" id="node35" href="../../d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="884,1120,981,1147"/>
+<area shape="rect" id="node37" href="../../df/d13/group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="365,1069,559,1096"/>
+<area shape="rect" id="node38" href="../../df/d13/group___clock___management___eeprom.html#ga3980560a99803ef94287127ff3157f91" title="Load the date settings from eeprom. " alt="" coords="367,1120,557,1147"/>
+<area shape="rect" id="node40" href="../../df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="362,1171,562,1197"/>
+<area shape="rect" id="node42" href="../../df/d13/group___clock___management___eeprom.html#gab8401f24d519d3a2e54c3ba5dab80376" title="load an alarm settings from eeprom " alt="" coords="364,1221,560,1248"/>
+<area shape="rect" id="node43" href="../../d5/d7f/group__unit_test___assert.html#gaa97328e4e17a7361f0bd831d96d55990" title="Assert that condition is true. " alt="" coords="420,1323,504,1349"/>
+<area shape="rect" id="node41" href="../../d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="655,1221,799,1248"/>
+<area shape="rect" id="node45" href="../../d5/d7f/group__unit_test___assert.html#ga059f3aabaac68c7d42f74ae620c3ff24" title="Assert that condition is false. " alt="" coords="417,1373,507,1400"/>
+<area shape="rect" id="node46" href="../../d7/dce/group___clock___management___alarm_comp.html#gaad24166797ca90cee706c0d8f4983560" title="Compare two time. " alt="" coords="620,1399,835,1425"/>
+<area shape="rect" id="node48" href="../../d7/dce/group___clock___management___alarm_comp.html#ga8e277f1ee687458304a10016dec2dbf7" title="Convert an date to an integer. " alt="" coords="355,1424,569,1451"/>
+<area shape="rect" id="node50" href="../../d7/dce/group___clock___management___alarm_comp.html#gaba2475baa28dfdc82e7a51a19fa8a7b9" title="Compare two alarm. " alt="" coords="352,1475,572,1501"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="gaad71d331736202cb1f4e4611adc4017e"></a>
+<a class="anchor" id="gaa82ec9774d6d5c9e81b9f983e44ffff5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d6/dae/group___utils.html#gaf6a258d8f3ee5206d682d799316314b1">bool</a> test_clock_time </td>
+          <td class="memname">bool test_rtc_clock </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unit test for time save and load. </p>
+<p>Unit test: Different <a class="el" href="../../dd/dc9/struct_r_t_c___clock_type_def.html">RTC_ClockTypeDef</a> are written and read from the external RTC to check that the time was stored accordingly Note that read and write occurs within less than a second. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">None</td><td></td></tr>
@@ -244,15 +290,51 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../de/d1a/rtc__test_8c_source.html#l00063">63</a> of file <a class="el" href="../../de/d1a/rtc__test_8c_source.html">rtc_test.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d1/d50/test__rtc_8c_source.html#l00044">44</a> of file <a class="el" href="../../d1/d50/test__rtc_8c_source.html">test_rtc.c</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../dc/d04/group__rtc__test_gaad71d331736202cb1f4e4611adc4017e_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_gaad71d331736202cb1f4e4611adc4017e_cgraph" alt=""/></div>
-<map name="dc/d04/group__rtc__test_gaad71d331736202cb1f4e4611adc4017e_cgraph" id="dc/d04/group__rtc__test_gaad71d331736202cb1f4e4611adc4017e_cgraph">
-<area shape="rect" id="node2" href="../../de/dbe/group___clock___time___date.html#ga11404197d58ddf6b46230bcde4282ef2" title="Set the clock&#39;s time. " alt="" coords="168,5,275,32"/>
-<area shape="rect" id="node3" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="176,56,267,83"/>
+<div class="center"><img src="../../dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_cgraph.png" border="0" usemap="#dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_cgraph" alt=""/></div>
+<map name="dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_cgraph" id="dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_cgraph">
+<area shape="rect" id="node2" href="../../dd/d50/group___rtc___set___get.html#ga0cacbbf5ede5a655c0d0e77341df4e94" title="Set the clock. " alt="" coords="157,183,288,209"/>
+<area shape="rect" id="node17" href="../../d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="196,563,249,589"/>
+<area shape="rect" id="node18" href="../../dd/d50/group___rtc___set___get.html#gaf76885b9cc86f40e4042655417662a79" title="Read clock information. " alt="" coords="157,512,288,539"/>
+<area shape="rect" id="node29" href="../../d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert that a equals b. " alt="" coords="177,613,268,640"/>
+<area shape="rect" id="node3" href="../../dc/d0a/group___rtc___clock.html#gada71605e2109044f64e07a3a3541065b" title="Set the seconds. " alt="" coords="336,259,455,285"/>
+<area shape="rect" id="node11" href="../../dc/d0a/group___rtc___clock.html#gaef1ba54cfc5aae8434b4749d0691f4c2" title="Set the minutes. " alt="" coords="341,309,449,336"/>
+<area shape="rect" id="node12" href="../../dc/d0a/group___rtc___clock.html#gaa5db7f40fcc5f2a1c859f823e3f61d28" title="Set the hours. " alt="" coords="347,5,444,32"/>
+<area shape="rect" id="node13" href="../../dc/d0a/group___rtc___clock.html#ga573eeb9c5984abde30dc6dde7c119d6a" title="Set the day. " alt="" coords="352,56,439,83"/>
+<area shape="rect" id="node14" href="../../dc/d0a/group___rtc___clock.html#gad6121ff0b6714b623622aefdc3dc2af7" title="Set the date. " alt="" coords="350,107,441,133"/>
+<area shape="rect" id="node15" href="../../dc/d0a/group___rtc___clock.html#ga90f5b697b56ac5bc171bf10e80d066a8" title="Set the month. " alt="" coords="346,157,445,184"/>
+<area shape="rect" id="node16" href="../../dc/d0a/group___rtc___clock.html#gabebfeb7959aac32390f5d216b0d2faed" title="Set the year. " alt="" coords="351,208,440,235"/>
+<area shape="rect" id="node4" href="../../d5/d7f/group__unit_test___assert.html#gabdf52aaa2b53574894204894f0cef1cb" title="Assert that a&lt;=x&lt;b. " alt="" coords="503,157,609,184"/>
+<area shape="rect" id="node7" href="../../d2/d51/group___rtc___data.html#ga7491cddcfb1d483438a3b015050f9846" title="Write a byte to a slave. " alt="" coords="520,208,592,235"/>
+<area shape="rect" id="node5" href="../../d5/d7f/group__unit_test___assert.html#ga7460a41e1e22e13208e5a6a177348d97" title="Assert that a is greater or equals to b. " alt="" coords="673,157,821,184"/>
+<area shape="rect" id="node6" href="../../d5/d7f/group__unit_test___assert.html#gafdb34aae8cfede5427b91c2a4783ffd7" title="Assert that a less than than b. " alt="" coords="704,107,791,133"/>
+<area shape="rect" id="node8" href="../../d4/d36/group___rtc___trans.html#ga34a8f14524ec55afdfc9d13279fd3531" title="Start the I2C communication. " alt="" coords="674,397,821,424"/>
+<area shape="rect" id="node9" href="../../d4/d36/group___rtc___trans.html#gacee7d346f76993060665a41efeb80880" title="Write one byte to the slave. " alt="" coords="673,259,822,285"/>
+<area shape="rect" id="node10" href="../../d4/d36/group___rtc___trans.html#ga8451d6bada17f6ef70480f86d890a360" title="Stop the transmission. " alt="" coords="675,208,820,235"/>
+<area shape="rect" id="node19" href="../../dc/d0a/group___rtc___clock.html#ga16ece523f37328e5cac20c11c5972ba9" title="Read the seconds. " alt="" coords="339,563,452,589"/>
+<area shape="rect" id="node23" href="../../dc/d0a/group___rtc___clock.html#gab953fe33300935aba6b2859c414e6de4" title="Read the minutes. " alt="" coords="341,613,449,640"/>
+<area shape="rect" id="node24" href="../../dc/d0a/group___rtc___clock.html#gaca41fe81d05a91911ed1ca03773b42e3" title="Read the hours. " alt="" coords="347,664,444,691"/>
+<area shape="rect" id="node25" href="../../dc/d0a/group___rtc___clock.html#gaccb4c02b04b5d1594eaa897570d8d962" title="Read the day. " alt="" coords="352,715,439,741"/>
+<area shape="rect" id="node26" href="../../dc/d0a/group___rtc___clock.html#ga79543b56f505903a34acb34304de4d10" title="Read the date. " alt="" coords="350,411,441,437"/>
+<area shape="rect" id="node27" href="../../dc/d0a/group___rtc___clock.html#ga9921a454002cdde7a3bf6f18a66c5256" title="Read the month. " alt="" coords="346,461,445,488"/>
+<area shape="rect" id="node28" href="../../dc/d0a/group___rtc___clock.html#ga386d0c523103c2add04e1cc091c7b877" title="Read the year. " alt="" coords="351,512,440,539"/>
+<area shape="rect" id="node20" href="../../d2/d51/group___rtc___data.html#gaca2ecb7133bde56e1161ea639dfa78bc" title="Read a byte from a slave. " alt="" coords="521,537,591,564"/>
+<area shape="rect" id="node21" href="../../d4/d36/group___rtc___trans.html#ga4cc3e427f119571c10aaf1eadde296b0" title="Read one byte from the slave and do not acknowledge the byte (end transmission) " alt="" coords="657,563,837,589"/>
+<area shape="rect" id="node22" href="../../d4/d36/group___rtc___trans.html#ga6b6a88617d82889a7831f17cf5ac60e6" title="Read one byte from slave and acknowledge the byte (request another byte) " alt="" coords="661,512,833,539"/>
+</map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_icgraph.png" border="0" usemap="#dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_icgraph" alt=""/></div>
+<map name="dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_icgraph" id="dc/d04/group__rtc__test_gaa82ec9774d6d5c9e81b9f983e44ffff5_icgraph">
+<area shape="rect" id="node2" href="../../dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="157,5,240,32"/>
 </map>
 </div>
 </p>

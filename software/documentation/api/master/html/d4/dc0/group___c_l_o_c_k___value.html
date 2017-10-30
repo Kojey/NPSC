@@ -34,7 +34,7 @@
    <div id="projectname">NPSC
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">NeoPixel Sunrise Clock</div>
+   <div id="projectbrief">Clock</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d4/dc0/group___c_l_o_c_k___value.html'
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">CLOCK_Value<div class="ingroups"><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
+<div class="title">CLOCK_Value<div class="ingroups"><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -120,138 +120,33 @@ Collaboration diagram for CLOCK_Value:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga41cab09c59fe3cc9a25719ec3be3fd4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga41cab09c59fe3cc9a25719ec3be3fd4d">CLOCK_WeekDay</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 24)</td></tr>
+<tr class="memitem:ga41cab09c59fe3cc9a25719ec3be3fd4d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga41cab09c59fe3cc9a25719ec3be3fd4d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_WeekDay</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 24)</td></tr>
 <tr class="separator:ga41cab09c59fe3cc9a25719ec3be3fd4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga483cf87b93faab3c148b7933391acba0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga483cf87b93faab3c148b7933391acba0">CLOCK_Date</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 16)</td></tr>
+<tr class="memitem:ga483cf87b93faab3c148b7933391acba0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga483cf87b93faab3c148b7933391acba0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Date</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 16)</td></tr>
 <tr class="separator:ga483cf87b93faab3c148b7933391acba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabd717170aa836b16355413e2c5ca0ad8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#gabd717170aa836b16355413e2c5ca0ad8">CLOCK_Month</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 8)</td></tr>
+<tr class="memitem:gabd717170aa836b16355413e2c5ca0ad8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gabd717170aa836b16355413e2c5ca0ad8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Month</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 8)</td></tr>
 <tr class="separator:gabd717170aa836b16355413e2c5ca0ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga35866274a21e8d3c0223c465209f3d74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga35866274a21e8d3c0223c465209f3d74">CLOCK_Year</a>&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>()</td></tr>
+<tr class="memitem:ga35866274a21e8d3c0223c465209f3d74"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga35866274a21e8d3c0223c465209f3d74"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Year</b>&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>()</td></tr>
 <tr class="separator:ga35866274a21e8d3c0223c465209f3d74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49ea807900604714bab70a531081ac6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga49ea807900604714bab70a531081ac6a">CLOCK_Hours</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 24)</td></tr>
+<tr class="memitem:ga49ea807900604714bab70a531081ac6a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga49ea807900604714bab70a531081ac6a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Hours</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 24)</td></tr>
 <tr class="separator:ga49ea807900604714bab70a531081ac6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga302d9ee9e79c96969e558b9ffdba3212"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga302d9ee9e79c96969e558b9ffdba3212">CLOCK_Minutes</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 16)</td></tr>
+<tr class="memitem:ga302d9ee9e79c96969e558b9ffdba3212"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga302d9ee9e79c96969e558b9ffdba3212"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Minutes</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 16)</td></tr>
 <tr class="separator:ga302d9ee9e79c96969e558b9ffdba3212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c539bc50b05addb6629dfea687d65b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#ga4c539bc50b05addb6629dfea687d65b7">CLOCK_Seconds</a>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 8)</td></tr>
+<tr class="memitem:ga4c539bc50b05addb6629dfea687d65b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga4c539bc50b05addb6629dfea687d65b7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Seconds</b>&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 8)</td></tr>
 <tr class="separator:ga4c539bc50b05addb6629dfea687d65b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafec8368ed05e06cadccc3becf2cd0ead"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dc0/group___c_l_o_c_k___value.html#gafec8368ed05e06cadccc3becf2cd0ead">CLOCK_Format</a>&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>()</td></tr>
+<tr class="memitem:gafec8368ed05e06cadccc3becf2cd0ead"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gafec8368ed05e06cadccc3becf2cd0ead"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CLOCK_Format</b>&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>()</td></tr>
 <tr class="separator:gafec8368ed05e06cadccc3becf2cd0ead"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Access time or date parameters. </p>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ga483cf87b93faab3c148b7933391acba0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Date&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 16)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00076">76</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gafec8368ed05e06cadccc3becf2cd0ead"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Format&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00082">82</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga49ea807900604714bab70a531081ac6a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Hours&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 24)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00079">79</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga302d9ee9e79c96969e558b9ffdba3212"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Minutes&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 16)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00080">80</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gabd717170aa836b16355413e2c5ca0ad8"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Month&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 8)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00077">77</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga4c539bc50b05addb6629dfea687d65b7"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Seconds&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#ga03ae6948083c259f6edc0b146f40dc62">clock_getTime</a>() &gt;&gt; 8)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00081">81</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga41cab09c59fe3cc9a25719ec3be3fd4d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_WeekDay&#160;&#160;&#160;(uint8_t) (<a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>() &gt;&gt; 24)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00075">75</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga35866274a21e8d3c0223c465209f3d74"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CLOCK_Year&#160;&#160;&#160;(uint8_t) <a class="el" href="../../de/dbe/group___clock___time___date.html#gabb4d72928cb3d131d40067fb141003aa">clock_getDate</a>()</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00078">78</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

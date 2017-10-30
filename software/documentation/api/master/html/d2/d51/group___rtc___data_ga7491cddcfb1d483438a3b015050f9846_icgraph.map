@@ -1,0 +1,16 @@
+<map id="rtc_write" name="rtc_write">
+<area shape="rect" id="node2" href="$dc/d0a/group___rtc___clock.html#ga5ecf74bd6564eadf1452639acadd1638" title="Read clock information. " alt="" coords="125,5,256,32"/>
+<area shape="rect" id="node6" href="$dc/d0a/group___rtc___clock.html#gada71605e2109044f64e07a3a3541065b" title="Set the seconds. " alt="" coords="131,56,250,83"/>
+<area shape="rect" id="node9" href="$dc/d0a/group___rtc___clock.html#gaef1ba54cfc5aae8434b4749d0691f4c2" title="Set the minutes. " alt="" coords="137,107,245,133"/>
+<area shape="rect" id="node10" href="$dc/d0a/group___rtc___clock.html#gaa5db7f40fcc5f2a1c859f823e3f61d28" title="Set the hours. " alt="" coords="142,157,239,184"/>
+<area shape="rect" id="node11" href="$dc/d0a/group___rtc___clock.html#ga573eeb9c5984abde30dc6dde7c119d6a" title="Set the day. " alt="" coords="147,259,234,285"/>
+<area shape="rect" id="node13" href="$dc/d0a/group___rtc___clock.html#gad6121ff0b6714b623622aefdc3dc2af7" title="Set the date. " alt="" coords="145,309,236,336"/>
+<area shape="rect" id="node14" href="$dc/d0a/group___rtc___clock.html#ga90f5b697b56ac5bc171bf10e80d066a8" title="Set the month. " alt="" coords="141,360,240,387"/>
+<area shape="rect" id="node15" href="$dc/d0a/group___rtc___clock.html#gabebfeb7959aac32390f5d216b0d2faed" title="Set the year. " alt="" coords="146,208,235,235"/>
+<area shape="rect" id="node3" href="$df/d29/group___application.html#ga6a899680e4f263fdb428d7bd1ee5aa60" title="Synchronize internal alarm to external alarm. " alt="" coords="304,5,435,32"/>
+<area shape="rect" id="node4" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="483,107,587,133"/>
+<area shape="rect" id="node5" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="635,107,717,133"/>
+<area shape="rect" id="node7" href="$dc/d0a/group___rtc___clock.html#gac2ca52a1eef0c3d39e6bbe8f45529425" title="Set the time. " alt="" coords="306,107,433,133"/>
+<area shape="rect" id="node8" href="$dc/d0a/group___rtc___clock.html#gac766665e32ee251577da616c036d4a19" title="Set the clock. " alt="" coords="304,183,435,209"/>
+<area shape="rect" id="node12" href="$dc/d0a/group___rtc___clock.html#ga890b0f02a021aaf3f3f299e9dda9c9a2" title="Set the date. " alt="" coords="307,284,432,311"/>
+</map>

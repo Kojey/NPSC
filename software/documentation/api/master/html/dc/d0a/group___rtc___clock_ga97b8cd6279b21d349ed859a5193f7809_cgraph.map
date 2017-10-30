@@ -1,0 +1,9 @@
+<map id="rtc_getTimeStruct" name="rtc_getTimeStruct">
+<area shape="rect" id="node2" href="$dc/d0a/group___rtc___clock.html#ga16ece523f37328e5cac20c11c5972ba9" title="Read the seconds. " alt="" coords="180,5,293,32"/>
+<area shape="rect" id="node7" href="$dc/d0a/group___rtc___clock.html#gab953fe33300935aba6b2859c414e6de4" title="Read the minutes. " alt="" coords="183,56,291,83"/>
+<area shape="rect" id="node8" href="$dc/d0a/group___rtc___clock.html#gaca41fe81d05a91911ed1ca03773b42e3" title="Read the hours. " alt="" coords="188,107,285,133"/>
+<area shape="rect" id="node3" href="$d2/d51/group___rtc___data.html#gaca2ecb7133bde56e1161ea639dfa78bc" title="Read a byte from a slave. " alt="" coords="341,56,411,83"/>
+<area shape="rect" id="node4" href="$d4/d36/group___rtc___trans.html#ga34a8f14524ec55afdfc9d13279fd3531" title="Start the I2C communication. " alt="" coords="475,5,622,32"/>
+<area shape="rect" id="node5" href="$d4/d36/group___rtc___trans.html#ga4cc3e427f119571c10aaf1eadde296b0" title="Read one byte from the slave and do not acknowledge the byte (end transmission) " alt="" coords="459,56,639,83"/>
+<area shape="rect" id="node6" href="$d4/d36/group___rtc___trans.html#ga6b6a88617d82889a7831f17cf5ac60e6" title="Read one byte from slave and acknowledge the byte (request another byte) " alt="" coords="463,107,635,133"/>
+</map>

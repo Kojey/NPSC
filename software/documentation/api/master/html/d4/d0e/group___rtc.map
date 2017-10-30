@@ -1,0 +1,10 @@
+<map id="Rtc" name="Rtc">
+<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework driver modules. " alt="" coords="5,157,92,184"/>
+<area shape="rect" id="node2" href="$dd/d79/group___rtc___init.html" title="Rtc initialisation functions. " alt="" coords="249,5,397,32"/>
+<area shape="rect" id="node3" href="$d4/d36/group___rtc___trans.html" title="Low level interaction wih RTC using I2C. " alt="" coords="231,56,416,83"/>
+<area shape="rect" id="node4" href="$d2/d51/group___rtc___data.html" title="Byte transmission between master and RTC. " alt="" coords="259,107,387,133"/>
+<area shape="rect" id="node5" href="$df/df2/group___rtc___string.html" title="Get string from int month or weekday. " alt="" coords="281,157,365,184"/>
+<area shape="rect" id="node6" href="$d2/de3/group___eeprom___trans.html" title="Eeprom data transmission functions. " alt="" coords="245,208,402,235"/>
+<area shape="rect" id="node8" href="$dd/d50/group___rtc___set___get.html" title="Alarm/Clock" alt="" coords="276,259,371,285"/>
+<area shape="rect" id="node9" href="$dc/d0a/group___rtc___clock.html" title="Set/Get time information. " alt="" coords="276,309,371,336"/>
+</map>

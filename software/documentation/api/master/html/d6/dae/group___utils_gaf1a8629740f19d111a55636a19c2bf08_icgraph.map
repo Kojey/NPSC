@@ -1,22 +1,27 @@
 <map id="delay" name="delay">
-<area shape="rect" id="node2" href="$d6/d06/group__eeprom__test.html#ga7ca2c7ea92965216763b50e39a023637" title="Unit test for writing and reading to/from the eeprom. " alt="" coords="319,341,481,368"/>
-<area shape="rect" id="node3" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="573,30,718,71"/>
-<area shape="rect" id="node4" href="$d6/d06/group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="571,587,719,628"/>
-<area shape="rect" id="node5" href="$d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="131,214,231,241"/>
-<area shape="rect" id="node15" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="132,442,229,469"/>
-<area shape="rect" id="node21" href="$d2/de3/group___eeprom___trans.html#ga8c4d6169df1fdb9baeca667b5e9b0058" title="Write a page to the eeprom. " alt="" coords="107,290,255,317"/>
-<area shape="rect" id="node6" href="$df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="545,222,745,249"/>
-<area shape="rect" id="node8" href="$df/d13/group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="303,189,497,216"/>
-<area shape="rect" id="node10" href="$df/d13/group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="303,240,497,266"/>
-<area shape="rect" id="node12" href="$d2/de3/group___eeprom___trans.html#ga7964a5a66da1c4a59a42309a93752217" title="Clear eeprom data. " alt="" coords="350,138,450,165"/>
-<area shape="rect" id="node13" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="328,290,472,317"/>
-<area shape="rect" id="node14" href="$d2/de3/group___eeprom___trans.html#ga7d9db4a4822fa0c3e5b811615aaed569" title="Write 4 bytes to the eeprom. " alt="" coords="329,37,471,64"/>
-<area shape="rect" id="node7" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="793,334,948,375"/>
-<area shape="rect" id="node9" href="$dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="569,282,722,323"/>
-<area shape="rect" id="node11" href="$dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="569,363,722,404"/>
-<area shape="rect" id="node16" href="$df/d13/group___clock___management___eeprom.html#gab8401f24d519d3a2e54c3ba5dab80376" title="load an alarm settings from eeprom " alt="" coords="547,460,743,486"/>
-<area shape="rect" id="node17" href="$df/d13/group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62" title="Load the time settings from eeprom. " alt="" coords="305,442,495,469"/>
-<area shape="rect" id="node18" href="$df/d13/group___clock___management___eeprom.html#ga3980560a99803ef94287127ff3157f91" title="Load the date settings from eeprom. " alt="" coords="305,493,495,520"/>
-<area shape="rect" id="node19" href="$d2/de3/group___eeprom___trans.html#ga9a323370ddd02d91c6118f104c015b43" title="Read a 32byte from eeprom. " alt="" coords="331,392,469,418"/>
-<area shape="rect" id="node20" href="$d2/de3/group___eeprom___trans.html#gab7c6abb0e0c39a8c152307fb822ffa0c" title="eeprom_readNBytes" alt="" coords="329,594,471,621"/>
+<area shape="rect" id="node2" href="$d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="131,373,231,400"/>
+<area shape="rect" id="node7" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="996,361,1079,388"/>
+<area shape="rect" id="node16" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="573,712,718,754"/>
+<area shape="rect" id="node17" href="$d6/d06/group__eeprom__test.html#ga657b925b06c81d842b9fa62b666f95de" title="Unit test for writing and reading to/from the eeprom. " alt="" coords="319,525,481,552"/>
+<area shape="rect" id="node18" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="132,601,229,628"/>
+<area shape="rect" id="node25" href="$d2/de3/group___eeprom___trans.html#ga8c4d6169df1fdb9baeca667b5e9b0058" title="Write a page to the eeprom. " alt="" coords="107,880,255,906"/>
+<area shape="rect" id="node26" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="819,69,923,96"/>
+<area shape="rect" id="node3" href="$df/d29/group___application.html#ga95b0d4966b7fef40d01b5fc4849e7e5d" title="Save alarm to memory. " alt="" coords="601,237,690,264"/>
+<area shape="rect" id="node5" href="$df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="545,420,745,446"/>
+<area shape="rect" id="node8" href="$df/d13/group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="303,221,497,248"/>
+<area shape="rect" id="node10" href="$df/d13/group___clock___management___eeprom.html#ga32f8e9df4e2b14dfa0db0300437fe335" title="Save the date settings to eeprom. " alt="" coords="303,474,497,501"/>
+<area shape="rect" id="node12" href="$d2/de3/group___eeprom___trans.html#ga7964a5a66da1c4a59a42309a93752217" title="Clear eeprom data. " alt="" coords="350,272,450,298"/>
+<area shape="rect" id="node13" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="328,322,472,349"/>
+<area shape="rect" id="node15" href="$d2/de3/group___eeprom___trans.html#ga7d9db4a4822fa0c3e5b811615aaed569" title="Write 4 bytes to the eeprom. " alt="" coords="329,424,471,450"/>
+<area shape="rect" id="node4" href="$d2/dfc/group__test__alarm.html#gaa8010d4ccf1a098a7d93dc9802918fac" title="Saved alarm and loaded alarm should be the same. " alt="" coords="800,273,941,300"/>
+<area shape="rect" id="node6" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="793,412,948,454"/>
+<area shape="rect" id="node9" href="$dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="569,354,722,395"/>
+<area shape="rect" id="node11" href="$dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="569,471,722,512"/>
+<area shape="rect" id="node14" href="$d6/d06/group__eeprom__test.html#ga34ead15f5dfc0a48479bba2285754cdb" title="Unit test for writing and reading a Nbit number. " alt="" coords="571,288,719,330"/>
+<area shape="rect" id="node19" href="$df/d29/group___application.html#ga149be95443eb7971573b1c07d9d726b9" title="Load an alarm from memory. " alt="" coords="357,677,443,704"/>
+<area shape="rect" id="node21" href="$df/d13/group___clock___management___eeprom.html#gab8401f24d519d3a2e54c3ba5dab80376" title="load an alarm settings from eeprom " alt="" coords="547,778,743,805"/>
+<area shape="rect" id="node22" href="$df/d13/group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62" title="Load the time settings from eeprom. " alt="" coords="305,576,495,602"/>
+<area shape="rect" id="node23" href="$df/d13/group___clock___management___eeprom.html#ga3980560a99803ef94287127ff3157f91" title="Load the date settings from eeprom. " alt="" coords="305,626,495,653"/>
+<area shape="rect" id="node24" href="$d2/de3/group___eeprom___trans.html#ga9a323370ddd02d91c6118f104c015b43" title="Read a 32byte from eeprom. " alt="" coords="331,728,469,754"/>
+<area shape="rect" id="node20" href="$df/d29/group___application.html#ga0991c58458297c968f2ab751ea6dfaae" title="Update alarm A and B. " alt="" coords="595,661,695,688"/>
 </map>

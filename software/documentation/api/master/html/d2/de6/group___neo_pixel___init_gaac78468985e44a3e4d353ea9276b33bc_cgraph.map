@@ -1,3 +1,4 @@
 <map id="neopixel_init" name="neopixel_init">
-<area shape="rect" id="node2" href="$da/d69/group___neo_pixel___state.html#ga79e34feddcfb2c45ae218166c84bdff4" title="Initialise the LEDbuffer. " alt="" coords="148,5,268,32"/>
+<area shape="rect" id="node2" href="$da/d69/group___neo_pixel___state.html#ga79e34feddcfb2c45ae218166c84bdff4" title="Initialise the LEDbuffer with zeros. " alt="" coords="301,5,421,32"/>
+<area shape="rect" id="node3" href="$da/d69/group___neo_pixel___state.html#ga8e3cfef785ce221672f825f8785c25b8" title="Stop pushing data to the neopixels. " alt="" coords="148,31,253,57"/>
 </map>

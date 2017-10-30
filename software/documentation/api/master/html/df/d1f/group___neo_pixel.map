@@ -1,5 +1,5 @@
 <map id="NeoPixel" name="NeoPixel">
-<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework" alt="" coords="5,107,92,133"/>
+<area shape="rect" id="node1" href="$d3/d56/group___framework.html" title="Framework driver modules. " alt="" coords="5,107,92,133"/>
 <area shape="rect" id="node2" href="$da/d69/group___neo_pixel___state.html" title="Neopixel state alteration functions. " alt="" coords="270,5,437,32"/>
 <area shape="rect" id="node3" href="$d5/d15/group___neo_pixel___display.html" title="Neopixel colour display functions. " alt="" coords="274,56,433,83"/>
 <area shape="rect" id="node5" href="$db/d03/group___neo_pixel___colour.html" title="Neopixel colour functions. " alt="" coords="263,107,444,133"/>

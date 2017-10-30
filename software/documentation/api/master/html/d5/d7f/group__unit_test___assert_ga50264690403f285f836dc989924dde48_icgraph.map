@@ -1,11 +1,16 @@
 <map id="assertEqual" name="assertEqual">
-<area shape="rect" id="node2" href="$dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="148,5,301,47"/>
-<area shape="rect" id="node3" href="$dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="148,71,301,112"/>
-<area shape="rect" id="node4" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="147,136,302,177"/>
-<area shape="rect" id="node5" href="$d6/d06/group__eeprom__test.html#ga7ca2c7ea92965216763b50e39a023637" title="Unit test for writing and reading to/from the eeprom. " alt="" coords="144,202,305,229"/>
-<area shape="rect" id="node6" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="152,253,297,295"/>
-<area shape="rect" id="node7" href="$d6/d06/group__eeprom__test.html#gaaaeaa64a1133a5628fe2dc75d888e880" title="Unit test for writing and reading a Nbit number. " alt="" coords="151,319,299,360"/>
-<area shape="rect" id="node8" href="$dc/d04/group__rtc__test.html#gab7d696e67a3639eb9024bf75d16eb0af" title="Unit test for date save and load. " alt="" coords="167,385,282,411"/>
-<area shape="rect" id="node9" href="$dc/d04/group__rtc__test.html#gaad71d331736202cb1f4e4611adc4017e" title="Unit test for time save and load. " alt="" coords="167,435,282,462"/>
-<area shape="rect" id="node10" href="$dc/d04/group__rtc__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="164,486,285,513"/>
+<area shape="rect" id="node2" href="$d5/d7f/group__unit_test___assert.html#ga44a5188f140225b053bb7b500d7bcbbb" title="Assert that a[i]==b[i] for i in N. " alt="" coords="163,60,286,87"/>
+<area shape="rect" id="node3" href="$d2/dfc/group__test__alarm.html#gaa8010d4ccf1a098a7d93dc9802918fac" title="Saved alarm and loaded alarm should be the same. " alt="" coords="357,9,498,36"/>
+<area shape="rect" id="node5" href="$d2/dfc/group__test__alarm.html#ga0ddb633e8e91139a0810d5c3c577f36b" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="159,111,290,137"/>
+<area shape="rect" id="node6" href="$de/deb/group__clock__test.html#gab7d696e67a3639eb9024bf75d16eb0af" title="Unit test for date save and load. " alt="" coords="167,161,282,188"/>
+<area shape="rect" id="node8" href="$de/deb/group__clock__test.html#gaad71d331736202cb1f4e4611adc4017e" title="Unit test for time save and load. " alt="" coords="167,212,282,239"/>
+<area shape="rect" id="node9" href="$de/deb/group__clock__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="164,263,285,289"/>
+<area shape="rect" id="node10" href="$dc/d9e/group__clock__management__test__save__lod.html#gabfcdb446b5f81be9015c7fbfcf5bc6ca" title="Unit testing for time save and load. " alt="" coords="148,314,301,355"/>
+<area shape="rect" id="node11" href="$dc/d9e/group__clock__management__test__save__lod.html#gab680a4ff1b04e7eaec660ca2553eb353" title="Unit testing for date save and load. " alt="" coords="148,379,301,421"/>
+<area shape="rect" id="node12" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="147,445,302,486"/>
+<area shape="rect" id="node13" href="$d6/d06/group__eeprom__test.html#ga657b925b06c81d842b9fa62b666f95de" title="Unit test for writing and reading to/from the eeprom. " alt="" coords="144,511,305,537"/>
+<area shape="rect" id="node14" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="152,562,297,603"/>
+<area shape="rect" id="node15" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="173,628,277,655"/>
+<area shape="rect" id="node4" href="$d6/d06/group__eeprom__test.html#ga34ead15f5dfc0a48479bba2285754cdb" title="Unit test for writing and reading a Nbit number. " alt="" coords="353,61,501,102"/>
+<area shape="rect" id="node7" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="386,321,469,348"/>
 </map>

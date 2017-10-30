@@ -1,0 +1,6 @@
+<map id="nextion_send" name="nextion_send">
+<area shape="rect" id="node2" href="$df/d4d/group___instructions.html#ga8751290ee73855496daafff56eef652a" title="Send junk data to start communication with screen. " alt="" coords="162,5,321,32"/>
+<area shape="rect" id="node3" href="$df/d4d/group___instructions.html#ga298fbdf2d9446b7c34aea5b94b728171" title="Send end of transmission signal. " alt="" coords="162,56,321,83"/>
+<area shape="rect" id="node4" href="$df/d4d/group___instructions.html#gaa644d78acae96e15bc446f964aeb9129" title="Send an instruction requiring integer value. " alt="" coords="153,107,329,133"/>
+<area shape="rect" id="node5" href="$df/d4d/group___instructions.html#ga220bb2db71379827ccd39abd8987b208" title="Send an instruction requiring string value. " alt="" coords="152,157,331,184"/>
+</map>

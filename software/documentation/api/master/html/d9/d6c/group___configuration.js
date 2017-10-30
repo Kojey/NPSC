@@ -1,5 +1,5 @@
 var group___configuration =
 [
     [ "Error_Handler", "d9/d6c/group___configuration.html#ga1730ffe1e560465665eb47d9264826f9", null ],
-    [ "NPC_init", "d9/d6c/group___configuration.html#gabe73c51b6f7ce590321d186bef079fe4", null ]
+    [ "NPSC_init", "d9/d6c/group___configuration.html#gab66fdabf662ca2e7fb10dcf3862d1739", null ]
 ];

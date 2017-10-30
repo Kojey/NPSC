@@ -40,28 +40,30 @@
 
 
 /**
- * @brief	Save alarm to eeprom
+ * @brief	Synchronize internal alarm to external alarm
+ */
+void alarm_synchronize(void){
+	RTC_ClockTypeDef clock = rtc_getClockStruct();
+	clock_setClockStruct(&clock);
+}
+/**
+ * @brief	Save alarm to memory
  * @param 	alarm
  */
 void alarm_save(AlarmTypeDef * alarm){
-	int d=100;
 	eeprom_write(alarm_idAddress(alarm->id),alarm->id);
-	delay(d);
 	eeprom_write(alarm_repeatAddress(alarm->id),alarm->repeat);
-	delay(d);
 	eeprom_write(alarm_enableAddress(alarm->id),alarm->enable);
-	delay(d);
 	eeprom_write(alarm_fetchedAddress(alarm->id),alarm->fetched);
-	delay(d);
 	eeprom_write(alarm_ringtoneAddress(alarm->id),alarm->ringtone);
-	delay(d);
 	eeprom_write(alarm_patternAddress(alarm->id),alarm->pattern);
-	delay(d);
 	eeprom_writeNBytes(alarm_alarmAddress(alarm->id),(uint8_t *)&alarm->alarm,sizeof(alarm->alarm));
-	delay(d);
 	eeprom_writeNBytes(alarm_labelAddress(alarm->id),(uint8_t *)&alarm->label,sizeof(alarm->label));
-	delay(d);
 }
+/**
+ * @brief	Load an alarm from memory
+ * @param	index: alarm index
+ */
 AlarmTypeDef alarm_load(uint8_t index){
 	AlarmTypeDef alarm;
 	alarm.id=eeprom_read(alarm_idAddress(index));
@@ -74,7 +76,24 @@ AlarmTypeDef alarm_load(uint8_t index){
 	eeprom_readNBytes(alarm_labelAddress(index),(uint8_t *)&alarm.label,sizeof(alarm.label));
 	return alarm;
 }
-
+/**
+ * @brief	Update alarm A and B
+ * @param	updated
+ */
+void alarm_update(bool updated){
+	if(updated){
+		uint8_t index_a,index_b;
+		RTC_AlarmTypeDef alarm_a,alarm_b;
+		// get the two most close alarm
+		index_a = 0;
+		index_b = 1;
+		// update alarm
+		alarm_a = alarm_load(index_a).alarm;
+		alarm_b = alarm_load(index_b).alarm;
+		clock_setAlarmA(&alarm_a);
+		clock_setAlarmB(&alarm_b);
+	}
+}
 
 /****************
  *

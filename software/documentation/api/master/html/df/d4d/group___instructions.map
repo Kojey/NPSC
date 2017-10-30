@@ -1,3 +1,4 @@
 <map id="Instructions" name="Instructions">
-<area shape="rect" id="node2" href="$df/dce/group___eeprom.html" title="Eeprom framework. " alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node1" href="$df/d29/group___application.html" title="Application" alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node3" href="$df/dce/group___eeprom.html" title="Eeprom framework. " alt="" coords="15,56,82,83"/>
 </map>

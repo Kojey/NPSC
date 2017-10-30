@@ -4,21 +4,13 @@ var NAVTREE =
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
-      [ "Data Structure Index", "classes.html", null ],
-      [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
+      [ "Data Structure Index", "classes.html", null ]
     ] ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
-        [ "Macros", "globals_defs.html", null ]
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -27,8 +19,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/dae/group___utils.html#ggaf6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c",
-"df/d13/group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62"
+"d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7",
+"da/dcd/group__nextion___init.html#ga954125e92a78b714cd63c21a481762a1",
+"de/deb/group__clock__test.html#gab7d696e67a3639eb9024bf75d16eb0af"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

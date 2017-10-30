@@ -1,7 +1,7 @@
 <map id="test_ClockMangement_save_and_load_time" name="test_ClockMangement_save_and_load_time">
 <area shape="rect" id="node2" href="$df/d13/group___clock___management___eeprom.html#ga4d1c66f7ce4d69b6903471823ab105f7" title="Save the time settings to eeprom. " alt="" coords="207,5,401,32"/>
 <area shape="rect" id="node5" href="$df/d13/group___clock___management___eeprom.html#ga166e0bbb5e934cc45657ffad06ff1d62" title="Load the time settings from eeprom. " alt="" coords="209,56,399,83"/>
-<area shape="rect" id="node7" href="$d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert than a equals b. " alt="" coords="259,107,349,133"/>
+<area shape="rect" id="node7" href="$d5/d7f/group__unit_test___assert.html#ga50264690403f285f836dc989924dde48" title="Assert that a equals b. " alt="" coords="259,107,349,133"/>
 <area shape="rect" id="node3" href="$d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="449,5,549,32"/>
 <area shape="rect" id="node4" href="$d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="597,31,651,57"/>
 <area shape="rect" id="node6" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="451,56,548,83"/>

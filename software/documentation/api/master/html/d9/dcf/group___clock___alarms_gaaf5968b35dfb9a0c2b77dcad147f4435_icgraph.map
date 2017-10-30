@@ -1,0 +1,5 @@
+<map id="clock_setAlarmA" name="clock_setAlarmA">
+<area shape="rect" id="node2" href="$df/d29/group___application.html#ga0991c58458297c968f2ab751ea6dfaae" title="Update alarm A and B. " alt="" coords="185,5,285,32"/>
+<area shape="rect" id="node3" href="$de/deb/group__clock__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="175,56,296,83"/>
+<area shape="rect" id="node4" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="344,56,427,83"/>
+</map>

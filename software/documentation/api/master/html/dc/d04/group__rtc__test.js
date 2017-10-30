@@ -1,6 +1,7 @@
 var group__rtc__test =
 [
-    [ "test_clock_alarm", "dc/d04/group__rtc__test.html#ga29ed9f56622242ef59fcab012165f442", null ],
-    [ "test_clock_date", "dc/d04/group__rtc__test.html#gab7d696e67a3639eb9024bf75d16eb0af", null ],
-    [ "test_clock_time", "dc/d04/group__rtc__test.html#gaad71d331736202cb1f4e4611adc4017e", null ]
+    [ "test_alarmAddress", "dc/d04/group__rtc__test.html#ga8126f31f44d8046461c99d5c91a1ba93", null ],
+    [ "test_alarmSaveLoad", "dc/d04/group__rtc__test.html#gaac9798f343b6e803d5b97280b649919b", null ],
+    [ "test_result", "dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9", null ],
+    [ "test_rtc_clock", "dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5", null ]
 ];

@@ -1,0 +1,6 @@
+<map id="rtc_getMinutes" name="rtc_getMinutes">
+<area shape="rect" id="node2" href="$d2/d51/group___rtc___data.html#gaca2ecb7133bde56e1161ea639dfa78bc" title="Read a byte from a slave. " alt="" coords="161,56,231,83"/>
+<area shape="rect" id="node3" href="$d4/d36/group___rtc___trans.html#ga34a8f14524ec55afdfc9d13279fd3531" title="Start the I2C communication. " alt="" coords="295,5,442,32"/>
+<area shape="rect" id="node4" href="$d4/d36/group___rtc___trans.html#ga4cc3e427f119571c10aaf1eadde296b0" title="Read one byte from the slave and do not acknowledge the byte (end transmission) " alt="" coords="279,56,459,83"/>
+<area shape="rect" id="node5" href="$d4/d36/group___rtc___trans.html#ga6b6a88617d82889a7831f17cf5ac60e6" title="Read one byte from slave and acknowledge the byte (request another byte) " alt="" coords="283,107,455,133"/>
+</map>

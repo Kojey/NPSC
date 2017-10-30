@@ -19,9 +19,7 @@
 int main(void)
 {
 	NPSC_init();
-
-//	test_result(test_alarmSaveLoad());
-
+	//alarm_synchronize();
 	while(1)
 	{
 		instruction_execute();

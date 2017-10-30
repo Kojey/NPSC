@@ -34,7 +34,7 @@
    <div id="projectname">NPSC
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">NeoPixel Sunrise Clock</div>
+   <div id="projectbrief">Clock</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d8/d3b/group___r_e_p_e_a_t___definitio
   <div class="summary">
 <a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
-<div class="title">REPEAT_Definitions<div class="ingroups"><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
+<div class="title">REPEAT_Definitions<div class="ingroups"><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -120,90 +120,18 @@ Collaboration diagram for REPEAT_Definitions:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga9f2fcc8488db26c77b5ffd8f6c10c5d0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga9f2fcc8488db26c77b5ffd8f6c10c5d0">REPEAT_DateWeekDay</a>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_DateWeekDay</td></tr>
-<tr class="separator:ga9f2fcc8488db26c77b5ffd8f6c10c5d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa31a39c1b2a1d619db0901cc7c8d4592"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3b/group___r_e_p_e_a_t___definitions.html#gaa31a39c1b2a1d619db0901cc7c8d4592">REPEAT_Hours</a>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Hours</td></tr>
-<tr class="separator:gaa31a39c1b2a1d619db0901cc7c8d4592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac80fc7d65b83128ca58e210922020d37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3b/group___r_e_p_e_a_t___definitions.html#gac80fc7d65b83128ca58e210922020d37">REPEAT_Minutes</a>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Minutes</td></tr>
-<tr class="separator:gac80fc7d65b83128ca58e210922020d37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga12d07c13f393b5b12efad9cd892de472"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga12d07c13f393b5b12efad9cd892de472">REPEAT_Seconds</a>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Seconds</td></tr>
-<tr class="separator:ga12d07c13f393b5b12efad9cd892de472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga473d162f72a4680e7e14043dfaf092c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d3b/group___r_e_p_e_a_t___definitions.html#ga473d162f72a4680e7e14043dfaf092c0">REPEAT_None</a>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_None</td></tr>
-<tr class="separator:ga473d162f72a4680e7e14043dfaf092c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga884d0171dae80d8aa29dbc9b5ef92027"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga884d0171dae80d8aa29dbc9b5ef92027"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REPEAT_NEVER</b>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_None</td></tr>
+<tr class="separator:ga884d0171dae80d8aa29dbc9b5ef92027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7feb74fb38da737ceb2d41598ce5a34"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac7feb74fb38da737ceb2d41598ce5a34"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REPEAT_DAILY</b>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_DateWeekDay</td></tr>
+<tr class="separator:gac7feb74fb38da737ceb2d41598ce5a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga425dffefb0efe847b1ee2ec977b823cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga425dffefb0efe847b1ee2ec977b823cc"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REPEAT_WEEKLY</b>&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_None</td></tr>
+<tr class="separator:ga425dffefb0efe847b1ee2ec977b823cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Alarm repeat options. </p>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ga9f2fcc8488db26c77b5ffd8f6c10c5d0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define REPEAT_DateWeekDay&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_DateWeekDay</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00091">91</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gaa31a39c1b2a1d619db0901cc7c8d4592"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define REPEAT_Hours&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Hours</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00092">92</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gac80fc7d65b83128ca58e210922020d37"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define REPEAT_Minutes&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Minutes</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00093">93</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga473d162f72a4680e7e14043dfaf092c0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define REPEAT_None&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_None</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00095">95</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga12d07c13f393b5b12efad9cd892de472"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define REPEAT_Seconds&#160;&#160;&#160;(uint32_t) RTC_AlarmMask_Seconds</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html#l00094">94</a> of file <a class="el" href="../../de/d02/_n_p_c__clock_8h_source.html">NPC_clock.h</a>.</p>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

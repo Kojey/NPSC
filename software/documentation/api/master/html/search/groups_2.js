@@ -14,6 +14,7 @@ var searchData=
   ['clock_5fmanagement_5ftest',['Clock_management_test',['../dc/d21/group__clock__management__test.html',1,'']]],
   ['clock_5fmanagement_5ftest_5fcomparison',['Clock_management_test_comparison',['../d1/da8/group__clock__management__test__comparison.html',1,'']]],
   ['clock_5fmanagement_5ftest_5fsave_5flod',['Clock_management_test_save_lod',['../dc/d9e/group__clock__management__test__save__lod.html',1,'']]],
+  ['clock_5ftest',['Clock_test',['../de/deb/group__clock__test.html',1,'']]],
   ['clock_5fvalue',['CLOCK_Value',['../d4/dc0/group___c_l_o_c_k___value.html',1,'']]],
   ['configuration',['Configuration',['../d9/d6c/group___configuration.html',1,'']]],
   ['constant',['Constant',['../df/dbc/group___constant.html',1,'']]],

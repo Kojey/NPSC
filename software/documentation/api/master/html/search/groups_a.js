@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['transmission_20functions',['Transmission functions',['../d5/d68/group__bluetooth___trans.html',1,'']]],
-  ['time_20and_20date_20configuration_20functions',['Time and Date Configuration functions',['../de/dbe/group___clock___time___date.html',1,'']]],
-  ['transmission_20functions',['Transmission functions',['../d2/de3/group___eeprom___trans.html',1,'']]],
-  ['transmission_20functions',['Transmission functions',['../d5/d2e/group__nextion___trans.html',1,'']]],
-  ['temperature',['Temperature',['../de/d0e/group___temperature.html',1,'']]],
-  ['temperature_20information',['Temperature information',['../d0/d93/group___temperature___data.html',1,'']]],
-  ['type',['Type',['../dd/d8f/group__type.html',1,'']]]
+  ['repeat_5fdefinitions',['REPEAT_Definitions',['../d8/d3b/group___r_e_p_e_a_t___definitions.html',1,'']]],
+  ['rtc',['Rtc',['../d4/d0e/group___rtc.html',1,'']]],
+  ['rtc_5fprediv_5fdefinitions',['RTC_PREDIV_Definitions',['../d0/dbf/group___r_t_c___p_r_e_d_i_v___definitions.html',1,'']]],
+  ['rtc_5fstring',['Rtc_String',['../df/df2/group___rtc___string.html',1,'']]],
+  ['rtc_5ftest',['Rtc_test',['../dc/d04/group__rtc__test.html',1,'']]],
+  ['rtc_20transmission_20functions',['RTC transmission functions',['../d4/d36/group___rtc___trans.html',1,'']]]
 ];

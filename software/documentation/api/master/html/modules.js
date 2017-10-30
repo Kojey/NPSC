@@ -1,4 +1,4 @@
 var modules =
 [
-    [ "NPC", "dc/da7/group___n_p_c.html", "dc/da7/group___n_p_c" ]
+    [ "NPSC", "d3/db7/group___n_p_s_c.html", "d3/db7/group___n_p_s_c" ]
 ];

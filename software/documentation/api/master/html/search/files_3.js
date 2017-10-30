@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rtc_5ftest_2ec',['rtc_test.c',['../de/d1a/rtc__test_8c.html',1,'']]],
-  ['rtc_5ftest_2eh',['rtc_test.h',['../de/df2/rtc__test_8h.html',1,'']]]
+  ['eeprom_2ec',['eeprom.c',['../df/d83/eeprom_8c.html',1,'']]],
+  ['eeprom_2eh',['eeprom.h',['../d0/ded/eeprom_8h.html',1,'']]]
 ];

@@ -34,7 +34,7 @@
    <div id="projectname">NPSC
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">NeoPixel Sunrise Clock</div>
+   <div id="projectbrief">Clock</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d9/dcf/group___clock___alarms.html','.
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Alarms configuration functions<div class="ingroups"><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
+<div class="title">Alarms configuration functions<div class="ingroups"><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../d1/df2/group___clock.html">Clock</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -123,9 +123,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5e1614dbb1a210106dbade3f133db27e"><td class="memItemLeft" align="right" valign="top">RTC_AlarmTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/group___clock___alarms.html#ga5e1614dbb1a210106dbade3f133db27e">clock_createAlarm</a> (uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat)</td></tr>
 <tr class="memdesc:ga5e1614dbb1a210106dbade3f133db27e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an Alarm Structure given all the parameters.  <a href="#ga5e1614dbb1a210106dbade3f133db27e">More...</a><br /></td></tr>
 <tr class="separator:ga5e1614dbb1a210106dbade3f133db27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab56f512746d4f2638232db28bb7dac2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/group___clock___alarms.html#gab56f512746d4f2638232db28bb7dac2b">clock_setA</a> (RTC_AlarmTypeDef *Alarm)</td></tr>
-<tr class="memdesc:gab56f512746d4f2638232db28bb7dac2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef.  <a href="#gab56f512746d4f2638232db28bb7dac2b">More...</a><br /></td></tr>
-<tr class="separator:gab56f512746d4f2638232db28bb7dac2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf5968b35dfb9a0c2b77dcad147f4435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/group___clock___alarms.html#gaaf5968b35dfb9a0c2b77dcad147f4435">clock_setAlarmA</a> (RTC_AlarmTypeDef *Alarm)</td></tr>
+<tr class="memdesc:gaaf5968b35dfb9a0c2b77dcad147f4435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef.  <a href="#gaaf5968b35dfb9a0c2b77dcad147f4435">More...</a><br /></td></tr>
+<tr class="separator:gaaf5968b35dfb9a0c2b77dcad147f4435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga000b7e24f52b19ee39fa9edc0c46bd5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/group___clock___alarms.html#ga000b7e24f52b19ee39fa9edc0c46bd5c">clock_setAlarmB</a> (RTC_AlarmTypeDef *Alarm)</td></tr>
+<tr class="memdesc:ga000b7e24f52b19ee39fa9edc0c46bd5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an alarm to RTC_Alarm_B, given a Alarm structure RTC_AlarmTypeDef.  <a href="#ga000b7e24f52b19ee39fa9edc0c46bd5c">More...</a><br /></td></tr>
+<tr class="separator:ga000b7e24f52b19ee39fa9edc0c46bd5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea1a099c4ad6de8b99517ac6453e3569"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dcf/group___clock___alarms.html#gaea1a099c4ad6de8b99517ac6453e3569">clock_setAlarm</a> (uint8_t am_pm, uint8_t hours, uint8_t minutes, uint8_t seconds, uint32_t dateWeekDaySel, uint8_t dateWeekDay, uint32_t repeat)</td></tr>
 <tr class="memdesc:gaea1a099c4ad6de8b99517ac6453e3569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an alarm to RTC_Alarm_A, given all the alarm parameters.  <a href="#gaea1a099c4ad6de8b99517ac6453e3569">More...</a><br /></td></tr>
 <tr class="separator:gaea1a099c4ad6de8b99517ac6453e3569"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,49 +213,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html#l00204">204</a> of file <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html">NPC_clock.c</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="gab56f512746d4f2638232db28bb7dac2b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void clock_setA </td>
-          <td>(</td>
-          <td class="paramtype">RTC_AlarmTypeDef *&#160;</td>
-          <td class="paramname"><em>Alarm</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Alarm</td><td>A pointer to the RTC_AlarmTypeDef </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">None</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Definition at line <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html#l00225">225</a> of file <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html">NPC_clock.c</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../d9/dcf/group___clock___alarms_gab56f512746d4f2638232db28bb7dac2b_icgraph.png" border="0" usemap="#d9/dcf/group___clock___alarms_gab56f512746d4f2638232db28bb7dac2b_icgraph" alt=""/></div>
-<map name="d9/dcf/group___clock___alarms_gab56f512746d4f2638232db28bb7dac2b_icgraph" id="d9/dcf/group___clock___alarms_gab56f512746d4f2638232db28bb7dac2b_icgraph">
-<area shape="rect" id="node2" href="../../dc/d04/group__rtc__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="140,5,261,32"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="../../dc/d54/clock_8c_source.html#l00265">265</a> of file <a class="el" href="../../dc/d54/clock_8c_source.html">clock.c</a>.</p>
 
 </div>
 </div>
@@ -330,7 +291,93 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html#l00244">244</a> of file <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html">NPC_clock.c</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d54/clock_8c_source.html#l00318">318</a> of file <a class="el" href="../../dc/d54/clock_8c_source.html">clock.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="gaaf5968b35dfb9a0c2b77dcad147f4435"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clock_setAlarmA </td>
+          <td>(</td>
+          <td class="paramtype">RTC_AlarmTypeDef *&#160;</td>
+          <td class="paramname"><em>Alarm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Alarm</td><td>A pointer to the RTC_AlarmTypeDef </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dc/d54/clock_8c_source.html#l00286">286</a> of file <a class="el" href="../../dc/d54/clock_8c_source.html">clock.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/dcf/group___clock___alarms_gaaf5968b35dfb9a0c2b77dcad147f4435_icgraph.png" border="0" usemap="#d9/dcf/group___clock___alarms_gaaf5968b35dfb9a0c2b77dcad147f4435_icgraph" alt=""/></div>
+<map name="d9/dcf/group___clock___alarms_gaaf5968b35dfb9a0c2b77dcad147f4435_icgraph" id="d9/dcf/group___clock___alarms_gaaf5968b35dfb9a0c2b77dcad147f4435_icgraph">
+<area shape="rect" id="node2" href="../../df/d29/group___application.html#ga0991c58458297c968f2ab751ea6dfaae" title="Update alarm A and B. " alt="" coords="185,5,285,32"/>
+<area shape="rect" id="node3" href="../../de/deb/group__clock__test.html#ga29ed9f56622242ef59fcab012165f442" title="Unit test for alarm save and load. " alt="" coords="175,56,296,83"/>
+<area shape="rect" id="node4" href="../../dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="344,56,427,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ga000b7e24f52b19ee39fa9edc0c46bd5c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clock_setAlarmB </td>
+          <td>(</td>
+          <td class="paramtype">RTC_AlarmTypeDef *&#160;</td>
+          <td class="paramname"><em>Alarm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set an alarm to RTC_Alarm_B, given a Alarm structure RTC_AlarmTypeDef. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Alarm</td><td>A pointer to the RTC_AlarmTypeDef </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="../../dc/d54/clock_8c_source.html#l00299">299</a> of file <a class="el" href="../../dc/d54/clock_8c_source.html">clock.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/dcf/group___clock___alarms_ga000b7e24f52b19ee39fa9edc0c46bd5c_icgraph.png" border="0" usemap="#d9/dcf/group___clock___alarms_ga000b7e24f52b19ee39fa9edc0c46bd5c_icgraph" alt=""/></div>
+<map name="d9/dcf/group___clock___alarms_ga000b7e24f52b19ee39fa9edc0c46bd5c_icgraph" id="d9/dcf/group___clock___alarms_ga000b7e24f52b19ee39fa9edc0c46bd5c_icgraph">
+<area shape="rect" id="node2" href="../../df/d29/group___application.html#ga0991c58458297c968f2ab751ea6dfaae" title="Update alarm A and B. " alt="" coords="175,5,275,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -362,7 +409,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html#l00271">271</a> of file <a class="el" href="../../db/d0e/_n_p_c__clock_8c_source.html">NPC_clock.c</a>.</p>
+<p>Definition at line <a class="el" href="../../dc/d54/clock_8c_source.html#l00345">345</a> of file <a class="el" href="../../dc/d54/clock_8c_source.html">clock.c</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/dcf/group___clock___alarms_ga4da4fb52ec579671d337938e78f9a207_cgraph.png" border="0" usemap="#d9/dcf/group___clock___alarms_ga4da4fb52ec579671d337938e78f9a207_cgraph" alt=""/></div>
+<map name="d9/dcf/group___clock___alarms_ga4da4fb52ec579671d337938e78f9a207_cgraph" id="d9/dcf/group___clock___alarms_ga4da4fb52ec579671d337938e78f9a207_cgraph">
+<area shape="rect" id="node2" href="../../d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7" title="set all the pixel on the line to a specific colour " alt="" coords="220,5,388,32"/>
+<area shape="rect" id="node3" href="../../d6/dae/group___utils.html#gafa33c555a40e71b0cc32aa3731f6fabe" title="Find max between a, b, and c. " alt="" coords="436,5,483,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>

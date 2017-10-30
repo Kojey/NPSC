@@ -1,21 +1,7 @@
 var searchData=
 [
-  ['npc_5faudio_2ec',['NPC_audio.c',['../d2/dff/_n_p_c__audio_8c.html',1,'']]],
-  ['npc_5faudio_2eh',['NPC_audio.h',['../d5/d19/_n_p_c__audio_8h.html',1,'']]],
-  ['npc_5fbluetooth_2ec',['NPC_bluetooth.c',['../de/d6e/_n_p_c__bluetooth_8c.html',1,'']]],
-  ['npc_5fbluetooth_2eh',['NPC_bluetooth.h',['../db/dfc/_n_p_c__bluetooth_8h.html',1,'']]],
-  ['npc_5fclock_2ec',['NPC_clock.c',['../db/d0e/_n_p_c__clock_8c.html',1,'']]],
-  ['npc_5fclock_2eh',['NPC_clock.h',['../de/d02/_n_p_c__clock_8h.html',1,'']]],
-  ['npc_5fconfiguration_2ec',['NPC_configuration.c',['../d2/dfa/_n_p_c__configuration_8c.html',1,'']]],
-  ['npc_5fconfiguration_2eh',['NPC_configuration.h',['../d2/d50/_n_p_c__configuration_8h.html',1,'']]],
-  ['npc_5feeprom_2ec',['NPC_eeprom.c',['../d4/dc0/_n_p_c__eeprom_8c.html',1,'']]],
-  ['npc_5feeprom_2eh',['NPC_eeprom.h',['../de/deb/_n_p_c__eeprom_8h.html',1,'']]],
-  ['npc_5fneopixel_2ec',['NPC_neopixel.c',['../d5/d29/_n_p_c__neopixel_8c.html',1,'']]],
-  ['npc_5fneopixel_2eh',['NPC_neopixel.h',['../d4/dba/_n_p_c__neopixel_8h.html',1,'']]],
-  ['npc_5ftemperature_2ec',['NPC_temperature.c',['../d3/d0e/_n_p_c__temperature_8c.html',1,'']]],
-  ['npc_5ftemperature_2eh',['NPC_temperature.h',['../d8/d20/_n_p_c__temperature_8h.html',1,'']]],
-  ['npc_5futils_2ec',['NPC_utils.c',['../d6/d2d/_n_p_c__utils_8c.html',1,'']]],
-  ['npc_5futils_2eh',['NPC_utils.h',['../d7/da2/_n_p_c__utils_8h.html',1,'']]],
-  ['npsc_5fnextion_2ec',['NPSC_nextion.c',['../da/dae/_n_p_s_c__nextion_8c.html',1,'']]],
-  ['npsc_5fnextion_2eh',['NPSC_nextion.h',['../d1/dd6/_n_p_s_c__nextion_8h.html',1,'']]]
+  ['clock_2ec',['clock.c',['../dc/d54/clock_8c.html',1,'']]],
+  ['clock_2eh',['clock.h',['../d7/d6e/clock_8h.html',1,'']]],
+  ['clock_5fmanagement_2ec',['clock_management.c',['../dc/d51/clock__management_8c.html',1,'']]],
+  ['clock_5fmanagement_2eh',['clock_management.h',['../db/ddc/clock__management_8h.html',1,'']]]
 ];

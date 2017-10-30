@@ -1,0 +1,7 @@
+<map id="alarm_update" name="alarm_update">
+<area shape="rect" id="node2" href="$df/d29/group___application.html#ga149be95443eb7971573b1c07d9d726b9" title="Load an alarm from memory. " alt="" coords="171,5,257,32"/>
+<area shape="rect" id="node5" href="$d9/dcf/group___clock___alarms.html#gaaf5968b35dfb9a0c2b77dcad147f4435" title="Set an alarm to RTC_Alarm_A, given a Alarm structure RTC_AlarmTypeDef. " alt="" coords="153,56,275,83"/>
+<area shape="rect" id="node6" href="$d9/dcf/group___clock___alarms.html#ga000b7e24f52b19ee39fa9edc0c46bd5c" title="Set an alarm to RTC_Alarm_B, given a Alarm structure RTC_AlarmTypeDef. " alt="" coords="153,107,275,133"/>
+<area shape="rect" id="node3" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="323,5,420,32"/>
+<area shape="rect" id="node4" href="$d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="468,5,521,32"/>
+</map>

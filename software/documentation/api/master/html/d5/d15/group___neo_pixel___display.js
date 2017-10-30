@@ -1,5 +1,6 @@
 var group___neo_pixel___display =
 [
+    [ "neopixel_setAllPixelColour", "d5/d15/group___neo_pixel___display.html#ga99adcaba2f4f7dc81b7b197f86ef9b95", null ],
     [ "neopixel_setAllPixelRGB", "d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7", null ],
     [ "neopixel_setAllPixelRGBW", "d5/d15/group___neo_pixel___display.html#ga1ba017c1f338ef2c8e4a48acae35d87e", null ],
     [ "neopixel_setPixelColour", "d5/d15/group___neo_pixel___display.html#gaecbdecac1da356c5fba07058983d9066", null ],

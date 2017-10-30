@@ -34,7 +34,7 @@
    <div id="projectname">NPSC
    &#160;<span id="projectnumber">1</span>
    </div>
-   <div id="projectbrief">NeoPixel Sunrise Clock</div>
+   <div id="projectbrief">Clock</div>
   </td>
  </tr>
  </tbody>
@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('db/d03/group___neo_pixel___colour.html
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Colour generation functions<div class="ingroups"><a class="el" href="../../dc/da7/group___n_p_c.html">NPC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../df/d1f/group___neo_pixel.html">NeoPixel</a></div></div>  </div>
+<div class="title">Colour generation functions<div class="ingroups"><a class="el" href="../../d3/db7/group___n_p_s_c.html">NPSC</a> &raquo; <a class="el" href="../../d3/d56/group___framework.html">Framework</a> &raquo; <a class="el" href="../../df/d1f/group___neo_pixel.html">NeoPixel</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -121,10 +121,10 @@ Collaboration diagram for Colour generation functions:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga1d500fbcbecad76feef8835437687ca0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d03/group___neo_pixel___colour.html#ga1d500fbcbecad76feef8835437687ca0">neopixel_colourRGB</a> (uint8_t r, uint8_t g, uint8_t b)</td></tr>
-<tr class="memdesc:ga1d500fbcbecad76feef8835437687ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert RGB 3 8bit colour to a 32bit colour  <a href="#ga1d500fbcbecad76feef8835437687ca0">More...</a><br /></td></tr>
+<tr class="memdesc:ga1d500fbcbecad76feef8835437687ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert RGB 3 8bit colour to a 32bit colour.  <a href="#ga1d500fbcbecad76feef8835437687ca0">More...</a><br /></td></tr>
 <tr class="separator:ga1d500fbcbecad76feef8835437687ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga527ba03b45a249e5e1ea1da4b971b3ac"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d03/group___neo_pixel___colour.html#ga527ba03b45a249e5e1ea1da4b971b3ac">neopixel_colourRGBW</a> (uint8_t r, uint8_t g, uint8_t b, uint8_t w)</td></tr>
-<tr class="memdesc:ga527ba03b45a249e5e1ea1da4b971b3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert RGB 3 8bit colour to a 32bit colour  <a href="#ga527ba03b45a249e5e1ea1da4b971b3ac">More...</a><br /></td></tr>
+<tr class="memdesc:ga527ba03b45a249e5e1ea1da4b971b3ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert RGB 3 8bit colour to a 32bit colour.  <a href="#ga527ba03b45a249e5e1ea1da4b971b3ac">More...</a><br /></td></tr>
 <tr class="separator:ga527ba03b45a249e5e1ea1da4b971b3ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -160,7 +160,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>convert RGB 3 8bit colour to a 32bit colour </p>
+<p>Convert RGB 3 8bit colour to a 32bit colour. </p>
 <dl class="section note"><dt>Note</dt><dd>MS3 0, MS2 r, MS1 g, MS0 b </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -172,12 +172,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">None</td><td></td></tr>
+    <tr><td class="paramname">uint32_t</td><td>RGB colour </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d5/d29/_n_p_c__neopixel_8c_source.html#l00298">298</a> of file <a class="el" href="../../d5/d29/_n_p_c__neopixel_8c_source.html">NPC_neopixel.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d05/neopixel_8c_source.html#l00300">300</a> of file <a class="el" href="../../d3/d05/neopixel_8c_source.html">neopixel.c</a>.</p>
 
 </div>
 </div>
@@ -217,7 +217,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>convert RGB 3 8bit colour to a 32bit colour </p>
+<p>Convert RGB 3 8bit colour to a 32bit colour. </p>
 <dl class="section note"><dt>Note</dt><dd>MS3 w, MS2 r, MS1 g, MS0 b </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -230,12 +230,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">None</td><td></td></tr>
+    <tr><td class="paramname">uint32_t</td><td>RGB colour </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="../../d5/d29/_n_p_c__neopixel_8c_source.html#l00311">311</a> of file <a class="el" href="../../d5/d29/_n_p_c__neopixel_8c_source.html">NPC_neopixel.c</a>.</p>
+<p>Definition at line <a class="el" href="../../d3/d05/neopixel_8c_source.html#l00313">313</a> of file <a class="el" href="../../d3/d05/neopixel_8c_source.html">neopixel.c</a>.</p>
 
 </div>
 </div>

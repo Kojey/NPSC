@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['state_20alteration_20functions',['State alteration functions',['../da/d69/group___neo_pixel___state.html',1,'']]]
+  ['queue',['Queue',['../d1/d84/group__queue.html',1,'']]],
+  ['queue_5ftest',['Queue_test',['../df/dd2/group__queue__test.html',1,'']]]
 ];

@@ -1,6 +1,6 @@
-<map id="clock_management.c" name="clock_management.c">
-<area shape="rect" id="node2" href="$db/ddc/clock__management_8h.html" title="This file contains all the application level functions usable by the user. " alt="" coords="168,80,347,107"/>
-<area shape="rect" id="node3" href="$de/deb/_n_p_c__eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="114,155,246,196"/>
-<area shape="rect" id="node11" href="$de/d02/_n_p_c__clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPC..." alt="" coords="270,155,402,196"/>
-<area shape="rect" id="node4" href="$d7/da2/_n_p_c__utils_8h.html" title="This file contains all the utility functions prototypes used by the NPC. " alt="" coords="211,244,304,271"/>
+<map id="/media/kojey/DATA/undergrad/eee4022S&#45;2017/NPSC/software/code/master/Libraries/NPSC/Application/src/clock_management.c" name="/media/kojey/DATA/undergrad/eee4022S&#45;2017/NPSC/software/code/master/Libraries/NPSC/Application/src/clock_management.c">
+<area shape="rect" id="node2" href="$db/ddc/clock__management_8h.html" title="This file contains all the application level functions usable by the user. " alt="" coords="273,124,420,151"/>
+<area shape="rect" id="node3" href="$d7/d6e/clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPSC..." alt="" coords="268,199,332,225"/>
+<area shape="rect" id="node13" href="$d0/ded/eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="357,199,433,225"/>
+<area shape="rect" id="node4" href="$d5/d60/utils_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="318,273,375,300"/>
 </map>

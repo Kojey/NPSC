@@ -1,0 +1,6 @@
+<map id="alarm_save" name="alarm_save">
+<area shape="rect" id="node2" href="$d2/de3/group___eeprom___trans.html#ga46c7b6081a89f96d53b6ebc0d0b6f60b" title="Write a byte to the eeprom. " alt="" coords="335,5,435,32"/>
+<area shape="rect" id="node4" href="$d2/de3/group___eeprom___trans.html#ga9dea9d824339ffc184a047749533b96d" title="Write N bytes to the eeprom. " alt="" coords="143,56,287,83"/>
+<area shape="rect" id="node3" href="$d6/dae/group___utils.html#gaf1a8629740f19d111a55636a19c2bf08" title="delay for the number of microsecond " alt="" coords="483,31,536,57"/>
+<area shape="rect" id="node5" href="$d2/de3/group___eeprom___trans.html#gafaa7cca6f6ad1d9ae49522324c825c2f" title="Read a byte from the eeprom. " alt="" coords="336,56,433,83"/>
+</map>

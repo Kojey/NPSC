@@ -1,0 +1,13 @@
+<map id="NPSC_init" name="NPSC_init">
+<area shape="rect" id="node2" href="$df/d29/group___application.html#ga52e3fe5aea3554b13273d91e7b4e7c25" title="Initialise all shared variables. " alt="" coords="139,5,250,32"/>
+<area shape="rect" id="node4" href="$d7/d87/group__bluetooth___init.html#gaaa60810e0857e9e1e5b2cba80b8db3ff" title="Initialize the bluetooth and set baudrate to 9600. " alt="" coords="145,56,244,83"/>
+<area shape="rect" id="node5" href="$da/dcd/group__nextion___init.html#ga954125e92a78b714cd63c21a481762a1" title="Initialize the nextion and set baudrate to 9600. " alt="" coords="151,107,239,133"/>
+<area shape="rect" id="node6" href="$d2/de6/group___neo_pixel___init.html#gaac78468985e44a3e4d353ea9276b33bc" title="Initialise the neopixel. " alt="" coords="147,157,242,184"/>
+<area shape="rect" id="node9" href="$dd/d79/group___rtc___init.html#gacf9024748b942a7ae375cf75951afa9c" title="Initialise communication to the rtc. " alt="" coords="164,208,225,235"/>
+<area shape="rect" id="node10" href="$dd/d06/group___clock___init.html#ga78ab77b57cf2e00089f0a3a22508524c" title="Initialise the clock to 1Hz and setup peripherals for Alarm. " alt="" coords="156,259,233,285"/>
+<area shape="rect" id="node11" href="$d7/d63/group___eeprom___init.html#ga4ec7f9d780da432051aa74ec5892a94c" title="Initialise communication to the eeprom. " alt="" coords="150,309,239,336"/>
+<area shape="rect" id="node12" href="$d6/dca/group___temperature___init.html#ga7da890f6748bbeb05511fd20100cb6ef" title="Initialise the ADC. " alt="" coords="137,360,252,387"/>
+<area shape="rect" id="node3" href="$d1/d84/group__queue.html#ga0b18846ec42d60e9d122533c4bcb38b6" title="Create the instruction queue. " alt="" coords="300,5,503,32"/>
+<area shape="rect" id="node7" href="$da/d69/group___neo_pixel___state.html#ga79e34feddcfb2c45ae218166c84bdff4" title="Initialise the LEDbuffer with zeros. " alt="" coords="551,157,671,184"/>
+<area shape="rect" id="node8" href="$da/d69/group___neo_pixel___state.html#ga8e3cfef785ce221672f825f8785c25b8" title="Stop pushing data to the neopixels. " alt="" coords="349,183,454,209"/>
+</map>

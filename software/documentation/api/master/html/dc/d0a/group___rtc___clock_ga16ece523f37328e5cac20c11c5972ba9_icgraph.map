@@ -1,0 +1,7 @@
+<map id="rtc_getSeconds" name="rtc_getSeconds">
+<area shape="rect" id="node2" href="$dc/d0a/group___rtc___clock.html#ga97b8cd6279b21d349ed859a5193f7809" title="Read the time information. " alt="" coords="169,5,295,32"/>
+<area shape="rect" id="node3" href="$dc/d0a/group___rtc___clock.html#ga5ecf74bd6564eadf1452639acadd1638" title="Read clock information. " alt="" coords="167,56,297,83"/>
+<area shape="rect" id="node4" href="$df/d29/group___application.html#ga6a899680e4f263fdb428d7bd1ee5aa60" title="Synchronize internal alarm to external alarm. " alt="" coords="345,31,476,57"/>
+<area shape="rect" id="node5" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="359,81,463,108"/>
+<area shape="rect" id="node6" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="524,81,607,108"/>
+</map>

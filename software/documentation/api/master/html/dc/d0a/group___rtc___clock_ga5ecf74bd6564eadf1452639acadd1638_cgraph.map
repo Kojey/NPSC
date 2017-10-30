@@ -1,0 +1,16 @@
+<map id="rtc_getClockStruct" name="rtc_getClockStruct">
+<area shape="rect" id="node2" href="$d2/d51/group___rtc___data.html#ga7491cddcfb1d483438a3b015050f9846" title="Write a byte to a slave. " alt="" coords="205,5,277,32"/>
+<area shape="rect" id="node6" href="$dc/d0a/group___rtc___clock.html#ga16ece523f37328e5cac20c11c5972ba9" title="Read the seconds. " alt="" coords="184,56,297,83"/>
+<area shape="rect" id="node10" href="$dc/d0a/group___rtc___clock.html#gab953fe33300935aba6b2859c414e6de4" title="Read the minutes. " alt="" coords="187,107,295,133"/>
+<area shape="rect" id="node11" href="$dc/d0a/group___rtc___clock.html#gaca41fe81d05a91911ed1ca03773b42e3" title="Read the hours. " alt="" coords="192,157,289,184"/>
+<area shape="rect" id="node12" href="$dc/d0a/group___rtc___clock.html#gaccb4c02b04b5d1594eaa897570d8d962" title="Read the day. " alt="" coords="197,208,284,235"/>
+<area shape="rect" id="node13" href="$dc/d0a/group___rtc___clock.html#ga79543b56f505903a34acb34304de4d10" title="Read the date. " alt="" coords="195,259,286,285"/>
+<area shape="rect" id="node14" href="$dc/d0a/group___rtc___clock.html#ga9921a454002cdde7a3bf6f18a66c5256" title="Read the month. " alt="" coords="191,309,290,336"/>
+<area shape="rect" id="node15" href="$dc/d0a/group___rtc___clock.html#ga386d0c523103c2add04e1cc091c7b877" title="Read the year. " alt="" coords="196,360,285,387"/>
+<area shape="rect" id="node3" href="$d4/d36/group___rtc___trans.html#ga34a8f14524ec55afdfc9d13279fd3531" title="Start the I2C communication. " alt="" coords="559,31,706,57"/>
+<area shape="rect" id="node4" href="$d4/d36/group___rtc___trans.html#gacee7d346f76993060665a41efeb80880" title="Write one byte to the slave. " alt="" coords="345,31,495,57"/>
+<area shape="rect" id="node5" href="$d4/d36/group___rtc___trans.html#ga8451d6bada17f6ef70480f86d890a360" title="Stop the transmission. " alt="" coords="347,81,493,108"/>
+<area shape="rect" id="node7" href="$d2/d51/group___rtc___data.html#gaca2ecb7133bde56e1161ea639dfa78bc" title="Read a byte from a slave. " alt="" coords="385,183,455,209"/>
+<area shape="rect" id="node8" href="$d4/d36/group___rtc___trans.html#ga4cc3e427f119571c10aaf1eadde296b0" title="Read one byte from the slave and do not acknowledge the byte (end transmission) " alt="" coords="543,157,723,184"/>
+<area shape="rect" id="node9" href="$d4/d36/group___rtc___trans.html#ga6b6a88617d82889a7831f17cf5ac60e6" title="Read one byte from slave and acknowledge the byte (request another byte) " alt="" coords="547,208,719,235"/>
+</map>
