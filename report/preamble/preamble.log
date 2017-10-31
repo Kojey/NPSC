@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  7 OCT 2017 23:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  30 OCT 2017 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -13,7 +13,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3 ...in, bottom = 1in, left = 1in, right = 1in]{
+l.3 ..., bottom = 1in, left = 1.5in, right = 1in]{
                                                   geometry}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -74,7 +74,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.8 \usepackage{
-                subfigure}
+                subcaption}	% multiple figures
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -158,12 +158,36 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.15 \usepackage{
-                 pdflscape}
+                 pdflscape}	% landscape
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \usepackage{
+                 cleveref}	% multiple references
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \usepackage{
+                 multirow}	% merge rows
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.17 \graphicspath
+l.19 \graphicspath
                   {{./figures/}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -178,7 +202,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 \graphicspath{{.
+l.19 \graphicspath{{.
                      /figures/}}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -194,7 +218,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no / in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 17--18
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--20
 [] 
  []
 
@@ -205,13 +229,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 \renewcommand{\headrulewidth}
+l.24 \renewcommand{\headrulewidth}
                                   {0pt}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.23 \rhead
+l.25 \rhead
            []{\thesection}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -226,7 +250,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 \rhead[
+l.25 \rhead[
             ]{\thesection}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -234,7 +258,7 @@ If that doesn't work, type  X <return>  to quit.
 Missing character: There is no [ in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.23 \rhead[]{\thesection
+l.25 \rhead[]{\thesection
                          }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -243,7 +267,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.24 \lhead
+l.26 \lhead
            [\thechapter]{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -253,7 +277,7 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no [ in font nullfont!
 ! Undefined control sequence.
-l.24 \lhead[\thechapter
+l.26 \lhead[\thechapter
                        ]{}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -276,5 +300,5 @@ Here is how much of TeX's memory you used:
  3642 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 7i,0n,5p,86b,18s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 7i,0n,5p,88b,18s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

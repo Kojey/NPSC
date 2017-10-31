@@ -7,7 +7,7 @@
 % Modified by Othniel Konan (2017), University of Cape Town <knnoth001@myuct.ac.za>
 
 
-\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,11pt]{report}
 
 \include{preamble/preamble}
 
@@ -15,6 +15,10 @@
 
 \input{preamble/title}
 
+
+%\titlespacing{\section}{0pt}{12pt}{12pt}
+%\titlespacing{\subsection}{0pt}{8pt}{8pt}
+%\titlespacing{\subsubsection}{0pt}{4pt}{4pt}
 
 \newpage
 \thispagestyle{empty}

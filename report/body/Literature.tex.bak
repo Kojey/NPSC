@@ -1,47 +1,44 @@
 \chapter{Literature Review}
 
-This chapter reviews the reseach papers, articles, books and other relevant form of researches used in the design of the NPSC. It has been divided into the sectioned below:
-\begin{itemize}
-\item The human sleep-wake cycle
-\item Previous attempts
-\item Hardware modules and PCB design requirements
-\item Communication protocols
-\item Programming Languages
-\item Software Tools and Libraries
-\end{itemize}
-
+This chapter reviews the research papers, articles, books and other relevant forms of research used in the design of the NPSC. It has been divided into the sections illustrated by \cref{fig:lit_rev}:
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.1]{lit_rev.jpg}
+\caption{Overview and classification of the sections of the literature review.}
+\label{fig:lit_rev}
+\end{figure}
+The literature review starts with an explanation of the problems to be solved, it continues by uncovering the theory behind these problems and ends with a review of the design methods, hardware components and software tools used in this project.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: The human sleep-wake cycle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The human sleep-wake cycle}
 
-The human has many internal clock among them is the master clock located in the suprachiasmatic nuclei. This clock which regulate the secretion of melatonin is affected by light. The creation of artifical expecially LEDs have caused a disruption in the sleep-wake cycle. This section give an overview of the human internal clocks and how they are affected by light.
+Human has many \say{internal clocks} among them is the master clock located in the suprachiasmatic nuclei. These internal clocks or endegenous clocks are internal mechanisms in organisms reponsible for the regulations of certain functions or activities. The master clock cheif among them, regulates the secretion of melatonin is affected by light. The creation of artifical light expecially LEDs have caused a disruption in the sleep-wake cycle. This section give an overview of the human internal clocks and how they are affected by light.
 
 \subsection{The circadian rhythm}
-Many of our seasonal behaviour are synchronised to the environment by \textbf{biological clocks} responsible for the creation of circadian rhythms. Biological clocks which are composed of protein that act reciprocally on the body's cells are the natural timing device found in many organs. The discovery of the genes from these biological clocks responsible for the control of the circadian rhythms was made by three scientists Jeffrey  C.  Hall,  Michael  Rosbash  and Michael W. Young winners of the Nobel Prize in Physiology or Medicine \cite{sc2017}. Their discovery made in the 1980s led to advanced research on the role of the circadian rhythms.\\
-Circadian rhythms are biological rhythms which follow the same pattern in absence of external cues (endegenous), are influenced by the presence of external stimuli (entertainable), oxillating every 24h over a range of phisiological temperatures. In the presence of external stimuli -also known as \textit{zeitgebers}-, circadian rhythms synchronise their periodicity with these external stimuli. The zeitgebers of the circadian are the daily variation of the temperature and the dark/light cycle of the day.\\
-Circadian rhythms have an endegenous and an exogenous components. Human placed in isolation without knowledge of the time continued exhibiting a circadian rhythm with their pacemakers notably the melatonin secretion, sleep-wake cycle, body temperature \cite{in1996}. These results proove the endegenous component of the circadian rhythms. A similar study shows that when people are exposed to light at night time, a shift in their pacemakers \cite{ea2004} which is an evidence of the exogenous component of circadian rhythms.\\
-The exogenous components of the circadian rhythms have the ability affect positively and begatively our natural endogenous cycle. With light being what we are mostly daily exposed to, what is the influence of light on the circadian thythms? 
+Human seasonal behaviours are synchronised to the environment by \textbf{biological clocks} responsible for the creation of biological rhythms. Biological clocks which are composed of proteins that act reciprocally on the body's cells are the natural timing devices found in many organs. The discovery of the genes from these biological clocks responsible for the control of these rhythms was made by three scientists Jeffrey  C.  Hall,  Michael  Rosbash and Michael W. Young winners of the Nobel Prize in Physiology or Medicine \cite{sc2017}. Their discovery made in the 1980s led to advanced research on the role of the circadian rhythms.\\
+Circadian rhythms are biological rhythms which follow the same pattern in absence of external cues (endogenous), are influenced by the presence of external stimuli (entertainable), oscillating roughly every 24h\footnote{it oxalates generally a period near 24h} over a range of physiological temperatures. In the presence of external stimuli -also known as \textit{zeitgebers}-, circadian rhythms synchronise their periodicity with these external stimuli. The zeitgebers of the circadian are the daily variation of the temperature and the dark/light cycle of the day.\\
+Circadian rhythms have endogenous and exogenous components. Human placed in isolation without knowledge of the time continued exhibiting a circadian rhythm with their pacemakers notably the melatonin secretion, sleep-wake cycle, body temperature \cite{in1996}. These results prove the existence of endogenous components of the circadian rhythms as it illustrates the effects of these internal signal on the circadian rhythms. A similar study shows that when people are exposed to light at night time, a shift in their pacemakers \cite{ea2004} which is an evidence of the exogenous component of circadian rhythms. These exogenous components of the circadian rhythms have the ability affect positively and negatively our natural endogenous cycle. With light being what we are mostly daily exposed to, what is the influence of light on the circadian rhythms? 
 
 \subsection{Internal circadian rhythms influenced by light}
 Melatonin is the hormone produced by the pineal gland in the suprachiasmatic nuclei (SCN) which has a soporific effect and the ability to entertain the sleep-wake cycle. While melatonin itself is not the cause of a person sleeping, it however creates changes in a person's body that affect their sleepiness. \\
-The pineal gland responsible for the secretion of the melatonin hormone is under the influence of one of the biological clocks, the master clock located in the SCN. The SCN receives visual information from the retinal-hypothalamic tract which entrains the SCN according to the photoperiod \cite{lig1994}. The SCN in turn activate a gene in the pineal cell (CREM) which produce a protein (ICER) needed for the production of melatonin. As a result, the secretion of pineal hormone melatonin follow the light/dark cycle with its  secretion being high during the day and low during the night.  
+The pineal gland responsible for the secretion of the melatonin hormone is under the influence of one of the biological clocks, the master clock located in the SCN. The SCN receives visual information from the retinal-hypothalamic tract which entrains the SCN according to the photoperiod \cite{lig1994}. The SCN in turn activate a gene in the pineal cell (CREM) which produces a protein (ICER) needed for the production of melatonin. As a result, the secretion of pineal hormone melatonin tracks the light/dark cycle with its  secretion being high during the day and low during the night.  
 
 \subsection{Quantitative and qualitative characteristics of light on melatonin production}
-Many researches have been done to understand the impact of light on the circadian rhythms expecially the sleep-wake cycle. \\
-Kathleen \textit{et al.} in their paper \textit{Blue light from light-emitting diodes elicits a dose-dependent suppression of melatonin in humans}\cite{bl2010}, provide details information on their finding of  the effect of light on humans subject. Subjects used for the expirements were 5 males and 3 females with an mean of $23.9\pm0.5$ years, with each subject demonstrating normal color vision. The lighting requirment was blue light of $\lambda_{max} = 469nm \pm 1nm $ with $\frac{1}{2}$ peak bandwidth$ = 26nm$ and a typical viewing distance of $35cm$. The subjects were blindfolded from midnight to 2AM. From thereon, they were exposed to 90 min of blue light exposure  followed by another dark exposure. Blood sample from the subject were taken from 2AM at 30 min interval.From their experiment, they concluded that:
+Many types of research have been done to understand the impact of light on the circadian rhythms especially the sleep-wake cycle. \\
+Kathleen \textit{et al.} in their paper \textit{Blue light from light-emitting diodes elicits a dose-dependent suppression of melatonin in humans}\cite{bl2010}, provide details information on their finding of the effect of light on humans subject. Subjects used for the experiments were 5 males and 3 females with a mean of $23.9\pm0.5$ years, with each subject demonstrating normal colour vision. The lighting requirement was blue light of $\lambda_{max} = 469nm \pm 1nm $ with $\frac{1}{2}$ peak bandwidth$ = 26nm$ and a typical viewing distance of $35cm$. The subjects were blindfolded from midnight to 2 AM. From thereon, they were exposed to 90 min of blue light exposure followed by another dark exposure. Blood samples from the subject were taken from 2 AM at 30 min interval.From their experiment, they concluded that:
 \begin{itemize}
-\item \textit{Blue LED light has an increased melatonin supression following an increase in exposure irradiance}
+\item \textit{Blue LED light has an increased melatonin suppression following an increase in exposure irradiance}
 \item \textit{Blue LED light may have stronger suppressing effect than 4000K white fluorescent light.}
 \end{itemize}
-A similar study was previously made by George C. Brainard \textit{et al.} \cite{ac2001} used 72 healthy human subjects, with normal color vision. The subjects composed of 37 females, 35 males, aged between 18 and 30 years (mean age of $24.5 \pm 0.3$ years), came from different ethnic (african, african americans, caucasians, asian, hispanic). The melatonin suppression action spectrum was formed using eight different wavelengths between $440nm$ and $600nm$ \textit{(440, 460, 480, 505, 530, 555, 575, 600)}. Using the same procedure as mentioned in the previous experiment, blood samples were taken at 30 min interval after 2AM. The results of their research published in their paper \textit{Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor} the following conclusion:
+A similar study was previously made by George C. Brainard \textit{et al.} \cite{ac2001} used 72 healthy human subjects, with normal colour vision. The subjects composed of 37 females, 35 males, aged between 18 and 30 years (mean age of $24.5 \pm 0.3$ years), came from different ethnic (African, African Americans, Caucasians, Asian, Hispanic). The melatonin suppression action spectrum was formed using eight different wavelengths between $440nm$ and $600nm$ \textit{(440, 460, 480, 505, 530, 555, 575, 600)}. Using the same procedure as mentioned in the previous experiment, blood samples were taken at 30 min interval after 2 AM. The results of their research published in their paper \textit{Action Spectrum for Melatonin Regulation in Humans: Evidence for a Novel Circadian Photoreceptor} the following conclusion:
 \begin{itemize}
 \item \textit{Light irradiance greater or equal to $3.1 \mu W/cm^{2}$ evoke a significant melatonin supression}
-\item \textit{Smaller wavelenght monochromatic light have a greater change in \textit{Plasma Melatonin as Percent Change Control-Adjusted} for a fixed value of \textit{Photon density}} (\cite{ac2001} pp. 4-5).
+\item \textit{Smaller wavelength monochromatic light have a greater change in \textit{Plasma Melatonin as Percent Change Control-Adjusted} for a fixed value of \textit{Photon density}} (\cite{ac2001} pp. 4-5).
 \end{itemize}   
 
 \subsection{Impact of light on human behaviour and sleep-wake cycle}
-Among the Zeitgebers of the circadian rhythms, light being the major Zeitgebers has important effect on the human sleep-wake cycle. Christian \textit{et al.}\cite{cir2014} shown that subjective sleepiness and core body temperature opposes each other (\cite{cir2014}, pp. 12, fig. 2.1) when there is no phase lag or lead between the endogenous circadian rhythm and the sleep-wake cycle. The human normal sleep-wake cycle is comprised of 8h of sleep and 16h of wakefulness \cite{is1995}. This cycle is naturally affected by the human activities but is highly inflenced by light exposure. The study shows that office workers with bright blue office light have a better sleep-wake cycle than those with dim and warm office light. Furthermore, it shows that light exposure of sufficient intensity at night can reduce the secretion of melatonin with alerting response starting within the first 20mn. With the recent advance in LED technologies, human are no longer following the natural light/dark cycle causing numerous sleep disorders. 
+Among the Zeitgebers (natural phenomenon acting as a signal in the regulation of the circadian rhythm)  of the circadian rhythms, light is the major Zeitgebers and has important effects on the human sleep-wake cycle. A study on the \say{Circadian and Light Effects on Human Sleepiness-Alertness} made by Christian \textit{et al.}\cite{cir2014} shows that with nor phase lag or lead between the circadian rhythm and the sleep-wake cycle, subjective sleepiness and core body temperature have opposite behaviour (\cite{cir2014}, pp. 12, fig. 2.1). The human normal sleep-wake cycle is comprised of 8h of sleep and 16h of wakefulness \cite{is1995}. This cycle is naturally affected by the human activities but is highly influenced by light exposure. The study shows that office workers with bright blue office light have a better sleep-wake cycle than those with dim and warm office light. Furthermore, it shows that light exposure of sufficient intensity at night can reduce the secretion of melatonin with alerting response starting within the first 20mm. With the recent advance in LED technologies, humans are no longer following the natural light/dark cycle causing numerous sleep disorders. 
 
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,28 +46,28 @@ Among the Zeitgebers of the circadian rhythms, light being the major Zeitgebers 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Lighting technologies}
 
-Light is capable of affecting the human sleep-wake cycle. However this impact can be used to reverse the negative impact of light on the sleep-wake cycle. This section introduce the different light technologies available and their use in regualting the human sleep-wake cycle. 
+Light is capable of affecting the human sleep-wake cycle. However this impact can be used to reverse the negative impact of light on the sleep-wake cycle. This section introduces the different light technologies available and their use in regualting the human sleep-wake cycle. 
 
 \subsection{Light}
-The sun's electromagnetic rediation has a broad light spectrum ranging from  $100nm$ to $1mm$. After being filtered through the earth atmosphere, only certain portions of the spectrum are kept with the visible light spectrum having the maximum irradiance. Light technologies are able to produce more or less the same wavelenght as the sunlight but with much less irradiance.
+The sun's electromagnetic radiation has a broad light spectrum ranging from  $100nm$ to $1mm$. After being filtered through the earth atmosphere, only certain portions of the spectrum are kept with the visible light spectrum having the maximum irradiance. Because the human circadian rhythms are automatically synchronised to the natural light-dark cycle, the characteristics of the sunlight are used as a benchmark in the emission of artificial light. These artificial lights are able to produce more or less the same wavelength as the sunlight but with much less irradiance.
 
 \subsection{Type of light technologies}
-Various light techonologies have been developed over the years, their use and their usefulness in this project are detailed below. 
+Various light technologies have been developed over the years, their use and their usefulness in this project are detailed below. 
 \subsubsection{Incandescent light}
-These are the most common and least efficient light technology. It produces light by passing a high current through a wire filament producing warm light as it glows. These type of lights produce only a specific spectrum of light (warm light) besides they are not designed to be programmed. 
+These are the most common and least efficient light technology. It produces light by passing a high current through a wire filament producing warm light as it glows. These type of lights produce only a specific spectrum of light (warm light) besides they are not designed to be programmable. 
 \subsubsection{Fluorescent light}
-Light is produced by passing electricity through mercury vapour, the invisible light produced as a result of that interaction, connect with the coating of the glass emitting light. It produces all type of white light (warm, cool, daylight) with a good colour rendering. As the previous one, it only produce on type of colour and it is not designed to be programmed.
+Light is produced by passing electricity through mercury vapour, the invisible light produced as a result of that interaction, connect with the coating of the glass emitting light. It produces all type of white light (warm, cool, daylight) with a good colour rendering. Compared to the incandescent light, it only produces one type of colour and it is not designed to be programmable.
 \subsubsection{Halogen light}
-It shares similarities with the incadescent light except that halogen gas is added to the glass. It produces a crisp white colour. As the previous technologies, it also produce one type of colour and it not designed to  be programmed.
+It shares similarities with the incandescent light except that halogen gas is added to the glass. It produces a crisp white colour. As the previous technologies, it also produces one type of colour and it not designed to be programmed.
 \subsubsection{Xeon light}
-This type is another version of incadescent light with xeon gas added to the glass instead, it produces a less yellow light. As the previous technologies, it also produce one type of colour and it not designed to  be programmed.
+This type is another version of incandescent light with Xeon gas added to the glass instead, it produces a less yellow light. As the previous technologies, it also produces one type of colour and it not designed to be programmed.
 \subsubsection{LED light}
-This techonology uses the passage of current through a diode to produce light. These light are very efficient and provide all sort of colour as well as cool and warm light. Moreover, they are designed to be programmed and be easily implemented in a embedded design. 
+This technology uses the passage of current through a diode to produce light. These light are very efficient and provide all sort of colour as well as cool and warm light. Moreover, their ability to work based on the passage on current allows these lights to be programmable. New LED technologies have a microcontroller which can be programmed the LEDs. 
 \subsection{Light treatment of sleep disorder}
-With the discovery of the effect of light on the sleep-wake cycle, electronic devices producing specific light requirment have been used in treating patient with sleep discorder. Advanced sleep phase disorder (ASPD) have been treated using a therapeutic approach involving chronotherapy and timed light exposure \cite{th2010}. The same concept has been used to create a home bed lamp or alarm clock facilitating the regualtion of the slepp-wake cycle. \textbf{GE Sol} and \textbf{Philips}\textit{(which is actively involved in sleep-wake cycle treatement)} have created devices able to ``influence'' the human sleep-wakr cycle.
+With the discovery of the effect of light on the sleep-wake cycle, electronic devices producing specific light have been used in treating patients with sleep-disorder. Advanced sleep phase disorder (ASPD) have been treated using a therapeutic approach involving chronotherapy and timed light exposure \cite{th2010}. The same concept has been used to create a home bed lamp or alarm clock facilitating the regulation of the sleep-wake cycle. \textbf{GE Sol} and \textbf{Philips}\textit{(which is actively involved in sleep-wake cycle treatment)} have created devices able to ``influence'' the human sleep-wake cycle.
 
 \subsubsection{C by GE Sol}
-\textit{C} shown in \cref{fig:c} is a ``all-in-one smart light'' \cite{gesol} which has Amazon intelligent personal assistant Alexa built in. C has a various range of colours which are manually selected based on the user preference. It is capable of communicating wiht GE sol devices and smartphones inserting it among the user's network of devices. Despite its high technology features and its elegant design, C remains just a bed lamp as it is not clinically proven to be helpful in regulating the user's sleep-wake cycle.
+\textit{C} shown in \cref{fig:c} is a ``all-in-one smart light'' \cite{gesol} which has Amazon intelligent personal assistant Alexa built in. C has a various range of colours which are manually selected based on the user preference. It is capable of communicating with GE sol devices and smartphones inserting it among the user's network of devices. Despite its high technology features and its elegant design, C remains just a bed lamp as it is not clinically proven to be helpful in regulating the user's sleep-wake cycle.
 \begin{figure}[h!]
 \centering
 \includegraphics[scale=0.2]{sol1.jpg}
@@ -79,7 +76,7 @@ With the discovery of the effect of light on the sleep-wake cycle, electronic de
 \end{figure}
 
 \subsubsection{Philips wake-up lamps}
-Philips has created a broad range of wake-up lamps designed to impact the sleep-wake cycle of the users. \Cref{fig:philips1,fig:philips2} are examples of the recent versions of Philips' clocks able to simulate sunrise and sunset which last from 20 to 40 mn. These simulations vary the colour of the light following the sun's natural sunrise colour and end with a selected channel or prefered user's music. These Sleep and Wake-up lights are the only wake-up lamp clinically proven to work as claimed by Philips\cite{philips}. 
+Philips has created a broad range of wake-up lamps designed to impact the sleep-wake cycle of the users. \Cref{fig:philips1,fig:philips2} are examples of the recent versions of Philips' clocks able to simulate sunrise and sunset which last from 20 to 40 mm. These simulations vary the colour of the light following the sun's natural sunrise colour and end with a selected channel or prefered user's music. These Sleep and Wake-up lights are the only wake-up lamp clinically proven to work as stated by Philips\cite{philips}. 
 
 \begin{figure}[h!]
 \centering
@@ -97,7 +94,8 @@ Philips has created a broad range of wake-up lamps designed to impact the sleep-
 \label{philips}
 \end{figure}
 
-
+\vfill
+Some deep text here
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Hardware modules 
@@ -152,23 +150,23 @@ Wifi is power efficient, inexpensive; however, the samrtphone communicating with
 
 \subsection{Touch screen}
 A touch-screen device can locate the position of a point of contact on its screen. The idea of a using  contact presure of a object in application was initially from Hugh Le Caine with his Electronic Slackbut capable of change the volume of musical notes based on the amount of pressure applied to the keys. Later in 1969, E. A. Johnson created two major touch-screen technologies using a resistive and a capacitive approach. \\
-A resistive touch-screen is made out of many layers among which two are composed of indium-tin oxide (ITO) which is highly resistive and transparent. By applying pressure on one of the layer, the layers come in contact creating a signal that is used to find the location of the point of contact. A capacitive touch-screen make use of the conductivity of the object in contact with the screen to affect the electrostatic field between the ITO layers. \\
-Resistive touch-screen are less complex than capacitive touch-screen, thus cheaper. Additionally, because it relies on pressure, any object whether conductive or not can be used on the screen which is made to be robust. One the other side, resistive touch-screen do not support multi-touch and have poor contrast becaused of the extra layer used to protect the ITO layers.\\
+\Cref{fig:screen} illustrates the following explanation. Resistive touch-screens are made out of many layers among which two are composed of indium-tin oxide (ITO) which is highly resistive and transparent. By applying pressure on one of the layer, the layers come in contact creating a signal that is used to find the location of the point of contact. Capacitive touch-screens on the other hand make use of the conductivity of the object in contact with the screen to affect the electrostatic field between the ITO layers. \\
+Resistive touch-screens are less complex than capacitive touch-screen, thus cheaper. Additionally, because they relie on pressure, any object whether conductive or not can be used on the screen which is made to be robust. However, resistive touch-screen do not support multi-touch and have poor contrast becaused of the extra layer used to protect the ITO layers.\\
 The NPSC need to have an on-board controller. This controller must be user friendly, with the different features of the NPSC, a touch-screen is desirable over a controller with physical button. A resistive touch screen would add to the robustness of the NPSC as a whole.   
 \begin{figure}[h!]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
 \includegraphics[scale=0.4]{resistiveTouch.jpg}
 \subcaption[first caption.]{Resistive touch-screen technology\cite{resistivetouch}.}
-\label{fig:philips1}
+\label{fig:resistive_screen}
 \end{minipage}
 \begin{minipage}[b]{0.45\textwidth}
 \includegraphics[scale=0.35]{capacitiveTouch.jpg}
 \subcaption[second caption.]{Resistive touch-screen technology \cite{capacitivetouch}.}
-\label{fig:philips2}
+\label{fig:capacitive_screen}
 \end{minipage}
 \caption{Touch-screen technologies}
-\label{philips}
+\label{fig:screen}
 \end{figure}    
 
 \subsection{Neopixels}
@@ -217,7 +215,7 @@ The result of the calculation are tabulated in the \cref{neopixel_illuminance}. 
 \begin{tabular}{ccc}
 \hline
 \hline
-\multirow{2}{*}{Distance}  & \multicolumn{2}{c}{Illuminance (lux)} \\  
+\multirow{2}{*}{Distance (cm)}  & \multicolumn{2}{c}{Illuminance (lux)} \\  
  & no angle consideration & with angle \\
 \hline
 30 & 360 & 345.62\\
@@ -232,7 +230,7 @@ The result of the calculation are tabulated in the \cref{neopixel_illuminance}. 
 \hline
 \hline
 \end{tabular}
-\caption{Illuminance of the neopixel ring for distance ranging from 30cm to 1m}
+\caption{Illuminance of the neopixel ring for distance ranging from 30cm to 110cm}
 \label{table:neopixel_illuminance}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

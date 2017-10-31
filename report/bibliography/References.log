@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  11 OCT 2017 09:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  31 OCT 2017 10:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6831,37 +6831,37 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (16.12213pt too wide) in paragraph at lines 118--119
+Overfull \hbox (16.12213pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 U.S
  []
 
 
-Overfull \hbox (15.72765pt too wide) in paragraph at lines 118--119
+Overfull \hbox (15.72765pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 De-
  []
 
 
-Overfull \hbox (20.8276pt too wide) in paragraph at lines 118--119
+Overfull \hbox (20.8276pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 part-
  []
 
 
-Overfull \hbox (21.72208pt too wide) in paragraph at lines 118--119
+Overfull \hbox (21.72208pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 ment
  []
 
 
-Overfull \hbox (8.17773pt too wide) in paragraph at lines 118--119
+Overfull \hbox (8.17773pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 of
  []
 
 
-Overfull \hbox (15.98323pt too wide) in paragraph at lines 118--119
+Overfull \hbox (15.98323pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 En-
  []
 
 
-Overfull \hbox (17.76094pt too wide) in paragraph at lines 118--119
+Overfull \hbox (17.76094pt too wide) in paragraph at lines 118--120
 \OT1/cmr/m/it/10 ergy
  []
 
@@ -6872,7 +6872,107 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 \bibitem{atollic}
+l.120 \bibitem{optical}
+                        Warren J. Smith, ``Modern Optical Engineering: The D...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+<argument> \@listctr 
+                     
+l.120 \bibitem{optical}
+                        Warren J. Smith, ``Modern Optical Engineering: The D...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.120 \bibitem{optical}
+                        Warren J. Smith, ``Modern Optical Engineering: The D...
+I'm forgetting what you said and using zero instead.
+
+\bibcite{optical}{0}
+Missing character: There is no W in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no ` in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ' in font nullfont!
+Missing character: There is no ' in font nullfont!
+
+! LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \bibitem{atollic}
                         Atollic TrueSTUDIO, ``Features'', \emph{Atollic True...
 
 Try typing  <return>  to proceed.
@@ -6881,7 +6981,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <argument> \@listctr 
                      
-l.125 \bibitem{atollic}
+l.127 \bibitem{atollic}
                         Atollic TrueSTUDIO, ``Features'', \emph{Atollic True...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -6892,7 +6992,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.125 \bibitem{atollic}
+l.127 \bibitem{atollic}
                         Atollic TrueSTUDIO, ``Features'', \emph{Atollic True...
 I'm forgetting what you said and using zero instead.
 
@@ -6989,27 +7089,27 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no / in font nullfont!
 
-Overfull \hbox (21.74428pt too wide) in paragraph at lines 125--127
+Overfull \hbox (21.74428pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/it/10 Atol-
  []
 
 
-Overfull \hbox (10.22215pt too wide) in paragraph at lines 125--127
+Overfull \hbox (10.22215pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/it/10 lic
  []
 
 
-Overfull \hbox (29.772pt too wide) in paragraph at lines 125--127
+Overfull \hbox (29.772pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/it/10 TrueS-
  []
 
 
-Overfull \hbox (18.16653pt too wide) in paragraph at lines 125--127
+Overfull \hbox (18.16653pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/it/10 TU-
  []
 
 
-Overfull \hbox (19.0721pt too wide) in paragraph at lines 125--127
+Overfull \hbox (19.0721pt too wide) in paragraph at lines 127--129
 \OT1/cmr/m/it/10 DIO
  []
 
@@ -7020,7 +7120,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.127 \bibitem{nextion}
+l.129 \bibitem{nextion}
                         Nextion, ``Features'', \emph{Nextion}, [Onile] avail...
 
 Try typing  <return>  to proceed.
@@ -7029,7 +7129,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <argument> \@listctr 
                      
-l.127 \bibitem{nextion}
+l.129 \bibitem{nextion}
                         Nextion, ``Features'', \emph{Nextion}, [Onile] avail...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7040,7 +7140,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.127 \bibitem{nextion}
+l.129 \bibitem{nextion}
                         Nextion, ``Features'', \emph{Nextion}, [Onile] avail...
 I'm forgetting what you said and using zero instead.
 
@@ -7112,12 +7212,12 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no / in font nullfont!
 
-Overfull \hbox (20.24986pt too wide) in paragraph at lines 127--129
+Overfull \hbox (20.24986pt too wide) in paragraph at lines 129--131
 \OT1/cmr/m/it/10 Nex-
  []
 
 
-Overfull \hbox (17.12212pt too wide) in paragraph at lines 127--129
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 129--131
 \OT1/cmr/m/it/10 tion
  []
 
@@ -7128,7 +7228,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.129 \bibitem{android}
+l.131 \bibitem{android}
                         Android, ``Everything you need to build on Android''...
 
 Try typing  <return>  to proceed.
@@ -7137,7 +7237,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <argument> \@listctr 
                      
-l.129 \bibitem{android}
+l.131 \bibitem{android}
                         Android, ``Everything you need to build on Android''...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7148,7 +7248,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.129 \bibitem{android}
+l.131 \bibitem{android}
                         Android, ``Everything you need to build on Android''...
 I'm forgetting what you said and using zero instead.
 
@@ -7270,12 +7370,12 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no l in font nullfont!
 
-Overfull \hbox (16.37766pt too wide) in paragraph at lines 129--131
+Overfull \hbox (16.37766pt too wide) in paragraph at lines 131--133
 \OT1/cmr/m/it/10 An-
  []
 
 
-Overfull \hbox (22.10541pt too wide) in paragraph at lines 129--131
+Overfull \hbox (22.10541pt too wide) in paragraph at lines 131--133
 \OT1/cmr/m/it/10 droid
  []
 
@@ -7286,7 +7386,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 \bibitem{ref}
+l.133 \bibitem{ref}
                     authors, ``Paper'', \emph{Journal}, \textbf{vol.}, pp.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -7294,7 +7394,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Undefined control sequence.
 <argument> \@listctr 
                      
-l.131 \bibitem{ref}
+l.133 \bibitem{ref}
                     authors, ``Paper'', \emph{Journal}, \textbf{vol.}, pp.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -7305,7 +7405,7 @@ and I'll forget about whatever was undefined.
 ! You can't use `\relax' after \the.
 <recently read> \c@ 
                     
-l.131 \bibitem{ref}
+l.133 \bibitem{ref}
                     authors, ``Paper'', \emph{Journal}, \textbf{vol.}, pp.
 I'm forgetting what you said and using zero instead.
 
@@ -7340,7 +7440,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 \end{thebibliography}
+l.134 \end{thebibliography}
                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
