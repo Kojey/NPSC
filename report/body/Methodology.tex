@@ -120,9 +120,17 @@ Unit tests are designed to test the framework of the hardware modules. These tes
 \subsubsection{System tests}
 Systems tests are at a higher level than the unit tests. They are all logic tests ensuring that the interaction between the framework modules is as expected. When these tests fail, the unit tests of the involved framework modules must be tested. If the unit tests pass, it is certainly a logic error and the IDE debugger must be used to pinpoint the errors.
 
+\subsection{Performance tests}
+This tests gather data on the performance of each module and of the system as a whole. It is meant to answer the following question:
+\begin{enumerate}
+\item What is the optimal queue size for the instruction buffer?
+\item What is the optimal DMA size for each input? 
+\end{enumerate} 
 \subsection{Acceptance tests}
-This is the final test done to prove that the device meet all the requirements defined in \cref{scope_and_limitations}. This test involve using the device as a user and verify the functionalities of the device. 
+This is the final test done to prove that the device meets all the requirements defined in \cref{scope_and_limitations}. This test involves using the device as a user and verify the functionalities of the device. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Analysis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
+This section provides analysis of the tests performed during the experiments. 
+{\bf TODO}

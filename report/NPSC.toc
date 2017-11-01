@@ -76,48 +76,47 @@
 \contentsline {subsection}{\numberline {3.5.2}Software tests}{31}{subsection.3.5.2}
 \contentsline {subsubsection}{Unit tests}{31}{section*.45}
 \contentsline {subsubsection}{System tests}{31}{section*.46}
-\contentsline {subsection}{\numberline {3.5.3}Acceptance tests}{31}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.3}Performance tests}{31}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Acceptance tests}{32}{subsection.3.5.4}
 \contentsline {section}{\numberline {3.6}Analysis}{32}{section.3.6}
-\contentsline {chapter}{\numberline {4}Implementation}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Hardware design}{34}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Sensors}{34}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Neopixel Ring}{34}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Neopixel Time and Weekday}{34}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Date}{34}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}EEPROM}{34}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Software design}{34}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Neopixles}{35}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Bluetooth}{35}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Sensors}{35}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}RTC}{35}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}EEPROM}{35}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Setup of development environement}{35}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Github}{35}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Nextion}{35}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Makefile}{35}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Testing}{36}{chapter.5}
-\contentsline {section}{\numberline {5.1}Hardware testing}{36}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Sensors}{36}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Neopixel Ring}{36}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Neopixel Time and Weekday}{36}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Date}{36}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}EEPROM}{36}{subsection.5.1.5}
-\contentsline {section}{\numberline {5.2}Software testing}{36}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Neopixles}{37}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Bluetooth}{37}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Sensors}{37}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}RTC}{37}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}EEPROM}{37}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Setup of development environement}{37}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Github}{37}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Nextion}{37}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Makefile}{37}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Results}{38}{chapter.6}
-\contentsline {section}{\numberline {6.1}Simulation Results}{38}{section.6.1}
-\contentsline {section}{\numberline {6.2}Experimental Results}{38}{section.6.2}
-\contentsline {chapter}{\numberline {7}Discussion}{39}{chapter.7}
-\contentsline {chapter}{\numberline {8}Conclusions}{40}{chapter.8}
-\contentsline {chapter}{\numberline {9}Recommendations}{41}{chapter.9}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{46}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{47}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{47}{section.B.1}
+\contentsline {chapter}{\numberline {4}Preliminary Design}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design scope and scpecifications}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Scope}{33}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Specification}{33}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}System overview}{33}{section.4.2}
+\contentsline {section}{\numberline {4.3}System components selection}{33}{section.4.3}
+\contentsline {section}{\numberline {4.4}Visual outputs component design decisions}{33}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Ring}{34}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Date and Temperature}{34}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Time}{34}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Weekday}{34}{subsection.4.4.4}
+\contentsline {chapter}{\numberline {5}Prototype Design}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}System design}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}High level design}{35}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Inputs/Outputs instruction design}{35}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}External storage}{35}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Alarm and Clock}{35}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Visual outputs}{36}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Details design}{36}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Neopixels}{36}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Screen}{36}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Android application}{36}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Bluetooth}{36}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Eeprom}{36}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}External RTC}{36}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Internal RTC and Alarms}{36}{subsection.5.3.7}
+\contentsline {chapter}{\numberline {6}Implementation}{37}{chapter.6}
+\contentsline {section}{\numberline {6.1}Hardware}{37}{section.6.1}
+\contentsline {section}{\numberline {6.2}Utilities}{37}{section.6.2}
+\contentsline {section}{\numberline {6.3}Framework}{37}{section.6.3}
+\contentsline {section}{\numberline {6.4}Applpication}{37}{section.6.4}
+\contentsline {chapter}{\numberline {7}Testing}{38}{chapter.7}
+\contentsline {chapter}{\numberline {8}Results}{39}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{39}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{39}{section.8.2}
+\contentsline {chapter}{\numberline {9}Discussion}{40}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions}{41}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recommendations}{42}{chapter.11}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{47}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{48}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{48}{section.B.1}
