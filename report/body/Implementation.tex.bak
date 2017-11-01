@@ -1,9 +1,9 @@
-\chapter{Implementation and Testing}
+\chapter{Implementation}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Hardware
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hardware design and testing}
+\section{Hardware design}
 Schematics and hardware testing
 \subsection{Sensors}
 \subsection{Neopixel Ring}
@@ -15,7 +15,7 @@ Schematics and hardware testing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Software Design and Testing
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Software design and testing}
+\section{Software design}
 Algorithms and unit tests
 \subsection{Neopixles}
 \subsection{Bluetooth}

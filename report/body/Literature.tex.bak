@@ -8,6 +8,7 @@ This chapter reviews the research papers, articles, books and other relevant for
 \label{fig:lit_rev}
 \end{figure}
 The literature review starts with an explanation of the problems to be solved, it continues by uncovering the theory behind these problems and ends with a review of the design methods, hardware components and software tools used in this project.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: The human sleep-wake cycle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -40,7 +41,6 @@ A similar study was previously made by George C. Brainard \textit{et al.} \cite{
 \subsection{Impact of light on human behaviour and sleep-wake cycle}
 Among the Zeitgebers (natural phenomenon acting as a signal in the regulation of the circadian rhythm)  of the circadian rhythms, light is the major Zeitgebers and has important effects on the human sleep-wake cycle. A study on the \say{Circadian and Light Effects on Human Sleepiness-Alertness} made by Christian \textit{et al.}\cite{cir2014} shows that with nor phase lag or lead between the circadian rhythm and the sleep-wake cycle, subjective sleepiness and core body temperature have opposite behaviour (\cite{cir2014}, pp. 12, fig. 2.1). The human normal sleep-wake cycle is comprised of 8h of sleep and 16h of wakefulness \cite{is1995}. This cycle is naturally affected by the human activities but is highly influenced by light exposure. The study shows that office workers with bright blue office light have a better sleep-wake cycle than those with dim and warm office light. Furthermore, it shows that light exposure of sufficient intensity at night can reduce the secretion of melatonin with alerting response starting within the first 20mm. With the recent advance in LED technologies, humans are no longer following the natural light/dark cycle causing numerous sleep disorders. 
 
-  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: LEDs technologies
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -95,27 +95,27 @@ Philips has created a broad range of wake-up lamps designed to impact the sleep-
 \end{figure}
 
 \vfill
-Some deep text here
+NEED SOME TRANSITION HERE 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Hardware modules 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Hardware modules}
-This section provides the research on the hardware texhnologies as well as the reasons behind the choice of some of these technologies. 
+This section provides the research on the hardware technologies as well as the reasons behind the choice of some of these technologies. 
 
 \subsection{Processors and microcontrollers}
-A microcontroller is a computer, it contains a central processing unit (CPU), it has some random access menory (RAM), it has input and output peripherals. However, a microcontroller is way smaller, cheaper, use less electrical power, and has less processing capabilities than a computer making it the preference for tasks specific electronic design \cite{ho2000}.\\
-Numerous microcontrollers were analysed for this project. Each manufacturer provide various range of microcontroller suitable for different application.
-The NPSC's microcontroller needs to communicate to a smartphone application wirelessly, it need to control a GPS module and other external modules. While controlling the external module, the microcontroller need to perform processing of the sunrise and sunset patterns by continously organising and sending data to the neopixels. In order to reduce the complexity of finding the \textit{perfect} microcontroller for the NPSC, the selection was based on the following characteristics:
+A microcontroller is an integrated circuit which is dedicated to execute tasks of a specific application. It is physically small, cheap compared to a computer, and is designed to operate a low power consumption \cite{ho2000}.\\
+Numerous microcontrollers were analysed for this project. Each manufacturer provides various range of microcontroller suitable for different applications.
+The NPSC's microcontroller needs to communicate to a smartphone application wirelessly and control various external modules. While controlling the external modules, the microcontroller needs to perform processing of the sunrise and sunset patterns by continuously organising and sending data to the neopixels. In order to reduce the complexity of finding the \textit{perfect} microcontroller for the NPSC, the selection was based on the following characteristics:
 \begin{itemize}
 \item \textbf{Size of the FLASH:} How many lines of code can be loaded to the microcontroller?
 \item \textbf{Cost}
 \item \textbf{Clock speed}
 \item \textbf{Community:} Does the manufacturer have a large community of developers?
 \item \textbf{Bit precision:} Are we aiming at 8, 16, or 32 bits precision? 
-\item \textbf{Familiarity:} How familliar are we with the microcontroller (time is a constraint)?
-\item \textbf{Number of pins:} How familliar are we with the microcontroller (time is a constraint)?\
-\item \textbf{Extra features:} What are then built-in functionalities (wifi module, bluetooth)?
+\item \textbf{Familiarity:} How familiar are we with the microcontroller (time is a constraint)?
+\item \textbf{Number of pins:} How many ports does it provide?\
+\item \textbf{Extra features:} What are the built-in functionalities (wifi module, bluetooth)?
 \end{itemize}
 
 \Cref{table:micro} provides the difference between the microcontrollers selected, this table was use to make the final decision on the microcontroller selection.
@@ -140,19 +140,36 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 \end{table}
 
 \subsection{Storage}
-Storages are important in the development of embedded solutions. The \textbf{Electrical Erasable Programmable Read-Only Memory} (EEPROM) is a non-volatile memory capable of keeping its data after being powered off. Its design was based on the \textbf{Erasable Programmable Read-Only Memory} (EPROM) which required exposure to UV light for erasing its memory. There are two types of EEPROMs, serial and parallel EEPROMs. In a study made by Microship on the difference between serial and parallel EEPROM of 16KB, Tom Tyson from the Memory Product Divisions concluded that the serial EEPROM is \textit{the best option for embedded solutions requiring a small EEPROM footprint, low current and low operating voltage, the ability and ease to programme a byte at a time, and the best price performance non-volatile memory solution available}\cite{serialvsparallel} (pp. 4).
-The NPSC needs to store the user's data and the NPSC default's settings. Having an non-volatile external memory easy to program is of benifit to the NPSC.
+Storages are important in the development of embedded solutions. The \textbf{Electrical Erasable Programmable Read-Only Memory} (EEPROM) is a non-volatile memory capable of keeping its data after being powered off. There are two types of EEPROMs, serial and parallel EEPROMs. In a study made by Microship on the difference between serial and parallel EEPROM of 16KB, Tom Tyson from the Memory Product Divisions concluded that the serial EEPROM is \textit{the best option for embedded solutions requiring a small EEPROM footprint, low current and low operating voltage, the ability and ease to programme a byte at a time, and the best price-performance non-volatile memory solution available}\cite{serialvsparallel} (pp. 4).
+The NPSC needs to store the user's data and the NPSC default's settings. Having a non-volatile external memory easy to program is of benefits to the NPSC.
 
 \subsection{Wireless technology}
-Different types of wireless technologies allow devices to commnunicate to each other wirelessly. The Institute of Electrical and Electronics Engineers (IEEE) has grouped them in the 802.15 technologies. Among these are the well known Wifi, the cellular machine to machine (M2M), the mesh network using \textbf{ZigBee}, \textbf{Z-wave} \ldots and bluetooth. \\
-The NPSC needs to make of an wireless connection to communicate with a smartphone application. The  appropriateness of the technologies listed bellow for the NPSC must be analysed. 
-Wifi is power efficient, inexpensive; however, the samrtphone communicating with the NPSC will require to be connected to the same wifi. Moreover, a web application might need to be designed as a platform for the NPSC, this will raise security unecessary issues that we would not be able to explore to the time constraint of the project. Cellular machine to machine has one main drawback, its reccuring cost. As its name indicate, this technology is to send informations from a machine to another machine and is not optimal for a graphic design platform\footnote{having a phone or web application that make use of this would be horrible}.  Mesh networks are optimal for interaction of device/machine of the same kind (not a requirement), the NPSC does not fall into that category. Bluettoth is designed for short range communication (the typical distance is arround $10m$\footnote{can be increased by increasing the transmission power})being in almost all smartphones it has been extensively used by embedded systems device such as handset, bluetooth speakers. It has a full duplex communication with synchronous and asynchronous channel. Using bluetooth, the NPSC will not require any network or incur any recurring cost to the user. 
+Different types of wireless technologies allow devices to communicate to each other wirelessly. The Institute of Electrical and Electronics Engineers (IEEE) has grouped them in the 802.15 technologies. Among these are the well-known Wifi, cellular machine to machine (M2M), mesh network using ZigBee, Z-wave \ldots and Bluetooth. \\
+The NPSC needs to make a wireless connection to communicate with a smartphone application. The appropriateness of the technologies tabulated in \cref{tab:wireless} for the NPSC are analysed below. 
+Wifi modules are inexpensive; however, smartphones communicating with the NPSC will require being connected to the same wifi. Moreover, a web application might need to be designed as a platform for the NPSC, this will raise security issues that we would not be able to explore to the time constraint of the project. Cellular machine to machine has one main drawback, its recurring cost. As its name indicate, this technology is to send information from a machine to another machine and is not optimal for a graphic design platform\footnote{having a phone or web application that make use of this would be horrible}.  Mesh networks are optimal for interactions of device/machine of the same kind (not a requirement), the NPSC does not fall into that category. Bluetooth is designed for short-range communication (the typical distance is around $10m$  \footnote{can be increased by increasing the transmission power})being in almost all smartphones it has been extensively used by embedded systems device such as handsets, Bluetooth speakers. It has a full-duplex communication with synchronous and asynchronous channel. Using Bluetooth, the NPSC will not require any network or incur any recurring cost to the user. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccc}
+\hline
+\hline
+\textbf{Technology} & \textbf{Constraints} & \textbf{Convenience} \\
+\hline
+\textbf{Wifi} & Wifi network and security protocol & Yes\\ 
+\textbf{M2M} & Recurring cost & No\\
+\textbf{Mesh} network & Machine/Device of the same kind & No\\
+\textbf{Bluetooth} & Short range & Yes\\
+\hline
+\hline
+\end{tabular}
+\caption{Comparison between the constraints and the convenience of Wifi, M2M, Mesh network, and Bluetooth}
+\label{table:wireless}
+\end{table}
 
 \subsection{Touch screen}
-A touch-screen device can locate the position of a point of contact on its screen. The idea of a using  contact presure of a object in application was initially from Hugh Le Caine with his Electronic Slackbut capable of change the volume of musical notes based on the amount of pressure applied to the keys. Later in 1969, E. A. Johnson created two major touch-screen technologies using a resistive and a capacitive approach. \\
-\Cref{fig:screen} illustrates the following explanation. Resistive touch-screens are made out of many layers among which two are composed of indium-tin oxide (ITO) which is highly resistive and transparent. By applying pressure on one of the layer, the layers come in contact creating a signal that is used to find the location of the point of contact. Capacitive touch-screens on the other hand make use of the conductivity of the object in contact with the screen to affect the electrostatic field between the ITO layers. \\
-Resistive touch-screens are less complex than capacitive touch-screen, thus cheaper. Additionally, because they relie on pressure, any object whether conductive or not can be used on the screen which is made to be robust. However, resistive touch-screen do not support multi-touch and have poor contrast becaused of the extra layer used to protect the ITO layers.\\
-The NPSC need to have an on-board controller. This controller must be user friendly, with the different features of the NPSC, a touch-screen is desirable over a controller with physical button. A resistive touch screen would add to the robustness of the NPSC as a whole.   
+A touch-screen device can locate the position of a point of contact on its screen. 
+\Cref{fig:screen} illustrates the difference between resistive and capacitive touchscreen. Resistive touch-screens are made out of many layers of which two are composed of indium-tin-oxide (ITO) which is highly resistive and transparent. By applying pressure on one of the layers, the layers come in contact creating a signal that is used to find the location of the point of contact. Capacitive touch-screens, on the other hand, make use of the conductivity of the object in contact with the screen to affect the electrostatic field between the ITO layers. Resistive touch-screens are less complex than capacitive touch-screens, thus cheaper. Additionally, because they rely on pressure, any object whether conductive or not can be used on the screen which is made to be robust. However, resistive touch-screens do not support multi-touch and have poor contrast because of the extra layer used to protect the ITO layers.\\
+The NPSC need to have an onboard controller. This controller must be user-friendly, with the different features of the NPSC, a touch-screen is desirable over a controller with physical buttons. A resistive touchscreen would add to the robustness of the NPSC as a whole.   
 \begin{figure}[h!]
 \centering
 \begin{minipage}[b]{0.45\textwidth}
@@ -165,12 +182,12 @@ The NPSC need to have an on-board controller. This controller must be user frien
 \subcaption[second caption.]{Resistive touch-screen technology \cite{capacitivetouch}.}
 \label{fig:capacitive_screen}
 \end{minipage}
-\caption{Touch-screen technologies}
+\caption{Touch-screen technologies. More pressure need to be applied on the resistive touch screen for location dectection.}
 \label{fig:screen}
 \end{figure}    
 
 \subsection{Neopixels}
-The neopixel is an intelligent programmable light source using a MCU to control a RGB or RGBW. Each colour is capable of producing 255 brightness levels resulting in 16777216 different RGB colours. 
+The neopixel is a programmable light source using an MCU to control an RGB or RGBW LEDs. Each colour is capable of producing 255 brightness levels resulting in 16777216 different RGB colours. 
 The light characteristics of the neopixel of choice are presented in \cref{table:neopixel_specs}. The light requirement of the NPSC is the emmission of light of $460nm$ (blue light) at an illuminance of $30lux$ minimum.
 \begin{table}[h!]
 \centering
@@ -198,10 +215,10 @@ E_{v(lx)}=\frac{I_{v(cd)}}{d_m^2}
 E_{v_1}=E_v*\cos(\theta)
 \end{equation}
 \textit{with $\theta$, the angle θ between the direction of the incident light and the surface normal}.\\
-The dimension to be considered for the calculatio of the illuminance of the neopixel ring are shown in \cref{fig:neopixel_ring_dimension}.
+The dimension to be considered for the calculation of the illuminance of the neopixel ring are shown in \cref{fig:neopixel_ring_dimension}.
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.6]{ring.png}
+\includegraphics[scale=0.1]{ring_calculation.jpg}
 \caption{Relative position of the neopixel rings}
 \label{fig:neopixel_ring_dimension}
 \end{figure}
@@ -237,19 +254,34 @@ The result of the calculation are tabulated in the \cref{neopixel_illuminance}. 
 % SECTION: Communication protocols
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Communication protocols}
-The NPSC requires different integrated circuits using various communication protocols, below is the a breif on the use of the protocol required.
+The NPSC requires different integrated circuits using various communication protocols, below is a brief on the use of the protocol required.
 
 \subsection{Serial Peripheral Interface (SPI) Bus}
-SPI is a synchronous full duplex serial communication protocol used for short distance communication of electronic devices. With the protocol, one master can communicate to many slaves using a chip select pin (use to select the slave) but a slave can only talk to the master device. SPI uses 4 signals namely, the Master Out Slave In (MOSI), the Master In Slave Out (MISO), the clock (SCK), and the slave select or chip select (SS). Since SPI uses a clock, it does not require the configuration of a baud rate before communication. The main inconvenience with SPI is the number of pin require for a one to one communication, for every additional slave, the master must provide a SS pins which make SPI not the ideal protocol for communicating to multiple slaves devices \cite{spi}. 
-
+SPI is a synchronous full duplex serial communication protocol used for short distance communication of electronic devices. With the protocol, one master can communicate to many slaves using a chip select pin (use to select the slave) but a slave can only talk to the master device. SPI uses 4 signals namely, the Master Out Slave In (MOSI), the Master In Slave Out (MISO), the clock (SCK), and the slave select or chip select (SS). Since SPI uses a clock, it does not require the configuration of a baud rate before communication. The main inconvenience with SPI is the number of pins required for a one to one communication, for every additional slave, the master must provide an SS pins which make SPI not the ideal protocol for communicating to multiple slaves devices \cite{spi}. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{spi.jpg}
+\caption{Wire connection setting for SPI communication between a master and a slave device}
+\label{fig:spi_coms}
+\end{figure}
 \subsection{Universal asynchronous receiver-transmitter (UART)}
-UART is a asynchronous full duplex communication protocol making use of two signals a transmit signal (TX) and a receive signal (RX). With UART, both devices need to agree on a baud-rate for communication, this rate define the number of bytes to be sent and received. The problem with UART is the complexity of the protocol required to ensure synchronous communication and correct transfer of information between device. Although theoretically UART baud-rate is infinite, it is practically limited to 230400 bits per seconds \cite{uart}.   
-
+UART is an asynchronous full duplex communication protocol making use of two signals a transmit signal (TX) and a receive signal (RX). With UART, both devices need to agree on a baud-rate for communication, this rate defines the number of bytes to be sent and received. The problem with UART is the complexity of the protocol required to ensure synchronous communication and correct transfer of information between device. Although theoretically, UART baud-rate is infinite, it is practically limited to 230400 bits per seconds \cite{uart}.   
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{uart.jpg}
+\caption{Wire connection setting for UART communication between two devices}
+\label{fig:uart_coms}
+\end{figure}
 \subsection{Inter-Integrated Circuit (I2C)}
-I2C is a serial protocol that allows communications fom multiple slaves to multiple masters. It takes a bit of both SPI and UART by being designed for short distance communication and requiring only two pins, namely the data line (SDA) and clock line (SCL). Its clock ranges from $100kHz$ to $400kHz$ and a bytes is sent at a time. Furthermore with the I2C protocol, each slave must have a unique address used by the master for communication \cite{i2c}.  
-
+I2C is a serial protocol that allows communications from multiple slaves to multiple masters. It takes a bit of both SPI and UART by being designed for short distance communication and requiring only two pins, namely the data line (SDA) and clock line (SCL). Its clock ranges from $100kHz$ to $400kHz$ and a byte is sent at a time. Furthermore, with the I2C protocol, each slave must have a unique address used by the master for communication \cite{i2c}.  
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{i2c.jpg}
+\caption{Wire connection setting for I2C communication between two masters and two slaves devices}
+\label{fig:i2c_coms}
+\end{figure}
 \subsection{Neopixels serial protocol}
-Each neopixel has a built-in IC controlling the LEDs' intensity based on the data received. The neopixels use a single wire communication protocol. The neopixels can be connected to form a daisy chain (cascade)\cref{fig:neopixel_cascade} allowing the programmation of a serie of neopixels using one signal. Each neopixel requires 24 Bytes (32 Bytes for RGBW LEDs), each bytes is an encoded bit using a Non-Return-to-Zero encoding \cref{fig:neopixel_nrz}. On receiving a sequence of data, the first neopixel in the chain takes the first 24 bytes and passes the rest of the data to the next neopixel in the daisy chain and so for. This operation continues until a \textit{rest signal} is received by the first neopixel \cref{fig:neopixel_cascade}. This is possible because each neopixel is capable of reshaping the incoming signal preserving the integrity its integrity of continous transmission.
+Each neopixel has a built-in IC controlling the LEDs' intensity based on the data received. The neopixels use a single wire communication protocol. The neopixels can be connected to form a daisy chain (cascade)\cref{fig:neopixel_cascade} allowing to program of a series of neopixels using one signal. Each neopixel requires 24 Bytes (32 Bytes for RGBW LEDs), each bytes is an encoded bit using a Non-Return-to-Zero encoding \cref{fig:neopixel_nrz}. On receiving a sequence of data, the first neopixel in the chain takes the first 24 bytes and passes the rest of the data to the next neopixel in the daisy chain and so for. This operation continues until a \textit{rest signal} is received by the first neopixel \cref{fig:neopixel_cascade}. This is possible because each neopixel is capable of reshaping the incoming signal preserving the integrity its integrity of continuous transmission.
 
 \begin{figure}[h!]
 \centering
@@ -276,8 +308,8 @@ Each neopixel has a built-in IC controlling the LEDs' intensity based on the dat
 % SECTION: PCB Board Design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PCB Board Design}
-PCBs are almost present in every electronic circuit as they hold all the components together and implement the electricla connections in a elegant fashion. Designing a PCB is a process easily prone to errors, therefore a good PCB design requires the implementation of the design steps. \Cref{fig:pcb_design_flow} illustrates an examples of the ideal pcb design steps. In making the NPSC PCBs these steps give an engineering approach that can be elaborated further based on the PCBs requirement. For example, the designer might question what is the best placement for certain component and thus be referred to some PCBs design standards such as the IPC2221.\\
-One important design requirement (need) for the NPSC light requirement is its theoretical current ($10A$) drawn at full pixel brightness. The board-level diagram of the NPSC ring (\textit{qoute pcb ring from design section}) of the neopixel board should therefore be designed so that the track are wide enought to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
+Printed Circuit Boards (PCBs) are almost present in every electronic circuit as they hold all the components together and implement the electrical connections. Designing a PCB is a process easily prone to errors, therefore a good PCB design requires the implementation of the design steps. \Cref{fig:pcb_design_flow} illustrates an examples of the ideal pcb design steps. In making the NPSC PCBs these steps give an engineering approach that can be elaborated further based on the PCBs requirement. For example, the designer might question what is the best placement for certain component and thus be referred to some PCBs design standards such as the IPC2221.\\
+One important design requirement (need) for the NPSC light requirement is its theoretical current ($10A$) drawn at full pixel brightness. The board-level diagram of the NPSC ring of the neopixel board should therefore be designed so that the track are wide enough to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{pcb_design_flow.png}
@@ -292,9 +324,9 @@ One important design requirement (need) for the NPSC light requirement is its th
 Choosing the right programming language for software development is a crutial step, expecially in embedded system design as carefull manipulation of memory is required. The languages below are the ones chosen for the development of NPSC. 
 \subsection{C}
 \textit{C} is a mid-level programming language \footnote{has the advantages of both ligh and low level language} providing the ability to get close to the hardware while keeping some abstract layers for programming \cite{c_programming}.It has an easy and straight forward syntax compared to languages such as Java, C has accumulated a lot of support and has lots of functions and documentation. Although C does not support Object Orientated Programming, it is a Procedure Orientated Language (POL) which means it is designed to create programs that follow an algorithm. This latter feature of C make it the favourite programming language for Embedded System. 
-\subsection{Java}
-Java is one of the most popular programming languages. It is an Object-Orientated programming language unlike C, enabling program to be more abstract and modular \cite{java_programming}. Java is multithreaded, this feature is essential in the development of smartphone applications as they are inherently multithreaded. In Andrioid application development, Java is still the most common and has a great communities and great tutorial decreasing development time. 
 
+\subsection{C++}
+\textit{C++} is a programming language based on C which has higher level functionality. In the context of this project, C++ is used to test the functionality of the NPSC modules using an Arduino.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Software Tools and Libraries
@@ -306,8 +338,31 @@ Developing an embedded system software can be quite frustrating, for this reason
 Atollic TrueSTUDIO is an IDE based on Eclipse. It comes with the GCC toolchain for ARM and with debugging features beuilt on top of GDB. It has more advanced features compared to Eclipse in the development embedded system application. Its debugging features include the use of any debug probe compatible with the GDB-server, P\&E Micro, SEGGER J-Link / J-Trace, ST-Link, OpenOCD are all supported by Atollic TrueSTUDIO. It supports debugging of single and multi core devices and allows real time view of memory mapping, peripheral registers, advanced visualisation of variable and complex break point, CPU fault analysis and many more. Another important debugging feature of Atollic TrueSTUDIO is the instruction tracing and system analysis real time event analysis of Real Time Operating System \cite{atollic}.
 
 \subsection{Nextion IDE}
-Nextion IDE is the official IDE designed for programming any Nextion HMI touch-screen. The IDE allows the designed and programmation of a GUI interface and the definition of serial commands to be sent to a MCU. Nextion IDE is designed to reduce significantly development time of touch-screen interface in an embedded system project \cite{nextion}.
+Nextion IDE is the official IDE designed for programming any Nextion HMI touch-screen. The IDE allows the designed and programmation of a GUI interface and the definition of serial commands to be sent to a MCU. Nextion IDE is designed to reduce significantly development time of touch-screen interface in an embedded system project \cite{nextion}. 
 
-\subsection{Android Studio}
-Android Sudio is the official IDE designed for reducing development time of android applications and improve their quality. It uses advanced code completion, refactoring, and code analysis method. With its variety of device simulations, Android Studio allows the developer to test the applicatio on various devices and android version \cite{android}.
+\subsection{MIT App Inventor 2}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Design Models
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Design Models}
+This section describes the different design models used for the project.
+
+\subsection{V-Model}
+The The V-Model is a linear product-development methodology composed of two main parts. On the left side of the diagram (see \cref{fig:v_model} ) is the project definition. On that branch, the requirements are defined, the system design, architectural design and module design are performed. At the bottom of the diagram is the implementation of the design. Following the implementation is the project testing and integration. The project testing starts with the unit testing of the module design follwed by integration testing in which the architectural design is tested to ensure that the systems functions well across all components. The next step consists of the system testing and the validation of the performance defined in the design. The last step is the acceptance testing, done to ensure that the system can be deployed.       
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{v_model.png}
+\caption{V-Model basic template used for system definition and testing}
+\label{fig:v_model}
+\end{figure}
+
+\subsection{Spiral Model}
+The Spiral model is a combination of the iterative model \footnote{Cyclic process consisting of design, prototyping, testing, analysis and refinement of a product} and the waterfall model \footnote{linear sequential process consisting of conception, initiation, analysis, design, construction, testing, deployment and maintenance of a product.} through which a product can be refined after each cycle. \Cref{fig:spiral_model} illustrate the order of the spiral model steps. The first step is the identification, it consists of identifying the user, system, sub-system, and unit requirements. The second step consists of the system ,architectural, physical design and logical design of all modules. The prototype is build during the third step, the prototype serves as a proof of concept. D
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.7]{spiral_model.jpg}
+\caption{Spiral-Model basic template used for system refinement}
+\label{fig:spiral_model}
+\end{figure}

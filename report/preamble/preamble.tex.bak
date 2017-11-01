@@ -16,6 +16,7 @@
 \usepackage{cleveref}	% multiple references
 \usepackage{multirow}	% merge rows
 %\usepackage{titlesec}
+\usepackage{dirtytalk}
 \graphicspath{{./figures/}}
 
 % Include page formatting here. 
