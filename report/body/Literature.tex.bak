@@ -143,7 +143,7 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 Storages are important in the development of embedded solutions. The \textbf{Electrical Erasable Programmable Read-Only Memory} (EEPROM) is a non-volatile memory capable of keeping its data after being powered off. There are two types of EEPROMs, serial and parallel EEPROMs. In a study made by Microship on the difference between serial and parallel EEPROM of 16KB, Tom Tyson from the Memory Product Divisions concluded that the serial EEPROM is \textit{the best option for embedded solutions requiring a small EEPROM footprint, low current and low operating voltage, the ability and ease to programme a byte at a time, and the best price-performance non-volatile memory solution available}\cite{serialvsparallel} (pp. 4).
 The NPSC needs to store the user's data and the NPSC default's settings. Having a non-volatile external memory easy to program is of benefits to the NPSC.
 
-\subsection{Wireless technology}
+\subsection{Wireless technology}\label{wireless_technologies}
 Different types of wireless technologies allow devices to communicate to each other wirelessly. The Institute of Electrical and Electronics Engineers (IEEE) has grouped them in the 802.15 technologies. Among these are the well-known Wifi, cellular machine to machine (M2M), mesh network using ZigBee, Z-wave \ldots and Bluetooth. \\
 The NPSC needs to make a wireless connection to communicate with a smartphone application. The appropriateness of the technologies tabulated in \cref{tab:wireless} for the NPSC are analysed below. 
 Wifi modules are inexpensive; however, smartphones communicating with the NPSC will require being connected to the same wifi. Moreover, a web application might need to be designed as a platform for the NPSC, this will raise security issues that we would not be able to explore to the time constraint of the project. Cellular machine to machine has one main drawback, its recurring cost. As its name indicate, this technology is to send information from a machine to another machine and is not optimal for a graphic design platform\footnote{having a phone or web application that make use of this would be horrible}.  Mesh networks are optimal for interactions of device/machine of the same kind (not a requirement), the NPSC does not fall into that category. Bluetooth is designed for short-range communication (the typical distance is around $10m$  \footnote{can be increased by increasing the transmission power})being in almost all smartphones it has been extensively used by embedded systems device such as handsets, Bluetooth speakers. It has a full-duplex communication with synchronous and asynchronous channel. Using Bluetooth, the NPSC will not require any network or incur any recurring cost to the user. 
@@ -186,7 +186,7 @@ The NPSC need to have an onboard controller. This controller must be user-friend
 \label{fig:screen}
 \end{figure}    
 
-\subsection{Neopixels}
+\subsection{Neopixels}\label{neopixels}
 The neopixel is a programmable light source using an MCU to control an RGB or RGBW LEDs. Each colour is capable of producing 255 brightness levels resulting in 16777216 different RGB colours. 
 The light characteristics of the neopixel of choice are presented in \cref{table:neopixel_specs}. The light requirement of the NPSC is the emmission of light of $460nm$ (blue light) at an illuminance of $30lux$ minimum.
 \begin{table}[h!]
@@ -307,7 +307,7 @@ Each neopixel has a built-in IC controlling the LEDs' intensity based on the dat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: PCB Board Design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{PCB Board Design}
+\section{PCB Board Design}\label{PCB_requirement}
 Printed Circuit Boards (PCBs) are almost present in every electronic circuit as they hold all the components together and implement the electrical connections. Designing a PCB is a process easily prone to errors, therefore a good PCB design requires the implementation of the design steps. \Cref{fig:pcb_design_flow} illustrates an examples of the ideal pcb design steps. In making the NPSC PCBs these steps give an engineering approach that can be elaborated further based on the PCBs requirement. For example, the designer might question what is the best placement for certain component and thus be referred to some PCBs design standards such as the IPC2221.\\
 One important design requirement (need) for the NPSC light requirement is its theoretical current ($10A$) drawn at full pixel brightness. The board-level diagram of the NPSC ring of the neopixel board should therefore be designed so that the track are wide enough to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
 \begin{figure}[ht]
@@ -337,7 +337,7 @@ Developing an embedded system software can be quite frustrating, for this reason
 \subsection{Atollic TrueSTUDIO for ARM}
 Atollic TrueSTUDIO is an IDE based on Eclipse. It comes with the GCC toolchain for ARM and with debugging features beuilt on top of GDB. It has more advanced features compared to Eclipse in the development embedded system application. Its debugging features include the use of any debug probe compatible with the GDB-server, P\&E Micro, SEGGER J-Link / J-Trace, ST-Link, OpenOCD are all supported by Atollic TrueSTUDIO. It supports debugging of single and multi core devices and allows real time view of memory mapping, peripheral registers, advanced visualisation of variable and complex break point, CPU fault analysis and many more. Another important debugging feature of Atollic TrueSTUDIO is the instruction tracing and system analysis real time event analysis of Real Time Operating System \cite{atollic}.
 
-\subsection{Nextion IDE}
+\subsection{Nextion IDE}\label{nextion}
 Nextion IDE is the official IDE designed for programming any Nextion HMI touch-screen. The IDE allows the designed and programmation of a GUI interface and the definition of serial commands to be sent to a MCU. Nextion IDE is designed to reduce significantly development time of touch-screen interface in an embedded system project \cite{nextion}. 
 
 \subsection{MIT App Inventor 2}
