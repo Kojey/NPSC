@@ -57,43 +57,40 @@
 \BOOKMARK [2][-]{subsection.3.5.4}{Acceptance tests}{section.3.5}% 57
 \BOOKMARK [1][-]{section.3.6}{Analysis}{chapter.3}% 58
 \BOOKMARK [0][-]{chapter.4}{Preliminary Design}{}% 59
-\BOOKMARK [1][-]{section.4.1}{Design scope and scpecifications}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.1.1}{Scope}{section.4.1}% 61
-\BOOKMARK [2][-]{subsection.4.1.2}{Specification}{section.4.1}% 62
-\BOOKMARK [1][-]{section.4.2}{System overview}{chapter.4}% 63
-\BOOKMARK [1][-]{section.4.3}{System components selection}{chapter.4}% 64
-\BOOKMARK [1][-]{section.4.4}{Visual outputs component design decisions}{chapter.4}% 65
-\BOOKMARK [2][-]{subsection.4.4.1}{Ring}{section.4.4}% 66
-\BOOKMARK [2][-]{subsection.4.4.2}{Date and Temperature}{section.4.4}% 67
-\BOOKMARK [2][-]{subsection.4.4.3}{Time}{section.4.4}% 68
-\BOOKMARK [2][-]{subsection.4.4.4}{Weekday}{section.4.4}% 69
-\BOOKMARK [0][-]{chapter.5}{Prototype Design}{}% 70
-\BOOKMARK [1][-]{section.5.1}{System design}{chapter.5}% 71
-\BOOKMARK [1][-]{section.5.2}{High level design}{chapter.5}% 72
-\BOOKMARK [2][-]{subsection.5.2.1}{Inputs/Outputs instruction design}{section.5.2}% 73
-\BOOKMARK [2][-]{subsection.5.2.2}{External storage}{section.5.2}% 74
-\BOOKMARK [2][-]{subsection.5.2.3}{Alarm and Clock}{section.5.2}% 75
-\BOOKMARK [2][-]{subsection.5.2.4}{Visual outputs}{section.5.2}% 76
-\BOOKMARK [1][-]{section.5.3}{Details design}{chapter.5}% 77
-\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels}{section.5.3}% 78
-\BOOKMARK [2][-]{subsection.5.3.2}{Screen}{section.5.3}% 79
-\BOOKMARK [2][-]{subsection.5.3.3}{Android application}{section.5.3}% 80
-\BOOKMARK [2][-]{subsection.5.3.4}{Bluetooth}{section.5.3}% 81
-\BOOKMARK [2][-]{subsection.5.3.5}{Eeprom}{section.5.3}% 82
-\BOOKMARK [2][-]{subsection.5.3.6}{External RTC}{section.5.3}% 83
-\BOOKMARK [2][-]{subsection.5.3.7}{Internal RTC and Alarms}{section.5.3}% 84
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 85
-\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 86
-\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 87
-\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 88
-\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 89
-\BOOKMARK [0][-]{chapter.7}{Testing}{}% 90
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 91
-\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 92
-\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 93
-\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 94
-\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 95
-\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 96
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 97
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 98
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 99
+\BOOKMARK [1][-]{section.4.1}{System overview}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.2}{System components selection}{chapter.4}% 61
+\BOOKMARK [1][-]{section.4.3}{Visual outputs component design decisions}{chapter.4}% 62
+\BOOKMARK [2][-]{subsection.4.3.1}{Ring}{section.4.3}% 63
+\BOOKMARK [2][-]{subsection.4.3.2}{Date and Temperature}{section.4.3}% 64
+\BOOKMARK [2][-]{subsection.4.3.3}{Time}{section.4.3}% 65
+\BOOKMARK [2][-]{subsection.4.3.4}{Weekday}{section.4.3}% 66
+\BOOKMARK [0][-]{chapter.5}{Prototype Design}{}% 67
+\BOOKMARK [1][-]{section.5.1}{System design}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.2}{High level design}{chapter.5}% 69
+\BOOKMARK [2][-]{subsection.5.2.1}{Inputs/Outputs instruction design}{section.5.2}% 70
+\BOOKMARK [2][-]{subsection.5.2.2}{External storage}{section.5.2}% 71
+\BOOKMARK [2][-]{subsection.5.2.3}{Alarm and Clock}{section.5.2}% 72
+\BOOKMARK [2][-]{subsection.5.2.4}{Visual outputs}{section.5.2}% 73
+\BOOKMARK [1][-]{section.5.3}{Details design}{chapter.5}% 74
+\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels}{section.5.3}% 75
+\BOOKMARK [2][-]{subsection.5.3.2}{Screen}{section.5.3}% 76
+\BOOKMARK [2][-]{subsection.5.3.3}{Android application}{section.5.3}% 77
+\BOOKMARK [2][-]{subsection.5.3.4}{Bluetooth}{section.5.3}% 78
+\BOOKMARK [2][-]{subsection.5.3.5}{Eeprom}{section.5.3}% 79
+\BOOKMARK [2][-]{subsection.5.3.6}{External RTC}{section.5.3}% 80
+\BOOKMARK [2][-]{subsection.5.3.7}{Internal RTC and Alarms}{section.5.3}% 81
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 82
+\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 83
+\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 86
+\BOOKMARK [0][-]{chapter.7}{Testing}{}% 87
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 88
+\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 89
+\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 90
+\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 91
+\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 92
+\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 93
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 94
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 95
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 96

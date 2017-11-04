@@ -86,7 +86,7 @@ bool test_clock_alarm(void){
 
 	alarm1.RTC_AlarmDateWeekDay = 24;
 	alarm1.RTC_AlarmDateWeekDaySel = RTC_AlarmDateWeekDaySel_Date;
-	alarm1.RTC_AlarmMask = REPEAT_Hours;
+	alarm1.RTC_AlarmMask = REPEAT_NEVER;
 	alarm1.RTC_AlarmTime.RTC_H12 = RTC_H12_PM;
 	alarm1.RTC_AlarmTime.RTC_Hours = 2;
 	alarm1.RTC_AlarmTime.RTC_Minutes = 11;

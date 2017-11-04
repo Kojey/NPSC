@@ -8,9 +8,9 @@ int temperatureSensor[4] = {A0, A1,A2,A3}; // select the input pin for the poten
 int samplingInterval = 2000;
 int sampleNumber = 0;
 int numberOfSamples = 15;
-int averageTemperature = 0;  // variable to store the value coming from the sensor
-int previousTemperature = 10000;
-int difference = 10;
+float averageTemperature = 0;  // variable to store the value coming from the sensor
+float previousTemperature = 10000;
+int difference = -1;
 void setup() {
   Serial.begin(9600);
   delay(samplingInterval);
@@ -28,7 +28,7 @@ void loop() {
     Serial.print(sampleNumber);
     Serial.print(',');
     for(int i=0; i<4; ++i){
-      int value = getTemperature(analogRead(temperatureSensor[i]));
+      int value = getTemperature(analogRead(temperatureSensor[i]));//getTemperature(analogRead(temperatureSensor[i]));
       Serial.print(value);
       Serial.print(',');
       averageTemperature += value;
@@ -40,7 +40,7 @@ void loop() {
   }
 }
 
-int getTemperature(int temp){
-  return temp;
+int getTemperature(float temp){
+  return (temp*5/1024-0.5)/0.01;
 }
 

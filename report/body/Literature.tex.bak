@@ -131,7 +131,7 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 \textbf{Bit precision} & 32 & 32 & 32 & 32 \\
 \textbf{FLASH} & 512KB & 4GB & MicroSDHC & 1MB \\
 \textbf{Pins} & 54 & 40 & 40 & 82\\
-\textbf{Cost} & R549.25 & R687.87 & R79.8 & R175.45\\
+\textbf{Cost} & R549.25 & R687.87 & R79.8 & R114.83\\
 \hline
 \hline
 \end{tabular}
@@ -347,10 +347,10 @@ Nextion IDE is the official IDE designed for programming any Nextion HMI touch-s
 % SECTION: Design Models
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Design Models}
-This section describes the different design models used for the project.
+Designing an embedded system requires the use of suitable design methods. This section describes the different design models used for the project.
 
 \subsection{V-Model}
-The The V-Model is a linear product-development methodology composed of two main parts. On the left side of the diagram (see \cref{fig:v_model} ) is the project definition. On that branch, the requirements are defined, the system design, architectural design and module design are performed. At the bottom of the diagram is the implementation of the design. Following the implementation is the project testing and integration. The project testing starts with the unit testing of the module design follwed by integration testing in which the architectural design is tested to ensure that the systems functions well across all components. The next step consists of the system testing and the validation of the performance defined in the design. The last step is the acceptance testing, done to ensure that the system can be deployed.       
+The V-Model is a linear product-development methodology composed of two main parts. On the left side of the diagram (see \cref{fig:v_model} ) is the project definition. On that branch, the requirements are defined, the system design, architectural design and module design are performed. At the bottom of the diagram is the implementation of the design. Following the implementation is the project testing and integration. The project testing starts with the unit testing of the module design followed by integration testing in which the architectural design is tested to ensure that the system functions well across all components. The next step consists of the system testing and the validation of the performance defined in the design. The last step is the acceptance testing, done to ensure that the system can be deployed.       
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.7]{v_model.png}
@@ -359,7 +359,7 @@ The The V-Model is a linear product-development methodology composed of two main
 \end{figure}
 
 \subsection{Spiral Model}
-The Spiral model is a combination of the iterative model \footnote{Cyclic process consisting of design, prototyping, testing, analysis and refinement of a product} and the waterfall model \footnote{linear sequential process consisting of conception, initiation, analysis, design, construction, testing, deployment and maintenance of a product.} through which a product can be refined after each cycle. \Cref{fig:spiral_model} illustrate the order of the spiral model steps. The first step is the identification, it consists of identifying the user, system, sub-system, and unit requirements. The second step consists of the system ,architectural, physical design and logical design of all modules. The prototype is build during the third step, the prototype serves as a proof of concept. D
+The Spiral model is a combination of the iterative model \footnote{Cyclic process consisting of design, prototyping, testing, analysis and refinement of a product} and the waterfall model \footnote{linear sequential process consisting of conception, initiation, analysis, design, construction, testing, deployment and maintenance of a product.} through which a product can be refined after each cycle. \Cref{fig:spiral_model} illustrate the order of the spiral model steps. The first step is the identification, it consists of identifying the user, system, sub-system, and unit requirements. The second step consists of the system, architectural, physical design and logical design of all modules. The prototype is built during the third step, the prototype serves as a proof of concept. During the last stage, the prototype performance is evaluated as well as the validation of the system requirements. Moreover, a risk and cost analysis alongside with the overall feasibility of the project is evaluated at this stage.  
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.7]{spiral_model.jpg}
