@@ -1,48 +1,152 @@
 \chapter{Prototype Design}
-
+This chapter focuses on the design of the prototype of the NeoPixel Sunrise Clock (NPSC). It starts by providing an overview of the NPSC system design, followed by a high-level description of the sub-systems design and a detailed design of the hardware modules.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: System design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{System design}
-Show structural block diagram of the whole system and how the modules are connected
- 
+The system requirements of the NPSC are the following:
+\begin{itemize}
+\item The NPSC should be able to emit light and simulate sunrise. 
+\item The NPSC should be able to display time and set alarms.
+\item The NPSC should be controllable using a touchscreen device.
+\end{itemize}
+These system requirements are achieved by the functions of the applications at level 3 of system modular hierarchy illustrated in \cref{fig:system_hierarchy}. Each application focuses on one requirement but might involve other requirements, the relations between some hardware modules and their application module are illustrated by \cref{fig:system_overview} and explained below.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.11]{system_overview.jpg}
+\caption{Detailed structural block diagram of the NPSC showing the connections between the hardware modules and the main software modules.}
+\label{fig:system_overview}
+\end{figure}
+\begin{itemize}
+\item \textbf{Visual application}: This application relies on the the \textit{Ring}, \textit{Time}, \textit{Weekday}, and \textit{Date} PCBs. This application manages visual outputs hardware, from setting the brightness to ensuring that a specific pattern is displayed.
+\item \textbf{Alarm application}: This application manages the synchronisation of the internal and external clocks. It is also responsible for managing the alarm stored in the EEPROM and updating the alarm.
+\item \textbf{Instruction Queue application}: This application is responsible for the creation of instructions from the user input devices (Nextion touchscreen and Smartphone application) and manages the instruction queue.
+\item \textbf{Instruction Fetch Decode and Execute (IFDE) application}: This application relies on the result of the instruction queue application. The IFDE fetches instructions from the instruction queue, decode the instructions and execute commands based on the instruction's opcode. It is the bridge between the user inputs and the hardware modules of the NPSC.
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SECTION: High level Design
+% SECTION: High-level Design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{High level design}
-Mainly for Application level, explain protocols and interation between components.\\
-For each level, provides structural diagram of component connection and mention what actions are perform between them.
+\section{High-level design}
+This section provides more detailed explanation of the system design requirements broken down into sub-system design requirements. The sub-systems requirements are listed below:
+\begin{itemize}
+\item Control light pattern
+\item Control light parameters
+\item Update and obtain time and date from clock
+\item Set, edit alarms
+\item Store user preferences
+\item Control the NPSC using an onboard touchscreen
+\item Control the NPSC using a smartphone application
+\end{itemize}
+The following sections explain the design of the main modules of the NPSC created to meet the system and sub-system requirements.
+
 \subsection{Inputs/Outputs instruction design}
-How are the inputs connected? How do they communicate with the micro (UART, Buffers, Queues)
-When and when to send/receive instructions.\\
-Instruction set tables with reasons for instruction size.
+This section focuses on the design of the user inputs capture and interpretations. \Cref{fig:io_instruction} shows the communication between the microcontroller and the inputs, and the different step through which information sent by these inputs are analysed. 
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.15]{io_instruction.jpg}
+\caption{}
+\label{fig:io_instruction}
+\end{figure}
+
+\subsection{From the inputs to the microcontroller}
+There are two user inputs, a smartphone application running on an android device and a nextion screen. The android application communicates with the microcontroller via Bluetooth. Both the Bluetooth device and the Nextion touchscreen use the Universal Asynchronous Receiver-Transmitter (UART) protocol to communicate with the micro. Because the instructions are more than one byte, the microcontroller must be able to receive a stream of bytes with no information loss.\\
+To achieve this, each UART uses the Direct Memory Access (DMA) to store each stream received to the corresponding DMA Buffer. After the reception of a stream of data, each DMA Buffer converts its data into instructions which are added to the instruction queue.\\
+The DMA function is called on interrupt when the microcontroller receives data on the DMA channel. For this reasons it might occur that one DMA pauses the addition of instruction to the instruction queue by another DMA, and start adding new instructions to the queue. This is a potential concurrency problem that can corrupt the instructions added to the queue. To solve this problem, the addition of instruction to the queue is considered as a critical section of the design. A lock is thus added to the instruction queue such that only a process owning the lock can add new instructions to the queue.\\
+The instruction queue is a First In First Out (FIFO) queue, meaning that an element removed from the queue was the oldest element in the queue. This allows the instruction to be executed in order of arrival.
+
+\subsection{Instruction Fetch Decode Execute (IFDE)}
+The IFDE act as the Central Processing Unit (CPU) of the NPSC. Its role is to fetch instructions from the instruction queue, decode the instructions and execute them by calling the corresponding methods. It is the brain of the NPSC operation and acts as a bridge between the user inputs and the different hardware module. As the IFDE uses specific instruction set, there is a restriction on the actions performed by the users reducing any security breaches. By using an instruction set and the IFDE, the functionalities of the NPSC can easily be expanded and modify during the software development.
+ 
+\subsection{Buffer size and Instruction sets}
+The instruction size was mostly defined by the rules of the Nextion touchscreen. This touchscreen is able to send information to a microcontroller using UART. However, it does not send a single byte of data unless a character is sent. As it is not convenient to convert all the integer parameters into characters, the second build-in method used by the nextion to send information was considered. This method sends an integer value as four bytes of data. Because certain methods of the framework require structs \footnote{A struct also known as a record is a collection of data type used to represent entities having multiple attributes} as parameters, the instruction size was set to be double the size of the number of bytes sent by the nextion touchscreen per each method call. \\
+The DMA Buffer size is dependent on the design of the Nextion touchscreen application and the Android application, as a stream of instruction might be sent. The number of instructions in the queue is also dependent on the DMA Buffer size because there are two inputs and therefore two DMAs, a rule of thumb for the instruction queue size is to be at least the number of inputs multiply by the DMA Buffer size.\\
+
+The instructions of the NPSC are listed in \cref{table:instruction_set}. The instructions are divided into categories, each category represent the actions performed at a framework level or application level (see \cref{fig:system_hierarchy}). There are two types of instructions, the set instructions and the get instructions. The set instructions write informations to the NPSC while the get information are just signal indicating that the user input device is requesting information. The instrcutions are 8 bytes long and the first byte represent the opcode of the instrucion while other byte are for the data sent. Instructions of the same category have the same most significant four bytes, for example all intructions from the Alarm category have $0x1*$ as their opcode with $*$ being any one digit hexadecimal number. The pcode 0x00 is reserved for identifying data that must not be converted into instructions.
+\begin{landscape}
+\begin{table}[t!]
+\centering
+\begin{tabular}{cccccccccc}
+\hline
+\hline
+\multicolumn{10}{c}{Instructions} \\
+\hline
+\multirow{2}{*}{Category} & \multirow{2}{*}{Name} & \multicolumn{8}{c}{Instruction bytes} \\
+& & \textbf{M0/opcode} & \textbf{M1} & \textbf{M2} & \textbf{M3} & \textbf{M4} & \textbf{M5} & \textbf{M6} & \textbf{M7} \\
+\hline
+\multirow{2}{*}{External RTC} & set clock & \textbf{0x01} & year & month & date & weekday & hour & minute & second \\
+& get clock & \textbf{0x02} & - & - & - & - & - & - & - \\
+\hline
+\multirow{6}{*}{Alarm} & set alarm time parameters & \textbf{0x10} & id & hour & minute & date/day selection & day/date & repeat & - \\
+& set alarm extra parameters & \textbf{0x11} & id & ringtone & pattern & enable & fetch & - & - \\
+& set alarm label & \textbf{0x12} & id & label number & - & * & * & * & * \\
+& set alarm enable & \textbf{0x13} & id & enable & - & - & - & - & - \\
+& get alarm minimum parameters & \textbf{0x14} & id & id & - & - & - & - & - \\
+& get alarm parameters & \textbf{0x15} & id & - & - & - & - & - & - \\
+\hline
+\hline
+\end{tabular}
+\caption{Instruction set used for the control of the NPSC by the users. Each instruction has a category, a name and an opcode. \textbf{-} in the table indicates data that will not be used by the IFDE. \textbf{*} indicates character data.}
+\label{table:instruction_set}
+\end{table}
+\end{landscape}
+
 \subsection{External storage}
 What action are performed on the storages? How is it structure?
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.08]{eeprom.jpg}
+\caption{}
+\label{fig:eeprom}
+\end{figure}
+
 \subsection{Alarm and Clock}
+The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B) which are compared to the STM internal RT
 How is the time obtained?\\
 When is time requested?\\
 Why different RTCs?\\
 Synchronization?\\
 Alarm management.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.11]{alarm_clock.jpg}
+\caption{}
+\label{fig:alarm_clock}
+\end{figure}
+
 \subsection{Visual outputs}
 What application can have access to the visual outputs?\\
 Defines the need for modes (normal, alarm, sunrise, sleep \ldots).\\
 Pixels parameters?\\
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.12]{visual_outputs.jpg}
+\caption{}
+\label{fig:visual_outputs}
+\end{figure}
+
+\subsection{Sensors}
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.1]{sensors.jpg}
+\caption{}
+\label{fig:sensors}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Detailed design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Details design}
-Provide schematics and pcb for each modules.
+Provide schematics and PCB for each module.
 \subsection{Neopixels}
 How do we program it (daisy chain, buffer).\\
 \subsection{Screen}
-How is it programed?\\
+How is it programmed?\\
 GUI?\\
 Show screen and instruction sent.
 \subsection{Android application}
-How is it programed?\\
+How is it programmed?\\
 GUI?\\
 Show screen and instruction sent.
 \subsection{Bluetooth}

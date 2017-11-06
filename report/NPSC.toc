@@ -86,31 +86,35 @@
 \contentsline {section}{\numberline {4.4}Mechanical case}{35}{section.4.4}
 \contentsline {chapter}{\numberline {5}Prototype Design}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}System design}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}High level design}{37}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Inputs/Outputs instruction design}{37}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}External storage}{37}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Alarm and Clock}{37}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Visual outputs}{38}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Details design}{38}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Neopixels}{38}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Screen}{38}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Android application}{38}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Bluetooth}{38}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Eeprom}{38}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}External RTC}{38}{subsection.5.3.6}
-\contentsline {subsection}{\numberline {5.3.7}Internal RTC and Alarms}{38}{subsection.5.3.7}
-\contentsline {chapter}{\numberline {6}Implementation}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Hardware}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Utilities}{39}{section.6.2}
-\contentsline {section}{\numberline {6.3}Framework}{39}{section.6.3}
-\contentsline {section}{\numberline {6.4}Applpication}{39}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing}{40}{chapter.7}
-\contentsline {chapter}{\numberline {8}Results}{41}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{41}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{41}{section.8.2}
-\contentsline {chapter}{\numberline {9}Discussion}{42}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions}{43}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recommendations}{44}{chapter.11}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{49}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{50}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{50}{section.B.1}
+\contentsline {section}{\numberline {5.2}High-level design}{38}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Inputs/Outputs instruction design}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}From the inputs to the microcontroller}{39}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Instruction Fetch Decode Execute (IFDE)}{40}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Buffer size and Instruction sets}{40}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}External storage}{43}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Alarm and Clock}{43}{subsection.5.2.6}
+\contentsline {subsection}{\numberline {5.2.7}Visual outputs}{44}{subsection.5.2.7}
+\contentsline {subsection}{\numberline {5.2.8}Sensors}{44}{subsection.5.2.8}
+\contentsline {section}{\numberline {5.3}Details design}{44}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Neopixels}{44}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Screen}{45}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Android application}{45}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Bluetooth}{45}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Eeprom}{45}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}External RTC}{45}{subsection.5.3.6}
+\contentsline {subsection}{\numberline {5.3.7}Internal RTC and Alarms}{45}{subsection.5.3.7}
+\contentsline {chapter}{\numberline {6}Implementation}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Hardware}{46}{section.6.1}
+\contentsline {section}{\numberline {6.2}Utilities}{46}{section.6.2}
+\contentsline {section}{\numberline {6.3}Framework}{46}{section.6.3}
+\contentsline {section}{\numberline {6.4}Applpication}{46}{section.6.4}
+\contentsline {chapter}{\numberline {7}Testing}{47}{chapter.7}
+\contentsline {chapter}{\numberline {8}Results}{48}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{48}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{48}{section.8.2}
+\contentsline {chapter}{\numberline {9}Discussion}{49}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions}{50}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recommendations}{51}{chapter.11}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{56}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{57}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{57}{section.B.1}

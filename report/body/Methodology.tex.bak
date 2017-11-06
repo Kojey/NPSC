@@ -73,14 +73,14 @@ The whole project is under a version controller. Each implementation type (hardw
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Implementation}
 The NPSC requires hardware and software modules. For the first prototype, certain hardware modules off the shelves can be used, as for other modules, they require to be designed and manufactured as modules with their specific characteristics do not exists on the market.\\
-The implementation was broken into two main sections, the hardware implementation and the software implementation. The software implementation relies on the functioning of the hardware. To ensure that the system is implemented in a way that uses the time efficiently, it was implemented following the hierarchy illustrated in \cref{fig:system_overview}. 
+The implementation was broken into two main sections, the hardware implementation and the software implementation. The software implementation relies on the functioning of the hardware. To ensure that the system is implemented in a way that uses the time efficiently, it was implemented following the hierarchy illustrated in \cref{fig:system_hierarchy}. 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.15]{system_overview.jpg}
+\includegraphics[scale=0.15]{system_hierarchy.jpg}
 \caption{Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation}
-\label{fig:system_overview}
+\label{fig:system_hierarchy}
 \end{figure}
-\Cref{fig:system_overview} has five levels. Elements from the same level are able to call functions of the level below and not vice-versa. This implies that in order to implement one level, the level bellow must exist and function. The levels and their interactions are details as follow:
+\Cref{fig:system_hierarchy} has five levels. Elements from the same level are able to call functions of the level below and not vice-versa. This implies that in order to implement one level, the level bellow must exist and function. The levels and their interactions are details as follow:
 \subsection{Level 1: Hardware and Utilities}  
 The hardware and the utilities software are at the bottom of the hierarchy and are the first to be implemented. The hardware is manufactured and assembled, as for the off the shelves modules, a basic test using the Arduino is performed on the modules. The utilities software contains all the common functionalities or structures required by the element at higher levels. This element might not be implemented initially, in reality, this element is continuously modified based on the need of the higher elements.
 \subsection{Level 2: Framework}   
@@ -96,7 +96,7 @@ The NPSC is the highest level of the hierarchy. It, however, existed since the f
 % SECTION: Experimentation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimentation}
-This section presents the different tests designed to ensure that each hardware modules, sub-systems and system requirements are met. Each experiment targets one specific element from the hierarchy in \cref{fig:system_overview}.
+This section presents the different tests designed to ensure that each hardware modules, sub-systems and system requirements are met. Each experiment targets one specific element from the hierarchy in \cref{fig:system_hierarchy}.
 \subsection{Hardware tests}
 The hardware testing requires careful test are any wrong connection could possibly damage the hardware. Two main tests are made on the hardware, a basic test testing the functionality of the hardware modules and the neopixel ring PCB test to ensure that the light requirement is met.
 \subsubsection{Basic hardware test}
@@ -121,16 +121,16 @@ Unit tests are designed to test the framework of the hardware modules. These tes
 Systems tests are at a higher level than the unit tests. They are all logic tests ensuring that the interaction between the framework modules is as expected. When these tests fail, the unit tests of the involved framework modules must be tested. If the unit tests pass, it is certainly a logic error and the IDE debugger must be used to pinpoint the errors.
 
 \subsection{Performance tests}
-This tests gathers data on the performance of each module and of the system as a whole. It is meant to answer the followig question:
+This tests gather data on the performance of each module and of the system as a whole. It is meant to answer the following question:
 \begin{enumerate}
 \item What is the optimal queue size for the instruction buffer?
-\item What is the optimal DMA size for each inputs? 
+\item What is the optimal DMA size for each input? 
 \end{enumerate} 
 \subsection{Acceptance tests}
-This is the final test done to prove that the device meet all the requirements defined in \cref{scope_and_limitations}. This test involve using the device as a user and verify the functionalities of the device. 
+This is the final test done to prove that the device meets all the requirements defined in \cref{scope_and_limitations}. This test involves using the device as a user and verify the functionalities of the device. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Analysis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 This section provides analysis of the tests performed during the experiments. 
-This covers the behaviour of the light produces according to the distance between the subject and the ring, the  
+{\bf TODO}
