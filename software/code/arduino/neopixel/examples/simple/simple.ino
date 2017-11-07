@@ -19,7 +19,8 @@
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 int delayval = 500; // delay for half a second
-
+int px_value[11] = {0,26,51,77,102,128,153,179,204,230,255};
+int px = px_value[10];
 void setup() {
   // This is for Trinket 5V 16MHz, you can remove these three lines if you are not using a Trinket
 #if defined (__AVR_ATtiny85__)
@@ -37,7 +38,7 @@ void loop() {
   for(int i=0;i<NUMPIXELS;i++){
 
     // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
-    pixels.setPixelColor(i, pixels.Color(0,15,0)); // Moderately bright green color.
+    pixels.setPixelColor(i, pixels.Color(0,0,px)); // Moderately bright green color.
 
     pixels.show(); // This sends the updated pixel color to the hardware.
 

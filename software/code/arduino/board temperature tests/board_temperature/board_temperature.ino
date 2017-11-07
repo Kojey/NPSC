@@ -4,7 +4,7 @@
  * @version: v1.0
  * @date: 2 Nov 2017
  */
-int temperatureSensor[4] = {A0, A1,A2,A3}; // select the input pin for the potentiometer
+int temperatureSensor[5] = {A0, A1,A2,A3, A4}; // select the input pin for the potentiometer
 int samplingInterval = 2000;
 int sampleNumber = 0;
 int numberOfSamples = 15;

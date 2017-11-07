@@ -65,33 +65,30 @@
 \BOOKMARK [1][-]{section.5.1}{System design}{chapter.5}% 65
 \BOOKMARK [1][-]{section.5.2}{High-level design}{chapter.5}% 66
 \BOOKMARK [2][-]{subsection.5.2.1}{Inputs/Outputs instruction design}{section.5.2}% 67
-\BOOKMARK [2][-]{subsection.5.2.2}{From the inputs to the microcontroller}{section.5.2}% 68
-\BOOKMARK [2][-]{subsection.5.2.3}{Instruction Fetch Decode Execute \(IFDE\)}{section.5.2}% 69
-\BOOKMARK [2][-]{subsection.5.2.4}{Buffer size and Instruction sets}{section.5.2}% 70
-\BOOKMARK [2][-]{subsection.5.2.5}{External storage}{section.5.2}% 71
-\BOOKMARK [2][-]{subsection.5.2.6}{Alarm and Clock}{section.5.2}% 72
-\BOOKMARK [2][-]{subsection.5.2.7}{Visual outputs}{section.5.2}% 73
-\BOOKMARK [2][-]{subsection.5.2.8}{Sensors}{section.5.2}% 74
-\BOOKMARK [1][-]{section.5.3}{Details design}{chapter.5}% 75
-\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels}{section.5.3}% 76
-\BOOKMARK [2][-]{subsection.5.3.2}{Screen}{section.5.3}% 77
-\BOOKMARK [2][-]{subsection.5.3.3}{Android application}{section.5.3}% 78
-\BOOKMARK [2][-]{subsection.5.3.4}{Bluetooth}{section.5.3}% 79
-\BOOKMARK [2][-]{subsection.5.3.5}{Eeprom}{section.5.3}% 80
-\BOOKMARK [2][-]{subsection.5.3.6}{External RTC}{section.5.3}% 81
-\BOOKMARK [2][-]{subsection.5.3.7}{Internal RTC and Alarms}{section.5.3}% 82
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 83
-\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 85
-\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 86
-\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 87
-\BOOKMARK [0][-]{chapter.7}{Testing}{}% 88
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 89
-\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 90
-\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 91
-\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 92
-\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 93
-\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 94
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 95
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 96
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 97
+\BOOKMARK [2][-]{subsection.5.2.2}{External storage}{section.5.2}% 68
+\BOOKMARK [2][-]{subsection.5.2.3}{Alarm and Clock}{section.5.2}% 69
+\BOOKMARK [2][-]{subsection.5.2.4}{Visual outputs}{section.5.2}% 70
+\BOOKMARK [2][-]{subsection.5.2.5}{Sensors}{section.5.2}% 71
+\BOOKMARK [1][-]{section.5.3}{Details design}{chapter.5}% 72
+\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels}{section.5.3}% 73
+\BOOKMARK [2][-]{subsection.5.3.2}{Screen}{section.5.3}% 74
+\BOOKMARK [2][-]{subsection.5.3.3}{Android application}{section.5.3}% 75
+\BOOKMARK [2][-]{subsection.5.3.4}{Bluetooth}{section.5.3}% 76
+\BOOKMARK [2][-]{subsection.5.3.5}{Eeprom}{section.5.3}% 77
+\BOOKMARK [2][-]{subsection.5.3.6}{External RTC}{section.5.3}% 78
+\BOOKMARK [2][-]{subsection.5.3.7}{Internal RTC and Alarms}{section.5.3}% 79
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 80
+\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 81
+\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 82
+\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 83
+\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 84
+\BOOKMARK [0][-]{chapter.7}{Testing}{}% 85
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 86
+\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 87
+\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 88
+\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 89
+\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 90
+\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 91
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 92
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 93
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 94

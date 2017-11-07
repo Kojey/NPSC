@@ -50,16 +50,16 @@ This section focuses on the design of the user inputs capture and interpretation
 \label{fig:io_instruction}
 \end{figure}
 
-\subsection{From the inputs to the microcontroller}
+\subsubsection{From the inputs to the microcontroller}
 There are two user inputs, a smartphone application running on an android device and a nextion screen. The android application communicates with the microcontroller via Bluetooth. Both the Bluetooth device and the Nextion touchscreen use the Universal Asynchronous Receiver-Transmitter (UART) protocol to communicate with the micro. Because the instructions are more than one byte, the microcontroller must be able to receive a stream of bytes with no information loss.\\
 To achieve this, each UART uses the Direct Memory Access (DMA) to store each stream received to the corresponding DMA Buffer. After the reception of a stream of data, each DMA Buffer converts its data into instructions which are added to the instruction queue.\\
 The DMA function is called on interrupt when the microcontroller receives data on the DMA channel. For this reasons it might occur that one DMA pauses the addition of instruction to the instruction queue by another DMA, and start adding new instructions to the queue. This is a potential concurrency problem that can corrupt the instructions added to the queue. To solve this problem, the addition of instruction to the queue is considered as a critical section of the design. A lock is thus added to the instruction queue such that only a process owning the lock can add new instructions to the queue.\\
 The instruction queue is a First In First Out (FIFO) queue, meaning that an element removed from the queue was the oldest element in the queue. This allows the instruction to be executed in order of arrival.
 
-\subsection{Instruction Fetch Decode Execute (IFDE)}
+\subsubsection{Instruction Fetch Decode Execute (IFDE)}
 The IFDE act as the Central Processing Unit (CPU) of the NPSC. Its role is to fetch instructions from the instruction queue, decode the instructions and execute them by calling the corresponding methods. It is the brain of the NPSC operation and acts as a bridge between the user inputs and the different hardware module. As the IFDE uses specific instruction set, there is a restriction on the actions performed by the users reducing any security breaches. By using an instruction set and the IFDE, the functionalities of the NPSC can easily be expanded and modify during the software development.
  
-\subsection{Buffer size and Instruction sets}
+\subsubsection{Buffer size and Instruction sets}
 The instruction size was mostly defined by the rules of the Nextion touchscreen. This touchscreen is able to send information to a microcontroller using UART. However, it does not send a single byte of data unless a character is sent. As it is not convenient to convert all the integer parameters into characters, the second build-in method used by the nextion to send information was considered. This method sends an integer value as four bytes of data. Because certain methods of the framework require structs \footnote{A struct also known as a record is a collection of data type used to represent entities having multiple attributes} as parameters, the instruction size was set to be double the size of the number of bytes sent by the nextion touchscreen per each method call. \\
 The DMA Buffer size is dependent on the design of the Nextion touchscreen application and the Android application, as a stream of instruction might be sent. The number of instructions in the queue is also dependent on the DMA Buffer size because there are two inputs and therefore two DMAs, a rule of thumb for the instruction queue size is to be at least the number of inputs multiply by the DMA Buffer size.\\
 
@@ -102,29 +102,28 @@ What action are performed on the storages? How is it structure?
 \end{figure}
 
 \subsection{Alarm and Clock}
-The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B) which are compared to the STM internal RTC. 
-How is the time obtained?\\
-When is time requested?\\
-Why different RTCs?\\
-Synchronization?\\
-Alarm management.
+The structural diagram of this module is shown in \cref{fig:alarm_clock}. The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B), this module make use of an Alarm manager (application software) which control the EEPROM, the external and internal RTCs and the two alarms.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.11]{alarm_clock.jpg}
 \caption{}
 \label{fig:alarm_clock}
 \end{figure}
+Alarm A and B are triggered based on the comparison of their time with the internal RTC of the STM. As for the internal (built-in) RTC, it relies on the crystal oxillator of the STM to update its time. This RTC is power dependent and looses its time when the STM is powered off. To prevent manual update of the time everytime the STM is powered on, an external clock module must be used. For this prototype, the DS1307 RTC is used as the external clock module. This RTC is not very accurate, in many applications, it has lost few minutes of accuracy every day. This prototype is a proof of concept and is focused on the light requiements and not the accuracy of the clock therefore the DS1307 will be used. Later versions of the NPSC could used more accuracy clock module such as a GPS or more accurate RTC.  \\
+On power on, the Alarm manager synchronise the internal clock with the external clock by loading the external RTC's time and date to the internal RTC. It then load two alarms from the EEPROM which are supposed to be triggered before the others and set these alarms to alarm A and alarm B from the internal RTC. The Alarm manager is also responsible for storing the alarms to the EEPROM and updating then when on alarm goes off. 
 
 \subsection{Visual outputs}
 What application can have access to the visual outputs?\\
 Defines the need for modes (normal, alarm, sunrise, sleep \ldots).\\
 Pixels parameters?\\
+The Visual outputs are composed of the main light source (the ring), the weekday, time and date PCBs. \Cef{fig:visual_outputs} illustrates the interaction between these modules and the STM. 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{visual_outputs.jpg}
 \caption{}
 \label{fig:visual_outputs}
 \end{figure}
+
 
 \subsection{Sensors}
 \begin{figure}[ht]
