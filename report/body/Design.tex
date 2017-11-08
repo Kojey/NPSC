@@ -1,5 +1,5 @@
 \chapter{Prototype Design}
-This chapter focuses on the design of the prototype of the NeoPixel Sunrise Clock (NPSC). It starts by providing an overview of the NPSC system design, followed by a high-level description of the sub-systems design and a detailed design of the hardware modules.
+This chapter focuses on the design of the prototype of the NeoPixel Sunrise Clock (NPSC). It starts by providing an overview of the NPSC system design, followed by a high-level description of the sub-systems design and a detailed design of the hardware modules. The system design provides an overview of the NPSC's module. The high-level design focuses on the thinking process behind the design of the applications at level 3 of the system hierarchy. The detailed design focuses on the hardware modules at level 1 of the system hierarchy, providing more detailed on the design of the hardware.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: System design
@@ -19,7 +19,7 @@ These system requirements are achieved by the functions of the applications at l
 \label{fig:system_overview}
 \end{figure}
 \begin{itemize}
-\item \textbf{Visual application}: This application controls the \textit{Ring}, \textit{Time}, \textit{Weekday}, and \textit{Date} PCBs. It manages visual outputs hardware, from setting the brightness to ensuring that a specific pattern is displayed to ensuring that the desired lux quantity is emitted on the user.
+\item \textbf{Visual application}: This application controls the \textit{Ring}, \textit{Time}, \textit{Weekday}, and \textit{Date} PCBs. It manages visual outputs hardware, from setting the brightness to ensuring that a specific pattern is displayed to ensuring that the desired lux quantity is emitted by the NPSC.
 \item \textbf{Alarm application}: This application manages the synchronisation of the internal and external clocks. It is also responsible for managing the alarm stored in the EEPROM and updating the alarm.
 \item \textbf{Instruction Queue application}: This application is responsible for the creation of instructions from the user input devices (Nextion touchscreen and Smartphone application) and manages the instruction queue.
 \item \textbf{Instruction Fetch Decode and Execute (IFDE) application}: This application relies on the result of the instruction queue application. The IFDE fetches instructions from the instruction queue, decode the instructions and execute commands based on the instruction's opcode. It is the bridge between the user inputs and the hardware modules of the NPSC.
@@ -132,19 +132,36 @@ There are two sensors on the NPSC, a temperature sensor and a photoresistor. The
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Detailed design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Details design}
-Provide schematics and PCB for each module.
-\subsection{Neopixels}
-How do we program it (daisy chain, buffer).\\
-\subsection{Screen}
-How is it programmed?\\
-GUI?\\
-Show screen and instruction sent.
-\subsection{Android application}
-How is it programmed?\\
-GUI?\\
-Show screen and instruction sent.
-\subsection{Bluetooth}
-\subsection{Eeprom}
-\subsection{External RTC}
-\subsection{Internal RTC and Alarms}
+\section{Details hardware design} \label{design}
+This section provides detailed information on the design of the hardware modules. Off the shelves, hardware modules are not detailed in this sections as these modules already have the necessary information on their datasheets. All datasheets are in \ref{datasheets} and in the repository on GitHub. 
+
+\subsection{Neopixels boards}
+The type 1 modules are made up of series neopixels connected in a daisy chain fashion. Each neopixel has two power pins and two data pins as illustrated by \cref{fig:neopixel_sch}. The stream of bytes is received by the neopixel at its DIN pin, after extracting the first 24 bytes, the neopixel transmit the truncated stream to the DOUT pin. By connecting the DOUT pin of one neopixel to the DIN pin of the next neopixel, a single stream of bytes can be used to program all neopixels in the series. 
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{neopixel_sch.png}
+\caption{}
+\label{fig:neopixel_sch}
+\end{figure}
+Although all type 1 module uses the sample principle, each module has more specific features in its design.
+\subsubsection{Ring PCB}
+This module has 180 neopixels physical positioned such that they form three rings of 60 neopixels each. Unlike the neopixel in \cref{fig:neopixel_sch}, there is one capacitor per five neopixels. The daisy chain is broken at every $15^{th}$ neopixels for debugging the data stream. \\
+As mentioned in \cref{table:neopixel_specs}, each neopixel requires $20mA$ per colour. The ring uses 180 neopixels thus a current of $20*3*180 = 10800 mA$ is expected to be drawn by the Ring. Following the IPC2221 standard, the board width was calculated with a current of $12A$ (worst case scenario), a board thickness of $1oz/ft^2$ and a temperature rise of $15^oC$; the required trace width of the external layers must be at least\textbf{9.84mm}. This is a stringent requirement on the NPSC as the ring must be contained in a $25*25*10cm^3$ case. With an expected an inner radius of $6.5cm$ and an outer radius of $10.5cm$, the Ring has approximately a surface area of $ \pi*(10.5^2-6.5^2) = 213.63 cm^2$ on each side for dissipating its heat. Furthermore, the neopixel pins have a pad on $0.6*1.5 mm^2$ while the width of the power line must be at least $9.84mm$. Each ring has 60 neopixels thus $60*9.84=$ \textbf{590.4mm} is required as the width of the power line per ring. However, the minimum circumference of the ring is $65*2*\pi$ = \textbf{408.41mm} which is less than what is required. With this conditions, the board is expected to have a higher temperature rise.\\
+The schematic and PCB of this board are shown in \cref{fig:ring_sch_pcb}.
+
+\subsubsection{Time}
+This board has its series of neopixels physically placed on the board such that they simulate four RGB seven segment display. The board is made generic so that each display can be controlled by its own data pin. The board also has the ability to be controlled all display using the first display controller pin, this is done by connecting the DOUT of the last neopixel of a display to the DIN of the first neopixel in the next display.
+The schematic and PCB of this board are shown in \cref{fig:time_sch_pcb}.
+
+\subsubsection{Weekday}
+This board has only seven neopixels in its series, one for each day in the week. It gets its input (DIN) from the output (DOUT) of the Time PCB.
+The schematic and PCB of this board are shown in \cref{fig:weekday_sch_pcb}.
+
+\subsection{Date and Temperature PCB}
+This PCB uses six seven segments display to display the date, the month and the room temperature. \Cref{fig:date} shows the simplified schematic of this module. The seven segment used is the ACD8143 which contain a pair of RGB seven segments display. In order to reduce the number of pins used to control these displays, the serial interfaced 8-digits LED driver display (MAX7219) was used. It uses SPI to control the segments of all the displays. It controls the displays by continuously selecting each display in a loop and setting the segments to the desired voltage. The MAX7219 is not designed for RGB seven segments displays, therefore, additional circuits composed of R, G, B signals and NOT gates were used such that on display selection, the display has the colour set by the R, G, B selectors.   
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.1]{date.jpg}
+\caption{}
+\label{fig:date}
+\end{figure}

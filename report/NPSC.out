@@ -69,26 +69,22 @@
 \BOOKMARK [2][-]{subsection.5.2.3}{Alarm and Clock}{section.5.2}% 69
 \BOOKMARK [2][-]{subsection.5.2.4}{Visual outputs}{section.5.2}% 70
 \BOOKMARK [2][-]{subsection.5.2.5}{Sensors}{section.5.2}% 71
-\BOOKMARK [1][-]{section.5.3}{Details design}{chapter.5}% 72
-\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels}{section.5.3}% 73
-\BOOKMARK [2][-]{subsection.5.3.2}{Screen}{section.5.3}% 74
-\BOOKMARK [2][-]{subsection.5.3.3}{Android application}{section.5.3}% 75
-\BOOKMARK [2][-]{subsection.5.3.4}{Bluetooth}{section.5.3}% 76
-\BOOKMARK [2][-]{subsection.5.3.5}{Eeprom}{section.5.3}% 77
-\BOOKMARK [2][-]{subsection.5.3.6}{External RTC}{section.5.3}% 78
-\BOOKMARK [2][-]{subsection.5.3.7}{Internal RTC and Alarms}{section.5.3}% 79
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 80
-\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 81
-\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 82
-\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 83
-\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 84
-\BOOKMARK [0][-]{chapter.7}{Testing}{}% 85
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 86
-\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 87
-\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 88
-\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 89
-\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 90
-\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 91
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 92
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 93
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 94
+\BOOKMARK [1][-]{section.5.3}{Details hardware design}{chapter.5}% 72
+\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels boards}{section.5.3}% 73
+\BOOKMARK [2][-]{subsection.5.3.2}{Date and Temperature PCB}{section.5.3}% 74
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 75
+\BOOKMARK [1][-]{section.6.1}{Hardware}{chapter.6}% 76
+\BOOKMARK [1][-]{section.6.2}{Utilities}{chapter.6}% 77
+\BOOKMARK [1][-]{section.6.3}{Framework}{chapter.6}% 78
+\BOOKMARK [1][-]{section.6.4}{Applpication}{chapter.6}% 79
+\BOOKMARK [0][-]{chapter.7}{Testing}{}% 80
+\BOOKMARK [0][-]{chapter.8}{Results}{}% 81
+\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 82
+\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 83
+\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 84
+\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 85
+\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 86
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 87
+\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 88
+\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 89
+\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 90

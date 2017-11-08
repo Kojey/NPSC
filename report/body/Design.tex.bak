@@ -102,15 +102,15 @@ The storage's purpose is to store useful information such as the alarm parameter
 \end{figure}
 
 \subsection{Alarm and Clock}
-The structural diagram of this module is shown in \cref{fig:alarm_clock}. The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B), this module make use of an Alarm manager (application software) which control the EEPROM, the external and internal RTCs and the two alarms.
+The structural diagram of this module is shown in \cref{fig:alarm_clock}. The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B), this module makes use of an Alarm manager (application software) which control the EEPROM, the external and internal RTCs and the two alarms.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.11]{alarm_clock.jpg}
 \caption{}
 \label{fig:alarm_clock}
 \end{figure}
-Alarm A and B are triggered based on the comparison of their time with the internal RTC of the STM. As for the internal (built-in) RTC, it relies on the crystal oxillator of the STM to update its time. This RTC is power dependent and looses its time when the STM is powered off. To prevent manual update of the time everytime the STM is powered on, an external clock module must be used. For this prototype, the DS1307 RTC is used as the external clock module. This RTC is not very accurate, in many applications, it has lost few minutes of accuracy every day. This prototype is a proof of concept and is focused on the light requiements and not the accuracy of the clock therefore the DS1307 will be used. Later versions of the NPSC could used more accuracy clock module such as a GPS or more accurate RTC.  \\
-On power on, the Alarm manager synchronise the internal clock with the external clock by loading the external RTC's time and date to the internal RTC. It then load two alarms from the EEPROM which are supposed to be triggered before the others and set these alarms to alarm A and alarm B from the internal RTC. The Alarm manager is also responsible for storing the alarms to the EEPROM and updating then when on alarm goes off. 
+Alarm A and B are triggered based on the comparison of their time with the internal RTC of the STM. As for the internal (built-in) RTC, it relies on the crystal oscillator of the STM to update its time. This RTC is power dependent and loses its time when the STM is powered off. To prevent manual update of the time everytime the STM is powered on, an external clock module must be used. For this prototype, the DS1307 RTC is used as the external clock module. This RTC is not very accurate, in many applications, it has lost few minutes of accuracy every day. This prototype is a proof of concept and is focused on the light requirements and not the accuracy of the clock, therefore, the DS1307 will be used. Later versions of the NPSC could use more accuracy clock module such as a GPS or more accurate RTC.  \\
+On power on, the Alarm manager synchronises the internal clock with the external clock by loading the external RTC's time and date to the internal RTC. It then loads two alarms from the EEPROM which are supposed to be triggered before the others and set these alarms to alarm A and alarm B from the internal RTC. The Alarm manager is also responsible for storing the alarms to the EEPROM and updating then when an alarm goes off. 
 
 \subsection{Visual outputs}
 The visual outputs are all modules related to the control and emission of light in the system. \Cref{fig:visual_outputs} illustrates the interaction between these modules and the STM. 
@@ -120,31 +120,48 @@ The visual outputs are all modules related to the control and emission of light 
 \caption{}
 \label{fig:visual_outputs}
 \end{figure}
-There are two type of hardware modules, the first type (type 1) of module is a series of neopixels connected in cascade controlled by Pulse Width Modulation (PWM), the second type (type 2) of module is controlled using a Serial Peripheral Interface (SPI) bus. All type 1 modules inherit the ability to be connected in cascade from the neopixels; however, the ring being the only light source used to affect the human sleep-wake cycle, it is essential that its control is separated from other type 1 module. The two other type 1 are designed to display time and date information therefore they can be combined as one module. The only type 2 module in the visual outputs is the Date PCB, this PCB is designed to display the date, the month and the room temperature.\\
-For consistency in the visual, RGBs 7 segments displays are used for the Date PCB. Moreover, the Time PCB uses neopixels as no RGBs 7 segments displays bigger than the ones used for the Date PCB could be found.\\
-The visual outputs are controlled by the Visual manager from the visual application. The Visual manager's role is to update the neopixel buffer for each type 1 module according to the visual parameters set by the user. These parameters consists of RGB colours, the brightness, the location of the pixel \footnote{The location is the number of the neopixel of interest in the series of neopixel on a specific module. On the Ring PCB, location 61 is the first neopixel on the second ring.}. At a higher level of control, these parameters also include module's pattern, mode and duration. The Visual manager is also responsible for updating information on the Date PCB.   
+There are two types of hardware modules, the first type (type 1) of modules is a series of neopixels connected in cascade controlled by Pulse Width Modulation (PWM), the second type (type 2) of modules are controlled using a Serial Peripheral Interface (SPI) bus. All type 1 modules inherit the ability to be connected in cascade from the neopixels; however, the ring is the only light source used to affect the human sleep-wake cycle, it is essential that its control is separated from another type 1 module. The two other type 1 is designed to display time and date information, therefore, they can be combined as one module. The only type 2 module in the visual outputs is the Date PCB, this PCB is designed to display the date, the month and the room temperature.\\
+For consistency in the visual, RGB 7 segments displays are used for the Date PCB. Moreover, the Time PCB uses neopixels as no RGB 7 segments displays bigger than the ones used for the Date PCB could be found.\\
+The visual outputs are controlled by the Visual manager from the visual application. The Visual manager's role is to update the neopixel buffer for each type 1 module according to the visual parameters set by the user. These parameters consist of RGB colours, the brightness, the location of the pixel \footnote{The location is the number of the neopixel of interest in the series of neopixel on a specific module. On the Ring PCB, location 61 is the first neopixel on the second ring.}. At a higher level of control, these parameters also include module's pattern, mode and duration. The Visual manager is also responsible for updating information on the Date PCB.   
 
 \subsection{Sensors}
-There are two sensors on the NPSC, a temperature sensor and a photoresistor. The role of the temperature sensor is to get the room temperature. The photoresistor has more interesting purpose; it is used to obtain the light intensity outside the NPSC in order to allow the system to adjust the neopixel brightness such that the required illuminance does not vary by a significant margin at the user's location.
+There are two sensors on the NPSC, a temperature sensor and a photoresistor. The role of the temperature sensor is to get the room temperature. The photoresistor has a more interesting purpose; it is used to obtain the light intensity outside the NPSC in order to allow the system to adjust the neopixel brightness such that the required illuminance does not vary by a significant margin at the user's location.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Detailed design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Details design}
-Provide schematics and PCB for each module.
-\subsection{Neopixels}
-How do we program it (daisy chain, buffer).\\
-\subsection{Screen}
-How is it programmed?\\
-GUI?\\
-Show screen and instruction sent.
-\subsection{Android application}
-How is it programmed?\\
-GUI?\\
-Show screen and instruction sent.
-\subsection{Bluetooth}
-\subsection{Eeprom}
-\subsection{External RTC}
-\subsection{Internal RTC and Alarms}
+\section{Details hardware design} \label{design}
+This section provides detailed information on the design of the hardware modules. Off the shelves hardware modules are not detailed in this sections as these module already have the necessary information on their datasheets. All datasheets are in \ref{datasheets} and in the repository on github. 
+
+\subsection{Neopixels boards}
+The type 1 modules are made up of series neopixels connected in a daisy chain fashion. Each neopixel has two power pins and two data pins as illustrated by \cref{fig:neopixel_sch}. The stream of byte is received by the neopixel at its DIN pin, after extracting the first 24 bytes, the neopixel transmit the truncated stream to the DOUT pin. By connecting the DOUT pin of one neopixel to the DIN pin of the next neopixel, a single stream of bytes can be used to program all neopixels in the series. 
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.5]{neopixel_sch.png}
+\caption{}
+\label{fig:neopixel_sch}
+\end{figure}
+Although all type 1 module use the sample principle, each module has more specific features in its design.
+\subsubsection{Ring PCB}
+This module has 180 neopixels physical posistioned such that they form three rings of 60 neopixels each. Unlike the neopixel in \cref{fig:neopixel_sch}, there is one capacitor per five neopixels. The daisy chain is broken at every $15^{th}$ neopixels for debugging the data stream. \\
+As mentioned in \cref{table:neopixel_specs}, each neopixel requires $20mA$ per colour. The ring uses 180 neopixels thus a current of $20*3*180 = 10800 mA$ is expected to be drawn by the Ring. Following the IPC2221 standard, the board width was calculated with a current of $12A$ (worst case scenario), a board thickness of $1oz/ft^2$ and a temperature rise of $15^oC$; the required trace width of the external layers must be at least\textbf{9.84mm}. This is a stringent requirement on the NPSC as the ring must be contained in a $25*25*10cm^3$ case. With an expected an inner radius of $6.5cm$ and an outer radius of $10.5cm$, the Ring has approximately a surface area of $ \pi*(10.5^2-6.5^2) = 213.63 cm^2$ on each side for dissipating its heat. Furthermore the neopixel pins have a pad on $0.6*1.5 mm^2$ while the width of the power line must be at least $9.84mm$. Each ring has 60 neopixels thus $60*9.84=$ \textbf{590.4mm} is required as the width of the power line per ring. However, the minimum circumference of the ring is $65*2*\pi$ = \textbf{408.41mm} which is less than what is required. With this conditions, the boards is expected to have a higher temperature tise.\\
+The schematic and PCB of this board are shown in \cref{fig:ring_sch_pcb}.
+
+\subsubsection{Time}
+This board has its series of neopixels physically placed on the board such that they simulate four RGB seven segements display. The board is made generic so that each display can be controlled by its own data pin. The board also has the ability to be controlled all display using the first display controller pin, this is done by connecting the DOUT of the last neopixel of a display to the DIN of the first neopixel in the next display.
+The schematic and PCB of this board are shown in \cref{fig:time_sch_pcb}.
+
+\subsubsection{Weekday}
+This board has only seven neopixels in its series, one for each day in the week. It gets its input (DIN) from the output (DOUT) of the Time PCB.
+The schematic and PCB of this board are shown in \cref{fig:weekday_sch_pcb}.
+
+\subsection{Date and Temperature PCB}
+This PCB uses six seven segments display to display the date, the month and the room temperature. \Cref{fig:date} shows the simplified schematic of this module. The seven segment used is the ACD8143 which contain a pair of RGB seven segments display. In order to reduce the number of pins used to control thses displays, the serial interfaced 8-digits LED driver display (MAX7219) was used. It uses SPI to control the segments of all the displays. It controls the displays by coninuously selecting each display in a loop and setting the segments to the desired voltage. The MAX7219 is not designed for RGB seven segments display therefore additional circuits composed of R,G,B signals and NOT gates were used such that on display selection, the display has the colour set by the R,G,B selectors.   
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.1]{date.jpg}
+\caption{}
+\label{fig:date}
+\end{figure}

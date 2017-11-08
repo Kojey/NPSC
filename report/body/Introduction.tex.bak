@@ -45,7 +45,7 @@ The design and creation of the NPSC are subject to several constraints listed be
 \item \textbf{Time:} The project has a duration of 12 weeks within which the research, design, development, implementation, verification, and report writing need to be done.
 \item \textbf{Budget:} The project budget allocation is \textbf{R1000}
 \item \textbf{Light:} The NPSC must be able to produce blue light with a wavelength of  $460nm$ while providing enough light to meet the requirement of the research paper and provide a various range of colour for sunrise simulation. These requirements narrow the options for choosing the right light emitters.
-\item \textbf{Size:} The NPSC is meant to be a bedside lamp, this implies that it should have a relatively small size to be able to fit on a $50cm*50cm$ bedside table.
+\item \textbf{Size:} The NPSC is meant to be a bedside lamp, this implies that it should have a relatively small size to be able to fit on a $50cm*50cm$ bedside table. A volume of $25*25*5cm^3$ is the target volume for the final product.
 \end{itemize}
 
 

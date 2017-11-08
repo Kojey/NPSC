@@ -191,19 +191,18 @@ The neopixel is a programmable light source using an MCU to control an RGB or RG
 The light characteristics of the neopixel of choice are presented in \cref{table:neopixel_specs}. The light requirement of the NPSC is the emmission of light of $460nm$ (blue light) at an illuminance of $30lux$ minimum.
 \begin{table}[h!]
 \centering
-\begin{tabular}{cp{6em}p{6em}p{6em}}
+\begin{tabular}{cp{6em}p{6em}p{6em}c}
 \hline
 \hline
-\textbf{Emitting colour} & \textbf{Wavelength (nm)} & \textbf{Luminous intensity (mcd)} & \textbf{Colour temperature (K)} \\ 
+\textbf{Emitting colour} & \textbf{Model} & \textbf{Wavelength (nm)} & \textbf{Luminous intensity (mcd)}  & \textbf{Current (mA)}\\ 
 \hline
-\textbf{Red} & 620-630 & 390-420 & N/A\\
-\textbf{Green} & 515-525 & 660-720 & N/A  \\
-\textbf{Blue} & 460-470 & 180-200 & N/A\\
-\textbf{Natural White} & N/A & N/A & 4000-4500\\
+Red & 13CBAUP & 620-625 & 390-420 & 20\\
+Green & 13CGAUP & 522-525 & 660-720 & 20\\
+Blue & 10R1MUX & 465-467 & 180-200 & 20\\
 \hline
 \hline
 \end{tabular}
-\caption{Light specification of the SK6812RGBW neopixels}
+\caption{Light specification of the WS2812 neopixels}
 \label{table:neopixel_specs}
 \end{table}
 The illuminance of a light source at a point is given by: 
@@ -222,11 +221,11 @@ The dimension to be considered for the calculation of the illuminance of the neo
 \caption{Relative position of the neopixel rings}
 \label{fig:neopixel_ring_dimension}
 \end{figure}
-Using the dimension from \cref{fig:neopixel_ring_dimension} and the intensity from \cref{table:neopixel_specs} for the blue light, the total illuminace of the rings at a specific distance can be calculated using the following equation:
+Using the dimension from \cref{fig:neopixel_ring_dimension} and the lowest intensity emitted by the blue led, the total illuminace of the rings at a specific distance can be calculated using the following equation:
 \begin{equation}\label{eq:total_illuminance}
 E_{v_{total}} = N*Ev*(\cos(\theta_1)+\cos(\theta_2)+\cos(\theta_3))
 \end{equation}
-The result of the calculation are tabulated in the \cref{neopixel_illuminance}. The NPSC will not meet the light requirement if the it is placed more than one meter away from the subject.
+The result of the calculation are tabulated in the \cref{table:neopixel_illuminance}. The NPSC will not meet the light requirement if the it is placed more than one meter away from the subject.
 \begin{table}[h!]
 \centering
 \begin{tabular}{ccc}
@@ -235,19 +234,21 @@ The result of the calculation are tabulated in the \cref{neopixel_illuminance}. 
 \multirow{2}{*}{Distance (cm)}  & \multicolumn{2}{c}{Illuminance (lux)} \\  
  & no angle consideration & with angle \\
 \hline
-30 & 360 & 345.62\\
-40 & 202.5 & 197.82\\
-50 & 129.6 & 127.66\\
-60 & 90 & 89.06\\
-70 & 66.12 & 65.61\\
-80 & 50.63 & 50.32\\
-90 & 40 & 39.81\\
-100 & 32.4 & 32.28\\
-110 & 26.78 & 26.69\\
+10 & 3600 & 2715.18\\
+20 & 900 & 824.76\\
+30 & 400 & 384.02\\
+40 & 225 & 219.8\\
+50 & 144 & 141.84\\
+60 & 100 & 98.85\\
+70 & 73.47 & 72.9\\
+80 & 56.25 & 55.92\\
+90 & 44.44 & 44.24\\
+100 & 36 & 35.86\\
+110 & 29.75 & 29.66\\
 \hline
 \hline
 \end{tabular}
-\caption{Illuminance of the neopixel ring for distance ranging from 30cm to 110cm}
+\caption{Illuminance of the neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.}
 \label{table:neopixel_illuminance}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -309,7 +310,7 @@ Each neopixel has a built-in IC controlling the LEDs' intensity based on the dat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{PCB Board Design}\label{PCB_requirement}
 Printed Circuit Boards (PCBs) are almost present in every electronic circuit as they hold all the components together and implement the electrical connections. Designing a PCB is a process easily prone to errors, therefore a good PCB design requires the implementation of the design steps. \Cref{fig:pcb_design_flow} illustrates an examples of the ideal pcb design steps. In making the NPSC PCBs these steps give an engineering approach that can be elaborated further based on the PCBs requirement. For example, the designer might question what is the best placement for certain component and thus be referred to some PCBs design standards such as the IPC2221.\\
-One important design requirement (need) for the NPSC light requirement is its theoretical current ($10A$) drawn at full pixel brightness. The board-level diagram of the NPSC ring of the neopixel board should therefore be designed so that the track are wide enough to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
+One important design requirement (need) for the NPSC light requirement is its theoretical current drawn at full pixel brightness. The board-level diagram of the NPSC ring of the neopixel board should therefore be designed so that the track are wide enough to dissipate all the heat evenly across the board. The \textbf{IPC2221}, a generic standard for printed board design published by the \textit{Association Connecting Electronics Industries} \cite{pcb_design} describes a method for finding the mininmal width track given a specific current (see fig 6-4 from the IPC2221 \cite{pcb_design}(pp. 41)). A Javascript program based on the IPC2221 standard can be easily use to determine the track width \cite{pcb_track_width}. This web application use the track cuurent, thickness, temperature rise, ambient temperature and track lenght as input to determine the required track width.      
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{pcb_design_flow.png}
