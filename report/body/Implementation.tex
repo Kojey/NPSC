@@ -1,18 +1,70 @@
 \chapter{Implementation}
-This section provides information on the software implementation of the NPSC. Refering to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the utilities at level 1, the framework at level 2, the applications at level 3 and the main at level 5.
+This section provides information on the software implementation of the NPSC. Refering to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the Utilities at level 1, the Framework at level 2, the Applications at level 3 and the main at level 5.\\
+The information on the Utilites and Framework module are given in tabular form the functions in these modules have little complexity and scope \footnote{These functions do not relies on other functions, most of these are directly linked to the hardware or perform simple logic.}. 
    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Utilities
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Utilities}
-Each module to have table describing each methods used\\
-
+This module contains all functions used by other module. \Cref{table:utilities} describes the use of each file in the Utilities module.
+\begin{table}[h!]
+\centering
+\begin{tabular}{cp{30em}}
+\hline
+\hline
+\toprule
+\textbf{File Name} & \textbf{Description}\Tstrut \Bstrut \\
+\bottomrule
+\toprule
+queue & Contains functions to create a queue of a certain data type, add and remove elements from the queue. \\
+\midrule
+utils & Contains functions, variables and type definitions used other software modules at different level of the hierarchy.\\
+\bottomrule
+\hline
+\hline
+\end{tabular}
+\caption{Description of the files at the Utilities level.}
+\label{table:utilities}
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Framework
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Framework}
-Subsection for each module.\\
-Each module to have table describing each methods used\\
+The files in this module are the framework code related directly to each hardware module. \Cref{table:framework} describes the use of each file and their corresponding hardware module.
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccp{20em}}
+\hline
+\hline
+\toprule
+\textbf{File Name} & \textbf{Hardware} & \textbf{Description} \\
+\bottomrule	
+\toprule
+audio & N/A & Load ringtones from the EEPROM, initialise the DAC peripheral and provide functions to play and stop the ringtone.  \\
+\midrule
+bluetooth & HC-06 & Initialise the UART communication between the STM and the HC-06 and provide functions to send, receive data.\\
+\midrule
+clock & internal RTC & initialise and activate the internal RTC on the STM and provide functions to set, get the clock as well as the alarms.\\
+\midrule
+eeprom & 25LC640 & Initialise the SPI communication between the EEPROM and the STM and provide functions to read/write from/to the EEPROM.\\
+\midrule
+neopixel & WS2812 & Initialise the STM's PWM on the neopixel peripherals and provide functions to set colours of specific or all neopixels.\\
+\midrule
+nextion & Nextion touch screen & Initialise the UART communication between the STM and the Nextion screen and provide functions to send, receive data.\\\\
+\midrule
+rtc & DS1307 & Initialise the I2C communication between the STM and the external RTC and provide functions to set ang get the time and date.\\
+\midrule
+temperature & MCP9700 & Initialise the ADC peripheral on the STM and provide function to read the temperature.\\
+\midrule
+ldr & LDR & Initialise the ADC peripheral on the STM and provide function to read the light intensity.\\
+\midrule
+framework & All & Initialise all hardware communication\\
+\bottomrule
+\hline
+\end{tabular}
+\caption{Description of the files at the Framework level.}
+\label{table:framework}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Applpication
@@ -22,6 +74,11 @@ MUST PROVIDE USE CASE DIAGRAM AND FLOW CHART FOR EACH MODULE\\
 Subsection for each module.\\
 Each module to have table describing each methods used\\
 
+\subsection{Visual application}
+
+\subsection{Alarm application}
+
+\subsection{Instruction application}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Main
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

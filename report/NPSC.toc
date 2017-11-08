@@ -104,16 +104,16 @@
 \contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
 \contentsline {section}{\numberline {6.1}Utilities}{48}{section.6.1}
 \contentsline {section}{\numberline {6.2}Framework}{48}{section.6.2}
-\contentsline {section}{\numberline {6.3}Applpication}{48}{section.6.3}
-\contentsline {section}{\numberline {6.4}Main}{48}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing}{49}{chapter.7}
-\contentsline {chapter}{\numberline {8}Results}{50}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{50}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{50}{section.8.2}
-\contentsline {chapter}{\numberline {9}Discussion}{51}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions}{52}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recommendations}{53}{chapter.11}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{58}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{63}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{64}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{64}{section.C.1}
+\contentsline {section}{\numberline {6.3}Applpication}{49}{section.6.3}
+\contentsline {section}{\numberline {6.4}Main}{49}{section.6.4}
+\contentsline {chapter}{\numberline {7}Testing}{50}{chapter.7}
+\contentsline {chapter}{\numberline {8}Results}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{51}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{51}{section.8.2}
+\contentsline {chapter}{\numberline {9}Discussion}{52}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions}{53}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recommendations}{54}{chapter.11}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{59}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{64}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{65}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{65}{section.C.1}

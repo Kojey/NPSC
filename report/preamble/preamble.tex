@@ -20,9 +20,20 @@
 \usepackage{adjustbox} % rotate figures and tables
 \graphicspath{{./figures/}}
 
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+
 % Include page formatting here. 
 \parskip = 6pt
 \parindent = 0mm
 \renewcommand{\headrulewidth}{0pt}
 \rhead[]{\thesection}
 \lhead[\thechapter]{}
+
+% define "struts", as suggested by Claudio Beccari in
+%    a piece in TeX and TUG News, Vol. 2, 1993.
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}         % = `top' strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}}   % = `bottom' strut
