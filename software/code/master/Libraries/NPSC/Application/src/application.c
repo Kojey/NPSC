@@ -38,6 +38,12 @@
 /* Private functions ---------------------------------------------------------*/
 
 /**
+ *
+ */
+void application_init(void){
+	parameters_init();
+}
+/**
  * @brief	Initialise all shared variables
  */
 void parameters_init(void){

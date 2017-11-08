@@ -23,7 +23,7 @@
 #include "bluetooth.h"
 #include "nextion.h"
 #include "rtc.h"
-
+#include "queue.h"
 /** @addtogroup NPSC
   * @{
   */

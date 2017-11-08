@@ -102,10 +102,10 @@
 \contentsline {subsubsection}{Weekday}{46}{section*.61}
 \contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{47}{subsection.5.3.2}
 \contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Hardware}{48}{section.6.1}
-\contentsline {section}{\numberline {6.2}Utilities}{48}{section.6.2}
-\contentsline {section}{\numberline {6.3}Framework}{48}{section.6.3}
-\contentsline {section}{\numberline {6.4}Applpication}{48}{section.6.4}
+\contentsline {section}{\numberline {6.1}Utilities}{48}{section.6.1}
+\contentsline {section}{\numberline {6.2}Framework}{48}{section.6.2}
+\contentsline {section}{\numberline {6.3}Applpication}{48}{section.6.3}
+\contentsline {section}{\numberline {6.4}Main}{48}{section.6.4}
 \contentsline {chapter}{\numberline {7}Testing}{49}{chapter.7}
 \contentsline {chapter}{\numberline {8}Results}{50}{chapter.8}
 \contentsline {section}{\numberline {8.1}Simulation Results}{50}{section.8.1}

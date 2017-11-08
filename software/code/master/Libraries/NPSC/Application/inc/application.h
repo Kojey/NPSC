@@ -38,6 +38,7 @@
 /* Exported types ------------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
+void application_init(void);
 void parameters_init(void);
 #endif /* NPSC_APPLICATION_APPLICATION_H_ */
 

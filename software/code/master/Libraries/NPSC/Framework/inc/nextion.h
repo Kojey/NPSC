@@ -20,6 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "utils.h"
+#include "queue.h"
 
 /** @addtogroup NPSC
   * @{

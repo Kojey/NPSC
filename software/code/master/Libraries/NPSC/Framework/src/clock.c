@@ -38,7 +38,7 @@
 
 /* Includes -----------------------------------------------------------------*/
 #include "clock.h"
-
+#include "neopixel.h"
 
 /** @addtogroup NPSC
   * @{

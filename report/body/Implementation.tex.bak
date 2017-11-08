@@ -1,5 +1,6 @@
 \chapter{Implementation}
-This section provides information on the software implementation of the NPSC. Refering to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the utilities at level 1, the framework at level 2, and the applications at   
+This section provides information on the software implementation of the NPSC. Refering to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the utilities at level 1, the framework at level 2, the applications at level 3 and the main at level 5.
+   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Utilities
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,3 +21,8 @@ Each module to have table describing each methods used\\
 MUST PROVIDE USE CASE DIAGRAM AND FLOW CHART FOR EACH MODULE\\
 Subsection for each module.\\
 Each module to have table describing each methods used\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Main
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Main}

@@ -40,11 +40,10 @@
  * @param	None
  * @retval	None
  */
-void NPSC_init(void){
+void framework_init(void){
 	/* Initialise system parameters */
 	SystemInit();
-	/* Initialise NPSC shared variables */
-	parameters_init();
+
 	/* Initialise bluetooth */
 	bluetooth_init();
 	/* Initialise nextion */

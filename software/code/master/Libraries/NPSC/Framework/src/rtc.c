@@ -17,7 +17,8 @@
 /* Includes -----------------------------------------------------------------*/
 #include "rtc.h"
 #include "clock.h"
-#include "assertion.h"
+
+#include "../../UnitTest/inc/assertion.h"
 
 /** @addtogroup NPSC
   * @{

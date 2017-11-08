@@ -1,8 +1,9 @@
 
 /* Includes */
+#include <unitTest.h>
 #include "framework.h"
 #include "application.h"
-#include "test.h"
+
 
 /* Private macro */
 /* Private variables */
@@ -18,7 +19,8 @@
 */
 int main(void)
 {
-	NPSC_init();
+	framework_init();
+	application_init();
 	//alarm_synchronize();
 	while(1)
 	{

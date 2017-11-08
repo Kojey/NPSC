@@ -45,7 +45,7 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-void NPSC_init(void);
+void framework_init(void);
 void Error_Handler(void);
 
 #endif /* NPSC_FRAMEWORK_FRAMEWORK_H_ */

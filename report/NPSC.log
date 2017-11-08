@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  8 NOV 2017 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  8 NOV 2017 21:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1148,7 +1148,11 @@ File: ./figures/system_overview.jpg Graphic file (type jpg)
 <use ./figures/system_overview.jpg>
 Package pdftex.def Info: ./figures/system_overview.jpg used on input line 17.
 (pdftex.def)             Requested size: 330.79688pt x 221.70898pt.
+ [37
 
+
+
+]
 Overfull \hbox (7.66792pt too wide) in paragraph at lines 25--26
 []\OT1/cmr/bx/n/10.95 Instruction Fetch Decode and Execute (IFDE) application\O
 T1/cmr/m/n/10.95 : This application
@@ -1160,11 +1164,8 @@ Overfull \hbox (13.49132pt too wide) in paragraph at lines 25--26
 he IFDE fetches instructions
  []
 
-[37
-
-
-
-] <./figures/io_instruction.jpg, id=978, 2340.745pt x 2156.055pt>
+[38 <./figures/system_overview.jpg>]
+<./figures/io_instruction.jpg, id=982, 2340.745pt x 2156.055pt>
 File: ./figures/io_instruction.jpg Graphic file (type jpg)
 
 <use ./figures/io_instruction.jpg>
@@ -1176,7 +1177,7 @@ Overfull \hbox (9.08209pt too wide) in paragraph at lines 45--52
 e and interpretations. Figure []5.2[]
  []
 
-[38 <./figures/system_overview.jpg>] [39 <./figures/io_instruction.jpg>]
+[39 <./figures/io_instruction.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 63--65
 
  []
@@ -1229,21 +1230,21 @@ Package pdftex.def Info: ./figures/date.jpg used on input line 164.
 (./body/Implementation.tex
 Chapter 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--20
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 25--84
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--24
 
  []
 
-[48
+) [48
 
 
 
@@ -1428,7 +1429,7 @@ e], available at:
 
  (./appendices/appendixa.tex
 Appendix A.
-<./figures/ring_sch.pdf, id=1103, 794.97pt x 614.295pt>
+<./figures/ring_sch.pdf, id=1104, 794.97pt x 614.295pt>
 File: ./figures/ring_sch.pdf Graphic file (type pdf)
 
 <use ./figures/ring_sch.pdf>
@@ -1439,7 +1440,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 12--13
 [][] 
  []
 
-<./figures/ring_pcb.png, id=1104, 614.295pt x 614.295pt>
+<./figures/ring_pcb.png, id=1105, 614.295pt x 614.295pt>
 File: ./figures/ring_pcb.png Graphic file (type png)
 
 <use ./figures/ring_pcb.png>
@@ -1452,7 +1453,7 @@ LaTeX Warning: Float too large for page by 66.53624pt on input line 23.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/time_sch.pdf, id=1105, 794.97pt x 614.295pt>
+<./figures/time_sch.pdf, id=1106, 794.97pt x 614.295pt>
 File: ./figures/time_sch.pdf Graphic file (type pdf)
 
 <use ./figures/time_sch.pdf>
@@ -1463,7 +1464,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 31--32
 [][] 
  []
 
-<./figures/time_pcb.png, id=1106, 660.4675pt x 197.73875pt>
+<./figures/time_pcb.png, id=1107, 660.4675pt x 197.73875pt>
 File: ./figures/time_pcb.png Graphic file (type png)
 
 <use ./figures/time_pcb.png>
@@ -1473,7 +1474,7 @@ Package pdftex.def Info: ./figures/time_pcb.png used on input line 36.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/weekday_sch.pdf, id=1107, 794.97pt x 614.295pt>
+<./figures/weekday_sch.pdf, id=1108, 794.97pt x 614.295pt>
 File: ./figures/weekday_sch.pdf Graphic file (type pdf)
 
 <use ./figures/weekday_sch.pdf>
@@ -1484,7 +1485,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 49--50
 [][] 
  []
 
-<./figures/weekday_pcb.png, id=1108, 944.52875pt x 106.3975pt>
+<./figures/weekday_pcb.png, id=1109, 944.52875pt x 106.3975pt>
 File: ./figures/weekday_pcb.png Graphic file (type png)
 
 <use ./figures/weekday_pcb.png>
@@ -1498,7 +1499,7 @@ Overfull \hbox (149.88873pt too wide) in paragraph at lines 54--55
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/date_sch.pdf, id=1109, 794.97pt x 614.295pt>
+<./figures/date_sch.pdf, id=1110, 794.97pt x 614.295pt>
 File: ./figures/date_sch.pdf Graphic file (type pdf)
 
 <use ./figures/date_sch.pdf>
@@ -1509,7 +1510,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 67--68
 [][] 
  []
 
-<./figures/date_pcb.png, id=1110, 554.07pt x 197.73875pt>
+<./figures/date_pcb.png, id=1111, 554.07pt x 197.73875pt>
 File: ./figures/date_pcb.png Graphic file (type png)
 
 <use ./figures/date_pcb.png>
@@ -1550,9 +1551,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 85.
 (./appendices/appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 85.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 85.
-Package rerunfilecheck Info: File `NPSC.out' has not changed.
-(rerunfilecheck)             Checksum: BDA1F4C2B323BDBE0BFB12CCA449C19E;6107.
 
+
+Package rerunfilecheck Warning: File `NPSC.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `NPSC.out':
+(rerunfilecheck)             Before: BDA1F4C2B323BDBE0BFB12CCA449C19E;6107
+(rerunfilecheck)             After:  E2ACB473AE95D6D53012469F26601B63;6103.
 
 LaTeX Warning: There were undefined references.
 
@@ -1580,10 +1587,10 @@ ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on NPSC.pdf (76 pages, 4907055 bytes).
+Output written on NPSC.pdf (76 pages, 4907540 bytes).
 PDF statistics:
- 1315 PDF objects out of 1440 (max. 8388607)
- 1157 compressed objects within 12 object streams
+ 1316 PDF objects out of 1440 (max. 8388607)
+ 1158 compressed objects within 12 object streams
  308 named destinations out of 1000 (max. 500000)
  911 words of extra memory for PDF output out of 10000 (max. 10000000)
 
