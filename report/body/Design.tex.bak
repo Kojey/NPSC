@@ -19,7 +19,7 @@ These system requirements are achieved by the functions of the applications at l
 \label{fig:system_overview}
 \end{figure}
 \begin{itemize}
-\item \textbf{Visual application}: This application relies on the the \textit{Ring}, \textit{Time}, \textit{Weekday}, and \textit{Date} PCBs. This application manages visual outputs hardware, from setting the brightness to ensuring that a specific pattern is displayed.
+\item \textbf{Visual application}: This application controls the \textit{Ring}, \textit{Time}, \textit{Weekday}, and \textit{Date} PCBs. It manages visual outputs hardware, from setting the brightness to ensuring that a specific pattern is displayed to ensuring that the desired lux quantity is emitted on the user.
 \item \textbf{Alarm application}: This application manages the synchronisation of the internal and external clocks. It is also responsible for managing the alarm stored in the EEPROM and updating the alarm.
 \item \textbf{Instruction Queue application}: This application is responsible for the creation of instructions from the user input devices (Nextion touchscreen and Smartphone application) and manages the instruction queue.
 \item \textbf{Instruction Fetch Decode and Execute (IFDE) application}: This application relies on the result of the instruction queue application. The IFDE fetches instructions from the instruction queue, decode the instructions and execute commands based on the instruction's opcode. It is the bridge between the user inputs and the hardware modules of the NPSC.
@@ -93,7 +93,7 @@ The instructions of the NPSC are listed in \cref{table:instruction_set}. The ins
 \end{landscape}
 
 \subsection{External storage}
-What action are performed on the storages? How is it structure?
+The storage's purpose is to store useful information such as the alarm parameters and the user's preferences. Certain application require storage capability, therefore there is a restricted access to the EEPROM memory. The memory allocation is detailed in \cref{fig:eeprom}.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.08]{eeprom.jpg}
@@ -113,25 +113,21 @@ Alarm A and B are triggered based on the comparison of their time with the inter
 On power on, the Alarm manager synchronise the internal clock with the external clock by loading the external RTC's time and date to the internal RTC. It then load two alarms from the EEPROM which are supposed to be triggered before the others and set these alarms to alarm A and alarm B from the internal RTC. The Alarm manager is also responsible for storing the alarms to the EEPROM and updating then when on alarm goes off. 
 
 \subsection{Visual outputs}
-What application can have access to the visual outputs?\\
-Defines the need for modes (normal, alarm, sunrise, sleep \ldots).\\
-Pixels parameters?\\
-The Visual outputs are composed of the main light source (the ring), the weekday, time and date PCBs. \Cef{fig:visual_outputs} illustrates the interaction between these modules and the STM. 
+The visual outputs are all modules related to the control and emission of light in the system. \Cref{fig:visual_outputs} illustrates the interaction between these modules and the STM. 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{visual_outputs.jpg}
 \caption{}
 \label{fig:visual_outputs}
 \end{figure}
-
+There are two type of hardware modules, the first type (type 1) of module is a series of neopixels connected in cascade controlled by Pulse Width Modulation (PWM), the second type (type 2) of module is controlled using a Serial Peripheral Interface (SPI) bus. All type 1 modules inherit the ability to be connected in cascade from the neopixels; however, the ring being the only light source used to affect the human sleep-wake cycle, it is essential that its control is separated from other type 1 module. The two other type 1 are designed to display time and date information therefore they can be combined as one module. The only type 2 module in the visual outputs is the Date PCB, this PCB is designed to display the date, the month and the room temperature.\\
+For consistency in the visual, RGBs 7 segments displays are used for the Date PCB. Moreover, the Time PCB uses neopixels as no RGBs 7 segments displays bigger than the ones used for the Date PCB could be found.\\
+The visual outputs are controlled by the Visual manager from the visual application. The Visual manager's role is to update the neopixel buffer for each type 1 module according to the visual parameters set by the user. These parameters consists of RGB colours, the brightness, the location of the pixel \footnote{The location is the number of the neopixel of interest in the series of neopixel on a specific module. On the Ring PCB, location 61 is the first neopixel on the second ring.}. At a higher level of control, these parameters also include module's pattern, mode and duration. The Visual manager is also responsible for updating information on the Date PCB.   
 
 \subsection{Sensors}
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.1]{sensors.jpg}
-\caption{}
-\label{fig:sensors}
-\end{figure}
+There are two sensors on the NPSC, a temperature sensor and a photoresistor. The role of the temperature sensor is to get the room temperature. The photoresistor has more interesting purpose; it is used to obtain the light intensity outside the NPSC in order to allow the system to adjust the neopixel brightness such that the required illuminance does not vary by a significant margin at the user's location.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Detailed design
