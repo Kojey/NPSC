@@ -15,14 +15,14 @@
 \contentsline {section}{\numberline {2.2}Lighting technologies}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Light}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Type of light technologies}{9}{subsection.2.2.2}
-\contentsline {subsubsection}{Incandescent light}{9}{section*.7}
-\contentsline {subsubsection}{Fluorescent light}{10}{section*.8}
-\contentsline {subsubsection}{Halogen light}{10}{section*.9}
-\contentsline {subsubsection}{Xeon light}{10}{section*.10}
-\contentsline {subsubsection}{LED light}{10}{section*.11}
+\contentsline {subsubsection}{Incandescent light}{9}{section*.8}
+\contentsline {subsubsection}{Fluorescent light}{10}{section*.9}
+\contentsline {subsubsection}{Halogen light}{10}{section*.10}
+\contentsline {subsubsection}{Xeon light}{10}{section*.11}
+\contentsline {subsubsection}{LED light}{10}{section*.12}
 \contentsline {subsection}{\numberline {2.2.3}Light treatment of sleep disorder}{10}{subsection.2.2.3}
-\contentsline {subsubsection}{C by GE Sol}{10}{section*.12}
-\contentsline {subsubsection}{Philips wake-up lamps}{11}{section*.14}
+\contentsline {subsubsection}{C by GE Sol}{10}{section*.13}
+\contentsline {subsubsection}{Philips wake-up lamps}{11}{section*.15}
 \contentsline {section}{\numberline {2.3}Hardware modules}{11}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Processors and microcontrollers}{12}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Storage}{13}{subsection.2.3.2}
@@ -50,19 +50,19 @@
 \contentsline {section}{\numberline {3.2}Literature Review}{24}{section.3.2}
 \contentsline {section}{\numberline {3.3}Setup}{25}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Hardware setup}{25}{subsection.3.3.1}
-\contentsline {subsubsection}{Personal or Desktop Computer}{25}{section*.29}
-\contentsline {subsubsection}{STM32F4 Discovery board}{25}{section*.30}
-\contentsline {subsubsection}{Arduino board}{26}{section*.31}
-\contentsline {subsubsection}{Electronic modules}{26}{section*.32}
-\contentsline {subsubsection}{Logic analyser}{26}{section*.33}
-\contentsline {subsubsection}{Serial to USB converter}{26}{section*.35}
+\contentsline {subsubsection}{Personal or Desktop Computer}{25}{section*.30}
+\contentsline {subsubsection}{STM32F4 Discovery board}{25}{section*.31}
+\contentsline {subsubsection}{Arduino board}{26}{section*.32}
+\contentsline {subsubsection}{Electronic modules}{26}{section*.33}
+\contentsline {subsubsection}{Logic analyser}{26}{section*.34}
+\contentsline {subsubsection}{Serial to USB converter}{26}{section*.36}
 \contentsline {subsection}{\numberline {3.3.2}Software setup}{27}{subsection.3.3.2}
-\contentsline {subsubsection}{Atolic TrueSTUDIO}{27}{section*.36}
-\contentsline {subsubsection}{Nextion IDE}{27}{section*.37}
-\contentsline {subsubsection}{Logic analyser software}{27}{section*.38}
-\contentsline {subsubsection}{PCB design software: Altium Designer}{27}{section*.39}
-\contentsline {subsubsection}{API generator: Doxygen}{28}{section*.40}
-\contentsline {subsubsection}{Version Control: git}{28}{section*.41}
+\contentsline {subsubsection}{Atolic TrueSTUDIO}{27}{section*.37}
+\contentsline {subsubsection}{Nextion IDE}{27}{section*.38}
+\contentsline {subsubsection}{Logic analyser software}{27}{section*.39}
+\contentsline {subsubsection}{PCB design software: Altium Designer}{27}{section*.40}
+\contentsline {subsubsection}{API generator: Doxygen}{28}{section*.41}
+\contentsline {subsubsection}{Version Control: git}{28}{section*.42}
 \contentsline {section}{\numberline {3.4}Implementation}{28}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Level 1: Hardware and Utilities}{28}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Level 2: Framework}{28}{subsection.3.4.2}
@@ -71,11 +71,11 @@
 \contentsline {subsection}{\numberline {3.4.5}Level 5: NPSC}{30}{subsection.3.4.5}
 \contentsline {section}{\numberline {3.5}Experimentation}{30}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Hardware tests}{30}{subsection.3.5.1}
-\contentsline {subsubsection}{Basic hardware test}{30}{section*.43}
-\contentsline {subsubsection}{Neopixel ring test}{31}{section*.44}
+\contentsline {subsubsection}{Basic hardware test}{30}{section*.44}
+\contentsline {subsubsection}{Neopixel ring test}{31}{section*.45}
 \contentsline {subsection}{\numberline {3.5.2}Software tests}{31}{subsection.3.5.2}
-\contentsline {subsubsection}{Unit tests}{31}{section*.45}
-\contentsline {subsubsection}{System tests}{31}{section*.46}
+\contentsline {subsubsection}{Unit tests}{31}{section*.46}
+\contentsline {subsubsection}{System tests}{31}{section*.47}
 \contentsline {subsection}{\numberline {3.5.3}Performance tests}{31}{subsection.3.5.3}
 \contentsline {subsection}{\numberline {3.5.4}Acceptance tests}{32}{subsection.3.5.4}
 \contentsline {section}{\numberline {3.6}Analysis}{32}{section.3.6}
@@ -88,32 +88,38 @@
 \contentsline {section}{\numberline {5.1}System design}{37}{section.5.1}
 \contentsline {section}{\numberline {5.2}High-level design}{38}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Inputs/Outputs instruction design}{39}{subsection.5.2.1}
-\contentsline {subsubsection}{From the inputs to the microcontroller}{39}{section*.51}
-\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.52}
-\contentsline {subsubsection}{Buffer size and Instruction sets}{40}{section*.53}
+\contentsline {subsubsection}{From the inputs to the microcontroller}{39}{section*.52}
+\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.53}
+\contentsline {subsubsection}{Buffer size and Instruction sets}{40}{section*.54}
 \contentsline {subsection}{\numberline {5.2.2}External storage}{43}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Alarm and Clock}{43}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Visual outputs}{44}{subsection.5.2.4}
 \contentsline {subsection}{\numberline {5.2.5}Sensors}{45}{subsection.5.2.5}
 \contentsline {section}{\numberline {5.3}Details hardware design}{45}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Neopixels boards}{45}{subsection.5.3.1}
-\contentsline {subsubsection}{Ring PCB}{45}{section*.59}
-\contentsline {subsubsection}{Time}{46}{section*.60}
-\contentsline {subsubsection}{Weekday}{46}{section*.61}
+\contentsline {subsubsection}{Ring PCB}{45}{section*.60}
+\contentsline {subsubsection}{Time}{46}{section*.61}
+\contentsline {subsubsection}{Weekday}{46}{section*.62}
 \contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{47}{subsection.5.3.2}
 \contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
 \contentsline {section}{\numberline {6.1}Utilities}{48}{section.6.1}
 \contentsline {section}{\numberline {6.2}Framework}{48}{section.6.2}
 \contentsline {section}{\numberline {6.3}Applpication}{49}{section.6.3}
-\contentsline {section}{\numberline {6.4}Main}{49}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing}{50}{chapter.7}
-\contentsline {chapter}{\numberline {8}Results}{51}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{51}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{51}{section.8.2}
-\contentsline {chapter}{\numberline {9}Discussion}{52}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions}{53}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recommendations}{54}{chapter.11}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{59}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{64}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{65}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{65}{section.C.1}
+\contentsline {subsection}{\numberline {6.3.1}Visual application}{49}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Alarm application}{49}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Instruction application}{50}{subsection.6.3.3}
+\contentsline {subsubsection}{DMA interrupt}{50}{section*.67}
+\contentsline {subsubsection}{Device instruction update}{50}{section*.69}
+\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{51}{section*.71}
+\contentsline {section}{\numberline {6.4}Main}{53}{section.6.4}
+\contentsline {chapter}{\numberline {7}Testing}{54}{chapter.7}
+\contentsline {chapter}{\numberline {8}Results}{55}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{55}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{55}{section.8.2}
+\contentsline {chapter}{\numberline {9}Discussion}{56}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions}{57}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recommendations}{58}{chapter.11}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{63}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{68}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{69}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{69}{section.C.1}

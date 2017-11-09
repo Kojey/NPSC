@@ -60,6 +60,7 @@
 
 /* Exported variables --------------------------------------------------------*/
 size_t nextion_write, nextion_read;
+extern bool nextion_instruction;
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 /*  Function used to initialize the nextion device and handle transmission *****/
@@ -77,6 +78,7 @@ void DMA1_Stream5_IRQHandler(void);
 /**	@defgroup nextion_Trans
  *  @{
  */
+void nextion_instructionUpdate(void);
 void nextion_send(uint8_t * data);
 /**
  * @}

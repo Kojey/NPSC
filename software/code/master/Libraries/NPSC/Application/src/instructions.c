@@ -45,8 +45,8 @@ static bool b = true;
 void instruction_execute(void){
 	RTC_ClockTypeDef clock;
 	AlarmTypeDef alarm;
-
-	while(instruction_queue->size){
+	// check if the queue is empty
+	while(InstructionQueue_isEmpty(instruction_queue)){
 		// fecth instruction
 		InstructionTypeDef _instruction = InstructionQueue_dequeue(instruction_queue);
 		// decode and execute instruction

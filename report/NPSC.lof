@@ -1,43 +1,47 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt chart showing the timeline of every task in the project as well as its critical path.\relax }}{3}{figure.caption.4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Report breakdown detailing the different sections needed to be included in the report.\relax }}{5}{figure.caption.5}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Gantt chart showing the timeline of every task in the project as well as its critical path.\relax }}{3}{figure.caption.5}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Report breakdown detailing the different sections needed to be included in the report.\relax }}{5}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Overview and classification of the sections of the literature review.\relax }}{6}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces C by GE Sol, an intelligent lamp bed using Amazon Alextra.\relax }}{11}{figure.caption.13}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Wake-up light by Philips\relax }}{12}{figure.caption.15}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Touch-screen technologies. More pressure need to be applied on the resistive touch screen for location dectection.\relax }}{15}{figure.caption.18}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Relative position of the neopixel rings\relax }}{16}{figure.caption.20}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Wire connection setting for SPI communication between a master and a slave device\relax }}{17}{figure.caption.22}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{17}{figure.caption.23}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Wire connection setting for I2C communication between two masters and two slaves devices\relax }}{18}{figure.caption.24}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Illustration of the neopixels serial interface\relax }}{19}{figure.caption.25}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }}{20}{figure.caption.26}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces V-Model basic template used for system definition and testing\relax }}{22}{figure.caption.27}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Spiral-Model basic template used for system refinement\relax }}{23}{figure.caption.28}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Overview and classification of the sections of the literature review.\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces C by GE Sol, an intelligent lamp bed using Amazon Alextra.\relax }}{11}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Wake-up light by Philips\relax }}{12}{figure.caption.16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Touch-screen technologies. More pressure need to be applied on the resistive touch screen for location dectection.\relax }}{15}{figure.caption.19}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Relative position of the neopixel rings\relax }}{16}{figure.caption.21}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Wire connection setting for SPI communication between a master and a slave device\relax }}{17}{figure.caption.23}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{17}{figure.caption.24}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Wire connection setting for I2C communication between two masters and two slaves devices\relax }}{18}{figure.caption.25}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Illustration of the neopixels serial interface\relax }}{19}{figure.caption.26}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }}{20}{figure.caption.27}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces V-Model basic template used for system definition and testing\relax }}{22}{figure.caption.28}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Spiral-Model basic template used for system refinement\relax }}{23}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Salea logic analyser.\relax }}{26}{figure.caption.34}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation\relax }}{29}{figure.caption.42}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Salea logic analyser.\relax }}{26}{figure.caption.35}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation\relax }}{29}{figure.caption.43}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Structural block diagram of the NPSC.\relax }}{34}{figure.caption.47}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Mechanical prototype of the NPSC.\relax }}{36}{figure.caption.48}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Structural block diagram of the NPSC.\relax }}{34}{figure.caption.48}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Mechanical prototype of the NPSC.\relax }}{36}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Detailed structural block diagram of the NPSC showing the connections between the hardware modules and the main software modules.\relax }}{38}{figure.caption.49}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces \relax }}{39}{figure.caption.50}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{43}{figure.caption.55}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{43}{figure.caption.56}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{44}{figure.caption.57}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{46}{figure.caption.58}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{47}{figure.caption.62}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Detailed structural block diagram of the NPSC showing the connections between the hardware modules and the main software modules.\relax }}{38}{figure.caption.50}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces \relax }}{39}{figure.caption.51}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{43}{figure.caption.56}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{43}{figure.caption.57}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces \relax }}{44}{figure.caption.58}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{46}{figure.caption.59}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{47}{figure.caption.63}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \relax }}{50}{figure.caption.66}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \relax }}{51}{figure.caption.68}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \relax }}{51}{figure.caption.70}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces \relax }}{52}{figure.caption.72}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{60}{figure.caption.66}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{61}{figure.caption.67}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{62}{figure.caption.68}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{63}{figure.caption.69}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{64}{figure.caption.74}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{65}{figure.caption.75}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{66}{figure.caption.76}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{67}{figure.caption.77}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

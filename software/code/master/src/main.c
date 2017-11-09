@@ -1,8 +1,9 @@
 
 /* Includes */
-#include <unitTest.h>
-#include "framework.h"
 #include "application.h"
+#include "framework.h"
+#include "systemTest.h"
+#include "unitTest.h"
 
 
 /* Private macro */
@@ -21,9 +22,9 @@ int main(void)
 {
 	framework_init();
 	application_init();
-	//alarm_synchronize();
 	while(1)
 	{
+		nextion_instructionUpdate();
 		instruction_execute();
 	}
 }

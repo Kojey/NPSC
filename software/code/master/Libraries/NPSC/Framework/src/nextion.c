@@ -32,6 +32,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+bool nextion_instruction = false;
 /* Private functions ---------------------------------------------------------*/
 
 /**	@defgroup nextion_Init Initialization and transmission handler functions
@@ -138,22 +139,7 @@ void DMA1_Stream5_IRQHandler(void) {
 	if (DMA1->HISR & DMA_FLAG_TCIF5) {
         DMA1->HIFCR = DMA_FLAG_TCIF5; 		/*  Clear transfer complete flag  */
 
-        /* Extract all instruction from DMA */
-        for(uint8_t index=0; index<DMA_MAX_INSTRUCTION; ++index){
-        	/* Check for validity of instruction  */
-        	if(instruction_valid(DMA_RX_Buffer[index*INSTRUCTION_SIZE])
-        			&& !instruction_ack(&DMA_RX_Buffer[index*INSTRUCTION_SIZE])){
-				InstructionTypeDef newInstruction;
-				for(int i=0; i<INSTRUCTION_SIZE; i++){
-					newInstruction.instrution[i]=DMA_RX_Buffer[index*INSTRUCTION_SIZE+i];
-					// clear DMA_RX_Buffer
-					DMA_RX_Buffer[index*INSTRUCTION_SIZE+i]=0;
-				}
-				newInstruction.excecuted=false;
-				// add it to the queue
-				InstructionQueue_enqueue(instruction_queue,&newInstruction);
-        	}
-        }
+        nextion_instruction = true;
 
         /*Prepare DMA for next transfer
 		Important! DMA stream won't start if all flags are not cleared first */
@@ -164,7 +150,30 @@ void DMA1_Stream5_IRQHandler(void) {
     }
 }
 
-
+/**
+ *
+ */
+void nextion_instructionUpdate(void){
+	if(nextion_instruction){
+	    /* Extract all instruction from DMA */
+	    for(uint8_t index=0; index<DMA_MAX_INSTRUCTION; ++index){
+	    	/* Check for validity of instruction  */
+	    	if(instruction_valid(DMA_RX_Buffer[index*INSTRUCTION_SIZE])
+	    			&& !instruction_ack(&DMA_RX_Buffer[index*INSTRUCTION_SIZE])){
+				InstructionTypeDef newInstruction;
+				for(int i=0; i<INSTRUCTION_SIZE; i++){
+					newInstruction.instrution[i]=DMA_RX_Buffer[index*INSTRUCTION_SIZE+i];
+					// clear DMA_RX_Buffer
+					DMA_RX_Buffer[index*INSTRUCTION_SIZE+i]=0;
+				}
+				newInstruction.excecuted=false;
+				// add it to the queue
+				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+	    	}
+	    }
+	    nextion_instruction= false;
+	}
+}
 /**
  * @}
  */
