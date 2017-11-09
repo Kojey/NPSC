@@ -45,7 +45,7 @@
 /**
  * @brief	All address offset should depend on the alarm id
  */
-bool test_alarmAddress(){
+bool test_alarm_address(){
 	AlarmTypeDef alarm;
 	alarm.id = 6;
 	return assertEqual(alarm_idAddress(alarm.id),alarm.id*ALARM_SIZE)
@@ -61,7 +61,7 @@ bool test_alarmAddress(){
 /**
  * @brief	Saved alarm and loaded alarm should be the same
  */
-bool test_alarmSaveLoad(){
+bool test_alarm_save_load(){
 	AlarmTypeDef alarm,_alarm;
 
 	alarm.id=0;

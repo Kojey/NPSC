@@ -40,7 +40,7 @@
 /* Private function prototypes -----------------------------------------------*/
 
 bool test_queue_create(void);
-bool test_queue_enque(void);
+bool test_queue_enqueue(void);
 bool test_queue_dequeue(void);
 
 #endif /* NPSC_UNITTEST_INC_TEST_QUEUE_H_ */

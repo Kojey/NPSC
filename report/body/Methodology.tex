@@ -99,8 +99,8 @@ The NPSC is the highest level of the hierarchy. It, however, existed since the f
 This section presents the different tests designed to ensure that each hardware modules, sub-systems and system requirements are met. Each experiment targets one specific element from the hierarchy in \cref{fig:system_hierarchy}.
 \subsection{Hardware tests}
 The hardware testing requires careful test are any wrong connection could possibly damage the hardware. Two main tests are made on the hardware, a basic test testing the functionality of the hardware modules and the neopixel ring PCB test to ensure that the light requirement is met.
-\subsubsection{Basic hardware test}
-Most hardware communicates to the microcontroller through the protocols mentioned in \cref{com_protocol}. The test of these hardware is done using these steps:
+\subsubsection{Basic hardware test}\label{basic_hardware_test}
+Most hardware communicates to the microcontroller through the protocols mentioned in \ref{com_protocols}. The test of these hardware is done using these steps:
 \begin{enumerate}
 \item Check connection to the micro using the hardware datasheets
 \item Check power connections
@@ -117,7 +117,7 @@ The logic tests are performed during runtime or using the IDE debugger \footnote
 There are two levels of software tests, the unit tests and the system tests.
 \subsubsection{Unit tests}
 Unit tests are designed to test the framework of the hardware modules. These tests are logic tests performed on the hardware. One example of these test is verifying the data stored on the storage after a write operation, or getting the colour from one neopixel. Unit tests also include indirect hardware interaction functions such as functions which convert a structure of data into another. 
-\subsubsection{System tests}
+\subsubsection{Integrations tests}
 Systems tests are at a higher level than the unit tests. They are all logic tests ensuring that the interaction between the framework modules is as expected. When these tests fail, the unit tests of the involved framework modules must be tested. If the unit tests pass, it is certainly a logic error and the IDE debugger must be used to pinpoint the errors.
 
 \subsection{Performance tests}

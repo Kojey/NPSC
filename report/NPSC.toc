@@ -29,22 +29,22 @@
 \contentsline {subsection}{\numberline {2.3.3}Wireless technology}{13}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Touch screen}{14}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Neopixels}{14}{subsection.2.3.5}
-\contentsline {section}{\numberline {2.4}Communication protocols}{15}{section.2.4}
+\contentsline {section}{\numberline {2.4}Communication protocols}{16}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Serial Peripheral Interface (SPI) Bus}{16}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Universal asynchronous receiver-transmitter (UART)}{17}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{18}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{18}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}PCB Board Design}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{17}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{19}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}PCB Board Design}{20}{section.2.5}
 \contentsline {section}{\numberline {2.6}Programming Languages}{20}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}C}{20}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.1}C}{21}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}C++}{21}{subsection.2.6.2}
 \contentsline {section}{\numberline {2.7}Software Tools and Libraries}{21}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Atollic TrueSTUDIO for ARM}{21}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{21}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{22}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}MIT App Inventor 2}{22}{subsection.2.7.3}
 \contentsline {section}{\numberline {2.8}Design Models}{22}{section.2.8}
 \contentsline {subsection}{\numberline {2.8.1}V-Model}{22}{subsection.2.8.1}
-\contentsline {subsection}{\numberline {2.8.2}Spiral Model}{22}{subsection.2.8.2}
+\contentsline {subsection}{\numberline {2.8.2}Spiral Model}{23}{subsection.2.8.2}
 \contentsline {chapter}{\numberline {3}Methodology}{24}{chapter.3}
 \contentsline {section}{\numberline {3.1}Outline}{24}{section.3.1}
 \contentsline {section}{\numberline {3.2}Literature Review}{24}{section.3.2}
@@ -75,7 +75,7 @@
 \contentsline {subsubsection}{Neopixel ring test}{31}{section*.45}
 \contentsline {subsection}{\numberline {3.5.2}Software tests}{31}{subsection.3.5.2}
 \contentsline {subsubsection}{Unit tests}{31}{section*.46}
-\contentsline {subsubsection}{System tests}{31}{section*.47}
+\contentsline {subsubsection}{Integrations tests}{31}{section*.47}
 \contentsline {subsection}{\numberline {3.5.3}Performance tests}{31}{subsection.3.5.3}
 \contentsline {subsection}{\numberline {3.5.4}Acceptance tests}{32}{subsection.3.5.4}
 \contentsline {section}{\numberline {3.6}Analysis}{32}{section.3.6}
@@ -87,39 +87,48 @@
 \contentsline {chapter}{\numberline {5}Prototype Design}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}System design}{37}{section.5.1}
 \contentsline {section}{\numberline {5.2}High-level design}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Inputs/Outputs instruction design}{39}{subsection.5.2.1}
-\contentsline {subsubsection}{From the inputs to the microcontroller}{39}{section*.52}
-\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.53}
-\contentsline {subsubsection}{Buffer size and Instruction sets}{40}{section*.54}
-\contentsline {subsection}{\numberline {5.2.2}External storage}{43}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Alarm and Clock}{43}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Visual outputs}{44}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Sensors}{45}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.1}External storage}{39}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Inputs/Outputs instruction design}{39}{subsection.5.2.2}
+\contentsline {subsubsection}{From the inputs to the microcontroller}{39}{section*.53}
+\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.54}
+\contentsline {subsubsection}{Buffer size and Instruction sets}{41}{section*.55}
+\contentsline {subsection}{\numberline {5.2.3}Input devices}{43}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Alarm and Clock}{43}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Visual outputs}{44}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Sensors}{44}{subsection.5.2.6}
 \contentsline {section}{\numberline {5.3}Details hardware design}{45}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Neopixels boards}{45}{subsection.5.3.1}
 \contentsline {subsubsection}{Ring PCB}{45}{section*.60}
 \contentsline {subsubsection}{Time}{46}{section*.61}
 \contentsline {subsubsection}{Weekday}{46}{section*.62}
-\contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{47}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{46}{subsection.5.3.2}
 \contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
 \contentsline {section}{\numberline {6.1}Utilities}{48}{section.6.1}
 \contentsline {section}{\numberline {6.2}Framework}{48}{section.6.2}
 \contentsline {section}{\numberline {6.3}Applpication}{49}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Visual application}{49}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Alarm application}{49}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Alarm application}{50}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Instruction application}{50}{subsection.6.3.3}
-\contentsline {subsubsection}{DMA interrupt}{50}{section*.67}
-\contentsline {subsubsection}{Device instruction update}{50}{section*.69}
-\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{51}{section*.71}
-\contentsline {section}{\numberline {6.4}Main}{53}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing}{54}{chapter.7}
-\contentsline {chapter}{\numberline {8}Results}{55}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{55}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{55}{section.8.2}
-\contentsline {chapter}{\numberline {9}Discussion}{56}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions}{57}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recommendations}{58}{chapter.11}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{63}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{68}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{69}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{69}{section.C.1}
+\contentsline {subsubsection}{DMA interrupt}{51}{section*.69}
+\contentsline {subsubsection}{Device instruction update}{52}{section*.71}
+\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{53}{section*.73}
+\contentsline {section}{\numberline {6.4}Main}{54}{section.6.4}
+\contentsline {chapter}{\numberline {7}Testing}{55}{chapter.7}
+\contentsline {section}{\numberline {7.1}Overview}{55}{section.7.1}
+\contentsline {section}{\numberline {7.2}Hardware module tests}{57}{section.7.2}
+\contentsline {section}{\numberline {7.3}Unit tests}{57}{section.7.3}
+\contentsline {section}{\numberline {7.4}Integration tests}{57}{section.7.4}
+\contentsline {section}{\numberline {7.5}Neopixel Ring}{57}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Current test}{58}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Temperature test}{58}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Illuminance test}{58}{subsection.7.5.3}
+\contentsline {chapter}{\numberline {8}Results}{59}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{59}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{59}{section.8.2}
+\contentsline {chapter}{\numberline {9}Discussion}{60}{chapter.9}
+\contentsline {chapter}{\numberline {10}Conclusions}{61}{chapter.10}
+\contentsline {chapter}{\numberline {11}Recommendations}{62}{chapter.11}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{67}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{72}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{73}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{73}{section.C.1}

@@ -1,0 +1,24 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces Comparison between specifications of the Arduino Due \cite {arduino}, the Intel Edison \cite {intel}, the Raspverry Pi Zero \cite {raspberry}, and the STM32F407VGT6\cite {stm}\relax }}{13}{table.caption.17}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Comparison between the constraints and the convenience of Wifi, M2M, Mesh network, and Bluetooth\relax }}{14}{table.caption.18}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Light specification of the WS2812 neopixels\relax }}{15}{table.caption.20}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Illuminance of the Blue led of neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.\relax }}{16}{table.caption.22}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Instruction set used for the control of the NPSC by the users. Each instruction has a category, a name and an opcode. \textbf {-} in the table indicates data that will not be used by the IFDE. \textbf {*} indicates character data.\relax }}{42}{table.caption.56}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Description of the files at the Utilities level.\relax }}{48}{table.caption.64}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Description of the files at the Framework level.\relax }}{49}{table.caption.65}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Commnication protocol tests performed on hardware modules.\relax }}{57}{table.caption.76}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Unit tests performed on the Framework.\relax }}{58}{table.caption.77}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Description of the files at the Utilities level.\relax }}{58}{table.caption.78}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

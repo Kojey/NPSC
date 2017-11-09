@@ -42,7 +42,7 @@ bool test_queue_create(void){
 			&& assertEqual(my_queue->front, 0)
 			&& assertEqual(my_queue->rear, capacity-1);
 }
-bool test_queue_enque(void){
+bool test_queue_enqueue(void){
 	InstructionTypeDef my_instruction;
 	my_instruction.excecuted = false;
 	int i;

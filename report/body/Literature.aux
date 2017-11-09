@@ -80,7 +80,6 @@
 \newlabel{neopixels}{{2.3.5}{14}{Neopixels}{subsection.2.3.5}{}}
 \newlabel{neopixels@cref}{{[subsection][5][2,3]2.3.5}{14}}
 \citation{optical}
-\citation{spi}
 \newlabel{fig:resistive_screen}{{2.4a}{15}{first caption}{figure.caption.19}{}}
 \newlabel{fig:resistive_screen@cref}{{[subfigure][1][2,4]2.4a}{15}}
 \newlabel{sub@fig:resistive_screen}{{a}{15}{first caption}{figure.caption.19}{}}
@@ -101,31 +100,31 @@
 \newlabel{eq:lambert@cref}{{[equation][2][2]2.2}{15}}
 \newlabel{eq:total_illuminance}{{2.3}{15}{Neopixels}{equation.2.3.3}{}}
 \newlabel{eq:total_illuminance@cref}{{[equation][3][2]2.3}{15}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Communication protocols}{15}{section.2.4}}
-\citation{uart}
+\citation{spi}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Relative position of the neopixel rings\relax }}{16}{figure.caption.21}}
 \newlabel{fig:neopixel_ring_dimension}{{2.5}{16}{Relative position of the neopixel rings\relax }{figure.caption.21}{}}
 \newlabel{fig:neopixel_ring_dimension@cref}{{[figure][5][2]2.5}{16}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Illuminance of the neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.\relax }}{16}{table.caption.22}}
-\newlabel{table:neopixel_illuminance}{{2.4}{16}{Illuminance of the neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.\relax }{table.caption.22}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Illuminance of the Blue led of neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.\relax }}{16}{table.caption.22}}
+\newlabel{table:neopixel_illuminance}{{2.4}{16}{Illuminance of the Blue led of neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.\relax }{table.caption.22}{}}
 \newlabel{table:neopixel_illuminance@cref}{{[table][4][2]2.4}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Communication protocols}{16}{section.2.4}}
+\newlabel{com_protocols}{{2.4}{16}{Communication protocols}{section.2.4}{}}
+\newlabel{com_protocols@cref}{{[section][4][2]2.4}{16}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Serial Peripheral Interface (SPI) Bus}{16}{subsection.2.4.1}}
+\citation{uart}
 \citation{i2c}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Wire connection setting for SPI communication between a master and a slave device\relax }}{17}{figure.caption.23}}
 \newlabel{fig:spi_coms}{{2.6}{17}{Wire connection setting for SPI communication between a master and a slave device\relax }{figure.caption.23}{}}
 \newlabel{fig:spi_coms@cref}{{[figure][6][2]2.6}{17}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Universal asynchronous receiver-transmitter (UART)}{17}{subsection.2.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{17}{figure.caption.24}}
-\newlabel{fig:uart_coms}{{2.7}{17}{Wire connection setting for UART communication between two devices\relax }{figure.caption.24}{}}
-\newlabel{fig:uart_coms@cref}{{[figure][7][2]2.7}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{18}{subsection.2.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{17}{subsection.2.4.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{18}{figure.caption.24}}
+\newlabel{fig:uart_coms}{{2.7}{18}{Wire connection setting for UART communication between two devices\relax }{figure.caption.24}{}}
+\newlabel{fig:uart_coms@cref}{{[figure][7][2]2.7}{18}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Wire connection setting for I2C communication between two masters and two slaves devices\relax }}{18}{figure.caption.25}}
 \newlabel{fig:i2c_coms}{{2.8}{18}{Wire connection setting for I2C communication between two masters and two slaves devices\relax }{figure.caption.25}{}}
 \newlabel{fig:i2c_coms@cref}{{[figure][8][2]2.8}{18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{18}{subsection.2.4.4}}
-\citation{pcb_design}
-\citation{pcb_design}
-\citation{pcb_track_width}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{19}{subsection.2.4.4}}
 \newlabel{fig:neopixel_nrz}{{2.9a}{19}{first caption}{figure.caption.26}{}}
 \newlabel{fig:neopixel_nrz@cref}{{[subfigure][1][2,9]2.9a}{19}}
 \newlabel{sub@fig:neopixel_nrz}{{a}{19}{first caption}{figure.caption.26}{}}
@@ -141,30 +140,33 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Illustration of the neopixels serial interface\relax }}{19}{figure.caption.26}}
 \newlabel{fig:neopixel_protocol}{{2.9}{19}{Illustration of the neopixels serial interface\relax }{figure.caption.26}{}}
 \newlabel{fig:neopixel_protocol@cref}{{[figure][9][2]2.9}{19}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}PCB Board Design}{19}{section.2.5}}
-\newlabel{PCB_requirement}{{2.5}{19}{PCB Board Design}{section.2.5}{}}
-\newlabel{PCB_requirement@cref}{{[section][5][2]2.5}{19}}
-\citation{c_programming}
+\citation{pcb_design}
+\citation{pcb_design}
+\citation{pcb_track_width}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}PCB Board Design}{20}{section.2.5}}
+\newlabel{PCB_requirement}{{2.5}{20}{PCB Board Design}{section.2.5}{}}
+\newlabel{PCB_requirement@cref}{{[section][5][2]2.5}{20}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }}{20}{figure.caption.27}}
 \newlabel{fig:pcb_design_flow}{{2.10}{20}{Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }{figure.caption.27}{}}
 \newlabel{fig:pcb_design_flow@cref}{{[figure][10][2]2.10}{20}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.6}Programming Languages}{20}{section.2.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}C}{20}{subsection.2.6.1}}
+\citation{c_programming}
 \citation{atollic}
 \citation{nextion}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}C}{21}{subsection.2.6.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}C++}{21}{subsection.2.6.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.7}Software Tools and Libraries}{21}{section.2.7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}Atollic TrueSTUDIO for ARM}{21}{subsection.2.7.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{21}{subsection.2.7.2}}
-\newlabel{nextion}{{2.7.2}{21}{Nextion IDE}{subsection.2.7.2}{}}
-\newlabel{nextion@cref}{{[subsection][2][2,7]2.7.2}{21}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{22}{subsection.2.7.2}}
+\newlabel{nextion}{{2.7.2}{22}{Nextion IDE}{subsection.2.7.2}{}}
+\newlabel{nextion@cref}{{[subsection][2][2,7]2.7.2}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7.3}MIT App Inventor 2}{22}{subsection.2.7.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.8}Design Models}{22}{section.2.8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.8.1}V-Model}{22}{subsection.2.8.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces V-Model basic template used for system definition and testing\relax }}{22}{figure.caption.28}}
 \newlabel{fig:v_model}{{2.11}{22}{V-Model basic template used for system definition and testing\relax }{figure.caption.28}{}}
 \newlabel{fig:v_model@cref}{{[figure][11][2]2.11}{22}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Spiral Model}{22}{subsection.2.8.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}Spiral Model}{23}{subsection.2.8.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Spiral-Model basic template used for system refinement\relax }}{23}{figure.caption.29}}
 \newlabel{fig:spiral_model}{{2.12}{23}{Spiral-Model basic template used for system refinement\relax }{figure.caption.29}{}}
 \newlabel{fig:spiral_model@cref}{{[figure][12][2]2.12}{23}}

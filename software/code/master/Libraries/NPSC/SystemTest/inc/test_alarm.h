@@ -18,7 +18,7 @@
 #define NPSC_SYSTEMTEST_ALARM_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include "../../UnitTest/inc/assertion.h"
+#include "assertion.h"
 #include "alarm.h"
 
 
@@ -37,8 +37,8 @@
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
-bool test_alarmAddress(void);
-bool test_alarmSaveLoad(void);
+bool test_alarm_address(void);
+bool test_alarm_save_load(void);
 #endif /* NPSC_SYSTEMTEST_ALARM_H_ */
 
 /**

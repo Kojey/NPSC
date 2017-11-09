@@ -121,6 +121,8 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 \Cref{table:micro} provides the difference between the microcontrollers selected, this table was use to make the final decision on the microcontroller selection.
 \begin{table}[h!]
 \centering
+\caption{Comparison between specifications of the Arduino Due \cite{arduino}, the Intel Edison \cite{intel}, the Raspverry Pi Zero \cite{raspberry}, and the STM32F407VGT6\cite{stm}}
+\label{table:micro}
 \begin{tabular}{cp{5em}p{8em}p{5em}c}
 \hline
 \hline
@@ -135,8 +137,6 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 \hline
 \hline
 \end{tabular}
-\caption{Comparison between specifications of the Arduino Due \cite{arduino}, the Intel Edison \cite{intel}, the Raspverry Pi Zero \cite{raspberry}, and the STM32F407VGT6\cite{stm}}
-\label{table:micro}
 \end{table}
 
 \subsection{Storage}
@@ -150,6 +150,8 @@ Wifi modules are inexpensive; however, smartphones communicating with the NPSC w
 
 \begin{table}[h!]
 \centering
+\caption{Comparison between the constraints and the convenience of Wifi, M2M, Mesh network, and Bluetooth}
+\label{table:wireless}
 \begin{tabular}{ccc}
 \hline
 \hline
@@ -162,8 +164,6 @@ Wifi modules are inexpensive; however, smartphones communicating with the NPSC w
 \hline
 \hline
 \end{tabular}
-\caption{Comparison between the constraints and the convenience of Wifi, M2M, Mesh network, and Bluetooth}
-\label{table:wireless}
 \end{table}
 
 \subsection{Touch screen}
@@ -189,8 +189,11 @@ The NPSC need to have an onboard controller. This controller must be user-friend
 \subsection{Neopixels}\label{neopixels}
 The neopixel is a programmable light source using an MCU to control an RGB or RGBW LEDs. Each colour is capable of producing 255 brightness levels resulting in 16777216 different RGB colours. 
 The light characteristics of the neopixel of choice are presented in \cref{table:neopixel_specs}. The light requirement of the NPSC is the emmission of light of $460nm$ (blue light) at an illuminance of $30lux$ minimum.
+
 \begin{table}[h!]
 \centering
+\caption{Light specification of the WS2812 neopixels}
+\label{table:neopixel_specs}
 \begin{tabular}{cp{6em}p{6em}p{6em}c}
 \hline
 \hline
@@ -202,9 +205,8 @@ Blue & 10R1MUX & 465-467 & 180-200 & 20\\
 \hline
 \hline
 \end{tabular}
-\caption{Light specification of the WS2812 neopixels}
-\label{table:neopixel_specs}
 \end{table}
+
 The illuminance of a light source at a point is given by: 
 \begin{equation}\label{eq:illuminance}
 E_{v(lx)}=\frac{I_{v(cd)}}{d_m^2}
@@ -226,8 +228,11 @@ Using the dimension from \cref{fig:neopixel_ring_dimension} and the lowest inten
 E_{v_{total}} = N*Ev*(\cos(\theta_1)+\cos(\theta_2)+\cos(\theta_3))
 \end{equation}
 The result of the calculation are tabulated in the \cref{table:neopixel_illuminance}. The NPSC will not meet the light requirement if the it is placed more than one meter away from the subject.
+
 \begin{table}[h!]
 \centering
+\caption{Illuminance of the Blue led of neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.}
+\label{table:neopixel_illuminance}
 \begin{tabular}{ccc}
 \hline
 \hline
@@ -248,13 +253,11 @@ The result of the calculation are tabulated in the \cref{table:neopixel_illumina
 \hline
 \hline
 \end{tabular}
-\caption{Illuminance of the neopixel ring for distance ranging from 10cm to 110cm. Result with no angle consieration represent all neopixels in one point while results with angle consideration take into account the relative position of the each pixels to the subject location.}
-\label{table:neopixel_illuminance}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Communication protocols
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Communication protocols}
+\section{Communication protocols}\label{com_protocols}
 The NPSC requires different integrated circuits using various communication protocols, below is a brief on the use of the protocol required.
 
 \subsection{Serial Peripheral Interface (SPI) Bus}

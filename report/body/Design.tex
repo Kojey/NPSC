@@ -41,12 +41,22 @@ This section provides more detailed explanation of the system design requirement
 \end{itemize}
 The following sections explain the design of the main modules of the NPSC created to meet the system and sub-system requirements.
 
+
+\subsection{External storage}
+The storage's purpose is to store useful information such as the alarm parameters and the user's preferences. Certain applications require storage capability, therefore there is a restricted access to the EEPROM memory. The memory allocation is detailed in \cref{fig:eeprom}.
+\begin{figure}[ht]
+\centering
+\includegraphics[scale=0.08]{eeprom.jpg}
+\caption{EEPROM memory allocation. The first section of the memory is allocated to the alarms, the second to the ringtones and the third section is allocated to the user parameters.}
+\label{fig:eeprom}
+\end{figure}
+
 \subsection{Inputs/Outputs instruction design}
 This section focuses on the design of the user inputs capture and interpretations. \Cref{fig:io_instruction} shows the communication between the microcontroller and the inputs, and the different step through which information sent by these inputs are analysed. 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.15]{io_instruction.jpg}
-\caption{}
+\caption{Strutural diagram of the hardware and software modules of the input and output instructions.}
 \label{fig:io_instruction}
 \end{figure}
 
@@ -67,6 +77,8 @@ The instructions of the NPSC are listed in \cref{table:instruction_set}. The ins
 \begin{landscape}
 \begin{table}[t!]
 \centering
+\caption{Instruction set used for the control of the NPSC by the users. Each instruction has a category, a name and an opcode. \textbf{-} in the table indicates data that will not be used by the IFDE. \textbf{*} indicates character data.}
+\label{table:instruction_set}
 \begin{tabular}{cccccccccc}
 \hline
 \hline
@@ -88,26 +100,18 @@ The instructions of the NPSC are listed in \cref{table:instruction_set}. The ins
 \bottomrule
 \hline
 \end{tabular}
-\caption{Instruction set used for the control of the NPSC by the users. Each instruction has a category, a name and an opcode. \textbf{-} in the table indicates data that will not be used by the IFDE. \textbf{*} indicates character data.}
-\label{table:instruction_set}
 \end{table}
 \end{landscape}
 
-\subsection{External storage}
-The storage's purpose is to store useful information such as the alarm parameters and the user's preferences. Certain application require storage capability, therefore there is a restricted access to the EEPROM memory. The memory allocation is detailed in \cref{fig:eeprom}.
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.08]{eeprom.jpg}
-\caption{}
-\label{fig:eeprom}
-\end{figure}
+\subsection{Input devices}
+HOW ARE THE USER APPLICATIONS DESIGNED?
 
 \subsection{Alarm and Clock}
 The structural diagram of this module is shown in \cref{fig:alarm_clock}. The microcontroller used by the NPSC has a built-in RTC with two alarms (alarm A and alarm B), this module makes use of an Alarm manager (application software) which control the EEPROM, the external and internal RTCs and the two alarms.
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.11]{alarm_clock.jpg}
-\caption{}
+\caption{Structural diagram of the hardware and software module used in the alarm-clock application.}
 \label{fig:alarm_clock}
 \end{figure}
 Alarm A and B are triggered based on the comparison of their time with the internal RTC of the STM. As for the internal (built-in) RTC, it relies on the crystal oscillator of the STM to update its time. This RTC is power dependent and loses its time when the STM is powered off. To prevent manual update of the time everytime the STM is powered on, an external clock module must be used. For this prototype, the DS1307 RTC is used as the external clock module. This RTC is not very accurate, in many applications, it has lost few minutes of accuracy every day. This prototype is a proof of concept and is focused on the light requirements and not the accuracy of the clock, therefore, the DS1307 will be used. Later versions of the NPSC could use more accuracy clock module such as a GPS or more accurate RTC.  \\
@@ -118,7 +122,7 @@ The visual outputs are all modules related to the control and emission of light 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.12]{visual_outputs.jpg}
-\caption{}
+\caption{Structural diagram of the hardware and software used for the visual outputs.}
 \label{fig:visual_outputs}
 \end{figure}
 There are two types of hardware modules, the first type (type 1) of modules is a series of neopixels connected in cascade controlled by Pulse Width Modulation (PWM), the second type (type 2) of modules are controlled using a Serial Peripheral Interface (SPI) bus. All type 1 modules inherit the ability to be connected in cascade from the neopixels; however, the ring is the only light source used to affect the human sleep-wake cycle, it is essential that its control is separated from another type 1 module. The two other type 1 is designed to display time and date information, therefore, they can be combined as one module. The only type 2 module in the visual outputs is the Date PCB, this PCB is designed to display the date, the month and the room temperature.\\
@@ -141,7 +145,7 @@ The type 1 modules are made up of series neopixels connected in a daisy chain fa
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.5]{neopixel_sch.png}
-\caption{}
+\caption{Schematics of one neopixels receiving data from DIN and transmitting data to DOUT.}
 \label{fig:neopixel_sch}
 \end{figure}
 Although all type 1 module uses the sample principle, each module has more specific features in its design.
@@ -163,6 +167,6 @@ This PCB uses six seven segments display to display the date, the month and the 
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.1]{date.jpg}
-\caption{}
+\caption{Simplified schematic of the Date and Temperature circuit.}
 \label{fig:date}
 \end{figure}

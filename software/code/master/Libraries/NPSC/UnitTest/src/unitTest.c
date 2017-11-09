@@ -62,7 +62,7 @@ bool unitTest_all(void){
 	bool result = true;
 	result &= test_rtc_clock();
 	result &= test_queue_create();
-	result &= test_queue_enque();
+	result &= test_queue_enqueue();
 	result &= test_queue_dequeue();
 /*	result &= test_eeprom_write_read();
 	result &= test_eeprom_write4B_read4B();
