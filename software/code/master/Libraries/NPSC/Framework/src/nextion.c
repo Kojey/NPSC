@@ -141,6 +141,26 @@ void DMA1_Stream5_IRQHandler(void) {
 
         nextion_instruction = true;
 
+////    	if(nextion_instruction){
+//    	    /* Extract all instruction from DMA */
+//    	    for(uint8_t index=0; index<DMA_MAX_INSTRUCTION; ++index){
+//    	    	/* Check for validity of instruction  */
+//    	    	if(instruction_valid(DMA_RX_Buffer[index*INSTRUCTION_SIZE])
+//    	    			&& !instruction_ack(&DMA_RX_Buffer[index*INSTRUCTION_SIZE])){
+//    				InstructionTypeDef newInstruction;
+//    				for(int i=0; i<INSTRUCTION_SIZE; i++){
+//    					newInstruction.instrution[i]=DMA_RX_Buffer[index*INSTRUCTION_SIZE+i];
+//    					// clear DMA_RX_Buffer
+//    					DMA_RX_Buffer[index*INSTRUCTION_SIZE+i]=0;
+//    				}
+//    				newInstruction.excecuted=false;
+//    				// add it to the queue
+//    				InstructionQueue_enqueue(instruction_queue,&newInstruction);
+//    	    	}
+//    	    }
+////    	    nextion_instruction= false;
+////    	}
+
         /*Prepare DMA for next transfer
 		Important! DMA stream won't start if all flags are not cleared first */
         DMA1->HIFCR = DMA_FLAG_DMEIF5 | DMA_FLAG_FEIF5 | DMA_FLAG_HTIF5 | DMA_FLAG_TCIF5 | DMA_FLAG_TEIF5;

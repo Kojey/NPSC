@@ -54,6 +54,7 @@ void unitTest_result(bool (*function)(void)){
 	// Red: ERROR
 	(*function)?STM_EVAL_LEDOn(LED6):STM_EVAL_LEDOn(LED5);
 	(*function)?neopixel_setAllPixelRGB(0,0,255):neopixel_setAllPixelRGB(255,0,0);
+	STM_EVAL_LEDOff(LED3);
 }
 /**
  *

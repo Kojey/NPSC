@@ -20,6 +20,7 @@
 */
 int main(void)
 {
+	unitTest_result(test_rtc_clock);
 	framework_init();
 	application_init();
 	while(1)

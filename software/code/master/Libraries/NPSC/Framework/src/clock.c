@@ -352,7 +352,7 @@ void RTC_Alarm_IRQHandler(void){
 	EXTI_ClearITPendingBit(EXTI_Line17);		// Clear External Interrupt pending bit
 
 	/* TODO What need to be done when Alarm event occurs*/
-	neopixel_setAllPixelRGB(255,255,255);
+	neopixel_setAllPixelRGB(0,0,255);
 }
 /**
  * @}
