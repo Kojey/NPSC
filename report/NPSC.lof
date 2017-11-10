@@ -36,15 +36,19 @@
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Flow diagram of the input device instruction update. Both Nextion screen and Bluetooth application uses the same flow to update the instruction queue.\relax }}{52}{figure.caption.72}
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Flow diagram of the IFDE process.\relax }}{53}{figure.caption.74}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the ystem. On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{56}{figure.caption.75}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{56}{figure.caption.75}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Power supply used in the Ring experiments.\relax }}{59}{figure.caption.79}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.80}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.81}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Setup of the temperature rise experiment.\relax }}{61}{figure.caption.82}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Illuminance test setup.\relax }}{62}{figure.caption.83}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{68}{figure.caption.80}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{69}{figure.caption.81}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{70}{figure.caption.82}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{71}{figure.caption.83}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{71}{figure.caption.85}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{72}{figure.caption.86}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{73}{figure.caption.87}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{74}{figure.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

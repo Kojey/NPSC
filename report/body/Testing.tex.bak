@@ -1,4 +1,4 @@
-\chapter{Testing}
+\chapter{Testing} 
 This section provides information on the software and hardware tests of the NPSC. TIt starts by providing an overview of the model used to test the NPSC. It continues by providying all unit tests and system tests performed ont the NPSC. Lastly it explains the current, temperature and light experiments done on the Ring.
    
    
@@ -65,8 +65,9 @@ Software unit tests could not be run on all hardware modules. It would have been
 \begin{tabular}{ccp{18em}}
 \hline
 \hline
+\toprule
 \textbf{Hardware} & \textbf{Unit test} & \textbf{Description}\\
-\hline
+\bottomrule
 \toprule
 \multirow{6}{*}{internal RTC} & test\_clock\_date & Assert that the date saved is the same as the date loaded from the internal RTC\\
 & test\_clock\_time & Assert that the time saved is the same as the time loaded from the internal RTC\\ 
@@ -81,6 +82,7 @@ Software unit tests could not be run on all hardware modules. It would have been
 \multirow{9}{*}{eeprom} & test\_eeprom\_write\_read & Assert that the byte written to the eeprom is the same as the byte read at the written address.\\
 & test\_eeprom\_write4B\_read4B & Assert that the a uint32\_t written to the eeprom is the same as the uint32\_t read at the written address.\\
 & test\_eeprom\_writeNB\_readNB & Assert that the N bytes written to the eeprom are the same as the N bytes read at the written address.\\
+\bottomrule
 \hline
 \hline
 \end{tabular}
@@ -90,22 +92,21 @@ Software unit tests could not be run on all hardware modules. It would have been
 % SECTION: SystemTests
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Integration tests}
-\Cref{table:integrationTest} provides a description of all unit test performed on the hardware modules. 
-
+The tests performed on the applications are more complex than the unit tests. It is important that the unit tests are run prior this tests as the applications rely on the framework. The description of all integration tests performed on the applications are shown in \cref{table:integrationTest}. 
 
 \begin{table}[h!]
 \centering
-\caption{Description of the files at the Utilities level.}
+\caption{Integration test performed at the application level.}
 \label{table:integrationTest}
-\hline
-\hline
-\textbf{Application} & \textbf{Test} & \textbf{Description}\\
+\begin{tabular}{ccp{18em}}
 \hline
 \toprule
-\multirow{6}{*}{alarm} & test\_alarm\_address & Assert that the date saved is the same as the date loaded from the internal RTC\\
-& test\_clock\_time & Assert that the time saved is the same as the time loaded from the internal RTC\\ 
-& test\_clock\_alarm & Assert that the alarm saved is the same as the alarm loaded from the internal RTC
-\hline
+\textbf{Application} & \textbf{Integration test} & \textbf{Description}\\
+\bottomrule
+\toprule
+\multirow{6}{*}{alarm} & test\_alarm\_address & Assert that the address of all type of the Alarm structure are offset by the correct memory size.\\
+& test\_alarm\_save\_load & Assert that the alarm save in the EEPROM is the one loaded from the EEPROM\\ 
+\bottomrule
 \hline
 \end{tabular}
 \end{table}
@@ -114,9 +115,7 @@ Software unit tests could not be run on all hardware modules. It would have been
 % SECTION: Ring
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Neopixel Ring}
-for each test:\\
-** assumption\\
-** how was each test performed in details, show pictures here
+The Ring was designed to meet specific
 \subsection{Current test}
 \subsection{Temperature test}
 \subsection{Illuminance test}

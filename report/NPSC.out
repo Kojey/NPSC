@@ -81,22 +81,21 @@
 \BOOKMARK [2][-]{subsection.6.3.2}{Alarm application}{section.6.3}% 81
 \BOOKMARK [2][-]{subsection.6.3.3}{Instruction application}{section.6.3}% 82
 \BOOKMARK [1][-]{section.6.4}{Main}{chapter.6}% 83
-\BOOKMARK [0][-]{chapter.7}{Testing}{}% 84
+\BOOKMARK [0][-]{chapter.7}{Testing and Experimentation}{}% 84
 \BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 85
 \BOOKMARK [1][-]{section.7.2}{Hardware module tests}{chapter.7}% 86
 \BOOKMARK [1][-]{section.7.3}{Unit tests}{chapter.7}% 87
 \BOOKMARK [1][-]{section.7.4}{Integration tests}{chapter.7}% 88
 \BOOKMARK [1][-]{section.7.5}{Neopixel Ring}{chapter.7}% 89
-\BOOKMARK [2][-]{subsection.7.5.1}{Current test}{section.7.5}% 90
-\BOOKMARK [2][-]{subsection.7.5.2}{Temperature test}{section.7.5}% 91
-\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance test}{section.7.5}% 92
-\BOOKMARK [0][-]{chapter.8}{Results}{}% 93
+\BOOKMARK [2][-]{subsection.7.5.1}{Current experiment}{section.7.5}% 90
+\BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 91
+\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 92
+\BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 93
 \BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 94
 \BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 95
-\BOOKMARK [0][-]{chapter.9}{Discussion}{}% 96
-\BOOKMARK [0][-]{chapter.10}{Conclusions}{}% 97
-\BOOKMARK [0][-]{chapter.11}{Recommendations}{}% 98
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 99
-\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 100
-\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 101
-\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 102
+\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 96
+\BOOKMARK [0][-]{chapter.10}{Recommendations}{}% 97
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 98
+\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 99
+\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 100
+\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 101

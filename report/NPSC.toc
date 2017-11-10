@@ -113,22 +113,21 @@
 \contentsline {subsubsection}{Device instruction update}{52}{section*.71}
 \contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{53}{section*.73}
 \contentsline {section}{\numberline {6.4}Main}{54}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing}{55}{chapter.7}
+\contentsline {chapter}{\numberline {7}Testing and Experimentation}{55}{chapter.7}
 \contentsline {section}{\numberline {7.1}Overview}{55}{section.7.1}
 \contentsline {section}{\numberline {7.2}Hardware module tests}{57}{section.7.2}
 \contentsline {section}{\numberline {7.3}Unit tests}{57}{section.7.3}
 \contentsline {section}{\numberline {7.4}Integration tests}{57}{section.7.4}
 \contentsline {section}{\numberline {7.5}Neopixel Ring}{57}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Current test}{58}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Temperature test}{58}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Illuminance test}{58}{subsection.7.5.3}
-\contentsline {chapter}{\numberline {8}Results}{59}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{59}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{59}{section.8.2}
-\contentsline {chapter}{\numberline {9}Discussion}{60}{chapter.9}
-\contentsline {chapter}{\numberline {10}Conclusions}{61}{chapter.10}
-\contentsline {chapter}{\numberline {11}Recommendations}{62}{chapter.11}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{67}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{72}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{73}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{73}{section.C.1}
+\contentsline {subsection}{\numberline {7.5.1}Current experiment}{58}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{59}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{61}{subsection.7.5.3}
+\contentsline {chapter}{\numberline {8}Results and Discussions}{63}{chapter.8}
+\contentsline {section}{\numberline {8.1}Simulation Results}{63}{section.8.1}
+\contentsline {section}{\numberline {8.2}Experimental Results}{63}{section.8.2}
+\contentsline {chapter}{\numberline {9}Conclusions}{64}{chapter.9}
+\contentsline {chapter}{\numberline {10}Recommendations}{65}{chapter.10}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{70}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{75}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{76}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{76}{section.C.1}
