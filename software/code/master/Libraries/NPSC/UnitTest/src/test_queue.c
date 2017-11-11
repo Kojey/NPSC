@@ -15,7 +15,7 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
-#include "../../UnitTest/inc/test_queue.h"
+#include "test_queue.h"
 
 /** @addtogroup NPSC
   * @{

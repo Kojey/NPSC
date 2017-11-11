@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  10 NOV 2017 19:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  11 NOV 2017 01:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**current_brightness_180
-(./current_brightness_180.tex
+**illuminance_angle
+(./illuminance_angle.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/minimal.cls
@@ -75,8 +75,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen111
 \Gm@dimlist=\toks15
 )
-No file current_brightness_180.aux.
-\openout1 = `current_brightness_180.aux'.
+No file illuminance_angle.aux.
+\openout1 = `illuminance_angle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -181,25 +181,25 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<current_brightness_180-inc.pdf, id=1, 578.16pt x 433.62pt>
-File: current_brightness_180-inc.pdf Graphic file (type pdf)
+<illuminance_angle-inc.pdf, id=1, 578.16pt x 433.62pt>
+File: illuminance_angle-inc.pdf Graphic file (type pdf)
 
-<use current_brightness_180-inc.pdf>
-Package pdftex.def Info: current_brightness_180-inc.pdf used on input line 12.
+<use illuminance_angle-inc.pdf>
+Package pdftex.def Info: illuminance_angle-inc.pdf used on input line 12.
 (pdftex.def)             Requested size: 578.15858pt x 433.61894pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./current_brightness_18
-0-inc.pdf>] (./current_brightness_180.aux) ) 
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./illuminance_angle-inc
+.pdf>] (./illuminance_angle.aux) ) 
 Here is how much of TeX's memory you used:
- 1802 strings out of 493029
- 27036 string characters out of 6136234
+ 1804 strings out of 493029
+ 26995 string characters out of 6136234
  91564 words of memory out of 5000000
- 5349 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 5350 multiletter control sequences out of 15000+600000
+ 3938 words of font info for 15 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,31p,307b,143s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on current_brightness_180.pdf (1 page, 52310 bytes).
+ 38i,5n,31p,302b,143s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb>
+Output written on illuminance_angle.pdf (1 page, 33161 bytes).
 PDF statistics:
  16 PDF objects out of 1000 (max. 8388607)
  9 compressed objects within 1 object stream

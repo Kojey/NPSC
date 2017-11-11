@@ -35,15 +35,15 @@ To ensure that the hardware were sending and receiving the right information, th
 		\hline
 		\hline
 		\toprule
-		DS1307 & I2C & \\ 
+		DS1307 & I2C & rtc\_set\_seconds(10). Send the value 10 at address 0x00 of the RTC.\\ 
 		\midrule
-		25LC640 & SPI & \\ 
+		25LC640 & SPI & eeprom\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00.\\ 
 		\midrule
-		HC-06 & UART & \\ 
+		HC-06 & UART & bluetooth\_send(10). Send UART data of write type to send the value 10.\\ 
 		\midrule
-		Nextion & UART & \\ 
+		NX4024T032\_001 & UART & nextion\_send(10). Send UART data of write type to send the value 10.\\ 
 		\midrule
-		MAX & SPI & \\
+		MAX7221 & SPI &  date\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00\\
 		\hline
 		\hline
 	\end{tabular}
@@ -121,7 +121,7 @@ The Ring was designed so that it emits light with a wavelength of $460\pm 10nm$ 
 This experiment was done to verify that the board can draw $12A$ without blowing up (not kidding) and to find a mathematical model between the neopixel brightness and the board current consumption.\\
 The first part of the consisted of finding the current drawn by a single neopixel based on its colour and brightness. The brightness levels are from 0\% to 100\% in steps of 10\%, so there were 11 brightness levels in total. The 0\% brightness level is defined as the idle state of the neopixel as all pixels are not turned on.\\
 The second part of this test consisted of measuring the current consumption of the Ring with all 180 neopixels. Firstly the idle current of the board was measure (current when the board is powered and no data is sent). Secondly, the current per brightness level was measured.\\
-In this experiment and all described below, a power supply capable of supplying a current of $10A$ was used ().
+In this experiment and all described below, the \textit{TOPWARD, DC power supply 33010D} capable of supplying a current of $10A$ was used.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.08]{power_supply.jpg}

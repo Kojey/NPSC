@@ -20,7 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "utils.h"
 #include "queue.h"
-#include "../../UnitTest/inc/assertion.h"
+#include "assertion.h"
 
 
 /** @addtogroup NPSC

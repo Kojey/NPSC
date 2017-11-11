@@ -20,7 +20,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "clock.h"
-#include "../../UnitTest/inc/assertion.h"
+#include "assertion.h"
 
 
 /** @addtogroup NPSC

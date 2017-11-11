@@ -8,6 +8,5 @@ var dir_00f75c91604b566b9ea20935718ed02f =
     [ "neopixel.c", "d3/d05/neopixel_8c.html", "d3/d05/neopixel_8c" ],
     [ "nextion.c", "dc/da8/nextion_8c.html", "dc/da8/nextion_8c" ],
     [ "rtc.c", "d4/dcc/rtc_8c.html", "d4/dcc/rtc_8c" ],
-    [ "temperature.c", "dd/d33/temperature_8c.html", "dd/d33/temperature_8c" ],
-    [ "utils.c", "d3/d91/utils_8c.html", "d3/d91/utils_8c" ]
+    [ "temperature.c", "dd/d33/temperature_8c.html", "dd/d33/temperature_8c" ]
 ];

@@ -1,5 +1,5 @@
 var test__alarm_8c =
 [
-    [ "test_alarmAddress", "d2/dfc/group__test__alarm.html#ga0ddb633e8e91139a0810d5c3c577f36b", null ],
-    [ "test_alarmSaveLoad", "d2/dfc/group__test__alarm.html#gaa8010d4ccf1a098a7d93dc9802918fac", null ]
+    [ "test_alarm_address", "d2/dfc/group__test__alarm.html#gaef800b6a4ef3459f8b8bb8d074ea4a67", null ],
+    [ "test_alarm_save_load", "d2/dfc/group__test__alarm.html#ga15231e7143f3a28f493b234876a6fa63", null ]
 ];

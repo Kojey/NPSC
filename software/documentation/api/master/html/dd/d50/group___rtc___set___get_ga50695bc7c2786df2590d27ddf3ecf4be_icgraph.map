@@ -3,5 +3,5 @@
 <area shape="rect" id="node3" href="$dc/d0a/group___rtc___clock.html#ga5ecf74bd6564eadf1452639acadd1638" title="Read clock information. " alt="" coords="140,56,271,83"/>
 <area shape="rect" id="node4" href="$df/d29/group___application.html#ga6a899680e4f263fdb428d7bd1ee5aa60" title="Synchronize internal alarm to external alarm. " alt="" coords="319,31,449,57"/>
 <area shape="rect" id="node5" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="332,81,436,108"/>
-<area shape="rect" id="node6" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="497,81,580,108"/>
+<area shape="rect" id="node6" href="$dc/d04/group__rtc__test.html#ga8701d9753a9ea81958b124cb1348652f" title="Turn on LEDs based on test results. " alt="" coords="497,81,605,108"/>
 </map>

@@ -117,12 +117,14 @@ $(document).ready(function(){initNavTree('df/dc5/nextion_8h.html','../../');});
 <p>This file contains all the configuration prototypes used by the nextion firmware.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="../../d5/d60/utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d8/d38/queue_8h_source.html">queue.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for nextion.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d21/nextion_8h__incl.png" border="0" usemap="#_2media_2kojey_2_d_a_t_a_2undergrad_2eee4022_s-2017_2_n_p_s_c_2software_2code_2master_2_libraries_2_n_p_s_c_2_framework_2inc_2nextion_8h" alt=""/></div>
 <map name="_2media_2kojey_2_d_a_t_a_2undergrad_2eee4022_s-2017_2_n_p_s_c_2software_2code_2master_2_libraries_2_n_p_s_c_2_framework_2inc_2nextion_8h" id="_2media_2kojey_2_d_a_t_a_2undergrad_2eee4022_s-2017_2_n_p_s_c_2software_2code_2master_2_libraries_2_n_p_s_c_2_framework_2inc_2nextion_8h">
-<area shape="rect" id="node2" href="../../d5/d60/utils_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="318,124,375,151"/>
+<area shape="rect" id="node2" href="../../d5/d60/utils_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="318,199,375,225"/>
+<area shape="rect" id="node11" href="../../d8/d38/queue_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="349,124,417,151"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -197,6 +199,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../.
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dcd/group__nextion___init.html#gac201b60d58b0eba2ce0b55710eb3c4d0">DMA1_Stream5_IRQHandler</a> (void)</td></tr>
 <tr class="memdesc:gac201b60d58b0eba2ce0b55710eb3c4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global interrupt handler for DMA1 stream5. <br /></td></tr>
 <tr class="separator:gac201b60d58b0eba2ce0b55710eb3c4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69004bdb11e2a02024fa837b65fad3b5"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>nextion_instructionUpdate</b> (void)</td></tr>
+<tr class="separator:ga69004bdb11e2a02024fa837b65fad3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae98be4e53e6ea89bf691feafaa79c18e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d2e/group__nextion___trans.html#gae98be4e53e6ea89bf691feafaa79c18e">nextion_send</a> (uint8_t *data)</td></tr>
 <tr class="memdesc:gae98be4e53e6ea89bf691feafaa79c18e"><td class="mdescLeft">&#160;</td><td class="mdescRight">send string to the hc-06  <a href="../../d5/d2e/group__nextion___trans.html#gae98be4e53e6ea89bf691feafaa79c18e">More...</a><br /></td></tr>
 <tr class="separator:gae98be4e53e6ea89bf691feafaa79c18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,6 +214,9 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nextion_write</b></
 <tr class="memitem:ga6ddd60ef571fe564fb19fb9d9c1bd064"><td class="memItemLeft" align="right" valign="top">
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nextion_read</b></td></tr>
 <tr class="separator:ga6ddd60ef571fe564fb19fb9d9c1bd064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fa740c6f4ee64a69e0b42c00d2a8ad3"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>nextion_instruction</b></td></tr>
+<tr class="separator:ga0fa740c6f4ee64a69e0b42c00d2a8ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains all the configuration prototypes used by the nextion firmware. </p>

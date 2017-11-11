@@ -10,6 +10,6 @@
 <area shape="rect" id="node4" href="$dc/d0a/group___rtc___clock.html#ga5ecf74bd6564eadf1452639acadd1638" title="Read clock information. " alt="" coords="284,157,415,184"/>
 <area shape="rect" id="node5" href="$df/d29/group___application.html#ga6a899680e4f263fdb428d7bd1ee5aa60" title="Synchronize internal alarm to external alarm. " alt="" coords="463,132,593,159"/>
 <area shape="rect" id="node6" href="$dc/d04/group__rtc__test.html#gaa82ec9774d6d5c9e81b9f983e44ffff5" title="Unit test: Different RTC_ClockTypeDef are written and read from the external RTC to check that the ti..." alt="" coords="476,183,580,209"/>
-<area shape="rect" id="node7" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="641,183,724,209"/>
+<area shape="rect" id="node7" href="$dc/d04/group__rtc__test.html#ga8701d9753a9ea81958b124cb1348652f" title="Turn on LEDs based on test results. " alt="" coords="641,183,749,209"/>
 <area shape="rect" id="node11" href="$dc/d0a/group___rtc___clock.html#ga7daa49ce267f0b12a5a60b9272902f77" title="Read the date information. " alt="" coords="287,233,412,260"/>
 </map>

@@ -1,4 +1,4 @@
 <map id="clock_setTime" name="clock_setTime">
 <area shape="rect" id="node2" href="$de/deb/group__clock__test.html#gaad71d331736202cb1f4e4611adc4017e" title="Unit test for time save and load. " alt="" coords="160,5,275,32"/>
-<area shape="rect" id="node3" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="323,5,405,32"/>
+<area shape="rect" id="node3" href="$dc/d04/group__rtc__test.html#ga8701d9753a9ea81958b124cb1348652f" title="Turn on LEDs based on test results. " alt="" coords="323,5,431,32"/>
 </map>

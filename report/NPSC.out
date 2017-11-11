@@ -91,11 +91,19 @@
 \BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 91
 \BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 92
 \BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 93
-\BOOKMARK [1][-]{section.8.1}{Simulation Results}{chapter.8}% 94
-\BOOKMARK [1][-]{section.8.2}{Experimental Results}{chapter.8}% 95
-\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 96
-\BOOKMARK [0][-]{chapter.10}{Recommendations}{}% 97
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 98
-\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 99
-\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 100
-\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 101
+\BOOKMARK [1][-]{section.8.1}{Software Tests}{chapter.8}% 94
+\BOOKMARK [2][-]{subsection.8.1.1}{Tests outcome}{section.8.1}% 95
+\BOOKMARK [2][-]{subsection.8.1.2}{Insight on the software tests}{section.8.1}% 96
+\BOOKMARK [1][-]{section.8.2}{Hardware module tests}{chapter.8}% 97
+\BOOKMARK [2][-]{subsection.8.2.1}{Test results}{section.8.2}% 98
+\BOOKMARK [2][-]{subsection.8.2.2}{Discussions}{section.8.2}% 99
+\BOOKMARK [1][-]{section.8.3}{Ring experiments}{chapter.8}% 100
+\BOOKMARK [2][-]{subsection.8.3.1}{Current drawn by the Ring}{section.8.3}% 101
+\BOOKMARK [2][-]{subsection.8.3.2}{Ring temperature by the Ring}{section.8.3}% 102
+\BOOKMARK [2][-]{subsection.8.3.3}{Illuminance produced by the Ring}{section.8.3}% 103
+\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 104
+\BOOKMARK [0][-]{chapter.10}{Recommendations}{}% 105
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 106
+\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 107
+\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 108
+\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 109

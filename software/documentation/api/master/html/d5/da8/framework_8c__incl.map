@@ -1,12 +1,13 @@
 <map id="/media/kojey/DATA/undergrad/eee4022S&#45;2017/NPSC/software/code/master/Libraries/NPSC/Framework/src/framework.c" name="/media/kojey/DATA/undergrad/eee4022S&#45;2017/NPSC/software/code/master/Libraries/NPSC/Framework/src/framework.c">
-<area shape="rect" id="node2" href="$d6/d29/framework_8h.html" title="This file contains all the main initialization prototypes used by the NPC. " alt="" coords="335,124,430,151"/>
-<area shape="rect" id="node3" href="$da/d09/audio_8h.html" title="This file contains all the configuration prototypes used by the audio firmware. " alt="" coords="5,199,69,225"/>
-<area shape="rect" id="node13" href="$d6/d9b/bluetooth_8h.html" title="This file contains all the configuration prototypes used by the bluetooth firmware. " alt="" coords="94,199,181,225"/>
-<area shape="rect" id="node14" href="$d7/d6e/clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPSC..." alt="" coords="205,199,269,225"/>
-<area shape="rect" id="node15" href="$d0/ded/eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="294,199,370,225"/>
-<area shape="rect" id="node16" href="$d9/d0e/neopixel_8h.html" title="This file contains all the configuration prototypes used by the neopixel firmware. " alt="" coords="394,199,475,225"/>
-<area shape="rect" id="node17" href="$df/dc5/nextion_8h.html" title="This file contains all the configuration prototypes used by the nextion firmware. ..." alt="" coords="500,199,575,225"/>
-<area shape="rect" id="node18" href="$dc/d1b/rtc_8h.html" title="This file contains all the configuration prototypes used by the rtc firmware. " alt="" coords="599,199,647,225"/>
-<area shape="rect" id="node19" href="$d6/d91/temperature_8h.html" title="This file contains all the configuration prototypes used by the temperature firmware. " alt="" coords="671,199,774,225"/>
-<area shape="rect" id="node4" href="$d5/d60/utils_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="354,273,411,300"/>
+<area shape="rect" id="node2" href="$d6/d29/framework_8h.html" title="This file contains all the main initialization prototypes used by the NPC. " alt="" coords="306,124,401,151"/>
+<area shape="rect" id="node3" href="$da/d09/audio_8h.html" title="This file contains all the configuration prototypes used by the audio firmware. " alt="" coords="5,273,69,300"/>
+<area shape="rect" id="node13" href="$d6/d9b/bluetooth_8h.html" title="This file contains all the configuration prototypes used by the bluetooth firmware. " alt="" coords="258,199,345,225"/>
+<area shape="rect" id="node15" href="$d7/d6e/clock_8h.html" title="This file contains all the functions prototypes for the clock firmware library used for the NPSC..." alt="" coords="93,273,157,300"/>
+<area shape="rect" id="node16" href="$d0/ded/eeprom_8h.html" title="This file contains all the configuration prototypes used by the eeprom firmware. " alt="" coords="182,273,258,300"/>
+<area shape="rect" id="node17" href="$d9/d0e/neopixel_8h.html" title="This file contains all the configuration prototypes used by the neopixel firmware. " alt="" coords="478,273,559,300"/>
+<area shape="rect" id="node18" href="$df/dc5/nextion_8h.html" title="This file contains all the configuration prototypes used by the nextion firmware. ..." alt="" coords="369,199,444,225"/>
+<area shape="rect" id="node19" href="$dc/d1b/rtc_8h.html" title="This file contains all the configuration prototypes used by the rtc firmware. " alt="" coords="520,199,568,225"/>
+<area shape="rect" id="node20" href="$d6/d91/temperature_8h.html" title="This file contains all the configuration prototypes used by the temperature firmware. " alt="" coords="595,199,698,225"/>
+<area shape="rect" id="node4" href="$d5/d60/utils_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="339,348,397,375"/>
+<area shape="rect" id="node14" href="$d8/d38/queue_8h.html" title="This file contains all the utility functions prototypes used by the NPSC. " alt="" coords="334,273,402,300"/>
 </map>

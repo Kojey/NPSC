@@ -1,5 +1,5 @@
 <map id="neopixel_dataInit" name="neopixel_dataInit">
 <area shape="rect" id="node2" href="$d2/de6/group___neo_pixel___init.html#gaac78468985e44a3e4d353ea9276b33bc" title="Initialise the neopixel. " alt="" coords="327,5,421,32"/>
 <area shape="rect" id="node4" href="$da/d69/group___neo_pixel___state.html#ga8e3cfef785ce221672f825f8785c25b8" title="Stop pushing data to the neopixels. " alt="" coords="173,31,279,57"/>
-<area shape="rect" id="node3" href="$d3/d56/group___framework.html#gab66fdabf662ca2e7fb10dcf3862d1739" title="Initialize all firmwares used by the NPSC. " alt="" coords="469,5,553,32"/>
+<area shape="rect" id="node3" href="$d3/d56/group___framework.html#ga7f7ce0379b4af4cadc1bb51bbc350f4e" title="Initialize all firmwares used by the NPSC. " alt="" coords="469,5,576,32"/>
 </map>

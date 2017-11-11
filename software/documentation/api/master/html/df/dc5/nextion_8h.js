@@ -15,8 +15,10 @@ var nextion_8h =
     [ "NEXTION_USARTX_IRQ", "d8/d87/group__nextion___constants.html#ga781191cedaf0e3bbbe8e3a37d54a7d2c", null ],
     [ "DMA1_Stream5_IRQHandler", "da/dcd/group__nextion___init.html#gac201b60d58b0eba2ce0b55710eb3c4d0", null ],
     [ "nextion_init", "da/dcd/group__nextion___init.html#ga954125e92a78b714cd63c21a481762a1", null ],
+    [ "nextion_instructionUpdate", "d5/d2e/group__nextion___trans.html#ga69004bdb11e2a02024fa837b65fad3b5", null ],
     [ "nextion_send", "d5/d2e/group__nextion___trans.html#gae98be4e53e6ea89bf691feafaa79c18e", null ],
     [ "USART2_IRQHandler", "da/dcd/group__nextion___init.html#ga0ca6fd0e6f77921dd1123539857ba0a8", null ],
+    [ "nextion_instruction", "de/d7b/group___nextion.html#ga0fa740c6f4ee64a69e0b42c00d2a8ad3", null ],
     [ "nextion_read", "de/d7b/group___nextion.html#ga6ddd60ef571fe564fb19fb9d9c1bd064", null ],
     [ "nextion_write", "de/d7b/group___nextion.html#ga3d9fa7a3e49782f54b0b3e35aad1674e", null ]
 ];

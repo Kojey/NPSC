@@ -1,6 +1,5 @@
 <map id="eeprom_write4Bytes" name="eeprom_write4Bytes">
 <area shape="rect" id="node2" href="$df/d13/group___clock___management___eeprom.html#ga98aa8b6a9e96cd5fd883602c23bf1c4a" title="Save an alarm settings to eeprom. " alt="" coords="195,13,395,39"/>
-<area shape="rect" id="node5" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="222,64,367,105"/>
+<area shape="rect" id="node4" href="$d6/d06/group__eeprom__test.html#ga636a43dafc205d49b2f8f72304f049e3" title="Unit test for writing and reading a 32bit number. " alt="" coords="222,64,367,105"/>
 <area shape="rect" id="node3" href="$dc/d9e/group__clock__management__test__save__lod.html#ga4934e7961bb4a81e64dcd38a158dad04" title="Unit testing for alarm save and load. " alt="" coords="443,5,597,47"/>
-<area shape="rect" id="node4" href="$dc/d04/group__rtc__test.html#gae848fc3c61c565ec73927e0f9ddeceb9" title="Turn on LEDs based on test results. " alt="" coords="645,13,728,39"/>
 </map>

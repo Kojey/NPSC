@@ -123,11 +123,30 @@
 \contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{59}{subsection.7.5.2}
 \contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{61}{subsection.7.5.3}
 \contentsline {chapter}{\numberline {8}Results and Discussions}{63}{chapter.8}
-\contentsline {section}{\numberline {8.1}Simulation Results}{63}{section.8.1}
-\contentsline {section}{\numberline {8.2}Experimental Results}{63}{section.8.2}
-\contentsline {chapter}{\numberline {9}Conclusions}{64}{chapter.9}
-\contentsline {chapter}{\numberline {10}Recommendations}{65}{chapter.10}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{70}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{75}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{76}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{76}{section.C.1}
+\contentsline {section}{\numberline {8.1}Software Tests}{63}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Tests outcome}{63}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Insight on the software tests}{64}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Hardware module tests}{64}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Test results}{64}{subsection.8.2.1}
+\contentsline {subsubsection}{DS1307}{64}{section*.85}
+\contentsline {subsubsection}{25LC640}{64}{section*.86}
+\contentsline {subsubsection}{HC-06}{64}{section*.87}
+\contentsline {subsubsection}{NX4024T032\_001}{64}{section*.88}
+\contentsline {subsubsection}{MAX7221}{64}{section*.89}
+\contentsline {subsection}{\numberline {8.2.2}Discussions}{64}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Ring experiments}{64}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{64}{subsection.8.3.1}
+\contentsline {subsubsection}{Experimental results}{64}{section*.90}
+\contentsline {subsubsection}{Discussion}{65}{section*.97}
+\contentsline {subsection}{\numberline {8.3.2}Ring temperature by the Ring}{65}{subsection.8.3.2}
+\contentsline {subsubsection}{Experimental results}{65}{section*.98}
+\contentsline {subsubsection}{Discussion}{65}{section*.101}
+\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{65}{subsection.8.3.3}
+\contentsline {subsubsection}{Experimental results}{65}{section*.102}
+\contentsline {subsubsection}{Discussion}{65}{section*.109}
+\contentsline {chapter}{\numberline {9}Conclusions}{71}{chapter.9}
+\contentsline {chapter}{\numberline {10}Recommendations}{72}{chapter.10}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{77}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{82}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{83}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{83}{section.C.1}

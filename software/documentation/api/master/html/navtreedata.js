@@ -20,8 +20,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d5/d15/group___neo_pixel___display.html#ga7a6c2dc149e86a788aede1d6aa5262d7",
-"da/dcd/group__nextion___init.html#ga954125e92a78b714cd63c21a481762a1",
-"de/deb/group__clock__test.html#gab7d696e67a3639eb9024bf75d16eb0af"
+"da/dcd/group__nextion___init.html#ga0ca6fd0e6f77921dd1123539857ba0a8",
+"de/dc7/group___clock__management__alarm__offset.html#ga9eddc8221941f855965c838c15760731"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

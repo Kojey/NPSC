@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  10 NOV 2017 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.9.14)  11 NOV 2017 02:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,7 +949,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count271
 
-(./preamble/title.tex <./figures/uctLogo.png, id=410, 418.56375pt x 425.59pt>
+(./preamble/title.tex <./figures/uctLogo.png, id=442, 418.56375pt x 425.59pt>
 File: ./figures/uctLogo.png Graphic file (type png)
 
 <use ./figures/uctLogo.png>
@@ -995,17 +995,17 @@ of the hardware
 \tf@lof=\write5
 \openout5 = `NPSC.lof'.
 
- [9] (./NPSC.lot)
+ [9] (./NPSC.lot [10
+
+])
 \tf@lot=\write6
 \openout6 = `NPSC.lot'.
 
- [10
-
-] (./NPSC.lol)
+ [11] (./NPSC.lol)
 \tf@lol=\write7
 \openout7 = `NPSC.lol'.
 
- [11
+ [12
 
 ]
 
@@ -1049,7 +1049,7 @@ been already used, duplicate ignored
                    \relax 
 l.44 \begin{itemize}
                      [2]
-<./figures/gantt_chart.png, id=756, 1329.96875pt x 442.65375pt>
+<./figures/gantt_chart.png, id=833, 1329.96875pt x 442.65375pt>
 File: ./figures/gantt_chart.png Graphic file (type png)
 
 <use ./figures/gantt_chart.png>
@@ -1071,7 +1071,7 @@ Overfull \hbox (8.16394pt too wide) in paragraph at lines 71--72
 roject as well as its scope and limitations
  []
 
-[4] <./figures/wbs.jpg, id=766, 2171.11125pt x 827.09pt>
+[4] <./figures/wbs.jpg, id=844, 2171.11125pt x 827.09pt>
 File: ./figures/wbs.jpg Graphic file (type jpg)
 
 <use ./figures/wbs.jpg>
@@ -1089,7 +1089,7 @@ Overfull \hbox (59.39346pt too wide) in paragraph at lines 90--91
 
  (./body/Literature.tex
 Chapter 2.
-<./figures/lit_rev.jpg, id=773, 3276.24pt x 1413.28pt>
+<./figures/lit_rev.jpg, id=850, 3276.24pt x 1413.28pt>
 File: ./figures/lit_rev.jpg Graphic file (type jpg)
 
 <use ./figures/lit_rev.jpg>
@@ -1136,13 +1136,13 @@ Overfull \hbox (2.32954pt too wide) in paragraph at lines 67--68
  with sleep-disorder. Advanced
  []
 
-<./figures/sol1.jpg, id=813, 1204.5pt x 1204.5pt>
+<./figures/sol1.jpg, id=889, 1204.5pt x 1204.5pt>
 File: ./figures/sol1.jpg Graphic file (type jpg)
  <use ./figures/sol1.jpg>
 Package pdftex.def Info: ./figures/sol1.jpg used on input line 73.
 (pdftex.def)             Requested size: 240.89574pt x 240.89574pt.
 
-[10] <./figures/philips1.png, id=828, 495.8525pt x 436.63126pt>
+[10] <./figures/philips1.png, id=905, 495.8525pt x 436.63126pt>
 File: ./figures/philips1.png Graphic file (type png)
 
 <use ./figures/philips1.png>
@@ -1153,7 +1153,7 @@ Overfull \hbox (10.76396pt too wide) in paragraph at lines 84--85
 [][] 
  []
 
-<./figures/philips2.jpeg, id=829, 590.205pt x 501.875pt>
+<./figures/philips2.jpeg, id=906, 590.205pt x 501.875pt>
 File: ./figures/philips2.jpeg Graphic file (type jpg)
 
 <use ./figures/philips2.jpeg>
@@ -1245,14 +1245,14 @@ Overfull \hbox (2.48041pt too wide) in paragraph at lines 147--150
  Moreover, a web application
  []
 
-[13] <./figures/resistiveTouch.jpg, id=863, 301.125pt x 234.8775pt>
+[13] <./figures/resistiveTouch.jpg, id=939, 301.125pt x 234.8775pt>
 File: ./figures/resistiveTouch.jpg Graphic file (type jpg)
 
 <use ./figures/resistiveTouch.jpg>
 Package pdftex.def Info: ./figures/resistiveTouch.jpg used on input line 176.
 (pdftex.def)             Requested size: 120.44786pt x 93.94933pt.
 
-<./figures/capacitiveTouch.jpg, id=866, 371.3875pt x 290.08376pt>
+<./figures/capacitiveTouch.jpg, id=942, 371.3875pt x 290.08376pt>
 File: ./figures/capacitiveTouch.jpg Graphic file (type jpg)
 
 <use ./figures/capacitiveTouch.jpg>
@@ -1293,7 +1293,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [14]
 Missing character: There is no Î in font cmti10!
 Missing character: There is no ¸ in font cmti10!
- <./figures/ring_calculation.jpg, id=878, 3023.295pt x 1979.395pt>
+ <./figures/ring_calculation.jpg, id=955, 3023.295pt x 1979.395pt>
 File: ./figures/ring_calculation.jpg Graphic file (type jpg)
 
 <use ./figures/ring_calculation.jpg>
@@ -1308,7 +1308,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [15 <./figures/resistiveTouch.jpg> <./figures/capacitiveTouch.jpg>]
-<./figures/spi.jpg, id=893, 2152.04pt x 1100.11pt>
+<./figures/spi.jpg, id=970, 2152.04pt x 1100.11pt>
 File: ./figures/spi.jpg Graphic file (type jpg)
  <use ./figures/spi.jpg>
 Package pdftex.def Info: ./figures/spi.jpg used on input line 267.
@@ -1319,7 +1319,7 @@ Overfull \hbox (13.56749pt too wide) in paragraph at lines 267--268
  []
 
 [16 <./figures/ring_calculation.jpg>]
-<./figures/uart.jpg, id=899, 1887.05pt x 1128.215pt>
+<./figures/uart.jpg, id=977, 1887.05pt x 1128.215pt>
 File: ./figures/uart.jpg Graphic file (type jpg)
  <use ./figures/uart.jpg>
 Package pdftex.def Info: ./figures/uart.jpg used on input line 275.
@@ -1328,7 +1328,7 @@ Package pdftex.def Info: ./figures/uart.jpg used on input line 275.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/i2c.jpg, id=901, 2031.59pt x 1634.105pt>
+<./figures/i2c.jpg, id=979, 2031.59pt x 1634.105pt>
 File: ./figures/i2c.jpg Graphic file (type jpg)
  <use ./figures/i2c.jpg>
 Package pdftex.def Info: ./figures/i2c.jpg used on input line 283.
@@ -1338,7 +1338,7 @@ Package pdftex.def Info: ./figures/i2c.jpg used on input line 283.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17 <./figures/spi.jpg>] [18 <./figures/uart.jpg> <./figures/i2c.jpg>]
-<./figures/neopixel_nrz.png, id=917, 555.07375pt x 325.215pt>
+<./figures/neopixel_nrz.png, id=994, 555.07375pt x 325.215pt>
 File: ./figures/neopixel_nrz.png Graphic file (type png)
 
 <use ./figures/neopixel_nrz.png>
@@ -1349,7 +1349,7 @@ Overfull \hbox (34.45204pt too wide) in paragraph at lines 293--294
 [][] 
  []
 
-<./figures/neopixel_cascade.png, id=918, 539.01375pt x 184.69pt>
+<./figures/neopixel_cascade.png, id=995, 539.01375pt x 184.69pt>
 File: ./figures/neopixel_cascade.png Graphic file (type png)
 
 <use ./figures/neopixel_cascade.png>
@@ -1366,7 +1366,7 @@ Underfull \hbox (badness 1102) in paragraph at lines 299--299
 []\OT1/cmr/m/n/10 (b) |Neopixels connected in daisy chain
  []
 
-<./figures/neopixel_serial.png, id=919, 1062.97125pt x 600.2425pt>
+<./figures/neopixel_serial.png, id=996, 1062.97125pt x 600.2425pt>
 File: ./figures/neopixel_serial.png Graphic file (type png)
 
 <use ./figures/neopixel_serial.png>
@@ -1379,7 +1379,7 @@ Overfull \hbox (61.49977pt too wide) in paragraph at lines 303--304
 
 [19 <./figures/neopixel_nrz.png> <./figures/neopixel_cascade.png> <./figures/ne
 opixel_serial.png>]
-<./figures/pcb_design_flow.png, id=929, 553.06625pt x 435.6275pt>
+<./figures/pcb_design_flow.png, id=1005, 553.06625pt x 435.6275pt>
 File: ./figures/pcb_design_flow.png Graphic file (type png)
 
 <use ./figures/pcb_design_flow.png>
@@ -1392,14 +1392,14 @@ equirement is its theoretical
  []
 
 [20 <./figures/pcb_design_flow.png>] [21]
-<./figures/v_model.png, id=948, 441.65pt x 245.91875pt>
+<./figures/v_model.png, id=1024, 441.65pt x 245.91875pt>
 File: ./figures/v_model.png Graphic file (type png)
 
 <use ./figures/v_model.png>
 Package pdftex.def Info: ./figures/v_model.png used on input line 360.
 (pdftex.def)             Requested size: 309.15288pt x 172.14194pt.
 
-<./figures/spiral_model.jpg, id=952, 451.6875pt x 326.72063pt>
+<./figures/spiral_model.jpg, id=1028, 451.6875pt x 326.72063pt>
 File: ./figures/spiral_model.jpg Graphic file (type jpg)
 
 <use ./figures/spiral_model.jpg>
@@ -1426,7 +1426,7 @@ rch papers on biological
 
 
 
-] [25] <./figures/logic_analyser.jpg, id=988, 3131.7pt x 4175.6pt>
+] [25] <./figures/logic_analyser.jpg, id=1065, 3131.7pt x 4175.6pt>
 File: ./figures/logic_analyser.jpg Graphic file (type jpg)
 
 <use ./figures/logic_analyser.jpg>
@@ -1450,7 +1450,7 @@ Overfull \hbox (0.44247pt too wide) in paragraph at lines 62--63
 r of a component depending
  []
 
-[27] <./figures/system_hierarchy.jpg, id=1009, 2284.535pt x 2497.33pt>
+[27] <./figures/system_hierarchy.jpg, id=1086, 2284.535pt x 2497.33pt>
 File: ./figures/system_hierarchy.jpg Graphic file (type jpg)
 
 <use ./figures/system_hierarchy.jpg>
@@ -1479,7 +1479,7 @@ Overfull \hbox (29.65396pt too wide) in paragraph at lines 14--15
 onalities can be implemented.
  []
 
-<./figures/strutural_block_diagram.jpg, id=1054, 2842.62pt x 1630.09pt>
+<./figures/strutural_block_diagram.jpg, id=1130, 2842.62pt x 1630.09pt>
 File: ./figures/strutural_block_diagram.jpg Graphic file (type jpg)
 
 <use ./figures/strutural_block_diagram.jpg>
@@ -1508,7 +1508,7 @@ Overfull \hbox (1.91393pt too wide) in paragraph at lines 32--33
  []
 
 [34 <./figures/strutural_block_diagram.jpg>] [35]
-<./figures/mechanical_prototype.jpg, id=1079, 2802.47pt x 1758.57pt>
+<./figures/mechanical_prototype.jpg, id=1156, 2802.47pt x 1758.57pt>
 File: ./figures/mechanical_prototype.jpg Graphic file (type jpg)
 
 <use ./figures/mechanical_prototype.jpg>
@@ -1525,7 +1525,7 @@ Overfull \hbox (3.51949pt too wide) in paragraph at lines 67--68
 
  (./body/Design.tex
 Chapter 5.
-<./figures/system_overview.jpg, id=1086, 3007.235pt x 2015.53pt>
+<./figures/system_overview.jpg, id=1163, 3007.235pt x 2015.53pt>
 File: ./figures/system_overview.jpg Graphic file (type jpg)
 
 <use ./figures/system_overview.jpg>
@@ -1548,14 +1548,14 @@ he IFDE fetches instructions
  []
 
 [38 <./figures/system_overview.jpg>]
-<./figures/eeprom.jpg, id=1096, 1798.72pt x 2284.535pt>
+<./figures/eeprom.jpg, id=1173, 1798.72pt x 2284.535pt>
 File: ./figures/eeprom.jpg Graphic file (type jpg)
 
 <use ./figures/eeprom.jpg>
 Package pdftex.def Info: ./figures/eeprom.jpg used on input line 49.
 (pdftex.def)             Requested size: 143.90054pt x 182.76653pt.
 
-<./figures/io_instruction.jpg, id=1098, 2340.745pt x 2156.055pt>
+<./figures/io_instruction.jpg, id=1175, 2340.745pt x 2156.055pt>
 File: ./figures/io_instruction.jpg Graphic file (type jpg)
 
 <use ./figures/io_instruction.jpg>
@@ -1577,14 +1577,14 @@ Overfull \hbox (15.68279pt too wide) in paragraph at lines 82--103
  [][] 
  []
 
-[42] <./figures/alarm_clock.jpg, id=1125, 2850.65pt x 1846.9pt>
+[42] <./figures/alarm_clock.jpg, id=1201, 2850.65pt x 1846.9pt>
 File: ./figures/alarm_clock.jpg Graphic file (type jpg)
 
 <use ./figures/alarm_clock.jpg>
 Package pdftex.def Info: ./figures/alarm_clock.jpg used on input line 113.
 (pdftex.def)             Requested size: 313.57246pt x 203.15962pt.
 
-<./figures/visual_outputs.jpg, id=1127, 2995.19pt x 1453.43pt>
+<./figures/visual_outputs.jpg, id=1203, 2995.19pt x 1453.43pt>
 File: ./figures/visual_outputs.jpg Graphic file (type jpg)
 
 <use ./figures/visual_outputs.jpg>
@@ -1594,14 +1594,14 @@ Package pdftex.def Info: ./figures/visual_outputs.jpg used on input line 124.
 
 
  <./figures/alarm_clock.jpg>] [44 <./figures/visual_outputs.jpg>]
-<./figures/neopixel_sch.png, id=1140, 458.71375pt x 208.78pt>
+<./figures/neopixel_sch.png, id=1216, 458.71375pt x 208.78pt>
 File: ./figures/neopixel_sch.png Graphic file (type png)
 
 <use ./figures/neopixel_sch.png>
 Package pdftex.def Info: ./figures/neopixel_sch.png used on input line 147.
 (pdftex.def)             Requested size: 229.35631pt x 104.38972pt.
  [45 <./figures/neopixel_sch.png>]
-<./figures/date.jpg, id=1152, 2429.075pt x 2119.92pt>
+<./figures/date.jpg, id=1228, 2429.075pt x 2119.92pt>
 File: ./figures/date.jpg Graphic file (type jpg)
  <use ./figures/date.jpg>
 Package pdftex.def Info: ./figures/date.jpg used on input line 169.
@@ -1634,21 +1634,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-] <./figures/timer_interrupt.jpg, id=1175, 1601.985pt x 2870.725pt>
+] <./figures/timer_interrupt.jpg, id=1252, 1601.985pt x 2870.725pt>
 File: ./figures/timer_interrupt.jpg Graphic file (type jpg)
 
 <use ./figures/timer_interrupt.jpg>
 Package pdftex.def Info: ./figures/timer_interrupt.jpg used on input line 79.
 (pdftex.def)             Requested size: 128.1614pt x 229.66269pt.
 
-<./figures/visual_update.jpg, id=1176, 1766.6pt x 3075.49pt>
+<./figures/visual_update.jpg, id=1253, 1766.6pt x 3075.49pt>
 File: ./figures/visual_update.jpg Graphic file (type jpg)
 
 <use ./figures/visual_update.jpg>
 Package pdftex.def Info: ./figures/visual_update.jpg used on input line 86.
 (pdftex.def)             Requested size: 141.33089pt x 246.04422pt.
  [49]
-<./figures/alarm_update.jpg, id=1182, 1963.335pt x 2878.755pt>
+<./figures/alarm_update.jpg, id=1259, 1963.335pt x 2878.755pt>
 File: ./figures/alarm_update.jpg Graphic file (type jpg)
 
 <use ./figures/alarm_update.jpg>
@@ -1665,7 +1665,7 @@ OT1/cmr/m/n/10.95 , the \OT1/cmr/m/it/10.95 device instruction update\OT1/cmr/m
 /n/10.95 , and the \OT1/cmr/m/it/10.95 instruction
  []
 
-<./figures/dma_interrupt.jpg, id=1184, 2376.88pt x 2384.91pt>
+<./figures/dma_interrupt.jpg, id=1261, 2376.88pt x 2384.91pt>
 File: ./figures/dma_interrupt.jpg Graphic file (type jpg)
 
 <use ./figures/dma_interrupt.jpg>
@@ -1673,7 +1673,7 @@ Package pdftex.def Info: ./figures/dma_interrupt.jpg used on input line 108.
 (pdftex.def)             Requested size: 190.15428pt x 190.79669pt.
  [50 <./figures/timer_interrupt.jpg>] [51 <./figures/visual_update.jpg> <./figu
 res/alarm_update.jpg>]
-<./figures/device_instructionUpdate.jpg, id=1195, 2015.53pt x 2127.95pt>
+<./figures/device_instructionUpdate.jpg, id=1272, 2015.53pt x 2127.95pt>
 File: ./figures/device_instructionUpdate.jpg Graphic file (type jpg)
 
 <use ./figures/device_instructionUpdate.jpg>
@@ -1681,7 +1681,7 @@ Package pdftex.def Info: ./figures/device_instructionUpdate.jpg used on input l
 ine 117.
 (pdftex.def)             Requested size: 161.2457pt x 170.23947pt.
 
-<./figures/ifde.jpg, id=1198, 1959.32pt x 2951.025pt>
+<./figures/ifde.jpg, id=1275, 1959.32pt x 2951.025pt>
 File: ./figures/ifde.jpg Graphic file (type jpg)
  <use ./figures/ifde.jpg>
 Package pdftex.def Info: ./figures/ifde.jpg used on input line 126.
@@ -1712,7 +1712,7 @@ Chapter 7.
 
 
 
-] <./figures/v_diagram.jpg, id=1254, 3143.745pt x 2180.145pt>
+] <./figures/v_diagram.jpg, id=1330, 3143.745pt x 2180.145pt>
 File: ./figures/v_diagram.jpg Graphic file (type jpg)
 
 <use ./figures/v_diagram.jpg>
@@ -1723,6 +1723,11 @@ Package pdftex.def Info: ./figures/v_diagram.jpg used on input line 14.
 LaTeX Warning: Float too large for page by 4.58687pt on input line 17.
 
 [56 <./figures/v_diagram.jpg>]
+Overfull \hbox (22.96707pt too wide) in paragraph at lines 30--50
+ [][] 
+ []
+
+
 Underfull \hbox (badness 1331) in paragraph at lines 76--77
 []|\OT1/cmr/m/n/10.95 Assert that the clock written to the
  []
@@ -1753,43 +1758,39 @@ Underfull \hbox (badness 4193) in paragraph at lines 108--109
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/power_supply.jpg, id=1263, 4175.6pt x 3131.7pt>
+[57
+
+
+] <./figures/power_supply.jpg, id=1344, 4175.6pt x 3131.7pt>
 File: ./figures/power_supply.jpg Graphic file (type jpg)
 
 <use ./figures/power_supply.jpg>
 Package pdftex.def Info: ./figures/power_supply.jpg used on input line 127.
 (pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
- [57
-
-
-] [58]
-<./figures/test_temp_ring.jpg, id=1273, 4175.6pt x 3131.7pt>
+ [58]
+<./figures/test_temp_ring.jpg, id=1351, 4175.6pt x 3131.7pt>
 File: ./figures/test_temp_ring.jpg Graphic file (type jpg)
 
 <use ./figures/test_temp_ring.jpg>
 Package pdftex.def Info: ./figures/test_temp_ring.jpg used on input line 136.
 (pdftex.def)             Requested size: 334.05482pt x 250.54112pt.
 
-<./figures/temp_ring.jpg, id=1275, 2906.86pt x 2051.665pt>
+<./figures/temp_ring.jpg, id=1353, 2906.86pt x 2051.665pt>
 File: ./figures/temp_ring.jpg Graphic file (type jpg)
 
 <use ./figures/temp_ring.jpg>
 Package pdftex.def Info: ./figures/temp_ring.jpg used on input line 143.
 (pdftex.def)             Requested size: 377.90508pt x 266.72581pt.
 
-<./figures/temp_setup.jpg, id=1277, 4175.6pt x 3131.7pt>
+<./figures/temp_setup.jpg, id=1355, 4175.6pt x 3131.7pt>
 File: ./figures/temp_setup.jpg Graphic file (type jpg)
 
 <use ./figures/temp_setup.jpg>
 Package pdftex.def Info: ./figures/temp_setup.jpg used on input line 152.
 (pdftex.def)             Requested size: 375.7878pt x 281.84084pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[59 <./figures/power_supply.jpg>] [60 <./figures/test_temp_ring.jpg> <./figures
-/temp_ring.jpg>]
-<./figures/test_illuminance.jpg, id=1288, 4175.6pt x 3131.7pt>
+ [59 <./figures/power_supply.jpg>] [60 <./figures/test_temp_ring.jpg> <./figure
+s/temp_ring.jpg>]
+<./figures/test_illuminance.jpg, id=1365, 4175.6pt x 3131.7pt>
 File: ./figures/test_illuminance.jpg Graphic file (type jpg)
 
 <use ./figures/test_illuminance.jpg>
@@ -1808,16 +1809,93 @@ the experiment was performed
 
 (./body/Results.tex
 Chapter 8.
-) [63
+[63
 
 
 
 ]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/current_one_pixel.pdf, id=1378, 578.16pt x 433.62pt>
+File: ./figures/current_one_pixel.pdf Graphic file (type pdf)
+
+<use ./figures/current_one_pixel.pdf>
+Package pdftex.def Info: ./figures/current_one_pixel.pdf used on input line 150
+.
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+
+<./figures/current_idle.pdf, id=1379, 578.16pt x 433.62pt>
+File: ./figures/current_idle.pdf Graphic file (type pdf)
+
+<use ./figures/current_idle.pdf>
+Package pdftex.def Info: ./figures/current_idle.pdf used on input line 156.
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+
+<./figures/current_180_neopixels.pdf, id=1380, 578.16pt x 433.62pt>
+File: ./figures/current_180_neopixels.pdf Graphic file (type pdf)
+
+<use ./figures/current_180_neopixels.pdf>
+Package pdftex.def Info: ./figures/current_180_neopixels.pdf used on input line
+ 162.
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+ [64]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/temperature_ring.pdf, id=1392, 578.16pt x 433.62pt>
+File: ./figures/temperature_ring.pdf Graphic file (type pdf)
+
+<use ./figures/temperature_ring.pdf>
+Package pdftex.def Info: ./figures/temperature_ring.pdf used on input line 199.
+
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/illuminance_blue.pdf, id=1393, 578.16pt x 433.62pt>
+File: ./figures/illuminance_blue.pdf Graphic file (type pdf)
+
+<use ./figures/illuminance_blue.pdf>
+Package pdftex.def Info: ./figures/illuminance_blue.pdf used on input line 237.
+
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/illuminance_distance.pdf, id=1394, 578.16pt x 433.62pt>
+File: ./figures/illuminance_distance.pdf Graphic file (type pdf)
+
+<use ./figures/illuminance_distance.pdf>
+Package pdftex.def Info: ./figures/illuminance_distance.pdf used on input line 
+270.
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figures/illuminance_angle.pdf, id=1395, 578.16pt x 433.62pt>
+File: ./figures/illuminance_angle.pdf Graphic file (type pdf)
+
+<use ./figures/illuminance_angle.pdf>
+Package pdftex.def Info: ./figures/illuminance_angle.pdf used on input line 298
+.
+(pdftex.def)             Requested size: 346.89867pt x 260.17401pt.
+) [65] [66 <./figures/current_one_pixel.pdf>] [67 <./figures/current_idle.pdf> 
+<./figures/current_180_neopixels.pdf>]
+[68 <./figures/temperature_ring.pdf>] [69 <./figures/illuminance_blue.pdf>]
+[70 <./figures/illuminance_distance.pdf> <./figures/illuminance_angle.pdf>]
 \openout2 = `body/Conclusions.aux'.
 
- (./body/Conclusions.tex
+
+(./body/Conclusions.tex
 Chapter 9.
-) [64
+) [71
 
 
 
@@ -1826,14 +1904,14 @@ Chapter 9.
 
  (./body/Recommendations.tex
 Chapter 10.
-) [65
+) [72
 
 
 
 ]
 \openout2 = `bibliography/References.aux'.
 
- (./bibliography/References.tex [66
+ (./bibliography/References.tex [73
 
 
 ]
@@ -1843,7 +1921,7 @@ Missing character: There is no “ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
- [67
+ [74
 
 ]
 Missing character: There is no â in font cmr10!
@@ -1918,7 +1996,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
 line], available at:
  []
 
-[68pdfTeX warning (ext4): destination with the same identifier (name{cite.ho201
+[75pdfTeX warning (ext4): destination with the same identifier (name{cite.ho201
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1961,12 +2039,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--103
 e], available at:
  []
 
-) [69]
+) [76]
 \openout2 = `appendices/appendixa.aux'.
 
  (./appendices/appendixa.tex
 Appendix A.
-<./figures/ring_sch.pdf, id=1339, 794.97pt x 614.295pt>
+<./figures/ring_sch.pdf, id=1611, 794.97pt x 614.295pt>
 File: ./figures/ring_sch.pdf Graphic file (type pdf)
 
 <use ./figures/ring_sch.pdf>
@@ -1977,7 +2055,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 12--13
 [][] 
  []
 
-<./figures/ring_pcb.png, id=1340, 614.295pt x 614.295pt>
+<./figures/ring_pcb.png, id=1612, 614.295pt x 614.295pt>
 File: ./figures/ring_pcb.png Graphic file (type png)
 
 <use ./figures/ring_pcb.png>
@@ -1990,7 +2068,7 @@ LaTeX Warning: Float too large for page by 66.53624pt on input line 23.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/time_sch.pdf, id=1341, 794.97pt x 614.295pt>
+<./figures/time_sch.pdf, id=1613, 794.97pt x 614.295pt>
 File: ./figures/time_sch.pdf Graphic file (type pdf)
 
 <use ./figures/time_sch.pdf>
@@ -2001,7 +2079,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 31--32
 [][] 
  []
 
-<./figures/time_pcb.png, id=1342, 660.4675pt x 197.73875pt>
+<./figures/time_pcb.png, id=1614, 660.4675pt x 197.73875pt>
 File: ./figures/time_pcb.png Graphic file (type png)
 
 <use ./figures/time_pcb.png>
@@ -2011,7 +2089,7 @@ Package pdftex.def Info: ./figures/time_pcb.png used on input line 36.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/weekday_sch.pdf, id=1343, 794.97pt x 614.295pt>
+<./figures/weekday_sch.pdf, id=1615, 794.97pt x 614.295pt>
 File: ./figures/weekday_sch.pdf Graphic file (type pdf)
 
 <use ./figures/weekday_sch.pdf>
@@ -2022,7 +2100,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 49--50
 [][] 
  []
 
-<./figures/weekday_pcb.png, id=1344, 944.52875pt x 106.3975pt>
+<./figures/weekday_pcb.png, id=1616, 944.52875pt x 106.3975pt>
 File: ./figures/weekday_pcb.png Graphic file (type png)
 
 <use ./figures/weekday_pcb.png>
@@ -2036,7 +2114,7 @@ Overfull \hbox (149.88873pt too wide) in paragraph at lines 54--55
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./figures/date_sch.pdf, id=1345, 794.97pt x 614.295pt>
+<./figures/date_sch.pdf, id=1617, 794.97pt x 614.295pt>
 File: ./figures/date_sch.pdf Graphic file (type pdf)
 
 <use ./figures/date_sch.pdf>
@@ -2047,7 +2125,7 @@ Overfull \hbox (20.40196pt too wide) in paragraph at lines 67--68
 [][] 
  []
 
-<./figures/date_pcb.png, id=1346, 554.07pt x 197.73875pt>
+<./figures/date_pcb.png, id=1618, 554.07pt x 197.73875pt>
 File: ./figures/date_pcb.png Graphic file (type png)
 
 <use ./figures/date_pcb.png>
@@ -2057,22 +2135,22 @@ Package pdftex.def Info: ./figures/date_pcb.png used on input line 72.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[70
+[77
 
 
 
-] [71 <./figures/ring_sch.pdf> <./figures/ring_pcb.png>] [72 <./figures/time_sc
-h.pdf> <./figures/time_pcb.png>] [73 <./figures/weekday_sch.pdf> <./figures/wee
-kday_pcb.png>] [74 <./figures/date_sch.pdf> <./figures/date_pcb.png>]
+] [78 <./figures/ring_sch.pdf> <./figures/ring_pcb.png>] [79 <./figures/time_sc
+h.pdf> <./figures/time_pcb.png>] [80 <./figures/weekday_sch.pdf> <./figures/wee
+kday_pcb.png>] [81 <./figures/date_sch.pdf> <./figures/date_pcb.png>]
 Appendix B.
-) [75
+) [82
 
 ]
 \openout2 = `appendices/appendixb.aux'.
 
  (./appendices/appendixb.tex
 Appendix C.
-) [76
+) [83
 
 
 
@@ -2089,7 +2167,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 87.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 87.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 87.
 Package rerunfilecheck Info: File `NPSC.out' has not changed.
-(rerunfilecheck)             Checksum: 88BE45485B6D25FC822F85DF140C3E58;6909.
+(rerunfilecheck)             Checksum: B0F97BA88AB3F0F7F1377244671A73C5;7505.
 
 
 LaTeX Warning: There were undefined references.
@@ -2100,29 +2178,42 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 87.
  ) 
 Here is how much of TeX's memory you used:
- 22569 strings out of 493029
- 422360 string characters out of 6136234
- 556963 words of memory out of 5000000
- 25302 multiletter control sequences out of 15000+600000
+ 22687 strings out of 493029
+ 425052 string characters out of 6136234
+ 560043 words of memory out of 5000000
+ 25368 multiletter control sequences out of 15000+600000
  15904 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,81p,10404b,2392s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on NPSC.pdf (90 pages, 11992905 bytes).
+pdfTeX warning (dest): name{table.caption.104} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.110} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.109} has been referenced but does no
+t exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on NPSC.pdf (98 pages, 12108865 bytes).
 PDF statistics:
- 1569 PDF objects out of 1728 (max. 8388607)
- 1382 compressed objects within 14 object streams
- 388 named destinations out of 1000 (max. 500000)
- 1059 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1855 PDF objects out of 2073 (max. 8388607)
+ 1632 compressed objects within 17 object streams
+ 433 named destinations out of 1000 (max. 500000)
+ 1158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

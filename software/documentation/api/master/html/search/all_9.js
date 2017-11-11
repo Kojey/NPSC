@@ -22,6 +22,5 @@ var searchData=
   ['nextion_5fconstants',['Nextion_Constants',['../d8/d87/group__nextion___constants.html',1,'']]],
   ['nextion_5finit',['nextion_init',['../da/dcd/group__nextion___init.html#ga954125e92a78b714cd63c21a481762a1',1,'nextion.c']]],
   ['nextion_5fsend',['nextion_send',['../d5/d2e/group__nextion___trans.html#gae98be4e53e6ea89bf691feafaa79c18e',1,'nextion.c']]],
-  ['npsc',['NPSC',['../d3/db7/group___n_p_s_c.html',1,'']]],
-  ['npsc_5finit',['NPSC_init',['../d9/d6c/group___configuration.html#gab66fdabf662ca2e7fb10dcf3862d1739',1,'NPSC_init(void):&#160;framework.c'],['../d3/d56/group___framework.html#gab66fdabf662ca2e7fb10dcf3862d1739',1,'NPSC_init(void):&#160;framework.c']]]
+  ['npsc',['NPSC',['../d3/db7/group___n_p_s_c.html',1,'']]]
 ];
