@@ -39,23 +39,29 @@
 \contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{56}{figure.caption.75}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Power supply used in the Ring experiments.\relax }}{59}{figure.caption.79}
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.80}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.81}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{61}{figure.caption.81}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Setup of the temperature rise experiment.\relax }}{61}{figure.caption.82}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Illuminance test setup.\relax }}{62}{figure.caption.83}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces \relax }}{66}{figure.caption.94}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces \relax }}{67}{figure.caption.95}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces \relax }}{67}{figure.caption.96}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces \relax }}{68}{figure.caption.100}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces \relax }}{69}{figure.caption.104}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces \relax }}{70}{figure.caption.106}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces \relax }}{70}{figure.caption.108}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces \relax }}{64}{figure.caption.86}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces \relax }}{64}{figure.caption.88}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces \relax }}{64}{figure.caption.90}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces \relax }}{65}{figure.caption.92}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces \relax }}{65}{figure.caption.94}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces \relax }}{65}{figure.caption.95}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces \relax }}{67}{figure.caption.100}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces \relax }}{68}{figure.caption.101}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces \relax }}{69}{figure.caption.102}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces \relax }}{70}{figure.caption.106}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces \relax }}{70}{figure.caption.110}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces \relax }}{71}{figure.caption.112}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces \relax }}{71}{figure.caption.114}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{78}{figure.caption.111}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{79}{figure.caption.112}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{80}{figure.caption.113}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{81}{figure.caption.114}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Ring\relax }}{79}{figure.caption.117}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Time\relax }}{80}{figure.caption.118}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Weekday\relax }}{81}{figure.caption.119}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Date\relax }}{82}{figure.caption.120}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

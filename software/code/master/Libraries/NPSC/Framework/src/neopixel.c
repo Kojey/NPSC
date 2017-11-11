@@ -188,13 +188,17 @@ void TIM2_IRQHandler(void){
 	{
 		TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 	    TIM2->CCR1 = LEDbuffer[index];
-	    if(index==LED_BUFFER_SIZE){
-	    	// stop transmission a end of buffer
-			TIM_Cmd(TIM2,DISABLE);
-			index = 0;
-	    }
-	    index++;// = (index + 1)% LED_BUFFER_SIZE;
-	 }
+	    LEDbuffer[index]=WS2812_RESET;
+//
+//	    if(index==LED_BUFFER_SIZE){
+//	    	// stop transmission a end of buffer
+//			TIM_Cmd(TIM2,DISABLE);
+//			index = 0;
+//	    }
+//
+//	    index++;// = (index + 1)% LED_BUFFER_SIZE;
+	    index = (index + 1)% LED_BUFFER_SIZE;
+	}
 
 }
 
@@ -225,13 +229,13 @@ void neopixel_dataInit(void){
 		LEDbuffer[buffIndex] = WS2812_0;
 		buffIndex++;
 	}
-	LEDbuffer[buffIndex] = WS2812_0;
+	LEDbuffer[buffIndex] = WS2812_RESET;
 	buffIndex++;
 	for (index = 0; index < RESET_SLOTS_END; index++) {
 		LEDbuffer[buffIndex] = WS2812_RESET;
 		buffIndex++;
 	}
-	TIM_Cmd(TIM2,ENABLE);
+	TIM_Cmd(TIM2,DISABLE);
 }
 
 /**
@@ -263,7 +267,7 @@ void neopixel_setPixelColourRGB(uint8_t n, uint8_t r, uint8_t g, uint8_t b){
 	for (i = 0; i < 8; i++) // BLUE
 		tempBuffer[16 + i] = ((b << i) & 0x80) ? WS2812_1 : WS2812_0;
 	// stop timer before updating the buffer
-	TIM_Cmd(TIM2,DISABLE);
+//	TIM_Cmd(TIM2,DISABLE);
 	for (i = 0; i < 24; i++)
 		LEDbuffer[RESET_SLOTS_BEGIN + LEDindex * 24 + i] = tempBuffer[i];
 	TIM_Cmd(TIM2,ENABLE);

@@ -1,14 +1,93 @@
 \chapter{Results and Discussions}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Hardware module tests
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hardware module tests}
+\subsection{Test results}
+\subsubsection{DS1307}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{coms_ds1307.png}
+	\caption{}
+	\label{coms_ds1307}
+\end{figure}
+\subsubsection{25LC640}
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\includegraphics[scale=0.6]{coms_25lc640_start.png}
+		\subcaption[first caption.]{}
+		\label{fig:coms_25lc640_start}
+	\end{minipage}
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\includegraphics[scale=0.6]{coms_25lc640_data.png}
+		\subcaption[second caption.]{}
+		\label{fig:coms_25lc640_data}
+	\end{minipage}	
+	\caption{}
+	\label{25lc640}
+\end{figure}
+\subsubsection{HC-06}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{coms_hc-06.png}
+	\caption{}
+	\label{coms_hc-06}
+\end{figure}
+\subsubsection{NX4024T032\_001}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{coms_nextion.png}
+	\caption{}
+	\label{coms_nextion}
+\end{figure}
+\subsubsection{WS2812}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{coms_ws2812_frequency.png}
+	\caption{}
+	\label{coms_ws2812_frequency}
+\end{figure}
+\begin{figure}[h!]
+	\centering
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\includegraphics[scale=0.8]{coms_ws2812_red.png}
+		\subcaption[first caption.]{}
+		\label{fig:coms_ws2812_red}
+	\end{minipage}
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\includegraphics[scale=0.8]{coms_ws2812_green.png}
+		\subcaption[second caption.]{}
+		\label{fig:coms_ws2812_green}
+	\end{minipage}
+	\begin{minipage}[b]{\textwidth}
+		\centering
+		\includegraphics[scale=0.8]{coms_ws2812_blue.png}
+		\subcaption[second caption.]{}
+		\label{fig:coms_ws2812_blue}
+	\end{minipage}	
+	\caption{}
+	\label{ws2812}
+\end{figure}
+\subsection{Discussions}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Software tests
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Software Tests}
-\subsection{Tests outcome}
+\subsection{Unit Tests outcome}
 \begin{table}[h!]
 	\centering
 	\caption{Unit and Integration test outcome.}
-	\label{table:software_test}
+	\label{table:software_unit_test}
 	\begin{tabular}{cccc}
 		\hline
 		\hline
@@ -39,19 +118,6 @@
 \end{table}
 
 \subsection{Insight on the software tests}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SECTION: Hardware module tests
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Hardware module tests}
-\subsection{Test results}
-\subsubsection{DS1307}
-\subsubsection{25LC640}
-\subsubsection{HC-06}
-\subsubsection{NX4024T032\_001}
-\subsubsection{MAX7221}
-\subsection{Discussions}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Ring 

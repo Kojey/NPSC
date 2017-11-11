@@ -27,7 +27,7 @@ To ensure that the hardware were sending and receiving the right information, th
 	\centering
 	\caption{Commnication protocol tests performed on hardware modules.}
 	\label{table:coms_test}
-	\begin{tabular}{ccp{25em}}
+	\begin{tabular}{cp{5em}p{25em}}
 		\hline
 		\hline
 		\toprule
@@ -35,7 +35,7 @@ To ensure that the hardware were sending and receiving the right information, th
 		\hline
 		\hline
 		\toprule
-		DS1307 & I2C & rtc\_set\_seconds(10). Send the value 10 at address 0x00 of the RTC.\\ 
+		DS1307 & I2C & rtc\_setMinutes(10). Send the value 10 at address 0x01 of the RTC.\\ 
 		\midrule
 		25LC640 & SPI & eeprom\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00.\\ 
 		\midrule
@@ -43,7 +43,9 @@ To ensure that the hardware were sending and receiving the right information, th
 		\midrule
 		NX4024T032\_001 & UART & nextion\_send(10). Send UART data of write type to send the value 10.\\ 
 		\midrule
-		MAX7221 & SPI &  date\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00\\
+		MAX7221 & SPI &  date\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00.\\
+		\midrule
+		WS2812 & PWM &  neopixel\_setAllPixelRGB(255,0,0) neopixel\_setAllPixelRGB(0,255,0) neopixel\_setAllPixelRGB(0,0,255). Send PWM data to the neopixels.\\
 		\hline
 		\hline
 	\end{tabular}

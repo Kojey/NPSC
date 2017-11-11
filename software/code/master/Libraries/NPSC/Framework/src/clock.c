@@ -103,8 +103,8 @@ void clock_init(void){
 	{
 		NVIC_InitTypeDef NVIC_InitStruct;
 		NVIC_InitStruct.NVIC_IRQChannel = RTC_Alarm_IRQn;
-		NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
-		NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+		NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 1;
+		NVIC_InitStruct.NVIC_IRQChannelSubPriority = 2;
 		NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 		NVIC_Init(&NVIC_InitStruct);
 	}

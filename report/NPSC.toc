@@ -118,10 +118,10 @@
 \contentsline {section}{\numberline {7.2}Hardware module tests}{57}{section.7.2}
 \contentsline {section}{\numberline {7.3}Unit tests}{57}{section.7.3}
 \contentsline {section}{\numberline {7.4}Integration tests}{57}{section.7.4}
-\contentsline {section}{\numberline {7.5}Neopixel Ring}{57}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Current experiment}{58}{subsection.7.5.1}
+\contentsline {section}{\numberline {7.5}Neopixel Ring}{58}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Current experiment}{59}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{59}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{61}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{60}{subsection.7.5.3}
 \contentsline {chapter}{\numberline {8}Results and Discussions}{63}{chapter.8}
 \contentsline {section}{\numberline {8.1}Software Tests}{63}{section.8.1}
 \contentsline {subsection}{\numberline {8.1.1}Tests outcome}{63}{subsection.8.1.1}
@@ -129,24 +129,24 @@
 \contentsline {section}{\numberline {8.2}Hardware module tests}{64}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Test results}{64}{subsection.8.2.1}
 \contentsline {subsubsection}{DS1307}{64}{section*.85}
-\contentsline {subsubsection}{25LC640}{64}{section*.86}
-\contentsline {subsubsection}{HC-06}{64}{section*.87}
-\contentsline {subsubsection}{NX4024T032\_001}{64}{section*.88}
-\contentsline {subsubsection}{MAX7221}{64}{section*.89}
-\contentsline {subsection}{\numberline {8.2.2}Discussions}{64}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Ring experiments}{64}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{64}{subsection.8.3.1}
-\contentsline {subsubsection}{Experimental results}{64}{section*.90}
-\contentsline {subsubsection}{Discussion}{65}{section*.97}
-\contentsline {subsection}{\numberline {8.3.2}Ring temperature by the Ring}{65}{subsection.8.3.2}
-\contentsline {subsubsection}{Experimental results}{65}{section*.98}
-\contentsline {subsubsection}{Discussion}{65}{section*.101}
-\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{65}{subsection.8.3.3}
-\contentsline {subsubsection}{Experimental results}{65}{section*.102}
-\contentsline {subsubsection}{Discussion}{65}{section*.109}
-\contentsline {chapter}{\numberline {9}Conclusions}{71}{chapter.9}
-\contentsline {chapter}{\numberline {10}Recommendations}{72}{chapter.10}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{77}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{82}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{83}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{83}{section.C.1}
+\contentsline {subsubsection}{25LC640}{64}{section*.87}
+\contentsline {subsubsection}{HC-06}{64}{section*.89}
+\contentsline {subsubsection}{NX4024T032\_001}{65}{section*.91}
+\contentsline {subsubsection}{WS2812}{65}{section*.93}
+\contentsline {subsection}{\numberline {8.2.2}Discussions}{68}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Ring experiments}{68}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{68}{subsection.8.3.1}
+\contentsline {subsubsection}{Experimental results}{68}{section*.96}
+\contentsline {subsubsection}{Discussion}{68}{section*.103}
+\contentsline {subsection}{\numberline {8.3.2}Ring temperature by the Ring}{68}{subsection.8.3.2}
+\contentsline {subsubsection}{Experimental results}{68}{section*.104}
+\contentsline {subsubsection}{Discussion}{68}{section*.107}
+\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{68}{subsection.8.3.3}
+\contentsline {subsubsection}{Experimental results}{68}{section*.108}
+\contentsline {subsubsection}{Discussion}{68}{section*.115}
+\contentsline {chapter}{\numberline {9}Conclusions}{72}{chapter.9}
+\contentsline {chapter}{\numberline {10}Recommendations}{73}{chapter.10}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{78}{appendix.A}
+\contentsline {chapter}{\numberline {B}Datasheets}{83}{appendix.B}
+\contentsline {chapter}{\numberline {C}Addenda}{84}{appendix.C}
+\contentsline {section}{\numberline {C.1}Ethics Forms}{84}{section.C.1}

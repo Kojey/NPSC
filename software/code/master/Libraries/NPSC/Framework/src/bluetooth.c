@@ -75,7 +75,7 @@ void bluetooth_init(void) {
     /* Enable global interrupts for USART */
 	NVIC_InitTypeDef NVIC_InitStruct;
 	NVIC_InitStruct.NVIC_IRQChannel = BLUETOOTH_USARTX_IRQ;
-	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 1;
 	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStruct);
@@ -230,6 +230,9 @@ void DMA2_Stream5_IRQHandler(void) {
  */
 void bluetooth_send(uint8_t * data){
 	uint32_t size = strlen((char *)data);
+	// send junk first
+	USART_SendData(BLUETOOTH_USARTX,0);
+	while(USART_GetFlagStatus(BLUETOOTH_USARTX,USART_FLAG_TC)==RESET);
 	while(size--){
 		USART_SendData(BLUETOOTH_USARTX,(uint16_t)*data++);
 		while(USART_GetFlagStatus(BLUETOOTH_USARTX,USART_FLAG_TC)==RESET);

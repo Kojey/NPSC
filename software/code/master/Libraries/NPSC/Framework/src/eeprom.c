@@ -51,7 +51,7 @@ void eeprom_init(void){
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
 
 	/* GPIO Configuration */
-	// MOSI, MISO, CLK configuration
+	// CLK,MISO,MOSI configuration
 	GPIO_InitTypeDef GPIO_InitStruct;
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;
 	GPIO_InitStruct.GPIO_OType = GPIO_OType_PP;
