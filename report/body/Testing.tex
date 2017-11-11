@@ -35,7 +35,7 @@ To ensure that the hardware were sending and receiving the right information, th
 		\hline
 		\hline
 		\toprule
-		DS1307 & I2C & rtc\_setMinutes(10). Send the value 10 at address 0x01 of the RTC.\\ 
+		DS1307 & I2C & rtc\_setMinutes(5). Send the value 10 at address 0x01 of the RTC.\\ 
 		\midrule
 		25LC640 & SPI & eeprom\_write(10,0x00). Send SPI data of write type to write the value 10 at address 0x00.\\ 
 		\midrule
@@ -58,7 +58,7 @@ To ensure that the hardware were sending and receiving the right information, th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Unit tests}
 
-Software unit tests could not be run on all hardware modules. It would have been impractical to set software unit tests on the Bluetooth module and the touchscreen as an application need to be developed using those modules before fully interacting with them. The Utilities modules and the Framework of the hardware modules tested using unit testing are listed in \cref{table:unitTest} alongside their unit tests.
+Software unit tests could not be run on all hardware modules. It would have been impractical to set software unit tests on the Bluetooth module and the touchscreen as an application need to be developed using those modules before fully interacting with them. The Utilities modules and the Framework of the hardware modules tested using unit testing are listed in \cref{table:unitTest} alongside their unit tests. Only certain hardware framework could be tested as not all hardware meet the criteria of the unit tests design. For a hardware to have a unit test on its framework it must be able to provide deterministic responses based on certain inputs. The hardware meeting this requirement are the internal RTC, the external RTC, and the EEPROM.  
 
 \begin{table}[h!]
 	\centering

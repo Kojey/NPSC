@@ -5,105 +5,125 @@
 \BOOKMARK [2][-]{subsection.1.2.2}{Purpose of the study}{section.1.2}% 5
 \BOOKMARK [1][-]{section.1.3}{Scope and limitations}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.4}{Plan of development}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.4.1}{Chronological progression of the report}{section.1.4}% 8
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 9
-\BOOKMARK [1][-]{section.2.1}{The human sleep-wake cycle}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.1.1}{The circadian rhythm}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.2}{Internal circadian rhythms influenced by light}{section.2.1}% 12
-\BOOKMARK [2][-]{subsection.2.1.3}{Quantitative and qualitative characteristics of light on melatonin production}{section.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.1.4}{Impact of light on human behaviour and sleep-wake cycle}{section.2.1}% 14
-\BOOKMARK [1][-]{section.2.2}{Lighting technologies}{chapter.2}% 15
-\BOOKMARK [2][-]{subsection.2.2.1}{Light}{section.2.2}% 16
-\BOOKMARK [2][-]{subsection.2.2.2}{Type of light technologies}{section.2.2}% 17
-\BOOKMARK [2][-]{subsection.2.2.3}{Light treatment of sleep disorder}{section.2.2}% 18
-\BOOKMARK [1][-]{section.2.3}{Hardware modules}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.3.1}{Processors and microcontrollers}{section.2.3}% 20
-\BOOKMARK [2][-]{subsection.2.3.2}{Storage}{section.2.3}% 21
-\BOOKMARK [2][-]{subsection.2.3.3}{Wireless technology}{section.2.3}% 22
-\BOOKMARK [2][-]{subsection.2.3.4}{Touch screen}{section.2.3}% 23
-\BOOKMARK [2][-]{subsection.2.3.5}{Neopixels}{section.2.3}% 24
-\BOOKMARK [1][-]{section.2.4}{Communication protocols}{chapter.2}% 25
-\BOOKMARK [2][-]{subsection.2.4.1}{Serial Peripheral Interface \(SPI\) Bus}{section.2.4}% 26
-\BOOKMARK [2][-]{subsection.2.4.2}{Universal asynchronous receiver-transmitter \(UART\)}{section.2.4}% 27
-\BOOKMARK [2][-]{subsection.2.4.3}{Inter-Integrated Circuit \(I2C\)}{section.2.4}% 28
-\BOOKMARK [2][-]{subsection.2.4.4}{Neopixels serial protocol}{section.2.4}% 29
-\BOOKMARK [1][-]{section.2.5}{PCB Board Design}{chapter.2}% 30
-\BOOKMARK [1][-]{section.2.6}{Programming Languages}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.6.1}{C}{section.2.6}% 32
-\BOOKMARK [2][-]{subsection.2.6.2}{C++}{section.2.6}% 33
-\BOOKMARK [1][-]{section.2.7}{Software Tools and Libraries}{chapter.2}% 34
-\BOOKMARK [2][-]{subsection.2.7.1}{Atollic TrueSTUDIO for ARM}{section.2.7}% 35
-\BOOKMARK [2][-]{subsection.2.7.2}{Nextion IDE}{section.2.7}% 36
-\BOOKMARK [2][-]{subsection.2.7.3}{MIT App Inventor 2}{section.2.7}% 37
-\BOOKMARK [1][-]{section.2.8}{Design Models}{chapter.2}% 38
-\BOOKMARK [2][-]{subsection.2.8.1}{V-Model}{section.2.8}% 39
-\BOOKMARK [2][-]{subsection.2.8.2}{Spiral Model}{section.2.8}% 40
-\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 41
-\BOOKMARK [1][-]{section.3.1}{Outline}{chapter.3}% 42
-\BOOKMARK [1][-]{section.3.2}{Literature Review}{chapter.3}% 43
-\BOOKMARK [1][-]{section.3.3}{Setup}{chapter.3}% 44
-\BOOKMARK [2][-]{subsection.3.3.1}{Hardware setup}{section.3.3}% 45
-\BOOKMARK [2][-]{subsection.3.3.2}{Software setup}{section.3.3}% 46
-\BOOKMARK [1][-]{section.3.4}{Implementation}{chapter.3}% 47
-\BOOKMARK [2][-]{subsection.3.4.1}{Level 1: Hardware and Utilities}{section.3.4}% 48
-\BOOKMARK [2][-]{subsection.3.4.2}{Level 2: Framework}{section.3.4}% 49
-\BOOKMARK [2][-]{subsection.3.4.3}{Level 3: Application and Unit tests}{section.3.4}% 50
-\BOOKMARK [2][-]{subsection.3.4.4}{Level 4: System tests}{section.3.4}% 51
-\BOOKMARK [2][-]{subsection.3.4.5}{Level 5: NPSC}{section.3.4}% 52
-\BOOKMARK [1][-]{section.3.5}{Experimentation}{chapter.3}% 53
-\BOOKMARK [2][-]{subsection.3.5.1}{Hardware tests}{section.3.5}% 54
-\BOOKMARK [2][-]{subsection.3.5.2}{Software tests}{section.3.5}% 55
-\BOOKMARK [2][-]{subsection.3.5.3}{Performance tests}{section.3.5}% 56
-\BOOKMARK [2][-]{subsection.3.5.4}{Acceptance tests}{section.3.5}% 57
-\BOOKMARK [1][-]{section.3.6}{Analysis}{chapter.3}% 58
-\BOOKMARK [0][-]{chapter.4}{Preliminary Design}{}% 59
-\BOOKMARK [1][-]{section.4.1}{System overview}{chapter.4}% 60
-\BOOKMARK [1][-]{section.4.2}{System components selection}{chapter.4}% 61
-\BOOKMARK [1][-]{section.4.3}{Visual outputs component design decisions}{chapter.4}% 62
-\BOOKMARK [1][-]{section.4.4}{Mechanical case}{chapter.4}% 63
-\BOOKMARK [0][-]{chapter.5}{Prototype Design}{}% 64
-\BOOKMARK [1][-]{section.5.1}{System design}{chapter.5}% 65
-\BOOKMARK [1][-]{section.5.2}{High-level design}{chapter.5}% 66
-\BOOKMARK [2][-]{subsection.5.2.1}{External storage}{section.5.2}% 67
-\BOOKMARK [2][-]{subsection.5.2.2}{Inputs/Outputs instruction design}{section.5.2}% 68
-\BOOKMARK [2][-]{subsection.5.2.3}{Input devices}{section.5.2}% 69
-\BOOKMARK [2][-]{subsection.5.2.4}{Alarm and Clock}{section.5.2}% 70
-\BOOKMARK [2][-]{subsection.5.2.5}{Visual outputs}{section.5.2}% 71
-\BOOKMARK [2][-]{subsection.5.2.6}{Sensors}{section.5.2}% 72
-\BOOKMARK [1][-]{section.5.3}{Details hardware design}{chapter.5}% 73
-\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels boards}{section.5.3}% 74
-\BOOKMARK [2][-]{subsection.5.3.2}{Date and Temperature PCB}{section.5.3}% 75
-\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 76
-\BOOKMARK [1][-]{section.6.1}{Utilities}{chapter.6}% 77
-\BOOKMARK [1][-]{section.6.2}{Framework}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.3}{Applpication}{chapter.6}% 79
-\BOOKMARK [2][-]{subsection.6.3.1}{Visual application}{section.6.3}% 80
-\BOOKMARK [2][-]{subsection.6.3.2}{Alarm application}{section.6.3}% 81
-\BOOKMARK [2][-]{subsection.6.3.3}{Instruction application}{section.6.3}% 82
-\BOOKMARK [1][-]{section.6.4}{Main}{chapter.6}% 83
-\BOOKMARK [0][-]{chapter.7}{Testing and Experimentation}{}% 84
-\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 85
-\BOOKMARK [1][-]{section.7.2}{Hardware module tests}{chapter.7}% 86
-\BOOKMARK [1][-]{section.7.3}{Unit tests}{chapter.7}% 87
-\BOOKMARK [1][-]{section.7.4}{Integration tests}{chapter.7}% 88
-\BOOKMARK [1][-]{section.7.5}{Neopixel Ring}{chapter.7}% 89
-\BOOKMARK [2][-]{subsection.7.5.1}{Current experiment}{section.7.5}% 90
-\BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 91
-\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 92
-\BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 93
-\BOOKMARK [1][-]{section.8.1}{Software Tests}{chapter.8}% 94
-\BOOKMARK [2][-]{subsection.8.1.1}{Tests outcome}{section.8.1}% 95
-\BOOKMARK [2][-]{subsection.8.1.2}{Insight on the software tests}{section.8.1}% 96
-\BOOKMARK [1][-]{section.8.2}{Hardware module tests}{chapter.8}% 97
-\BOOKMARK [2][-]{subsection.8.2.1}{Test results}{section.8.2}% 98
-\BOOKMARK [2][-]{subsection.8.2.2}{Discussions}{section.8.2}% 99
-\BOOKMARK [1][-]{section.8.3}{Ring experiments}{chapter.8}% 100
-\BOOKMARK [2][-]{subsection.8.3.1}{Current drawn by the Ring}{section.8.3}% 101
-\BOOKMARK [2][-]{subsection.8.3.2}{Ring temperature by the Ring}{section.8.3}% 102
-\BOOKMARK [2][-]{subsection.8.3.3}{Illuminance produced by the Ring}{section.8.3}% 103
-\BOOKMARK [0][-]{chapter.9}{Conclusions}{}% 104
-\BOOKMARK [0][-]{chapter.10}{Recommendations}{}% 105
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 106
-\BOOKMARK [0][-]{appendix.B}{Datasheets}{}% 107
-\BOOKMARK [0][-]{appendix.C}{Addenda}{}% 108
-\BOOKMARK [1][-]{section.C.1}{Ethics Forms}{appendix.C}% 109
+\BOOKMARK [2][-]{subsection.1.4.1}{Overview of plan}{section.1.4}% 8
+\BOOKMARK [2][-]{subsection.1.4.2}{Chronological progression of the report}{section.1.4}% 9
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 10
+\BOOKMARK [1][-]{section.2.1}{The human sleep-wake cycle}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{The circadian rhythm}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{Internal circadian rhythms influenced by light}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.3}{Quantitative and qualitative characteristics of light on melatonin production}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.4}{Impact of light on human behaviour and sleep-wake cycle}{section.2.1}% 15
+\BOOKMARK [1][-]{section.2.2}{Lighting technologies}{chapter.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.1}{Light}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.2}{Type of light technologies}{section.2.2}% 18
+\BOOKMARK [2][-]{subsection.2.2.3}{Light treatment of sleep disorder}{section.2.2}% 19
+\BOOKMARK [1][-]{section.2.3}{Hardware modules}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.3.1}{Processors and microcontrollers}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.2}{Storage}{section.2.3}% 22
+\BOOKMARK [2][-]{subsection.2.3.3}{Wireless technology}{section.2.3}% 23
+\BOOKMARK [2][-]{subsection.2.3.4}{Touch screen}{section.2.3}% 24
+\BOOKMARK [2][-]{subsection.2.3.5}{Neopixels}{section.2.3}% 25
+\BOOKMARK [1][-]{section.2.4}{Communication protocols}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.4.1}{Serial Peripheral Interface \(SPI\) Bus}{section.2.4}% 27
+\BOOKMARK [2][-]{subsection.2.4.2}{Universal asynchronous receiver-transmitter \(UART\)}{section.2.4}% 28
+\BOOKMARK [2][-]{subsection.2.4.3}{Inter-Integrated Circuit \(I2C\)}{section.2.4}% 29
+\BOOKMARK [2][-]{subsection.2.4.4}{Neopixels serial protocol}{section.2.4}% 30
+\BOOKMARK [2][-]{subsection.2.4.5}{Serial protocol suggestion}{section.2.4}% 31
+\BOOKMARK [1][-]{section.2.5}{PCB Board Design}{chapter.2}% 32
+\BOOKMARK [1][-]{section.2.6}{Programming Languages}{chapter.2}% 33
+\BOOKMARK [2][-]{subsection.2.6.1}{C}{section.2.6}% 34
+\BOOKMARK [2][-]{subsection.2.6.2}{C++}{section.2.6}% 35
+\BOOKMARK [1][-]{section.2.7}{Software Tools and Libraries}{chapter.2}% 36
+\BOOKMARK [2][-]{subsection.2.7.1}{Atollic TrueSTUDIO for ARM}{section.2.7}% 37
+\BOOKMARK [2][-]{subsection.2.7.2}{Nextion IDE}{section.2.7}% 38
+\BOOKMARK [2][-]{subsection.2.7.3}{MIT App Inventor 2}{section.2.7}% 39
+\BOOKMARK [1][-]{section.2.8}{Design Models}{chapter.2}% 40
+\BOOKMARK [2][-]{subsection.2.8.1}{V-Model}{section.2.8}% 41
+\BOOKMARK [2][-]{subsection.2.8.2}{Spiral Model}{section.2.8}% 42
+\BOOKMARK [0][-]{chapter.3}{Methodology}{}% 43
+\BOOKMARK [1][-]{section.3.1}{Outline}{chapter.3}% 44
+\BOOKMARK [1][-]{section.3.2}{Literature Review}{chapter.3}% 45
+\BOOKMARK [1][-]{section.3.3}{Setup}{chapter.3}% 46
+\BOOKMARK [2][-]{subsection.3.3.1}{Hardware Setup}{section.3.3}% 47
+\BOOKMARK [2][-]{subsection.3.3.2}{Software Setup}{section.3.3}% 48
+\BOOKMARK [1][-]{section.3.4}{Implementation}{chapter.3}% 49
+\BOOKMARK [2][-]{subsection.3.4.1}{Level 1: Hardware and Utilities}{section.3.4}% 50
+\BOOKMARK [2][-]{subsection.3.4.2}{Level 2: Framework}{section.3.4}% 51
+\BOOKMARK [2][-]{subsection.3.4.3}{Level 3: Application and Unit tests}{section.3.4}% 52
+\BOOKMARK [2][-]{subsection.3.4.4}{Level 4: System tests}{section.3.4}% 53
+\BOOKMARK [2][-]{subsection.3.4.5}{Level 5: NPSC}{section.3.4}% 54
+\BOOKMARK [1][-]{section.3.5}{Experimentation}{chapter.3}% 55
+\BOOKMARK [2][-]{subsection.3.5.1}{Hardware tests}{section.3.5}% 56
+\BOOKMARK [2][-]{subsection.3.5.2}{Software tests}{section.3.5}% 57
+\BOOKMARK [2][-]{subsection.3.5.3}{Performance tests}{section.3.5}% 58
+\BOOKMARK [2][-]{subsection.3.5.4}{Acceptance tests}{section.3.5}% 59
+\BOOKMARK [1][-]{section.3.6}{Analysis}{chapter.3}% 60
+\BOOKMARK [0][-]{chapter.4}{Preliminary Design}{}% 61
+\BOOKMARK [1][-]{section.4.1}{System overview}{chapter.4}% 62
+\BOOKMARK [1][-]{section.4.2}{System components selection}{chapter.4}% 63
+\BOOKMARK [1][-]{section.4.3}{Visual outputs component design decisions}{chapter.4}% 64
+\BOOKMARK [1][-]{section.4.4}{Mechanical case}{chapter.4}% 65
+\BOOKMARK [0][-]{chapter.5}{Prototype Design}{}% 66
+\BOOKMARK [1][-]{section.5.1}{System design}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.2}{High-level design}{chapter.5}% 68
+\BOOKMARK [2][-]{subsection.5.2.1}{External storage}{section.5.2}% 69
+\BOOKMARK [2][-]{subsection.5.2.2}{Inputs/Outputs instruction design}{section.5.2}% 70
+\BOOKMARK [2][-]{subsection.5.2.3}{Input devices}{section.5.2}% 71
+\BOOKMARK [2][-]{subsection.5.2.4}{Alarm and Clock}{section.5.2}% 72
+\BOOKMARK [2][-]{subsection.5.2.5}{Visual outputs}{section.5.2}% 73
+\BOOKMARK [2][-]{subsection.5.2.6}{Sensors}{section.5.2}% 74
+\BOOKMARK [1][-]{section.5.3}{Details hardware design}{chapter.5}% 75
+\BOOKMARK [2][-]{subsection.5.3.1}{Neopixels boards}{section.5.3}% 76
+\BOOKMARK [2][-]{subsection.5.3.2}{Date and Temperature PCB}{section.5.3}% 77
+\BOOKMARK [0][-]{chapter.6}{Implementation}{}% 78
+\BOOKMARK [1][-]{section.6.1}{Framework}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.2}{Applpication}{chapter.6}% 80
+\BOOKMARK [2][-]{subsection.6.2.1}{Visual application}{section.6.2}% 81
+\BOOKMARK [2][-]{subsection.6.2.2}{Alarm application}{section.6.2}% 82
+\BOOKMARK [2][-]{subsection.6.2.3}{Instruction application}{section.6.2}% 83
+\BOOKMARK [1][-]{section.6.3}{Main}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.4}{Utilities}{chapter.6}% 85
+\BOOKMARK [0][-]{chapter.7}{Testing and Experimentation}{}% 86
+\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 87
+\BOOKMARK [1][-]{section.7.2}{Hardware module tests}{chapter.7}% 88
+\BOOKMARK [1][-]{section.7.3}{Unit tests}{chapter.7}% 89
+\BOOKMARK [1][-]{section.7.4}{Integration tests}{chapter.7}% 90
+\BOOKMARK [1][-]{section.7.5}{Neopixel Ring}{chapter.7}% 91
+\BOOKMARK [2][-]{subsection.7.5.1}{Current experiment}{section.7.5}% 92
+\BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 93
+\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 94
+\BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 95
+\BOOKMARK [1][-]{section.8.1}{Hardware module tests}{chapter.8}% 96
+\BOOKMARK [2][-]{subsection.8.1.1}{DS1307}{section.8.1}% 97
+\BOOKMARK [2][-]{subsection.8.1.2}{25LC640}{section.8.1}% 98
+\BOOKMARK [2][-]{subsection.8.1.3}{HC-06}{section.8.1}% 99
+\BOOKMARK [2][-]{subsection.8.1.4}{NX4024T032\137001}{section.8.1}% 100
+\BOOKMARK [2][-]{subsection.8.1.5}{WS2812}{section.8.1}% 101
+\BOOKMARK [2][-]{subsection.8.1.6}{Final comments on the hardware tests}{section.8.1}% 102
+\BOOKMARK [1][-]{section.8.2}{Software Tests}{chapter.8}% 103
+\BOOKMARK [2][-]{subsection.8.2.1}{Unit tests outcome}{section.8.2}% 104
+\BOOKMARK [2][-]{subsection.8.2.2}{Integration tests outcome}{section.8.2}% 105
+\BOOKMARK [2][-]{subsection.8.2.3}{Insight on Visual module integration failure}{section.8.2}% 106
+\BOOKMARK [1][-]{section.8.3}{Ring experiments}{chapter.8}% 107
+\BOOKMARK [2][-]{subsection.8.3.1}{Current drawn by the Ring}{section.8.3}% 108
+\BOOKMARK [2][-]{subsection.8.3.2}{Ring temperature by the Ring}{section.8.3}% 109
+\BOOKMARK [2][-]{subsection.8.3.3}{Illuminance produced by the Ring}{section.8.3}% 110
+\BOOKMARK [0][-]{chapter.9}{Conclusions and Recommendations}{}% 111
+\BOOKMARK [1][-]{section.9.1}{Review of objectives}{chapter.9}% 112
+\BOOKMARK [1][-]{section.9.2}{Reflections on the design}{chapter.9}% 113
+\BOOKMARK [1][-]{section.9.3}{Recommendation for future work}{chapter.9}% 114
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 115
+\BOOKMARK [0][-]{appendix.B}{Experiment results}{}% 116
+\BOOKMARK [1][-]{section.B.1}{Tables}{appendix.B}% 117
+\BOOKMARK [2][-]{subsection.B.1.1}{Current drawn by the Ring}{section.B.1}% 118
+\BOOKMARK [2][-]{subsection.B.1.2}{Ring temperature by the Ring}{section.B.1}% 119
+\BOOKMARK [2][-]{subsection.B.1.3}{Illuminance produced by the Ring}{section.B.1}% 120
+\BOOKMARK [0][-]{appendix.C}{Project artefact}{}% 121
+\BOOKMARK [1][-]{section.C.1}{Git repository}{appendix.C}% 122
+\BOOKMARK [1][-]{section.C.2}{Project structure}{appendix.C}% 123
+\BOOKMARK [2][-]{subsection.C.2.1}{Overview}{section.C.2}% 124
+\BOOKMARK [2][-]{subsection.C.2.2}{hardware}{section.C.2}% 125
+\BOOKMARK [0][-]{appendix.D}{User manual}{}% 126
+\BOOKMARK [0][-]{appendix.E}{Future of the NPSC}{}% 127
+\BOOKMARK [0][-]{appendix.F}{Addenda}{}% 128
+\BOOKMARK [1][-]{section.F.1}{Ethics Forms}{appendix.F}% 129

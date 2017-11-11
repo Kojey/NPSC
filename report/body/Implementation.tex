@@ -3,30 +3,6 @@ This section provides information on the software implementation of the NPSC. Re
 The information on the Utilities and Framework module are given in tabular form the functions in these modules have little complexity and scope \footnote{These functions do not rely on other functions, most of these are directly linked to the hardware or perform simple logic.}. 
    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% SECTION: Utilities
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Utilities}
-This module contains all functions used by other modules. \Cref{table:utilities} describes the use of each file in the Utilities module.
-\begin{table}[h!]
-\centering
-\caption{Description of the files at the Utilities level.}
-\label{table:utilities}
-\begin{tabular}{cp{30em}}
-\hline
-\hline
-\toprule
-\textbf{File Name} & \textbf{Description}\\
-\bottomrule
-\toprule
-queue & Contains functions to create a queue of a certain data type, add and remove elements from the queue. \\
-\midrule
-utils & Contains functions, variables and type definitions used other software modules at different levels of the hierarchy.\\
-\bottomrule
-\hline
-\hline
-\end{tabular}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Framework
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Framework}
@@ -119,7 +95,7 @@ The purpose of this process is to convert the data stored in the DMA Buffer into
 \label{fig:device_instructionUpdate}
 \end{figure}
 
-\subsubsection{Instruction Fectch Decode Execute (IFDE)}
+\subsubsection{Instruction Fectch Decode Execute (IFDE)}\label{IFDE}
 The IFDE's purpose is to fetch, decode and execute the instructions in the instruction queue. This process starts by checking that there are instructions in the instruction queue. It then fetches these instructions one by one, decode and execute the instructions. The process stops when the instruction queue is empty. This process is illustrated in \cref{fig:ifde} and a portion of the code used for its implementation is shown in listing \ref{code:ifde}. .
 \begin{figure}[ht]
 \centering
@@ -173,3 +149,28 @@ After the instruction \textit{\_instruction} is extracted from the \textit{instr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Main}
 The main or the master application has one unique role: \textit{to start all processes}. This application calls the initialization functions of each level which start the hardware communication protocols, the instruction update process, the IFDE process and so forth. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Utilities
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Utilities}
+This module contains all functions used by other modules. \Cref{table:utilities} describes the use of each file in the Utilities module.
+\begin{table}[h!]
+	\centering
+	\caption{Description of the files at the Utilities level.}
+	\label{table:utilities}
+	\begin{tabular}{cp{30em}}
+		\hline
+		\hline
+		\toprule
+		\textbf{File Name} & \textbf{Description}\\
+		\bottomrule
+		\toprule
+		queue & Contains functions to create a queue of a certain data type, add and remove elements from the queue. \\
+		\midrule
+		utils & Contains functions, variables and type definitions used other software modules at different levels of the hierarchy.\\
+		\bottomrule
+		\hline
+		\hline
+	\end{tabular}
+\end{table}

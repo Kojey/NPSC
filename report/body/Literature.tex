@@ -302,12 +302,14 @@ Each neopixel has a built-in IC controlling the LEDs' intensity based on the dat
 \begin{minipage}[b]{\textwidth}
 \includegraphics[scale=0.45]{neopixel_serial.png}
 \subcaption[third caption.]{As the first neopixel receives a stream of multiple 8 Bytes chunck of data, it takes the first 8 Bytes from the stream and transmit the rest to the next neopixel in the cascade. A rest signal indicates where the stream of data ends.}
-\label{fig:neopixel_cascade}
+\label{fig:neopixel_serial}
 \end{minipage}
 \caption{Illustration of the neopixels serial interface}
 \label{fig:neopixel_protocol}
 \end{figure}
  
+\subsection{Serial protocol suggestion}
+\textbf{MAYBE HAVE A SECTION THAT CONCLUDES ON THE SERIAL PROTOCOL TO SUGGEST}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: PCB Board Design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

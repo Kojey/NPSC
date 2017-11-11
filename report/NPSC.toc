@@ -5,7 +5,8 @@
 \contentsline {subsection}{\numberline {1.2.2}Purpose of the study}{2}{subsection.1.2.2}
 \contentsline {section}{\numberline {1.3}Scope and limitations}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Plan of development}{3}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Chronological progression of the report}{4}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.1}Overview of plan}{3}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Chronological progression of the report}{3}{subsection.1.4.2}
 \contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}The human sleep-wake cycle}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The circadian rhythm}{7}{subsection.2.1.1}
@@ -34,8 +35,9 @@
 \contentsline {subsection}{\numberline {2.4.2}Universal asynchronous receiver-transmitter (UART)}{17}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{17}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{19}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Serial protocol suggestion}{20}{subsection.2.4.5}
 \contentsline {section}{\numberline {2.5}PCB Board Design}{20}{section.2.5}
-\contentsline {section}{\numberline {2.6}Programming Languages}{20}{section.2.6}
+\contentsline {section}{\numberline {2.6}Programming Languages}{21}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}C}{21}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}C++}{21}{subsection.2.6.2}
 \contentsline {section}{\numberline {2.7}Software Tools and Libraries}{21}{section.2.7}
@@ -49,14 +51,14 @@
 \contentsline {section}{\numberline {3.1}Outline}{24}{section.3.1}
 \contentsline {section}{\numberline {3.2}Literature Review}{24}{section.3.2}
 \contentsline {section}{\numberline {3.3}Setup}{25}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Hardware setup}{25}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.1}Hardware Setup}{25}{subsection.3.3.1}
 \contentsline {subsubsection}{Personal or Desktop Computer}{25}{section*.30}
 \contentsline {subsubsection}{STM32F4 Discovery board}{25}{section*.31}
 \contentsline {subsubsection}{Arduino board}{26}{section*.32}
 \contentsline {subsubsection}{Electronic modules}{26}{section*.33}
 \contentsline {subsubsection}{Logic analyser}{26}{section*.34}
 \contentsline {subsubsection}{Serial to USB converter}{26}{section*.36}
-\contentsline {subsection}{\numberline {3.3.2}Software setup}{27}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}Software Setup}{27}{subsection.3.3.2}
 \contentsline {subsubsection}{Atolic TrueSTUDIO}{27}{section*.37}
 \contentsline {subsubsection}{Nextion IDE}{27}{section*.38}
 \contentsline {subsubsection}{Logic analyser software}{27}{section*.39}
@@ -103,16 +105,16 @@
 \contentsline {subsubsection}{Weekday}{46}{section*.62}
 \contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{46}{subsection.5.3.2}
 \contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Utilities}{48}{section.6.1}
-\contentsline {section}{\numberline {6.2}Framework}{48}{section.6.2}
-\contentsline {section}{\numberline {6.3}Applpication}{49}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Visual application}{49}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Alarm application}{50}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Instruction application}{50}{subsection.6.3.3}
-\contentsline {subsubsection}{DMA interrupt}{51}{section*.69}
-\contentsline {subsubsection}{Device instruction update}{52}{section*.71}
-\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{53}{section*.73}
-\contentsline {section}{\numberline {6.4}Main}{54}{section.6.4}
+\contentsline {section}{\numberline {6.1}Framework}{48}{section.6.1}
+\contentsline {section}{\numberline {6.2}Applpication}{48}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Visual application}{48}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Alarm application}{49}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Instruction application}{50}{subsection.6.2.3}
+\contentsline {subsubsection}{DMA interrupt}{50}{section*.68}
+\contentsline {subsubsection}{Device instruction update}{50}{section*.70}
+\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{51}{section*.72}
+\contentsline {section}{\numberline {6.3}Main}{54}{section.6.3}
+\contentsline {section}{\numberline {6.4}Utilities}{54}{section.6.4}
 \contentsline {chapter}{\numberline {7}Testing and Experimentation}{55}{chapter.7}
 \contentsline {section}{\numberline {7.1}Overview}{55}{section.7.1}
 \contentsline {section}{\numberline {7.2}Hardware module tests}{57}{section.7.2}
@@ -121,32 +123,56 @@
 \contentsline {section}{\numberline {7.5}Neopixel Ring}{58}{section.7.5}
 \contentsline {subsection}{\numberline {7.5.1}Current experiment}{59}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{59}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{60}{subsection.7.5.3}
+\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{61}{subsection.7.5.3}
 \contentsline {chapter}{\numberline {8}Results and Discussions}{63}{chapter.8}
-\contentsline {section}{\numberline {8.1}Software Tests}{63}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Tests outcome}{63}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Insight on the software tests}{64}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Hardware module tests}{64}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Test results}{64}{subsection.8.2.1}
-\contentsline {subsubsection}{DS1307}{64}{section*.85}
-\contentsline {subsubsection}{25LC640}{64}{section*.87}
-\contentsline {subsubsection}{HC-06}{64}{section*.89}
-\contentsline {subsubsection}{NX4024T032\_001}{65}{section*.91}
-\contentsline {subsubsection}{WS2812}{65}{section*.93}
-\contentsline {subsection}{\numberline {8.2.2}Discussions}{68}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Ring experiments}{68}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{68}{subsection.8.3.1}
-\contentsline {subsubsection}{Experimental results}{68}{section*.96}
-\contentsline {subsubsection}{Discussion}{68}{section*.103}
-\contentsline {subsection}{\numberline {8.3.2}Ring temperature by the Ring}{68}{subsection.8.3.2}
-\contentsline {subsubsection}{Experimental results}{68}{section*.104}
-\contentsline {subsubsection}{Discussion}{68}{section*.107}
-\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{68}{subsection.8.3.3}
-\contentsline {subsubsection}{Experimental results}{68}{section*.108}
-\contentsline {subsubsection}{Discussion}{68}{section*.115}
-\contentsline {chapter}{\numberline {9}Conclusions}{72}{chapter.9}
-\contentsline {chapter}{\numberline {10}Recommendations}{73}{chapter.10}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{78}{appendix.A}
-\contentsline {chapter}{\numberline {B}Datasheets}{83}{appendix.B}
-\contentsline {chapter}{\numberline {C}Addenda}{84}{appendix.C}
-\contentsline {section}{\numberline {C.1}Ethics Forms}{84}{section.C.1}
+\contentsline {section}{\numberline {8.1}Hardware module tests}{63}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}DS1307}{63}{subsection.8.1.1}
+\contentsline {subsubsection}{Discussion}{63}{section*.85}
+\contentsline {subsection}{\numberline {8.1.2}25LC640}{64}{subsection.8.1.2}
+\contentsline {subsubsection}{Discussion}{64}{section*.87}
+\contentsline {subsection}{\numberline {8.1.3}HC-06}{65}{subsection.8.1.3}
+\contentsline {subsubsection}{Discussion}{65}{section*.89}
+\contentsline {subsection}{\numberline {8.1.4}NX4024T032\_001}{65}{subsection.8.1.4}
+\contentsline {subsubsection}{Discussion}{65}{section*.91}
+\contentsline {subsection}{\numberline {8.1.5}WS2812}{65}{subsection.8.1.5}
+\contentsline {subsubsection}{Discussion}{66}{section*.94}
+\contentsline {subsection}{\numberline {8.1.6}Final comments on the hardware tests}{67}{subsection.8.1.6}
+\contentsline {section}{\numberline {8.2}Software Tests}{67}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Unit tests outcome}{67}{subsection.8.2.1}
+\contentsline {subsubsection}{Discussion}{68}{section*.96}
+\contentsline {subsection}{\numberline {8.2.2}Integration tests outcome}{68}{subsection.8.2.2}
+\contentsline {subsubsection}{Alarm}{68}{section*.98}
+\contentsline {subsubsection}{Instruction}{69}{section*.99}
+\contentsline {subsubsection}{Visual}{69}{section*.101}
+\contentsline {subsection}{\numberline {8.2.3}Insight on Visual module integration failure}{70}{subsection.8.2.3}
+\contentsline {subsubsection}{Different power line}{70}{section*.102}
+\contentsline {subsubsection}{Interrupt Service Routines}{70}{section*.103}
+\contentsline {section}{\numberline {8.3}Ring experiments}{70}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{70}{subsection.8.3.1}
+\contentsline {subsubsection}{Experimental results}{70}{section*.104}
+\contentsline {subsubsection}{Discussion}{70}{section*.108}
+\contentsline {subsection}{\numberline {8.3.2}Ring temperature by the Ring}{70}{subsection.8.3.2}
+\contentsline {subsubsection}{Experimental results}{70}{section*.109}
+\contentsline {subsubsection}{Discussion}{70}{section*.111}
+\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{70}{subsection.8.3.3}
+\contentsline {subsubsection}{Experimental results}{70}{section*.112}
+\contentsline {subsubsection}{Discussion}{70}{section*.116}
+\contentsline {chapter}{\numberline {9}Conclusions and Recommendations}{74}{chapter.9}
+\contentsline {section}{\numberline {9.1}Review of objectives}{74}{section.9.1}
+\contentsline {section}{\numberline {9.2}Reflections on the design}{74}{section.9.2}
+\contentsline {section}{\numberline {9.3}Recommendation for future work}{74}{section.9.3}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{79}{appendix.A}
+\contentsline {chapter}{\numberline {B}Experiment results}{84}{appendix.B}
+\contentsline {section}{\numberline {B.1}Tables}{84}{section.B.1}
+\contentsline {subsection}{\numberline {B.1.1}Current drawn by the Ring}{84}{subsection.B.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Ring temperature by the Ring}{84}{subsection.B.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Illuminance produced by the Ring}{84}{subsection.B.1.3}
+\contentsline {chapter}{\numberline {C}Project artefact}{87}{appendix.C}
+\contentsline {section}{\numberline {C.1}Git repository}{87}{section.C.1}
+\contentsline {section}{\numberline {C.2}Project structure}{87}{section.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Overview}{87}{subsection.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}hardware}{87}{subsection.C.2.2}
+\contentsline {chapter}{\numberline {D}User manual}{88}{appendix.D}
+\contentsline {chapter}{\numberline {E}Future of the NPSC}{89}{appendix.E}
+\contentsline {chapter}{\numberline {F}Addenda}{90}{appendix.F}
+\contentsline {section}{\numberline {F.1}Ethics Forms}{90}{section.F.1}
