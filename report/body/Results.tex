@@ -182,7 +182,7 @@ The integration tests are designed to verify the functionalities of the applicat
 \end{table}
 \subsubsection{Alarm}
 The first test verifies that the address of each datatype of the AlarmTypeDef \footnote{Type definition of an alarm containing a label, a ringtone, a pattern, a time, a date, \ldots} used to store the alarm is correct. The second test verify that an alarm has been successfully saved in the EEPROM. Those two tests which covers 66.67\% of the code indicate that the interaction between the alarm application and the EEPROM is correct. Two other tests were performed on the application to ensure that the alarm type definition are actually set as alarm in either alarm A or B and are triggered accordingly. These two test are not automatic and therefore a their coverage cannot be given. \textbf{These test have shown that the alarm application works perfectly.}
-  
+
 \subsubsection{Instruction}
 The instruction application test is similar to the hardware communication test. All functions in this application were tested under the \textit{instrcution\_execute} fucntions as it calls all other functions. The first set of instructions sent to the nextion screen after a clock request are displayed in \cref{fig:coms_instruction_nextion}.
 \begin{figure}[ht]
@@ -194,8 +194,8 @@ The instruction application test is similar to the hardware communication test. 
 As explained in \ref{IFDE}, the STM communicate with the nextion touchscreen using a process consisting of three phases. The first phase (instruction\_nextionStart) consists of sending \textit{code\_c\"{y}\"{y}\"{y}} as seen in \cref{fig:coms_instruction_nextion}. The following information sent are instructions from the second phase of communication. \textbf{The instruction application is working according to its design.}
 
 \subsubsection{Visual}
-The visual application which relies mainly on the neopixels hardware failed. After performing the tests explained in \ref{visual_fail}, two main design consideration were found to be the cause of the problem. Firstly using different power supply for the Ring module disturbs the data obtained by the neopixel even if both power supply have the same ground line. Secondly, when all module are activated, their interrupt service routines (ISRs) pause the stream of data sent to the neopixels. The stream cannont be paused as it will be interpreted by the neopixels as two different streams. 
- 
+The visual application which relies mainly on the neopixels hardware failed. After performing the tests explained in \ref{visual_fail}, two main design considerations were found to be the cause of the problem. Firstly using different power supplies for the Ring module disturbs the data obtained by the neopixel even if both power supplies have the same ground line. Secondly, when all modules are activated, their interrupt service routines (ISR) pause the stream of data sent to the neopixels. The stream cannot be paused as it will be interpreted by the neopixels as two different streams. 
+
 \subsection{Insight on Visual module integration failure}\label{visual_fail}
 \subsubsection{Different power line}
 \subsubsection{Interrupt Service Routines}
@@ -204,14 +204,14 @@ The visual application which relies mainly on the neopixels hardware failed. Aft
 % SECTION: Ring 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ring experiments}
-The Ring being a made out of many neopixels, it is considered as a huge neopixel refered to a the NeoPixel in this section. The experiments performed on the Ring are therefore to quantify the characteristics of this neopixel. This section aims to provides mathematical expressions of the NeoPixel's temperature rise, current drawn, and illuminance.
+The Ring, being made out of many neopixels,  is considered as a huge neopixel referred to the NeoPixel in this section. The experiments performed on the Ring are therefore to quantify the characteristics of this neopixel. This section aims to provides mathematical expressions of the NeoPixel's temperature rise, current drawn, and illuminance.
 
 \subsection{Current drawn by the Ring}
 \textbf{Requirement:}  \textit{The NeoPixel must be able to withstand a current of $10.8A$.}\\
-In order to evaluate the performance of the NeoPixel, three sub-experiments were performed on the it. The first experiment quantifies the current drawn by a single neopixel in the Ring per brightness and colour. The second experiment provides an approximation of the NeoPixel idle current. As for the third experiment provides an estimation of the NeoPixel's current per brightness level.
+In order to evaluate the performance of the NeoPixel, three sub-experiments were performed on it. The first experiment quantifies the current drawn by a single neopixel in the Ring per brightness and colour. The second experiment provides an approximation of the NeoPixel idle current. As for the third experiment provides an estimation of the NeoPixel's current per brightness level.
 
 \subsubsection{Current drawn by one neopixel} \label{current_one}
-The current drawn by a single neopixel per colour and brightness level is graphically represented by \cref{fig:current_one_pixel}. The current drawn per red, green and blue led is represented respectively by the plot of colour red, green, and blue. The current drawn by a single nepixel with all its colours set at the same brightness is represented by the black plot (RBG). The figure also provides the best fit line equation as well as the correlation between the best fit line and the plot.  
+The current drawn by a single neopixel per colour and brightness level is graphically represented by \cref{fig:current_one_pixel}. The current drawn per red, green and blue led is represented respectively by the plot of the colour red, green, and blue. The current drawn by a single neopixel with all its colours set at the same brightness is represented by the black plot (RBG). The figure also provides the best fit line equation as well as the correlation between the best fit line and the plot.  
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{current_one_pixel.pdf}
@@ -256,7 +256,7 @@ The correlations between the \cref{eq:f_red,eq:f_green,eq:f_blue} and the plots 
 	\textbf{Estimated NeoPixel current} = $7.966 \pm 0.213 A$\\
 }
 This estimation is $2.834\pm0.213A$ less than the board current requirement.
-  
+
 \subsubsection{Idle current of the NeoPixel}\label{idle_current}
 The idle current of the NeoPixel per neopixels receiving data is shown in \cref{fig:current_idle}. This result was obtained by taking eight sample listed in \cref{table:current_idle}. 
 \begin{figure}[ht]
@@ -274,10 +274,10 @@ r^2 = 0.9974\\
 \textit{$x$: number of neopixels}
 \end{multlined}
 \end{equation} 
-From \cref{eq:f_idle}, the NeoPixel is expected to have a idle current of $101.08mA$. The result shows that when no data is sent at all to the NeoPixel, it still draws a current of $88.57mA$. The neopixels each have a microcontroller, analysing the coming data and setting the brightness level of each led accordingly. When no data is sent to the neopixels, their microcontroller is still powered. Since no leds are turned on, the NeoPixel's minimum idle current of $88.57mA$ is the current drawn by each neopixel in the Ring. From \cref{eq:f_idle}, the idle current increases as the number of neopixel receiving power off data increases. This result is expected as each microcontroller has to do more processing as the number of neopixel increases. 
-  
-\subsubsection{Current drawn by the NeoPixel}
-The current drawn by the NeoPixel (ring of 180 neopixels) is graphically represented in \cref{fig:current_180_neopixels}. All red, green, and blue leds were set to the same brightness level to reduce the complexity of the experiment. The current values were obtained by averaging the results of three sample per brightness as shown in \cref{table:current_180_neopixels}. 
+From \cref{eq:f_idle}, the NeoPixel is expected to have a idle current of $101.08mA$. The result shows that when no data is sent at all to the NeoPixel, it still draws a current of $88.57mA$. The neopixels each have a microcontroller, analysing the coming data and setting the brightness level of each led accordingly. When no data is sent to the neopixels, their microcontroller is still powered. Since no LEDs are turned on, the NeoPixel's minimum idle current of $88.57mA$ is the current drawn by each neopixel in the Ring. From \cref{eq:f_idle}, the idle current increases as the number of neopixel receiving power off data increases. This result is expected as each microcontroller has to do more processing as the number of neopixel increases. 
+
+\subsubsection{Current drawn by the NeoPixel}\label{current_180}
+The current drawn by the NeoPixel (ring of 180 neopixels) is graphically represented in \cref{fig:current_180_neopixels}. All red, green, and blue LEDs were set to the same brightness level to reduce the complexity of the experiment. The current values were obtained by averaging the results of three sample per brightness as shown in \cref{table:current_180_neopixels}. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{current_180_neopixels.pdf}
@@ -294,15 +294,15 @@ r^2 = 0.9978\\
 \end{multlined}
 \end{equation} 
 The mathematical model provided by \cref{eq:f_180} is bounded by $0A$ and $6.9723A$. Using the table used to find this model, the NeoPixel has an idle current of $0.12A$ and a maximum current of $6.94A \pm 0.08 A$. The idle current is more than the one obtained in \cref{idle_current} by $0.031A$. The maximum current drawn by the NeoPixel at full brightness of all its leds is $7.020A$, this is $3.78A$ less than the expected current drawn. Obtaining a smaller current drawn by the NeoPixel compared to the one calculated from the datasheet  was expected after analysis of the results in \cref{current_one}. The experimental current drawn by the NeoPixel is less than the second theoretical estimation by $0.946A$.
- 
+
 \subsubsection{Overal discussion}
-The experiments done to estimate the current drawn by the NeoPixel provided interresting results. Each led draws the same current per brightness level. The microcontroller of each neopixel draws a small amount of current defined as the neopixel's idle current. The NeoPixel itself draws $6.94A \pm 0.08 A$ which is $3.78A$ less than the theoretical current.\\
+The experiments done to estimate the current drawn by the NeoPixel provided interesting results. Each led draws the same current per brightness level. The microcontroller of each neopixel draws a small amount of current defined as the neopixel's idle current. The NeoPixel itself draws $6.94A \pm 0.08 A$ which is $3.78A$ less than the theoretical current.\\
 \textbf{The NeoPixel draws less than 10.8A}
 
 
 \subsection{Ring temperature}
 \textbf{Expectation:} \textit{The Ring should have a temperature rise of $15^oC$}.\\
-The temperature rise of the Ring is graphicaly represented by \cref{fig:temperature_ring}. The temperature was taken per brightness level, however, it was judged more useful to have a relationship between the Ring's temperature and its current drawn. 
+The temperature rise of the Ring is graphically represented by \cref{fig:temperature_ring}. The temperature was taken per brightness level, however, it was judged more useful to have a relationship between the Ring's temperature and its current drawn. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{temperature_ring.pdf}
@@ -311,7 +311,7 @@ The temperature rise of the Ring is graphicaly represented by \cref{fig:temperat
 \end{figure}
 
 \subsubsection{Discussion}
-The temperature rise varies from $2.176^oC$ to $44.75^oC$. The lowest temperature rise is the one value corresponding to the idle state of the NeoPixel. As for the highest temperature represent the temperature rise of the NeoPixel at full brightness of all its leds. The mathematical model of the temperature rise is given by the linear equation:
+The temperature rise varies from $2.176^oC$ to $44.75^oC$. The lowest temperature rise is the one value corresponding to the idle state of the NeoPixel. As for the highest temperature represent the temperature rise of the NeoPixel at full brightness of all its LEDs. The mathematical model of the temperature rise is given by the linear equation:
 \begin{equation}
 \label{eq:f_temp}
 \begin{multlined}
@@ -321,29 +321,70 @@ r^2 = 0.9927\\
 \end{multlined}
 \end{equation}  
 The temperature rise obtained is way above what the board was designed for. In \cref{ring_pcb}, it predicted that the board temperature will exceed what it was designed for due to the mechanical constraint of the Ring. \\
+Another observation was made on the effect of the board temperature on the current drawn. The current listed in \cref{table:current_180_neopixels,table:temperature_ring} varies significantly. In the result obtained in \cref{current_180}, the temperature in \cref{table:current_180_neopixels} decreases as more sample are taken. It is known that the resistivity os a wire increases as the wire temperature increases. Moreover, the relation between current and voltage is given by $I=\frac{V}{R}$. Based on these relationships, an increase in the board temperature will result in an increase of the board resistivity resulting in an increase of the track resistivity. As the Ring is supplied with a constant voltage of $5V$, an increase in the track resistance results in a decrease of the board's current drawn, which is observed in these experiments.\\
 
 \subsection{Illuminance produced by the Ring}
-\subsubsection{Experimental results}
+\textbf{Requirement:}  \textit{The NeoPixel must be able to emit light of $460\pm 10 nm$ wavelength with an illuminance of $30lx$.}\\
+The results of the experiments are sectioned into two categories, the illuminance of the blue led, and the relationship between the NeoPixel illuminance and the distance and angle to the normal of the NeoPixel's surface. Because the NeoPixel uses a space of $21*21cm^2$, it was considered as a semisphere with a radius of $21cm$. For this reason, the results obtained at a distance of less than 20cm were discarded as not all neopixel's light would be received by an object inside the semi-sphere described.\\
+All the results obtained for the experiment are shown in \cref{appendix_result}.
 
+\subsubsection{Blue light illuminance}\label{illuminance_blue}
+The blue led on the neopixel have a wavelength of $465-467nm$ and are the only led whose wavelength is in the range of $460\pm 10 nm$. The illuminance-distance relationship was observed at full blue light brightness at 0, 30, 60, and 90 degrees and is graphically represented in \cref{fig:illuminance_distance}. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{illuminance_blue.pdf}
-	\caption{}
+	\caption{Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.}
 	\label{fig:illuminance_blue}
 \end{figure}
+The illuminance decreases exponentially as the distance increases. The maximum illuminance of $6420lx$ is obtained at a distance of 20cm away from the normal to the NeoPixel's surface. The minimum illuminance $30lx$ is obtained at any object located 100cm away and at an angle of 90 degrees to the NeoPixel's surface. Any object located in the semi-circle of radius 100cm with the NeoPixel at the centre of the semi-circle and facing the described region will receive a minimum of $30lx$. \\
+Based on \cref{eq:illuminance}, the NeoPixel blue light is supposed to have an illuminance of $32.4lx$ at a distance of 100cm. However, the NeoPixel's illuminance at 100cm in the experiment performed is $557lx$. Although the behaviour of the plots in \cref{fig:illuminance_blue} is expected, the illuminance of the NeoPixel is 17 time the expected illuminance. \\
+To understand this difference, the lux meter used for the experiment was compared to other types of lux meter available on smartphones. The result obtained by these lux meters were similar. The room used for the experiment was completely dark and the lux meter's reading was $0lx$ before the NeoPixel was turned on. A possible reason is the reflection in the room. The NeoPixel was placed on white tables and the light was certainly reflected from the table to the lux meter increasing its reading.    
 
+\subsubsection{Relationship between illuminance and distance to the board}
+The result focuses on the relationship between the distance to the NeoPixel and the illuminance. To obtained the data of interest, the illuminance of the NeoPixel tabulated in \cref{table:illuminance_distance_value} at certain distances was converted into a ratio. This ratio is obtained by dividing the illuminance obtained at any distance by the illuminance at 20cm. The relationship between the illuminance and the distance to the board is graphically represented by \cref{fig:illuminance_distance}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{illuminance_distance.pdf}
-	\caption{}
+	\caption{Relationship between the coefficient of decadence of the Ring's illuminance and the distance to the Ring.}
 	\label{fig:illuminance_distance}
 \end{figure}
+The plot obtained by \cref{fig:illuminance_distance} has a exponential trend given by:
+\begin{equation}
+\label{eq:f_distance}
+\begin{multlined}
+f(x) = 108.313x^{-1.52654} \\
+r^2 = 0.9761\\
+\textit{$x$: Distance (cm)}
+\end{multlined}
+\end{equation} 
+According to \cref{eq:illuminance}, the illuminance is inversly proportional to the square of the distance in meter. It is relatedd to the NeoPixel in the following way (see \cref{appendix_equation}):\\
+{
+	\centering    
+	\[g(x) = 400x^{-2}\]\\
+	\textit{x: Distance (cm)}\\
+}
+The difference between this theoretical equation and the experimental mathematical model is illustrated in \cref{fig:illuminance_corr}. The two graphs have a correlation of 99.62\% indicating that the experimental model is accurate. The difference the plot's illuminance ratio is due to the errors in the experimental model as mentioned in \cref{illuminance_blue}. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.6]{illuminance_corr.pdf}
+	\caption{Experimental vs theoretical relationship between illuminance and distance.}
+	\label{fig:illuminance_corr}
+\end{figure}
 
+\subsubsection{Relationship between illuminance and angle of positionement}
+The result focuses on the relationship between the angle to the NeoPixel and the illuminance. To obtained the data of interest, the illuminance of the NeoPixel at certain angle was converted into a ratio. This ratio is obtained by dividing the illuminance obtained at any angle by the illuminance at an angle of 0 degrees. The relationship between the illuminance and the angle to the normal of the NeoPixel surface is graphically represented by \cref{fig:illuminance_angle}.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{illuminance_angle.pdf}
-	\caption{}
+	\caption{Relationship between the Ring illuminance and the angle to the normal of the Ring surface.}
 	\label{fig:illuminance_angle}
 \end{figure}
+The illuminance decreases as the angle to the normal of the NeoPixel surface increases. Any objects in front of the NeoPixel will receive an illuminance. However, any object behind the NeoPixel will not. This model follows Lambert's Cosine law given by \cref{eq:lambert}. To maximise the illuminance, the object must be on the normal to the surface of the NeoPixel.
 
-\subsubsection{Discussion}
+\subsubsection{Conclusion of these experiment}
+The NeoPixel has the following characteristics:
+\begin{itemize}
+	\item The illuminance received by an object decreases as the is moved further away from the NeoPixel.
+	\item The illuminance received by an object decreases as the is moved at an angle further away from the normal of the NeoPixel.
+	\item \textbf{The NeoPixel produces at least 30lx on any object placed in front of the neopixel at a maximum distance of 1m.}
+\end{itemize}

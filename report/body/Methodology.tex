@@ -7,7 +7,6 @@ This chapter describes the way the research for the project was done. It is expl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Outline}
 The project is about the design of an embedded system capable meeting the light requirement as mentioned in \cref{introduction} while being user-friendly and personalisable to the user's content. To achieve this, two design methods were used. The spiral model was used to provide an understanding of the cycle of the ES, from the identification of the requirement to the validation of the user requirements. As for the  V-model, it was used to ensure a thorough testing of the device ensuring that all modules and system at a higher level function perfectly. \\
-{\bf MENTION SPIRAL MODEL USE HERE}.\\
 The first step in the development of the design consists of the understanding of the requirements presented in \cref{scope_and_limitations}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Research process 
@@ -54,7 +53,7 @@ A logic analyser is a tool that analyses the data coming from one of its channel
 \subsubsection{Serial to USB converter}
 The Serial to USB converter allows the translation of UART commands to USB command. This module is required to program the Nextion screen.
  
-\subsection{Software Setup}
+\subsection{Software Setup}\label{software_setup}
 Certain software tools are required for the development of the NPSC software. Those mentioned below are the one used for this project, other version or type of software can be used as long as they have the same functionalities as the one listed below.
 \subsubsection{Atolic TrueSTUDIO}
 Atolic TrueSTUDIO provides debugging functionalities such as breakpoint, memory and register observation as well as backtracking. It contains all the STM libraries which facilitate development. Moreover, it comes with STLink so no external debugging setup is required. Other IDEs such as Keil or Eclipse can also be used instead of Atolic TrueSTUDIO. In such case, it is essential to make sure that C is installed as well as gdb and STlink alongside its drivers. 

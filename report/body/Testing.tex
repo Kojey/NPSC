@@ -123,7 +123,7 @@ The Ring was designed so that it emits light with a wavelength of $460\pm 10nm$ 
 This experiment was done to verify that the board can draw $12A$ without blowing up (not kidding) and to find a mathematical model between the neopixel brightness and the board current consumption.\\
 The first part of the consisted of finding the current drawn by a single neopixel based on its colour and brightness. The brightness levels are from 0\% to 100\% in steps of 10\%, so there were 11 brightness levels in total. The 0\% brightness level is defined as the idle state of the neopixel as all pixels are not turned on.\\
 The second part of this test consisted of measuring the current consumption of the Ring with all 180 neopixels. Firstly the idle current of the board was measure (current when the board is powered and no data is sent). Secondly, the current per brightness level was measured.\\
-In this experiment and all described below, the \textit{TOPWARD, DC power supply 33010D} capable of supplying a current of $10,$ was used.
+In this experiment and all described below, the \textit{TOPWARD, DC power supply 33010D} capable of supplying a current of $10$ was used.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.08]{power_supply.jpg}
@@ -142,7 +142,7 @@ Four temperature sensors (MCP9700) were evenly placed at the back of the board a
 An Arduino Uno was used to run this experiment by controlling the neopixels brightness and colour and by controlling the temperature sensors. The schematic in \cref{fig:temp_ring} was used to set up the experiment. In this schematic, $T_0$ is the temperature sensor measuring the room temperature and the temperature sensors $T_1$, $T_2$, $T_3$, and $T_4$ are the sensors placed on the board. Different power supplies were used in this experiment, the $5V$ @ $10A$ power supply was used to power the Ring while a $5V$ @ $0.5A$ power supply coming from the usb port of a laptop was used to power the Arduino and the temperature sensor. An LED was used to display the outcome of the experiment.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.13]{temp_ring.jpg}
+	\includegraphics[scale=0.4]{temp_ring.png}
 	\caption{Schematics used to obtain the board temperature.}
 	\label{fig:temp_ring}
 \end{figure}

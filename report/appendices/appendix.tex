@@ -1,0 +1,70 @@
+\chapter{Project artefact}
+
+
+\section{Git repository}
+The project is under version control and is found on \href{https://github.com/Kojey/NPSC}{github}.\\
+\subsection{Branches}
+The repository has five main branches: 
+\begin{itemize}
+	\item \textbf{master}: This is the master branch running on the NPSC hardware.
+	\item \textbf{hardware}: All hardware modifications are done on this branches prior any merge to master. 
+	\item \textbf{software}: All software modifications are done on this branches prior any merge to master. This include the STM, Nextion, Android application and arduino testing code. 
+	\item \textbf{mechanical}: All mechanical modifications are done on this branches prior any merge to master. 
+	\item \textbf{report}: All modification related to the report writing are done on this branches prior any merge to master. 
+\end{itemize}
+
+\subsubsection{Commit format}
+For anyone willing to contribute to the project, please adhere to the commit format shown in listing \ref{code:commit}:\\
+\begin{lstlisting}[language=C,caption=Commit format, label=code:commit]
+<branch>-<modification type>: <Summary of the change>
+
+<details on changes performed ...>
+<details on changes performed ...>
+...
+<more detail on changes>
+\end{lstlisting}
+
+\section{Project structure}
+\subsection{Overview}
+\subsubsection{Project tree}
+\begin{itemize}
+	\item \textbf{bibliography}: All papers used in the litterature review.
+	\item \textbf{ethics}: All ethics related documents.
+	\item \textbf{experiments}: All experiments codes and results performed on the NPSC.
+	\item \textbf{miscellaneous}: Calculation done to find illuminance emitted by the neopixels.
+	\item \textbf{mechanical}: All mechanical documents used in the design.
+	\item \textbf{report}: The latex report.
+	\item \textbf{hardware}: \label{npsc_harware}
+	\begin{itemize}
+		\item \textbf{design}: All schematics and PCB designed.
+		\item \textbf{documentation}: All datasheets for the components used.
+		\item \textbf{manufacturing}: All Gerber files required for the PCBs manufacturing.
+	\end{itemize}
+	\item \textbf{software}: \label{npsc_software}
+	\begin{itemize}
+		\item \textbf{code}:
+		\begin{itemize}
+			\item \textbf{android}: The APK used for the android application.
+			\item \textbf{arduino}: All android code used to do prior tests on the hardware module.
+			\item \textbf{master}: The NPSC software library and the Atolic TrueSTUDIO project settings.
+			\item \textbf{screen}: The nextion code in HMI format and fonts used.
+		\end{itemize}
+		\item \textbf{documentation}:
+		\begin{itemize}
+			\item \textbf{api/master/html}: The html and css format of the NPSC's API (open the index.html file)
+			\item instruction set in excel format 
+		\end{itemize}
+		\item \textbf{graphics}: All graphics used for the Nextion touchscreen
+		\item \textbf{templates}: Doxygen templates used for header and c files.
+	\end{itemize}
+\end{itemize}
+
+
+\subsubsection{NPSC library tree}
+\begin{itemize}
+	\item \textbf{Application}: Contains all files used for the application modules.
+	\item \textbf{Framework}: Contains all files used for the framework modules.
+	\item \textbf{IntegrationTest}: Contains all files used for the integration tests.
+	\item \textbf{UnitTest}: Contains all files used for the unit tests.
+	\item \textbf{Utilities}: Contains all files used for the Utilities.
+\end{itemize}

@@ -1,8 +1,5 @@
-\chapter{Experiment results}
+\chapter{Experiment results}\label{appendix_result}
 
-\section{Tables}
-
-\subsection{Current drawn by the Ring}
 \begin{table}[h!]
 	\centering
 	\caption{Current drawn by a one neopixel per colour at different brightness levels. The white colour is obtain by turning the red, green and blue LEDs on at the same brightness.}
@@ -85,7 +82,6 @@
 	\end{tabular}
 \end{table}				
 
-\subsection{Ring temperature}
 \begin{table}[h!]
 	\centering
 	\caption{Temperature rise of the Ring}
@@ -112,7 +108,6 @@
 	\end{tabular}
 \end{table}
 
-\subsection{Illuminance produced by the Ring}
 \begin{table}[h!]
 	\centering
 	\caption{Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.}
@@ -165,6 +160,35 @@
 		\hline
 	\end{tabular}
 \end{table}
+
+
+\begin{table}[h!]
+	\centering
+	\caption{Relationship between the Ring illuminance and the distance to the Ring.}
+	\label{table:illuminance_distance_value}
+	\begin{tabular}{cccccccc}
+		\hline
+		\hline
+		\toprule
+		\multirow{2}{*}{\textbf{Distance (cm)}} & \multicolumn{5}{c}{\textbf{Brightness (\%)}} & \multirow{2}{*}{\textbf{Average}} & \multirow{2}{*}{\textbf{Std dev}}\\
+		& 10 & 30 & 50 & 80 & 90 & 100 &\\
+		\bottomrule
+		\toprule
+20	&	515	&	2870	&	4443	&	7042	&	10000	\\
+30	&	351	&	1820	&	2871	&	4573	&	5926	\\
+40	&	229	&	1150	&	1947	&	2880	&	3608	\\
+50	&	162	&	825	&	1383	&	1982	&	2657	\\
+60	&	120	&	587	&	1017	&	1520	&	2042	\\
+70	&	92	&	440	&	787	&	1202	&	1500	\\
+80	&	74	&	366	&	617	&	925	&	1171	\\
+90	&	60	&	291	&	508	&	900	&	970	\\
+100	&	52	&	236	&	418	&	610	&	820	\\
+		\bottomrule
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
+
 \begin{table}[h!]
 	\centering
 	\caption{Relationship between the Ring illuminance and the angle to the normal of the Ring surface.}

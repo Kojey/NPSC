@@ -1,13 +1,15 @@
-\chapter{Project artefact}
-
-
-\section{Git repository}
-README.md
-where to find it?\\
-Ask for access\\
-Branches \\
-Commit format \\
-
-\section{Project structure}
-\subsection{Overview}
-\subsection{hardware}\label{npsc_harware}
+\chapter{Equations}\label{appendix_equation}
+\section{Theoretical equation of the illuminance ratio received by an object a certain distance to the NeoPixel}
+{
+	\centering	
+	\[E_{v(lx)}=\frac{I_{v(cd)}}{(\frac{d_{cm}}{100})^2}\]	\\
+	\[E_{v(lx)}=\frac{(0.18+0.66+0.39)*180}{(\frac{d_{cm}}{100})^2}\]	\\
+	\[E_{v(lx)}=\frac{221.4}{(\frac{d_{cm}}{100})^2}\]	\\
+	\[E_{v(lx)}=\frac{221.4*10^{4}}{d_{cm}^2}\]	\\
+	\[E_{v(lx)}=\frac{221.4*10^{4}}{d_{cm}^2}\]	\\
+	\[g(x)=\frac{221.4*10^{4}}{x^2}\]	\\
+	Convert it to ratio :\\
+	\[g(x) = \frac{\frac{221.4*10^{4}}{x^2}}{\frac{221.4*10^{4}}{20^2}}\]\\
+	\[g(x) = 400x^{-2}\]\\
+	\textit{x: Distance (cm)}
+}

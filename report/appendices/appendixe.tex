@@ -1,3 +1,29 @@
-\chapter{Future of the NPSC}
+\chapter{User manual}
+\textbf{Version: 1.0}\\
+This user manual is written for the first prototype of the NPSC. Not all applications have been successfully implemented for this prototype as a result, this manual only provides information on the working modules.
 
-Here do some research on light treatment and mention how can the device fit as a supplement in the cure of sleep disorder
+\section{Requirements}
+To use the NPSC, the user must have the following items.
+\begin{itemize}
+	\item NPSC prototype.
+	\item A USB mini B cable to power the STM32F4 Discovery board.
+	\item A 5V@10A power supply for the visual module (Ring, Time \& Weekday).
+	\item A 5V@500mA power supply for the STM32F4 Discovery board.
+	\item A computer running the software listed in \ref{software_setup} (for developers only).
+\end{itemize}
+
+\section{How to use it?}
+\subsection{User mode}
+The user must power the NPSC by providing power to the visual outputs and the STM (use the list of requirement for guidance).\\
+The NPSC is controlled by two devices, the android application or the onboard touchscreen. The home screen displays the time and date information as well as the coming alarms.\\
+The following functionalities are found on the menu:
+\begin{itemize}
+	\item Clock: The clock information including, time, date can be updated from the clock screen.
+	\item Alarm: The alarm screen displays the alarm saved. Each alarm can be updated and set. 
+\end{itemize}
+
+\subsection{Developer mode}
+The STM32F4 Discovery board should be connected to a computer to program the STM. The screen would have to be removed from the NPSC case in order to be programmed.
+
+\section{Any issues?}
+Please send an email to kylekojey@gmail.com for any queries related to the NPSC.

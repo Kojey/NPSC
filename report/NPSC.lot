@@ -19,15 +19,20 @@
 \contentsline {table}{\numberline {8.1}{\ignorespaces Unit test outcome.\relax }}{67}{table.caption.95}
 \contentsline {table}{\numberline {8.2}{\ignorespaces Integration test outcome.\relax }}{68}{table.caption.97}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {9.1}{\ignorespaces Sub-requirements implementation satisfaction.\relax }}{79}{table.caption.121}
+\contentsline {table}{\numberline {9.2}{\ignorespaces Requirements implementation satisfaction.\relax }}{80}{table.caption.122}
+\contentsline {table}{\numberline {9.3}{\ignorespaces Review of objectives.\relax }}{81}{table.caption.124}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels. The white colour is obtain by turning the red, green and blue LEDs on at the same brightness.\relax }}{87}{table.caption.127}
-\contentsline {table}{\numberline {B.2}{\ignorespaces Current drawn by the neopixels in idle mode. The idle mode is defined as the state of the of the neopixel when no light is emitted.\relax }}{88}{table.caption.128}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{88}{table.caption.129}
-\contentsline {table}{\numberline {B.4}{\ignorespaces Temperature rise of the Ring\relax }}{88}{table.caption.130}
-\contentsline {table}{\numberline {B.5}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{89}{table.caption.131}
-\contentsline {table}{\numberline {B.6}{\ignorespaces Relationship between the coefficient of decadence of the Ring illuminance and the distance to the Ring.\relax }}{89}{table.caption.132}
-\contentsline {table}{\numberline {B.7}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{89}{table.caption.133}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels. The white colour is obtain by turning the red, green and blue LEDs on at the same brightness.\relax }}{90}{table.caption.134}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Current drawn by the neopixels in idle mode. The idle mode is defined as the state of the of the neopixel when no light is emitted.\relax }}{90}{table.caption.135}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{91}{table.caption.136}
+\contentsline {table}{\numberline {B.4}{\ignorespaces Temperature rise of the Ring\relax }}{91}{table.caption.137}
+\contentsline {table}{\numberline {B.5}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{91}{table.caption.138}
+\contentsline {table}{\numberline {B.6}{\ignorespaces Relationship between the coefficient of decadence of the Ring illuminance and the distance to the Ring.\relax }}{92}{table.caption.139}
+\contentsline {table}{\numberline {B.7}{\ignorespaces Relationship between the Ring illuminance and the distance to the Ring.\relax }}{92}{table.caption.140}
+\contentsline {table}{\numberline {B.8}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{92}{table.caption.141}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

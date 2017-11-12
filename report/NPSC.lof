@@ -39,7 +39,7 @@
 \contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{56}{figure.caption.75}
 \contentsline {figure}{\numberline {7.2}{\ignorespaces Power supply used in the Ring experiments.\relax }}{59}{figure.caption.79}
 \contentsline {figure}{\numberline {7.3}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.80}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{61}{figure.caption.81}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.81}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Setup of the temperature rise experiment.\relax }}{61}{figure.caption.82}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Illuminance test setup.\relax }}{62}{figure.caption.83}
 \addvspace {10\p@ }
@@ -54,19 +54,21 @@
 \contentsline {figure}{\numberline {8.9}{\ignorespaces Idle current of the NeoPixel per neopixels receiving power off data.\relax }}{71}{figure.caption.107}
 \contentsline {figure}{\numberline {8.10}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{72}{figure.caption.109}
 \contentsline {figure}{\numberline {8.11}{\ignorespaces Ring's temperature rise.\relax }}{74}{figure.caption.111}
-\contentsline {figure}{\numberline {8.12}{\ignorespaces \relax }}{75}{figure.caption.114}
-\contentsline {figure}{\numberline {8.13}{\ignorespaces \relax }}{75}{figure.caption.115}
-\contentsline {figure}{\numberline {8.14}{\ignorespaces \relax }}{76}{figure.caption.116}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{75}{figure.caption.114}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces Relationship between the coefficient of decadence of the Ring's illuminance and the distance to the Ring.\relax }}{76}{figure.caption.116}
+\contentsline {figure}{\numberline {8.14}{\ignorespaces Experimental vs theoretical relationship between illuminance and distance.\relax }}{77}{figure.caption.117}
+\contentsline {figure}{\numberline {8.15}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{78}{figure.caption.119}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{82}{figure.caption.119}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{83}{figure.caption.120}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{84}{figure.caption.121}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{84}{figure.caption.122}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{85}{figure.caption.123}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces \relax }}{85}{figure.caption.124}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces \relax }}{86}{figure.caption.125}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces \relax }}{86}{figure.caption.126}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Schematic of the Ring module\relax }}{85}{figure.caption.126}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{86}{figure.caption.127}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{87}{figure.caption.128}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{87}{figure.caption.129}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{88}{figure.caption.130}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \relax }}{88}{figure.caption.131}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces \relax }}{89}{figure.caption.132}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces \relax }}{89}{figure.caption.133}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
