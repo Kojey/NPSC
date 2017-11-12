@@ -17,7 +17,7 @@ text (11, 5.7, f, "fontsize", fsmall);
 text (11, 5.3, r, "fontsize", fsmall);
 
 xlabel("Brightness levels (\\%)","fontsize", fsize);
-ylabel("Current (mA)","fontsize", fsize);
+ylabel("Current (A)","fontsize", fsize);
 grid on;
 set(gca, "linewidth", lwidth, "fontsize", fsize);
 set (hf, "visible", "off");

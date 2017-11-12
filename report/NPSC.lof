@@ -50,23 +50,23 @@
 \contentsline {figure}{\numberline {8.5}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{66}{figure.caption.92}
 \contentsline {figure}{\numberline {8.6}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{66}{figure.caption.93}
 \contentsline {figure}{\numberline {8.7}{\ignorespaces instruction sent to the nextion touchscreen to update the clock displayed on the screen.\relax }}{69}{figure.caption.100}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces \relax }}{70}{figure.caption.105}
-\contentsline {figure}{\numberline {8.9}{\ignorespaces \relax }}{71}{figure.caption.106}
-\contentsline {figure}{\numberline {8.10}{\ignorespaces \relax }}{71}{figure.caption.107}
-\contentsline {figure}{\numberline {8.11}{\ignorespaces \relax }}{72}{figure.caption.110}
-\contentsline {figure}{\numberline {8.12}{\ignorespaces \relax }}{72}{figure.caption.113}
-\contentsline {figure}{\numberline {8.13}{\ignorespaces \relax }}{73}{figure.caption.114}
-\contentsline {figure}{\numberline {8.14}{\ignorespaces \relax }}{73}{figure.caption.115}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels.\relax }}{70}{figure.caption.105}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Idle current of the NeoPixel per neopixels receiving power off data.\relax }}{71}{figure.caption.107}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{72}{figure.caption.109}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Ring's temperature rise.\relax }}{74}{figure.caption.111}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces \relax }}{75}{figure.caption.114}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces \relax }}{75}{figure.caption.115}
+\contentsline {figure}{\numberline {8.14}{\ignorespaces \relax }}{76}{figure.caption.116}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{79}{figure.caption.118}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{80}{figure.caption.119}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{81}{figure.caption.120}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{81}{figure.caption.121}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{82}{figure.caption.122}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces \relax }}{82}{figure.caption.123}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces \relax }}{83}{figure.caption.124}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces \relax }}{83}{figure.caption.125}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{82}{figure.caption.119}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{83}{figure.caption.120}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{84}{figure.caption.121}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{84}{figure.caption.122}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{85}{figure.caption.123}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces \relax }}{85}{figure.caption.124}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces \relax }}{86}{figure.caption.125}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces \relax }}{86}{figure.caption.126}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

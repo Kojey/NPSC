@@ -152,7 +152,7 @@ The unit tests are sets of logical functions performed on specific hardware modu
 	\end{tabular}
 \end{table}
 \subsubsection{Discussion}
-All unit tests designed for the hardware have passed. This is an indication of the functioning of these hardware module at a logic level. This level is above the simple communication protocol verification between hardware. At this level, the logical operations performed on the hardware are perfomed. Note that the logic level hardware test require a positive outcome of the hardware communication tests.The coverage of the test is neither a line or statement coverage but a function coverage. For each test, the coverage is the ratio of the number of functions called by the module over the number of functions in the module as a percentage. A 33.33\% coverage indicates that only a third of the function in the module have been called. Therefore a low coverage is not an indication that the test did not cover all used functions of the module in the system.   
+\textbf{All unit tests designed for the hardware have passed.} This is an indication of the functioning of these hardware module at a logic level. This level is above the simple communication protocol verification between hardware. At this level, the logical operations performed on the hardware are perfomed. Note that the logic level hardware test require a positive outcome of the hardware communication tests.The coverage of the test is neither a line or statement coverage but a function coverage. For each test, the coverage is the ratio of the number of functions called by the module over the number of functions in the module as a percentage. A 33.33\% coverage indicates that only a third of the function in the module have been called. Therefore a low coverage is not an indication that the test did not cover all used functions of the module in the system.   
 
 \subsection{Integration tests outcome}
 The integration tests are designed to verify the functionalities of the applications. Unlike the unit tests, they are not specific to one framework but to one application. Each test is designed to suit the application are the logic of each application is different and complexed. The outcome and the coverage of the application test are given in \cref{table:software_integration_test}.
@@ -181,7 +181,7 @@ The integration tests are designed to verify the functionalities of the applicat
 	\end{tabular}
 \end{table}
 \subsubsection{Alarm}
-The first test verifies that the address of each datatype of the AlarmTypeDef \footnote{Type definition of an alarm containing a label, a ringtone, a pattern, a time, a date, \ldots} used to store the alarm is correct. The second test verify that an alarm has been successfully saved in the EEPROM. Those two tests which covers 66.67\% of the code indicate that the interaction between the alarm application and the EEPROM is correct. Two other tests were performed on the application to ensure that the alarm type definition are actually set as alarm in either alarm A or B and are triggered accordingly. These two test are not automatic and therefore a their coverage cannot be given. These test have shown that the alarm application works perfectly.
+The first test verifies that the address of each datatype of the AlarmTypeDef \footnote{Type definition of an alarm containing a label, a ringtone, a pattern, a time, a date, \ldots} used to store the alarm is correct. The second test verify that an alarm has been successfully saved in the EEPROM. Those two tests which covers 66.67\% of the code indicate that the interaction between the alarm application and the EEPROM is correct. Two other tests were performed on the application to ensure that the alarm type definition are actually set as alarm in either alarm A or B and are triggered accordingly. These two test are not automatic and therefore a their coverage cannot be given. \textbf{These test have shown that the alarm application works perfectly.}
   
 \subsubsection{Instruction}
 The instruction application test is similar to the hardware communication test. All functions in this application were tested under the \textit{instrcution\_execute} fucntions as it calls all other functions. The first set of instructions sent to the nextion screen after a clock request are displayed in \cref{fig:coms_instruction_nextion}.
@@ -191,7 +191,7 @@ The instruction application test is similar to the hardware communication test. 
 	\caption{instruction sent to the nextion touchscreen to update the clock displayed on the screen.}
 	\label{fig:coms_instruction_nextion}
 \end{figure}
-As explained in \ref{IFDE}, the STM communicate with the nextion touchscreen using a process consisting of three phases. The first phase (instruction\_nextionStart) consists of sending \textit{code\_c\"{y}\"{y}\"{y}} as seen in \cref{fig:coms_instruction_nextion}. The following information sent are instructions from the second phase of communication. The instruction application is working according to its design.
+As explained in \ref{IFDE}, the STM communicate with the nextion touchscreen using a process consisting of three phases. The first phase (instruction\_nextionStart) consists of sending \textit{code\_c\"{y}\"{y}\"{y}} as seen in \cref{fig:coms_instruction_nextion}. The following information sent are instructions from the second phase of communication. \textbf{The instruction application is working according to its design.}
 
 \subsubsection{Visual}
 The visual application which relies mainly on the neopixels hardware failed. After performing the tests explained in \ref{visual_fail}, two main design consideration were found to be the cause of the problem. Firstly using different power supply for the Ring module disturbs the data obtained by the neopixel even if both power supply have the same ground line. Secondly, when all module are activated, their interrupt service routines (ISRs) pause the stream of data sent to the neopixels. The stream cannont be paused as it will be interpreted by the neopixels as two different streams. 
@@ -204,44 +204,123 @@ The visual application which relies mainly on the neopixels hardware failed. Aft
 % SECTION: Ring 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ring experiments}
+The Ring being a made out of many neopixels, it is considered as a huge neopixel refered to a the NeoPixel in this section. The experiments performed on the Ring are therefore to quantify the characteristics of this neopixel. This section aims to provides mathematical expressions of the NeoPixel's temperature rise, current drawn, and illuminance.
 
 \subsection{Current drawn by the Ring}
-\subsubsection{Experimental results}
+\textbf{Requirement:}  \textit{The NeoPixel must be able to withstand a current of $10.8A$.}\\
+In order to evaluate the performance of the NeoPixel, three sub-experiments were performed on the it. The first experiment quantifies the current drawn by a single neopixel in the Ring per brightness and colour. The second experiment provides an approximation of the NeoPixel idle current. As for the third experiment provides an estimation of the NeoPixel's current per brightness level.
 
+\subsubsection{Current drawn by one neopixel} \label{current_one}
+The current drawn by a single neopixel per colour and brightness level is graphically represented by \cref{fig:current_one_pixel}. The current drawn per red, green and blue led is represented respectively by the plot of colour red, green, and blue. The current drawn by a single nepixel with all its colours set at the same brightness is represented by the black plot (RBG). The figure also provides the best fit line equation as well as the correlation between the best fit line and the plot.  
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{current_one_pixel.pdf}
-	\caption{}
+	\caption{Current drawn by a one neopixel per colour at different brightness levels.}
 	\label{fig:current_one_pixel}
 \end{figure}
+The currents drawn by each led in the neopixel differ by at most $1mA$. They follow the same trend which is expected although the neopixel datasheet does not provide the current consumption of each led. The mathematical relationship between the current drawn by each led colour and its brightness are given by :
+\begin{equation}
+\label{eq:f_red}
+\begin{multlined}
+f_{red}(x) = 0.141818x+2.63636 \\
+r^2_{red} = 0.995745
+\end{multlined}
+\end{equation} 
+\begin{equation}
+\label{eq:f_green}
+\begin{multlined}
+f_{green}(x) = 0.14x+2.63636 \\
+r^2_{green} = 0.995634
+\end{multlined}
+\end{equation} 
+\begin{equation}
+\label{eq:f_blue}
+\begin{multlined}
+f_{blue}(x) = 0.134545x+2.54545 \\
+r^2_{blue} = 0.994732
+\end{multlined}
+\end{equation} 
+{
+	\centering
+	\textit{$x$ is the brightness in \%}\\
+}
 
+The correlations between the \cref{eq:f_red,eq:f_green,eq:f_blue} and the plots in \cref{fig:current_one_pixel} are very strong. Each led has a idle current of $2.6 \pm 0.052487 mA$ and consume up $16.485 \pm 0.42964 mA$. The maximum current drawn by each led is $3.515\pm0.430 mA$ less than the current provided by the datasheet. The new expected current drawn by the NeoPixel is:\\
+
+{
+	\centering
+	Led current = $16.485 \pm 0.4296 mA$ \\
+	Removing the microcontroller current from the result,\\ the actual led current = $16.485 \pm 0.4296 mA - 2.6 \pm 0.0525 mA = 13.885 \pm 0.3771$  \\
+	Total leds current = $(13.885 \pm 0.377)*3 = 41.655 \pm 1.131 mA$  \\
+	one neopixel current = $41.655 \pm 1.131 mA + 2.6 \pm 0.0525 mA  = 44.255 \pm 1.184 mA $\\
+	\textbf{Estimated NeoPixel current} = $7.966 \pm 0.213 A$\\
+}
+This estimation is $2.834\pm0.213A$ less than the board current requirement.
+  
+\subsubsection{Idle current of the NeoPixel}\label{idle_current}
+The idle current of the NeoPixel per neopixels receiving data is shown in \cref{fig:current_idle}. This result was obtained by taking eight sample listed in \cref{table:current_idle}. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{current_idle.pdf}
-	\caption{}
+	\caption{Idle current of the NeoPixel per neopixels receiving power off data.}
 	\label{fig:current_idle}
 \end{figure}
-
+The idle current increases linearly as the number of neopixels receiving power off data \footnote{power off data is defined as the 24 code 0 indicating that all led should be turned off} increases. This relationship is given by 
+\begin{equation}
+\label{eq:f_idle}
+\begin{multlined}
+f(x) = 0.0695x+88.57 \\
+r^2 = 0.9974\\
+\textit{$x$: number of neopixels}
+\end{multlined}
+\end{equation} 
+From \cref{eq:f_idle}, the NeoPixel is expected to have a idle current of $101.08mA$. The result shows that when no data is sent at all to the NeoPixel, it still draws a current of $88.57mA$. The neopixels each have a microcontroller, analysing the coming data and setting the brightness level of each led accordingly. When no data is sent to the neopixels, their microcontroller is still powered. Since no leds are turned on, the NeoPixel's minimum idle current of $88.57mA$ is the current drawn by each neopixel in the Ring. From \cref{eq:f_idle}, the idle current increases as the number of neopixel receiving power off data increases. This result is expected as each microcontroller has to do more processing as the number of neopixel increases. 
+  
+\subsubsection{Current drawn by the NeoPixel}
+The current drawn by the NeoPixel (ring of 180 neopixels) is graphically represented in \cref{fig:current_180_neopixels}. All red, green, and blue leds were set to the same brightness level to reduce the complexity of the experiment. The current values were obtained by averaging the results of three sample per brightness as shown in \cref{table:current_180_neopixels}. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{current_180_neopixels.pdf}
-	\caption{}
+	\caption{Current drawn by all 180 neopixels on the Ring at different brightness levels.}
 	\label{fig:current_180_neopixels}
 \end{figure}
+The plot has a linear trend given by:
+\begin{equation}
+\label{eq:f_180}
+\begin{multlined}
+f(x) = 0.07043x-0.0707 \\
+r^2 = 0.9978\\
+\textit{$x$: brightness level}
+\end{multlined}
+\end{equation} 
+The mathematical model provided by \cref{eq:f_180} is bounded by $0A$ and $6.9723A$. Using the table used to find this model, the NeoPixel has an idle current of $0.12A$ and a maximum current of $6.94A \pm 0.08 A$. The idle current is more than the one obtained in \cref{idle_current} by $0.031A$. The maximum current drawn by the NeoPixel at full brightness of all its leds is $7.020A$, this is $3.78A$ less than the expected current drawn. Obtaining a smaller current drawn by the NeoPixel compared to the one calculated from the datasheet  was expected after analysis of the results in \cref{current_one}. The experimental current drawn by the NeoPixel is less than the second theoretical estimation by $0.946A$.
+ 
+\subsubsection{Overal discussion}
+The experiments done to estimate the current drawn by the NeoPixel provided interresting results. Each led draws the same current per brightness level. The microcontroller of each neopixel draws a small amount of current defined as the neopixel's idle current. The NeoPixel itself draws $6.94A \pm 0.08 A$ which is $3.78A$ less than the theoretical current.\\
+\textbf{The NeoPixel draws less than 10.8A}
 
-\subsubsection{Discussion}
 
-\subsection{Ring temperature by the Ring}
-\subsubsection{Experimental results}
-
+\subsection{Ring temperature}
+\textbf{Expectation:} \textit{The Ring should have a temperature rise of $15^oC$}.\\
+The temperature rise of the Ring is graphicaly represented by \cref{fig:temperature_ring}. The temperature was taken per brightness level, however, it was judged more useful to have a relationship between the Ring's temperature and its current drawn. 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.6]{temperature_ring.pdf}
-	\caption{}
+	\caption{Ring's temperature rise.}
 	\label{fig:temperature_ring}
 \end{figure}
 
 \subsubsection{Discussion}
+The temperature rise varies from $2.176^oC$ to $44.75^oC$. The lowest temperature rise is the one value corresponding to the idle state of the NeoPixel. As for the highest temperature represent the temperature rise of the NeoPixel at full brightness of all its leds. The mathematical model of the temperature rise is given by the linear equation:
+\begin{equation}
+\label{eq:f_temp}
+\begin{multlined}
+f(x) = 6.568x+3.462 ^oC\\
+r^2 = 0.9927\\
+\textit{$x$: current (A)}
+\end{multlined}
+\end{equation}  
+The temperature rise obtained is way above what the board was designed for. In \cref{ring_pcb}, it predicted that the board temperature will exceed what it was designed for due to the mechanical constraint of the Ring. \\
 
 \subsection{Illuminance produced by the Ring}
 \subsubsection{Experimental results}

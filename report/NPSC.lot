@@ -21,13 +21,13 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels. The white colour is obtain by turning the red, green and blue LEDs on at the same brightness.\relax }}{84}{table.caption.126}
-\contentsline {table}{\numberline {B.2}{\ignorespaces Current drawn by the neopixels in idle mode. The idle mode is defined as the state of the of the neopixel when no light is emitted.\relax }}{85}{table.caption.127}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{85}{table.caption.128}
-\contentsline {table}{\numberline {B.4}{\ignorespaces Current drawn by the neopixels in idle mode. The idle mode is defined as the state of the of the neopixel when no light is emitted.\relax }}{85}{table.caption.129}
-\contentsline {table}{\numberline {B.5}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{86}{table.caption.130}
-\contentsline {table}{\numberline {B.6}{\ignorespaces Relationship between the coefficient of decadence of the Ring illuminance and the distance to the Ring.\relax }}{86}{table.caption.131}
-\contentsline {table}{\numberline {B.7}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{86}{table.caption.132}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels. The white colour is obtain by turning the red, green and blue LEDs on at the same brightness.\relax }}{87}{table.caption.127}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Current drawn by the neopixels in idle mode. The idle mode is defined as the state of the of the neopixel when no light is emitted.\relax }}{88}{table.caption.128}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{88}{table.caption.129}
+\contentsline {table}{\numberline {B.4}{\ignorespaces Temperature rise of the Ring\relax }}{88}{table.caption.130}
+\contentsline {table}{\numberline {B.5}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{89}{table.caption.131}
+\contentsline {table}{\numberline {B.6}{\ignorespaces Relationship between the coefficient of decadence of the Ring illuminance and the distance to the Ring.\relax }}{89}{table.caption.132}
+\contentsline {table}{\numberline {B.7}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{89}{table.caption.133}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
