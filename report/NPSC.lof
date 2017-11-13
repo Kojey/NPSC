@@ -8,66 +8,68 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Touch-screen technologies. More pressure need to be applied on the resistive touch screen for location dectection.\relax }}{15}{figure.caption.19}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Relative position of the neopixel rings\relax }}{16}{figure.caption.21}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Wire connection setting for SPI communication between a master and a slave device\relax }}{17}{figure.caption.23}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{18}{figure.caption.24}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Wire connection setting for UART communication between two devices\relax }}{17}{figure.caption.24}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Wire connection setting for I2C communication between two masters and two slaves devices\relax }}{18}{figure.caption.25}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Illustration of the neopixels serial interface\relax }}{19}{figure.caption.26}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Ideal PCB design flow, starting from the need, followed by the design, implementation and testing\relax }}{20}{figure.caption.27}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces V-Model basic template used for system definition and testing\relax }}{22}{figure.caption.28}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces Spiral-Model basic template used for system refinement\relax }}{23}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Salea logic analyser.\relax }}{26}{figure.caption.35}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation\relax }}{29}{figure.caption.43}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation\relax }}{28}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Structural block diagram of the NPSC.\relax }}{34}{figure.caption.48}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Mechanical prototype of the NPSC.\relax }}{36}{figure.caption.49}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Structural block diagram of the NPSC.\relax }}{33}{figure.caption.47}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Mechanical prototype of the NPSC.\relax }}{35}{figure.caption.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Detailed structural block diagram of the NPSC showing the connections between the hardware modules and the main software modules.\relax }}{38}{figure.caption.50}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces EEPROM memory allocation. The first section of the memory is allocated to the alarms, the second to the ringtones and the third section is allocated to the user parameters.\relax }}{39}{figure.caption.51}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Strutural diagram of the hardware and software modules of the input and output instructions.\relax }}{40}{figure.caption.52}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Structural diagram of the hardware and software module used in the alarm-clock application.\relax }}{43}{figure.caption.57}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Structural diagram of the hardware and software used for the visual outputs.\relax }}{44}{figure.caption.58}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Schematics of one neopixels receiving data from DIN and transmitting data to DOUT.\relax }}{45}{figure.caption.59}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Simplified schematic of the Date and Temperature circuit.\relax }}{47}{figure.caption.63}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Detailed structural block diagram of the NPSC showing the connections between the hardware modules and the main software modules.\relax }}{37}{figure.caption.49}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces EEPROM memory allocation. The first section of the memory is allocated to the alarms, the second to the ringtones and the third section is allocated to the user parameters.\relax }}{38}{figure.caption.50}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Strutural diagram of the hardware and software modules of the input and output instructions.\relax }}{39}{figure.caption.51}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Structural diagram of the hardware and software module used in the alarm-clock application.\relax }}{42}{figure.caption.56}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Structural diagram of the hardware and software used for the visual outputs.\relax }}{43}{figure.caption.57}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Schematics of one neopixels receiving data from DIN and transmitting data to DOUT.\relax }}{45}{figure.caption.58}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Simplified schematic of the Date and Temperature circuit.\relax }}{46}{figure.caption.62}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Flow diagram of the visual timer process.\relax }}{50}{figure.caption.65}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Flow diagram of the visual update process. Each visual output module uses the same flow to update their visual.\relax }}{51}{figure.caption.66}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Flow diagram of the alarm update process.\relax }}{51}{figure.caption.67}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Flow diagram of the DMA process.\relax }}{52}{figure.caption.69}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Flow diagram of the input device instruction update. Both Nextion screen and Bluetooth application uses the same flow to update the instruction queue.\relax }}{52}{figure.caption.71}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Flow diagram of the IFDE process.\relax }}{53}{figure.caption.73}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Mechanical and hardware prototype of the NPSC.\relax }}{48}{figure.caption.63}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ring with blue led on at full brightness.\relax }}{49}{figure.caption.64}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Flow diagram of the visual timer process.\relax }}{51}{figure.caption.66}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Flow diagram of the visual update process. Each visual output module uses the same flow to update their visual.\relax }}{52}{figure.caption.67}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Flow diagram of the alarm update process.\relax }}{52}{figure.caption.68}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Flow diagram of the DMA process.\relax }}{53}{figure.caption.70}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Flow diagram of the input device instruction update. Both Nextion screen and Bluetooth application uses the same flow to update the instruction queue.\relax }}{53}{figure.caption.72}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Flow diagram of the IFDE process.\relax }}{54}{figure.caption.74}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{56}{figure.caption.75}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Power supply used in the Ring experiments.\relax }}{59}{figure.caption.79}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.80}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{60}{figure.caption.81}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Setup of the temperature rise experiment.\relax }}{61}{figure.caption.82}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Illuminance test setup.\relax }}{62}{figure.caption.83}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces V-diagram of the project. On the left side, from top to bottom are the validations steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the verifications steps starting from the unit tests to the acceptance tests performed on the NPSC.\relax }}{57}{figure.caption.76}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Power supply used in the Ring experiments.\relax }}{60}{figure.caption.80}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{61}{figure.caption.81}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Schematics used to obtain the board temperature.\relax }}{61}{figure.caption.82}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Setup of the temperature rise experiment.\relax }}{62}{figure.caption.83}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Illuminance test setup.\relax }}{63}{figure.caption.84}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Serial information sent to the external RTC when setting the minute to 5.\relax }}{63}{figure.caption.84}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Serial communication between the STM and the EEPROM after when writing to the EEPROM.\relax }}{64}{figure.caption.86}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Serial information received by the bluetooth device.\relax }}{65}{figure.caption.88}
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Serial information received by the nextion device.\relax }}{65}{figure.caption.90}
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{66}{figure.caption.92}
-\contentsline {figure}{\numberline {8.6}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{66}{figure.caption.93}
-\contentsline {figure}{\numberline {8.7}{\ignorespaces instruction sent to the nextion touchscreen to update the clock displayed on the screen.\relax }}{69}{figure.caption.100}
-\contentsline {figure}{\numberline {8.8}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels.\relax }}{70}{figure.caption.105}
-\contentsline {figure}{\numberline {8.9}{\ignorespaces Idle current of the NeoPixel per neopixels receiving power off data.\relax }}{71}{figure.caption.107}
-\contentsline {figure}{\numberline {8.10}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{72}{figure.caption.109}
-\contentsline {figure}{\numberline {8.11}{\ignorespaces Ring's temperature rise.\relax }}{74}{figure.caption.111}
-\contentsline {figure}{\numberline {8.12}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{75}{figure.caption.114}
-\contentsline {figure}{\numberline {8.13}{\ignorespaces Relationship between the coefficient of decadence of the Ring's illuminance and the distance to the Ring.\relax }}{76}{figure.caption.116}
-\contentsline {figure}{\numberline {8.14}{\ignorespaces Experimental vs theoretical relationship between illuminance and distance.\relax }}{77}{figure.caption.117}
-\contentsline {figure}{\numberline {8.15}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{78}{figure.caption.119}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Serial information sent to the external RTC when setting the minute to 5.\relax }}{64}{figure.caption.85}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Serial communication between the STM and the EEPROM after when writing to the EEPROM.\relax }}{65}{figure.caption.87}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Serial information received by the bluetooth device.\relax }}{66}{figure.caption.89}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Serial information received by the nextion device.\relax }}{66}{figure.caption.91}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{67}{figure.caption.93}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Data sent to one neopixel to turn on specific colours.\relax }}{67}{figure.caption.94}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces instruction sent to the nextion touchscreen to update the clock displayed on the screen.\relax }}{70}{figure.caption.101}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Corrupt data received by the Ring.\relax }}{70}{figure.caption.103}
+\contentsline {figure}{\numberline {8.9}{\ignorespaces Current drawn by a one neopixel per colour at different brightness levels.\relax }}{72}{figure.caption.105}
+\contentsline {figure}{\numberline {8.10}{\ignorespaces Idle current of the NeoPixel per neopixels receiving power off data.\relax }}{73}{figure.caption.107}
+\contentsline {figure}{\numberline {8.11}{\ignorespaces Current drawn by all 180 neopixels on the Ring at different brightness levels.\relax }}{74}{figure.caption.109}
+\contentsline {figure}{\numberline {8.12}{\ignorespaces Ring's temperature rise.\relax }}{75}{figure.caption.111}
+\contentsline {figure}{\numberline {8.13}{\ignorespaces Ring's blue LED illuminance at full brightness per distance and angular section to the Ring.\relax }}{77}{figure.caption.114}
+\contentsline {figure}{\numberline {8.14}{\ignorespaces Relationship between the coefficient of decadence of the Ring's illuminance and the distance to the Ring.\relax }}{78}{figure.caption.116}
+\contentsline {figure}{\numberline {8.15}{\ignorespaces Experimental vs theoretical relationship between illuminance and distance.\relax }}{79}{figure.caption.117}
+\contentsline {figure}{\numberline {8.16}{\ignorespaces Relationship between the Ring illuminance and the angle to the normal of the Ring surface.\relax }}{79}{figure.caption.119}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Schematic of the Ring module\relax }}{85}{figure.caption.126}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{86}{figure.caption.127}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{87}{figure.caption.128}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{87}{figure.caption.129}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{88}{figure.caption.130}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces \relax }}{88}{figure.caption.131}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces \relax }}{89}{figure.caption.132}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces \relax }}{89}{figure.caption.133}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Schematic of the Ring module\relax }}{86}{figure.caption.126}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces PCB of the Ring module\relax }}{87}{figure.caption.127}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Schematic of the Time module\relax }}{88}{figure.caption.128}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces PCB of the Time module\relax }}{88}{figure.caption.129}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Schematic of the Weekday module\relax }}{89}{figure.caption.130}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces PCB of the Weekday module\relax }}{89}{figure.caption.131}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Schematic of the Date module\relax }}{90}{figure.caption.132}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces PCB of the Date module\relax }}{90}{figure.caption.133}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

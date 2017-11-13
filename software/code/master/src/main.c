@@ -20,15 +20,15 @@
 */
 int main(void)
 {
-//	framework_init();
-//	application_init();
-	neopixel_init();
+	framework_init();
+	application_init();
+//	neopixel_init();
 	while(1)
 	{
-		neopixel_setAllPixelRGB(0,0,255);
-		for(int i=0; i<6000000; ++i);
-//		nextion_instructionUpdate();
-//		instruction_execute();
+//		neopixel_setAllPixelRGB(0,0,255);
+//		for(int i=0; i<600; ++i);
+		nextion_instructionUpdate();
+		instruction_execute();
 	}
 }
 

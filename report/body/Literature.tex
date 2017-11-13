@@ -3,7 +3,7 @@
 This chapter reviews the research papers, articles, books and other relevant forms of research used in the design of the NPSC. It has been divided into the sections illustrated by \cref{fig:lit_rev}:
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.1]{lit_rev.jpg}
+\includegraphics[scale=0.6]{lit_rev.png}
 \caption{Overview and classification of the sections of the literature review.}
 \label{fig:lit_rev}
 \end{figure}
@@ -14,11 +14,11 @@ The literature review starts with an explanation of the problems to be solved, i
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{The human sleep-wake cycle}
 
-Human has many \say{internal clocks} among them is the master clock located in the suprachiasmatic nuclei. These internal clocks or endegenous clocks are internal mechanisms in organisms reponsible for the regulations of certain functions or activities. The master clock cheif among them, regulates the secretion of melatonin is affected by light. The creation of artifical light expecially LEDs have caused a disruption in the sleep-wake cycle. This section give an overview of the human internal clocks and how they are affected by light.
+Human has many \say{internal clocks} among them is the master clock located in the suprachiasmatic nuclei. These internal clocks or endegenous clocks are internal mechanisms in organisms reponsible for the regulations of certain functions or activities. The master clock chief among them, regulates the secretion of melatonin is affected by light. The creation of artifical light expecially LEDs have caused a disruption in the sleep-wake cycle. This section give an overview of the human internal clocks and how they are affected by light.
 
 \subsection{The circadian rhythm}
 Human seasonal behaviours are synchronised to the environment by \textbf{biological clocks} responsible for the creation of biological rhythms. Biological clocks which are composed of proteins that act reciprocally on the body's cells are the natural timing devices found in many organs. The discovery of the genes from these biological clocks responsible for the control of these rhythms was made by three scientists Jeffrey  C.  Hall,  Michael  Rosbash and Michael W. Young winners of the Nobel Prize in Physiology or Medicine \cite{sc2017}. Their discovery made in the 1980s led to advanced research on the role of the circadian rhythms.\\
-Circadian rhythms are biological rhythms which follow the same pattern in absence of external cues (endogenous), are influenced by the presence of external stimuli (entertainable), oscillating roughly every 24h\footnote{it oxalates generally a period near 24h} over a range of physiological temperatures. In the presence of external stimuli -also known as \textit{zeitgebers}-, circadian rhythms synchronise their periodicity with these external stimuli. The zeitgebers of the circadian are the daily variation of the temperature and the dark/light cycle of the day.\\
+Circadian rhythms are biological rhythms which follow the same pattern in absence of external cues (endogenous), are influenced by the presence of external stimuli (entertainable), oscillating roughly every 24h\footnote{it oscillates generally a period near 24h} over a range of physiological temperatures. In the presence of external stimuli -also known as \textit{zeitgebers}-, circadian rhythms synchronise their periodicity with these external stimuli. The zeitgebers of the circadian are the daily variation of the temperature and the dark/light cycle of the day.\\
 Circadian rhythms have endogenous and exogenous components. Human placed in isolation without knowledge of the time continued exhibiting a circadian rhythm with their pacemakers notably the melatonin secretion, sleep-wake cycle, body temperature \cite{in1996}. These results prove the existence of endogenous components of the circadian rhythms as it illustrates the effects of these internal signal on the circadian rhythms. A similar study shows that when people are exposed to light at night time, a shift in their pacemakers \cite{ea2004} which is an evidence of the exogenous component of circadian rhythms. These exogenous components of the circadian rhythms have the ability affect positively and negatively our natural endogenous cycle. With light being what we are mostly daily exposed to, what is the influence of light on the circadian rhythms? 
 
 \subsection{Internal circadian rhythms influenced by light}
@@ -95,7 +95,7 @@ Philips has created a broad range of wake-up lamps designed to impact the sleep-
 \end{figure}
 
 \vfill
-To acheive the light requirement found in 
+To acheive the light requirement described in the literature review, more research was made on the type of hardware required to acheive the objectives. The following section provides more details on these research. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Hardware modules 
@@ -129,6 +129,7 @@ The NPSC's microcontroller needs to communicate to a smartphone application wire
 \multirow{2}{*}{Characteristics}  & \multicolumn{4}{c}{Microcontrollers} \\  
  & \textbf{Arduino Due} & \textbf{Intel Edison} & \textbf{Raspberry Pi Zero} & \textbf{STM32F407VGT6} \\
 \hline
+\hline
 \textbf{Clock speed} & 84MHz &  dual-core, dual-threaded 500 MHz CPU & 1GHz single core & 168 MHz\\
 \textbf{Bit precision} & 32 & 32 & 32 & 32 \\
 \textbf{FLASH} & 512KB & 4GB & MicroSDHC & 1MB \\
@@ -156,6 +157,7 @@ Wifi modules are inexpensive; however, smartphones communicating with the NPSC w
 \hline
 \hline
 \textbf{Technology} & \textbf{Constraints} & \textbf{Convenience} \\
+\hline
 \hline
 \textbf{Wifi} & Wifi network and security protocol & Yes\\ 
 \textbf{M2M} & Recurring cost & No\\
@@ -199,6 +201,7 @@ The light characteristics of the neopixel of choice are presented in \cref{table
 \hline
 \textbf{Emitting colour} & \textbf{Model} & \textbf{Wavelength (nm)} & \textbf{Luminous intensity (mcd)}  & \textbf{Current (mA)}\\ 
 \hline
+\hline
 Red & 13CBAUP & 620-625 & 390-420 & 20\\
 Green & 13CGAUP & 522-525 & 660-720 & 20\\
 Blue & 10R1MUX & 465-467 & 180-200 & 20\\
@@ -219,7 +222,7 @@ E_{v_1}=E_v*\cos(\theta)
 The dimension to be considered for the calculation of the illuminance of the neopixel ring are shown in \cref{fig:neopixel_ring_dimension}.
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.1]{ring_calculation.jpg}
+\includegraphics[scale=0.7]{ring.png}
 \caption{Relative position of the neopixel rings}
 \label{fig:neopixel_ring_dimension}
 \end{figure}
@@ -238,6 +241,7 @@ The result of the calculation are tabulated in the \cref{table:neopixel_illumina
 \hline
 \multirow{2}{*}{Distance (cm)}  & \multicolumn{2}{c}{Illuminance (lux)} \\  
  & no angle consideration & with angle \\
+\hline
 \hline
 10	&	3240.00	&	2443.66	\\
 20	&	810.00	&	742.28	\\
@@ -264,7 +268,7 @@ The NPSC requires different integrated circuits using various communication prot
 SPI is a synchronous full duplex serial communication protocol used for short distance communication of electronic devices. With the protocol, one master can communicate to many slaves using a chip select pin (use to select the slave) but a slave can only talk to the master device. SPI uses 4 signals namely, the Master Out Slave In (MOSI), the Master In Slave Out (MISO), the clock (SCK), and the slave select or chip select (SS). Since SPI uses a clock, it does not require the configuration of a baud rate before communication. The main inconvenience with SPI is the number of pins required for a one to one communication, for every additional slave, the master must provide an SS pins which make SPI not the ideal protocol for communicating to multiple slaves devices \cite{spi}. 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.2]{spi.jpg}
+\includegraphics[scale=0.9]{spi.png}
 \caption{Wire connection setting for SPI communication between a master and a slave device}
 \label{fig:spi_coms}
 \end{figure}
@@ -272,7 +276,7 @@ SPI is a synchronous full duplex serial communication protocol used for short di
 UART is an asynchronous full duplex communication protocol making use of two signals a transmit signal (TX) and a receive signal (RX). With UART, both devices need to agree on a baud-rate for communication, this rate defines the number of bytes to be sent and received. The problem with UART is the complexity of the protocol required to ensure synchronous communication and correct transfer of information between device. Although theoretically, UART baud-rate is infinite, it is practically limited to 230400 bits per seconds \cite{uart}.   
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.2]{uart.jpg}
+\includegraphics[scale=0.9]{uart.png}
 \caption{Wire connection setting for UART communication between two devices}
 \label{fig:uart_coms}
 \end{figure}
@@ -280,7 +284,7 @@ UART is an asynchronous full duplex communication protocol making use of two sig
 I2C is a serial protocol that allows communications from multiple slaves to multiple masters. It takes a bit of both SPI and UART by being designed for short distance communication and requiring only two pins, namely the data line (SDA) and clock line (SCL). Its clock ranges from $100kHz$ to $400kHz$ and a byte is sent at a time. Furthermore, with the I2C protocol, each slave must have a unique address used by the master for communication \cite{i2c}.  
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.2]{i2c.jpg}
+\includegraphics[scale=0.9]{i2c.png}
 \caption{Wire connection setting for I2C communication between two masters and two slaves devices}
 \label{fig:i2c_coms}
 \end{figure}
@@ -309,7 +313,7 @@ Each neopixel has a built-in IC controlling the LEDs' intensity based on the dat
 \end{figure}
  
 \subsection{Serial protocol suggestion}
-\textbf{MAYBE HAVE A SECTION THAT CONCLUDES ON THE SERIAL PROTOCOL TO SUGGEST}
+The NPSC hardware modules use the neopixels communication protocol but also I2C, UART, and SPI. Unfortunately, the hardware chosen define the protocol to be used removing the freedom to chose a prefered protocol.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: PCB Board Design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -347,7 +351,7 @@ Atollic TrueSTUDIO is an IDE based on Eclipse. It comes with the GCC toolchain f
 Nextion IDE is the official IDE designed for programming any Nextion HMI touch-screen. The IDE allows the designed and programmation of a GUI interface and the definition of serial commands to be sent to a MCU. Nextion IDE is designed to reduce significantly development time of touch-screen interface in an embedded system project \cite{nextion}. 
 
 \subsection{MIT App Inventor 2}
-
+The MIT App Inventer is a web application developed by the Massachusetts Institute of Technology. The application facilitate the creation of android application by providing graphical logic block used as programming module to create more complex system.   
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Design Models

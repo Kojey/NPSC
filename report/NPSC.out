@@ -76,60 +76,61 @@
 \BOOKMARK [2][-]{subsection.5.3.1}{Neopixels boards}{section.5.3}% 76
 \BOOKMARK [2][-]{subsection.5.3.2}{Date and Temperature PCB}{section.5.3}% 77
 \BOOKMARK [0][-]{chapter.6}{Implementation}{}% 78
-\BOOKMARK [1][-]{section.6.1}{Framework}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.2}{Applpication}{chapter.6}% 80
-\BOOKMARK [2][-]{subsection.6.2.1}{Visual application}{section.6.2}% 81
-\BOOKMARK [2][-]{subsection.6.2.2}{Alarm application}{section.6.2}% 82
-\BOOKMARK [2][-]{subsection.6.2.3}{Instruction application}{section.6.2}% 83
-\BOOKMARK [1][-]{section.6.3}{Main}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.4}{Utilities}{chapter.6}% 85
-\BOOKMARK [0][-]{chapter.7}{Testing and Experimentation}{}% 86
-\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 87
-\BOOKMARK [1][-]{section.7.2}{Hardware module tests}{chapter.7}% 88
-\BOOKMARK [1][-]{section.7.3}{Unit tests}{chapter.7}% 89
-\BOOKMARK [1][-]{section.7.4}{Integration tests}{chapter.7}% 90
-\BOOKMARK [1][-]{section.7.5}{Neopixel Ring}{chapter.7}% 91
-\BOOKMARK [2][-]{subsection.7.5.1}{Current experiment}{section.7.5}% 92
-\BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 93
-\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 94
-\BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 95
-\BOOKMARK [1][-]{section.8.1}{Hardware module tests}{chapter.8}% 96
-\BOOKMARK [2][-]{subsection.8.1.1}{DS1307}{section.8.1}% 97
-\BOOKMARK [2][-]{subsection.8.1.2}{25LC640}{section.8.1}% 98
-\BOOKMARK [2][-]{subsection.8.1.3}{HC-06}{section.8.1}% 99
-\BOOKMARK [2][-]{subsection.8.1.4}{NX4024T032\137001}{section.8.1}% 100
-\BOOKMARK [2][-]{subsection.8.1.5}{WS2812}{section.8.1}% 101
-\BOOKMARK [2][-]{subsection.8.1.6}{Final comments on the hardware tests}{section.8.1}% 102
-\BOOKMARK [1][-]{section.8.2}{Software Tests}{chapter.8}% 103
-\BOOKMARK [2][-]{subsection.8.2.1}{Unit tests outcome}{section.8.2}% 104
-\BOOKMARK [2][-]{subsection.8.2.2}{Integration tests outcome}{section.8.2}% 105
-\BOOKMARK [2][-]{subsection.8.2.3}{Insight on Visual module integration failure}{section.8.2}% 106
-\BOOKMARK [1][-]{section.8.3}{Ring experiments}{chapter.8}% 107
-\BOOKMARK [2][-]{subsection.8.3.1}{Current drawn by the Ring}{section.8.3}% 108
-\BOOKMARK [2][-]{subsection.8.3.2}{Ring temperature}{section.8.3}% 109
-\BOOKMARK [2][-]{subsection.8.3.3}{Illuminance produced by the Ring}{section.8.3}% 110
-\BOOKMARK [0][-]{chapter.9}{Conclusions and Recommendations}{}% 111
-\BOOKMARK [1][-]{section.9.1}{Review of objectives}{chapter.9}% 112
-\BOOKMARK [2][-]{subsection.9.1.1}{Instruction and user inputs}{section.9.1}% 113
-\BOOKMARK [2][-]{subsection.9.1.2}{Alarm}{section.9.1}% 114
-\BOOKMARK [2][-]{subsection.9.1.3}{Visual}{section.9.1}% 115
-\BOOKMARK [1][-]{section.9.2}{Reflections on the design}{chapter.9}% 116
-\BOOKMARK [1][-]{section.9.3}{Recommendation for future work}{chapter.9}% 117
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 118
-\BOOKMARK [0][-]{appendix.B}{Experiment results}{}% 119
-\BOOKMARK [0][-]{appendix.C}{Equations}{}% 120
-\BOOKMARK [1][-]{section.C.1}{Theoretical equation of the illuminance ratio received by an object a certain distance to the NeoPixel}{appendix.C}% 121
-\BOOKMARK [0][-]{appendix.D}{Project artefact}{}% 122
-\BOOKMARK [1][-]{section.D.1}{Git repository}{appendix.D}% 123
-\BOOKMARK [2][-]{subsection.D.1.1}{Branches}{section.D.1}% 124
-\BOOKMARK [1][-]{section.D.2}{Project structure}{appendix.D}% 125
-\BOOKMARK [2][-]{subsection.D.2.1}{Overview}{section.D.2}% 126
-\BOOKMARK [0][-]{appendix.E}{User manual}{}% 127
-\BOOKMARK [1][-]{section.E.1}{Requirements}{appendix.E}% 128
-\BOOKMARK [1][-]{section.E.2}{How to use it?}{appendix.E}% 129
-\BOOKMARK [2][-]{subsection.E.2.1}{User mode}{section.E.2}% 130
-\BOOKMARK [2][-]{subsection.E.2.2}{Developer mode}{section.E.2}% 131
-\BOOKMARK [1][-]{section.E.3}{Any issues?}{appendix.E}% 132
-\BOOKMARK [0][-]{appendix.F}{Future of the NPSC}{}% 133
-\BOOKMARK [0][-]{appendix.G}{Addenda}{}% 134
-\BOOKMARK [1][-]{section.G.1}{Ethics Forms}{appendix.G}% 135
+\BOOKMARK [1][-]{section.6.1}{Hardware protoype}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.2}{Framework}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.3}{Applpication}{chapter.6}% 81
+\BOOKMARK [2][-]{subsection.6.3.1}{Visual application}{section.6.3}% 82
+\BOOKMARK [2][-]{subsection.6.3.2}{Alarm application}{section.6.3}% 83
+\BOOKMARK [2][-]{subsection.6.3.3}{Instruction application}{section.6.3}% 84
+\BOOKMARK [1][-]{section.6.4}{Main}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.5}{Utilities}{chapter.6}% 86
+\BOOKMARK [0][-]{chapter.7}{Testing and Experimentation}{}% 87
+\BOOKMARK [1][-]{section.7.1}{Overview}{chapter.7}% 88
+\BOOKMARK [1][-]{section.7.2}{Hardware module tests}{chapter.7}% 89
+\BOOKMARK [1][-]{section.7.3}{Unit tests}{chapter.7}% 90
+\BOOKMARK [1][-]{section.7.4}{Integration tests}{chapter.7}% 91
+\BOOKMARK [1][-]{section.7.5}{Neopixel Ring}{chapter.7}% 92
+\BOOKMARK [2][-]{subsection.7.5.1}{Current experiment}{section.7.5}% 93
+\BOOKMARK [2][-]{subsection.7.5.2}{Temperature experiment}{section.7.5}% 94
+\BOOKMARK [2][-]{subsection.7.5.3}{Illuminance experiment}{section.7.5}% 95
+\BOOKMARK [0][-]{chapter.8}{Results and Discussions}{}% 96
+\BOOKMARK [1][-]{section.8.1}{Hardware module tests}{chapter.8}% 97
+\BOOKMARK [2][-]{subsection.8.1.1}{DS1307}{section.8.1}% 98
+\BOOKMARK [2][-]{subsection.8.1.2}{25LC640}{section.8.1}% 99
+\BOOKMARK [2][-]{subsection.8.1.3}{HC-06}{section.8.1}% 100
+\BOOKMARK [2][-]{subsection.8.1.4}{NX4024T032\137001}{section.8.1}% 101
+\BOOKMARK [2][-]{subsection.8.1.5}{WS2812}{section.8.1}% 102
+\BOOKMARK [2][-]{subsection.8.1.6}{Final comments on the hardware tests}{section.8.1}% 103
+\BOOKMARK [1][-]{section.8.2}{Software Tests}{chapter.8}% 104
+\BOOKMARK [2][-]{subsection.8.2.1}{Unit tests outcome}{section.8.2}% 105
+\BOOKMARK [2][-]{subsection.8.2.2}{Integration tests outcome}{section.8.2}% 106
+\BOOKMARK [2][-]{subsection.8.2.3}{Insight on Visual module integration failure}{section.8.2}% 107
+\BOOKMARK [1][-]{section.8.3}{Ring experiments}{chapter.8}% 108
+\BOOKMARK [2][-]{subsection.8.3.1}{Current drawn by the Ring}{section.8.3}% 109
+\BOOKMARK [2][-]{subsection.8.3.2}{Ring temperature}{section.8.3}% 110
+\BOOKMARK [2][-]{subsection.8.3.3}{Illuminance produced by the Ring}{section.8.3}% 111
+\BOOKMARK [0][-]{chapter.9}{Conclusions and Recommendations}{}% 112
+\BOOKMARK [1][-]{section.9.1}{Review of objectives}{chapter.9}% 113
+\BOOKMARK [2][-]{subsection.9.1.1}{Instruction and user inputs}{section.9.1}% 114
+\BOOKMARK [2][-]{subsection.9.1.2}{Alarm}{section.9.1}% 115
+\BOOKMARK [2][-]{subsection.9.1.3}{Visual}{section.9.1}% 116
+\BOOKMARK [1][-]{section.9.2}{Reflections on the design}{chapter.9}% 117
+\BOOKMARK [1][-]{section.9.3}{Recommendation for future work}{chapter.9}% 118
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 119
+\BOOKMARK [0][-]{appendix.B}{Experiment results}{}% 120
+\BOOKMARK [0][-]{appendix.C}{Equations}{}% 121
+\BOOKMARK [1][-]{section.C.1}{Theoretical equation of the illuminance ratio received by an object a certain distance to the NeoPixel}{appendix.C}% 122
+\BOOKMARK [0][-]{appendix.D}{Project artefact}{}% 123
+\BOOKMARK [1][-]{section.D.1}{Git repository}{appendix.D}% 124
+\BOOKMARK [2][-]{subsection.D.1.1}{Branches}{section.D.1}% 125
+\BOOKMARK [1][-]{section.D.2}{Project structure}{appendix.D}% 126
+\BOOKMARK [2][-]{subsection.D.2.1}{Overview}{section.D.2}% 127
+\BOOKMARK [0][-]{appendix.E}{User manual}{}% 128
+\BOOKMARK [1][-]{section.E.1}{Requirements}{appendix.E}% 129
+\BOOKMARK [1][-]{section.E.2}{How to use it?}{appendix.E}% 130
+\BOOKMARK [2][-]{subsection.E.2.1}{User mode}{section.E.2}% 131
+\BOOKMARK [2][-]{subsection.E.2.2}{Developer mode}{section.E.2}% 132
+\BOOKMARK [1][-]{section.E.3}{Any issues?}{appendix.E}% 133
+\BOOKMARK [0][-]{appendix.F}{Future of the NPSC}{}% 134
+\BOOKMARK [0][-]{appendix.G}{Addenda}{}% 135
+\BOOKMARK [1][-]{section.G.1}{Ethics Forms}{appendix.G}% 136

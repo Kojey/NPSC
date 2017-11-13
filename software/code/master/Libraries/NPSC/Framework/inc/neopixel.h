@@ -42,7 +42,7 @@
 #define WS2812_FREQ							(8E5) 			// it is fixed: WS2812 require 800kHz
 #define TIMER_CLOCK_FREQ					(84E6)//(168000000)   	// can be modified - multiples of 0.8MHz are suggested
 #define TIMER_PERIOD						(TIMER_CLOCK_FREQ / WS2812_FREQ)
-#define LED_NUMBER							(54)					// how many LEDs the MCU should control?
+#define LED_NUMBER							(180)					// how many LEDs the MCU should control?
 #define LED_DATA_SIZE						(LED_NUMBER * 24)
 #define RESET_SLOTS_BEGIN					(50)
 #define RESET_SLOTS_END						(50)

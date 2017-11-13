@@ -7,6 +7,7 @@ hf = figure();
 r = [3 4 5 7 8 10 11 13 14 15 17];
 g = [3 4 5 7 8 10 11 12 14 15 17];
 b = [3 4 5 6 8 9 11 12 13 15 16];
+
 rgb = [3 5 9 13 17 22 26 30 34 38 42];
 plot(x,r,"r","linewidth",lwidth,x,g,"g","linewidth",lwidth,x,b,"b","linewidth",lwidth,x,rgb,"k","linewidth",lwidth);
 hold on;

@@ -194,11 +194,19 @@ The instruction application test is similar to the hardware communication test. 
 As explained in \ref{IFDE}, the STM communicate with the nextion touchscreen using a process consisting of three phases. The first phase (instruction\_nextionStart) consists of sending \textit{code\_c\"{y}\"{y}\"{y}} as seen in \cref{fig:coms_instruction_nextion}. The following information sent are instructions from the second phase of communication. \textbf{The instruction application is working according to its design.}
 
 \subsubsection{Visual}
-The visual application which relies mainly on the neopixels hardware failed. After performing the tests explained in \ref{visual_fail}, two main design considerations were found to be the cause of the problem. Firstly using different power supplies for the Ring module disturbs the data obtained by the neopixel even if both power supplies have the same ground line. Secondly, when all modules are activated, their interrupt service routines (ISR) pause the stream of data sent to the neopixels. The stream cannot be paused as it will be interpreted by the neopixels as two different streams. 
+The visual application which relies mainly on the neopixels hardware failed. After performing some tests explained in \ref{visual_fail}, it was found that when all modules are activated, their interrupt service routines (ISR) pause the stream of data sent to the neopixels. The stream cannot be paused as it will be interpreted by the neopixels as two different streams. 
 
 \subsection{Insight on Visual module integration failure}\label{visual_fail}
-\subsubsection{Different power line}
-\subsubsection{Interrupt Service Routines}
+In order to understand the reason for the failure of the visual application, data was written to the neopixel every second. It takes $5.4ms$ to send information to 180 neopixels. Therefore sending the data every minute is largely sufficient to prevent the data from being overwritten. The data sent to the neopixels is shown in \cref{fig:test_neopixels}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{test_neopixels.png}
+	\caption{Corrupt data received by the Ring.}
+	\label{fig:test_neopixels}
+\end{figure}
+As seen in \cref{fig:test_neopixels}, the data sent is being split in two. This means that a set of the 180 neopixels will receive data while the other will never receive data. This is the case because of the neopixels a daisy chain connection, as mentioned in the literature review, a delay of $5.53 ms$ (reset sequence) indicates the end of the transmission. Any data coming after a reset sequence will be interpreted as new data.\\
+\textbf{What causes this?}\\
+It is extremely hard to debug the system at this point as it is an ISR error. The tools provided by the free version of Atolic TrueSTUDIO are not sufficient to perform analytical tests on the ISR. However, the DMA was not used to send the information to the timer setting the PWM data. As a result, the CPU is responsible for fetching all the information from memory, which is a heavy workload. Moreover, it was realised that stream is stoped randomly but for a constant period of $127.1\mu s$. This is certainly due to another process having a higher priority than the neopixels timer. A fix to this problem might be to establish an ISR table an allocate priority according to the importance of each process.    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Ring 

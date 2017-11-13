@@ -1,7 +1,24 @@
 \chapter{Implementation}
-This section provides information on the software implementation of the NPSC. Referring to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the Utilities at level 1, the Framework at level 2, the Applications at level 3 and the main at level 5.\\
+This section provides information on the software implementation of the NPSC and the prototype designed. Referring to the system hierarchy illustrated in \cref{fig:system_hierarchy}; this section focuses on the Utilities at level 1, the Framework at level 2, the Applications at level 3 and the main at level 5.\\
 The information on the Utilities and Framework module are given in tabular form the functions in these modules have little complexity and scope \footnote{These functions do not rely on other functions, most of these are directly linked to the hardware or perform simple logic.}. 
    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SECTION: Prototype
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Hardware protoype}
+The prototype build is shown in \cref{fig:prototype}. In order to be able to easily access the hardware, they were placed on a single wooden board as shown in the figure. The visual outputs modules occupy around two third of the board. All PCB were designed such that they could fit inside the ring. This was done so that the mechanical requirement of the NPSC could be met. The Ring is 21x21cm$^2$ so an additional 4 cm can still be used. An feel of the board illuminance is given by \cref{fig:prototype_ring_blue} showing the Ring a fullbrightness of the blue led. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.1]{prototype.jpg}
+	\caption{Mechanical and hardware prototype of the NPSC.}
+	\label{fig:prototype}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.1]{prototype_ring_blue.jpg}
+	\caption{Ring with blue led on at full brightness.}
+	\label{fig:prototype_ring_blue}
+\end{figure}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SECTION: Framework
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -52,14 +69,14 @@ Unlike the module described in the Utilities and Framework modules, the applicat
 The visual application is the most active application in the system. It refreshes the visual output at a user-defined rate which is by default \textit{1s}. \Cref{fig:timer_interrupt} shows the flow of the timer process. After the timer is set, certain variables indicator of a timer trigger event are set. These timer indicator are later used by the \textit{visual update} process illustrated in \cref{fig:visual_update}.
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.08]{timer_interrupt.jpg}
+\includegraphics[scale=0.6]{timer_interrupt.png}
 \caption{Flow diagram of the visual timer process.}
 \label{fig:timer_interrupt}
 \end{figure}
 The \textit{visual update} process starts by verifying that the timer indicator of the specific visual module is set. If so, it then checks that the corresponding visual module is enabled. If the module is enabled, the neopixel buffer of the corresponding module is updated based on the pattern selected and an index indicating what should be the next iteration of the pattern. The process continues by display the pattern on the corresponding module and resetting the timer indicator.
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.08]{visual_update.jpg}
+\includegraphics[scale=0.6]{visual_update.png}
 \caption{Flow diagram of the visual update process. Each visual output module uses the same flow to update their visual.}
 \label{fig:visual_update}
 \end{figure}
@@ -69,7 +86,7 @@ The \textit{visual update} process starts by verifying that the timer indicator 
 This application has one main process. This process consists of calling another process (\textit{alarm\_update}) when the device is powered on or when an alarm has been updated in the EEPROM or has been triggered. \Cref{fig:alarm_update} gives the flow of this process. The \textit{alarm\_update} process loads the two alarms which will be triggered before the others, into Alarm A and B from the internal RTC. To make this decision, the alarms in the EEPROM are compared by converting the alarm into an integer value. The lower the value, the sooner the alarm will be triggered.
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.08]{alarm_update.jpg}
+\includegraphics[scale=0.6]{alarm_update.png}
 \caption{Flow diagram of the alarm update process.}
 \label{fig:alarm_update}
 \end{figure}
@@ -81,7 +98,7 @@ The operations performed in the instruction application can be divided into thre
 There are two user input devices each using the DMA and a DMA buffer to store the byte sent to the STM. Each DMA generates an interrupt on data reception which is handled by the corresponding interrupt handler. When the device is powered on, the CPU initialise the communication with the input device, then it continuously observes the DMA and generates an interrupt when data is received. When this occurs, the DMA interrupt handler then set a boolean value to indicate that data was received from the input device. The flow of the process described above is illustrated in \cref{fig:dma_interrupt}. 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.08]{dma_interrupt.jpg}
+\includegraphics[scale=0.6]{dma_interrupt.png}
 \caption{Flow diagram of the DMA process.}
 \label{fig:dma_interrupt}
 \end{figure}
@@ -90,7 +107,7 @@ There are two user input devices each using the DMA and a DMA buffer to store th
 The purpose of this process is to convert the data stored in the DMA Buffer into instructions and add these instructions to the instruction buffer. When the process is called, the boolean set by the DMA interrupt process is evaluated. When its value is \textit{reset}, it implies that the DMA buffer did not receive any new instructions. If the boolean was set, the DMA buffer is divided into sections of eight bytes each (size of an instruction) and each section is converted into instructions, then added to the instruction queue and the boolean is reset. Prior the conversion of the DMA buffer section to instructions, the data contained in these sections are analysed and sections which do not match any instruction type are discarded. The flow of this process is illustrated in \cref{fig:device_instructionUpdate}. 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.08]{device_instructionUpdate.jpg}
+\includegraphics[scale=0.6]{device_instructionUpdate.png}
 \caption{Flow diagram of the input device instruction update. Both Nextion screen and Bluetooth application uses the same flow to update the instruction queue.}
 \label{fig:device_instructionUpdate}
 \end{figure}
@@ -99,7 +116,7 @@ The purpose of this process is to convert the data stored in the DMA Buffer into
 The IFDE's purpose is to fetch, decode and execute the instructions in the instruction queue. This process starts by checking that there are instructions in the instruction queue. It then fetches these instructions one by one, decode and execute the instructions. The process stops when the instruction queue is empty. This process is illustrated in \cref{fig:ifde} and a portion of the code used for its implementation is shown in listing \ref{code:ifde}. .
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.09]{ifde.jpg}
+\includegraphics[scale=0.6]{ifde.png}
 \caption{Flow diagram of the IFDE process.}
 \label{fig:ifde}
 \end{figure}

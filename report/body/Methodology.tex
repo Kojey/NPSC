@@ -44,12 +44,7 @@ Note that the use of this board is optional. Any Arduino board can be used; howe
 All modules mentioned in \cref{design} are required. They are all interconnected and the absence of one can cause the whole system to fail.
 \subsubsection{Logic analyser}\label{logic_analyser}
 A logic analyser is a tool that analyses the data coming from one of its channel based on predefined communication protocols. This is a very useful device in debugging the modules interaction with the microcontroller. The logic analyser used for this project is one of the Salea logic analysers.
-\begin{figure}[ht]
-\centering
-\includegraphics[scale=0.05]{logic_analyser.jpg}
-\caption{Salea logic analyser.}
-\label{fig:logic_analyser}
-\end{figure}
+
 \subsubsection{Serial to USB converter}
 The Serial to USB converter allows the translation of UART commands to USB command. This module is required to program the Nextion screen.
  
@@ -75,7 +70,7 @@ The NPSC requires hardware and software modules. For the first prototype, certai
 The implementation was broken into two main sections, the hardware implementation and the software implementation. The software implementation relies on the functioning of the hardware. To ensure that the system is implemented in a way that uses the time efficiently, it was implemented following the hierarchy illustrated in \cref{fig:system_hierarchy}. 
 \begin{figure}[ht]
 \centering
-\includegraphics[scale=0.15]{system_hierarchy.jpg}
+\includegraphics[scale=0.7]{system_hierarchy.png}
 \caption{Overview of the implementation hierarchy. Implementation starts from the bottom with the collection or design and manufacturing of the hardware followed by the software implementation}
 \label{fig:system_hierarchy}
 \end{figure}
@@ -131,5 +126,4 @@ This is the final test done to prove that the device meets all the requirements 
 % SECTION: Analysis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
-This section provides analysis of the tests performed during the experiments. 
-{\bf TODO}
+This section provides analysis of the tests performed during the experiments. The result of the software tests as well as the hardware tests are discussed in this section. The performance of the neopixel Ring designed is also evaluated an mathematical model of its characteristics are generated.

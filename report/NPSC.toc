@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {1.3}Scope and limitations}{2}{section.1.3}
 \contentsline {section}{\numberline {1.4}Plan of development}{3}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Overview of plan}{3}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Chronological progression of the report}{3}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.2}Chronological progression of the report}{5}{subsection.1.4.2}
 \contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}The human sleep-wake cycle}{6}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}The circadian rhythm}{7}{subsection.2.1.1}
@@ -31,18 +31,18 @@
 \contentsline {subsection}{\numberline {2.3.4}Touch screen}{14}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Neopixels}{14}{subsection.2.3.5}
 \contentsline {section}{\numberline {2.4}Communication protocols}{16}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Serial Peripheral Interface (SPI) Bus}{16}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}Serial Peripheral Interface (SPI) Bus}{17}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Universal asynchronous receiver-transmitter (UART)}{17}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{17}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{19}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}Serial protocol suggestion}{20}{subsection.2.4.5}
-\contentsline {section}{\numberline {2.5}PCB Board Design}{20}{section.2.5}
-\contentsline {section}{\numberline {2.6}Programming Languages}{21}{section.2.6}
+\contentsline {subsection}{\numberline {2.4.3}Inter-Integrated Circuit (I2C)}{18}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Neopixels serial protocol}{18}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Serial protocol suggestion}{19}{subsection.2.4.5}
+\contentsline {section}{\numberline {2.5}PCB Board Design}{19}{section.2.5}
+\contentsline {section}{\numberline {2.6}Programming Languages}{20}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}C}{21}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}C++}{21}{subsection.2.6.2}
 \contentsline {section}{\numberline {2.7}Software Tools and Libraries}{21}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Atollic TrueSTUDIO for ARM}{21}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{22}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.2}Nextion IDE}{21}{subsection.2.7.2}
 \contentsline {subsection}{\numberline {2.7.3}MIT App Inventor 2}{22}{subsection.2.7.3}
 \contentsline {section}{\numberline {2.8}Design Models}{22}{section.2.8}
 \contentsline {subsection}{\numberline {2.8.1}V-Model}{22}{subsection.2.8.1}
@@ -57,135 +57,134 @@
 \contentsline {subsubsection}{Arduino board}{26}{section*.32}
 \contentsline {subsubsection}{Electronic modules}{26}{section*.33}
 \contentsline {subsubsection}{Logic analyser}{26}{section*.34}
-\contentsline {subsubsection}{Serial to USB converter}{26}{section*.36}
-\contentsline {subsection}{\numberline {3.3.2}Software Setup}{27}{subsection.3.3.2}
-\contentsline {subsubsection}{Atolic TrueSTUDIO}{27}{section*.37}
-\contentsline {subsubsection}{Nextion IDE}{27}{section*.38}
-\contentsline {subsubsection}{Logic analyser software}{27}{section*.39}
-\contentsline {subsubsection}{PCB design software: Altium Designer}{27}{section*.40}
-\contentsline {subsubsection}{API generator: Doxygen}{28}{section*.41}
-\contentsline {subsubsection}{Version Control: git}{28}{section*.42}
+\contentsline {subsubsection}{Serial to USB converter}{26}{section*.35}
+\contentsline {subsection}{\numberline {3.3.2}Software Setup}{26}{subsection.3.3.2}
+\contentsline {subsubsection}{Atolic TrueSTUDIO}{26}{section*.36}
+\contentsline {subsubsection}{Nextion IDE}{27}{section*.37}
+\contentsline {subsubsection}{Logic analyser software}{27}{section*.38}
+\contentsline {subsubsection}{PCB design software: Altium Designer}{27}{section*.39}
+\contentsline {subsubsection}{API generator: Doxygen}{27}{section*.40}
+\contentsline {subsubsection}{Version Control: git}{27}{section*.41}
 \contentsline {section}{\numberline {3.4}Implementation}{28}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Level 1: Hardware and Utilities}{28}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Level 2: Framework}{28}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Level 2: Framework}{29}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Level 3: Application and Unit tests}{29}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Level 4: System tests}{30}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Level 5: NPSC}{30}{subsection.3.4.5}
-\contentsline {section}{\numberline {3.5}Experimentation}{30}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Hardware tests}{30}{subsection.3.5.1}
-\contentsline {subsubsection}{Basic hardware test}{30}{section*.44}
-\contentsline {subsubsection}{Neopixel ring test}{31}{section*.45}
-\contentsline {subsection}{\numberline {3.5.2}Software tests}{31}{subsection.3.5.2}
-\contentsline {subsubsection}{Unit tests}{31}{section*.46}
-\contentsline {subsubsection}{Integrations tests}{31}{section*.47}
+\contentsline {subsection}{\numberline {3.4.4}Level 4: System tests}{29}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Level 5: NPSC}{29}{subsection.3.4.5}
+\contentsline {section}{\numberline {3.5}Experimentation}{29}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Hardware tests}{29}{subsection.3.5.1}
+\contentsline {subsubsection}{Basic hardware test}{30}{section*.43}
+\contentsline {subsubsection}{Neopixel ring test}{30}{section*.44}
+\contentsline {subsection}{\numberline {3.5.2}Software tests}{30}{subsection.3.5.2}
+\contentsline {subsubsection}{Unit tests}{30}{section*.45}
+\contentsline {subsubsection}{Integrations tests}{31}{section*.46}
 \contentsline {subsection}{\numberline {3.5.3}Performance tests}{31}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Acceptance tests}{32}{subsection.3.5.4}
-\contentsline {section}{\numberline {3.6}Analysis}{32}{section.3.6}
-\contentsline {chapter}{\numberline {4}Preliminary Design}{33}{chapter.4}
-\contentsline {section}{\numberline {4.1}System overview}{33}{section.4.1}
-\contentsline {section}{\numberline {4.2}System components selection}{34}{section.4.2}
-\contentsline {section}{\numberline {4.3}Visual outputs component design decisions}{35}{section.4.3}
-\contentsline {section}{\numberline {4.4}Mechanical case}{35}{section.4.4}
-\contentsline {chapter}{\numberline {5}Prototype Design}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}System design}{37}{section.5.1}
-\contentsline {section}{\numberline {5.2}High-level design}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}External storage}{39}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Inputs/Outputs instruction design}{39}{subsection.5.2.2}
-\contentsline {subsubsection}{From the inputs to the microcontroller}{39}{section*.53}
-\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.54}
-\contentsline {subsubsection}{Buffer size and Instruction sets}{41}{section*.55}
-\contentsline {subsection}{\numberline {5.2.3}Input devices}{43}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Alarm and Clock}{43}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Visual outputs}{44}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {3.5.4}Acceptance tests}{31}{subsection.3.5.4}
+\contentsline {section}{\numberline {3.6}Analysis}{31}{section.3.6}
+\contentsline {chapter}{\numberline {4}Preliminary Design}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}System overview}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}System components selection}{33}{section.4.2}
+\contentsline {section}{\numberline {4.3}Visual outputs component design decisions}{34}{section.4.3}
+\contentsline {section}{\numberline {4.4}Mechanical case}{34}{section.4.4}
+\contentsline {chapter}{\numberline {5}Prototype Design}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}System design}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}High-level design}{37}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}External storage}{38}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Inputs/Outputs instruction design}{38}{subsection.5.2.2}
+\contentsline {subsubsection}{From the inputs to the microcontroller}{38}{section*.52}
+\contentsline {subsubsection}{Instruction Fetch Decode Execute (IFDE)}{40}{section*.53}
+\contentsline {subsubsection}{Buffer size and Instruction sets}{40}{section*.54}
+\contentsline {subsection}{\numberline {5.2.3}Input devices}{42}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Alarm and Clock}{42}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Visual outputs}{43}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Sensors}{44}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Details hardware design}{45}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Neopixels boards}{45}{subsection.5.3.1}
-\contentsline {subsubsection}{Ring PCB}{45}{section*.60}
-\contentsline {subsubsection}{Time}{46}{section*.61}
-\contentsline {subsubsection}{Weekday}{46}{section*.62}
+\contentsline {section}{\numberline {5.3}Details hardware design}{44}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Neopixels boards}{44}{subsection.5.3.1}
+\contentsline {subsubsection}{Ring PCB}{44}{section*.59}
+\contentsline {subsubsection}{Time}{45}{section*.60}
+\contentsline {subsubsection}{Weekday}{45}{section*.61}
 \contentsline {subsection}{\numberline {5.3.2}Date and Temperature PCB}{46}{subsection.5.3.2}
-\contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}
-\contentsline {section}{\numberline {6.1}Framework}{48}{section.6.1}
-\contentsline {section}{\numberline {6.2}Applpication}{48}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Visual application}{48}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Alarm application}{49}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Instruction application}{50}{subsection.6.2.3}
-\contentsline {subsubsection}{DMA interrupt}{50}{section*.68}
-\contentsline {subsubsection}{Device instruction update}{50}{section*.70}
-\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{51}{section*.72}
-\contentsline {section}{\numberline {6.3}Main}{54}{section.6.3}
-\contentsline {section}{\numberline {6.4}Utilities}{54}{section.6.4}
-\contentsline {chapter}{\numberline {7}Testing and Experimentation}{55}{chapter.7}
-\contentsline {section}{\numberline {7.1}Overview}{55}{section.7.1}
-\contentsline {section}{\numberline {7.2}Hardware module tests}{57}{section.7.2}
-\contentsline {section}{\numberline {7.3}Unit tests}{57}{section.7.3}
-\contentsline {section}{\numberline {7.4}Integration tests}{57}{section.7.4}
-\contentsline {section}{\numberline {7.5}Neopixel Ring}{58}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Current experiment}{59}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{59}{subsection.7.5.2}
-\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{61}{subsection.7.5.3}
-\contentsline {chapter}{\numberline {8}Results and Discussions}{63}{chapter.8}
-\contentsline {section}{\numberline {8.1}Hardware module tests}{63}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}DS1307}{63}{subsection.8.1.1}
-\contentsline {subsubsection}{Discussion}{63}{section*.85}
-\contentsline {subsection}{\numberline {8.1.2}25LC640}{64}{subsection.8.1.2}
-\contentsline {subsubsection}{Discussion}{64}{section*.87}
-\contentsline {subsection}{\numberline {8.1.3}HC-06}{65}{subsection.8.1.3}
-\contentsline {subsubsection}{Discussion}{65}{section*.89}
-\contentsline {subsection}{\numberline {8.1.4}NX4024T032\_001}{65}{subsection.8.1.4}
-\contentsline {subsubsection}{Discussion}{65}{section*.91}
-\contentsline {subsection}{\numberline {8.1.5}WS2812}{65}{subsection.8.1.5}
-\contentsline {subsubsection}{Discussion}{66}{section*.94}
-\contentsline {subsection}{\numberline {8.1.6}Final comments on the hardware tests}{67}{subsection.8.1.6}
-\contentsline {section}{\numberline {8.2}Software Tests}{67}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Unit tests outcome}{67}{subsection.8.2.1}
-\contentsline {subsubsection}{Discussion}{68}{section*.96}
-\contentsline {subsection}{\numberline {8.2.2}Integration tests outcome}{68}{subsection.8.2.2}
-\contentsline {subsubsection}{Alarm}{68}{section*.98}
-\contentsline {subsubsection}{Instruction}{69}{section*.99}
-\contentsline {subsubsection}{Visual}{69}{section*.101}
-\contentsline {subsection}{\numberline {8.2.3}Insight on Visual module integration failure}{69}{subsection.8.2.3}
-\contentsline {subsubsection}{Different power line}{69}{section*.102}
-\contentsline {subsubsection}{Interrupt Service Routines}{69}{section*.103}
-\contentsline {section}{\numberline {8.3}Ring experiments}{69}{section.8.3}
-\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{70}{subsection.8.3.1}
-\contentsline {subsubsection}{Current drawn by one neopixel}{70}{section*.104}
-\contentsline {subsubsection}{Idle current of the NeoPixel}{71}{section*.106}
-\contentsline {subsubsection}{Current drawn by the NeoPixel}{72}{section*.108}
-\contentsline {subsubsection}{Overal discussion}{73}{section*.110}
-\contentsline {subsection}{\numberline {8.3.2}Ring temperature}{73}{subsection.8.3.2}
-\contentsline {subsubsection}{Discussion}{73}{section*.112}
-\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{74}{subsection.8.3.3}
-\contentsline {subsubsection}{Blue light illuminance}{75}{section*.113}
-\contentsline {subsubsection}{Relationship between illuminance and distance to the board}{76}{section*.115}
-\contentsline {subsubsection}{Relationship between illuminance and angle of positionement}{77}{section*.118}
-\contentsline {subsubsection}{Conclusion of these experiment}{77}{section*.120}
-\contentsline {chapter}{\numberline {9}Conclusions and Recommendations}{79}{chapter.9}
-\contentsline {section}{\numberline {9.1}Review of objectives}{79}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Instruction and user inputs}{80}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Alarm}{80}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Visual}{80}{subsection.9.1.3}
-\contentsline {paragraph}{Objectives}{80}{section*.123}
-\contentsline {section}{\numberline {9.2}Reflections on the design}{80}{section.9.2}
-\contentsline {section}{\numberline {9.3}Recommendation for future work}{81}{section.9.3}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{85}{appendix.A}
-\contentsline {chapter}{\numberline {B}Experiment results}{90}{appendix.B}
-\contentsline {chapter}{\numberline {C}Equations}{93}{appendix.C}
-\contentsline {section}{\numberline {C.1}Theoretical equation of the illuminance ratio received by an object a certain distance to the NeoPixel}{93}{section.C.1}
-\contentsline {chapter}{\numberline {D}Project artefact}{95}{appendix.D}
-\contentsline {section}{\numberline {D.1}Git repository}{95}{section.D.1}
-\contentsline {subsection}{\numberline {D.1.1}Branches}{95}{subsection.D.1.1}
-\contentsline {subsubsection}{Commit format}{95}{section*.142}
-\contentsline {section}{\numberline {D.2}Project structure}{96}{section.D.2}
-\contentsline {subsection}{\numberline {D.2.1}Overview}{96}{subsection.D.2.1}
-\contentsline {subsubsection}{Project tree}{96}{section*.143}
-\contentsline {subsubsection}{NPSC library tree}{97}{section*.144}
-\contentsline {chapter}{\numberline {E}User manual}{98}{appendix.E}
-\contentsline {section}{\numberline {E.1}Requirements}{98}{section.E.1}
-\contentsline {section}{\numberline {E.2}How to use it?}{98}{section.E.2}
-\contentsline {subsection}{\numberline {E.2.1}User mode}{98}{subsection.E.2.1}
-\contentsline {subsection}{\numberline {E.2.2}Developer mode}{99}{subsection.E.2.2}
-\contentsline {section}{\numberline {E.3}Any issues?}{99}{section.E.3}
-\contentsline {chapter}{\numberline {F}Future of the NPSC}{100}{appendix.F}
-\contentsline {chapter}{\numberline {G}Addenda}{101}{appendix.G}
-\contentsline {section}{\numberline {G.1}Ethics Forms}{101}{section.G.1}
+\contentsline {chapter}{\numberline {6}Implementation}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Hardware protoype}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Framework}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}Applpication}{47}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Visual application}{48}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Alarm application}{48}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Instruction application}{49}{subsection.6.3.3}
+\contentsline {subsubsection}{DMA interrupt}{50}{section*.69}
+\contentsline {subsubsection}{Device instruction update}{51}{section*.71}
+\contentsline {subsubsection}{Instruction Fectch Decode Execute (IFDE)}{51}{section*.73}
+\contentsline {section}{\numberline {6.4}Main}{54}{section.6.4}
+\contentsline {section}{\numberline {6.5}Utilities}{55}{section.6.5}
+\contentsline {chapter}{\numberline {7}Testing and Experimentation}{56}{chapter.7}
+\contentsline {section}{\numberline {7.1}Overview}{56}{section.7.1}
+\contentsline {section}{\numberline {7.2}Hardware module tests}{58}{section.7.2}
+\contentsline {section}{\numberline {7.3}Unit tests}{58}{section.7.3}
+\contentsline {section}{\numberline {7.4}Integration tests}{58}{section.7.4}
+\contentsline {section}{\numberline {7.5}Neopixel Ring}{59}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Current experiment}{60}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Temperature experiment}{60}{subsection.7.5.2}
+\contentsline {subsection}{\numberline {7.5.3}Illuminance experiment}{62}{subsection.7.5.3}
+\contentsline {chapter}{\numberline {8}Results and Discussions}{64}{chapter.8}
+\contentsline {section}{\numberline {8.1}Hardware module tests}{64}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}DS1307}{64}{subsection.8.1.1}
+\contentsline {subsubsection}{Discussion}{64}{section*.86}
+\contentsline {subsection}{\numberline {8.1.2}25LC640}{65}{subsection.8.1.2}
+\contentsline {subsubsection}{Discussion}{65}{section*.88}
+\contentsline {subsection}{\numberline {8.1.3}HC-06}{66}{subsection.8.1.3}
+\contentsline {subsubsection}{Discussion}{66}{section*.90}
+\contentsline {subsection}{\numberline {8.1.4}NX4024T032\_001}{66}{subsection.8.1.4}
+\contentsline {subsubsection}{Discussion}{66}{section*.92}
+\contentsline {subsection}{\numberline {8.1.5}WS2812}{66}{subsection.8.1.5}
+\contentsline {subsubsection}{Discussion}{67}{section*.95}
+\contentsline {subsection}{\numberline {8.1.6}Final comments on the hardware tests}{68}{subsection.8.1.6}
+\contentsline {section}{\numberline {8.2}Software Tests}{68}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Unit tests outcome}{68}{subsection.8.2.1}
+\contentsline {subsubsection}{Discussion}{69}{section*.97}
+\contentsline {subsection}{\numberline {8.2.2}Integration tests outcome}{69}{subsection.8.2.2}
+\contentsline {subsubsection}{Alarm}{69}{section*.99}
+\contentsline {subsubsection}{Instruction}{70}{section*.100}
+\contentsline {subsubsection}{Visual}{70}{section*.102}
+\contentsline {subsection}{\numberline {8.2.3}Insight on Visual module integration failure}{70}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Ring experiments}{71}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Current drawn by the Ring}{71}{subsection.8.3.1}
+\contentsline {subsubsection}{Current drawn by one neopixel}{71}{section*.104}
+\contentsline {subsubsection}{Idle current of the NeoPixel}{73}{section*.106}
+\contentsline {subsubsection}{Current drawn by the NeoPixel}{73}{section*.108}
+\contentsline {subsubsection}{Overal discussion}{74}{section*.110}
+\contentsline {subsection}{\numberline {8.3.2}Ring temperature}{75}{subsection.8.3.2}
+\contentsline {subsubsection}{Discussion}{75}{section*.112}
+\contentsline {subsection}{\numberline {8.3.3}Illuminance produced by the Ring}{76}{subsection.8.3.3}
+\contentsline {subsubsection}{Blue light illuminance}{76}{section*.113}
+\contentsline {subsubsection}{Relationship between illuminance and distance to the board}{77}{section*.115}
+\contentsline {subsubsection}{Relationship between illuminance and angle of positionement}{78}{section*.118}
+\contentsline {subsubsection}{Conclusion of these experiment}{78}{section*.120}
+\contentsline {chapter}{\numberline {9}Conclusions and Recommendations}{80}{chapter.9}
+\contentsline {section}{\numberline {9.1}Review of objectives}{80}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Instruction and user inputs}{81}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Alarm}{81}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Visual}{81}{subsection.9.1.3}
+\contentsline {paragraph}{Objectives}{81}{section*.123}
+\contentsline {section}{\numberline {9.2}Reflections on the design}{81}{section.9.2}
+\contentsline {section}{\numberline {9.3}Recommendation for future work}{82}{section.9.3}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{86}{appendix.A}
+\contentsline {chapter}{\numberline {B}Experiment results}{91}{appendix.B}
+\contentsline {chapter}{\numberline {C}Equations}{94}{appendix.C}
+\contentsline {section}{\numberline {C.1}Theoretical equation of the illuminance ratio received by an object a certain distance to the NeoPixel}{94}{section.C.1}
+\contentsline {chapter}{\numberline {D}Project artefact}{96}{appendix.D}
+\contentsline {section}{\numberline {D.1}Git repository}{96}{section.D.1}
+\contentsline {subsection}{\numberline {D.1.1}Branches}{96}{subsection.D.1.1}
+\contentsline {subsubsection}{Commit format}{96}{section*.142}
+\contentsline {section}{\numberline {D.2}Project structure}{97}{section.D.2}
+\contentsline {subsection}{\numberline {D.2.1}Overview}{97}{subsection.D.2.1}
+\contentsline {subsubsection}{Project tree}{97}{section*.143}
+\contentsline {subsubsection}{NPSC library tree}{98}{section*.144}
+\contentsline {chapter}{\numberline {E}User manual}{99}{appendix.E}
+\contentsline {section}{\numberline {E.1}Requirements}{99}{section.E.1}
+\contentsline {section}{\numberline {E.2}How to use it?}{99}{section.E.2}
+\contentsline {subsection}{\numberline {E.2.1}User mode}{99}{subsection.E.2.1}
+\contentsline {subsection}{\numberline {E.2.2}Developer mode}{100}{subsection.E.2.2}
+\contentsline {section}{\numberline {E.3}Any issues?}{100}{section.E.3}
+\contentsline {chapter}{\numberline {F}Future of the NPSC}{101}{appendix.F}
+\contentsline {chapter}{\numberline {G}Addenda}{102}{appendix.G}
+\contentsline {section}{\numberline {G.1}Ethics Forms}{102}{section.G.1}

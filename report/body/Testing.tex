@@ -7,12 +7,12 @@ This section provides information on the software and hardware tests of the NPSC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Overview}
 Debugging an embedded system is one of the worst things in life, especially when there are logical errors in the program. In an embedded system like the NPSC which is made out of modules interacting with each other at different levels of the hierarchy, finding an error would be a difficult task as the error would have to be tracked down to the modules at lower levels. To reduce debugging time, it is essential that each module is independently and thoroughly tested. To achieve this, the verification steps of the v-diagram of the NPSC shown in \cref{fig:v_diagram} are implemented.\\
-The hardware modules and framework are tested by analyzing the data transmitted between the STM and these hardware modules, and by running a set of unit tests on the framework code. The sub-systems of the NPSC are tested by running a set of software tests. Following the integration tests is the system test which consists of using the device to ensure that the system requirements have been met. The last verification steps consist of verifying that the device is an alarm-clock able to produce light of wavelength around 460nm and able to fit in a $25*25*10 cm^3$ case. 
+The hardware modules and framework are tested by analyzing the data transmitted between the STM and these hardware modules, and by running a set of unit tests on the framework code. The sub-systems of the NPSC are tested by running a set of software tests. Following the integration tests is the system test which consists of using the device to ensure that the system requirements have been met. The last validation steps consist of verifying that the device is an alarm-clock able to produce light of wavelength around 460nm and able to fit in a $25*25*10 cm^3$ case. 
 \begin{landscape} 
 	\begin{figure}[ht]
 		\centering
-		\includegraphics[scale=0.17]{v_diagram.jpg}
-		\caption{V-diagram of the project. On the left side, from top to bottom are the verifications steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the validations steps starting from the unit tests to the acceptance tests performed on the NPSC.}
+		\includegraphics[scale=0.38]{v_diagram.png}
+		\caption{V-diagram of the project. On the left side, from top to bottom are the validations steps starting from the system requirements down to the modules. At the bottom is the implementation of the system On the right side, from the bottom to the top are the verifications steps starting from the unit tests to the acceptance tests performed on the NPSC.}
 		\label{fig:v_diagram}
 	\end{figure}
 \end{landscape}
