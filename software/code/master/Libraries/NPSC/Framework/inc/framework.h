@@ -20,14 +20,15 @@
 
 
 /* Includes ------------------------------------------------------------------*/
+#include "neopixel_ring.h"
 #include "audio.h"
 #include "bluetooth.h"
 #include "clock.h"
 #include "eeprom.h"
-#include "neopixel.h"
 #include "nextion.h"
 #include "rtc.h"
 #include "temperature.h"
+#include "timer.h"
 
 /** @addtogroup NPSC
   * @{

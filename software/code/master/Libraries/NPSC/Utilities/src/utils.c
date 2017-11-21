@@ -48,6 +48,9 @@ char nextion_instr_end[3]={0xFF,0XFF,0XFF}; // 0xFF 0xFF 0xFF
 
 char * label;
 char * label_instruction;
+
+bool digit_pixels[VISUAL_TIME_DIGIT_SIZE]={false};
+
 /* Private functions ---------------------------------------------------------*/
 
 /**

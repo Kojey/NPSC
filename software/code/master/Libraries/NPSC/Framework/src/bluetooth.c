@@ -75,8 +75,8 @@ void bluetooth_init(void) {
     /* Enable global interrupts for USART */
 	NVIC_InitTypeDef NVIC_InitStruct;
 	NVIC_InitStruct.NVIC_IRQChannel = BLUETOOTH_USARTX_IRQ;
-	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 1;
-	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
+	NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 2;
+	NVIC_InitStruct.NVIC_IRQChannelSubPriority = 2;
 	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStruct);
 
@@ -104,7 +104,7 @@ void bluetooth_init(void) {
     /* Enable global interrupts for DMA stream */
     NVIC_InitStruct.NVIC_IRQChannel = DMA2_Stream5_IRQn;
     NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
-    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 0;
+    NVIC_InitStruct.NVIC_IRQChannelPreemptionPriority = 4;
     NVIC_InitStruct.NVIC_IRQChannelSubPriority = 0;
     NVIC_Init(&NVIC_InitStruct);
 
@@ -171,38 +171,39 @@ void DMA2_Stream5_IRQHandler(void) {
     size_t len, tocopy;
     uint8_t* ptr;
 
-    /* Check transfer complete flag */
-    if (DMA2->HISR & DMA_FLAG_TCIF5) {
-        DMA2->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
-
-        /* Calculate number of bytes actually transfered by DMA so far */
-        /**
-         * Transfer could be completed by 2 events:
-         *  - All data actually transfered (NDTR = 0)
-         *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
-         */
-        len = DMA_RX_BUFFER_SIZE - DMA2_Stream5->NDTR;
-        tocopy = INSTRUCTION_SIZE - bluetooth_write;      /* Get number of bytes we can copy to the end of buffer */
-
-        /* Check how many bytes to copy */
-        if (tocopy > len) {
-            tocopy = len;
-        }
-
-        /* bluetooth_write received data for UART main buffer for manipulation later */
-        ptr = DMA_RX_Buffer;
-        memcpy(&INSTRUCTION_BUFFER[bluetooth_write], ptr, tocopy);   /* Copy first part */
-
-        /* Correct values for remaining data */
-        bluetooth_write += tocopy;
-        len -= tocopy;
-        ptr += tocopy;
-
-        /* If still data to write for beginning of buffer */
-        if (len) {
-            memcpy(&INSTRUCTION_BUFFER[0], ptr, len);      /* Don't care if we override bluetooth_read pointer now */
-            bluetooth_write = len;
-        }
+    neopixel_setAllPixelRGB(0,0,1);
+//    /* Check transfer complete flag */
+//    if (DMA2->HISR & DMA_FLAG_TCIF5) {
+//        DMA2->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
+//
+//        /* Calculate number of bytes actually transfered by DMA so far */
+//        /**
+//         * Transfer could be completed by 2 events:
+//         *  - All data actually transfered (NDTR = 0)
+//         *  - Stream disabled inside USART IDLE line detected interrupt (NDTR != 0)
+//         */
+//        len = DMA_RX_BUFFER_SIZE - DMA2_Stream5->NDTR;
+//        tocopy = INSTRUCTION_SIZE - bluetooth_write;      /* Get number of bytes we can copy to the end of buffer */
+//
+//        /* Check how many bytes to copy */
+//        if (tocopy > len) {
+//            tocopy = len;
+//        }
+//
+//        /* bluetooth_write received data for UART main buffer for manipulation later */
+//        ptr = DMA_RX_Buffer;
+//        memcpy(&INSTRUCTION_BUFFER[bluetooth_write], ptr, tocopy);   /* Copy first part */
+//
+//        /* Correct values for remaining data */
+//        bluetooth_write += tocopy;
+//        len -= tocopy;
+//        ptr += tocopy;
+//
+//        /* If still data to write for beginning of buffer */
+//        if (len) {
+//            memcpy(&INSTRUCTION_BUFFER[0], ptr, len);      /* Don't care if we override bluetooth_read pointer now */
+//            bluetooth_write = len;
+//        }
 
         /* Prepare DMA for next transfer */
         /* Important! DMA stream won't start if all flags are not cleared first */
@@ -210,7 +211,7 @@ void DMA2_Stream5_IRQHandler(void) {
         DMA2_Stream5->M0AR = (uint32_t)DMA_RX_Buffer;   /* Set memory address for DMA again */
         DMA2_Stream5->NDTR = DMA_RX_BUFFER_SIZE;    /* Set number of bytes to receive */
         DMA2_Stream5->CR |= DMA_SxCR_EN;            /* Start DMA transfer */
-    }
+//    }
 }
 
 

@@ -48,7 +48,9 @@ void framework_init(void){
 	bluetooth_init();
 	/* Initialise nextion */
 	nextion_init();
-	/* Initialise neopixel */
+	/* Initialise neopixel time*/
+//	neopixel_time_init();
+	/* Initialise neopixel ring*/
 	neopixel_init();
 	/* Initialise rtc */
 	rtc_init();
@@ -58,6 +60,8 @@ void framework_init(void){
 	eeprom_init();
 	/* Initialise temperature */
 	temperature_init();
+	/* Initialise timer*/
+	timer_init();
 
 }
 

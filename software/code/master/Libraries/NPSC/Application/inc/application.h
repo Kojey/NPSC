@@ -22,6 +22,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "instructions.h"
 #include "alarm.h"
+#include "visual.h"
 /** @addtogroup NPSC
   * @{
   */

@@ -1,10 +1,11 @@
 
-/* Includes */
+///* Includes */
 #include "application.h"
 #include "framework.h"
 #include "systemTest.h"
 #include "unitTest.h"
-
+//#include "neopixel.h"
+//#include "bluetooth.h"
 
 /* Private macro */
 /* Private variables */
@@ -22,11 +23,10 @@ int main(void)
 {
 	framework_init();
 	application_init();
-//	neopixel_init();
+//	neopixel_setBrightness(10);
+	neopixel_setAllPixelRGB(255,255,255);
 	while(1)
 	{
-//		neopixel_setAllPixelRGB(0,0,255);
-//		for(int i=0; i<600; ++i);
 		nextion_instructionUpdate();
 		instruction_execute();
 	}

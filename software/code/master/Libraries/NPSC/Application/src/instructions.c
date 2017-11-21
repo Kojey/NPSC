@@ -79,7 +79,6 @@ void instruction_execute(void){
 			instruction_nextionSendStr("home.t2.txt=", rtc_monthToString(clock.date.RTC_Month) );
 			instruction_nextionSendInt("home.n4.val=",2000+clock.date.RTC_Year);
 			instruction_nextionStop();
-			neopixel_setAllPixelRGB(0,15,0);
   			break;
   		/* Alarm instructions */
 		case 0x10:
@@ -141,7 +140,6 @@ void instruction_execute(void){
 			instruction_nextionSendStr("t2.txt=",alarm.label);
 			instruction_nextionSendInt("bt1.val=",alarm.enable);
 			instruction_nextionStop();
-			neopixel_setAllPixelRGB(15,0,0);
 			break;
 		case 0x15:
 			// get alarm  params
@@ -156,7 +154,6 @@ void instruction_execute(void){
 			instruction_nextionSendInt("bt0.val=",alarm.enable);
 			instruction_nextionSendStr("t11.txt=",rtc_dayToString(alarm.alarm.RTC_AlarmDateWeekDay));
 			instruction_nextionStop();
-			neopixel_setAllPixelRGB(0,0,15);
 			break;
 		default:
 			break;

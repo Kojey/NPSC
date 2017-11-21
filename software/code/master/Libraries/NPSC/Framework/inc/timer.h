@@ -40,7 +40,7 @@
 
 /* Data reading function ******************************************************/
 void timer_init(void);
-void TIM5_IRQHandler(void);
+void TIM3_IRQHandler(void);
 
 #endif /* NPSC_FRAMEWORK_TIMER_H_ */
 

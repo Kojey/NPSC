@@ -15,8 +15,8 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
+#include <neopixel_ring.h>
 #include "systemTest.h"
-#include "neopixel.h"
 
 /** @addtogroup NPSC
   * @{
@@ -45,9 +45,9 @@ void systemTest_result(bool (*function)(void)){
 	STM_EVAL_LEDInit(LED6); // blue led
 	STM_EVAL_LEDInit(LED5); // red led
 	STM_EVAL_LEDInit(LED3); // orange led
-	neopixel_setBrightness(100);
+//	neopixel_setBrightness(100);
 	STM_EVAL_LEDOn(LED3);
-	neopixel_setAllPixelRGB(255,80,0);
+//	neopixel_setAllPixelRGB(255,80,0);
 	delay(1);
 
 	// Blue: SUCCESS

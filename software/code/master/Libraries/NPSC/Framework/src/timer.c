@@ -16,7 +16,7 @@
 
 /* Includes -----------------------------------------------------------------*/
 #include "timer.h"
-
+#include "neopixel_ring.h"
 /** @addtogroup NPSC
   * @{
   */
@@ -33,6 +33,7 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+static uint32_t timer_frequency = 1;
 /* Private functions ---------------------------------------------------------*/
 
 
@@ -52,7 +53,7 @@ void timer_init(void){
 	// Setup the timer
 	TIM_TimeBaseInitTypeDef  TIM_TimeBaseStruct;
 	TIM_TimeBaseStruct.TIM_Prescaler = 10000;
-	TIM_TimeBaseStruct.TIM_Period = (uint32_t) 126000/60 + 1;
+	TIM_TimeBaseStruct.TIM_Period = (uint32_t) 8399/timer_frequency;//126000/timer_frequency + 1;
 	TIM_TimeBaseStruct.TIM_ClockDivision = 0;
 	TIM_TimeBaseStruct.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_TimeBaseInit(TIM5, &TIM_TimeBaseStruct);
@@ -87,10 +88,16 @@ void TIM5_IRQHandler(void){
 		TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
 		STM_EVAL_LEDToggle(LED6);
 		if(on){
-			neopixel_setAllPixelRGB(0,0,255);
+			visual_ring(Hour_Minute_Second,true);
+			visual_time(14,56,true,true,NEOPIXEL_COLOUR_BLUE);
+			visual_weekday(3,true,NEOPIXEL_COLOUR_BLUE);
+			neopixel_start();
+//			neopixel_setPixelRGB(0,0,0,0);
+//			neopixel_time_setAllPixelRGB(10,10,10);
 			on = false;
 		}else{
-			neopixel_setAllPixelRGB(0,0,0);
+//			neopixel_setPixelRGB(1,255,0,0);
+//			neopixel_time_setAllPixelRGB(100,100,100);
 			on = true;
 		}
 	}

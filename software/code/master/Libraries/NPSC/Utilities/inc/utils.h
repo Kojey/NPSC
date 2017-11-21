@@ -39,6 +39,22 @@
   */
 
 /* Exported constants --------------------------------------------------------*/
+
+#define WS2812_RESET							(0)
+#define MAX_8BIT								(255)
+#define NEOPIXEL_FREQ							(8E5) 			// it is fixed: WS2812 require 800kHz
+#define NEOPIXEL_RESET_SLOTS_BEGIN				(50)
+#define NEOPIXEL_RESET_SLOTS_END				(50)
+#define NEOPIXEL_WS2812_LAST_SLOT				(1)
+
+
+#define NEOPIXEL_COLOURS				3
+#define NEOPIXEL_COLOUR_CODE			8
+#define VISUAL_WEEKDAY_SIZE				7
+#define VISUAL_TIME_DIGIT_SIZE			13
+#define VISUAL_TIME_SIZE				(VISUAL_TIME_DIGIT_SIZE*4+2)
+#define VISUAL_RING_SIZE				60*3
+
 #define INSTRUCTION_SIZE            	8
 #define DMA_MAX_INSTRUCTION				7
 #define DMA_RX_BUFFER_SIZE          	INSTRUCTION_SIZE*DMA_MAX_INSTRUCTION
@@ -77,7 +93,7 @@ typedef enum {
 	pattern3 = 3,
 	pattern4 = 4,
 	pattern5 = 5,
-	pattern6 = 6
+	Hour_Minute_Second = 6
 } Pattern;
 
 
@@ -117,6 +133,13 @@ extern char nextion_instr_end[3];
 
 char * label;
 char * label_instruction;
+
+extern bool digit_pixels[VISUAL_TIME_DIGIT_SIZE];
+
+extern uint8_t visual_weeksayBuffer[VISUAL_WEEKDAY_SIZE];
+extern uint8_t visual_timeBuffer[VISUAL_TIME_SIZE];
+extern uint8_t visual_ringBuffer[VISUAL_RING_SIZE];
+
 /* Exported macro ------------------------------------------------------------*/
 /* Exported functions --------------------------------------------------------*/
 uint32_t max(uint32_t a, uint32_t b, uint32_t c);

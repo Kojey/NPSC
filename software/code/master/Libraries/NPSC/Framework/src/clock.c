@@ -37,8 +37,8 @@
   */
 
 /* Includes -----------------------------------------------------------------*/
+#include <neopixel_ring.h>
 #include "clock.h"
-#include "neopixel.h"
 
 /** @addtogroup NPSC
   * @{
@@ -352,7 +352,7 @@ void RTC_Alarm_IRQHandler(void){
 	EXTI_ClearITPendingBit(EXTI_Line17);		// Clear External Interrupt pending bit
 
 	/* TODO What need to be done when Alarm event occurs*/
-	neopixel_setAllPixelRGB(0,0,255);
+
 }
 /**
  * @}
