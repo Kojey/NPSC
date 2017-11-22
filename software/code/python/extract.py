@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import wx
-
+import math
 """
 Extract rgb data information from Salea logic extracted waveform file
 """
@@ -55,11 +55,25 @@ def bits_to_byte(bits):
     number += bits[x]*2**(7-x)
   return number
 
+def ring_pos():
+  r,d = 100,2
+  pos = []
+  for n in range(180):
+    x = int((r+2*math.floor(n/60)*d)*math.cos(math.pi*n/30))
+    y = int((r+2*math.floor(n/60)*d)*math.sin(math.pi*n/30))
+    pos.append([x,y])#math.floor(x),math.floor(y)])
+  return pos
 
+def time_pos():
+  pass
+
+def weekday_pos():
+  pass
 raw_data = get_data("data/_data.csv",1)
 bits_data = rgb_bit_data(raw_data)
 byte_data = rgb_byte_data(bits_data)
 board = board_data(byte_data)
-print(board[2])
+pos = ring_pos()
+print(pos)
 # print(rgb_bit_data(get_data("data/_data.csv",1)))
 # print(bits_to_byte([0,0,0,0,1,1,1,1]))
