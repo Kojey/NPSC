@@ -1,4 +1,5 @@
 import pygame
+import sys
 from extract import *
 
 class rectangle(object):
@@ -9,7 +10,7 @@ class rectangle(object):
   def draw(self, pos,colour):
     pygame.draw.rect(screen,colour,self.rect)
 
-def draw(r,d,offset_x,offset_y):
+def draw(screen,filename,r,d,offset_x,offset_y):
   raw_data = get_data("data/data3.csv",1)
   bits_data = rgb_bit_data(raw_data)
   byte_data = rgb_byte_data(bits_data)
@@ -22,18 +23,26 @@ def draw(r,d,offset_x,offset_y):
     pygame.draw.rect(screen, board[2][i], pygame.Rect(offset_x+pos[i][0]-7*d,offset_y+pos[i][1]+offset_y/4, d, d))
   
 
-pygame.init()
-width,height = 720,720
-screen = pygame.display.set_mode((width, height))
-done = False
-
-while not done:
-  screen.fill((50,50,50))
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      done = True
+def main(argv):
+  """
+  visual <filename> <width>
+  """
+  pygame.init()
+  width,height = eval(argv[2]),eval(argv[2])#720,720
+  screen = pygame.display.set_mode((width, height))
+  done = False
+  
   # Add this somewhere after the event pumping and before the display.flip()
-  draw(width/3,10,width/2, height/2)  
+  screen.fill((50,50,50))
+  draw(screen,argv[1],width/3,width/70,width/2, height/2)  
   pygame.display.flip()
 
+  while not done:
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+        done = True
+
+
+if __name__ == '__main__':
+  main(sys.argv)
   
