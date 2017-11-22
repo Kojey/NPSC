@@ -24,7 +24,7 @@ int main(void)
 	framework_init();
 	application_init();
 //	neopixel_setBrightness(10);
-	neopixel_setAllPixelRGB(255,255,255);
+	neopixel_setAllPixelRGB(255,0,255);
 	while(1)
 	{
 		nextion_instructionUpdate();

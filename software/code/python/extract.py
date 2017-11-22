@@ -10,7 +10,7 @@ def get_data(file,start):
   Convert Salea extracted data into useful waveform data
   Usage:  get_data(file_name)
   """
-  threshold = 0.3
+  threshold = 0.000005
   data,pos = [],[]
   with open(file) as f: lines = [line.rstrip('\n') for line in f]
   for l in lines:
@@ -20,6 +20,8 @@ def get_data(file,start):
     data[i].append(round(e*10**7,2))
     if abs(eval(data[i][0])-eval(data[i+1][0]))>threshold and eval(data[i+1][1])==start:
       pos.append(i+1)
+  e = 0-eval(data[len(data)-1][0])  
+  data[len(data)-1].append(round(e,2))
   data = data[pos[0]:]
   return [data,pos,min(data[0][2],data[1][2]),max(data[0][2],data[1][2])]    
 
@@ -47,7 +49,7 @@ def rgb_byte_data(data):
   return _data
 
 def board_data(data):
-  return data[180],data[180:180+54],data[180+54:]
+  return data[:180],data[180:180+54],data[180+54:]
 
 def bits_to_byte(bits):
   number = 0
@@ -55,25 +57,30 @@ def bits_to_byte(bits):
     number += bits[x]*2**(7-x)
   return number
 
-def ring_pos():
-  r,d = 100,2
+def ring_pos(r,d):
   pos = []
   for n in range(180):
-    x = int((r+2*math.floor(n/60)*d)*math.cos(math.pi*n/30))
-    y = int((r+2*math.floor(n/60)*d)*math.sin(math.pi*n/30))
+    x = int((r+2*math.floor(n/60)*d)*math.cos(math.pi*n/30-math.pi/2))
+    y = int((r+2*math.floor(n/60)*d)*math.sin(math.pi*n/30-math.pi/2))
     pos.append([x,y])#math.floor(x),math.floor(y)])
   return pos
 
-def time_pos():
+def time_digit_pos():
   pass
 
-def weekday_pos():
-  pass
-raw_data = get_data("data/_data.csv",1)
-bits_data = rgb_bit_data(raw_data)
-byte_data = rgb_byte_data(bits_data)
-board = board_data(byte_data)
-pos = ring_pos()
-print(pos)
-# print(rgb_bit_data(get_data("data/_data.csv",1)))
-# print(bits_to_byte([0,0,0,0,1,1,1,1]))
+def weekday_pos(x,y,d):
+  pos = []
+  for n in range(7):
+    pos.append([x+2*n*d,y])
+  return pos
+
+
+# raw_data = get_data("data/data2.csv",1)
+# bits_data = rgb_bit_data(raw_data)
+# byte_data = rgb_byte_data(bits_data)
+# board = board_data(byte_data)
+# pos = ring_pos(100,2)
+# print raw_data
+# print pos
+# pos = weekday_pos(0,0,2)
+# print pos

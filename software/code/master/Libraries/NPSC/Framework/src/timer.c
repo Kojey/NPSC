@@ -88,10 +88,10 @@ void TIM5_IRQHandler(void){
 		TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
 		STM_EVAL_LEDToggle(LED6);
 		if(on){
-			visual_ring(Hour_Minute_Second,true);
-			visual_time(14,56,true,true,NEOPIXEL_COLOUR_BLUE);
-			visual_weekday(3,true,NEOPIXEL_COLOUR_BLUE);
-			neopixel_start();
+//			visual_ring(Hour_Minute_Second,true);
+//			visual_time(14,56,true,true,NEOPIXEL_COLOUR_BLUE);
+//			visual_weekday(3,true,NEOPIXEL_COLOUR_BLUE);
+//			neopixel_start();
 //			neopixel_setPixelRGB(0,0,0,0);
 //			neopixel_time_setAllPixelRGB(10,10,10);
 			on = false;
