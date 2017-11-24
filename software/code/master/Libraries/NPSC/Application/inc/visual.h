@@ -20,7 +20,9 @@
 #define NPSC_APPLICATION_VISUAL_H_
 
 /* Includes ------------------------------------------------------------------*/
-#include <neopixel_ring.h>
+#include "neopixel_ring.h"
+#include "timer.h"
+#include "rtc.h"
 
 /** @addtogroup NPSC
   * @{
@@ -35,6 +37,8 @@
 
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
+extern Pattern visual_pattern;
+extern uint32_t visual_colour;
 /* Exported types ------------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
@@ -43,6 +47,7 @@ void visual_time(uint8_t ,uint8_t, bool, bool, uint32_t);
 void visual_weekday(uint8_t, bool, uint32_t);
 void visual_ring(Pattern, bool);
 void visual_patternHourMinuteSecond(uint8_t,uint8_t,uint8_t);
+void visual_update(bool);
 #endif /* NPSC_APPLICATION_VISUAL_H_ */
 
 /**

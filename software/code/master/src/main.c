@@ -23,12 +23,16 @@ int main(void)
 {
 	framework_init();
 	application_init();
-//	neopixel_setBrightness(10);
-	neopixel_setAllPixelRGB(255,0,255);
+	STM_EVAL_LEDInit(LED6);
+//	neopixel_setBrightness(50);
+//	neopixel_setAllPixelRGB(255,0,255);
 	while(1)
 	{
+		alarm_synchronize();
 		nextion_instructionUpdate();
 		instruction_execute();
+		visual_update(true);
+
 	}
 }
 

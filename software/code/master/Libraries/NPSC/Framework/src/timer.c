@@ -34,6 +34,8 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 static uint32_t timer_frequency = 1;
+bool timer_start = false;
+bool timer_event = false;
 /* Private functions ---------------------------------------------------------*/
 
 
@@ -67,6 +69,8 @@ void timer_init(void){
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStructure);
+
+	timer_start = true;
 }
 /**
  * @}
@@ -82,24 +86,11 @@ void timer_init(void){
  * @retval uint32_t of the ADC value
  */
 void TIM5_IRQHandler(void){
-	static bool on = true;
 	if (TIM_GetITStatus(TIM5, TIM_IT_Update) != RESET)
 	{
 		TIM_ClearITPendingBit(TIM5, TIM_IT_Update);
 		STM_EVAL_LEDToggle(LED6);
-		if(on){
-//			visual_ring(Hour_Minute_Second,true);
-//			visual_time(14,56,true,true,NEOPIXEL_COLOUR_BLUE);
-//			visual_weekday(3,true,NEOPIXEL_COLOUR_BLUE);
-//			neopixel_start();
-//			neopixel_setPixelRGB(0,0,0,0);
-//			neopixel_time_setAllPixelRGB(10,10,10);
-			on = false;
-		}else{
-//			neopixel_setPixelRGB(1,255,0,0);
-//			neopixel_time_setAllPixelRGB(100,100,100);
-			on = true;
-		}
+		timer_event = true;
 	}
 }
 

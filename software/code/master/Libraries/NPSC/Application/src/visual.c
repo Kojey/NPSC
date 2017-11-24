@@ -32,10 +32,11 @@
 
 
 /* Private typedef -----------------------------------------------------------*/
-
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+Pattern visual_pattern = Hour_Minute_Second;
+uint32_t visual_colour = (uint32_t)(255);
 /* Private functions ---------------------------------------------------------*/
 
 /**
@@ -156,7 +157,7 @@ void visual_weekday(uint8_t weekday, bool enable, uint32_t colour){
 void visual_ring(Pattern pattern, bool enable){
 	switch (pattern) {
 		case Hour_Minute_Second:
-			visual_patternHourMinuteSecond(1,2,3);
+			visual_patternHourMinuteSecond(rtc_getHours(),rtc_getMinutes(),rtc_getSeconds());
 			break;
 		default:
 			break;
@@ -177,6 +178,20 @@ void visual_patternHourMinuteSecond(uint8_t hour, uint8_t minute, uint8_t second
 	neopixel_updatePixelRangeRGB(120,120+second,NEOPIXEL_COLOUR_GREEN);
 	neopixel_updatePixelRangeRGB(120+second,180,NEOPIXEL_NO_COLOUR);
 }
+
+/**
+ * @brief	Update the visual output
+ */
+void visual_update(bool enable){
+	if(timer_event){
+		visual_ring(visual_pattern,enable);
+		visual_time(rtc_getHours(),rtc_getMinutes(),enable,true,visual_colour);
+		visual_weekday(rtc_getDay(),enable,visual_colour);
+		timer_event = false;
+		neopixel_start();
+	}
+}
+
 /**
  * @}
  */

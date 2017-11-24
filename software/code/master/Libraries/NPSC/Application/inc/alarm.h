@@ -23,6 +23,8 @@
 #include "rtc.h"
 #include "clock.h"
 #include "eeprom.h"
+#include "timer.h"
+
 /** @addtogroup NPSC
   * @{
   */

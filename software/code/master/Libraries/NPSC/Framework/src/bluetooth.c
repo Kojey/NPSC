@@ -168,13 +168,11 @@ void USART1_IRQHandler(void) {
  * \note        Except memcpy, there is no functions used to
  */
 void DMA2_Stream5_IRQHandler(void) {
-    size_t len, tocopy;
-    uint8_t* ptr;
 
-    neopixel_setAllPixelRGB(0,0,1);
+//    neopixel_setAllPixelRGB(0,0,1);
 //    /* Check transfer complete flag */
-//    if (DMA2->HISR & DMA_FLAG_TCIF5) {
-//        DMA2->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
+    if (DMA2->HISR & DMA_FLAG_TCIF5) {
+        DMA2->HIFCR = DMA_FLAG_TCIF5;           /* Clear transfer complete flag */
 //
 //        /* Calculate number of bytes actually transfered by DMA so far */
 //        /**
@@ -211,7 +209,7 @@ void DMA2_Stream5_IRQHandler(void) {
         DMA2_Stream5->M0AR = (uint32_t)DMA_RX_Buffer;   /* Set memory address for DMA again */
         DMA2_Stream5->NDTR = DMA_RX_BUFFER_SIZE;    /* Set number of bytes to receive */
         DMA2_Stream5->CR |= DMA_SxCR_EN;            /* Start DMA transfer */
-//    }
+    }
 }
 
 

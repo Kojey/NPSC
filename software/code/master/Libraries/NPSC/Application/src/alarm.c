@@ -43,8 +43,11 @@
  * @brief	Synchronize internal alarm to external alarm
  */
 void alarm_synchronize(void){
-	RTC_ClockTypeDef clock = rtc_getClockStruct();
-	clock_setClockStruct(&clock);
+	if(timer_start){
+		RTC_ClockTypeDef clock = rtc_getClockStruct();
+		clock_setClockStruct(&clock);
+		timer_start=false;
+	}
 }
 /**
  * @brief	Save alarm to memory
@@ -153,7 +156,7 @@ char * alarm_patternToString(Pattern pattern){
 		case pattern3:return "pattern3";break;
 		case pattern4:return "pattern4";break;
 		case pattern5:return "pattern5";break;
-		case pattern6:return "pattern6";break;
+		case Hour_Minute_Second:return "Hour_Minute_Second";break;
 		default:return "Error";break;
 	}
 }

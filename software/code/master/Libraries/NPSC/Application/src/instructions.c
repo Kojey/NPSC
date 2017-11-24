@@ -41,7 +41,6 @@
 /**
  * @brief	Execute instructions from instruction queue
  */
-static bool b = true;
 void instruction_execute(void){
 	RTC_ClockTypeDef clock;
 	AlarmTypeDef alarm;
@@ -67,10 +66,6 @@ void instruction_execute(void){
 		case 0x02:
 			// get clock
 			clock = rtc_getClockStruct();
-				if(b){
-					alarm_synchronize();
-					b=false;
-				}
  			instruction_nextionStart();
 			instruction_nextionSendInt("home.n0.val=",clock.time.RTC_Hours);
 			instruction_nextionSendInt("home.n1.val=",clock.time.RTC_Minutes);
