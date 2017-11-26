@@ -9,6 +9,8 @@
 
 import wx
 import wx.xrc
+import os
+from visual import *
 
 ###########################################################################
 ## Class Visual
@@ -35,7 +37,10 @@ class Visual ( wx.Frame ):
 		self.m_staticText17.Wrap( -1 )
 		bSizer17.Add( self.m_staticText17, 0, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 		
-		m_dataChoiceChoices = []
+
+		# onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+		mypath = os.path.join(os.getcwd(),"data")
+		m_dataChoiceChoices =  [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 		self.m_dataChoice = wx.Choice( self.m_panel, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, m_dataChoiceChoices, 0 )
 		self.m_dataChoice.SetSelection( 0 )
 		bSizer17.Add( self.m_dataChoice, 0, wx.ALL, 5 )
@@ -72,7 +77,13 @@ class Visual ( wx.Frame ):
 		self.m_panel.Layout()
 		bSizer15.Add( self.m_panel, 1, wx.EXPAND |wx.ALL, 5 )
 		
-		self.m_screen = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 600,600 ), wx.TAB_TRAVERSAL )
+		# self.m_screen = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 600,600 ), wx.TAB_TRAVERSAL )
+		self.m_screen = PygameDisplay(self, -1)
+		self.m_screen.filename = self.m_dataChoice.GetString(self.m_dataChoice.GetSelection())
+		self.m_screen.index = 0
+		self.m_screen.Redraw()
+		self.m_streamNumber.SetLabel(str(self.m_screen.index))
+
 		bSizer15.Add( self.m_screen, 1, wx.EXPAND |wx.ALL, 5 )
 		
 		
@@ -92,14 +103,18 @@ class Visual ( wx.Frame ):
 	
 	# Virtual event handlers, overide them in your derived class
 	def onData( self, event ):
-		event.Skip()
+		self.m_screen.filename = self.m_dataChoice.GetString(self.m_dataChoice.GetSelection())
+		self.m_screen.Redraw()
 	
 	def onPrevious( self, event ):
-		event.Skip()
+		self.m_screen.index-=1
+		self.m_streamNumber.SetLabel(str(self.m_screen.index))
+		self.m_screen.Redraw()
 	
 	def onNext( self, event ):
-		event.Skip()
-
+		self.m_screen.index+=1
+		self.m_streamNumber.SetLabel(str(self.m_screen.index))
+		self.m_screen.Redraw()
 
 # class App(wx.App):
 #     def OnInit(self):

@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import wx
 import math
+import pygame
+import sys
 """
 Extract rgb data information from Salea logic extracted waveform file
 """
@@ -77,7 +79,21 @@ def weekday_pos(x,y,d):
     pos.append([x+2*n*d,y])
   return pos
 
-
+def draw(screen,filename,r,d,offset_x,offset_y,threshold,index=0):
+  raw_data = get_data("data/"+filename,1,threshold)
+  index %= raw_data[1]
+  print index
+  bits_data = rgb_bit_data(raw_data)
+  byte_data = rgb_byte_data(bits_data)
+  board = board_data(byte_data,index)
+  # print board[0]
+  pos = ring_pos(r,d)
+  for i in range(len(pos)):
+    pygame.draw.rect(screen, board[0][i], pygame.Rect(offset_x+pos[i][0],offset_y+pos[i][1], d, d))
+  pos = weekday_pos(0,0,d)
+  for i in range(len(pos)):
+    pygame.draw.rect(screen, board[2][i], pygame.Rect(offset_x+pos[i][0]-7*d,offset_y+pos[i][1]+offset_y/4, d, d))
+  return index
 # raw_data = get_data("data/data2.csv",1)
 # bits_data = rgb_bit_data(raw_data)
 # byte_data = rgb_byte_data(bits_data)
