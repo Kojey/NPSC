@@ -80,7 +80,13 @@ class Visual ( wx.Frame ):
 		# self.m_screen = wx.Panel( self, wx.ID_ANY, wx.DefaultPosition, wx.Size( 600,600 ), wx.TAB_TRAVERSAL )
 		self.m_screen = PygameDisplay(self, -1)
 		self.m_screen.filename = self.m_dataChoice.GetString(self.m_dataChoice.GetSelection())
+		self.m_screen.raw_data = get_data(os.path.join("data",self.m_screen.filename),1,0.000001)
 		self.m_screen.index = 0
+
+		self.m_screen.bits_data = rgb_bit_data(self.m_screen.raw_data)
+		self.m_screen.byte_data = rgb_byte_data(self.m_screen.bits_data)
+		self.m_screen.board = board_data(self.m_screen.byte_data,self.m_screen.index)
+		
 		self.m_screen.Redraw()
 		self.m_streamNumber.SetLabel(str(self.m_screen.index))
 
@@ -104,15 +110,26 @@ class Visual ( wx.Frame ):
 	# Virtual event handlers, overide them in your derived class
 	def onData( self, event ):
 		self.m_screen.filename = self.m_dataChoice.GetString(self.m_dataChoice.GetSelection())
+		self.m_screen.raw_data = get_data(os.path.join("data",self.m_screen.filename),1,0.000001)
+		self.m_screen.index = 0
+
+		self.m_screen.bits_data = rgb_bit_data(self.m_screen.raw_data)
+		self.m_screen.byte_data = rgb_byte_data(self.m_screen.bits_data)
+		self.m_screen.board = board_data(self.m_screen.byte_data,self.m_screen.index)
+
 		self.m_screen.Redraw()
 	
 	def onPrevious( self, event ):
 		self.m_screen.index-=1
+		self.m_screen.index %= self.m_screen.raw_data[1]
+		self.m_screen.board = board_data(self.m_screen.byte_data,self.m_screen.index)
 		self.m_streamNumber.SetLabel(str(self.m_screen.index))
 		self.m_screen.Redraw()
 	
 	def onNext( self, event ):
 		self.m_screen.index+=1
+		self.m_screen.index %= self.m_screen.raw_data[1]
+		self.m_screen.board = board_data(self.m_screen.byte_data,self.m_screen.index)
 		self.m_streamNumber.SetLabel(str(self.m_screen.index))
 		self.m_screen.Redraw()
 

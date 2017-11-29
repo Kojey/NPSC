@@ -38,7 +38,10 @@ class PygameDisplay(wx.Panel):
 
         w, h = self.screen.get_size()
 
-        draw(self.screen,self.filename,w/3,w/70,w/2,h/2,0.000001,self.index)
+        print self.filename
+        print self.index
+        print self.board
+        draw(self.screen,self.filename,self.board,self.index,w/3,w/70,w/2,h/2,0.000001)
         
         s = pygame.image.tostring(self.screen, 'RGB')  # Convert the surface to an RGB string
         img = wx.ImageFromData(self.size[0], self.size[1], s)  # Load this string into a wx image
